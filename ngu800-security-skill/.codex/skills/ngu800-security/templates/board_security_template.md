@@ -1,1 +1,0 @@
-# Board Security Template
