@@ -905,12 +905,14 @@ typedef struct {
 | secure memory visibility | 安全内存可见 | 禁止，需授权 |
 | interconnect debug windows | 片上互连调试窗口 | 禁止，需授权 |
 | board-assisted debug access | 板级辅助调试入口 | 禁止，需授权 |
+| JTAG / CPLD / MUX access | 板级 JTAG、CPLD/MUX、GPU/CPU/Flash/DRAM/安全子系统调试 | USER 默认关闭，需授权、scope、时限和审计 |
 
 调试位图规则如下：
 
 - `[CONFIRMED]` eHSM 支持 SoC debug authorization，并带大位图控制能力。
 - `[ASSUMED]` NGU800 应按子系统定义 debug bit 域。
 - `[TBD]` 最终 bit-level 映射需在实现阶段冻结。
+- `[TBD]` `SRC-005` 中涉及的 JTAG 目标需映射到 SoC debug scope 或板级二级 scope。
 
 ### 8.4 调试开启流程
 
@@ -932,6 +934,7 @@ typedef struct {
 - `[CONFIRMED]` challenge-response 是必须路径。
 - `[CONFIRMED]` 调试开启必须有 scope 控制，不能只有开/关二元语义。
 - `[CONFIRMED]` debug enable 必须支持自动关闭。
+- `[CONFIRMED]` JTAG / CPLD / MUX 不允许由 BMC/OOB/板级 MCU 直接打开，必须复用 debug auth 路径。
 - `[ASSUMED]` 授权结果中应带时间窗口或显式失效策略。
 
 ### 8.5 调试关闭与自动回收
@@ -992,32 +995,60 @@ ANY -> DECOMMISSIONED (irreversible)
 
 ## 9. 板级安全设计
 
-### 9.1 板级信任边界
+### 9.1 管理子系统输入采用策略
 
-当前已明确的板级安全口径如下：
+`SRC-005` 管理子系统方案中的总体架构、模块职责、带外管理链路、电源/复位流程、单/双 Die 约束作为系统级流程输入采用。
+
+涉及安全的部分采用以下裁决：
 
 - `[CONFIRMED]` BMC / OOB-MCU / Sideband 的默认信任级别不高于 Host。
-- `[ASSUMED]` BMC / OOB 可以作为受控链路承载者或代理者。
-- `[CONFIRMED]` BMC / OOB / SMBus / Sideband 不应绕过 SEC 直接控制 eHSM、lifecycle、debug、Root 或 provisioning。
-- `[ASSUMED]` board binding / die binding 可作为量产增强策略，但是否首版默认启用仍待冻结。
+- `[CONFIRMED]` BMC / OOB / 板级 MCU / 管理子系统不进入 Root of Trust。
+- `[CONFIRMED]` SMBus/I2C、I3C、PCIe VDM、SPI、UART、JTAG 只能作为受控管理或转发通道。
+- `[CONFIRMED]` JTAG、DMA、Flash 更新、电源复位、PowerBrake 等高权限能力必须经 lifecycle、debug auth、firewall、scope 和审计约束。
+- `[CONFIRMED]` 管理子系统文档中若出现未鉴权调试、直接访问安全子系统、直接访问 DRAM/Flash/寄存器空间或绕过 SEC/eHSM 的流程，不作为安全 baseline 采用。
 
-### 9.2 板级安全规则
+### 9.2 带外通道安全策略
 
-当前板级安全规则如下：
+| 通道 | 管理用途 | 安全要求 |
+|---|---|---|
+| SMBus/I2C | 低速状态查询、传感器、电源管理、OOB 管理 | 命令白名单、状态只读优先，高权限命令必须经 SEC/eHSM |
+| I3C | 高性能带外业务、固件更新、高频状态采集 | 数据路径隔离，更新/调试/provisioning 必须鉴权 |
+| SPI/QSPI | NOR Flash、板级 MCU 接口 | Flash 更新必须验签，写操作需 lifecycle gating |
+| PCIe VDM | 带外数据 over PCIe（当前暂不支持） | 默认关闭，启用前纳入 Host 不可信模型 |
+| UART | 调试输入输出（当前暂不支持） | 默认关闭，启用必须按 debug 接口管控 |
+| JTAG | GPU/CPU/DRAM/Flash/安全子系统调试 | USER 默认关闭，需 challenge-response、scope bitmap、MUX gating、审计 |
 
-1. 板级接口只能承载受控状态查询、轻量命令转发或板级管理。
-2. 不允许通过板级链路直接承载高权限安全命令。
-3. Host DMA、BMC 代理访问和 OOB 桥接都必须经过地址白名单、权限控制和安全域隔离。
-4. BMC / OOB 可以作为桥接者，但不能默认直接控制安全策略。
-5. SMBus / sideband 只能用于受控状态查询、受控命令转发或板级管理，不应直接成为 Root / lifecycle / debug 的绕过路径。
+### 9.3 JTAG 安全设计
 
-### 9.3 板级绑定
+`SRC-005` 描述 JTAG 可接入 BMC、UBB、OAM、板级 MCU/GPU，并可访问 GPU 芯片 JTAGBUS、寄存器空间、DRAM、GPU Flash、安全子系统和 CPU 调试单元。该能力不作为默认开放能力继承。
 
-当前与板级绑定相关的设计要求如下：
+安全裁决如下：
+
+- `[CONFIRMED]` USER/PROD 生命周期下 JTAG 默认关闭。
+- `[CONFIRMED]` JTAG 访问 GPU 寄存器、DRAM、Flash、安全子系统、CPU 调试单元前必须通过 debug auth。
+- `[CONFIRMED]` JTAG 控制必须输出 scope bitmap，至少区分 CPU、GPU、Flash、DRAM、安全子系统、板级 MCU、边界扫描。
+- `[CONFIRMED]` JTAG MUX / CPLD / 板级控制单元必须接受 SEC/eHSM 授权结果，不得有常开或板级直通模式。
+- `[CONFIRMED]` JTAG 授权必须有自动关闭、异常复位关闭、生命周期切换关闭和审计记录。
+
+### 9.4 管理子系统 DMA / mailbox / 复位控制
+
+管理子系统 DMA、mailbox、中断、互斥访问和电源复位控制按以下规则处理：
+
+- `[CONFIRMED]` DMA 只能访问普通 staging buffer、普通数据 buffer 和经 firewall 显式允许的区域。
+- `[CONFIRMED]` DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区和安全共享缓冲区。
+- `[CONFIRMED]` 管理子系统 mailbox 和中断只作为协作机制，不得直接成为 eHSM 安全服务入口。
+- `[CONFIRMED]` 互斥寄存器不能替代权限检查，互斥成功不代表具备访问安全资源的权限。
+- `[CONFIRMED]` 影响 GPU 芯片、SEC、eHSM、Flash、DRAM 或安全状态的复位/掉电/PowerBrake 信号必须进入安全状态机。
+- `[CONFIRMED]` USER/PROD 下不得通过板级复位流程绕过 secure boot 或 rollback 检查。
+
+### 9.5 单 Die / 双 Die 与板级绑定
+
+当前与单 Die / 双 Die、板级绑定相关的设计要求如下：
 
 - `[ASSUMED]` `board_bind_flags` / die binding 可进入 image verify decision。
 - `[ASSUMED]` board binding / die binding 应进入 attestation 测量集合。
 - `[TBD]` 是否首版默认开启 board binding，需与板级安全策略一起冻结。
+- `[TBD]` 双 Die 场景是否需要主/从 Die 分别出具证明，或由主 Die 汇总证明，需与 attestation 方案联动冻结。
 
 ---
 
@@ -1224,8 +1255,11 @@ typedef struct {
 |---|---|---|
 | Host | 投递镜像、发起 challenge、读取结果 | 直接调 eHSM、直接 release、直接写安全区 |
 | BMC | 受控转发、板级管理、状态获取 | 直接覆盖 Root / lifecycle / debug 策略 |
-| OOB-MCU | 板级辅助控制、受控桥接 | 直接成为安全根 |
-| SMBus / Sideband | 受控状态传输、简单触发 | 直接承载高权限安全命令 |
+| OOB-MCU / 板级 MCU | 板级辅助控制、受控桥接、电源/复位流程执行 | 直接成为安全根、直接打开 debug、直接改 lifecycle |
+| SMBus / I2C / I3C / Sideband | 受控状态传输、简单触发、管理请求转发 | 直接承载高权限安全命令 |
+| JTAG / CPLD / MUX | 授权后按 scope 打开受限调试路径 | USER 常开、板级直通、绕过 eHSM debug auth |
+| 管理子系统 DMA | 访问普通白名单 buffer | 访问 eHSM、OTP/eFuse、Secure SRAM、SEC 执行区、证书/策略区 |
+| 电源 / 复位 / PowerBrake | 执行受控电源和故障响应流程 | 绕过 secure boot 失败处理、绕过审计或造成未解释安全状态 |
 
 地址与长度检查要求如下：
 
@@ -1233,6 +1267,7 @@ typedef struct {
 - `[CONFIRMED]` eHSM 侧必须再次做范围检查。
 - `[CONFIRMED]` 共享内存不得指向 Secure SRAM / OTP / eHSM 私有区。
 - `[CONFIRMED]` Host DMA 不得访问安全执行区和安全共享区。
+- `[CONFIRMED]` 管理子系统 DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区和安全共享缓冲区。
 
 Cache / 一致性规则如下：
 

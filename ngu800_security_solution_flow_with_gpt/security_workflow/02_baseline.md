@@ -1,6 +1,6 @@
 # NGU800 安全架构 Baseline V2（工程级）
 
-版本：v2.1  
+版本：v2.2  
 状态：评审版（可用于架构评审 / 方案冻结前阶段）
 
 ---
@@ -28,6 +28,7 @@
 | BootROM Role | 负责最小加载与编排，不负责复杂密码学校验 | CONFIRMED |
 | SEC Role | 启动控制面与 release owner | CONFIRMED |
 | Host Trust Model | 不可信，只具投递能力 | CONFIRMED |
+| Board / OOB Trust Model | BMC / OOB / 管理子系统可承载管理流程，但不进入 Root of Trust | CONFIRMED |
 | Manufacturing Baseline | 必须定义 key 注入、锁定、审计、生命周期推进 | CONFIRMED |
 
 ---
@@ -104,7 +105,32 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 
 ---
 
-# 7. eHSM 职责
+# 7. Board / OOB / 管理子系统边界
+
+## 7.1 输入采用策略
+
+`SRC-005` 管理子系统方案中的总体架构、模块职责、带外管理链路、电源/复位流程、单/双 Die 约束作为系统级流程输入采用。
+
+涉及安全的部分采用以下裁决：
+
+- BMC / OOB / 板级 MCU / 管理子系统不进入 Root of Trust。
+- SMBus/I2C、I3C、PCIe VDM、SPI、UART、JTAG 只能作为受控管理或转发通道。
+- JTAG、DMA、Flash 更新、电源复位、PowerBrake 等高权限能力必须经 lifecycle、debug auth、firewall、scope 和审计约束。
+- 管理子系统文档中若出现未鉴权调试、直接访问安全子系统、直接访问 DRAM/Flash/寄存器空间或绕过 SEC/eHSM 的流程，不作为安全 baseline 采用。
+
+## 7.2 Adopted vs Rejected
+
+| Topic | Adopted | Rejected | Reason |
+|---|---|---|---|
+| 管理子系统总体架构 | 采用 `SRC-005` 的模块、链路和流程作为系统输入 | 忽略管理子系统集成 | 需要与板级、电源、复位、OOB 流程对齐 |
+| OOB trust level | BMC/OOB/Sideband 不高于 Host | 将 BMC/OOB 默认视为可信根 | OOB 链路权限高且暴露面大，不能天然可信 |
+| JTAG access | lifecycle + debug auth + scope + MUX 联合控制 | USER 态常开或板级 MUX 直通 | 防止绕过 secure boot、密钥和运行态隔离 |
+| Management DMA | 仅访问普通白名单 buffer | 访问安全区、执行区、OTP/eHSM 私有区 | DMA 可绕过软件边界，必须硬隔离 |
+| Power/reset control | 纳入安全状态机和审计 | 作为纯板级普通控制 | 复位/掉电会影响安全启动、恢复和 attestation 状态 |
+
+---
+
+# 8. eHSM 职责
 
 - Root Key / Root Secret 使用
 - 验签
@@ -117,7 +143,7 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 
 ---
 
-# 8. Manufacturing / Provisioning Baseline
+# 9. Manufacturing / Provisioning Baseline
 
 | Topic | Decision | Open Issue |
 |---|---|---|
@@ -128,7 +154,7 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 
 ---
 
-# 9. 双算法策略
+# 10. 双算法策略
 
 - 方案必须同时支持国密和国际算法栈
 - 实现层不得把算法写死到单一栈
@@ -140,7 +166,7 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 
 ---
 
-# 10. Freeze Sensitive Items
+# 11. Freeze Sensitive Items
 
 | Item | Why Sensitive | Needed Before Freeze |
 |---|---|---|
@@ -149,10 +175,12 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 | Mailbox command model | 直接影响 FW / driver / eHSM API 对接 | 需要 req/resp 结构 |
 | SPDM report fields | 直接影响 attestation 联调 | 需要字段定义 |
 | board binding 策略 | 影响量产兼容性 | 需要策略裁决 |
+| JTAG / OOB scope 控制 | 影响 USER 态调试暴露面 | 需要冻结 debug scope bitmap、MUX/CPLD 控制权和授权流程 |
+| 管理子系统 DMA / mailbox / reset | 影响安全边界和状态一致性 | 需要冻结 firewall 白名单、可访问 buffer 和审计字段 |
 
 ---
 
-# 11. Mermaid Architecture Diagram
+# 12. Mermaid Architecture Diagram
 
 ```mermaid
 graph TD
@@ -167,7 +195,7 @@ graph TD
 
 ---
 
-# 12. Mermaid Sequence Diagram
+# 13. Mermaid Sequence Diagram
 
 ```mermaid
 sequenceDiagram
@@ -187,7 +215,7 @@ sequenceDiagram
 
 ---
 
-# 13. 当前基线是否可进入详细设计
+# 14. 当前基线是否可进入详细设计
 
 结论：
 - 可以进入章节级详细设计

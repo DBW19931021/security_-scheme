@@ -30,6 +30,10 @@
 - `C-HOST-01`
 - `C-ACCESS-01`
 - `C-ACCESS-02`
+- `C-BOARD-01`
+- `C-BOARD-02`
+- `C-BOARD-03`
+- `C-BOARD-04`
 - `C-BOOT-01`
 - `C-BOOT-02`
 - `C-DEBUG-01`
@@ -232,6 +236,30 @@ Host/BMC/OOB 不可请求：
 - BMC / OOB 可以作为桥接者，但不能默认直接控制安全策略
 - SMBus / sideband 只能用于受控状态查询、受控命令转发或板级管理，不应直接成为 Root / lifecycle / debug 的绕过路径
 
+### 11.9.3 管理子系统新增接口口径
+
+基于 `SRC-005`，管理子系统相关接口按以下口径纳入本章：
+
+| 接口 / 机制 | `SRC-005` 中的用途 | 安全接口裁决 |
+|---|---|---|
+| SMBus/I2C | 低速带外管理、传感器、电源管理、alert、master notify | 允许作为受控管理链路，高权限命令必须经 SEC/eHSM |
+| I3C | 高带宽带外业务、固件更新、高频器件状态采集 | 允许作为受控链路，更新/调试/provisioning 必须鉴权 |
+| PCIe VDM | 带外数据 over PCIe，当前暂考虑不支持 | 若后续启用，按 Host 不可信链路处理 |
+| UART | 带外调试通道，当前暂考虑不支持 | 若后续启用，按 debug 接口处理，默认 USER 关闭 |
+| JTAG | 接入 GPU/CPU/DRAM/Flash/安全子系统/板级 MCU | 不作为普通接口开放，必须经 lifecycle + debug auth + scope + MUX gating |
+| SPI/QSPI | NOR Flash、板级 MCU 接口 | 影响固件存储时必须执行签名校验、写保护和 lifecycle gating |
+| AXI DMA | 子系统内部和低速外设数据搬运 | 只能访问 firewall 白名单 buffer，禁止访问安全域 |
+| mailbox / 中断 | CPU 子系统消息和中断协作 | 只能作为协作机制，安全服务必须经 SEC 收敛 |
+| 互斥寄存器 | 多 CPU 共享资源互斥 | 不能替代权限检查，不能作为安全访问授权 |
+| 电源/复位/PowerBrake | 板级电源、上下电、复位、故障响应 | 影响安全状态时必须进入状态机和审计 |
+
+当前裁决如下：
+
+- `[CONFIRMED]` 管理子系统总体链路和系统流程作为接口集成输入采用。
+- `[CONFIRMED]` 管理子系统接口不改变“SEC/C908 是唯一安全 caller，eHSM 是唯一安全执行面”的基线。
+- `[CONFIRMED]` JTAG、DMA、Flash 更新、电源复位等高权限接口不得绕过 lifecycle、debug auth、firewall 和审计。
+- `[ASSUMED]` SMBus/I2C、I3C 等低速/高速 OOB 链路可承载状态查询和受控请求转发，但首版不直接承载高权限安全命令。
+
 ---
 
 ## 11.10 Mailbox 通用模型
@@ -382,8 +410,11 @@ typedef struct {
 |---|---|---|
 | Host | 投递镜像、发起 challenge、读取结果 | 直接调 eHSM、直接 release、直接写安全区 |
 | BMC | 受控转发、板级管理、状态获取 | 直接覆盖 Root / lifecycle / debug 策略 |
-| OOB-MCU | 板级辅助控制、受控桥接 | 直接成为安全根 |
-| SMBus / Sideband | 受控状态传输、简单触发 | 直接承载高权限安全命令 |
+| OOB-MCU / 板级 MCU | 板级辅助控制、受控桥接、电源/复位流程执行 | 直接成为安全根、直接打开 debug、直接改 lifecycle |
+| SMBus / I2C / I3C / Sideband | 受控状态传输、简单触发、管理请求转发 | 直接承载高权限安全命令 |
+| JTAG / CPLD / MUX | 授权后按 scope 打开受限调试路径 | USER 常开、板级直通、绕过 eHSM debug auth |
+| 管理子系统 DMA | 访问普通白名单 buffer | 访问 eHSM、OTP/eFuse、Secure SRAM、SEC 执行区、证书/策略区 |
+| 电源 / 复位 / PowerBrake | 执行受控电源和故障响应流程 | 绕过 secure boot 失败处理、绕过审计或造成未解释安全状态 |
 
 ### 11.14.2 地址与长度检查
 
@@ -517,6 +548,9 @@ Attestation 在外部看起来像：
 | 共享内存最终落点 | 影响缓存、一致性和安全边界 | 未完全冻结 | 冻结 buffer 区域 |
 | Provisioning 命令最终参数 | 影响工站和 SEC 对接 | 部分收敛 | 冻结 request/response 结构 |
 | BMC / OOB / SMBus 默认信任级别 | 影响板级链路设计 | 未完全冻结 | 冻结是否允许某些桥接能力 |
+| JTAG / CPLD / MUX 控制 | 影响 USER 态调试暴露面 | 未完全冻结 | 冻结 debug auth 到板级 MUX 的控制路径 |
+| 管理子系统 DMA 白名单 | 影响安全域隔离 | 未完全冻结 | 冻结 UserID、firewall region、buffer 范围 |
+| 电源/复位安全状态 | 影响启动、恢复和证明一致性 | 未完全冻结 | 冻结哪些事件进入安全状态机和审计 |
 
 ---
 
@@ -527,6 +561,9 @@ Attestation 在外部看起来像：
 3. BMC / OOB 是否允许在某些产品形态下承担 provisioning 代理角色？  
 4. Sideband / SMBus 是否需要支持 challenge / status 等轻量接口？  
 5. Attestation 报告是否首版默认内嵌完整 cert chain？  
+6. JTAG MUX / CPLD 的控制寄存器是否由 SEC 直接控制，还是由板级 MCU 代理执行？  
+7. 管理子系统 DMA 的 UserID 和 firewall region 如何划分？  
+8. PowerBrake、PG/FAULT、复位类事件是否进入 attestation 报告或仅进入本地审计？  
 
 ---
 
@@ -536,6 +573,7 @@ Attestation 在外部看起来像：
 
 - 安全服务接口边界：SEC/C908 是唯一 caller，eHSM 是唯一安全执行者  
 - Host / BMC / OOB / SMBus 只能作为受控请求发起者或链路承载者，不能直接进入信任链  
+- JTAG、管理子系统 DMA、电源/复位等高权限接口必须经 lifecycle、debug auth、firewall 和审计约束  
 - Mailbox + Shared Memory 是正式安全服务接口模型  
 - Verify、Lifecycle、Debug、Counter、Attestation、Provisioning 构成首批必须定义的接口族  
 - 地址检查、生命周期限制、错误码、busy/timeout 语义必须在实现层明确  

@@ -1,6 +1,6 @@
 # NGU800 追踪矩阵（强化版 V1.0）
 
-状态：当前阶段设计追踪文件  
+状态：当前阶段设计追踪文件（已纳入 `SRC-005` 管理子系统增量输入）  
 适用范围：NGU800 / NGU800P 安全方案、实现级设计、代码开发、测试验证  
 目的：建立从输入资料到代码与测试的可追踪闭环，避免“方案写了但无法落代码”或“代码改了但脱离方案”
 
@@ -54,6 +54,10 @@
 | T-HOST-001 | boot docs / subsystem docs | C-HOST-01 | Host 不可信，只具投递能力 | 00_architecture.md / 06_interface.md / 05_board_security.md | mailbox_if.md | `host_proxy/*` / `sec/host_req_mgr.*` | `test_host_cannot_release.c` | IMPL_READY | Host 不得直接调用 eHSM |
 | T-ACCESS-001 | subsystem / firewall docs | C-ACCESS-01 | 安全子系统必须隔离 | 00_architecture.md / 06_interface.md | mailbox_if.md / efuse_key_fw_header_design.md | `sec/access_ctrl.*` | `test_secure_region_denied.c` | IMPL_READY | OTP / Secure SRAM / eHSM 私域不可直访 |
 | T-ACCESS-002 | subsystem / firewall docs | C-ACCESS-02 | UserID + Firewall 必须启用 | 00_architecture.md / 06_interface.md | mailbox_if.md | `rtl/firewall_cfg` / `sec/firewall_cfg.*` | `test_userid_firewall_rules.c` | CODE_PENDING | 需与 RTL 配合冻结 |
+| T-BOARD-001 | `SRC-005` 管理子系统方案 | C-BOARD-01 | 管理子系统总体架构和流程可遵循，安全边界由安全方案裁决 | 05_board_security.md / 10_full_design.md | mailbox_if.md / spdm_report.md / manufacturing_provisioning.md | `sec/board_sec_policy.*` / `sec/oob_req_mgr.*` | `test_oob_cannot_bypass_sec.c` | CODE_PENDING | 系统流程采用，安全细节二次裁决 |
+| T-BOARD-002 | `SRC-005` 管理子系统方案 | C-BOARD-02 | 带外管理通道不得成为安全策略绕过路径 | 05_board_security.md / 06_interface.md | mailbox_if.md | `sec/oob_req_mgr.*` / `host_proxy/oob_proxy.*` | `test_oob_lifecycle_gate.c` | CODE_PENDING | SMBus/I2C/I3C/Sideband 只能受控转发 |
+| T-BOARD-003 | `SRC-005` 管理子系统方案 | C-BOARD-03 | JTAG 必须受 lifecycle、debug auth、scope bitmap 和板级 MUX 联合控制 | 05_board_security.md / 04_lifecycle_debug.md / 06_interface.md | mailbox_if.md / manufacturing_provisioning.md | `sec/debug_auth.*` / `sec/jtag_scope_ctrl.*` / `rtl/jtag_mux_ctrl` | `test_user_jtag_denied.c` / `test_jtag_scope_auth.c` | BLOCKED | 需冻结 JTAG scope bitmap 与 CPLD/MUX 控制权 |
+| T-BOARD-004 | `SRC-005` 管理子系统方案 | C-BOARD-04 | 管理子系统 DMA、mailbox、中断、互斥访问和复位控制必须隔离和审计 | 05_board_security.md / 06_interface.md | mailbox_if.md / spdm_report.md | `sec/firewall_cfg.*` / `sec/power_reset_sec_state.*` | `test_mgmt_dma_firewall.c` / `test_power_reset_audit.c` | BLOCKED | 需冻结 DMA region、UserID、PG/FAULT/PowerBrake 状态策略 |
 | T-UPD-001 | update baseline | C-UPDATE-01 | anti-rollback mandatory | 08_failure_recovery.md / 01_boot.md | efuse_key_fw_header_design.md / mailbox_if.md | `sec/update_mgr.*` | `test_rollback_floor.c` | IMPL_READY | counter 先验签后提升 |
 | T-UPD-002 | recovery baseline | C-UPDATE-02 | 必须定义恢复机制 | 08_failure_recovery.md | mailbox_if.md / manufacturing_provisioning.md | `sec/recovery_mgr.*` | `test_recovery_path.c` | CODE_PENDING | A/B 是否启用仍可裁决 |
 | T-ATT-001 | attestation baseline | C-ATT-01 | 支持 device identity + SPDM report | 03_attestation.md | spdm_report.md | `sec/attest_service.*` | `test_att_report_sign.c` | IMPL_READY | 私钥不离开 eHSM |
@@ -74,6 +78,10 @@
 | `sec/debug_auth.*` | challenge / auth / scope 控制 | C-DEBUG-02 |
 | `sec/attest_service.*` | 证明请求封装与结果转交 | C-ATT-01 |
 | `sec/update_mgr.*` | 升级 / counter / rollback 路径 | C-UPDATE-* |
+| `sec/board_sec_policy.*` | 板级安全策略收敛，管理子系统安全裁决 | C-BOARD-* |
+| `sec/oob_req_mgr.*` | BMC/OOB/Sideband 请求白名单、生命周期检查和转发 | C-BOARD-01 / C-BOARD-02 |
+| `sec/jtag_scope_ctrl.*` | JTAG scope bitmap、授权结果和关闭策略 | C-BOARD-03 / C-DEBUG-02 |
+| `sec/power_reset_sec_state.*` | 电源/复位/PowerBrake 安全状态和审计 | C-BOARD-04 |
 
 ## 4.2 eHSM 适配层 / 驱动层
 
@@ -91,6 +99,16 @@
 | `tools/provisioning/otp_writer.*` | OTP/eFuse 写入 | C-MFG-01 |
 | `tools/provisioning/lifecycle_mgr.*` | MANU→USER 推进 | C-MFG-01 / C-KEY-02 |
 | `tools/provisioning/audit_logger.*` | 审计记录 | C-MFG-01 |
+
+---
+
+## 4.4 RTL / Firewall / Board Control
+
+| 模块名建议 | 职责 | 主要来源 |
+|---|---|---|
+| `rtl/firewall_cfg` | UserID / firewall / DMA region 隔离 | C-ACCESS-02 / C-BOARD-04 |
+| `rtl/jtag_mux_ctrl` | JTAG MUX / CPLD 受控打开和关闭 | C-BOARD-03 |
+| `rtl/oob_bridge_ctrl` | OOB / Sideband 桥接权限控制 | C-BOARD-02 |
 
 ---
 
@@ -113,6 +131,9 @@
 | `test_secure_region_denied.c` | Host / 非安全域不能访问安全域 | T-ACCESS-001 |
 | `test_userid_firewall_rules.c` | UserID / Firewall 策略生效 | T-ACCESS-002 |
 | `test_crypto_path_only_ehsm.c` | 正式安全路径不允许软件绕过 eHSM | T-CRYPTO-001 |
+| `test_oob_cannot_bypass_sec.c` | BMC/OOB 不能绕过 SEC 直接进入安全服务 | T-BOARD-001 |
+| `test_oob_lifecycle_gate.c` | OOB 高权限请求受 lifecycle gating | T-BOARD-002 |
+| `test_mgmt_dma_firewall.c` | 管理子系统 DMA 不能访问安全区 | T-BOARD-004 |
 
 ## 5.3 Lifecycle / Debug / Attestation 类
 
@@ -120,6 +141,8 @@
 |---|---|---|
 | `test_user_debug_denied.c` | USER 禁未授权 debug | T-DEBUG-001 |
 | `test_debug_auth_challenge.c` | challenge-response 调试鉴权 | T-DEBUG-002 |
+| `test_user_jtag_denied.c` | USER 态 JTAG 默认关闭 | T-BOARD-003 |
+| `test_jtag_scope_auth.c` | JTAG scope 必须来自授权结果 | T-BOARD-003 |
 | `test_key_lifecycle_gate.c` | key 权限受生命周期控制 | T-KEY-002 |
 | `test_att_report_sign.c` | report 关键字段被签名覆盖 | T-ATT-001 |
 
@@ -139,6 +162,9 @@
 | Item | Why Blocked | Affected Trace |
 |---|---|---|
 | Debug port 129bit 最终位图 | 尚未冻结端口位图映射 | T-DEBUG-002 |
+| JTAG scope bitmap 与 MUX/CPLD 控制权 | `SRC-005` 已描述高权限 JTAG 能力，但未冻结安全控制字段 | T-BOARD-003 |
+| 管理子系统 DMA region / UserID | 尚未冻结可访问 buffer、firewall region 和 master 标识 | T-BOARD-004 |
+| PowerBrake / PG / FAULT / reset 安全状态 | 尚未冻结哪些事件进入证明或审计 | T-BOARD-004 |
 | Counter ID 到 image_type 的最终映射 | 需要与 eFuse / header 一起冻结 | T-UPD-001 |
 | Board binding 默认策略 | 量产默认开关未定 | T-ATT-001 / T-MFG-001 |
 | 共享内存最终落点 | IRAM / DDR / firewall share memory 未最终裁决 | T-HOST-001 / T-IF-001 |

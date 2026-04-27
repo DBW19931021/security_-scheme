@@ -1,6 +1,6 @@
 # NGU800 安全方案 Code Rules（强化版 V1.0）
 
-状态：当前阶段代码约束文件  
+状态：当前阶段代码约束文件（已纳入 `SRC-005` 管理子系统增量输入）  
 适用范围：BootROM / SEC1 / SEC2 / eHSM 适配层 / Mailbox Driver / Host 代理层 / Provisioning Tool  
 目的：将 `01_constraints.md`、`02_baseline.md`、`04_impl_design/*.md` 的设计结论转成工程开发阶段必须遵守的规则
 
@@ -94,7 +94,22 @@
 
 ---
 
-# 7. Firmware Header / Verify / Anti-Rollback 规则
+# 7. Board / OOB / Management 规则
+
+| Rule ID | Level | Applies To | Rule Statement | Source Constraint | Baseline / Impl | Violation Impact |
+|---|---|---|---|---|---|---|
+| R-BOARD-001 | MUST | BMC / OOB / Board MCU Proxy | BMC、OOB、板级 MCU、管理子系统只能作为受控链路或代理，不得进入 Root of Trust | C-BOARD-01 / C-BOARD-02 | Baseline 7 / Board Security | OOB 链路变成隐式安全根 |
+| R-BOARD-002 | MUST NOT | BMC / OOB / Board MCU Proxy | OOB 链路不得直接修改 lifecycle、secure boot、debug enable、rollback counter、Root/anchor | C-BOARD-02 | Board Security / Interface | 绕过 SEC/eHSM 控制面 |
+| R-BOARD-003 | MUST | JTAG / CPLD / MUX Control | JTAG 打开必须经过 lifecycle 检查、debug auth、scope bitmap 和失效策略 | C-BOARD-03 / C-DEBUG-02 | Board Security / Lifecycle Debug | 量产调试口失控 |
+| R-BOARD-004 | MUST NOT | JTAG / CPLD / MUX Control | USER/PROD 生命周期不得存在板级 JTAG 直通或常开路径 | C-BOARD-03 / C-DEBUG-01 | Board Security | 直接访问寄存器/DRAM/Flash/安全子系统 |
+| R-BOARD-005 | MUST | DMA / Firewall Driver | 管理子系统 DMA 只能访问 firewall 白名单 buffer | C-BOARD-04 / C-ACCESS-02 | Board Security / Interface | DMA 绕过安全隔离 |
+| R-BOARD-006 | MUST NOT | DMA / Firewall Driver | 管理子系统 DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC 执行区、recovery 区、证书/策略区 | C-BOARD-04 / C-ACCESS-01 | Board Security / Interface | 敏感资产暴露 |
+| R-BOARD-007 | MUST | Power / Reset Control | 影响安全启动、恢复、debug 或证明状态的电源/复位/PowerBrake 事件必须进入安全状态机或审计 | C-BOARD-04 | Board Security / Manufacturing | 安全状态不可解释 |
+| R-BOARD-008 | SHOULD | Attestation / Report | board binding / die binding / 关键板级安全状态应进入证明报告或本地审计 | C-BOARD-01 / C-ATT-01 | Board Security / SPDM Report | verifier 无法判断板级状态 |
+
+---
+
+# 8. Firmware Header / Verify / Anti-Rollback 规则
 
 | Rule ID | Level | Applies To | Rule Statement | Source Constraint | Baseline / Impl | Violation Impact |
 |---|---|---|---|---|---|---|
@@ -106,7 +121,7 @@
 
 ---
 
-# 8. Attestation / SPDM 规则
+# 9. Attestation / SPDM 规则
 
 | Rule ID | Level | Applies To | Rule Statement | Source Constraint | Baseline / Impl | Violation Impact |
 |---|---|---|---|---|---|---|
@@ -117,7 +132,7 @@
 
 ---
 
-# 9. 制造 / 灌装 / Provisioning 规则
+# 10. 制造 / 灌装 / Provisioning 规则
 
 | Rule ID | Level | Applies To | Rule Statement | Source Constraint | Baseline / Impl | Violation Impact |
 |---|---|---|---|---|---|---|
@@ -129,28 +144,28 @@
 
 ---
 
-# 10. Driver / FW 编码规范补充
+# 11. Driver / FW 编码规范补充
 
-## 10.1 Mailbox Driver
+## 11.1 Mailbox Driver
 - MUST 提供同步等待接口和超时接口
 - MUST 将硬件错误码映射为统一软件错误模型
 - MUST 在请求提交前校验长度和地址
 - MUST 处理中断清除与重复 doorbell 保护
 
-## 10.2 SEC FW
+## 11.2 SEC FW
 - MUST 维护 token 管理
 - MUST 负责 cache flush / invalidate / barrier
 - MUST 区分“Host 投递成功”和“eHSM 验证通过”
 - MUST 将 lifecycle / permission 检查前置
 
-## 10.3 Logging
+## 11.3 Logging
 - MUST NOT 打印密钥、私钥、完整 challenge 响应材料
 - SHOULD 对 verify fail / auth fail / rollback fail 记录最小必要审计信息
 - MUST 区分安全事件日志和普通调试日志
 
 ---
 
-# 11. 当前阶段必须优先落地的规则集
+# 12. 当前阶段必须优先落地的规则集
 
 首批实现必须优先满足：
 
@@ -158,8 +173,9 @@
 2. `R-IF-001 ~ R-IF-009`
 3. `R-HOST-001 ~ R-HOST-005`
 4. `R-LCS-001 ~ R-LCS-004`
-5. `R-FW-001 ~ R-FW-004`
-6. `R-MFG-001 ~ R-MFG-004`
+5. `R-BOARD-001 ~ R-BOARD-008`
+6. `R-FW-001 ~ R-FW-004`
+7. `R-MFG-001 ~ R-MFG-004`
 
 理由：
 这些规则直接决定：
@@ -167,11 +183,12 @@
 - 是否能阻止 Host 越权
 - 是否会发生未验签执行
 - 是否会留下量产 debug 后门
+- 是否会通过 OOB / JTAG / DMA 留下板级绕过路径
 - 是否能支撑制造灌装闭环
 
 ---
 
-# 12. 结论
+# 13. 结论
 
 本文件已经把当前阶段方案结论转成工程执行规则，后续任何实现应按以下顺序落地：
 

@@ -34,6 +34,8 @@
 - `C-HOST-01`
 - `C-ACCESS-01`
 - `C-ACCESS-02`
+- `C-BOARD-03`
+- `C-BOARD-04`
 - `C-MFG-01`
 - `C-UPDATE-01`
 - `C-ATT-01`
@@ -201,12 +203,14 @@ sequenceDiagram
 | secure memory visibility | 安全内存可见 | 禁止，需授权 |
 | interconnect debug windows | 片上互连调试窗口 | 禁止，需授权 |
 | board-assisted debug access | 板级辅助调试入口 | 禁止，需授权 |
+| JTAG / CPLD / MUX access | 板级 JTAG、CPLD/MUX 选择、边界扫描、GPU/CPU/Flash/DRAM/安全子系统调试 | USER 默认关闭，需授权、scope、时限和审计 |
 
 ### 9.9.2 调试位图
 
 - `[CONFIRMED]` eHSM 支持 SoC debug authorization，并带大位图控制能力
 - `[ASSUMED]` NGU800 应按子系统定义 debug bit 域
 - `[TBD]` 最终 bit-level 映射（例如 129bit 端口位图）需在实现阶段冻结
+- `[TBD]` `SRC-005` 中涉及的 JTAG 目标（CPU、GPU、DRAM、Flash、安全子系统、板级 MCU、边界扫描）需映射到 SoC debug scope 或板级二级 scope
 
 ### 9.9.3 当前建议
 
@@ -225,6 +229,16 @@ typedef struct {
 - `granted_scope_words`：位图长度
 - `expire_policy`：自动关闭策略 / 时间窗口策略
 - `scope_bitmap_addr`：在受控共享内存中传递位图
+
+### 9.9.4 板级 JTAG 调试补充规则
+
+基于 `SRC-005` 管理子系统方案，JTAG 具备接入 GPU JTAGBUS、寄存器空间、DRAM、Flash、安全子系统、CPU 调试单元和板级 MCU 的能力。该能力在生命周期与调试模型中按最高风险调试入口处理：
+
+- `[CONFIRMED]` USER/PROD 生命周期下，JTAG / CPLD / MUX 默认关闭。
+- `[CONFIRMED]` JTAG 打开必须复用 debug auth 路径，不允许由 BMC/OOB/板级 MCU 直接打开。
+- `[CONFIRMED]` 授权必须包含 target scope、访问类型、时间窗口和自动关闭策略。
+- `[CONFIRMED]` 异常复位、生命周期切换、授权超时或安全错误事件必须关闭 JTAG scope 并清零 MUX 配置。
+- `[ASSUMED]` ATE/SLT/EVB 阶段可使用更宽松 JTAG 策略，但 MANU -> USER 前必须锁定或清理测试路径。
 
 ---
 
@@ -388,6 +402,7 @@ report 中至少必须反映：
 | lifecycle/debug 状态块进入证明报告 | `04_impl_design/spdm_report.md` |
 | MANU→USER / RMA 流程、审计与恢复 | `04_impl_design/manufacturing_provisioning.md` |
 | control bits / lifecycle encoding / OTP字段 | `04_impl_design/efuse_key_fw_header_design.md` |
+| JTAG scope bitmap / CPLD-MUX gating / 板级调试授权闭环 | `04_impl_design/mailbox_if.md` / `[TBD] firewall_access_rules` |
 
 ---
 
@@ -398,6 +413,7 @@ report 中至少必须反映：
 | 生命周期统一编码 | 影响 OTP / report / command 接口 | 部分收敛 | 冻结最终编码表 |
 | DEBUG 与 RMA 是否独立编码 | 影响命令 gating 与审计模型 | 未完全冻结 | 冻结状态机 |
 | debug scope bitmap bit-level 定义 | 影响 FW / RTL / verifier / 工具 | 未完全冻结 | 冻结端口位图 |
+| JTAG scope 与 CPLD/MUX 控制权 | 影响板级调试是否能绕过 eHSM 授权 | 未完全冻结 | 冻结 JTAG target scope、MUX 控制寄存器和关闭策略 |
 | USER 下调试授权策略 | 影响量产与售后边界 | 未完全冻结 | 冻结是否允许短时授权 |
 | DEST 阶段允许保留哪些状态查询能力 | 影响退役与审计 | 未完全冻结 | 冻结销毁态策略 |
 
@@ -410,6 +426,7 @@ report 中至少必须反映：
 3. debug scope bitmap 最终按子系统、功能类还是资源域来编码？  
 4. `RMA -> PROD` 恢复是否必须重新跑一次最小 attestation / smoke validation？  
 5. DEST 阶段是否允许只读状态查询用于审计收尾？  
+6. 板级 JTAG MUX / CPLD 的授权控制由 SEC 直接写寄存器，还是由板级 MCU 受控代理执行？  
 
 ---
 
