@@ -14,7 +14,7 @@
 1. SoC BootROM、SEC1、SEC2、eHSM、Host 的职责边界
 2. 安全启动与非安全启动的选择条件
 3. SEC1 / SEC2 / 后续微核固件的验证与执行放行规则
-4. 反回滚、吊销、可选解密、失败处理与恢复入口
+4. 反回滚、吊销、SEC1 强制解密、后续镜像按策略解密、失败处理与恢复入口
 5. 与实现层文件的映射关系：
    - `04_impl_design/efuse_key_fw_header_design.md`
    - `04_impl_design/mailbox_if.md`
@@ -29,6 +29,7 @@
 - `C-BOOT-01`
 - `C-BOOT-02`
 - `C-BOOT-03`
+- `C-BOOT-04`
 - `C-IF-01`
 - `C-HOST-01`
 - `C-ACCESS-01`
@@ -88,16 +89,17 @@
 ### 6.5.1 必须满足的安全目标
 
 - `[CONFIRMED]` SEC1 必须在执行前经 eHSM 验证
+- `[CONFIRMED]` SEC1 在正式安全启动路径中必须采用签名 + 加密保护，执行前必须由 eHSM / 安全子系统受控密码服务完成解密 / unwrap
 - `[CONFIRMED]` 后续固件必须经 SEC1/SEC2 调用 eHSM 验证
 - `[CONFIRMED]` Host 下发固件在执行前必须受控
 - `[CONFIRMED]` 支持版本检查、防回滚、吊销
 - `[CONFIRMED]` 支持设备认证与度量导出
 - `[CONFIRMED]` 支持安全升级与安全调试
-- `[ASSUMED]` 量产关键镜像建议支持可选加密，但首版最小必需是完整性和执行放行控制
+- `[CONFIRMED]` SEC1 在正式安全启动路径中必须签名 + 加密；SEC2 及后续关键运行期固件在 USER/PROD 产品形态中默认建议签名 + 加密，若采用签名 only 必须由产品安全策略显式允许
 
 ### 6.5.2 不得违反的边界
 
-- BootROM 不得直接承担 SEC1 的复杂密码学校验
+- BootROM 不得直接承担 SEC1 的复杂密码学校验或复杂解密
 - Host 不得直接 release SEC2 或后续微核
 - 普通非安全 Master 不得直接访问 eHSM、OTP、Secure SRAM
 - 未验签通过的镜像不得进入执行态
@@ -117,7 +119,7 @@ graph TD
 
     BR -->|locate SEC1| FLASH[NOR Flash]
     BR -->|VERIFY_SEC1 via mailbox| EH
-    EH -->|PASS/FAIL| BR
+    EH -->|verify + decrypt PASS/FAIL| BR
 
     BR -->|load+jump| SEC1[SEC1]
     SEC1 -->|PCIe init / host channel| HOST[Host]
@@ -130,7 +132,7 @@ graph TD
 ### 图下说明
 
 1. BootROM 是启动编排者，不是首个密码学验证者。  
-2. eHSM 在 SEC1 验证、后续镜像验证、反回滚、吊销检查中提供统一安全服务。  
+2. eHSM 在 SEC1 验证、SEC1 强制解密、后续镜像验证、反回滚、吊销检查中提供统一安全服务。  
 3. Host 只把 SEC2 及后续镜像投递到受控缓冲区，不拥有执行放行权。  
 4. SEC2 是后续运行期安全控制面，负责后续微核固件验证编排、度量汇总和放行。  
 
@@ -155,7 +157,7 @@ sequenceDiagram
     BR->>FL: 定位 SEC1 镜像
     FL-->>BR: 返回 SEC1 镜像地址/内容
     BR->>EH: VERIFY_SEC1(addr,len,type,policy)
-    EH->>EH: header / key_id / revoke / version / hash / signature / optional decrypt
+    EH->>EH: header / key_id / revoke / version / hash / signature / mandatory decrypt
     EH-->>BR: VERIFY_PASS / VERIFY_FAIL
     alt SEC1 验证通过
         BR->>S1: 装载并跳转
@@ -181,7 +183,7 @@ sequenceDiagram
 
 ### 图下说明
 
-1. SEC1 的首次密码学校验发生在 BootROM 调 eHSM 的路径上。  
+1. SEC1 的首次密码学校验和强制解密发生在 BootROM 调 eHSM 的路径上。  
 2. 后续镜像验证责任转移到 SEC1/SEC2 调 eHSM 的路径。  
 3. release 是一个独立动作，必须发生在 verify pass 之后。  
 4. 任何验证失败都不能默默降级为“继续启动”，必须进入明确失败或恢复路径。  
@@ -209,7 +211,7 @@ sequenceDiagram
 
 | 镜像类型 | 来源 | 谁发起验证 | 谁执行验证 | 谁决定执行放行 | 反回滚检查 |
 |---|---|---|---|---|---|
-| SEC1 | NOR Flash | BootROM | eHSM | BootROM 跳转至 SEC1 | 跳转前检查 |
+| SEC1 | NOR Flash | BootROM | eHSM | BootROM 跳转至 SEC1 | 跳转前检查；签名 + 加密强制 |
 | SEC2 | Host/PCIe | SEC1 | eHSM | SEC1 / SEC2 受控跳转 | 执行前检查 |
 | PM | Host/PCIe | SEC2 | eHSM | SEC2 release | 放行前检查 |
 | RAS | Host/PCIe | SEC2 | eHSM | SEC2 release | 放行前检查 |
@@ -219,6 +221,7 @@ sequenceDiagram
 ### 6.9.1 当前建议
 
 - `[CONFIRMED]` SEC1 的首次验证由 eHSM 完成
+- `[CONFIRMED]` SEC1 必须签名 + 加密，解密由 eHSM / 安全子系统受控密码服务完成，解密失败必须阻止启动
 - `[CONFIRMED]` SEC2 及后续镜像验证由 SEC1/SEC2 调 eHSM 完成
 - `[CONFIRMED]` Host 不拥有执行放行权
 - `[ASSUMED]` Recovery 镜像应使用专用 recovery trust anchor，并仅在受控 lifecycle 下允许
@@ -266,8 +269,9 @@ sequenceDiagram
   - revoke bitmap 检查
   - version / rollback floor 检查
   - hash / signature 校验
-  - 可选解密
-- `[ASSUMED]` 首版可允许 SEC2 及主要运行期固件根据产品策略选择“签名 only”或“签名 + 加密”
+  - 按 `image_type / policy` 执行解密，其中 SEC1 解密为强制要求
+- `[CONFIRMED]` SEC1 在正式安全启动路径中必须签名 + 加密
+- `[ASSUMED]` SEC2 及主要运行期固件在 USER/PROD 产品形态中默认建议“签名 + 加密”；若采用“签名 only”，必须由产品安全策略显式允许并在 lifecycle / attestation / debug 状态中可见
 
 ---
 
@@ -284,7 +288,10 @@ BootROM 向 eHSM 发起 `VERIFY_SEC1` 请求时，eHSM 至少执行：
 5. `signer pubkey hash` 校验
 6. `signature` 校验
 7. `payload hash` 校验
-8. 可选解密
+8. 强制解密 / unwrap，且解密必须由 eHSM / 安全子系统受控密码服务完成
+9. 记录 measurement 与保护策略状态
+
+SEC1 解密失败必须返回明确错误码并阻止启动，BootROM 不得降级为未解密镜像继续执行。
 
 ### 6.11.2 后续镜像校验规则
 
@@ -296,7 +303,7 @@ SEC1/SEC2 向 eHSM 发起 `VERIFY_IMAGE` 时，至少执行：
 4. `signer_key_hash` / trust anchor 校验
 5. `rollback floor` 检查
 6. `payload hash / signature` 校验
-7. 可选解密
+7. 按 `image_type / policy` 执行解密；SEC2 及后续关键运行期固件在 USER/PROD 产品形态中默认建议签名 + 加密
 8. 通过后才允许 release
 
 ### 6.11.3 失败处理规则
@@ -371,7 +378,7 @@ Host 不得：
 
 | 场景 | 检测点 | 建议动作 |
 |---|---|---|
-| SEC1 验签失败 | BootROM + eHSM | 停止跳转，记录错误码，进入失败/恢复路径 |
+| SEC1 验签或解密失败 | BootROM + eHSM | 停止跳转，记录错误码，进入失败/恢复路径 |
 | SEC2 验签失败 | SEC1/SEC2 + eHSM | 拒绝装载，保持控制面不放行 |
 | 后续微核验签失败 | SEC2 + eHSM | 拒绝对应微核 release |
 | rollback 检查失败 | eHSM / counter path | 拒绝执行，记录 rollback error |
@@ -402,7 +409,7 @@ Host 不得：
 
 | Item | Why Sensitive | Current Status | Needed Before Freeze |
 |---|---|---|---|
-| SEC1 验证调用边界 | 直接影响 BootROM / eHSM 接口冻结 | 已基本收敛 | 冻结 `VERIFY_SEC1` 参数模型 |
+| SEC1 验证与解密调用边界 | 直接影响 BootROM / eHSM 接口冻结 | 已基本收敛 | 冻结 `VERIFY_SEC1` 参数模型、强制解密标志和输出 buffer 约束 |
 | release owner 语义 | 直接影响 SEC / Host / 微核控制权 | 已基本收敛 | 冻结 release 状态机 |
 | rollback counter 映射 | 影响 OTP / 升级 / 证明一致性 | 部分收敛 | 冻结 image_type → counter_id |
 | non-secure boot 在 USER 是否完全关闭 | 影响产品策略和客户模式 | 未完全冻结 | 需产品/安全评审裁决 |
@@ -412,7 +419,7 @@ Host 不得：
 
 ## 6.17 开放问题
 
-1. 首版是否默认启用关键镜像加密，还是先只冻结完整性与放行控制？  
+1. 除 SEC1 外，哪些非敏感运行期镜像允许在特定产品阶段采用签名 only？  
 2. Recovery 是否独立 image_type + 独立 signer？  
 3. SEC1 是否只负责把 SEC2 拉起，还是在首版中继续承担一部分运行期安全控制？  
 4. 非安全启动在 TEST/DEVE 之外是否允许保留特定维护入口？  
@@ -426,12 +433,11 @@ Host 不得：
 
 - BootROM 是启动编排者，不是首个密码学验证者  
 - eHSM 是首个密码学验证主体  
-- SEC1 从 NOR Flash 获取并在执行前经 eHSM 验证  
+- SEC1 从 NOR Flash 获取并在执行前经 eHSM 验证和强制解密  
 - SEC2 与后续固件由 Host 投递、由 SEC1/SEC2 调 eHSM 验证  
 - Host 没有执行放行权  
 - release 必须晚于 verify pass  
-- anti-rollback、吊销、可选解密和失败/恢复路径必须进入启动链  
+- anti-rollback、吊销、SEC1 强制解密、后续镜像按策略解密和失败/恢复路径必须进入启动链  
 - 非安全启动应保留，但必须受生命周期和策略显式控制  
 
 后续若 `mailbox_if.md`、`efuse_key_fw_header_design.md`、`manufacturing_provisioning.md` 冻结字段变更，本章必须同步更新。
-

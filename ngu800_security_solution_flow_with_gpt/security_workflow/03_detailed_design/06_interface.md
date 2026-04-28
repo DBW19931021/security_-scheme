@@ -36,6 +36,7 @@
 - `C-BOARD-04`
 - `C-BOOT-01`
 - `C-BOOT-02`
+- `C-BOOT-04`
 - `C-DEBUG-01`
 - `C-DEBUG-02`
 - `C-ATT-01`
@@ -345,8 +346,9 @@ typedef struct {
 
 | Cmd ID | 命令名 | 主要用途 | 允许 caller |
 |---|---|---|---|
-| 0x0001 | VERIFY_IMAGE | 固件验签 / 可选解密 | SEC |
-| 0x0002 | VERIFY_AND_MEASURE | 验签并更新 measurement | SEC |
+| 0x0001 | VERIFY_SEC1 | SEC1 验签 + 强制解密 + rollback + measurement | SEC / BootROM 早期受控路径 |
+| 0x0002 | VERIFY_IMAGE | 固件验签 + 按 `image_type / policy` 执行解密；其中 `image_type == SEC1` 时解密强制 | SEC |
+| 0x0003 | VERIFY_AND_MEASURE | 验签、按策略解密并更新 measurement | SEC |
 | 0x0020 | GET_CHALLENGE | 获取 challenge | SEC |
 | 0x0021 | DEBUG_AUTH | 调试鉴权 | SEC |
 | 0x0022 | CLOSE_DEBUG | 关闭调试 | SEC |
@@ -360,6 +362,7 @@ typedef struct {
 ### 11.12.1 当前裁决
 
 - `[CONFIRMED]` Host 不得直接作为这些命令的 caller
+- `[CONFIRMED]` `VERIFY_SEC1` 的 decrypt 不可由 caller 关闭，BootROM 只消费 eHSM / 安全子系统返回的受控结果
 - `[CONFIRMED]` Provisioning 相关命令不得在 USER 生命周期可用
 - `[CONFIRMED]` Verify、Debug、Lifecycle、Counter、Attestation 是首批必须支持的命令族
 
@@ -377,6 +380,10 @@ typedef struct {
     uint32_t image_type;
     uint32_t verify_policy;
     uint32_t expected_lcs_mask;
+    uint32_t enc_required;
+    uint32_t key_slot;
+    uint32_t wrapped_cek_present;
+    uint32_t measurement_slot;
     uint32_t jump_on_pass;
     uint64_t dst_addr;
 } ngu_mb_verify_image_req_t;
@@ -390,15 +397,22 @@ typedef struct {
     uint32_t measurement_slot;
     uint32_t rollback_checked;
     uint32_t decrypt_applied;
+    uint32_t decrypt_result;
+    uint32_t policy_state;
 } ngu_mb_verify_image_resp_t;
 ```
 
 ### 11.13.1 字段级章节规则
 
 - `image_type` 必须参与 eHSM 策略检查
+- `image_type == SEC1` 时，`enc_required` 必须为 1，且不得被 caller 关闭
+- `VERIFY_SEC1` 必须表达 decrypt required、rollback policy、measurement slot、输出 buffer / destination 约束和 result code
+- `VERIFY_IMAGE` 必须验签；是否解密由 `image_type / verify_policy / lifecycle / product policy` 共同决定
+- `key_slot` 与 `wrapped_cek_present` 必须与 FW header 中的加密字段一致，不能由 Host 任意伪造
 - `jump_on_pass` 不得让 Host 间接控制跳转
-- `dst_addr` 必须满足 SEC 地址白名单
+- `dst_addr` 必须满足 SEC 地址白名单；SEC1 解密结果只允许进入 BootROM / SEC 认可的受控执行区或 staging 区
 - `rollback_checked` 必须对 verifier / SEC 可见，不得隐式假设已完成
+- `decrypt_result` 必须能够区分未执行、成功、失败和 policy mismatch
 
 ---
 
@@ -465,6 +479,8 @@ typedef struct {
 - 地址越界
 - 验签失败
 - 解密失败
+- key slot 无效
+- policy mismatch
 - rollback 失败
 - auth 失败
 - busy

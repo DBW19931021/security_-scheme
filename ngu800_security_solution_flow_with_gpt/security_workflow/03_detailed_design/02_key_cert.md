@@ -27,6 +27,7 @@
 ## 5.2 生效约束 ID
 
 - `C-ROOT-01`
+- `C-BOOT-04`
 - `C-IF-01`
 - `C-KEY-01`
 - `C-KEY-02`
@@ -194,7 +195,8 @@ Root of Trust 的责任不是“替 BootROM 做所有事情”，而是：
 | UDS / Root Secret | 根种子 | 否 | OTP/eFuse → eHSM 使用 | 全生命周期受控 |
 | DRK | 设备根派生密钥 | 否 | eHSM 内部 | 全生命周期受控 |
 | FW Verify Root | 固件验签根 | 否（私钥）/是（公钥或摘要） | eHSM / cert anchor | USER 必须受控 |
-| FW Encrypt Key / KEK | 固件机密性保护 | 否 | eHSM | 按产品策略启用 |
+| FW Encrypt Key / KEK | 固件机密性保护，至少对 SEC1 强制启用 | 否 | eHSM | SEC1 强制；SEC2/后续关键固件按产品策略启用 |
+| Image CEK / wrapped CEK | 单镜像或镜像包内容加密密钥及其封装结果 | 否（CEK 明文不得离开 eHSM） | 镜像头 wrapped blob + eHSM unwrap | 与 `image_type / key_slot / lifecycle` 绑定 |
 | Attestation Seed | 设备证明上游种子 | 否 | eHSM | USER / DEBUG/RMA 受控 |
 | Device Identity Key | 设备证明私钥 | 否 | eHSM | 不得导出 |
 | Alias / Session Key | 证明扩展私钥 | 否 | eHSM | `[ASSUMED]` 首版可选 |
@@ -233,8 +235,11 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 #### FW Encrypt Branch
 用于：
 - 镜像解密
-- CEK / KEK / wrapped key 路径
-- `[ASSUMED]` 若首版不启用加密，可逻辑保留实现占位
+- FW_KEK / CEK / wrapped CEK 路径
+- `NGU800:FW:ENC` 与 `NGU800:WRAP:CEK` 语义标签
+- `[CONFIRMED]` 对 SEC1 为强制启用，SEC1 解密 / unwrap 必须由 eHSM / 安全子系统受控密码服务完成
+- `[ASSUMED]` 对 SEC2、PM、RAS、Codec 等后续关键固件按产品安全策略启用；USER/PROD 产品形态默认建议签名 + 加密
+- `[TBD]` 除 SEC1 外，哪些非敏感运行期镜像允许签名 only，需由产品安全策略冻结
 
 #### Attestation Branch
 用于：
@@ -251,6 +256,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ### 5.9.3 当前裁决
 
 - `[CONFIRMED]` FW Verify 和 Attestation 不能混为一条“无边界通用签名私钥”
+- `[CONFIRMED]` FW Encrypt Branch 至少对 SEC1 强制启用，且 key slot / key_id 必须与 `image_type = SEC1` 和 lifecycle policy 绑定
 - `[CONFIRMED]` Debug Auth 必须有独立控制面，不能简单复用普通 attestation 成功即开 debug
 - `[ASSUMED]` DRK 是否在硬件实现中显式存在为中间寄存态不重要，重要的是语义上 branch 上游唯一且受控
 
@@ -311,6 +317,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 - `[CONFIRMED]` 不同业务场景必须使用不同 Label
 - `[CONFIRMED]` 不得用同一个 Label 既做固件验签根又做调试鉴权
+- `[CONFIRMED]` SEC1 的 FW Encrypt 派生必须绑定 `image_type = SEC1`、`key_slot`、lifecycle policy 和 rollback version，避免 wrapped CEK 被跨镜像复用
 - `[ASSUMED]` 若国密和国际算法的 KDF 内核不同，label 语义仍应保持一致
 
 ---
@@ -356,6 +363,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 ### 5.13.1 启动路径
 - 固件验签 branch 为 SEC1 / SEC2 / PM / RAS / Codec 等镜像提供验证能力
+- 固件加密 branch 至少为 SEC1 提供强制解密能力，并为 SEC2 / 后续关键运行期固件提供按策略启用的机密性保护能力
 - rollback floor 需与 OTP counter 绑定
 - signer hash / revoke / lifecycle mask 必须进入 verify decision
 
@@ -376,6 +384,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ### 5.14.1 制造阶段必须完成的 key / anchor 对象
 
 - UDS / Root Secret
+- FW_KEK / image protect key 或其 eHSM 内部派生种子
 - FW signer hash / trust anchor
 - Debug auth anchor
 - Attestation anchor / identity seed
@@ -385,12 +394,13 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ### 5.14.2 USER 前必须完成的动作
 
 1. 锁定 Root / anchor 区
-2. 清理测试 key / 测试 cert / 测试 debug trust
-3. 开启 secure boot
-4. 开启 anti-rollback
-5. 关闭未授权 debug
-6. 推进 lifecycle 到 USER
-7. 留存审计日志
+2. 锁定 SEC1 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter
+3. 清理测试 key / 测试 cert / 测试 debug trust
+4. 开启 secure boot
+5. 开启 anti-rollback
+6. 关闭未授权 debug
+7. 推进 lifecycle 到 USER
+8. 留存审计日志
 
 ### 5.14.3 当前裁决
 
@@ -418,6 +428,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 |---|---|---|---|
 | UDS / Root Secret 注入模式 | 影响制造链和 Root 暴露面 | 部分收敛 | 冻结“直接注入”还是“seed 派生” |
 | signer hash vs full cert chain | 影响镜像格式、证明格式、制造工站 | 部分收敛 | 冻结首版采用模型 |
+| SEC2/后续运行期镜像加密分级 | 影响 FW Encrypt Branch、镜像头和产品策略 | 未完全冻结 | 冻结除 SEC1 外哪些镜像允许签名 only |
 | Attestation 是否首版启用 Alias Key | 影响 report / cert / verifier 复杂度 | 未完全冻结 | 冻结首版 identity model |
 | Debug Auth 与 Attestation 的锚点关系 | 影响调试授权链路 | 未完全冻结 | 冻结是否独立 anchor |
 | 双算法默认策略 | 影响产品线和测试矩阵 | 未完全冻结 | 冻结产品策略 |
@@ -431,6 +442,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 3. Attestation 首版是否仅 Device Identity Key 签名就够，还是必须同步规划 Alias Key？  
 4. 固件验签首版是否只用 OTP signer hash，不携带完整 cert chain？  
 5. Debug auth 的 anchor 是否和 attestation anchor 完全独立？  
+6. 除 SEC1 外，SEC2 / PM / RAS / Codec 中哪些镜像允许在特定产品阶段采用签名 only？  
 
 ---
 
@@ -441,6 +453,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 - Root of Trust = eHSM，BootROM 不是密码学根  
 - UDS / Root Secret 是最上游根材料  
 - 固件验签、设备证明、调试鉴权必须在逻辑上分 branch  
+- FW Encrypt Branch 至少对 SEC1 强制启用，SEC1 解密必须由 eHSM / 安全子系统受控密码服务完成  
 - 私钥不得离开 eHSM  
 - signer hash / trust anchor / cert chain 需要按项目首版策略冻结  
 - 国密与国际算法必须在结构层共存  

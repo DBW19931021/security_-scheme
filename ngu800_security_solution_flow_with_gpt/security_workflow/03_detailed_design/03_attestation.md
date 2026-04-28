@@ -56,6 +56,7 @@
 - `[CONFIRMED]` report 必须覆盖从安全启动到运行态最关键的可信对象
 - `[CONFIRMED]` report 至少包含：report header、measurement 集合、cert chain、signature block
 - `[CONFIRMED]` measurement 至少应覆盖 BootROM/immutable identity、SEC 固件、其他微核固件、安全状态和平台标识
+- `[CONFIRMED]` SEC1 measurement 必须对应 verify + decrypt 成功后的受控镜像状态，不能只记录未解密包体存在性
 
 ---
 
@@ -221,6 +222,7 @@ sequenceDiagram
 
 - BootROM 阶段：记录 immutable identity / ROM version 等早期信息
 - SEC1 装载阶段：记录 SEC 固件早期版本 / 测量信息
+- SEC1 解密阶段：记录 SEC1 已按强制加密策略完成 eHSM / 安全子系统受控解密的状态摘要
 - SEC2 运行阶段：统一汇总并维护 measurement_table
 - eHSM：提供签名、密钥、counter、lifecycle 等支持
 
@@ -240,6 +242,7 @@ sequenceDiagram
 |---|---|---|---|
 | BootROM version / immutable identity | BootROM | Yes | 启动阶段写入指定安全内存 |
 | SEC FW hash / version / rollback | BootROM + SEC2 | Yes | SEC1/SEC2 验证时记录 |
+| image confidentiality policy | BootROM + SEC2 + eHSM | Yes | 至少反映 SEC1 强制签名 + 加密策略及是否存在策略降级 |
 | Aux FW hash / version / rollback | SEC2 | Yes | PM / RAS / Codec 等 |
 | lifecycle / debug / secure_boot / anti_rollback | SEC2 + eHSM | Yes | 统一维护状态 |
 | chip_id / device_uuid / die info | eHSM + SEC2 | Yes | 平台实例身份 |
@@ -254,9 +257,10 @@ sequenceDiagram
 5. lifecycle state  
 6. debug state  
 7. secure boot enable  
-8. anti-rollback enable  
-9. chip_id / device_uuid  
-10. board binding / die binding（如启用）
+8. image confidentiality policy（至少覆盖 SEC1）  
+9. anti-rollback enable  
+10. chip_id / device_uuid  
+11. board binding / die binding（如启用）
 
 ---
 
@@ -392,6 +396,7 @@ typedef struct {
 | Slot / Component | 是否首版必须 | 说明 |
 |---|---|---|
 | SEC1 | 是 | 启动链关键项 |
+| SEC1 image protection policy | 是 | 反映 SEC1 已强制签名 + 加密且未走非安全降级路径 |
 | SEC2 | 是 | 认证控制面自身 |
 | PM 微核 | 建议 | 运行态关键微核 |
 | RAS 微核 | 建议 | 运行态关键微核 |
@@ -403,6 +408,7 @@ typedef struct {
 ### 8.14.2 当前裁决
 
 - `[CONFIRMED]` SEC1 / SEC2 / lifecycle / debug / secure_boot / anti_rollback 是首版必须覆盖的核心度量项
+- `[CONFIRMED]` SEC1 的 image protection policy 必须可被 report 或 measurement flags 表达
 - `[ASSUMED]` PM / RAS / Codec 首版建议纳入，如产品分阶段实现可在 verifier 策略中区分强制项与可选项
 - `[TBD]` board binding 是否首版默认开启需与板级安全策略一起冻结
 
@@ -511,6 +517,7 @@ Verifier 至少必须执行：
 | Device Identity vs Alias Key 首版策略 | 影响 report / cert / verifier 复杂度 | 部分收敛 | 冻结首版 key model |
 | cert chain 内嵌策略 | 影响 report 大小与 verifier 部署方式 | 未完全冻结 | 冻结首版 cert 模式 |
 | measurement 必选集合 | 影响安全策略与兼容性 | 部分收敛 | 冻结首版最小 measurement set |
+| image protection policy 字段 | 影响 verifier 是否能识别 SEC1 强制加密和后续镜像签名 only 例外 | 部分收敛 | 冻结 report 字段位置和 flags 编码 |
 | session/transcript 绑定粒度 | 影响 SPDM 集成深度 | 未完全冻结 | 冻结首版 binding 模式 |
 | board/die binding 是否默认启用 | 影响板级/多Die 产品 | 未完全冻结 | 与板级安全策略联动冻结 |
 
@@ -521,6 +528,7 @@ Verifier 至少必须执行：
 1. 首版是否仅 Device Identity Key 签名即可满足客户接入，还是必须同步规划 Alias Key？  
 2. report 是否必须默认内嵌完整 cert chain？  
 3. measurement_table 最终是否全部由 SEC2 自维护，还是部分由 eHSM 动态拉取？  
+4. report 中 image protection policy 是作为 measurement flags、lifecycle block 字段，还是独立 policy block 表达？  
 4. 双Die 场景是单 report 汇总还是主/从 Die 分别证明？  
 5. debug 授权状态是否需要带时间窗口/过期信息进入 report？  
 
@@ -533,6 +541,7 @@ Verifier 至少必须执行：
 - SEC2 是认证控制面，eHSM 是签名与密钥执行面  
 - 设备证明私钥不得离开 eHSM  
 - measurement_table 由启动链产生、由 SEC2 汇总维护  
+- SEC1 measurement 必须反映 verify + decrypt 成功后的受控镜像状态  
 - 报告必须覆盖身份、挑战绑定、关键固件度量、lifecycle/debug/secure_boot/anti_rollback 状态  
 - Verifier 必须同时校验签名、状态和策略，而不是只校验签名  
 - 国密与国际算法必须在报告结构层共存  

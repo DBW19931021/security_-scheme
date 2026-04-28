@@ -27,6 +27,7 @@
 
 ## 9.2 生效约束 ID
 
+- `C-BOOT-04`
 - `C-KEY-02`
 - `C-DEBUG-01`
 - `C-DEBUG-02`
@@ -46,6 +47,7 @@
 
 ### 9.3.1 生命周期控制
 - `[CONFIRMED]` lifecycle 必须控制 debug、OTP/eFuse 访问、非安全启动和镜像接受范围
+- `[CONFIRMED]` USER/PROD 下 SEC1 解密 key / FW_KEK 使用必须受 lifecycle gating，且不可由 debug/RMA 普通请求关闭 SEC1 强制解密策略
 - `[CONFIRMED]` USER 生命周期必须关闭未授权 debug
 - `[CONFIRMED]` USER 生命周期应强制安全启动
 
@@ -184,6 +186,7 @@ sequenceDiagram
 ### 9.8.1 当前裁决
 
 - `[CONFIRMED]` USER 生命周期强制安全启动，默认关闭未授权 debug
+- `[CONFIRMED]` USER/PROD 下 SEC1 必须保持签名 + 加密，SEC1 解密由 eHSM / 安全子系统受控密码服务完成
 - `[CONFIRMED]` MANU 生命周期必须允许 provisioning 和冒烟验证
 - `[CONFIRMED]` RMA 只允许受控 rescue / 维修升级
 - `[ASSUMED]` DEV/TEST 阶段允许更宽松的 boot/debug 策略，但不能与量产态混淆
@@ -349,6 +352,7 @@ ANY -> DECOMMISSIONED (irreversible)
 
 - `[CONFIRMED]` lifecycle 必须控制 secure / non-secure boot 的可用性
 - `[CONFIRMED]` USER 阶段应强制安全启动
+- `[CONFIRMED]` USER/PROD 阶段 SEC1 必须保持签名 + 加密，SEC1 decrypt required 不得被 caller 或调试状态关闭
 - `[ASSUMED]` TEST/DEV 阶段可允许非安全启动，用于 bring-up 和开发
 - `[CONFIRMED]` RMA 仅允许受控 signed rescue boot，不得恢复成普通开放调试启动
 
@@ -368,6 +372,7 @@ report 中至少必须反映：
 - `lifecycle_state`
 - `debug_state`
 - `secure_boot_state`
+- `image_confidentiality_policy`（至少表达 SEC1 强制签名 + 加密策略）
 - `anti_rollback_state`
 
 ### 9.15.2 当前裁决
@@ -390,6 +395,7 @@ report 中至少必须反映：
 ### 9.16.2 RMA
 - `[CONFIRMED]` RMA 是受权返修路径，不是常驻状态
 - `[CONFIRMED]` 返修调试必须 challenge-response 后有限开放
+- `[CONFIRMED]` RMA / DEBUG 不得绕过 SEC1 加密策略；rescue image 必须使用专用 signer / recovery trust，并由 eHSM / 安全子系统受控验证与解密或按 recovery policy 处理
 - `[ASSUMED]` RMA 结束后应恢复量产安全状态，并重新形成报告/审计记录
 
 ---
@@ -402,6 +408,7 @@ report 中至少必须反映：
 | lifecycle/debug 状态块进入证明报告 | `04_impl_design/spdm_report.md` |
 | MANU→USER / RMA 流程、审计与恢复 | `04_impl_design/manufacturing_provisioning.md` |
 | control bits / lifecycle encoding / OTP字段 | `04_impl_design/efuse_key_fw_header_design.md` |
+| SEC1 解密 key / FW_KEK lifecycle gating | `04_impl_design/efuse_key_fw_header_design.md` / `04_impl_design/manufacturing_provisioning.md` |
 | JTAG scope bitmap / CPLD-MUX gating / 板级调试授权闭环 | `04_impl_design/mailbox_if.md` / `[TBD] firewall_access_rules` |
 
 ---
@@ -413,6 +420,7 @@ report 中至少必须反映：
 | 生命周期统一编码 | 影响 OTP / report / command 接口 | 部分收敛 | 冻结最终编码表 |
 | DEBUG 与 RMA 是否独立编码 | 影响命令 gating 与审计模型 | 未完全冻结 | 冻结状态机 |
 | debug scope bitmap bit-level 定义 | 影响 FW / RTL / verifier / 工具 | 未完全冻结 | 冻结端口位图 |
+| SEC2/后续运行期镜像加密策略 | 影响 USER/PROD 策略和 attestation 可见性 | 未完全冻结 | 冻结除 SEC1 外哪些镜像允许签名 only |
 | JTAG scope 与 CPLD/MUX 控制权 | 影响板级调试是否能绕过 eHSM 授权 | 未完全冻结 | 冻结 JTAG target scope、MUX 控制寄存器和关闭策略 |
 | USER 下调试授权策略 | 影响量产与售后边界 | 未完全冻结 | 冻结是否允许短时授权 |
 | DEST 阶段允许保留哪些状态查询能力 | 影响退役与审计 | 未完全冻结 | 冻结销毁态策略 |
@@ -425,8 +433,9 @@ report 中至少必须反映：
 2. 首版 USER 态是否允许短时授权 debug，还是完全禁止？  
 3. debug scope bitmap 最终按子系统、功能类还是资源域来编码？  
 4. `RMA -> PROD` 恢复是否必须重新跑一次最小 attestation / smoke validation？  
-5. DEST 阶段是否允许只读状态查询用于审计收尾？  
-6. 板级 JTAG MUX / CPLD 的授权控制由 SEC 直接写寄存器，还是由板级 MCU 受控代理执行？  
+5. SEC2 / PM / RAS / Codec 是否首版全部强制加密，还是允许部分非敏感镜像签名 only？  
+6. DEST 阶段是否允许只读状态查询用于审计收尾？  
+7. 板级 JTAG MUX / CPLD 的授权控制由 SEC 直接写寄存器，还是由板级 MCU 受控代理执行？  
 
 ---
 

@@ -25,9 +25,10 @@
 | Root of Trust | eHSM | CONFIRMED |
 | First Mutable Stage | SEC1 | CONFIRMED |
 | First Cryptographic Verifier | eHSM | CONFIRMED |
+| SEC1 Protection Policy | SEC1 来源为 NOR / 本地 Flash，正式安全启动路径必须签名 + 加密，验证与解密服务由 eHSM / 安全子系统提供 | CONFIRMED |
 | BootROM Role | 负责最小加载与编排，不负责复杂密码学校验 | CONFIRMED |
 | SEC Role | 启动控制面与 release owner | CONFIRMED |
-| Host Trust Model | 不可信，只具投递能力 | CONFIRMED |
+| Host Trust Model | 不可信，只投递 SEC2 及后续镜像 / 受保护包，不下发 SEC1 | CONFIRMED |
 | Board / OOB Trust Model | BMC / OOB / 管理子系统可承载管理流程，但不进入 Root of Trust | CONFIRMED |
 | Manufacturing Baseline | 必须定义 key 注入、锁定、审计、生命周期推进 | CONFIRMED |
 
@@ -83,20 +84,25 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 ## 5.2 关键约束
 
 - 所有 FW 必须验签
+- SEC1 必须签名 + 加密；SEC1 验证、解密和 key unwrap 必须由 eHSM / 安全子系统受控密码服务完成
+- BootROM 只负责定位 SEC1、调用受控接口、根据结果装载或拒绝启动，不直接实现复杂解密
+- Host 不下发 SEC1；Host 只投递 SEC2 及后续镜像 / 受保护包
+- SEC2、PM、RAS、Codec 等后续关键固件在 USER/PROD 产品形态中默认建议签名 + 加密；若采用签名 only，必须由产品安全策略显式允许并在 lifecycle / attestation / debug 状态中可见
 - 未验签禁止执行
 - 支持 Anti-rollback（OTP counter / monotonic counter）
-- 机密性是否首版强制，可按产品形态收敛；完整性和执行放行不可缺失
+- FW Encrypt Branch 至少对 SEC1 强制启用；FW_KEK / CEK / wrapped key 策略进入实现级设计
 
 ---
 
 # 6. Host 边界
 
 ## 6.1 允许行为
-- 传输固件
+- 传输 SEC2 及后续固件 / 受保护镜像包
 - 发起请求
 - 接收状态 / 失败报告
 
 ## 6.2 禁止行为
+- 下发或替换 SEC1
 - 参与信任链
 - 控制启动
 - 访问密钥

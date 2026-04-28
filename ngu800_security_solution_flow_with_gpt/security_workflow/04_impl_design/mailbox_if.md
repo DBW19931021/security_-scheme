@@ -201,8 +201,9 @@ typedef struct {
 
 | Cmd ID | Name | 说明 |
 |---|---|---|
-| 0x0001 | VERIFY_IMAGE | 固件验签 / 可选解密 |
-| 0x0002 | VERIFY_AND_MEASURE | 验签并写入 measurement |
+| 0x0001 | VERIFY_SEC1 | SEC1 验签 + 强制解密 + rollback + measurement |
+| 0x0002 | VERIFY_IMAGE | 固件验签 + 按 `image_type / policy` 执行解密；其中 SEC1 解密强制 |
+| 0x0003 | VERIFY_AND_MEASURE | 验签、按策略解密并写入 measurement |
 | 0x0020 | GET_CHALLENGE | 获取 challenge |
 | 0x0021 | DEBUG_AUTH | 调试鉴权 |
 | 0x0022 | CLOSE_DEBUG | 关闭调试 |
@@ -220,7 +221,16 @@ typedef struct {
 
 # 8. 关键命令结构体
 
-## 8.1 VERIFY_IMAGE
+## 8.1 VERIFY_SEC1 / VERIFY_IMAGE
+
+`VERIFY_SEC1` 是 SEC1 专用 profile，可在实现上复用 `VERIFY_IMAGE` 包格式，但策略不可被 caller 降级：
+
+- `image_type` 固定为 `SEC1`
+- `decrypt_required` 固定为 1
+- `rollback_policy` 固定启用
+- `measurement_slot` 必须有效
+- 输出地址只能落在 BootROM / SEC 认可的受控执行区或 staging 区
+- Host 不得直接调用该命令，BootROM / SEC 也不得关闭 SEC1 解密
 
 ### Request
 
@@ -232,6 +242,11 @@ typedef struct {
     uint32_t image_type;        /* SEC1 / SEC2 / PMP / RMP / OMP / MMP / RECOVERY */
     uint32_t verify_policy;     /* verify only / verify+decrypt / verify+measure */
     uint32_t expected_lcs_mask; /* 允许的 lifecycle */
+    uint32_t decrypt_required;  /* image_type == SEC1 时必须为 1 */
+    uint32_t rollback_policy;   /* rollback required / optional / recovery policy */
+    uint32_t key_slot;          /* FW verify / FW encrypt key slot */
+    uint32_t wrapped_cek_present;
+    uint32_t measurement_slot;
     uint32_t jump_on_pass;      /* 仅对 eHSM FW 或特定路径有效 */
     uint64_t dst_addr;          /* 解密输出地址，0 表示原地/策略定义 */
 } ngu_mb_verify_image_req_t;
@@ -247,13 +262,17 @@ typedef struct {
     uint32_t measurement_slot;
     uint32_t rollback_checked;  /* 0/1 */
     uint32_t decrypt_applied;   /* 0/1 */
+    uint32_t decrypt_result;    /* none / success / fail / policy_mismatch */
+    uint32_t policy_state;      /* applied policy summary */
 } ngu_mb_verify_image_resp_t;
 ```
 
 ### 约束
 - `image_type` 必须参与 eHSM 侧策略检查。
+- `image_type == SEC1` 时，`decrypt_required` 不可被 caller 关闭；若镜像头声明未加密或缺少 wrapped CEK，必须返回 policy mismatch / key error。
+- `VERIFY_SEC1` 必须完成 header 解析、key_id / signer slot 检查、revoke bitmap、version / rollback floor、signer hash / trust anchor、signature、payload hash、解密 / unwrap 和 measurement 记录。
 - `jump_on_pass` 只允许在明确受控路径启用；不允许让 Host 通过该字段间接控制跳转。
-- `dst_addr` 必须由 SEC 预先做地址白名单检查。
+- `dst_addr` 必须由 SEC 预先做地址白名单检查；SEC1 解密结果只能进入 BootROM / SEC 认可的受控执行区或 staging 区。
 
 ---
 
@@ -497,6 +516,8 @@ sequenceDiagram
 | 0x000D | EHSM_ERR_TIMEOUT | 超时 |
 | 0x000E | EHSM_ERR_NOT_SUPPORTED | 功能未实现 |
 | 0x000F | EHSM_ERR_INTERNAL | 内部错误 |
+| 0x0010 | EHSM_ERR_KEY_SLOT_INVALID | key slot 无效或与 image_type 不匹配 |
+| 0x0011 | EHSM_ERR_POLICY_MISMATCH | 请求策略、镜像头策略或 lifecycle policy 不一致 |
 
 ---
 

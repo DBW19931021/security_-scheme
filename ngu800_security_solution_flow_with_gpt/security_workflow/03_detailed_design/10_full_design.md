@@ -2,6 +2,7 @@
 
 > 适用范围：NGU800 / NGU800P 安全子系统、启动链、认证、生命周期、接口、制造与返修流程  
 > 设计标记口径：`[CONFIRMED] / [ASSUMED] / [TBD]`
+> 说明：CR-0001 后，正式 master / 导出版以 `03_detailed_design_master.md` 和 `03_detailed_design_master_v2.4.md` 为准；本文件保留为完整设计参考稿，并同步 SEC1 强制加密口径，避免旧口径回流。
 
 ---
 
@@ -24,6 +25,7 @@
 - `security_workflow/03_detailed_design/02_key_cert.md`
 - `security_workflow/03_detailed_design/03_attestation.md`
 - `security_workflow/03_detailed_design/04_lifecycle_debug.md`
+- `security_workflow/03_detailed_design/05_board_security.md`
 - `security_workflow/03_detailed_design/06_interface.md`
 - `security_workflow/03_detailed_design/07_manufacturing_rma.md`
 - `security_workflow/04_impl_design/efuse_key_fw_header_design.md`
@@ -52,6 +54,7 @@ inputs_manifest
 - `[CONFIRMED]` BootROM 是最早执行入口，但不是密码学根
 - `[CONFIRMED]` SEC/C908 是唯一 boot control plane 与安全控制面
 - `[CONFIRMED]` Host 不可信，只具备镜像投递和请求发起能力
+- `[CONFIRMED]` SEC1 来自 NOR / 本地 Flash，正式安全启动路径必须签名 + 加密，解密由 eHSM / 安全子系统受控密码服务完成
 - `[CONFIRMED]` 所有正式安全服务必须通过受控接口进入 eHSM
 - `[CONFIRMED]` 制造阶段必须定义 key 注入、锁定、审计和 lifecycle 推进
 - `[CONFIRMED]` 方案必须同时兼容国密和国际算法两套栈
@@ -242,8 +245,9 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 用于：
 
 - 镜像解密
-- CEK / KEK / wrapped key 路径
-- `[ASSUMED]` 若首版不启用加密，可逻辑保留实现占位
+- FW_KEK / CEK / wrapped CEK 路径
+- `[CONFIRMED]` 对 SEC1 强制启用，SEC1 解密 / unwrap 必须由 eHSM / 安全子系统受控密码服务完成
+- `[ASSUMED]` 对 SEC2 和关键运行期固件按产品策略启用；USER/PROD 默认建议签名 + 加密
 
 #### Attestation Branch
 
@@ -355,7 +359,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 1. SoC BootROM、SEC1、SEC2、eHSM、Host 的职责边界。
 2. 安全启动与非安全启动的选择条件。
 3. SEC1 / SEC2 / 后续微核固件的验证与执行放行规则。
-4. 反回滚、吊销、可选解密、失败处理与恢复入口。
+4. 反回滚、吊销、SEC1 强制解密、后续镜像按策略解密、失败处理与恢复入口。
 
 ### 5.2 启动基线
 
@@ -455,7 +459,7 @@ sequenceDiagram
     BR->>FL: 定位 SEC1 镜像
     FL-->>BR: 返回 SEC1 镜像地址/内容
     BR->>EH: VERIFY_SEC1(addr,len,type,policy)
-    EH->>EH: header / key_id / revoke / version / hash / signature / optional decrypt
+    EH->>EH: header / key_id / revoke / version / hash / signature / mandatory decrypt
     EH-->>BR: VERIFY_PASS / VERIFY_FAIL
     alt SEC1 验证通过
         BR->>S1: 装载并跳转
@@ -510,8 +514,9 @@ sequenceDiagram
 #### 当前项目要求
 
 - `[CONFIRMED]` Host 下发镜像必须先进入 staging buffer。
-- `[CONFIRMED]` Verify path 必须能处理 header 解析、key_id / signer hash 检查、revoke bitmap 检查、version / rollback floor 检查、hash / signature 校验与可选解密。
-- `[ASSUMED]` 首版可允许 SEC2 及主要运行期固件根据产品策略选择签名 only 或签名 + 加密。
+- `[CONFIRMED]` Verify path 必须能处理 header 解析、key_id / signer hash 检查、revoke bitmap 检查、version / rollback floor 检查、hash / signature 校验与按 `image_type / policy` 执行解密；其中 SEC1 解密为强制要求。
+- `[CONFIRMED]` SEC1 在正式安全启动路径中必须签名 + 加密。
+- `[ASSUMED]` SEC2 及主要运行期固件在 USER/PROD 产品形态中默认建议签名 + 加密；若采用签名 only，必须由产品安全策略显式允许并在 lifecycle / attestation / debug 状态中可见。
 
 ### 5.9 校验规则
 
@@ -526,7 +531,8 @@ BootROM 向 eHSM 发起 `VERIFY_SEC1` 时，eHSM 至少执行：
 5. `signer pubkey hash` 校验
 6. `signature` 校验
 7. `payload hash` 校验
-8. 可选解密
+8. 强制解密 / unwrap，且解密必须由 eHSM / 安全子系统受控密码服务完成
+9. 记录 measurement 与保护策略状态
 
 #### 后续镜像校验规则
 
@@ -538,7 +544,7 @@ SEC1/SEC2 向 eHSM 发起 `VERIFY_IMAGE` 时，至少执行：
 4. `signer_key_hash` / trust anchor 校验
 5. `rollback floor` 检查
 6. `payload hash / signature` 校验
-7. 可选解密
+7. 按 `image_type / policy` 执行解密；SEC2 及后续关键运行期固件在 USER/PROD 产品形态中默认建议签名 + 加密
 8. 通过后才允许 release
 
 ### 5.10 Host 与 Staging Buffer 规则
@@ -607,14 +613,15 @@ SEC1/SEC2 向 eHSM 发起 `VERIFY_IMAGE` 时，至少执行：
 - `[CONFIRMED]` 所有关键镜像在执行前必须完成验签。
 - `[CONFIRMED]` 未验签通过的镜像不得进入执行态。
 - `[CONFIRMED]` verifier 输出必须带显式状态和错误码，不能隐式当作成功。
+- `[CONFIRMED]` SEC1 必须签名 + 加密，解密失败必须阻止启动。
 
 ### 6.2 机密性保护
 
 当前设计对机密性的态度如下：
 
-- `[ASSUMED]` 首版最小必需是完整性校验和执行放行控制。
-- `[ASSUMED]` SEC2 和关键运行期固件可按产品策略选择签名 only 或签名 + 加密。
-- `[CONFIRMED]` 即使首版不强制镜像加密，结构层也必须预留 `enc_algo` 和解密路径表达能力。
+- `[CONFIRMED]` SEC1 在正式安全启动路径中必须签名 + 加密。
+- `[ASSUMED]` SEC2 和关键运行期固件在 USER/PROD 产品形态中默认建议签名 + 加密；若采用签名 only，必须由产品安全策略显式允许。
+- `[CONFIRMED]` 结构层必须保留 `enc_algo`、wrapped CEK 和解密路径表达能力。
 
 ### 6.3 Anti-Rollback
 
@@ -1204,8 +1211,9 @@ typedef struct {
 
 | Cmd ID | 命令名 | 主要用途 | 允许 caller |
 |---|---|---|---|
-| 0x0001 | VERIFY_IMAGE | 固件验签 / 可选解密 | SEC |
-| 0x0002 | VERIFY_AND_MEASURE | 验签并更新 measurement | SEC |
+| 0x0001 | VERIFY_SEC1 | SEC1 验签 + 强制解密 + rollback + measurement | SEC / BootROM 早期受控路径 |
+| 0x0002 | VERIFY_IMAGE | 固件验签 + 按 `image_type / policy` 执行解密；其中 SEC1 解密强制 | SEC |
+| 0x0003 | VERIFY_AND_MEASURE | 验签、按策略解密并更新 measurement | SEC |
 | 0x0020 | GET_CHALLENGE | 获取 challenge | SEC |
 | 0x0021 | DEBUG_AUTH | 调试鉴权 | SEC |
 | 0x0022 | CLOSE_DEBUG | 关闭调试 | SEC |
@@ -1602,7 +1610,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 ### 13.3 当前开放问题
 
-1. 首版是否默认启用关键镜像加密，还是先冻结完整性与执行放行？
+1. 除 SEC1 外，哪些非敏感运行期镜像允许在特定产品阶段采用签名 only？
 2. recovery 是否采用独立 image_type 和独立 signer？
 3. `DEBUG` 与 `RMA` 是否合并成统一态，还是保留独立子状态？
 4. 首版 attestation 是否只用 Device Identity Key，还是同步规划 Alias Key？

@@ -70,9 +70,36 @@ Impl Binding：
 - BootROM 仅允许：
   - 基础加载
   - 跳转 / 编排
+  - 调用 eHSM / 安全子系统受控接口完成 SEC1 验证与解密
 - 禁止：
   - 复杂签名验证
+  - 复杂镜像解密
   - 密钥管理
+
+---
+
+## 【C-BOOT-04】SEC1 image confidentiality
+
+来源：
+- `CR-0001-sec1-encryption-fw-protection-master-sync`
+
+要求：
+- `[CONFIRMED]` SEC1 固件在正式安全启动路径中必须采用签名 + 加密保护。
+- SEC1 解密、key unwrap、hash/signature 校验必须通过 eHSM 或安全子系统受控密码服务完成。
+- BootROM 不得直接实现复杂解密逻辑，只能定位 SEC1 镜像、调用受控接口、根据结果装载或拒绝启动。
+- Host 不参与 SEC1 投递；SEC1 来源保持为 NOR Flash / 本地 Flash。
+- SEC2、PM、RAS、Codec 等后续关键固件在 USER/PROD 产品形态中默认建议签名 + 加密；若采用签名 only，必须由产品安全策略显式允许并可被 lifecycle / attestation / debug 状态观测。
+
+Decision Rationale：
+- SEC1 是 First Mutable Stage，若仅验签不加密，会暴露早期安全 bring-up 逻辑和后续安全控制面的关键入口。
+- SEC1 来源为本地 Flash，攻击面不同于 Host 下发镜像，需要在存储态具备机密性保护。
+- 将 SEC1 解密收敛到 eHSM / 安全子系统密码服务，可保持 BootROM 最小化和 Root of Trust 边界清晰。
+
+Chapter Binding：
+- ch3 / ch6 / ch8 / ch11 / ch12
+
+Impl Binding：
+- efuse_key_fw_header_design / mailbox_if / manufacturing_provisioning / spdm_report
 
 ---
 
@@ -137,7 +164,7 @@ USER 生命周期：
 ## 【C-HOST-01】Host 不可信
 
 Host 只能：
-- 传输 firmware
+- 传输 SEC2 及后续 firmware / 受保护镜像包
 - 发起请求（mailbox / PCIe）
 
 Host 不允许：
@@ -145,6 +172,7 @@ Host 不允许：
 - 参与 Root of Trust
 - 访问密钥
 - 直接 release 执行
+- 下发或替换 SEC1
 
 ---
 

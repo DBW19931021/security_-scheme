@@ -25,6 +25,17 @@ This skill supports:
 
 The agent MUST NOT directly generate a full security design document from raw inputs.
 
+Change Request gate:
+
+凡是满足以下任一条件的变更，必须先生成 Change Request，不得直接修改安全方案正文：
+
+1. 影响两个以上文件；
+2. 影响 `security_workflow/02_baseline.md`；
+3. 影响 boot / key / cert / attestation / debug / interface / manufacturing 任一安全主路径；
+4. 影响对应的 implementation design、code rules、traceability 或 master/full design 输出。
+
+此类变更必须先使用 `change_requests/CR_template.md` 建立 CR，并结合 `05_traceability/file_sync_checklist.md` 与 `05_traceability/design_impact_matrix.md` 完成影响分析，再执行正文修改。
+
 The mandatory pipeline is:
 
 ```text

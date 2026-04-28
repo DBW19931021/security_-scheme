@@ -46,6 +46,7 @@
 | T-BOOT-001 | boot docs / subsystem docs | C-BOOT-01 | 所有 FW 执行前必须验签 | 01_boot.md | efuse_key_fw_header_design.md / mailbox_if.md | `sec/verify_flow.*` | `test_verify_before_release.c` | IMPL_READY | 覆盖 SEC1 / SEC2 / 后续微核 |
 | T-BOOT-002 | boot docs | C-BOOT-02 | SEC/C908 = 唯一 boot controller | 01_boot.md | mailbox_if.md | `sec/boot_ctrl.*` | `test_release_owner.c` | IMPL_READY | Host / 管理核不得直接 release |
 | T-BOOT-003 | baseline / eHSM integration | C-BOOT-03 | BootROM 不做复杂 crypto | 01_boot.md | fw_header / mailbox_if | `bootrom/bootrom_main.*` | `test_bootrom_boundary.c` | CODE_PENDING | 需在代码审查中重点检查 |
+| T-BOOT-004 | CR-0001 / boot docs / eHSM integration | C-BOOT-04 | SEC1_ENCRYPT_REQUIRED：SEC1 必须签名 + 加密，解密由 eHSM / 安全子系统受控服务完成 | 01_boot.md / 02_key_cert.md | efuse_key_fw_header_design.md / mailbox_if.md / manufacturing_provisioning.md / spdm_report.md | `sec/verify_flow.*` / `sec/key_service.*` / `bootrom/bootrom_main.*` | `test_sec1_encrypt_required.c` / `test_sec1_decrypt_fail_blocks_boot.c` | IMPL_READY | Host 不下发 SEC1；BootROM 不直接实现复杂解密 |
 | T-CRYPTO-001 | eHSM docs | C-IF-01 | 所有正式安全路径 crypto via eHSM | 06_interface.md / 02_key_cert.md | mailbox_if.md / efuse_key_fw_header_design.md | `drivers/mailbox/*` / `sec/ehsm_adapter.*` | `test_crypto_path_only_ehsm.c` | IMPL_READY | 禁止软件绕过 |
 | T-KEY-001 | eHSM docs / key baseline | C-KEY-01 | 私钥不出 eHSM | 02_key_cert.md | efuse_key_fw_header_design.md | `sec/key_service.*` | `test_private_key_non_export.c` | IMPL_READY | Host / 普通核不可见 |
 | T-KEY-002 | lifecycle baseline | C-KEY-02 | key usage = lifecycle gated | 04_lifecycle_debug.md / 02_key_cert.md | efuse_key_fw_header_design.md / spdm_report.md | `sec/lifecycle_ctrl.*` / `sec/key_service.*` | `test_key_lifecycle_gate.c` | IMPL_READY | USER / DEBUG 权限不同 |
@@ -122,6 +123,8 @@
 | `test_release_owner.c` | 只有 SEC 能 release | T-BOOT-002 |
 | `test_bootrom_boundary.c` | BootROM 不得越界承担 crypto 职责 | T-BOOT-003 |
 | `test_rollback_floor.c` | 低版本镜像必须被拒绝 | T-UPD-001 |
+| `test_sec1_encrypt_required.c` | SEC1 镜像缺少加密或 wrapped CEK 时必须被拒绝 | T-BOOT-004 |
+| `test_sec1_decrypt_fail_blocks_boot.c` | SEC1 解密失败必须阻止启动且不能降级执行 | T-BOOT-004 |
 
 ## 5.2 Host / Interface 类
 
@@ -166,6 +169,7 @@
 | 管理子系统 DMA region / UserID | 尚未冻结可访问 buffer、firewall region 和 master 标识 | T-BOARD-004 |
 | PowerBrake / PG / FAULT / reset 安全状态 | 尚未冻结哪些事件进入证明或审计 | T-BOARD-004 |
 | Counter ID 到 image_type 的最终映射 | 需要与 eFuse / header 一起冻结 | T-UPD-001 |
+| SEC2/后续运行期镜像加密分级 | SEC1 已强制加密，但其他镜像是否全部强制仍需产品策略 | T-BOOT-004 / T-KEY-001 |
 | Board binding 默认策略 | 量产默认开关未定 | T-ATT-001 / T-MFG-001 |
 | 共享内存最终落点 | IRAM / DDR / firewall share memory 未最终裁决 | T-HOST-001 / T-IF-001 |
 

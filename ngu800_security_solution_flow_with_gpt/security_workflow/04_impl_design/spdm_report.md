@@ -33,6 +33,8 @@ typedef struct {
     uint32_t measurement_count;
     uint32_t lifecycle_state;
     uint32_t debug_state;
+    uint32_t secure_boot_state;
+    uint32_t image_confidentiality_policy;
 } ngu_att_report_hdr_t;
 ```
 
@@ -58,6 +60,8 @@ typedef struct {
     uint32_t slot_id;
     uint32_t image_type;
     uint32_t image_version;
+    uint32_t rollback_checked;
+    uint32_t decrypt_applied;
     uint8_t  measurement_hash[48];
     uint32_t flags;
 } ngu_att_measurement_block_t;
@@ -69,6 +73,8 @@ typedef struct {
 - 管理子系统关键固件
 - lifecycle/debug 状态
 
+SEC1 对应 measurement 必须反映 verify + decrypt 成功后的受控镜像状态，不能只记录未解密包体存在性。`flags` 至少需要能表达 `SIGN_VERIFIED`、`DECRYPT_APPLIED`、`ROLLBACK_CHECKED` 和 `POLICY_MATCHED` 等语义。
+
 ---
 
 # 5. Lifecycle / Debug Status Block
@@ -79,6 +85,7 @@ typedef struct {
     uint32_t debug_enable_state;
     uint32_t anti_rollback_state;
     uint32_t secure_boot_state;
+    uint32_t image_confidentiality_policy; /* 至少表达 SEC1 强制签名 + 加密策略 */
 } ngu_att_lifecycle_block_t;
 ```
 
@@ -115,6 +122,7 @@ typedef struct {
 - Identity Block
 - Measurement Blocks
 - Lifecycle/Debug Block
+- Secure boot / image protection policy fields
 - Nonce / Session Binding 信息
 
 私钥不得离开 eHSM。
@@ -133,4 +141,4 @@ typedef struct {
 # 10. 当前阶段结论
 
 本文件已经给出 report 字段级方向。  
-后续应结合真实 verifier 需求进一步细化 slot、证书模型和 session 绑定语义。
+后续应结合真实 verifier 需求进一步细化 slot、证书模型、image protection policy 编码和 session 绑定语义。

@@ -13,11 +13,12 @@
 
 1. 制造阶段与生命周期状态的映射关系
 2. Root / UDS / signer anchor / debug anchor / attestation anchor / counter 的灌装对象与顺序
-3. OTP / eFuse 写入、校验、锁定、审计的控制要求
-4. MANU → USER 的冻结动作集合
-5. 量产部署后的状态约束
-6. RMA / DEBUG 场景下的授权、调试、恢复与重新冻结规则
-7. 与实现层文件的映射关系：
+3. SEC1 强制加密所需 FW_KEK / image protect key 的灌装、锁定和 USER 前冻结要求
+4. OTP / eFuse 写入、校验、锁定、审计的控制要求
+5. MANU → USER 的冻结动作集合
+6. 量产部署后的状态约束
+7. RMA / DEBUG 场景下的授权、调试、恢复与重新冻结规则
+8. 与实现层文件的映射关系：
    - `04_impl_design/manufacturing_provisioning.md`
    - `04_impl_design/efuse_key_fw_header_design.md`
    - `04_impl_design/mailbox_if.md`
@@ -35,6 +36,7 @@
 - `C-HOST-01`
 - `C-ATT-01`
 - `C-UPDATE-01`
+- `C-BOOT-04`
 - `C-MFG-01`
 - `C-ACCESS-01`
 
@@ -50,6 +52,7 @@
 ### 12.3.2 量产冻结
 - `[CONFIRMED]` 进入 USER 前必须完成 secure boot、anti-rollback、debug 关闭、测试 trust 清理
 - `[CONFIRMED]` Root / signer / debug / attestation 相关敏感对象必须完成锁定
+- `[CONFIRMED]` SEC1 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter 必须在 USER 前锁定
 - `[CONFIRMED]` USER 生命周期不得默认开放未经授权的调试路径
 
 ### 12.3.3 RMA / DEBUG
@@ -65,18 +68,20 @@
 
 1. 制造阶段到底写哪些对象、按什么顺序写？
 2. Root / UDS / signer / debug / attestation / counter 之间的先后关系是什么？
-3. MANU 验证启动要检查哪些项目？
-4. USER 冻结时必须关闭或清理哪些对象？
-5. 量产出厂后哪些状态必须可被证明？
-6. RMA / DEBUG 如何合法开启，又如何恢复？
-7. 审计日志至少要记录哪些事件？
-8. 制造工具、Host/BMC、SEC、eHSM 的职责边界在哪里？
+3. FW_KEK / image protect key 与 SEC1 signer anchor / rollback counter 如何在 USER 前锁定？
+4. MANU 验证启动要检查哪些项目？
+5. USER 冻结时必须关闭或清理哪些对象？
+6. 量产出厂后哪些状态必须可被证明？
+7. RMA / DEBUG 如何合法开启，又如何恢复？
+8. 审计日志至少要记录哪些事件？
+9. 制造工具、Host/BMC、SEC、eHSM 的职责边界在哪里？
 
 ### 12.4.2 不得违反的边界
 
 - 不得允许工站或 Host 直接操作 eHSM 私有执行面
 - 不得允许 Root / UDS / 私钥明文以普通软件资产形式长期存在
 - 不得在 USER 生命周期保留测试 signer / 测试 cert / 测试 debug 白名单
+- 不得在 USER 生命周期保留 SEC1 解密绕过策略或可被普通软件关闭的 SEC1 decrypt_required
 - 不得在失败时报告“USER 冻结完成”
 - 不得把 RMA/DEBUG 当成长期常开模式
 
@@ -182,6 +187,7 @@ sequenceDiagram
 | UDS / Root Secret | 是 | 根种子 / Root 材料上游 |
 | Root Key / Root KEK 材料 | 视模式 | 可直接写入，或由 UDS 内部派生 |
 | FW Signer Hash / Trust Anchor | 是 | 支撑 SEC1 / SEC2 / 运行期 FW 验签 |
+| FW_KEK / Image Protect Key | 是 | 支撑 SEC1 强制加密镜像的 CEK unwrap / 解密策略 |
 | Debug Auth Anchor | 是 | 支撑 DEBUG/RMA 调试鉴权 |
 | Attestation Seed / Anchor | 是 | 支撑设备证明 |
 | Rollback Counter 初值 / 版本地板 | 是 | 支撑 anti-rollback |
@@ -213,21 +219,23 @@ sequenceDiagram
     ↓
 (4) 写入 FW signer hash / trust anchor
     ↓
-(5) 写入 Debug auth anchor
+(5) 写入 FW_KEK / image protect key 策略或其 eHSM 内部派生种子
     ↓
-(6) 写入 Attestation seed / anchor
+(6) 写入 Debug auth anchor
     ↓
-(7) 写入 counter 初值 / rollback floor
+(7) 写入 Attestation seed / anchor
     ↓
-(8) 写入 secure boot / debug / attestation / rollback 控制位
+(8) 写入 counter 初值 / rollback floor
     ↓
-(9) 校验写入结果
+(9) 写入 secure boot / FW encrypt / debug / attestation / rollback 控制位
     ↓
-(10) 锁定 key / anchor / control bits
+(10) 校验写入结果
     ↓
-(11) 执行 MANU 验证启动
+(11) 锁定 key / FW_KEK 策略 / anchor / control bits
     ↓
-(12) 执行 USER 冻结
+(12) 执行 MANU 验证启动
+    ↓
+(13) 执行 USER 冻结
 ```
 
 ### 12.9.2 顺序理由
@@ -286,6 +294,7 @@ sequenceDiagram
 | 检查项 | 说明 |
 |---|---|
 | SEC1 / SEC2 验签 | 核心启动链验证 |
+| SEC1 解密 / unwrap | 验证 SEC1 签名 + 加密策略、FW_KEK / wrapped CEK 和输出 buffer 约束 |
 | rollback counter 读取 | 反回滚路径验证 |
 | lifecycle / control bits 读取 | 状态验证 |
 | challenge / report 最小链路 | 证明能力基础验证 |
@@ -307,6 +316,7 @@ sequenceDiagram
 |---|---|---|
 | Root / UDS 区 | 写入并校验通过后 | 防止重复覆盖 |
 | signer hash / trust anchor 区 | 写入校验后 | 防止验签锚被替换 |
+| FW_KEK / image protect key 策略 | 写入校验后 | 防止 SEC1 解密策略被替换或降级 |
 | debug auth anchor 区 | 写入校验后 | 防止调试授权根被替换 |
 | attestation anchor 区 | 写入校验后 | 防止证明身份根被替换 |
 | control bits 区 | USER 冻结前 | 防止量产策略回退 |
@@ -331,12 +341,13 @@ sequenceDiagram
 2. `DEBUG_AUTH_EN = 1`
 3. `JTAG_FORCE_DISABLE = 1`
 4. `ANTI_ROLLBACK_EN = 1`
-5. Root / signer / debug / attestation 相关对象完成锁定
-6. 测试 signer / 测试 cert / 测试 debug 白名单全部清理
-7. 如启用 attestation，则 `ATTEST_EN = 1`
-8. 推进 lifecycle 到 USER
-9. 锁定 lifecycle 回退路径
-10. 生成冻结完成的审计记录
+5. `FW_ENCRYPT_EN = 1`，且至少覆盖 SEC1
+6. Root / signer / debug / attestation / SEC1 解密相关 key slot / FW_KEK 策略完成锁定
+7. 测试 signer / 测试 cert / 测试 debug 白名单全部清理
+8. 如启用 attestation，则 `ATTEST_EN = 1`
+9. 推进 lifecycle 到 USER
+10. 锁定 lifecycle 回退路径
+11. 生成冻结完成的审计记录
 
 ### 12.13.2 事务性要求
 
@@ -357,6 +368,7 @@ sequenceDiagram
 | 项目 | 期望状态 |
 |---|---|
 | Secure Boot | 开启 |
+| SEC1 Image Protection | 签名 + 加密强制开启 |
 | Anti-Rollback | 开启 |
 | 未授权 Debug | 关闭 |
 | 测试 Signer / Trust | 已清除 |
@@ -423,6 +435,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 - `[CONFIRMED]` 不得因为进入 RMA 就长期常开 debug  
 - `[CONFIRMED]` 不得跳过 challenge / auth 直接开调试口  
 - `[CONFIRMED]` 返修完成后不得带着测试 trust 或开放调试出厂  
+- `[CONFIRMED]` RMA 不得长期开放 SEC1 解密绕过路径；rescue / recovery 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy  
 - `[ASSUMED]` RMA 完成后，建议重新生成与当前状态一致的最小 report / status 记录，用于归档  
 
 ---
@@ -435,6 +448,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 |---|---|
 | PROVISION_START | 设备 ID、工站 ID、时间、操作员、工单 |
 | ROOT_WRITE | 写入对象类型、target slot、结果 |
+| FW_KEK_WRITE | FW_KEK / image protect key 策略写入、slot、结果 |
 | ANCHOR_WRITE | signer/debug/attest anchor 类型、结果 |
 | CTRL_BITS_WRITE | 控制位变化前后、结果 |
 | LOCK_APPLY | 锁定对象、结果 |
@@ -474,6 +488,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 | Item | Why Sensitive | Current Status | Needed Before Freeze |
 |---|---|---|---|
 | Root 注入模式（直接 Root vs Seed/UDS） | 影响制造链安全暴露面 | 部分收敛 | 冻结首版模式 |
+| SEC2/后续运行期镜像是否全部强制加密 | 影响 FW_KEK 规划和量产镜像封装 | 未完全冻结 | 冻结除 SEC1 外的加密分级策略 |
 | OTP 是否支持读回校验 | 影响校验策略 | 未完全冻结 | 冻结可读回区和不可读回区策略 |
 | Provisioning 链路承载方式 | 影响工站 / Host / BMC 选型 | 未完全冻结 | 冻结首版工装路径 |
 | 双Die 灌装是否联动事务 | 影响 OAM / 双Die 产品制造 | 未完全冻结 | 冻结联动策略 |
@@ -488,6 +503,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 3. BMC / OOB-MCU 在某些产品形态下是否允许承担 provisioning 桥接角色？  
 4. 双Die 产品是按单设备事务灌装，还是主/从 Die 分步灌装？  
 5. RMA 结束后，是否要求强制重新生成 attestation / 状态摘要并归档？  
+6. SEC2 / PM / RAS / Codec 是否首版全部强制加密，还是允许部分非敏感镜像签名 only？  
 
 ---
 
@@ -497,6 +513,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 - 制造必须通过 SEC/C908 控制面与 eHSM 安全执行面完成  
 - UDS / Root / signer / debug / attestation / counter / control bits 的灌装顺序必须固定  
+- SEC1 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter 必须在 USER 前锁定  
 - 锁定、校验和 USER 冻结必须显式化、事务化、可审计  
 - 量产部署后必须保持 secure boot、anti-rollback、未授权 debug 关闭和测试 trust 清理  
 - RMA 是受授权、可恢复、可审计的旁路，不得成为常开调试模式  

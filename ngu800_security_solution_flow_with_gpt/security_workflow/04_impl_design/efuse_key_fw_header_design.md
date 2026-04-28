@@ -74,7 +74,7 @@
 | SECURE_BOOT_EN | 1 | 启用安全启动 |
 | DEBUG_AUTH_EN | 1 | 调试鉴权使能 |
 | JTAG_FORCE_DISABLE | 1 | 强制禁用 JTAG |
-| FW_ENCRYPT_EN | 1 | 启用镜像加密 |
+| FW_ENCRYPT_EN | 1 | 启用镜像加密；正式安全启动路径中 SEC1 必须视为强制启用 |
 | ATTEST_EN | 1 | 启用设备证明 |
 | ANTI_ROLLBACK_EN | 1 | 启用反回滚 |
 
@@ -109,7 +109,8 @@ FW Verify Key    FW Encrypt Key      Attestation Seed     Debug Auth Seed
 | UDS / Root Secret | 根种子 | 否 | OTP/eFuse |
 | DRK | 根派生密钥 | 否 | eHSM 内部 |
 | FW Verify Key | 固件验签根 | 否（私钥） | eHSM / cert chain |
-| FW Encrypt Key | 固件解密包裹密钥 | 否 | eHSM |
+| FW Encrypt Key / FW_KEK | 固件解密包裹密钥；至少对 SEC1 强制启用 | 否 | eHSM |
+| Image CEK / wrapped CEK | 单镜像内容加密密钥及其封装结果 | CEK 明文不可导出 | wrapped blob 在镜像头，unwrap 在 eHSM |
 | Attestation Seed | 设备身份派生根 | 否 | eHSM |
 | Debug Auth Seed | 调试鉴权 | 否 | eHSM |
 
@@ -147,10 +148,20 @@ typedef struct {
     uint16_t hash_algo;
     uint16_t sig_algo;
     uint16_t enc_algo;
+    uint16_t enc_mode;
+    uint32_t enc_flags;
     uint16_t key_slot;
     uint16_t cert_format;
     uint32_t cert_off;
     uint32_t cert_len;
+    uint32_t wrapped_cek_off;
+    uint32_t wrapped_cek_len;
+    uint32_t nonce_iv_off;
+    uint32_t nonce_iv_len;
+    uint32_t aad_off;
+    uint32_t aad_len;
+    uint32_t ciphertext_off;
+    uint32_t ciphertext_len;
     uint32_t sig_off;
     uint32_t sig_len;
     uint32_t lifecycle_mask;
@@ -164,7 +175,22 @@ typedef struct {
 
 - `load_addr / entry_point / image_version / algo_family` 必须进入 signed region
 - rollback 字段必须进入 signed region
+- `enc_algo / enc_mode / enc_flags / key_slot / wrapped_cek_* / nonce_iv_* / aad_* / ciphertext_*` 必须进入 signed region，防止 Host 或 Flash 攻击者篡改加密策略
+- `IMAGE_TYPE_SEC1` 必须满足 `SIGN_REQUIRED | ENCRYPT_REQUIRED | ROLLBACK_REQUIRED`
+- `IMAGE_TYPE_SEC1` 的 `enc_algo` 不得为 `NONE`，`wrapped_cek_len`、`nonce_iv_len`、`ciphertext_len` 必须符合算法要求
+- SEC1 的 signer anchor 与 encryption key slot 必须可区分，不能用同一字段隐式承担验签和解密两种语义
+- SEC1 rollback counter 必须映射到 `SEC1_MIN_VER`
+- SEC2、PMP/RMP/OMP/MMP 等后续关键固件在 USER/PROD 产品形态中默认建议 `SIGN_REQUIRED | ENCRYPT_RECOMMENDED | ROLLBACK_REQUIRED`；签名 only 必须由产品策略显式允许
 - 私钥不得参与 Host 可见路径
+
+## 6.4 Image Type Policy
+
+| Image Type | Policy Flags | 加密要求 | Rollback Counter |
+|---|---|---|---|
+| `IMAGE_TYPE_SEC1` | `SIGN_REQUIRED | ENCRYPT_REQUIRED | ROLLBACK_REQUIRED` | 强制，解密由 eHSM / 安全子系统受控密码服务完成 | `SEC1_MIN_VER` |
+| `IMAGE_TYPE_SEC2` | `SIGN_REQUIRED | ENCRYPT_RECOMMENDED | ROLLBACK_REQUIRED` | USER/PROD 默认建议启用；签名 only 需产品策略允许 | `SEC2_MIN_VER` |
+| `IMAGE_TYPE_PMP/RMP/OMP/MMP` | `SIGN_REQUIRED | ENCRYPT_RECOMMENDED | ROLLBACK_REQUIRED` | 按产品安全策略启用 | 对应 `*_MIN_VER` |
+| `IMAGE_TYPE_RECOVERY` | `SIGN_REQUIRED | ENCRYPT_POLICY_DEPENDENT | ROLLBACK_POLICY_DEPENDENT` | 受 recovery trust 与 lifecycle 控制 | 独立策略 |
 
 ---
 
