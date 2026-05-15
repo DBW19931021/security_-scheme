@@ -242,11 +242,11 @@ sequenceDiagram
 |---|---|---|---|
 | BootROM version / immutable identity | BootROM | Yes | 启动阶段写入指定安全内存 |
 | SEC FW hash / version / rollback | BootROM + SEC2 | Yes | SEC1/SEC2 验证时记录 |
-| image confidentiality policy | BootROM + SEC2 + eHSM | Yes | 至少反映 SEC1 强制签名 + 加密策略及是否存在策略降级 |
+| image protection policy / decrypt_applied | BootROM + SEC2 + eHSM | Yes | 至少反映 SEC1/SEC2 强制签名 + 加密、PM/RAS/Codec 默认策略及 signature-only 例外 |
 | Aux FW hash / version / rollback | SEC2 | Yes | PM / RAS / Codec 等 |
 | lifecycle / debug / secure_boot / anti_rollback | SEC2 + eHSM | Yes | 统一维护状态 |
 | chip_id / device_uuid / die info | eHSM + SEC2 | Yes | 平台实例身份 |
-| board binding state（若启用） | SEC2 + eHSM | Yes | 可选 |
+| board binding state / board_bind_result | SEC2 + eHSM | Yes | `[ASSUMED]` V2.4 默认进入证明，不默认阻断 SEC1 |
 
 ### 8.10.2 当前项目推荐 measurement 集合
 
@@ -257,7 +257,7 @@ sequenceDiagram
 5. lifecycle state  
 6. debug state  
 7. secure boot enable  
-8. image confidentiality policy（至少覆盖 SEC1）  
+8. image confidentiality policy / image protection policy（至少覆盖 SEC1 + SEC2）  
 9. anti-rollback enable  
 10. chip_id / device_uuid  
 11. board binding / die binding（如启用）
@@ -397,10 +397,10 @@ typedef struct {
 |---|---|---|
 | SEC1 | 是 | 启动链关键项 |
 | SEC1 image protection policy | 是 | 反映 SEC1 已强制签名 + 加密且未走非安全降级路径 |
-| SEC2 | 是 | 认证控制面自身 |
-| PM 微核 | 建议 | 运行态关键微核 |
-| RAS 微核 | 建议 | 运行态关键微核 |
-| Codec 微核 | 建议 | 运行态关键微核 |
+| SEC2 image protection policy | 是 | 反映 SEC2 已强制签名 + 加密且 decrypt_applied 成功 |
+| PM 微核 | 默认纳入 | `[ASSUMED]` USER/PROD 默认 sign+encrypt，产品分阶段实现可区分强制项与可选项 |
+| RAS 微核 | 默认纳入 | `[ASSUMED]` USER/PROD 默认 sign+encrypt，产品分阶段实现可区分强制项与可选项 |
+| Codec 微核 | 默认纳入 | `[ASSUMED]` USER/PROD 默认 sign+encrypt，产品分阶段实现可区分强制项与可选项 |
 | lifecycle state | 是 | 量产可信判断必要 |
 | debug policy bitmap / state | 是 | 调试状态可信判断必要 |
 | board policy / binding digest | 可选 | 板级策略/绑定 |
@@ -408,9 +408,12 @@ typedef struct {
 ### 8.14.2 当前裁决
 
 - `[CONFIRMED]` SEC1 / SEC2 / lifecycle / debug / secure_boot / anti_rollback 是首版必须覆盖的核心度量项
-- `[CONFIRMED]` SEC1 的 image protection policy 必须可被 report 或 measurement flags 表达
-- `[ASSUMED]` PM / RAS / Codec 首版建议纳入，如产品分阶段实现可在 verifier 策略中区分强制项与可选项
-- `[TBD]` board binding 是否首版默认开启需与板级安全策略一起冻结
+- `[CONFIRMED]` lifecycle、debug state、secure_boot state、rollback state 必须进入 report，并被 report signature 覆盖
+- `[CONFIRMED]` SEC1 / SEC2 的 image protection policy 必须可被 report 或 measurement flags 表达
+- `[ASSUMED]` image protection policy、decrypt_applied、image_type policy 字段进入 report 或 measurement flags
+- `[ASSUMED]` PM / RAS / Codec 首版默认纳入；如产品分阶段实现，可在 verifier 策略中区分强制项与可选项
+- `[ASSUMED]` board binding 默认进入 attestation report 或扩展证明数据，不默认阻断 SEC1 verify/decrypt/release
+- `[TBD]` board binding 是否参与 SEC2/runtime release decision 需与板级安全策略一起冻结
 
 ---
 
@@ -517,9 +520,10 @@ Verifier 至少必须执行：
 | Device Identity vs Alias Key 首版策略 | 影响 report / cert / verifier 复杂度 | 部分收敛 | 冻结首版 key model |
 | cert chain 内嵌策略 | 影响 report 大小与 verifier 部署方式 | 未完全冻结 | 冻结首版 cert 模式 |
 | measurement 必选集合 | 影响安全策略与兼容性 | 部分收敛 | 冻结首版最小 measurement set |
-| image protection policy 字段 | 影响 verifier 是否能识别 SEC1 强制加密和后续镜像签名 only 例外 | 部分收敛 | 冻结 report 字段位置和 flags 编码 |
+| image protection policy / decrypt_applied 字段 | 影响 verifier 是否能识别 SEC1/SEC2 强制加密和后续镜像 signature-only 例外 | 部分收敛 | 冻结 report 字段位置和 flags 编码 |
 | session/transcript 绑定粒度 | 影响 SPDM 集成深度 | 未完全冻结 | 冻结首版 binding 模式 |
-| board/die binding 是否默认启用 | 影响板级/多Die 产品 | 未完全冻结 | 与板级安全策略联动冻结 |
+| board/die binding report 策略 | 影响板级/多Die 产品 | 部分收敛 | V2.4 默认进入 attestation；是否参与 SEC2/runtime release decision 后续冻结 |
+| PowerBrake / PG / FAULT / reset event | 影响证明与板级故障解释 | 未完全冻结 | 冻结进入主 report 还是扩展 event log |
 
 ---
 
@@ -528,9 +532,10 @@ Verifier 至少必须执行：
 1. 首版是否仅 Device Identity Key 签名即可满足客户接入，还是必须同步规划 Alias Key？  
 2. report 是否必须默认内嵌完整 cert chain？  
 3. measurement_table 最终是否全部由 SEC2 自维护，还是部分由 eHSM 动态拉取？  
-4. report 中 image protection policy 是作为 measurement flags、lifecycle block 字段，还是独立 policy block 表达？  
-4. 双Die 场景是单 report 汇总还是主/从 Die 分别证明？  
-5. debug 授权状态是否需要带时间窗口/过期信息进入 report？  
+4. report 中 image protection policy / decrypt_applied / board_bind_result 是作为 measurement flags、lifecycle block 字段，还是独立 policy block 表达？  
+5. 双Die 场景是单 report 汇总还是主/从 Die 分别证明？  
+6. debug 授权状态是否需要带时间窗口/过期信息进入 report？  
+7. PowerBrake / PG / FAULT / reset event 是否进入主 report，还是进入扩展 event log？  
 
 ---
 
@@ -543,6 +548,7 @@ Verifier 至少必须执行：
 - measurement_table 由启动链产生、由 SEC2 汇总维护  
 - SEC1 measurement 必须反映 verify + decrypt 成功后的受控镜像状态  
 - 报告必须覆盖身份、挑战绑定、关键固件度量、lifecycle/debug/secure_boot/anti_rollback 状态  
+- image protection policy / decrypt_applied / board_bind_result 是首版 report 的策略表达方向，但字段位置仍需冻结  
 - Verifier 必须同时校验签名、状态和策略，而不是只校验签名  
 - 国密与国际算法必须在报告结构层共存  
 

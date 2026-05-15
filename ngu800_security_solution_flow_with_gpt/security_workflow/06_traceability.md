@@ -1,7 +1,7 @@
 # NGU800 追踪矩阵（强化版 V1.0）
 
-状态：当前阶段设计追踪文件（已纳入 `SRC-005` 管理子系统增量输入）  
-适用范围：NGU800 / NGU800P 安全方案、实现级设计、代码开发、测试验证  
+状态：当前阶段设计追踪文件（已纳入 `SRC-005 管理子系统方案` 增量输入）
+适用范围：NGU800 / NGU800P 安全方案、完整详设、实现级编辑分片、代码开发、测试验证
 目的：建立从输入资料到代码与测试的可追踪闭环，避免“方案写了但无法落代码”或“代码改了但脱离方案”
 
 ---
@@ -16,8 +16,9 @@
 2. 某个约束进入了哪条 baseline 决策？
 3. 某个 baseline 结论落到了哪一章详设？
 4. 某个详设是否已经收敛到实现级文件？
-5. 某个实现级定义最终应该落到哪个代码模块？
-6. 某个代码模块是否已经有配套测试？
+5. 某个实现级定义是否已经进入 `10_full_design.md` 这个代码落地主入口？
+6. 某个实现级定义最终应该落到哪个代码模块？
+7. 某个代码模块是否已经有配套测试？
 
 ---
 
@@ -42,11 +43,17 @@
 
 | Trace ID | Source | Constraint ID | Baseline Decision | Detailed Design | Impl Design | Code Module | Test Case | Status | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| T-DOC-001 | CR-0005 / user decision | N/A | `10_full_design.md` 是完整详设与代码落地主入口；`04_impl_design` 是编辑分片，不是独立事实源 | 10_full_design.md | 04_impl_design/*.md synchronized into 10_full_design 第 10 章 | all FW / driver / tool / test modules | `test_doc_source_sync.py` / review checklist | IMPL_READY | 若实现级字段只存在于分片而不在主详设中可见，应视为 sync failure |
 | T-ROOT-001 | eHSM docs / project baseline | C-ROOT-01 | Root of Trust = eHSM | 00_architecture.md / 02_key_cert.md | efuse_key_fw_header_design.md | `sec/ehsm_adapter.*` / `sec/key_service.*` | `test_root_trust.c` | IMPL_READY | Root Secret 仅在 eHSM 使用 |
 | T-BOOT-001 | boot docs / subsystem docs | C-BOOT-01 | 所有 FW 执行前必须验签 | 01_boot.md | efuse_key_fw_header_design.md / mailbox_if.md | `sec/verify_flow.*` | `test_verify_before_release.c` | IMPL_READY | 覆盖 SEC1 / SEC2 / 后续微核 |
 | T-BOOT-002 | boot docs | C-BOOT-02 | SEC/C908 = 唯一 boot controller | 01_boot.md | mailbox_if.md | `sec/boot_ctrl.*` | `test_release_owner.c` | IMPL_READY | Host / 管理核不得直接 release |
 | T-BOOT-003 | baseline / eHSM integration | C-BOOT-03 | BootROM 不做复杂 crypto | 01_boot.md | fw_header / mailbox_if | `bootrom/bootrom_main.*` | `test_bootrom_boundary.c` | CODE_PENDING | 需在代码审查中重点检查 |
 | T-BOOT-004 | CR-0001 / boot docs / eHSM integration | C-BOOT-04 | SEC1_ENCRYPT_REQUIRED：SEC1 必须签名 + 加密，解密由 eHSM / 安全子系统受控服务完成 | 01_boot.md / 02_key_cert.md | efuse_key_fw_header_design.md / mailbox_if.md / manufacturing_provisioning.md / spdm_report.md | `sec/verify_flow.*` / `sec/key_service.*` / `bootrom/bootrom_main.*` | `test_sec1_encrypt_required.c` / `test_sec1_decrypt_fail_blocks_boot.c` | IMPL_READY | Host 不下发 SEC1；BootROM 不直接实现复杂解密 |
+| T-BOOT-005 | CR-0003 / runtime image policy | C-BOOT-05 | SEC2_ENCRYPT_REQUIRED：SEC2 必须 sign + encrypt；PM/RAS/Codec USER/PROD 默认 sign + encrypt，signature-only 仅白名单 | 01_boot.md / 02_key_cert.md | efuse_key_fw_header_design.md / mailbox_if.md / spdm_report.md / manufacturing_provisioning.md | `sec/verify_flow.*` / `sec/key_service.*` / `sec/attest_service.*` | `test_sec2_encrypt_required.c` / `test_runtime_signature_only_whitelist.c` | IMPL_READY | signature-only 白名单和 recovery policy 仍需产品/owner 冻结 |
+| T-EHSM-001 | CR-0004 / SRC-006 / SRC-007 | C-BOOT-06 | eHSM native header 是 SEC1/SEC2 密码学 verify/decrypt container；NGU metadata 进入 Code region protected manifest | 01_boot.md / 06_interface.md / 10_full_design.md | efuse_key_fw_header_design.md / ehsm_source_conformance_matrix.md / mailbox_if.md / spdm_report.md | `sec/verify_flow.*` / `sec/attest_service.*` / `tools/image_packager/*` | `test_ehsm_native_header_required.c` / `test_ngu_manifest_after_verify.c` | IMPL_READY | manifest ABI、eHSM 是否解析 manifest 仍 TBD |
+| T-EHSM-002 | CR-0004 / SRC-006 / SRC-007 | C-EHSM-01 | physical OTP/control/key/counter 以 eHSM TRM 为准；NGU OTP/key/counter 名称仅为 logical alias | 02_key_cert.md / 07_manufacturing_rma.md / 10_full_design.md | efuse_key_fw_header_design.md / ehsm_source_conformance_matrix.md / manufacturing_provisioning.md | `sec/key_service.*` / `tools/provisioning/*` | `test_no_custom_physical_otp_layout.c` / `test_key_alias_requires_ehsm_mapping.c` | IMPL_READY | exact key ID、OTP/control bit、per-image counter TBD |
+| T-EHSM-003 | CR-0004 / SRC-006 / SRC-007 | C-BOOT-07 | SEC1/SEC2 sign+encrypt 必须走 eHSM verify+decrypt output path；NVM only verify 不适用 | 01_boot.md / 06_interface.md | mailbox_if.md / efuse_key_fw_header_design.md / ehsm_source_conformance_matrix.md | `bootrom/bootrom_main.*` / `sec/verify_flow.*` | `test_encrypted_image_rejects_nvm_only_verify.c` / `test_output_buffer_whitelist.c` | IMPL_READY | SEC1 exact Bootloader command path、output buffer 地址仍需冻结 |
+| T-FW-PKG-001 | CR-0006 / SRC-001 ch6-7 / CR-0004 / DEC-0017 | C-BOOT-08 | 平台侧固件制作工具与设备侧 verify/decrypt 路径共享 eHSM native header + NGU protected manifest 契约；SEC1 最低认证覆盖范围为完整 Code region，即 manifest + payload + padding/alignment | 01_boot.md / 10_full_design.md | efuse_key_fw_header_design.md / ehsm_source_conformance_matrix.md / mailbox_if.md | `tools/image_packager/*` / `bootrom/bootrom_main.*` / `sec/verify_flow.*` / `sec/ehsm_adapter.*` | `test_image_packager_ehsm_native_layout.c` / `test_manifest_untrusted_before_ehsm_pass.c` / `test_package_golden_vector.c` / `test_sec1_code_region_auth_coverage.c` / `test_sec1_package_tamper_vectors.c` | IMPL_READY | manifest ABI、tool CLI、exact eHSM key ID/command mapping 和 golden/tamper vector 仍需 owner 冻结 |
 | T-CRYPTO-001 | eHSM docs | C-IF-01 | 所有正式安全路径 crypto via eHSM | 06_interface.md / 02_key_cert.md | mailbox_if.md / efuse_key_fw_header_design.md | `drivers/mailbox/*` / `sec/ehsm_adapter.*` | `test_crypto_path_only_ehsm.c` | IMPL_READY | 禁止软件绕过 |
 | T-KEY-001 | eHSM docs / key baseline | C-KEY-01 | 私钥不出 eHSM | 02_key_cert.md | efuse_key_fw_header_design.md | `sec/key_service.*` | `test_private_key_non_export.c` | IMPL_READY | Host / 普通核不可见 |
 | T-KEY-002 | lifecycle baseline | C-KEY-02 | key usage = lifecycle gated | 04_lifecycle_debug.md / 02_key_cert.md | efuse_key_fw_header_design.md / spdm_report.md | `sec/lifecycle_ctrl.*` / `sec/key_service.*` | `test_key_lifecycle_gate.c` | IMPL_READY | USER / DEBUG 权限不同 |
@@ -55,13 +62,15 @@
 | T-HOST-001 | boot docs / subsystem docs | C-HOST-01 | Host 不可信，只具投递能力 | 00_architecture.md / 06_interface.md / 05_board_security.md | mailbox_if.md | `host_proxy/*` / `sec/host_req_mgr.*` | `test_host_cannot_release.c` | IMPL_READY | Host 不得直接调用 eHSM |
 | T-ACCESS-001 | subsystem / firewall docs | C-ACCESS-01 | 安全子系统必须隔离 | 00_architecture.md / 06_interface.md | mailbox_if.md / efuse_key_fw_header_design.md | `sec/access_ctrl.*` | `test_secure_region_denied.c` | IMPL_READY | OTP / Secure SRAM / eHSM 私域不可直访 |
 | T-ACCESS-002 | subsystem / firewall docs | C-ACCESS-02 | UserID + Firewall 必须启用 | 00_architecture.md / 06_interface.md | mailbox_if.md | `rtl/firewall_cfg` / `sec/firewall_cfg.*` | `test_userid_firewall_rules.c` | CODE_PENDING | 需与 RTL 配合冻结 |
-| T-BOARD-001 | `SRC-005` 管理子系统方案 | C-BOARD-01 | 管理子系统总体架构和流程可遵循，安全边界由安全方案裁决 | 05_board_security.md / 10_full_design.md | mailbox_if.md / spdm_report.md / manufacturing_provisioning.md | `sec/board_sec_policy.*` / `sec/oob_req_mgr.*` | `test_oob_cannot_bypass_sec.c` | CODE_PENDING | 系统流程采用，安全细节二次裁决 |
-| T-BOARD-002 | `SRC-005` 管理子系统方案 | C-BOARD-02 | 带外管理通道不得成为安全策略绕过路径 | 05_board_security.md / 06_interface.md | mailbox_if.md | `sec/oob_req_mgr.*` / `host_proxy/oob_proxy.*` | `test_oob_lifecycle_gate.c` | CODE_PENDING | SMBus/I2C/I3C/Sideband 只能受控转发 |
-| T-BOARD-003 | `SRC-005` 管理子系统方案 | C-BOARD-03 | JTAG 必须受 lifecycle、debug auth、scope bitmap 和板级 MUX 联合控制 | 05_board_security.md / 04_lifecycle_debug.md / 06_interface.md | mailbox_if.md / manufacturing_provisioning.md | `sec/debug_auth.*` / `sec/jtag_scope_ctrl.*` / `rtl/jtag_mux_ctrl` | `test_user_jtag_denied.c` / `test_jtag_scope_auth.c` | BLOCKED | 需冻结 JTAG scope bitmap 与 CPLD/MUX 控制权 |
-| T-BOARD-004 | `SRC-005` 管理子系统方案 | C-BOARD-04 | 管理子系统 DMA、mailbox、中断、互斥访问和复位控制必须隔离和审计 | 05_board_security.md / 06_interface.md | mailbox_if.md / spdm_report.md | `sec/firewall_cfg.*` / `sec/power_reset_sec_state.*` | `test_mgmt_dma_firewall.c` / `test_power_reset_audit.c` | BLOCKED | 需冻结 DMA region、UserID、PG/FAULT/PowerBrake 状态策略 |
+| T-BOARD-001 | `SRC-005 管理子系统方案` | C-BOARD-01 | 管理子系统总体架构和流程可遵循，安全边界由安全方案裁决 | 05_board_security.md / 10_full_design.md | mailbox_if.md / spdm_report.md / manufacturing_provisioning.md | `sec/board_sec_policy.*` / `sec/oob_req_mgr.*` | `test_oob_cannot_bypass_sec.c` | CODE_PENDING | 系统流程采用，安全细节二次裁决 |
+| T-BOARD-002 | `SRC-005 管理子系统方案` | C-BOARD-02 | 带外管理通道不得成为安全策略绕过路径 | 05_board_security.md / 06_interface.md | mailbox_if.md | `sec/oob_req_mgr.*` / `host_proxy/oob_proxy.*` | `test_oob_lifecycle_gate.c` | CODE_PENDING | SMBus/I2C/I3C/Sideband 只能受控转发 |
+| T-BOARD-003 | `SRC-005 管理子系统方案` | C-BOARD-03 | JTAG 必须受 lifecycle、debug auth、scope bitmap、timeout、audit 和板级 MUX 联合控制 | 05_board_security.md / 04_lifecycle_debug.md / 06_interface.md | mailbox_if.md / manufacturing_provisioning.md | `sec/debug_auth.*` / `sec/jtag_scope_ctrl.*` / `rtl/jtag_mux_ctrl` | `test_user_jtag_denied.c` / `test_jtag_scope_auth.c` | CODE_PENDING | 策略已按 CR-0003 收敛；bit-level mapping 与 CPLD/MUX 寄存器归属仍 BLOCKED |
+| T-BOARD-004 | `SRC-005 管理子系统方案` | C-BOARD-04 | 管理子系统 DMA、Host DMA、OOB DMA 对安全资源默认拒绝，只能访问白名单 staging/data buffer | 05_board_security.md / 06_interface.md | mailbox_if.md / spdm_report.md | `sec/firewall_cfg.*` / `sec/power_reset_sec_state.*` | `test_mgmt_dma_firewall.c` / `test_power_reset_audit.c` | CODE_PENDING | 默认拒绝已收敛；DMA region、UserID、PG/FAULT/PowerBrake 状态策略仍需冻结 |
+| T-BOARD-005 | CR-0003 / board binding policy | C-ATT-02 | board binding 默认进入 attestation，不默认阻断 SEC1；是否参与 SEC2/runtime release decision 待冻结 | 03_attestation.md / 05_board_security.md | spdm_report.md / manufacturing_provisioning.md | `sec/attest_service.*` / `sec/board_sec_policy.*` | `test_board_bind_reported.c` | CODE_PENDING | release decision 仍为 TBD |
+| T-BOARD-006 | CR-0003 / OOB provisioning proxy | C-BOARD-02 / C-MFG-01 | OOB/BMC 可作为 provisioning transport proxy，但不得成为 trust anchor 或接触明文根材料 | 05_board_security.md / 06_interface.md / 07_manufacturing_rma.md | mailbox_if.md / manufacturing_provisioning.md | `sec/oob_req_mgr.*` / `host_proxy/oob_proxy.*` | `test_oob_proxy_not_trust_anchor.c` | CODE_PENDING | 命令格式、认证、审计、失败回滚仍需冻结 |
 | T-UPD-001 | update baseline | C-UPDATE-01 | anti-rollback mandatory | 08_failure_recovery.md / 01_boot.md | efuse_key_fw_header_design.md / mailbox_if.md | `sec/update_mgr.*` | `test_rollback_floor.c` | IMPL_READY | counter 先验签后提升 |
 | T-UPD-002 | recovery baseline | C-UPDATE-02 | 必须定义恢复机制 | 08_failure_recovery.md | mailbox_if.md / manufacturing_provisioning.md | `sec/recovery_mgr.*` | `test_recovery_path.c` | CODE_PENDING | A/B 是否启用仍可裁决 |
-| T-ATT-001 | attestation baseline | C-ATT-01 | 支持 device identity + SPDM report | 03_attestation.md | spdm_report.md | `sec/attest_service.*` | `test_att_report_sign.c` | IMPL_READY | 私钥不离开 eHSM |
+| T-ATT-001 | attestation baseline | C-ATT-01 / C-ATT-02 | 支持 device identity + SPDM report；report 必须覆盖 measurement、lifecycle、debug、secure_boot、rollback | 03_attestation.md | spdm_report.md | `sec/attest_service.*` | `test_att_report_sign.c` / `test_att_report_state_fields.c` | IMPL_READY | 私钥不离开 eHSM；image policy/board/event 字段仍需编码冻结 |
 | T-MFG-001 | manufacturing baseline | C-MFG-01 | 必须定义 key 注入 / 锁定 / 审计 | 07_manufacturing_rma.md | manufacturing_provisioning.md / efuse_key_fw_header_design.md | `tools/provisioning/*` | `test_provision_lock.c` | IMPL_READY | MANU → USER 动作需冻结 |
 
 ---
@@ -90,7 +99,7 @@
 |---|---|---|
 | `drivers/mailbox/ehsm_mailbox.*` | 寄存器访问 / doorbell / irq | mailbox_if |
 | `sec/ehsm_adapter.*` | 通用 req/resp 包封装 | C-IF-01 |
-| `sec/key_service.*` | key derive / key slot / key policy | C-KEY-* |
+| `sec/key_service.*` | key derive / eHSM key reference / key policy | C-KEY-* |
 | `sec/counter_service.*` | rollback counter / version floor | C-UPDATE-01 |
 
 ## 4.3 制造 / 工具侧
@@ -100,6 +109,7 @@
 | `tools/provisioning/otp_writer.*` | OTP/eFuse 写入 | C-MFG-01 |
 | `tools/provisioning/lifecycle_mgr.*` | MANU→USER 推进 | C-MFG-01 / C-KEY-02 |
 | `tools/provisioning/audit_logger.*` | 审计记录 | C-MFG-01 |
+| `tools/image_packager/*` | eHSM native package 生成、NGU manifest dump、source-conformance report、golden vector 输出 | C-BOOT-08 / C-BOOT-06 |
 
 ---
 
@@ -125,6 +135,13 @@
 | `test_rollback_floor.c` | 低版本镜像必须被拒绝 | T-UPD-001 |
 | `test_sec1_encrypt_required.c` | SEC1 镜像缺少加密或 wrapped CEK 时必须被拒绝 | T-BOOT-004 |
 | `test_sec1_decrypt_fail_blocks_boot.c` | SEC1 解密失败必须阻止启动且不能降级执行 | T-BOOT-004 |
+| `test_sec2_encrypt_required.c` | SEC2 镜像缺少加密或 wrapped CEK 时必须被拒绝 | T-BOOT-005 |
+| `test_runtime_signature_only_whitelist.c` | signature-only runtime image 必须命中产品白名单且可被证明路径观测 | T-BOOT-005 |
+| `test_image_packager_ehsm_native_layout.c` | 工具产物必须采用 eHSM native header，NGU manifest 位于受保护 Code region | T-FW-PKG-001 |
+| `test_manifest_untrusted_before_ehsm_pass.c` | eHSM PASS 前 BootROM/SEC 不得信任 manifest 中的 load/entry/policy | T-FW-PKG-001 |
+| `test_package_golden_vector.c` | image packager 输出与 BootROM/SEC/eHSM adapter golden vector 一致 | T-FW-PKG-001 |
+| `test_sec1_code_region_auth_coverage.c` | SEC1 package 的认证覆盖范围必须至少包含完整 Code region：manifest、payload 和计入 `Code_Size` 的 padding/alignment | T-FW-PKG-001 |
+| `test_sec1_package_tamper_vectors.c` | 篡改 manifest `ngu_image_type`、`entry_addr`、`version_counter`、payload 字节、`Code_Size` 或截断 Code region 后不得 release | T-FW-PKG-001 |
 
 ## 5.2 Host / Interface 类
 
@@ -137,6 +154,7 @@
 | `test_oob_cannot_bypass_sec.c` | BMC/OOB 不能绕过 SEC 直接进入安全服务 | T-BOARD-001 |
 | `test_oob_lifecycle_gate.c` | OOB 高权限请求受 lifecycle gating | T-BOARD-002 |
 | `test_mgmt_dma_firewall.c` | 管理子系统 DMA 不能访问安全区 | T-BOARD-004 |
+| `test_oob_proxy_not_trust_anchor.c` | OOB/BMC provisioning proxy 不能成为信任根或接触明文根材料 | T-BOARD-006 |
 
 ## 5.3 Lifecycle / Debug / Attestation 类
 
@@ -148,6 +166,8 @@
 | `test_jtag_scope_auth.c` | JTAG scope 必须来自授权结果 | T-BOARD-003 |
 | `test_key_lifecycle_gate.c` | key 权限受生命周期控制 | T-KEY-002 |
 | `test_att_report_sign.c` | report 关键字段被签名覆盖 | T-ATT-001 |
+| `test_att_report_state_fields.c` | lifecycle/debug/secure_boot/rollback/image policy 状态进入 report | T-ATT-001 |
+| `test_board_bind_reported.c` | board binding 默认进入证明数据，不阻断 SEC1 | T-BOARD-005 |
 
 ## 5.4 Manufacturing 类
 
@@ -165,12 +185,17 @@
 | Item | Why Blocked | Affected Trace |
 |---|---|---|
 | Debug port 129bit 最终位图 | 尚未冻结端口位图映射 | T-DEBUG-002 |
-| JTAG scope bitmap 与 MUX/CPLD 控制权 | `SRC-005` 已描述高权限 JTAG 能力，但未冻结安全控制字段 | T-BOARD-003 |
-| 管理子系统 DMA region / UserID | 尚未冻结可访问 buffer、firewall region 和 master 标识 | T-BOARD-004 |
+| JTAG scope bitmap 与 MUX/CPLD 控制权 | 策略已冻结，bit-level mapping 与寄存器归属未冻结 | T-BOARD-003 |
+| 管理子系统 DMA region / UserID | 默认拒绝已冻结，具体可访问 buffer、firewall region 和 master 标识未冻结 | T-BOARD-004 |
 | PowerBrake / PG / FAULT / reset 安全状态 | 尚未冻结哪些事件进入证明或审计 | T-BOARD-004 |
-| Counter ID 到 image_type 的最终映射 | 需要与 eFuse / header 一起冻结 | T-UPD-001 |
-| SEC2/后续运行期镜像加密分级 | SEC1 已强制加密，但其他镜像是否全部强制仍需产品策略 | T-BOOT-004 / T-KEY-001 |
-| Board binding 默认策略 | 量产默认开关未定 | T-ATT-001 / T-MFG-001 |
+| Counter ID 到 image_type 的最终映射 | CR-0004 后旧 `*_MIN_VER` 仅为 logical rollback domain；per-image physical counter 仍需 eHSM customization 或 owner-confirmed counter service | T-UPD-001 / T-EHSM-002 |
+| manifest ABI 与 eHSM manifest parser | NGU metadata 已进入 protected manifest，但 bit-level ABI 和解析主体未冻结 | T-EHSM-001 |
+| exact eHSM key ID / OTP control bit mapping | CR-0004 已要求 source-conformance，但 exact mapping 需 eHSM/RTL owner 冻结 | T-EHSM-002 |
+| SEC1 early boot exact eHSM command path | `VERIFY_SEC1` 方向上应映射 Bootloader `bl_verify_image` 或等价 ROM path，需 BootROM/eHSM 集成确认 | T-EHSM-003 |
+| Image packager CLI / golden vector | CR-0006 已冻结制作/验证流程方向，但工具参数、manifest ABI 和 golden vector 格式仍需 tooling / SEC FW owner 冻结 | T-FW-PKG-001 |
+| Runtime signature-only 白名单 | SEC2 已强制加密，PM/RAS/Codec 默认加密；非敏感 runtime signature-only 白名单仍需产品策略 | T-BOOT-005 / T-KEY-001 |
+| Board binding release decision | 默认进入 attestation、不阻断 SEC1；是否参与 SEC2/runtime release decision 未定 | T-BOARD-005 / T-ATT-001 / T-MFG-001 |
+| Recovery image 策略 | image_type、signer、anchor、counter、decrypt policy 未冻结 | T-UPD-002 / T-BOOT-005 |
 | 共享内存最终落点 | IRAM / DDR / firewall share memory 未最终裁决 | T-HOST-001 / T-IF-001 |
 
 ---

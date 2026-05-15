@@ -1,7 +1,12 @@
 # NGU800 制造 / 灌装 / Provisioning / RMA 实现级设计（V1.0）
 
-状态：实现级详设  
-适用范围：NGU800 / NGU800P 制造、灌装、板级 bring-up、量产冻结、返修/RMA  
+> CR-0005 source-of-truth notice:
+> 本文件是 `10_full_design.md` 第 10 章的编辑分片 / extracted implementation shard，不再作为独立事实源。
+> 代码落地、评审和 ChatGPT 方案审查应优先读取 `security_workflow/03_detailed_design/10_full_design.md`。
+> 修改本文件时，必须同步主详设第 10 章；若发生冲突，以 accepted CR、decision_log、official TRM 和 `10_full_design.md` 为准。
+
+状态：实现级详设
+适用范围：NGU800 / NGU800P 制造、灌装、板级 bring-up、量产冻结、返修/RMA
 定位：供安全架构评审、SEC/C908 FW、eHSM 适配层、制造工站、Provisioning Tool、测试团队对齐使用
 
 ---
@@ -32,6 +37,7 @@
 - Root Secret / Root Key 不应离开 eHSM 使用域
 - SEC1 在正式安全启动路径中必须签名 + 加密，SEC1 解密 key / FW_KEK 使用必须受 lifecycle gating
 - 生命周期必须受 OTP / eFuse 与 eHSM 联合控制
+- CR-0004 已确认 physical OTP/control/key/counter 排布优先按 eHSM TRM；本文件中的 OTP/eFuse 名称均为 NGU logical view，不能理解为新增 physical offset
 - USER 生命周期必须关闭未授权 debug
 - Host 不进入信任链，只能作为受控投递方
 - 制造阶段必须定义 key 注入、锁定、审计和生命周期推进
@@ -92,7 +98,7 @@
 | Host / BMC（制造场景） | 作为链路承载方、传输工站请求、获取状态 | 参与 Root of Trust 决策、直接写 Root 密钥到最终安全区 |
 | SEC / C908 | 唯一 provisioning 控制面；参数校验；流程编排；调用 eHSM；状态收敛 | 绕过 eHSM 直接完成正式安全路径密钥使用 |
 | eHSM | OTP/eFuse 写入控制、锁定、lifecycle、counter、debug auth、key 服务执行 | 接受非 SEC 的非受控制造命令 |
-| OTP / eFuse | 持久保存生命周期、控制位、Root 材料、signer hash、counter | 被 Host 或普通核直接改写 |
+| OTP / eFuse | 按 eHSM TRM 持久保存生命周期、control field、Root 材料、key ID / level / purpose、Version Counter | 被 Host 或普通核直接改写，或被 NGU 自定义 physical layout 覆盖 |
 
 ## 4.2 强边界规则
 
@@ -113,10 +119,10 @@
 | UDS / Root Secret | 必需 | 根种子 / 根材料 |
 | Root Key / Root KEK 材料 | 必需 | 可直接写入或由 UDS 派生 |
 | FW signer hash / trust anchor | 必需 | 支撑固件验签 |
-| FW_KEK / Image Protect Key | 必需 | 支撑 SEC1 强制加密镜像的 CEK unwrap / 解密策略 |
+| FW_KEK / Image Protect Key | 必需 | 支撑 SEC1/SEC2 强制加密镜像解密策略；exact eHSM key ID mapping 仍需冻结 |
 | Debug auth anchor | 必需 | 支撑 RMA / DEBUG 调试鉴权 |
 | Attestation anchor / identity seed | 必需 | 支撑设备证明 |
-| 版本计数初值 | 必需 | 支撑 anti-rollback |
+| 版本计数初值 | 必需 | 支撑 anti-rollback；物理承载优先映射 eHSM Version Counter，不再定义多个 32-bit physical counter |
 | Secure boot / debug / attestation 控制位 | 必需 | 建立量产策略 |
 | Board binding 信息 | 可选 | 按产品策略启用 |
 | 主 / 从 Die binding 信息 | 双Die 推荐 | 支撑多Die一致性约束 |
@@ -153,7 +159,7 @@
     ↓
 (7) 写入 attestation seed / anchor
     ↓
-(8) 写入 anti-rollback 初始计数 / 最低版本门限
+(8) 写入 eHSM Version Counter 初始状态 / owner-confirmed rollback policy
     ↓
 (9) 写入 secure boot / FW encrypt / debug / attestation / algorithm 控制位
     ↓
@@ -169,7 +175,7 @@
 ## 6.2 为什么不能乱序
 
 - Root 材料必须先于 signer / attestation 生效，否则后续校验没有可信根。
-- counter 初值必须在正式启动前建立，否则 anti-rollback 没有约束基线。
+- eHSM Version Counter / rollback policy 必须在正式启动前建立，否则 anti-rollback 没有约束基线。
 - 控制位必须在写入关键 anchor 后再打开，避免系统处于“要求安全启动但尚未具备信任锚”的中间态。
 - 锁定位必须在校验通过后再写，避免把错误内容永久锁死。
 
@@ -200,7 +206,7 @@ typedef struct {
     uint32_t write_flags;           /* write / verify / lock / advance_lcs */
     uint64_t blob_addr;             /* 写入包地址 */
     uint32_t blob_len;              /* 写入包长度 */
-    uint32_t target_slot;           /* 目标 slot / OTP region */
+    uint32_t target_ref;            /* eHSM key ID / control field / logical alias reference */
 } ngu_mb_provision_req_t;
 ```
 
@@ -219,9 +225,23 @@ typedef struct {
 ## 7.4 关键约束
 
 - `write_flags` 不得允许任意组合；必须由 SEC 侧先做合法性白名单检查。
-- `target_slot` 必须映射到项目冻结的 OTP 区域语义。
+- `target_ref` 必须映射到 eHSM key ID / control field / Version Counter 或已接受 CR 中的 logical alias。
+- Provisioning Tool 不得把 `OTP-0..OTP-7` 当成 physical offset。
 - `blob_addr/blob_len` 必须满足共享内存白名单和长度边界检查。
 - provisioning 命令必须只允许在受控 lifecycle 下执行。
+
+## 7.5 eHSM 命令映射
+
+CR-0004 后，制造命令必须优先映射到 eHSM 已定义命令或 owner-confirmed wrapper：
+
+| Manufacturing Action | eHSM Mapping Direction | 状态 |
+|---|---|---|
+| 安装随机/派生 key | `install_random_key` / owner-confirmed key install path | `[CONFIRMED direction]` |
+| 安装加密 key blob | `install_encrypt_key` / owner-confirmed encrypted key install path | `[CONFIRMED direction]` |
+| 生命周期推进 | `change_lifecycle` | `[CONFIRMED direction]` |
+| control field 更新 | `change_control_field` | `[CONFIRMED direction]` |
+| 版本计数 / rollback 状态 | eHSM Version Counter / owner-confirmed counter command | `[TBD exact process]` |
+| OTP readback / 验收 | readback / status / attested validation | `[TBD]` |
 
 ---
 
@@ -264,13 +284,13 @@ typedef struct {
 
 | 控制位 | 建议 USER 前状态 | 说明 |
 |---|---|---|
-| `SECURE_BOOT_EN` | 1 | 量产态强制启用 |
-| `DEBUG_AUTH_EN` | 1 | 调试必须鉴权 |
-| `JTAG_FORCE_DISABLE` | 1 | USER 默认关闭 JTAG |
-| `FW_ENCRYPT_EN` | 1（至少覆盖 SEC1） | SEC1 强制签名 + 加密；后续关键固件按产品策略 |
-| `ATTEST_EN` | 1 | 启用设备证明 |
-| `ANTI_ROLLBACK_EN` | 1 | 启用反回滚 |
-| `DUAL_ALGO_EN` | 1 | 允许双算法栈共存 |
+| `SECURE_BOOT_EN` logical policy | 1 | 映射 eHSM / hardware control field，exact bit TBD |
+| `DEBUG_AUTH_EN` logical policy | 1 | 映射 eHSM debug auth / lifecycle policy，exact bit TBD |
+| `JTAG_FORCE_DISABLE` SoC integration policy | 1 | USER 默认关闭 JTAG；属于 SoC/board integration，非 NGU 自定义 eHSM OTP bit |
+| `FW_ENCRYPT_EN` logical policy | 1（至少覆盖 SEC1 + SEC2） | SEC1/SEC2 强制签名 + 加密；PM/RAS/Codec USER/PROD 默认签名 + 加密 |
+| `ATTEST_EN` logical policy | 1 | 启用设备证明；exact control mapping TBD |
+| `ANTI_ROLLBACK_EN` logical policy | 1 | 启用反回滚；物理承载对齐 eHSM Version Counter / owner-confirmed counter |
+| `DUAL_ALGO_EN` product policy | 1 | 允许双算法栈共存；算法 authority 仍来自 eHSM control field |
 
 ## 9.2 控制位写入原则
 
@@ -298,7 +318,7 @@ typedef struct {
 |---|---|---|
 | Root Secret / Root Key 区 | 灌装校验通过后 | 防止重复覆盖 |
 | signer hash / anchor 区 | 校验通过后 | 防止验签根被替换 |
-| FW_KEK / image protect key 策略 | 灌装校验通过后 | 防止 SEC1 解密策略被替换或降级 |
+| FW_KEK / image protect key 策略 | 灌装校验通过后 | 防止 SEC1/SEC2 解密策略被替换或降级 |
 | debug anchor 区 | 校验通过后 | 防止调试授权根被替换 |
 | 控制位区 | USER 冻结前 | 防止量产策略回退 |
 | lifecycle 回退路径 | USER 推进后 | 防止回退到开发态 |
@@ -328,8 +348,9 @@ typedef struct {
 | 验证项 | 说明 |
 |---|---|
 | 验签 SEC1 / SEC2 | 核心启动链验证 |
-| SEC1 解密 / unwrap | 验证 SEC1 签名 + 加密策略、FW_KEK / wrapped CEK 和输出 buffer 约束 |
-| 读取 counter / version floor | 反回滚链路验证 |
+| SEC1 verify/decrypt output | 验证 SEC1 eHSM native header、manifest policy、FW decrypt key mapping 和输出 buffer 约束 |
+| SEC2 verify/decrypt output | 验证 SEC2 eHSM native header、manifest policy、FW decrypt key mapping 和安全控制面 release 约束 |
+| 读取 eHSM Version Counter / rollback state | 反回滚链路验证 |
 | 读取 lifecycle | 生命周期状态验证 |
 | 生成 challenge / 或最小 report | 证明路径基本可用 |
 | debug 默认策略检查 | 验证未授权 debug 未被放开 |
@@ -346,8 +367,8 @@ typedef struct {
 2. `DEBUG_AUTH_EN = 1`
 3. `JTAG_FORCE_DISABLE = 1`
 4. `ANTI_ROLLBACK_EN = 1`
-5. `FW_ENCRYPT_EN = 1`，且至少覆盖 SEC1
-6. Root Key / UDS / signer anchor / SEC1 解密相关 key slot / FW_KEK 策略完成锁定
+5. `FW_ENCRYPT_EN = 1`，且至少覆盖 SEC1 + SEC2
+6. Root Key / UDS / signer anchor / SEC1/SEC2 解密相关 eHSM key policy / FW_KEK 策略完成锁定
 7. 测试 signer / 测试证书链 / 测试调试白名单全部清除
 8. 如启用 attestation，则 `ATTEST_EN = 1`
 9. 将生命周期推进到 USER
@@ -430,7 +451,7 @@ RMA / DEBUG 不是普通制造路径，而是**受授权的返修分析路径**�
 - 不得因为进入 RMA 就默认长期开放 debug
 - 不得跳过 challenge / auth
 - 不得允许返修后继续带测试 trust 出厂
-- 不得长期开放 SEC1 解密绕过路径；RMA / rescue 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy
+- 不得长期开放 SEC1/SEC2 解密绕过路径；RMA / rescue 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy
 
 ---
 
@@ -496,6 +517,7 @@ RMA / DEBUG 不是普通制造路径，而是**受授权的返修分析路径**�
 4. 双Die 产品的主 / 从 Die 灌装是独立还是联动事务
 5. USER 冻结失败时，允许停留在 MANU，还是进入显式故障态
 6. RMA 完成后恢复 USER 状态时，是否强制重新生成 attestation 相关状态摘要
+7. OOB/BMC 作为 provisioning transport proxy 时的认证、审计、失败回滚和 rate limit / lockout 策略
 
 ---
 

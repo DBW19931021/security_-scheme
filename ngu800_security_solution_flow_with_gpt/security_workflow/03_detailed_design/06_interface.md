@@ -1,8 +1,8 @@
 # 11. 内外部接口设计
 
-> 文档定位：NGU800 / NGU800P 章节级正式详设  
-> 章节文件：`security_workflow/03_detailed_design/06_interface.md`  
-> 当前状态：V1.0（基于当前约束、baseline 与实现级接口文件收敛）  
+> 文档定位：NGU800 / NGU800P 章节级正式详设
+> 章节文件：`security_workflow/03_detailed_design/06_interface.md`
+> 当前状态：V1.0（基于当前约束、baseline 与实现级接口文件收敛）
 > 设计标记口径：`[CONFIRMED] / [ASSUMED] / [TBD]`
 
 ---
@@ -104,10 +104,10 @@ graph TD
 
 ### 图下说明
 
-1. 外部世界（Host / BMC / OOB-MCU）与 eHSM 之间没有直接信任链接口。  
-2. 所有正式安全服务调用必须先进入 SEC/C908 控制面。  
-3. Mailbox 传递“命令与包地址”，共享内存传递“真实包体”。  
-4. OTP/eFuse 只被 eHSM 直接使用，不向外暴露敏感内容。  
+1. 外部世界（Host / BMC / OOB-MCU）与 eHSM 之间没有直接信任链接口。
+2. 所有正式安全服务调用必须先进入 SEC/C908 控制面。
+3. Mailbox 传递“命令与包地址”，共享内存传递“真实包体”。
+4. OTP/eFuse 只被 eHSM 直接使用，不向外暴露敏感内容。
 
 ---
 
@@ -137,9 +137,9 @@ sequenceDiagram
 
 ### 图下说明
 
-1. Host 的请求在安全语义上必须经 SEC 收敛，不允许直达 eHSM。  
-2. eHSM 不负责“理解 Host 业务语义”，只负责执行已受控的安全服务请求。  
-3. 共享内存必须受地址白名单和 cache 一致性规则保护。  
+1. Host 的请求在安全语义上必须经 SEC 收敛，不允许直达 eHSM。
+2. eHSM 不负责“理解 Host 业务语义”，只负责执行已受控的安全服务请求。
+3. 共享内存必须受地址白名单和 cache 一致性规则保护。
 
 ---
 
@@ -231,17 +231,19 @@ Host/BMC/OOB 不可请求：
 
 - `[CONFIRMED]` **不高于 Host**
 - `[ASSUMED]` 可作为受控链路承载者
-- `[ASSUMED]` 不应天然视为 Root of Trust 的扩展部分
+- `[CONFIRMED]` 不得视为 Root of Trust 的扩展部分
+- `[ASSUMED]` 可作为 provisioning transport proxy，但不得接触 root secret、device private key、FW_KEK 明文
 
 因此：
 - BMC / OOB 可以作为桥接者，但不能默认直接控制安全策略
 - SMBus / sideband 只能用于受控状态查询、受控命令转发或板级管理，不应直接成为 Root / lifecycle / debug 的绕过路径
+- OOB / BMC provisioning proxy 的 request authentication、anti-replay、audit log、failure rollback、rate limit / lockout、lifecycle gating 仍需在实现级冻结
 
 ### 11.9.3 管理子系统新增接口口径
 
-基于 `SRC-005`，管理子系统相关接口按以下口径纳入本章：
+基于 `SRC-005 管理子系统方案`，管理子系统相关接口按以下口径纳入本章：
 
-| 接口 / 机制 | `SRC-005` 中的用途 | 安全接口裁决 |
+| 接口 / 机制 | `SRC-005 管理子系统方案` 中的用途 | 安全接口裁决 |
 |---|---|---|
 | SMBus/I2C | 低速带外管理、传感器、电源管理、alert、master notify | 允许作为受控管理链路，高权限命令必须经 SEC/eHSM |
 | I3C | 高带宽带外业务、固件更新、高频器件状态采集 | 允许作为受控链路，更新/调试/provisioning 必须鉴权 |
@@ -249,7 +251,7 @@ Host/BMC/OOB 不可请求：
 | UART | 带外调试通道，当前暂考虑不支持 | 若后续启用，按 debug 接口处理，默认 USER 关闭 |
 | JTAG | 接入 GPU/CPU/DRAM/Flash/安全子系统/板级 MCU | 不作为普通接口开放，必须经 lifecycle + debug auth + scope + MUX gating |
 | SPI/QSPI | NOR Flash、板级 MCU 接口 | 影响固件存储时必须执行签名校验、写保护和 lifecycle gating |
-| AXI DMA | 子系统内部和低速外设数据搬运 | 只能访问 firewall 白名单 buffer，禁止访问安全域 |
+| AXI DMA | 子系统内部和低速外设数据搬运 | 默认拒绝访问安全资源，只能访问 firewall 显式白名单 staging/data buffer |
 | mailbox / 中断 | CPU 子系统消息和中断协作 | 只能作为协作机制，安全服务必须经 SEC 收敛 |
 | 互斥寄存器 | 多 CPU 共享资源互斥 | 不能替代权限检查，不能作为安全访问授权 |
 | 电源/复位/PowerBrake | 板级电源、上下电、复位、故障响应 | 影响安全状态时必须进入状态机和审计 |
@@ -259,7 +261,8 @@ Host/BMC/OOB 不可请求：
 - `[CONFIRMED]` 管理子系统总体链路和系统流程作为接口集成输入采用。
 - `[CONFIRMED]` 管理子系统接口不改变“SEC/C908 是唯一安全 caller，eHSM 是唯一安全执行面”的基线。
 - `[CONFIRMED]` JTAG、DMA、Flash 更新、电源复位等高权限接口不得绕过 lifecycle、debug auth、firewall 和审计。
-- `[ASSUMED]` SMBus/I2C、I3C 等低速/高速 OOB 链路可承载状态查询和受控请求转发，但首版不直接承载高权限安全命令。
+- `[CONFIRMED]` USER/PROD JTAG 默认关闭；JTAG 打开必须经过 lifecycle + debug auth + scope bitmap + session timeout + audit。
+- `[ASSUMED]` SMBus/I2C、I3C 等低速/高速 OOB 链路可承载状态查询和受控请求转发；provisioning 只能作为 transport proxy，不得成为 trust anchor。
 
 ---
 
@@ -347,7 +350,7 @@ typedef struct {
 | Cmd ID | 命令名 | 主要用途 | 允许 caller |
 |---|---|---|---|
 | 0x0001 | VERIFY_SEC1 | SEC1 验签 + 强制解密 + rollback + measurement | SEC / BootROM 早期受控路径 |
-| 0x0002 | VERIFY_IMAGE | 固件验签 + 按 `image_type / policy` 执行解密；其中 `image_type == SEC1` 时解密强制 | SEC |
+| 0x0002 | VERIFY_IMAGE | eHSM native image verify/decrypt + NGU manifest policy check；SEC2 解密强制 | SEC |
 | 0x0003 | VERIFY_AND_MEASURE | 验签、按策略解密并更新 measurement | SEC |
 | 0x0020 | GET_CHALLENGE | 获取 challenge | SEC |
 | 0x0021 | DEBUG_AUTH | 调试鉴权 | SEC |
@@ -370,19 +373,22 @@ typedef struct {
 
 ## 11.13 Verify Image 结构
 
-章节级最小结构如下，完整定义以 `mailbox_if.md` 为准。
+章节级最小结构如下，完整定义以 `mailbox_if.md` 与 `efuse_key_fw_header_design.md` 为准。
+
+CR-0004 接受后，`VERIFY_SEC1 / VERIFY_IMAGE` 是 NGU wrapper/profile，不直接替代 eHSM 原生命令。SEC1 early boot 应映射到 eHSM Bootloader `bl_verify_image` 或等价 ROM path；SEC2/runtime load 应映射到 eHSM Firmware `soc_verify` 或项目 wrapper。
 
 ```c
 typedef struct {
     ngu_mb_req_hdr_t hdr;
     uint64_t image_addr;
     uint32_t image_len;
-    uint32_t image_type;
+    uint32_t ehsm_image_type_expected;
+    uint32_t ngu_image_type_expected;
     uint32_t verify_policy;
     uint32_t expected_lcs_mask;
-    uint32_t enc_required;
-    uint32_t key_slot;
-    uint32_t wrapped_cek_present;
+    uint32_t decrypt_required;
+    uint32_t rollback_required;
+    uint32_t expected_algorithm_profile;
     uint32_t measurement_slot;
     uint32_t jump_on_pass;
     uint64_t dst_addr;
@@ -392,8 +398,9 @@ typedef struct {
 ```c
 typedef struct {
     ngu_mb_resp_hdr_t hdr;
-    uint32_t verified_version;
-    uint32_t signer_slot;
+    uint32_t ehsm_version_counter_checked;
+    uint32_t ngu_rollback_domain;
+    uint32_t signer_key_ref;
     uint32_t measurement_slot;
     uint32_t rollback_checked;
     uint32_t decrypt_applied;
@@ -404,11 +411,13 @@ typedef struct {
 
 ### 11.13.1 字段级章节规则
 
-- `image_type` 必须参与 eHSM 策略检查
-- `image_type == SEC1` 时，`enc_required` 必须为 1，且不得被 caller 关闭
-- `VERIFY_SEC1` 必须表达 decrypt required、rollback policy、measurement slot、输出 buffer / destination 约束和 result code
-- `VERIFY_IMAGE` 必须验签；是否解密由 `image_type / verify_policy / lifecycle / product policy` 共同决定
-- `key_slot` 与 `wrapped_cek_present` 必须与 FW header 中的加密字段一致，不能由 Host 任意伪造
+- `ehsm_image_type_expected` 必须保持 eHSM TRM 定义，不承载 NGU `SEC1 / SEC2 / PM / RAS / Codec / Recovery` 项目级类型。
+- `ngu_image_type_expected` 必须来自 NGU manifest / SEC policy table，用于 release policy、measurement slot 和 attestation 映射。
+- `VERIFY_SEC1` 必须表达 decrypt required、rollback policy、measurement slot、输出 buffer / destination 约束和 result code；decrypt required 不可被 caller 关闭。
+- `VERIFY_IMAGE(SEC2)` 必须表达 mandatory decrypt profile；decrypt failure / policy mismatch 必须阻断安全控制面启动。
+- `expected_algorithm_profile` 只能用于一致性检查和审计，不得覆盖 eHSM `SocBootAlg / SocUpgradeAlg` 或等价 control field。
+- eHSM key slot / key ID mapping 必须来自 eHSM TRM 或 `ehsm_source_conformance_matrix.md`；NGU 不在 wrapper 中发明 physical key slot。
+- per-image CEK / wrapped CEK 不作为已冻结字段；若后续需要，必须通过 eHSM customization CR 增补。
 - `jump_on_pass` 不得让 Host 间接控制跳转
 - `dst_addr` 必须满足 SEC 地址白名单；SEC1 解密结果只允许进入 BootROM / SEC 认可的受控执行区或 staging 区
 - `rollback_checked` 必须对 verifier / SEC 可见，不得隐式假设已完成
@@ -479,7 +488,7 @@ typedef struct {
 - 地址越界
 - 验签失败
 - 解密失败
-- key slot 无效
+- eHSM key reference / key policy 无效
 - policy mismatch
 - rollback 失败
 - auth 失败
@@ -550,7 +559,7 @@ Attestation 在外部看起来像：
 |---|---|
 | Mailbox req/resp / command ID / 状态机 | `04_impl_design/mailbox_if.md` |
 | Attestation 报告字段 / binding / cert / signature | `04_impl_design/spdm_report.md` |
-| FW Header / image type / rollback / signer slot | `04_impl_design/efuse_key_fw_header_design.md` |
+| eHSM native header / NGU manifest / rollback / signer reference | `04_impl_design/efuse_key_fw_header_design.md` |
 | Provisioning / MANU→USER / RMA | `04_impl_design/manufacturing_provisioning.md` |
 
 ---
@@ -563,23 +572,23 @@ Attestation 在外部看起来像：
 | NOTE 位语义 | 影响 RTL / FW 中断与状态机 | 未完全冻结 | 冻结 req/rsp/ack 规则 |
 | 共享内存最终落点 | 影响缓存、一致性和安全边界 | 未完全冻结 | 冻结 buffer 区域 |
 | Provisioning 命令最终参数 | 影响工站和 SEC 对接 | 部分收敛 | 冻结 request/response 结构 |
-| BMC / OOB / SMBus 默认信任级别 | 影响板级链路设计 | 未完全冻结 | 冻结是否允许某些桥接能力 |
-| JTAG / CPLD / MUX 控制 | 影响 USER 态调试暴露面 | 未完全冻结 | 冻结 debug auth 到板级 MUX 的控制路径 |
-| 管理子系统 DMA 白名单 | 影响安全域隔离 | 未完全冻结 | 冻结 UserID、firewall region、buffer 范围 |
-| 电源/复位安全状态 | 影响启动、恢复和证明一致性 | 未完全冻结 | 冻结哪些事件进入安全状态机和审计 |
+| BMC / OOB provisioning proxy | 影响板级链路和制造链安全 | 部分收敛 | `[ASSUMED]` 允许 transport proxy；冻结认证、审计、失败回滚、rate limit / lockout |
+| JTAG / CPLD / MUX 控制 | 影响 USER 态调试暴露面 | 部分收敛 | 策略已冻结；bit-level scope 和 MUX 寄存器归属仍需冻结 |
+| 管理子系统 DMA 白名单 | 影响安全域隔离 | 部分收敛 | 默认拒绝已冻结；UserID、firewall region、buffer 范围仍需冻结 |
+| 电源/复位安全状态 | 影响启动、恢复和证明一致性 | 未完全冻结 | 冻结哪些事件进入安全状态机、主 report 或扩展 event log |
 
 ---
 
 ## 11.21 开放问题
 
-1. 首版是否只启用 CH0，还是同步启用 CH1 做大镜像路径？  
-2. 请求/响应共享内存是共用一块还是分离管理？  
-3. BMC / OOB 是否允许在某些产品形态下承担 provisioning 代理角色？  
-4. Sideband / SMBus 是否需要支持 challenge / status 等轻量接口？  
-5. Attestation 报告是否首版默认内嵌完整 cert chain？  
-6. JTAG MUX / CPLD 的控制寄存器是否由 SEC 直接控制，还是由板级 MCU 代理执行？  
-7. 管理子系统 DMA 的 UserID 和 firewall region 如何划分？  
-8. PowerBrake、PG/FAULT、复位类事件是否进入 attestation 报告或仅进入本地审计？  
+1. 首版是否只启用 CH0，还是同步启用 CH1 做大镜像路径？
+2. 请求/响应共享内存是共用一块还是分离管理？
+3. BMC / OOB 作为 provisioning transport proxy 时，命令格式、认证、审计、失败回滚和 rate limit / lockout 如何定义？
+4. Sideband / SMBus 是否需要支持 challenge / status 等轻量接口？
+5. Attestation 报告是否首版默认内嵌完整 cert chain？
+6. JTAG MUX / CPLD 的控制寄存器是否由 SEC 直接控制，还是由板级 MCU 代理执行？
+7. 管理子系统 DMA 的 UserID 和 firewall region 如何划分？
+8. PowerBrake、PG/FAULT、复位类事件是否进入 attestation 报告或仅进入本地审计？
 
 ---
 
@@ -587,12 +596,13 @@ Attestation 在外部看起来像：
 
 本章已将 NGU800 内外部接口设计收敛到当前可评审的正式口径：
 
-- 安全服务接口边界：SEC/C908 是唯一 caller，eHSM 是唯一安全执行者  
-- Host / BMC / OOB / SMBus 只能作为受控请求发起者或链路承载者，不能直接进入信任链  
-- JTAG、管理子系统 DMA、电源/复位等高权限接口必须经 lifecycle、debug auth、firewall 和审计约束  
-- Mailbox + Shared Memory 是正式安全服务接口模型  
-- Verify、Lifecycle、Debug、Counter、Attestation、Provisioning 构成首批必须定义的接口族  
-- 地址检查、生命周期限制、错误码、busy/timeout 语义必须在实现层明确  
-- 章节级接口口径必须与 `mailbox_if.md`、`spdm_report.md`、`manufacturing_provisioning.md` 和 `efuse_key_fw_header_design.md` 同步维护  
+- 安全服务接口边界：SEC/C908 是唯一 caller，eHSM 是唯一安全执行者
+- Host / BMC / OOB / SMBus 只能作为受控请求发起者或链路承载者，不能直接进入信任链
+- JTAG、管理子系统 DMA、电源/复位等高权限接口必须经 lifecycle、debug auth、firewall 和审计约束
+- DMA/firewall/UserID 对安全资源默认拒绝，只允许白名单 staging/data buffer
+- Mailbox + Shared Memory 是正式安全服务接口模型
+- Verify、Lifecycle、Debug、Counter、Attestation、Provisioning 构成首批必须定义的接口族
+- 地址检查、生命周期限制、错误码、busy/timeout 语义必须在实现层明确
+- 章节级接口口径必须与 `mailbox_if.md`、`spdm_report.md`、`manufacturing_provisioning.md` 和 `efuse_key_fw_header_design.md` 同步维护
 
 后续若实现级接口字段冻结有变化，本章必须同步更新。

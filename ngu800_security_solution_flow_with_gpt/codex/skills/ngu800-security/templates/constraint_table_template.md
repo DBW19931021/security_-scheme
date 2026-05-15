@@ -7,6 +7,8 @@
 
 ## 2. 约束表
 
+Status 仅允许：`[PROPOSED]` / `[CONFIRMED]` / `[ASSUMED]` / `[TBD]`。`[CONFIRMED]` 必须绑定批准来源。
+
 | Constraint ID | Category | Statement | Source | Strength | Impact | Status | Evidence | Decision Rationale | Chapter Binding | Impl Binding |
 |---|---|---|---|---|---|---|---|---|---|---|
 

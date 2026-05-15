@@ -3,6 +3,10 @@
 ## Purpose
 Use this template when defining NGU800 security mailbox interfaces between BootROM, SEC, eHSM, other micro-cores, and board-related management proxies if relevant.
 
+CR-0005 rule:
+- Mailbox command tables, request/response structures, error codes, lifecycle restrictions and state machines must be synchronized into `security_workflow/03_detailed_design/10_full_design.md`.
+- `04_impl_design/mailbox_if.md` is an editing shard only.
+
 ## Required Sections
 
 ### 1. Interface scope

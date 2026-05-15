@@ -81,7 +81,36 @@ inputs_manifest
 - 不保证输入本身正确
 - 不应该绕过人工判断，直接把所有内容标成 `[CONFIRMED]`
 
+### 4.1 推荐的人机分工
+
+当前推荐把“方案设计”和“工程落实”拆开：
+
+- ChatGPT / 项目组 / security owner：负责方案构思、架构裁决、冲突取舍、baseline 冻结和安全结论确认。
+- Codex：负责把已确认的结论落实到仓库，包括 CR、constraints、baseline、章节详设、实现级设计、code rules、traceability、代码和测试。
+
+因此，这个 Skill 在 Codex 侧更准确的定位是“方案裁决落实器”，而不是“架构结论生成器”。
+
+Codex 可以整理上下文、提出 `[PROPOSED]` 建议、标记 `[ASSUMED]` 和 `[TBD]`，但不能把自己推理出来的新安全结论直接写成 `[CONFIRMED]`。`[CONFIRMED]` 必须来自用户冻结结论、accepted CR、signed-off baseline、`decision_log` 或官方资料。
+
 ## 5. 流水线怎么走
+
+### Step -1：准备 ChatGPT / 项目组上下文包
+
+当方案还需要重新裁决或补充设计时，Codex 先整理：
+
+```text
+.context/design_context_pack.md
+```
+
+这个上下文包应该包含：
+
+- 当前已批准结论
+- 输入冲突
+- `[PROPOSED]` / `[ASSUMED]` / `[TBD]` 清单
+- 冻结敏感项
+- 需要 ChatGPT / owner 回答的问题
+
+这一步不直接修改安全方案正文。
 
 ### Step 0：登记输入
 

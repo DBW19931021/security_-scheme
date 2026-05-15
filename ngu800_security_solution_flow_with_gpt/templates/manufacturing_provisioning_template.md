@@ -3,6 +3,10 @@
 ## Purpose
 Use this template when designing manufacturing, provisioning, closeout, and RMA security flows for NGU800.
 
+CR-0005 rule:
+- Manufacturing/provisioning/RMA implementation details must be synchronized into `security_workflow/03_detailed_design/10_full_design.md`.
+- `04_impl_design/manufacturing_provisioning.md` is an editing shard only.
+
 ## Required Sections
 
 ### 1. Provisioning stages

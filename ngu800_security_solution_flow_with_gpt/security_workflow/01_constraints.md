@@ -1,8 +1,8 @@
 # NGU800 安全约束定义（01_constraints.md）
 
-版本：v1.2  
-状态：Draft（当前阶段约束收敛版本）  
-适用范围：NGU800 / NGU800P 安全子系统 + 启动链路  
+版本：v1.2
+状态：Draft（当前阶段约束收敛版本）
+适用范围：NGU800 / NGU800P 安全子系统 + 启动链路
 
 ---
 
@@ -19,6 +19,8 @@
 
 # 2. Root of Trust 约束
 
+<a id="c-root-01"></a>
+
 ## 【C-ROOT-01】Root of Trust 必须在 eHSM
 
 - Root Key 必须存储在 eFuse / OTP 安全区中，由 eHSM 使用
@@ -26,7 +28,7 @@
 - 不允许管理核持有 Root Key
 
 Evidence：
-- eHSM 作为芯片信任根，提供安全启动、生命周期、密钥管理、身份认证、固件升级等服务  
+- eHSM 作为芯片信任根，提供安全启动、生命周期、密钥管理、身份认证、固件升级等服务
 - eHSM 通过 OTP/eFuse 接口访问 OTP/eFuse
 
 Decision Rationale：
@@ -43,6 +45,8 @@ Impl Binding：
 
 # 3. Secure Boot 约束
 
+<a id="c-boot-01"></a>
+
 ## 【C-BOOT-01】所有镜像必须经过安全子系统验签
 
 适用对象：
@@ -57,6 +61,8 @@ Impl Binding：
 
 ---
 
+<a id="c-boot-02"></a>
+
 ## 【C-BOOT-02】Boot 顺序必须由安全核控制
 
 - 所有 MCU reset release 必须由 SEC 核控制
@@ -64,6 +70,8 @@ Impl Binding：
 - 不允许管理核自行启动
 
 ---
+
+<a id="c-boot-03"></a>
 
 ## 【C-BOOT-03】BootROM 不实现复杂加解密
 
@@ -78,6 +86,8 @@ Impl Binding：
 
 ---
 
+<a id="c-boot-04"></a>
+
 ## 【C-BOOT-04】SEC1 image confidentiality
 
 来源：
@@ -88,7 +98,9 @@ Impl Binding：
 - SEC1 解密、key unwrap、hash/signature 校验必须通过 eHSM 或安全子系统受控密码服务完成。
 - BootROM 不得直接实现复杂解密逻辑，只能定位 SEC1 镜像、调用受控接口、根据结果装载或拒绝启动。
 - Host 不参与 SEC1 投递；SEC1 来源保持为 NOR Flash / 本地 Flash。
-- SEC2、PM、RAS、Codec 等后续关键固件在 USER/PROD 产品形态中默认建议签名 + 加密；若采用签名 only，必须由产品安全策略显式允许并可被 lifecycle / attestation / debug 状态观测。
+- `[CONFIRMED]` SEC2 在正式安全启动路径中必须采用签名 + 加密保护。
+- `[ASSUMED]` PM、RAS、Codec 等后续关键 runtime image 在 USER/PROD 产品形态中默认采用签名 + 加密保护。
+- `[TBD]` 非敏感 runtime image 是否允许 signature-only，必须由产品安全策略和 image_type 白名单冻结；signature-only 不能作为默认路径。
 
 Decision Rationale：
 - SEC1 是 First Mutable Stage，若仅验签不加密，会暴露早期安全 bring-up 逻辑和后续安全控制面的关键入口。
@@ -103,7 +115,149 @@ Impl Binding：
 
 ---
 
+<a id="c-boot-05"></a>
+
+## 【C-BOOT-05】Runtime image protection policy
+
+来源：
+- `CR-0003-runtime-image-policy-board-binding-attestation-mfg-freeze`
+
+要求：
+- `[CONFIRMED]` SEC2 verify path 必须包含 signature verify、rollback check、revoke check、decrypt / unwrap、measurement 和 controlled release。
+- `[CONFIRMED]` SEC2 decrypt failure 必须阻断安全控制面启动。
+- `[ASSUMED]` PM / RAS / Codec 等关键 runtime image 在 USER/PROD 默认 sign + encrypt。
+- `[TBD]` signature-only 只能作为显式白名单例外，准入条件至少绑定 image_type、lifecycle、product SKU、debug state、release policy、rollback policy、是否包含敏感逻辑/数据。
+- `[TBD]` recovery image 的 image_type、signer、trust anchor、rollback counter、decrypt policy 必须在详细设计冻结前关闭。
+
+Decision Rationale：
+- SEC2 是后续安全控制面，必须同时保护完整性和机密性。
+- PM / RAS / Codec 可能承载关键 runtime 控制逻辑，默认策略应偏保守。
+- signature-only 作为产品策略例外时必须可被 measurement / attestation 或安全状态表体现。
+
+Chapter Binding：
+- ch3 / ch6 / ch8 / ch9 / ch12
+
+Impl Binding：
+- efuse_key_fw_header_design / mailbox_if / spdm_report / manufacturing_provisioning
+
+---
+
+<a id="c-boot-06"></a>
+
+## 【C-BOOT-06】eHSM native header 与 NGU manifest 分层
+
+来源：
+- `CR-0004-ehsm-native-header-otp-layout-alignment`
+- `SRC-006 eHSM Firmware TRM`
+- `SRC-007 eHSM Bootloader TRM`
+
+要求：
+- `[CONFIRMED]` SEC1 / SEC2 等安全启动镜像的密码学 verify/decrypt container 必须采用 eHSM native secure boot image header；NGU 不得再定义与其并列的 physical verification header。
+- `[CONFIRMED]` eHSM native header 中的 `Image_Type` 保持 eHSM TRM 定义，不承载 NGU `SEC1 / SEC2 / PM / RAS / Codec / Recovery` 项目级 image type。
+- `[CONFIRMED]` NGU 项目级 metadata 必须放入 eHSM Code region 的 protected manifest 或等价 manifest extension，由 BootROM / SEC 在 eHSM verify/decrypt 成功后解析。
+- `[TBD]` `ngu_image_manifest_t` 的 bit-level ABI、是否必须位于 Code region 起始位置、eHSM firmware / bootloader 是否直接解析 manifest 仍需后续冻结。
+
+Decision Rationale：
+- eHSM TRM 已定义 1KB plaintext image head、字段 offset/size 和 Code region，继续保留 NGU physical header 会形成两套事实源。
+- 将 NGU metadata 放入 protected manifest，可保留项目级策略表达，同时不破坏 eHSM native header 和工具链语义。
+
+Chapter Binding：
+- ch6 / ch11 / ch12
+
+Impl Binding：
+- efuse_key_fw_header_design / ehsm_source_conformance_matrix / mailbox_if
+
+---
+
+<a id="c-boot-07"></a>
+
+## 【C-BOOT-07】SEC1 / SEC2 加密镜像不得使用 NVM only verify
+
+来源：
+- `CR-0004-ehsm-native-header-otp-layout-alignment`
+- `SRC-006 eHSM Firmware TRM`
+- `SRC-007 eHSM Bootloader TRM`
+
+要求：
+- `[CONFIRMED]` eHSM NVM deploy / only verify 模式不适用于 SEC1 / SEC2 sign+encrypt 路径。
+- `[CONFIRMED]` SEC1 / SEC2 必须走 eHSM verify+decrypt output path，将解密结果输出到 BootROM / SEC 认可的受控 RAM / staging / output buffer。
+- `[CONFIRMED]` output buffer 必须受 firewall / address whitelist / DMA 默认拒绝策略保护。
+- `[ASSUMED]` SEC1 early boot 优先映射到 eHSM Bootloader `bl_verify_image` 或等价 ROM path；SEC2 runtime/load 优先映射到 eHSM Firmware `soc_verify` 或 SEC wrapper。
+- `[TBD]` 具体 BootROM 可调用命令、共享内存位置、输出 buffer 地址范围和错误隐藏策略由 RTL / eHSM 集成冻结。
+
+Decision Rationale：
+- eHSM TRM 明确 RAM deploy 支持 verify+decrypt，而 NVM deploy 只做 signature verify 且镜像不能加密。
+- CR-0001 / CR-0003 已确认 SEC1 / SEC2 sign+encrypt，不允许因部署模式误选导致机密性保护失效。
+
+Chapter Binding：
+- ch6 / ch11
+
+Impl Binding：
+- mailbox_if / efuse_key_fw_header_design / ehsm_source_conformance_matrix
+
+---
+
+<a id="c-boot-08"></a>
+
+## 【C-BOOT-08】固件制作流程与设备侧 verify/decrypt 流程必须共享同一 eHSM-native 契约
+
+来源：
+- `CR-0006-firmware-package-build-verify-flow`
+- `SRC-001 当前安全方案基线` 第 6/7 章
+- `CR-0004-ehsm-native-header-otp-layout-alignment`
+- `SRC-006 eHSM Firmware TRM`
+- `SRC-007 eHSM Bootloader TRM`
+
+要求：
+- `[CONFIRMED]` 平台侧固件制作工具和设备侧 BootROM/SEC/eHSM verify-decrypt 路径必须使用同一套 eHSM native secure boot image header + NGU protected manifest 契约。
+- `[CONFIRMED]` 平台侧工具不得再生成与 eHSM native header 并列的 NGU physical verification header；`SRC-001` 中的 `header + Signed Region + signature + wrapped_cek + enc_payload` 仅保留为流程意图参考。
+- `[CONFIRMED]` 固件制作流程必须明确 payload、NGU protected manifest、eHSM native header、Code region、版本计数、算法 profile、签名/加密 profile 和发布验收检查之间的关系。
+- `[CONFIRMED]` 设备侧 verify/decrypt 流程必须先由 eHSM 完成 native header 检查、签名校验、rollback / version counter 检查、decrypt output，再由 BootROM / SEC 解析 NGU manifest 并执行项目级 release policy。
+- `[TBD]` `ngu_image_manifest_t` bit-level ABI、eHSM 是否解析 manifest、exact key ID、per-image CEK / wrapped CEK 和工具 CLI / golden vector 仍需 owner 后续冻结。
+
+Decision Rationale：
+- 只描述“需要验签和解密”不足以指导代码落地，工具侧产物和设备侧解析/验证流程必须共享同一契约。
+- CR-0004 已废弃自定义 physical FW header；CR-0006 只补齐制作/验证流程，不恢复旧 physical ABI。
+- 用图形和步骤固化制作链路，可减少 image packager、BootROM、SEC verify flow、eHSM adapter 之间的解释偏差。
+
+Chapter Binding：
+- ch3 / ch6 / ch10 / ch11 / ch12
+
+Impl Binding：
+- efuse_key_fw_header_design / mailbox_if / ehsm_source_conformance_matrix / tools/image_packager / 05_code_rules / 06_traceability
+
+---
+
+<a id="c-ehsm-01"></a>
+
+## 【C-EHSM-01】OTP / key / counter source-conformance gate
+
+来源：
+- `CR-0004-ehsm-native-header-otp-layout-alignment`
+- `SRC-006 eHSM Firmware TRM`
+- `SRC-007 eHSM Bootloader TRM`
+
+要求：
+- `[CONFIRMED]` eHSM TRM 已定义的 OTP/control field、Version Counter、OTP key ID / level / purpose 是实现级 physical field 的优先事实源。
+- `[CONFIRMED]` `OTP-0..OTP-7` 仅可作为 NGU logical view / documentation alias，不表达 physical OTP/eFuse offset。
+- `[CONFIRMED]` `SEC1_MIN_VER / SEC2_MIN_VER / *_MIN_VER` 仅可作为 NGU logical rollback domain，不得写成 eHSM physical OTP 32-bit counter。
+- `[CONFIRMED]` NGU key name 仅是 logical alias；必须映射到 eHSM key ID / level / purpose 或标记为 `eHSM-customization-TBD`。
+- `[TBD]` exact key ID mapping、exact OTP/control bit mapping、per-image rollback counter、per-image CEK / wrapped CEK 均未冻结。
+
+Decision Rationale：
+- 当前实现级文档的“建议字段”容易被误读为 physical ABI；CR-0004 要求所有 header / OTP / key / counter 字段建立 source-conformance matrix。
+
+Chapter Binding：
+- ch5 / ch6 / ch9 / ch11
+
+Impl Binding：
+- efuse_key_fw_header_design / ehsm_source_conformance_matrix / manufacturing_provisioning / 05_code_rules / 06_traceability
+
+---
+
 # 4. Crypto 约束
+
+<a id="c-if-01"></a>
 
 ## 【C-IF-01】所有密码操作必须走 eHSM
 
@@ -121,6 +275,8 @@ Impl Binding：
 
 # 5. Key Management 约束
 
+<a id="c-key-01"></a>
+
 ## 【C-KEY-01】私钥不可导出
 
 - Private Key 不允许：
@@ -129,6 +285,8 @@ Impl Binding：
 - Key 使用必须通过 eHSM 内部机制
 
 ---
+
+<a id="c-key-02"></a>
 
 ## 【C-KEY-02】Key 必须绑定生命周期
 
@@ -141,6 +299,8 @@ Impl Binding：
 
 # 6. Debug 约束
 
+<a id="c-debug-01"></a>
+
 ## 【C-DEBUG-01】USER 态关闭调试能力
 
 USER 生命周期：
@@ -149,6 +309,8 @@ USER 生命周期：
 - 禁止 debug boot
 
 ---
+
+<a id="c-debug-02"></a>
 
 ## 【C-DEBUG-02】DEBUG / RMA 必须认证
 
@@ -160,6 +322,8 @@ USER 生命周期：
 ---
 
 # 7. Host 约束
+
+<a id="c-host-01"></a>
 
 ## 【C-HOST-01】Host 不可信
 
@@ -178,6 +342,8 @@ Host 不允许：
 
 # 8. 访问控制约束
 
+<a id="c-access-01"></a>
+
 ## 【C-ACCESS-01】安全子系统必须隔离
 
 禁止直接访问：
@@ -192,6 +358,8 @@ Host 不允许：
 
 ---
 
+<a id="c-access-02"></a>
+
 ## 【C-ACCESS-02】必须使用 UserID + Firewall
 
 - 所有 master 必须带 UserID
@@ -202,10 +370,12 @@ Host 不允许：
 
 # 9. Board / Management 约束
 
+<a id="c-board-01"></a>
+
 ## 【C-BOARD-01】管理子系统总体架构和流程可遵循，但安全边界必须由安全方案裁决
 
 来源：
-- `SRC-005` 管理子系统方案
+- `SRC-005 管理子系统方案`
 
 要求：
 - 管理子系统文档中的总体架构、模块职责、带外管理链路、电源/复位流程、单/双 Die 约束原则上作为系统级流程输入。
@@ -213,8 +383,8 @@ Host 不允许：
 - 若管理子系统文档中存在未鉴权调试、越权访问、绕过 SEC/eHSM、绕过 lifecycle gating 或直接访问安全资产的设计，不能直接继承，必须在详设中列为风险并给出替代设计。
 
 Evidence：
-- `SRC-005` 描述了 BMC、OAM 模组、板级 MCU/GPU 之间的 SMBus/I2C、I3C、SPI、PCIe、JTAG、UART、电源/复位管理和管理子系统整体逻辑。
-- `SRC-005` 对 JTAG 的描述包括可接入 GPU 芯片 JTAGBUS、寄存器空间、DRAM、Flash、安全子系统和 CPU 调试单元。
+- `SRC-005 管理子系统方案` 描述了 BMC、OAM 模组、板级 MCU/GPU 之间的 SMBus/I2C、I3C、SPI、PCIe、JTAG、UART、电源/复位管理和管理子系统整体逻辑。
+- `SRC-005 管理子系统方案` 对 JTAG 的描述包括可接入 GPU 芯片 JTAGBUS、寄存器空间、DRAM、Flash、安全子系统和 CPU 调试单元。
 
 Decision Rationale：
 - 管理子系统属于系统流程和板级集成的重要输入，但其带外通道和调试能力具备高权限，不能天然视为安全可信通道。
@@ -228,10 +398,12 @@ Impl Binding：
 
 ---
 
+<a id="c-board-02"></a>
+
 ## 【C-BOARD-02】带外管理通道不得成为安全策略绕过路径
 
 来源：
-- `SRC-005` 管理子系统方案
+- `SRC-005 管理子系统方案`
 
 要求：
 - SMBus/I2C、I3C、PCIe VDM、SPI、UART、BMC/OOB/板级 MCU 链路只能作为受控管理或转发通道。
@@ -239,7 +411,7 @@ Impl Binding：
 - 带外管理通道若承载 firmware update、状态查询、power/reset、debug request 或 provisioning proxy，必须经 SEC/C908 收敛，并受地址白名单、命令白名单、lifecycle gating 和审计约束。
 
 Evidence：
-- `SRC-005` 明确带外管理通道支持 SMBus/I2C、I3C、JTAG，且存在 BMC、OAM 模组、模组 MCU、GPU 和板级 MCU/GPU 之间的多条链路。
+- `SRC-005 管理子系统方案` 明确带外管理通道支持 SMBus/I2C、I3C、JTAG，且存在 BMC、OAM 模组、模组 MCU、GPU 和板级 MCU/GPU 之间的多条链路。
 
 Decision Rationale：
 - OOB 链路物理上独立、权限高、部署复杂，若作为安全服务直接入口，会破坏 Host 不可信和 SEC 统一控制面的基线。
@@ -252,19 +424,23 @@ Impl Binding：
 
 ---
 
+<a id="c-board-03"></a>
+
 ## 【C-BOARD-03】JTAG 必须受 lifecycle、debug auth、scope bitmap 和板级 MUX 联合控制
 
 来源：
-- `SRC-005` 管理子系统方案
+- `SRC-005 管理子系统方案`
 
 要求：
 - USER/PROD 生命周期默认关闭 JTAG 和等价调试访问。
 - 任何 JTAG 接入 GPU、CPU、DRAM、Flash、安全子系统或板级 MCU 的能力，必须先通过 challenge-response / debug auth。
 - JTAG MUX / CPLD / 板级控制单元不得提供绕过 eHSM debug authorization 的直通路径。
 - 授权结果必须包含 scope、目标、时限和审计记录。
+- `[ASSUMED]` 板级 MUX 控制权应由 SEC/eHSM 授权信号约束，OOB/BMC 不得单独打开。
+- `[TBD]` JTAG scope bitmap bit-level mapping、eHSM debug bitmap 与板级 MUX 寄存器归属需在实现阶段冻结。
 
 Evidence：
-- `SRC-005` 描述 JTAG 可接入 BMC、UBB、OAM、板级 MCU/GPU，并可访问 GPU 芯片 JTAGBUS、所有寄存器空间和 DRAM，也可接入安全子系统、CPU 调试单元、GPU Flash 和板级 MCU。
+- `SRC-005 管理子系统方案` 描述 JTAG 可接入 BMC、UBB、OAM、板级 MCU/GPU，并可访问 GPU 芯片 JTAGBUS、所有寄存器空间和 DRAM，也可接入安全子系统、CPU 调试单元、GPU Flash 和板级 MCU。
 
 Decision Rationale：
 - JTAG 是最高风险板级入口之一，若在量产态未被强制关断或受控授权，会直接绕过 secure boot、内存隔离、密钥和生命周期保护。
@@ -277,18 +453,22 @@ Impl Binding：
 
 ---
 
+<a id="c-board-04"></a>
+
 ## 【C-BOARD-04】管理子系统 DMA、mailbox、中断、互斥访问和复位控制必须被隔离和审计
 
 来源：
-- `SRC-005` 管理子系统方案
+- `SRC-005 管理子系统方案`
 
 要求：
-- 管理子系统 DMA 只能访问被 firewall 白名单允许的普通 buffer，不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、证书/策略区和 recovery 区。
+- `[CONFIRMED]` 管理子系统 DMA、Host DMA、OOB DMA 对安全资源默认拒绝。
+- 管理子系统 DMA 只能访问被 firewall 白名单允许的普通 staging / data buffer，不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、证书/策略区、measurement_table 安全写区域、debug/lifecycle/rollback 控制寄存器和 recovery 区。
 - 管理子系统 mailbox、中断、互斥寄存器只能用于普通协作或经 SEC 收敛后的安全服务请求，不得作为直接安全服务入口。
 - 电源、上下电、复位、PowerBrake 等板级控制信号若影响安全启动或故障恢复，必须进入安全状态机和审计模型。
+- `[TBD]` 具体 UserID、firewall region、地址范围、错误隐藏策略、审计字段由 RTL/实现设计冻结。
 
 Evidence：
-- `SRC-005` 描述 CPU 子系统通用 DMA、mailbox 中断、互斥访问机制、电源管理接口、上下电和复位管理。
+- `SRC-005 管理子系统方案` 描述 CPU 子系统通用 DMA、mailbox 中断、互斥访问机制、电源管理接口、上下电和复位管理。
 
 Decision Rationale：
 - DMA、复位和中断可改变系统状态或数据路径，若缺少隔离与审计，会破坏安全启动、证明状态和运行态可信边界。
@@ -303,13 +483,18 @@ Impl Binding：
 
 # 10. Firmware 更新约束
 
+<a id="c-update-01"></a>
+
 ## 【C-UPDATE-01】必须支持防回滚
 
 - 固件版本必须受控
 - 必须具备 anti-rollback 机制
-- 反回滚计数必须落到 OTP / monotonic counter 体系，而不是仅软件字段
+- 反回滚计数必须落到 eHSM Version Counter / monotonic counter / owner 确认的等价机制，而不是仅软件字段
+- `SEC1_MIN_VER / SEC2_MIN_VER / *_MIN_VER` 只能表达 NGU logical rollback domain，不能作为 eHSM physical OTP 32-bit counter
 
 ---
+
+<a id="c-update-02"></a>
 
 ## 【C-UPDATE-02】必须支持受控升级 / 恢复
 
@@ -321,6 +506,8 @@ Impl Binding：
 
 # 11. Attestation 约束
 
+<a id="c-att-01"></a>
+
 ## 【C-ATT-01】必须支持设备认证
 
 - 支持设备身份
@@ -330,13 +517,43 @@ Impl Binding：
 
 ---
 
+<a id="c-att-02"></a>
+
+## 【C-ATT-02】Attestation report 必须覆盖安全状态和策略状态
+
+来源：
+- `CR-0003-runtime-image-policy-board-binding-attestation-mfg-freeze`
+
+要求：
+- `[CONFIRMED]` Attestation report 必须包含 measurement、lifecycle、debug state、secure boot state、rollback state。
+- `[ASSUMED]` Attestation report 增加 image protection policy、decrypt_applied、image_type policy 字段。
+- `[ASSUMED]` board binding 默认进入 attestation；若 board binding 参与证明或验证，board_bind_result 必须进入 report。
+- `[TBD]` PowerBrake / PG / FAULT / reset event 是否进入主 report，还是进入扩展 event log。
+
+Decision Rationale：
+- report 不得只返回签名，必须返回签名覆盖的状态。
+- RMA/debug state 必须在 report 中可见，防止把 RMA/debug 态伪装成 USER/PROD 态。
+
+Chapter Binding：
+- ch8 / ch10 / ch11 / ch12
+
+Impl Binding：
+- spdm_report / mailbox_if / manufacturing_provisioning
+
+---
+
 # 12. Manufacturing / Provisioning 约束
+
+<a id="c-mfg-01"></a>
 
 ## 【C-MFG-01】必须定义 Root Key 灌装与锁定流程
 
 - 必须定义制造 / 灌装 / 锁定 / 审计流程
 - 必须定义 MANU → USER 的冻结动作
 - 不得只写“后续补充”
+- `[CONFIRMED]` USER freeze 必须锁定 secure boot、debug、anti-rollback、SEC1/SEC2 decrypt key / FW_KEK、test trust cleanup。
+- `[CONFIRMED]` RMA 不允许 long-open debug，不允许绕过 challenge/auth，不允许长期保留 SEC1/SEC2 decrypt bypass。
+- `[TBD]` Root injection mode、OTP/eFuse readback 验收方式、RMA re-acceptance 流程。
 
 ---
 
@@ -345,6 +562,7 @@ Impl Binding：
 - PCIe 安全模型细化
 - SPDM report 字段级定义
 - mailbox command ID 最终分配
-- board binding 是否量产默认开启
+- board binding 是否参与 SEC2/runtime release decision
 - JTAG scope bitmap、CPLD/MUX 控制权和板级调试授权闭环
 - 管理子系统 DMA / mailbox / 复位控制的 firewall 和审计字段
+- recovery image 的 image_type、signer、trust anchor、rollback counter、decrypt policy

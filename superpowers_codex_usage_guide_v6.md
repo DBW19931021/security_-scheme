@@ -5,6 +5,35 @@
 
 ---
 
+## 目录
+
+- [0. 一句话结论](#0-一句话结论)
+- [1. 官方资料入口](#1-官方资料入口)
+- [2. Superpowers 是什么](#2-superpowers-是什么)
+- [3. 安装教程：远端 Ubuntu + Codex IDE 插件](#3-安装教程远端-ubuntu--codex-ide-插件)
+- [4. 如何验证安装成功](#4-如何验证安装成功)
+- [5. Superpowers skills 总览](#5-superpowers-skills-总览)
+- [6. 使用原则总览](#6-使用原则总览)
+- [7. 入口类技能](#7-入口类技能)
+- [8. 设计与需求澄清类](#8-设计与需求澄清类)
+- [9. 计划拆解类](#9-计划拆解类)
+- [10. 执行计划类](#10-执行计划类)
+- [11. 分支隔离与并行开发类](#11-分支隔离与并行开发类)
+- [12. TDD 与验证类](#12-tdd-与验证类)
+- [13. Debug 类](#13-debug-类)
+- [14. Review 类](#14-review-类)
+- [15. 分支收尾类](#15-分支收尾类)
+- [16. 团队扩展类](#16-团队扩展类)
+- [17. 推荐工作流示例：从安全设计到代码落地](#17-推荐工作流示例从安全设计到代码落地)
+- [18. 推荐给项目组的试点方案](#18-推荐给项目组的试点方案)
+- [19. 最常用 Prompt 模板](#19-最常用-prompt-模板)
+- [20. 常见问题](#20-常见问题)
+- [21. 与 OpenSpec 的对比和组合使用](#21-与-openspec-的对比和组合使用)
+- [22. 附录：快速命令](#22-附录快速命令)
+- [23. 附录：安全功能常用关键词速查](#23-附录安全功能常用关键词速查)
+
+---
+
 ## 0. 一句话结论
 
 **对 Codex 来说，Superpowers 本质上是一组高阶 skills / workflow 包。**
@@ -133,41 +162,11 @@ Superpowers 不像一个“自动写代码神器”，更像一个“让 Codex �
 
 ---
 
-## 3. 适合我们的使用架构
-
-### 3.1 当前主环境
-
-我们当前主环境是：
-
-```text
-Windows 本机
-  ├─ VS Code
-  └─ 通过 Remote SSH 连接远端 Ubuntu
-        ├─ 源码仓库
-        ├─ 编译工具链
-        ├─ QEMU / OpenOCD / 测试脚本
-        ├─ Codex IDE 插件实际工作区
-        └─ Superpowers skills
-```
-
-因此，**Superpowers 不应该优先装在 Windows 本机，而应该装在远端 Ubuntu。**
-
-### 3.2 推荐分工
-
-| 场景 | 推荐工具 |
-|---|---|
-| 日常看代码、改驱动、跑编译、查日志 | VS Code Remote SSH + Codex IDE 插件 |
-| 中大型任务设计和计划 | VS Code Codex + Superpowers skills |
-| 后期多任务并行开发 | 远端 Ubuntu Codex CLI + Superpowers + git worktree + tmux |
-| 团队标准流程固化 | 项目级自定义 skills |
-
----
-
-## 4. 安装教程：远端 Ubuntu + Codex IDE 插件
+## 3. 安装教程：远端 Ubuntu + Codex IDE 插件
 
 > 前提：我们已经能在 VS Code Remote SSH 里正常使用 Codex IDE 插件。
 
-### 4.1 在远端 Ubuntu 执行
+### 3.1 在远端 Ubuntu 执行
 
 打开 VS Code Remote SSH 的远端终端，执行：
 
@@ -187,7 +186,7 @@ ln -s ~/.codex/superpowers/skills ~/.agents/skills/superpowers
 
 也就是把 Superpowers 仓库里的 `skills` 目录，通过软链接暴露给 Codex 的 skill discovery 机制。
 
-### 4.2 为什么是 `~/.agents/skills`
+### 3.2 为什么是 `~/.agents/skills`
 
 Superpowers 的 Codex 文档采用的是：
 
@@ -203,7 +202,7 @@ Superpowers 的 Codex 文档采用的是：
 
 如果我们已经确认 Codex 能扫描到，就说明这条路径在当前版本和环境里是可用的。
 
-### 4.3 重启 Codex / VS Code
+### 3.3 重启 Codex / VS Code
 
 安装后需要让 Codex 重新扫描 skills。
 
@@ -215,9 +214,9 @@ Superpowers 的 Codex 文档采用的是：
 
 ---
 
-## 5. 如何验证安装成功
+## 4. 如何验证安装成功
 
-### 5.1 检查软链接
+### 4.1 检查软链接
 
 在远端 Ubuntu 执行：
 
@@ -231,7 +230,7 @@ ls -la ~/.agents/skills/superpowers
 ~/.agents/skills/superpowers -> /home/<user>/.codex/superpowers/skills
 ```
 
-### 5.2 检查 skills 是否存在
+### 4.2 检查 skills 是否存在
 
 ```bash
 ls ~/.agents/skills/superpowers
@@ -254,7 +253,7 @@ test-driven-development
 ls ~/.agents/skills/superpowers/brainstorming/SKILL.md
 ```
 
-### 5.3 在 Codex 中验证
+### 4.3 在 Codex 中验证
 
 在 VS Code Codex 面板中输入：
 
@@ -280,7 +279,7 @@ use brainstorming to help me refine this security feature design
 
 ---
 
-## 6. Superpowers skills 总览
+## 5. Superpowers skills 总览
 
 Superpowers 不是只有一个 skill，而是一组围绕“需求澄清、计划、实现、调试、验证、review、收尾”的技能包。下面表格列出 Superpowers README 中提到的主要 skills。
 
@@ -303,9 +302,9 @@ Superpowers 不是只有一个 skill，而是一组围绕“需求澄清、计�
 
 ---
 
-## 7. 使用原则总览
+## 6. 使用原则总览
 
-### 7.0 什么时候用 Superpowers，什么时候不用
+### 6.0 什么时候用 Superpowers，什么时候不用
 
 可以用一个很简单的判断标准：
 
@@ -337,7 +336,7 @@ Superpowers 不是只有一个 skill，而是一组围绕“需求澄清、计�
 团队沉淀：writing-skills
 ```
 
-### 7.1 不要所有任务都强制使用 Superpowers
+### 6.1 不要所有任务都强制使用 Superpowers
 
 Superpowers 适合中大型、复杂、跨模块、高风险任务，例如：
 
@@ -357,7 +356,7 @@ Superpowers 适合中大型、复杂、跨模块、高风险任务，例如：
 - 查询一个寄存器含义；
 - 非常小的单文件修改。
 
-### 7.2 推荐主线
+### 6.2 推荐主线
 
 复杂开发任务建议走这条主线：
 
@@ -386,7 +385,7 @@ use using-git-worktrees
   -> use subagent-driven-development
 ```
 
-### 7.3 显式触发比自动触发更稳
+### 6.3 显式触发比自动触发更稳
 
 虽然 Superpowers 可以自动触发，但项目组初期建议显式写出 skill 名称：
 
@@ -407,7 +406,7 @@ use systematic-debugging.
 
 这样最容易复现，也最容易评估效果。
 
-### 7.4 复杂任务先不让它改代码
+### 6.4 复杂任务先不让它改代码
 
 建议常加这句：
 
@@ -419,9 +418,9 @@ use systematic-debugging.
 
 ---
 
-## 8. 入口类技能
+## 7. 入口类技能
 
-### 8.1 `using-superpowers`
+### 7.1 `using-superpowers`
 
 #### 作用
 
@@ -459,9 +458,9 @@ use using-superpowers.
 
 ---
 
-## 9. 设计与需求澄清类
+## 8. 设计与需求澄清类
 
-### 9.1 `brainstorming`
+### 8.1 `brainstorming`
 
 #### 作用
 
@@ -489,7 +488,7 @@ explore alternatives
 先帮我澄清需求
 ```
 
-#### 安全功能示例 1：SEC2/eHSM 验签流程
+#### 安全功能示例：SEC2/eHSM 验签流程
 
 ```text
 use brainstorming.
@@ -511,34 +510,15 @@ use brainstorming.
 最后输出一个可评审的设计草案。
 ```
 
-#### 安全功能示例 2：SPDM 认证设计
-
-```text
-use brainstorming.
-我要设计设备侧 SPDM responder 与 measurement_table 的关系。
-请先不要写代码。
-请帮我澄清：
-1. 哪些 measurement 由 BootROM 写入；
-2. 哪些 measurement 由 SEC2 写入；
-3. eHSM 在 report 签名中承担什么角色；
-4. Host requester 和远端 verifier 分别校验什么；
-5. nonce、lifecycle、debug state、firmware hash 应该如何纳入签名覆盖范围。
-
-输出要求：
-- 先列问题；
-- 再列设计选项；
-- 最后给推荐方案。
-```
-
 #### 使用原则
 
 `brainstorming` 最适合“方案阶段”。不要让它直接写代码。先输出设计，再审设计。
 
 ---
 
-## 10. 计划拆解类
+## 9. 计划拆解类
 
-### 10.1 `writing-plans`
+### 9.1 `writing-plans`
 
 #### 作用
 
@@ -604,9 +584,9 @@ Checkpoint 2: 接入 eHSM verify_image mailbox
 
 ---
 
-## 11. 执行计划类
+## 10. 执行计划类
 
-### 11.1 `executing-plans`
+### 10.1 `executing-plans`
 
 #### 作用
 
@@ -649,9 +629,9 @@ use executing-plans.
 
 ---
 
-## 12. 分支隔离与并行开发类
+## 11. 分支隔离与并行开发类
 
-### 12.1 `using-git-worktrees`
+### 11.1 `using-git-worktrees`
 
 #### 作用
 
@@ -704,7 +684,7 @@ wt-lifecycle
 
 ---
 
-### 12.2 `dispatching-parallel-agents`
+### 11.2 `dispatching-parallel-agents`
 
 #### 作用
 
@@ -747,7 +727,7 @@ use dispatching-parallel-agents.
 
 ---
 
-### 12.3 `subagent-driven-development`
+### 11.3 `subagent-driven-development`
 
 #### 作用
 
@@ -792,9 +772,9 @@ use subagent-driven-development.
 
 ---
 
-## 13. TDD 与验证类
+## 12. TDD 与验证类
 
-### 13.1 `test-driven-development`
+### 12.1 `test-driven-development`
 
 #### 作用
 
@@ -840,21 +820,6 @@ use test-driven-development.
 确认测试失败后，再写最小实现。
 ```
 
-#### 安全功能示例：SEC2 release 状态机
-
-```text
-use test-driven-development.
-我要实现微核 release 状态机。
-规则：
-- Host 只能投递镜像；
-- VERIFY_PASS 前不允许 release；
-- VERIFY_FAIL 后必须进入拒绝状态；
-- timeout 后必须记录错误码；
-- 只有 SEC2 能写 release 控制。
-
-请先写失败测试，再实现。
-```
-
 #### 使用原则
 
 嵌入式项目如果没有完整单元测试框架，也可以让 Codex 生成：
@@ -867,7 +832,7 @@ use test-driven-development.
 
 ---
 
-### 13.2 `verification-before-completion`
+### 12.2 `verification-before-completion`
 
 #### 作用
 
@@ -912,9 +877,9 @@ use verification-before-completion.
 
 ---
 
-## 14. Debug 类
+## 13. Debug 类
 
-### 14.1 `systematic-debugging`
+### 13.1 `systematic-debugging`
 
 #### 作用
 
@@ -959,29 +924,15 @@ use systematic-debugging.
 6. 哪些实验可以在 QEMU/mock 环境中先做。
 ```
 
-#### 安全功能示例：SPDM 握手失败
-
-```text
-use systematic-debugging.
-现象：Host 发起 SPDM GET_MEASUREMENTS 后没有收到有效 response。
-请系统化分析：
-1. transport 层是否收发正常；
-2. requester nonce 是否传入 responder；
-3. measurement_table 是否可读；
-4. eHSM 签名调用是否成功；
-5. response buffer 长度和分片是否正确；
-6. Host 侧校验失败还是 Device 侧未返回。
-```
-
 #### 使用原则
 
 这个 skill 很适合嵌入式/芯片 bring-up 环境。每次复杂故障建议强制使用。
 
 ---
 
-## 15. Review 类
+## 14. Review 类
 
-### 15.1 `requesting-code-review`
+### 14.1 `requesting-code-review`
 
 #### 作用
 
@@ -1027,7 +978,7 @@ use requesting-code-review.
 
 ---
 
-### 15.2 `receiving-code-review`
+### 14.2 `receiving-code-review`
 
 #### 作用
 
@@ -1072,9 +1023,9 @@ use receiving-code-review.
 
 ---
 
-## 16. 分支收尾类
+## 15. 分支收尾类
 
-### 16.1 `finishing-a-development-branch`
+### 15.1 `finishing-a-development-branch`
 
 #### 作用
 
@@ -1117,9 +1068,9 @@ use finishing-a-development-branch.
 
 ---
 
-## 17. 团队扩展类
+## 16. 团队扩展类
 
-### 17.1 `writing-skills`
+### 16.1 `writing-skills`
 
 #### 为什么这个 skill 和 Superpowers 有关系
 
@@ -1210,11 +1161,11 @@ repo-root/.agents/skills/driver-debug-review/SKILL.md
 
 ---
 
-## 18. 推荐工作流示例：从安全设计到代码落地
+## 17. 推荐工作流示例：从安全设计到代码落地
 
 下面是一套完整示例，适合 NGU800P / SEC2 / eHSM 安全功能开发。
 
-### 18.1 阶段 1：设计澄清
+### 17.1 阶段 1：设计澄清
 
 ```text
 use brainstorming.
@@ -1231,7 +1182,7 @@ use brainstorming.
 先帮我澄清设计边界、威胁点、状态机、错误码和 RTL 控制要求。
 ```
 
-### 18.2 阶段 2：生成计划
+### 17.2 阶段 2：生成计划
 
 ```text
 use writing-plans.
@@ -1245,7 +1196,7 @@ use writing-plans.
 5. 先不要改代码。
 ```
 
-### 18.3 阶段 3：创建隔离 worktree
+### 17.3 阶段 3：创建隔离 worktree
 
 ```text
 use using-git-worktrees.
@@ -1257,7 +1208,7 @@ use using-git-worktrees.
 4. 创建后验证项目 baseline。
 ```
 
-### 18.4 阶段 4：按计划执行第一个 checkpoint
+### 17.4 阶段 4：按计划执行第一个 checkpoint
 
 ```text
 use executing-plans.
@@ -1266,7 +1217,7 @@ use executing-plans.
 完成后总结修改、运行可用测试，并等待我确认。
 ```
 
-### 18.5 阶段 5：测试优先实现 parser / 状态机
+### 17.5 阶段 5：测试优先实现 parser / 状态机
 
 ```text
 use test-driven-development.
@@ -1280,7 +1231,7 @@ use test-driven-development.
 确认测试失败后，再写最小实现。
 ```
 
-### 18.6 阶段 6：阶段 review
+### 17.6 阶段 6：阶段 review
 
 ```text
 use requesting-code-review.
@@ -1294,7 +1245,7 @@ use requesting-code-review.
 按 critical/high/medium/low 输出。
 ```
 
-### 18.7 阶段 7：完成前验证
+### 17.7 阶段 7：完成前验证
 
 ```text
 use verification-before-completion.
@@ -1307,7 +1258,7 @@ use verification-before-completion.
 5. 替代验证建议。
 ```
 
-### 18.8 阶段 8：收尾
+### 17.8 阶段 8：收尾
 
 ```text
 use finishing-a-development-branch.
@@ -1318,9 +1269,9 @@ use finishing-a-development-branch.
 
 ---
 
-## 19. 推荐给项目组的试点方案
+## 18. 推荐给项目组的试点方案
 
-### 19.1 第一阶段：只用 5 个 skills
+### 18.1 第一阶段：只用 5 个 skills
 
 建议前 1～2 周只试：
 
@@ -1339,7 +1290,7 @@ requesting-code-review
 - 实现是否更少跑偏；
 - review 是否更能发现安全边界问题。
 
-### 19.2 第二阶段：加入 worktree 和验证收尾
+### 18.2 第二阶段：加入 worktree 和验证收尾
 
 再加入：
 
@@ -1355,7 +1306,7 @@ finishing-a-development-branch
 - 分支收尾是否更清晰；
 - 是否减少“改完但没验证”的情况。
 
-### 19.3 第三阶段：引入 multi-agent 类能力
+### 18.3 第三阶段：引入 multi-agent 类能力
 
 最后再考虑：
 
@@ -1372,9 +1323,9 @@ subagent-driven-development
 
 ---
 
-## 20. 最常用 Prompt 模板
+## 19. 最常用 Prompt 模板
 
-### 20.1 需求澄清模板
+### 19.1 需求澄清模板
 
 ```text
 use brainstorming.
@@ -1386,7 +1337,7 @@ use brainstorming.
 最后输出一个可评审设计草案。
 ```
 
-### 20.2 计划模板
+### 19.2 计划模板
 
 ```text
 use writing-plans.
@@ -1399,7 +1350,7 @@ use writing-plans.
 5. 先不要改代码。
 ```
 
-### 20.3 执行模板
+### 19.3 执行模板
 
 ```text
 use executing-plans.
@@ -1408,7 +1359,7 @@ use executing-plans.
 完成后总结修改、运行测试、给出验证证据，并等待我确认。
 ```
 
-### 20.4 Debug 模板
+### 19.4 Debug 模板
 
 ```text
 use systematic-debugging.
@@ -1422,7 +1373,7 @@ use systematic-debugging.
 5. 推荐排查顺序。
 ```
 
-### 20.5 Review 模板
+### 19.5 Review 模板
 
 ```text
 use requesting-code-review.
@@ -1437,13 +1388,13 @@ use requesting-code-review.
 
 ---
 
-## 21. 常见问题
+## 20. 常见问题
 
-### 21.1 装好后为什么没有新按钮？
+### 20.1 装好后为什么没有新按钮？
 
 因为 Superpowers 不是 UI 插件。它是一组 skills。我们仍然在 Codex 面板里正常对话，只是通过 skill 名称触发流程。
 
-### 21.2 为什么 VS Code 里有一个 superpowers 插件？
+### 20.2 为什么 VS Code 里有一个 superpowers 插件？
 
 如果插件描述是：
 
@@ -1465,17 +1416,17 @@ obra/superpowers
 ~/.agents/skills/superpowers
 ```
 
-### 21.3 是否每次都要手动写 `use brainstorming`？
+### 20.3 是否每次都要手动写 `use brainstorming`？
 
 不是必须。Codex 可以根据 skill description 自动触发。但试点阶段建议显式写出来，方便观察和复现。
 
-### 21.4 是否一定要用 Codex CLI？
+### 20.4 是否一定要用 Codex CLI？
 
 不一定。当前可以先用 VS Code Remote SSH + Codex IDE 插件。
 
 后期如果要多任务并行，建议引入 Codex CLI + worktree + tmux。
 
-### 21.5 是否要把 Superpowers 做成项目仓库的一部分？
+### 20.5 是否要把 Superpowers 做成项目仓库的一部分？
 
 不建议直接把第三方 Superpowers 全量放进项目仓库。推荐：
 
@@ -1486,9 +1437,9 @@ obra/superpowers
 ---
 
 
-## 22. 与 OpenSpec 的对比和组合使用
+## 21. 与 OpenSpec 的对比和组合使用
 
-### 22.1 OpenSpec 是什么
+### 21.1 OpenSpec 是什么
 
 OpenSpec 是一个轻量级的 spec-driven development（规格驱动开发）框架。它的目标不是替代 Codex，而是在代码仓库里维护一套可审查、可追踪、可长期保留的规格文档。
 
@@ -1514,63 +1465,101 @@ OpenSpec 官方资料：
 - OpenSpec 官网：<https://openspec.dev/>
 - OpenSpec GitHub：<https://github.com/Fission-AI/OpenSpec>
 
-### 22.2 Superpowers 和 OpenSpec 的核心区别
+### 21.2 Superpowers 和 OpenSpec 的核心区别
 
 最通俗的区别是：
 
 ```text
-Superpowers 管“Codex 怎么做事”；
-OpenSpec 管“需求和规格怎么沉淀”。
+Superpowers 管“过程质量”：让 Codex 怎么问、怎么想、怎么拆、怎么做、怎么 review。
+OpenSpec 管“规格资产”：把为什么改、改成什么、验收标准和变更历史沉淀到仓库。
+```
+
+也可以用一句更工程化的话理解：
+
+```text
+Superpowers 像“项目经理 + 资深工程师的工作方法”；
+OpenSpec 像“需求/规格变更账本 + 长期设计基线”。
 ```
 
 | 对比项 | Superpowers | OpenSpec |
 |---|---|---|
-| 主要定位 | 给 coding agent 的工作流 / skills | 规格驱动开发框架 |
-| 解决的问题 | Codex 容易直接写、漏步骤、缺 review | 需求和设计只留在聊天里，缺少长期规格沉淀 |
-| 主要载体 | `SKILL.md` / skills | `openspec/changes/`、`proposal.md`、`design.md`、`tasks.md`、`spec.md` |
-| 更像什么 | 项目经理的流程纪律 | 仓库里的需求/规格账本 |
-| 是否强调执行过程 | 强，强调 brainstorming、plan、TDD、review、verification | 强调先 proposal / spec，再 apply / archive |
-| 是否适合临时调试 | 适合，尤其 `systematic-debugging` | 不太适合小故障临时排查 |
-| 是否适合长期需求追踪 | 可以辅助，但不是主目标 | 很适合 |
-| 与 Codex 的关系 | 让 Codex 按技能流程做事 | 让 Codex 围绕规格文档做变更 |
+| 主要定位 | 给 Codex 的工作流 / skills | 规格驱动开发框架 |
+| 核心问题 | Codex 容易直接写、漏步骤、缺 review | 需求、设计、规格只留在聊天里，缺少长期沉淀 |
+| 更擅长 | 澄清、计划、执行、TDD、debug、review、收尾 | proposal、design、tasks、spec delta、archive |
+| 更像什么 | 工程教练 / 执行纪律 | 规格账本 / 变更档案 / source of truth |
+| 产物特点 | 更偏当前任务过程 | 更偏长期可追踪资产 |
+| 典型使用 | `use brainstorming`、`use writing-plans`、`use executing-plans` | `/opsx:propose`、`tasks.md`、`spec.md`、`/opsx:archive` |
 
-### 22.3 我们应该如何选择
+几个结论性判断：
 
-如果只是让 Codex 更稳地完成一个开发任务，优先用 Superpowers：
+1. **OpenSpec 不是不能帮我们制定方案，但它更偏“记录和规范方案”，不是最主动的“方案教练”。** 只用 OpenSpec 时，方案质量仍然很依赖开发者反复提示、review 和修正。
+2. **Superpowers 更主动。** 它会通过 `brainstorming` 引导我们澄清目标、边界、约束、方案选项和风险点。
+3. **两者配合时，不建议让两边各写一套方案和计划。** 更好的分工是：Superpowers 负责把问题想清楚、把执行拆清楚；OpenSpec 负责把最终共识沉淀成正式变更记录和规格增量。
+4. **如果只是一次性讨论或小 bug，不必上 OpenSpec。** 如果是会改变系统安全行为的正式能力，就应该进入 OpenSpec。
+5. **OpenSpec 不是普通“记录工具”，而是把决策变成规格合同。** 它不主要负责主动推导方案，但会把已经确认的方案决策写成 requirement、scenario、验收标准和变更历史，后续人和 agent 都要按它执行。
+6. **决策不是只由某一个工具完成。** Superpowers 辅助形成候选决策，OpenSpec 固化和约束决策，最终拍板仍然由我们工程师、架构师和评审人完成。
 
-```text
-use brainstorming
-use writing-plans
-use executing-plans
-use requesting-code-review
-```
+#### 决策分工的通俗理解
 
-如果我们希望把需求变化、设计决策、规格增量长期保存在仓库里，优先用 OpenSpec：
+可以把“决策”拆成三个阶段：
 
 ```text
-/opsx:propose <需求>
-/opsx:apply
-/opsx:archive
+1. 设计决策怎么被推出来
+2. 设计决策怎么被正式确认
+3. 设计决策怎么被长期约束后续开发
 ```
 
-可以这样判断：
+在这个分工里：
 
-| 问题 | 更适合 |
+```text
+Superpowers 更擅长第 1 步：主动追问、比较方案、暴露风险，推动我们把决策想清楚。
+OpenSpec 更擅长第 2/3 步：把确认后的决策正式化、规格化、可追踪化。
+```
+
+所以不能简单说“OpenSpec 只是记录”。更准确的说法是：
+
+```text
+Superpowers 是“决策教练”：帮助我们把问题想清楚。
+OpenSpec 是“决策账本 + 规格合同”：把确认后的共识变成后续必须遵守的系统要求。
+我们才是最终决策者：工具只辅助分析、记录、约束和执行。
+```
+
+例如在 SEC2/eHSM 固件验证能力中，Superpowers 可以主动追问：Host 是否允许 release、SEC2 和 eHSM 谁是控制面、验证失败后如何处理；OpenSpec 则要把最终确认的结论写成：Host-delivered firmware must be verified before release、VERIFY_FAIL 时不得 release、measurement_table 必须记录 hash/version/verify_result/error_code 等 requirement 和 scenario。
+
+### 21.3 我们应该如何选择
+
+可以用下面这个标准判断：
+
+```text
+问题还没想清楚：先用 Superpowers。
+问题已经确定、要进入正式规格：用 OpenSpec。
+进入实现阶段、需要控制 Codex 怎么做：再用 Superpowers。
+```
+
+| 场景 | 更适合 |
 |---|---|
 | “这个安全功能怎么设计更合理？” | Superpowers `brainstorming` |
-| “这个需求变更要不要进入正式规格？” | OpenSpec proposal |
-| “把设计拆成实现步骤并让 Codex 执行” | Superpowers `writing-plans` / `executing-plans` |
-| “保留本次变更的需求、设计、任务和规格 delta” | OpenSpec |
+| “这个需求变更要不要进入正式设计基线？” | OpenSpec `proposal` |
+| “把设计拆成文件级、checkpoint 级执行步骤” | Superpowers `writing-plans` |
+| “保留本次变更的需求、设计、任务和规格 delta” | OpenSpec change folder |
+| “按照计划一步步执行，改完要 review 和验证” | Superpowers `executing-plans` / `requesting-code-review` |
+| “完成后把规格增量合并回主规格” | OpenSpec archive |
 | “修一个 mailbox timeout bug” | Superpowers `systematic-debugging` |
-| “新增 SEC2/eHSM 固件验证能力并进入长期设计基线” | OpenSpec + Superpowers 组合 |
+| “新增 SEC2/eHSM 固件验证能力并进入长期安全基线” | Superpowers + OpenSpec 组合 |
 
-### 22.4 最推荐的组合方式
-
-我们不需要在 Superpowers 和 OpenSpec 之间二选一。更好的方式是：
+一句话经验：
 
 ```text
-OpenSpec 作为“规格和变更记录层”；
-Superpowers 作为“Codex 执行和评审流程层”。
+Superpowers 解决“这件事怎么做稳”；OpenSpec 解决“这件事做完后怎么留下来、怎么约束以后”。
+```
+
+### 21.4 最推荐的组合方式
+
+我们不需要在 Superpowers 和 OpenSpec 之间二选一。更好的方式是分层使用：
+
+```text
+Superpowers：方案澄清 + 执行计划 + review + 验证
+OpenSpec：正式变更记录 + 规格增量 + 验收标准 + 归档
 ```
 
 推荐组合流程如下：
@@ -1578,18 +1567,23 @@ Superpowers 作为“Codex 执行和评审流程层”。
 ```text
 阶段 1：用 Superpowers 澄清想法
   use brainstorming
+  输出：OpenSpec-ready 设计共识摘要
 
 阶段 2：用 OpenSpec 创建正式变更
   /opsx:propose <安全功能需求>
+  输出：proposal.md / design.md / tasks.md / spec delta
 
-阶段 3：评审 OpenSpec 产物
-  proposal.md / design.md / tasks.md / spec delta
+阶段 3：用 Superpowers review OpenSpec 产物
+  use requesting-code-review
+  检查：OpenSpec 是否正确记录了前面达成的设计共识，是否符合我们的安全边界和预期
 
-阶段 4：用 Superpowers 执行 OpenSpec 任务
+阶段 4：用 Superpowers 将 OpenSpec tasks 转成可执行计划
+  use writing-plans
+  说明：如果 tasks.md 已经足够细，可以跳过；如果只是变更级 checklist，则需要细化成 checkpoint
+
+阶段 5：用 Superpowers 执行、review 和验证
   use using-git-worktrees
   use executing-plans
-
-阶段 5：用 Superpowers 做 review 和验证
   use requesting-code-review
   use verification-before-completion
 
@@ -1597,7 +1591,24 @@ Superpowers 作为“Codex 执行和评审流程层”。
   /opsx:archive
 ```
 
-### 22.5 安全功能示例：SEC2/eHSM 固件验证能力
+这个流程里的“决策”不是重复做两遍：
+
+```text
+Superpowers 先帮助我们把候选方案推出来，并暴露关键取舍；
+OpenSpec 再把已经确认的决策变成正式 change；
+Superpowers 再反过来 review 这个 change 是否记录正确、是否漏掉安全边界和负向场景。
+```
+
+这里最重要的感悟是：
+
+```text
+OpenSpec tasks.md 说明“这次变更要完成什么”；
+Superpowers writing-plans 说明“Codex 具体怎么一步步完成它”。
+```
+
+因此，有了 OpenSpec `tasks.md` 以后，不一定可以直接跳过 `writing-plans`。只有当 `tasks.md` 已经细到包含“改哪些文件、怎么改、怎么验证、什么时候停下来”时，才可以直接进入 `executing-plans`。
+
+### 21.5 安全功能示例：SEC2/eHSM 固件验证能力
 
 假设我们要新增能力：
 
@@ -1619,7 +1630,11 @@ use brainstorming.
 3. measurement_table 需要记录哪些字段；
 4. 失败路径、timeout、rollback/revoke 检查如何处理；
 5. 哪些 RTL 控制寄存器必须只允许 SEC2 写。
+
+最后请输出一份 OpenSpec-ready 设计共识摘要，包含：目标、范围/非范围、关键设计决策、安全约束、影响模块、未决问题。
 ```
+
+这一步不一定生成正式文件。它的核心产物是“设计共识摘要”。这份摘要是后续创建 OpenSpec change 的输入。
 
 #### 第二步：用 OpenSpec 创建变更记录
 
@@ -1637,32 +1652,83 @@ openspec/changes/add-sec2-ehsm-firmware-verification/
   specs/sec2-firmware-verification/spec.md
 ```
 
+这一步的意义是：把第一步达成的设计共识，转成仓库里的正式变更记录。它不是再做一次 brainstorming，而是把“为什么改、改什么、验收标准是什么”沉淀下来。
+
 #### 第三步：用 Superpowers review OpenSpec 产物
+
+这一步 review 的对象不是代码，而是 OpenSpec 变更包本身。重点检查：**OpenSpec 是否准确记录了第一步 Superpowers 澄清出来的设计共识，是否符合我们的安全边界和预期。**
 
 ```text
 use requesting-code-review.
 请 review openspec/changes/add-sec2-ehsm-firmware-verification/ 下的 proposal.md、design.md、tasks.md 和 spec delta。
+
 重点检查：
-1. Host 是否仍然只有投递能力；
-2. SEC2 是否是唯一 release 决策者；
-3. eHSM 是否只作为安全服务面；
-4. rollback/version/revoke 检查是否完整；
-5. measurement_table 是否覆盖 hash、version、verify_result、error_code。
+1. proposal 是否说清楚为什么要新增 SEC2/eHSM 固件验证能力；
+2. design 是否准确记录了“Host 只能投递、SEC2 决策 release、eHSM 只提供安全服务”的边界；
+3. spec delta 是否写成系统行为要求和验收场景，而不是普通实现描述；
+4. tasks.md 是否覆盖文档、代码、测试、traceability 和验证项；
+5. rollback/version/revoke 检查是否完整；
+6. measurement_table 是否覆盖 hash、version、verify_result、error_code；
+7. 是否遗漏失败路径、timeout、非法 Host release 尝试等负向场景。
 ```
 
-#### 第四步：用 Superpowers 执行 OpenSpec tasks
+可以把这一步理解成：
+
+```text
+用 Superpowers 的 review 能力，审 OpenSpec 写得对不对、全不全、是否符合我们刚才达成的方案共识。
+```
+
+#### 第四步：先判断 OpenSpec tasks 是否需要细化，再执行
+
+这里不要机械地“直接执行 OpenSpec tasks”。要先看 `tasks.md` 的粒度。
+
+如果 OpenSpec `tasks.md` 已经非常细，例如已经写清楚：
+
+```text
+改哪个文件、改什么字段、怎么验证、每步完成后如何更新 checkbox
+```
+
+那可以直接执行：
 
 ```text
 use using-git-worktrees.
 请基于 main 为 add-sec2-ehsm-firmware-verification 创建独立 worktree。
 ```
 
-然后：
-
 ```text
 use executing-plans.
 请按照 openspec/changes/add-sec2-ehsm-firmware-verification/tasks.md 执行。
-每次只执行一个 checkpoint，完成后总结 diff 和验证结果，等待我确认。
+每次只执行一个 checkbox，完成后更新 tasks.md、总结 diff 和验证结果，等待我确认。
+```
+
+如果 OpenSpec `tasks.md` 只是变更级 checklist，例如只写了“更新 measurement_table”“补充验证失败路径”“更新 traceability”，那就应该先让 Superpowers 细化：
+
+```text
+use writing-plans.
+请基于 openspec/changes/add-sec2-ehsm-firmware-verification/tasks.md 生成 Codex 可执行计划。
+要求：
+1. 不改变 OpenSpec 的任务目标；
+2. 把每个 OpenSpec task 拆成 checkpoint；
+3. 每个 checkpoint 写清要读哪些文件、改哪些文件、不改哪些文件；
+4. 每个 checkpoint 给出验证方法；
+5. 标明是否需要 eHSM mock；
+6. 先不要修改文件。
+```
+
+然后再执行：
+
+```text
+use executing-plans.
+请按刚才生成的 checkpoint 计划执行第 1 步。
+每次只执行一个 checkpoint，完成后总结 diff 和验证结果，并等待我确认。
+```
+
+这一节的核心结论是：
+
+```text
+OpenSpec tasks.md 是正式任务清单；
+Superpowers writing-plans 是把任务清单翻译成 Codex 可执行步骤；
+Superpowers executing-plans 才是真正动手执行。
 ```
 
 #### 第五步：验证并归档
@@ -1679,29 +1745,40 @@ use verification-before-completion.
 /opsx:archive add-sec2-ehsm-firmware-verification
 ```
 
-### 22.6 组合使用时的注意事项
+归档的意义是：把本次 change 中的 spec delta 合并回主规格，让这次能力真正进入长期设计基线。
 
-1. **不要让 Superpowers 和 OpenSpec 各写一套互相独立的计划。**  
-   如果已经有 OpenSpec `tasks.md`，Superpowers 的 `writing-plans` 应该用于 review / refine 这份 tasks，而不是再生成一份平行计划。
+### 21.6 组合使用时的注意事项
 
-2. **OpenSpec 适合进入仓库，Superpowers skills 适合约束行为。**  
+0. **不要把 OpenSpec 简化成普通会议纪要。**  
+   它记录的是经过确认的系统行为承诺，例如 requirement、scenario、验收标准和归档历史；这些内容会反过来约束后续设计、代码和测试。
+
+1. **不要让 Superpowers 和 OpenSpec 各写一套互相独立的方案和计划。**  
+   Superpowers 的 brainstorming 结果应该成为 OpenSpec change 的输入；OpenSpec 的 `tasks.md` 应该成为 Superpowers 执行计划的输入。
+
+2. **OpenSpec `tasks.md` 不等于一定可直接执行。**  
+   如果它只是变更级 checklist，仍然需要 `writing-plans` 细化；如果它已经是 checkpoint 级任务，则可以直接 `executing-plans`。
+
+3. **第三步 review 的重点是审 OpenSpec 产物，而不是审代码。**  
+   要检查 proposal/design/spec delta/tasks 是否准确记录了前面达成的设计共识，是否符合我们的安全预期，是否遗漏负向场景和验收标准。
+
+4. **OpenSpec 适合进入仓库，Superpowers 适合约束行为。**  
    OpenSpec 的产物应该随仓库一起 review、提交和归档；Superpowers 是 Codex 的工作方式，不一定要把第三方 Superpowers 全量放进业务仓库。
 
-3. **安全约束应该进入 OpenSpec 或项目级 skill。**  
+5. **安全约束应该进入 OpenSpec 或项目级 skill。**  
    比如“Host 只能投递，不能 release”“SEC2 是控制面，eHSM 是服务面”这种长期规则，最好同时体现在 OpenSpec spec 中，并沉淀到我们自己的项目级 skill。
 
-4. **调试类问题不必强行走 OpenSpec。**  
+6. **调试类问题不必强行走 OpenSpec。**  
    临时 debug、bring-up 问题，直接用 `systematic-debugging` 更轻量。
 
-5. **正式能力变更建议走 OpenSpec。**  
+7. **正式能力变更建议走 OpenSpec。**  
    比如新增认证能力、改变启动链、改变生命周期状态机、改变固件格式，这些应走 OpenSpec 的 proposal / design / tasks / archive 流程。
 
-### 22.7 推荐给我们的落地策略
+### 21.7 推荐给我们的落地策略
 
 短期：
 
 ```text
-只用 Superpowers 先规范 Codex 的执行流程。
+先用 Superpowers 规范 Codex 的执行流程，让 Codex 少跑偏、少漏步骤。
 ```
 
 中期：
@@ -1713,28 +1790,26 @@ use verification-before-completion.
 长期：
 
 ```text
-OpenSpec 管需求和规格基线；
-Superpowers 管 Codex 执行纪律；
+OpenSpec 管需求、规格基线和变更归档；
+Superpowers 管 Codex 执行纪律、计划细化、review 和验证；
 我们自己的项目级 skills 管 NGU800 专属规则。
 ```
 
 最终理想形态是：
 
 ```text
-OpenSpec：记录“我们为什么要改、要改成什么”
-Superpowers：约束“Codex 应该怎么推进这次改动”
-项目级 skills：固化“NGU800 安全方案的专属规则”
+Superpowers：先把问题想清楚，并约束 Codex 怎么推进。
+OpenSpec：把最终共识变成正式变更记录和长期规格。
+项目级 skills：把 NGU800 的专属工程规则固化下来。
 ```
 
-## 23. 给项目组的推荐结论
+项目组汇报时可以用这句话总结：
 
-可以这样汇报：
+```text
+Superpowers 解决“这次怎么做稳”；OpenSpec 解决“做完怎么留下来、怎么约束以后”。
+```
 
-> Superpowers 是一组面向 coding agent 的开发流程 skills。对 Codex 来说，它主要通过 native skill discovery 接入，不需要优先当成 MCP server 使用。它适合我们这类复杂嵌入式/SoC 安全功能开发，尤其适合需求澄清、方案设计、计划拆解、系统化 debug、代码 review 和后续多任务并行开发。短期建议在现有 VS Code Remote SSH + Codex IDE 插件环境中试点，安装在远端 Ubuntu 的 `~/.agents/skills/superpowers`，先使用 `brainstorming`、`writing-plans`、`executing-plans`、`systematic-debugging`、`requesting-code-review` 五类能力；等流程成熟后，再引入 worktree、多 agent 和 Codex CLI。
-
----
-
-## 24. 附录：快速命令
+## 22. 附录：快速命令
 
 ### 安装
 
@@ -1769,7 +1844,7 @@ rm -rf ~/.codex/superpowers
 
 ---
 
-## 25. 附录：安全功能常用关键词速查
+## 23. 附录：安全功能常用关键词速查
 
 | 目标 | 推荐关键词 |
 |---|---|

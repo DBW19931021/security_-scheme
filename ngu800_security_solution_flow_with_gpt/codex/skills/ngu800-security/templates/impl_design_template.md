@@ -1,5 +1,9 @@
 # Implementation Design Template
 
+> CR-0005 rule:
+> Implementation design files under `security_workflow/04_impl_design/` are editing shards only.
+> Their complete field / structure / state-machine / command / error / manufacturing / report content must be synchronized into `security_workflow/03_detailed_design/10_full_design.md`.
+
 ## 1. Purpose
 ## 2. Applicable Constraints
 ## 3. Applicable Baseline Decisions

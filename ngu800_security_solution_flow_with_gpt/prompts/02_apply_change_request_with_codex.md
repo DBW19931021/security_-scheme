@@ -15,6 +15,7 @@
 - `05_traceability/design_impact_matrix.md`
 - `security_inputs/inputs_manifest.md`
 - 受影响的 constraints / baseline / 详设 / 实现级文档
+- `security_workflow/03_detailed_design/10_full_design.md`，作为 CR-0005 后的完整详设与代码落地主入口
 
 执行规则：
 
@@ -26,7 +27,8 @@
 6. 如发现 CR 漏列影响文件，先说明原因，再补充到影响矩阵或执行总结中。
 7. 如涉及 SEC1 加密、Root of Trust、Host 不可信、USER debug 默认关闭等硬裁决，不得产生冲突口径。
 8. 如涉及 master/full design，必须达到实现级密度，不得只做摘要。
-9. 更新完成后，必须同步：
+9. CR-0005 后，`04_impl_design` 只是编辑分片；如果修改实现级字段、结构体、命令、错误码、状态机、source-conformance matrix 或 manufacturing/SPDM 细节，必须同步进 `10_full_design.md`。
+10. 更新完成后，必须同步：
    - `00_project/decision_log.md`（如有新裁决）
    - `00_project/changelog.md`
    - `security_workflow/04_change_impact.md`（如影响 workflow）
@@ -45,4 +47,3 @@
 ## E. 剩余 `[TBD] / [PROPOSED]`
 
 ## F. 建议交给 GPT/人工 Review 的重点
-

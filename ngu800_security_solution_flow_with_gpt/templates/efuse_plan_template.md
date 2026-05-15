@@ -3,6 +3,11 @@
 ## Purpose
 Use this template to output NGU800 eFuse / OTP planning suggestions at bit / field level.
 
+CR-0004 / CR-0005 rule:
+- Prefer eHSM TRM OTP/control/key/counter layout when defined.
+- NGU `OTP-0..OTP-7` style names may only be logical aliases unless accepted CR / official TRM freezes physical offsets.
+- Any generated implementation detail must be synchronized into `security_workflow/03_detailed_design/10_full_design.md`; `04_impl_design` files are editing shards only.
+
 ## Required Sections
 
 ### 1. Planning principles

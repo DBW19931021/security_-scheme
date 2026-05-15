@@ -1,8 +1,8 @@
 # 12. 制造、灌装、部署与 RMA
 
-> 文档定位：NGU800 / NGU800P 章节级正式详设  
-> 章节文件：`security_workflow/03_detailed_design/07_manufacturing_rma.md`  
-> 当前状态：V1.0（基于当前约束、baseline 与实现级制造设计收敛）  
+> 文档定位：NGU800 / NGU800P 章节级正式详设
+> 章节文件：`security_workflow/03_detailed_design/07_manufacturing_rma.md`
+> 当前状态：V1.0（基于当前约束、baseline 与实现级制造设计收敛）
 > 设计标记口径：`[CONFIRMED] / [ASSUMED] / [TBD]`
 
 ---
@@ -13,8 +13,8 @@
 
 1. 制造阶段与生命周期状态的映射关系
 2. Root / UDS / signer anchor / debug anchor / attestation anchor / counter 的灌装对象与顺序
-3. SEC1 强制加密所需 FW_KEK / image protect key 的灌装、锁定和 USER 前冻结要求
-4. OTP / eFuse 写入、校验、锁定、审计的控制要求
+3. SEC1 / SEC2 强制加密所需 eHSM FW decrypt key policy / image protect key 的灌装、锁定和 USER 前冻结要求
+4. eHSM OTP / control field / Version Counter 写入、校验、锁定、审计的控制要求；NGU `OTP-0..OTP-7` 仅作为 logical view
 5. MANU → USER 的冻结动作集合
 6. 量产部署后的状态约束
 7. RMA / DEBUG 场景下的授权、调试、恢复与重新冻结规则
@@ -37,7 +37,10 @@
 - `C-ATT-01`
 - `C-UPDATE-01`
 - `C-BOOT-04`
+- `C-BOOT-06`
+- `C-BOOT-07`
 - `C-MFG-01`
+- `C-EHSM-01`
 - `C-ACCESS-01`
 
 ---
@@ -52,7 +55,8 @@
 ### 12.3.2 量产冻结
 - `[CONFIRMED]` 进入 USER 前必须完成 secure boot、anti-rollback、debug 关闭、测试 trust 清理
 - `[CONFIRMED]` Root / signer / debug / attestation 相关敏感对象必须完成锁定
-- `[CONFIRMED]` SEC1 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter 必须在 USER 前锁定
+- `[CONFIRMED]` SEC1 / SEC2 解密相关 eHSM key policy / FW_KEK 策略 / signer anchor / eHSM Version Counter 或 owner-confirmed rollback policy 必须在 USER 前锁定
+- `[TBD]` exact eHSM key ID、control bit、Version Counter 到 NGU logical rollback domain 的映射必须由 source-conformance matrix 跟踪，不得在制造章节自行冻结
 - `[CONFIRMED]` USER 生命周期不得默认开放未经授权的调试路径
 
 ### 12.3.3 RMA / DEBUG
@@ -68,7 +72,7 @@
 
 1. 制造阶段到底写哪些对象、按什么顺序写？
 2. Root / UDS / signer / debug / attestation / counter 之间的先后关系是什么？
-3. FW_KEK / image protect key 与 SEC1 signer anchor / rollback counter 如何在 USER 前锁定？
+3. eHSM FW decrypt key policy / image protect key 与 SEC1 signer anchor / eHSM Version Counter 如何在 USER 前锁定？
 4. MANU 验证启动要检查哪些项目？
 5. USER 冻结时必须关闭或清理哪些对象？
 6. 量产出厂后哪些状态必须可被证明？
@@ -81,7 +85,7 @@
 - 不得允许工站或 Host 直接操作 eHSM 私有执行面
 - 不得允许 Root / UDS / 私钥明文以普通软件资产形式长期存在
 - 不得在 USER 生命周期保留测试 signer / 测试 cert / 测试 debug 白名单
-- 不得在 USER 生命周期保留 SEC1 解密绕过策略或可被普通软件关闭的 SEC1 decrypt_required
+- 不得在 USER 生命周期保留 SEC1/SEC2 解密绕过策略或可被普通软件关闭的 SEC1/SEC2 decrypt_required
 - 不得在失败时报告“USER 冻结完成”
 - 不得把 RMA/DEBUG 当成长期常开模式
 
@@ -108,10 +112,10 @@ graph TD
 
 ### 图下说明
 
-1. 工厂 HSM/KMS 是制造密钥材料的上游管理端，但不直接替代设备内部 Root of Trust。  
-2. SEC/C908 是制造流程的控制面，eHSM 是真正执行 Root / OTP / lifecycle / lock 操作的安全执行面。  
-3. USER 冻结不是单条命令，而是一组必须全部成功的冻结动作集合。  
-4. RMA 路径是受控旁路，只能临时开放，并且必须回收。  
+1. 工厂 HSM/KMS 是制造密钥材料的上游管理端，但不直接替代设备内部 Root of Trust。
+2. SEC/C908 是制造流程的控制面，eHSM 是真正执行 Root / OTP / lifecycle / lock 操作的安全执行面。
+3. USER 冻结不是单条命令，而是一组必须全部成功的冻结动作集合。
+4. RMA 路径是受控旁路，只能临时开放，并且必须回收。
 
 ---
 
@@ -143,9 +147,9 @@ sequenceDiagram
 
 ### 图下说明
 
-1. Provisioning Tool 不直接向 eHSM 发命令，而是通过 Host/BMC 链路与 SEC/C908 协作。  
-2. 生命周期推进前，必须先完成写入校验和锁定。  
-3. USER 冻结前必须先做 MANU 验证启动，确保量产条件已满足。  
+1. Provisioning Tool 不直接向 eHSM 发命令，而是通过 Host/BMC 链路与 SEC/C908 协作。
+2. 生命周期推进前，必须先完成写入校验和锁定。
+3. USER 冻结前必须先做 MANU 验证启动，确保量产条件已满足。
 
 ---
 
@@ -187,11 +191,11 @@ sequenceDiagram
 | UDS / Root Secret | 是 | 根种子 / Root 材料上游 |
 | Root Key / Root KEK 材料 | 视模式 | 可直接写入，或由 UDS 内部派生 |
 | FW Signer Hash / Trust Anchor | 是 | 支撑 SEC1 / SEC2 / 运行期 FW 验签 |
-| FW_KEK / Image Protect Key | 是 | 支撑 SEC1 强制加密镜像的 CEK unwrap / 解密策略 |
+| FW_KEK / Image Protect Key | 是 | 支撑 SEC1 / SEC2 强制加密镜像的 verify+decrypt output path；exact eHSM key ID / purpose `[TBD]` |
 | Debug Auth Anchor | 是 | 支撑 DEBUG/RMA 调试鉴权 |
 | Attestation Seed / Anchor | 是 | 支撑设备证明 |
-| Rollback Counter 初值 / 版本地板 | 是 | 支撑 anti-rollback |
-| Secure Boot / Debug / Attestation / Rollback 控制位 | 是 | 建立量产策略 |
+| eHSM Version Counter 初值 / owner-confirmed rollback policy | 是 | 支撑 anti-rollback；NGU `*_MIN_VER` 仅为 logical rollback domain |
+| Secure Boot / FW Encrypt / Debug / Attestation / Rollback / Algorithm 控制位 | 是 | 建立量产策略；physical control field follow eHSM TRM |
 | Board Binding 信息 | 可选 | 视产品线策略启用 |
 | Die Binding 信息 | 双Die 推荐 | 主从Die 一致性约束 |
 
@@ -225,13 +229,13 @@ sequenceDiagram
     ↓
 (7) 写入 Attestation seed / anchor
     ↓
-(8) 写入 counter 初值 / rollback floor
+(8) 写入 eHSM Version Counter 初始状态 / owner-confirmed rollback policy
     ↓
-(9) 写入 secure boot / FW encrypt / debug / attestation / rollback 控制位
+(9) 写入 secure boot / FW encrypt / debug / attestation / rollback / algorithm control field
     ↓
 (10) 校验写入结果
     ↓
-(11) 锁定 key / FW_KEK 策略 / anchor / control bits
+(11) 锁定 key policy / FW_KEK 策略 / anchor / control field
     ↓
 (12) 执行 MANU 验证启动
     ↓
@@ -240,10 +244,10 @@ sequenceDiagram
 
 ### 12.9.2 顺序理由
 
-- Root 材料必须先于 signer / attest / debug anchor 生效，否则没有可信根。  
-- counter 初值必须在正式量产前建立，否则 anti-rollback 没有基线。  
-- control bits 必须在信任锚完成注入后再打开，避免出现“策略已要求 secure boot，但锚尚未就绪”的中间态。  
-- 锁定位只能在校验通过后执行，否则可能把错误数据永久锁死。  
+- Root 材料必须先于 signer / attest / debug anchor 生效，否则没有可信根。
+- eHSM Version Counter / rollback policy 必须在正式量产前建立，否则 anti-rollback 没有基线。
+- control field 必须在信任锚完成注入后再打开，避免出现“策略已要求 secure boot，但锚尚未就绪”的中间态。
+- 锁定位只能在校验通过后执行，否则可能把错误数据永久锁死。
 
 ---
 
@@ -268,10 +272,10 @@ sequenceDiagram
 
 ### 12.10.3 章节级规则
 
-1. `PROVISION_ROOT_MATERIAL` 只能在 MANU 或受控 provisioning 状态可用  
-2. `CHANGE_LIFECYCLE(USER)` 必须晚于写入校验和锁定  
-3. `DEBUG_AUTH` 在制造态仅用于必要的 bring-up / RMA，不得作为长期打开调试的替代  
-4. 所有 provisioning blob 的地址和长度必须受 SEC 白名单和 eHSM 范围检查双重保护  
+1. `PROVISION_ROOT_MATERIAL` 只能在 MANU 或受控 provisioning 状态可用
+2. `CHANGE_LIFECYCLE(USER)` 必须晚于写入校验和锁定
+3. `DEBUG_AUTH` 在制造态仅用于必要的 bring-up / RMA，不得作为长期打开调试的替代
+4. 所有 provisioning blob 的地址和长度必须受 SEC 白名单和 eHSM 范围检查双重保护
 
 ---
 
@@ -281,30 +285,30 @@ sequenceDiagram
 
 每类 provisioning 写入后，至少需要以下检查：
 
-1. 命令返回状态成功  
-2. 若目标区允许读回，则做读回一致性校验  
+1. 命令返回状态成功
+2. 若目标区允许读回，则做读回一致性校验
 3. 若目标区不允许直接读回，则通过：
    - eHSM 内部状态确认
    - 试运行校验
    - challenge / verify / report 侧间接确认
-4. 状态必须进入工站审计记录  
+4. 状态必须进入工站审计记录
 
 ### 12.11.2 MANU 验证启动最小检查项
 
 | 检查项 | 说明 |
 |---|---|
-| SEC1 / SEC2 验签 | 核心启动链验证 |
-| SEC1 解密 / unwrap | 验证 SEC1 签名 + 加密策略、FW_KEK / wrapped CEK 和输出 buffer 约束 |
-| rollback counter 读取 | 反回滚路径验证 |
-| lifecycle / control bits 读取 | 状态验证 |
+| SEC1 / SEC2 eHSM native verify/decrypt | 核心启动链验证；物理镜像头 follow eHSM native header |
+| SEC1 / SEC2 解密输出路径 | 验证 mandatory decrypt、FW decrypt key policy 和输出 buffer 约束；per-image wrapped CEK 若未获 eHSM owner 确认则不得作为验收项 |
+| eHSM Version Counter / rollback policy 读取 | 反回滚路径验证；NGU logical rollback domain 只做映射检查 |
+| lifecycle / control field 读取 | 状态验证；算法 authority 以 eHSM control field 为准 |
 | challenge / report 最小链路 | 证明能力基础验证 |
 | debug 默认状态检查 | 验证未授权 debug 未默认放开 |
 
 ### 12.11.3 错误处理原则
 
-- `[CONFIRMED]` 任一关键对象写入失败，不得继续推进 USER 冻结  
-- `[CONFIRMED]` 锁定失败必须视为 provisioning 失败  
-- `[ASSUMED]` 校验失败后设备可停留在 MANU / 故障态，而不是进入“半冻结 USER”状态  
+- `[CONFIRMED]` 任一关键对象写入失败，不得继续推进 USER 冻结
+- `[CONFIRMED]` 锁定失败必须视为 provisioning 失败
+- `[ASSUMED]` 校验失败后设备可停留在 MANU / 故障态，而不是进入“半冻结 USER”状态
 
 ---
 
@@ -324,10 +328,10 @@ sequenceDiagram
 
 ### 12.12.2 锁定原则
 
-- `[CONFIRMED]` 锁定动作必须显式执行，不得假设“默认已锁”  
-- `[CONFIRMED]` 锁定结果必须可审计  
-- `[CONFIRMED]` 锁定失败不得推进生命周期  
-- `[ASSUMED]` 若部分区支持一次性写入后天然只读，仍需在工程文档中显式标记为“已锁语义”  
+- `[CONFIRMED]` 锁定动作必须显式执行，不得假设“默认已锁”
+- `[CONFIRMED]` 锁定结果必须可审计
+- `[CONFIRMED]` 锁定失败不得推进生命周期
+- `[ASSUMED]` 若部分区支持一次性写入后天然只读，仍需在工程文档中显式标记为“已锁语义”
 
 ---
 
@@ -341,8 +345,8 @@ sequenceDiagram
 2. `DEBUG_AUTH_EN = 1`
 3. `JTAG_FORCE_DISABLE = 1`
 4. `ANTI_ROLLBACK_EN = 1`
-5. `FW_ENCRYPT_EN = 1`，且至少覆盖 SEC1
-6. Root / signer / debug / attestation / SEC1 解密相关 key slot / FW_KEK 策略完成锁定
+5. `FW_ENCRYPT_EN = 1`，且至少覆盖 SEC1 + SEC2
+6. Root / signer / debug / attestation / SEC1/SEC2 解密相关 eHSM key policy / FW_KEK 策略完成锁定
 7. 测试 signer / 测试 cert / 测试 debug 白名单全部清理
 8. 如启用 attestation，则 `ATTEST_EN = 1`
 9. 推进 lifecycle 到 USER
@@ -369,6 +373,8 @@ sequenceDiagram
 |---|---|
 | Secure Boot | 开启 |
 | SEC1 Image Protection | 签名 + 加密强制开启 |
+| SEC2 Image Protection | 签名 + 加密强制开启 |
+| PM/RAS/Codec Image Protection | USER/PROD 默认签名 + 加密；signature-only 仅允许产品白名单 |
 | Anti-Rollback | 开启 |
 | 未授权 Debug | 关闭 |
 | 测试 Signer / Trust | 已清除 |
@@ -403,10 +409,10 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 必须满足：
 
-1. 先鉴权，后开放  
-2. 权限受 scope 和时间窗口约束  
-3. 维修后必须恢复量产安全状态  
-4. 全程可审计  
+1. 先鉴权，后开放
+2. 权限受 scope 和时间窗口约束
+3. 维修后必须恢复量产安全状态
+4. 全程可审计
 
 ### 12.15.2 推荐流程
 
@@ -432,11 +438,11 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 ### 12.15.3 RMA 约束
 
-- `[CONFIRMED]` 不得因为进入 RMA 就长期常开 debug  
-- `[CONFIRMED]` 不得跳过 challenge / auth 直接开调试口  
-- `[CONFIRMED]` 返修完成后不得带着测试 trust 或开放调试出厂  
-- `[CONFIRMED]` RMA 不得长期开放 SEC1 解密绕过路径；rescue / recovery 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy  
-- `[ASSUMED]` RMA 完成后，建议重新生成与当前状态一致的最小 report / status 记录，用于归档  
+- `[CONFIRMED]` 不得因为进入 RMA 就长期常开 debug
+- `[CONFIRMED]` 不得跳过 challenge / auth 直接开调试口
+- `[CONFIRMED]` 返修完成后不得带着测试 trust 或开放调试出厂
+- `[CONFIRMED]` RMA 不得长期开放 SEC1/SEC2 解密绕过路径；rescue / recovery 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy
+- `[ASSUMED]` RMA 完成后，建议重新生成与当前状态一致的最小 report / status 记录，用于归档
 
 ---
 
@@ -460,14 +466,14 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 ### 12.16.2 审计要求
 
-- `[CONFIRMED]` 审计日志不得记录明文私钥或 Root 材料  
+- `[CONFIRMED]` 审计日志不得记录明文私钥或 Root 材料
 - `[CONFIRMED]` 审计日志必须至少可关联：
   - 设备
   - 工站
   - 时间
   - 操作员 / 工单
   - 结果
-- `[ASSUMED]` 审计日志应支持导出到制造后台系统或至少可离线归档  
+- `[ASSUMED]` 审计日志应支持导出到制造后台系统或至少可离线归档
 
 ---
 
@@ -488,7 +494,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 | Item | Why Sensitive | Current Status | Needed Before Freeze |
 |---|---|---|---|
 | Root 注入模式（直接 Root vs Seed/UDS） | 影响制造链安全暴露面 | 部分收敛 | 冻结首版模式 |
-| SEC2/后续运行期镜像是否全部强制加密 | 影响 FW_KEK 规划和量产镜像封装 | 未完全冻结 | 冻结除 SEC1 外的加密分级策略 |
+| runtime signature-only 白名单 | 影响 FW_KEK 规划和量产镜像封装 | 未完全冻结 | SEC2 已强制加密；冻结除 SEC1/SEC2 外的 signature-only 白名单 |
 | OTP 是否支持读回校验 | 影响校验策略 | 未完全冻结 | 冻结可读回区和不可读回区策略 |
 | Provisioning 链路承载方式 | 影响工站 / Host / BMC 选型 | 未完全冻结 | 冻结首版工装路径 |
 | 双Die 灌装是否联动事务 | 影响 OAM / 双Die 产品制造 | 未完全冻结 | 冻结联动策略 |
@@ -498,12 +504,12 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 ## 12.19 开放问题
 
-1. 首版是否完全采用“Seed/UDS 注入 + eHSM 内部派生”，还是保留直接 Root 材料写入模式？  
-2. 不可读 OTP 区域的校验策略最终采用“状态确认”还是“试运行校验”？  
-3. BMC / OOB-MCU 在某些产品形态下是否允许承担 provisioning 桥接角色？  
-4. 双Die 产品是按单设备事务灌装，还是主/从 Die 分步灌装？  
-5. RMA 结束后，是否要求强制重新生成 attestation / 状态摘要并归档？  
-6. SEC2 / PM / RAS / Codec 是否首版全部强制加密，还是允许部分非敏感镜像签名 only？  
+1. 首版是否完全采用“Seed/UDS 注入 + eHSM 内部派生”，还是保留直接 Root 材料写入模式？
+2. 不可读 OTP 区域的校验策略最终采用“状态确认”还是“试运行校验”？
+3. BMC / OOB-MCU 在某些产品形态下是否允许承担 provisioning 桥接角色？
+4. 双Die 产品是按单设备事务灌装，还是主/从 Die 分步灌装？
+5. RMA 结束后，是否要求强制重新生成 attestation / 状态摘要并归档？
+6. PM / RAS / Codec 或其他 runtime image 中哪些非敏感镜像允许进入 signature-only 白名单？
 
 ---
 
@@ -511,11 +517,11 @@ RMA / DEBUG 不是普通用户态能力，而是：
 
 本章已将 NGU800 的制造、灌装、部署与 RMA 路径收敛到当前可评审的正式口径：
 
-- 制造必须通过 SEC/C908 控制面与 eHSM 安全执行面完成  
-- UDS / Root / signer / debug / attestation / counter / control bits 的灌装顺序必须固定  
-- SEC1 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter 必须在 USER 前锁定  
-- 锁定、校验和 USER 冻结必须显式化、事务化、可审计  
-- 量产部署后必须保持 secure boot、anti-rollback、未授权 debug 关闭和测试 trust 清理  
-- RMA 是受授权、可恢复、可审计的旁路，不得成为常开调试模式  
+- 制造必须通过 SEC/C908 控制面与 eHSM 安全执行面完成
+- UDS / Root / signer / debug / attestation / eHSM Version Counter / control field 的灌装顺序必须固定
+- SEC1 / SEC2 解密相关 eHSM key policy / FW_KEK 策略 / signer anchor / rollback policy 必须在 USER 前锁定
+- 锁定、校验和 USER 冻结必须显式化、事务化、可审计
+- 量产部署后必须保持 secure boot、anti-rollback、未授权 debug 关闭和测试 trust 清理
+- RMA 是受授权、可恢复、可审计的旁路，不得成为常开调试模式
 
 后续若 `manufacturing_provisioning.md`、`mailbox_if.md`、`efuse_key_fw_header_design.md` 或生命周期策略冻结字段变化，本章必须同步更新。

@@ -187,6 +187,7 @@ sequenceDiagram
 
 - `[CONFIRMED]` USER 生命周期强制安全启动，默认关闭未授权 debug
 - `[CONFIRMED]` USER/PROD 下 SEC1 必须保持签名 + 加密，SEC1 解密由 eHSM / 安全子系统受控密码服务完成
+- `[CONFIRMED]` USER/PROD 下 SEC2 必须保持签名 + 加密，SEC2 decrypt failure 必须阻断安全控制面启动
 - `[CONFIRMED]` MANU 生命周期必须允许 provisioning 和冒烟验证
 - `[CONFIRMED]` RMA 只允许受控 rescue / 维修升级
 - `[ASSUMED]` DEV/TEST 阶段允许更宽松的 boot/debug 策略，但不能与量产态混淆
@@ -213,7 +214,7 @@ sequenceDiagram
 - `[CONFIRMED]` eHSM 支持 SoC debug authorization，并带大位图控制能力
 - `[ASSUMED]` NGU800 应按子系统定义 debug bit 域
 - `[TBD]` 最终 bit-level 映射（例如 129bit 端口位图）需在实现阶段冻结
-- `[TBD]` `SRC-005` 中涉及的 JTAG 目标（CPU、GPU、DRAM、Flash、安全子系统、板级 MCU、边界扫描）需映射到 SoC debug scope 或板级二级 scope
+- `[TBD]` `SRC-005 管理子系统方案` 中涉及的 JTAG 目标（CPU、GPU、DRAM、Flash、安全子系统、板级 MCU、边界扫描）需映射到 SoC debug scope 或板级二级 scope
 
 ### 9.9.3 当前建议
 
@@ -235,12 +236,13 @@ typedef struct {
 
 ### 9.9.4 板级 JTAG 调试补充规则
 
-基于 `SRC-005` 管理子系统方案，JTAG 具备接入 GPU JTAGBUS、寄存器空间、DRAM、Flash、安全子系统、CPU 调试单元和板级 MCU 的能力。该能力在生命周期与调试模型中按最高风险调试入口处理：
+基于 `SRC-005 管理子系统方案`，JTAG 具备接入 GPU JTAGBUS、寄存器空间、DRAM、Flash、安全子系统、CPU 调试单元和板级 MCU 的能力。该能力在生命周期与调试模型中按最高风险调试入口处理：
 
 - `[CONFIRMED]` USER/PROD 生命周期下，JTAG / CPLD / MUX 默认关闭。
 - `[CONFIRMED]` JTAG 打开必须复用 debug auth 路径，不允许由 BMC/OOB/板级 MCU 直接打开。
 - `[CONFIRMED]` 授权必须包含 target scope、访问类型、时间窗口和自动关闭策略。
 - `[CONFIRMED]` 异常复位、生命周期切换、授权超时或安全错误事件必须关闭 JTAG scope 并清零 MUX 配置。
+- `[ASSUMED]` 板级 MUX 控制权应由 SEC/eHSM 授权信号约束，OOB/BMC 不得单独打开或保持常开。
 - `[ASSUMED]` ATE/SLT/EVB 阶段可使用更宽松 JTAG 策略，但 MANU -> USER 前必须锁定或清理测试路径。
 
 ---
@@ -353,6 +355,7 @@ ANY -> DECOMMISSIONED (irreversible)
 - `[CONFIRMED]` lifecycle 必须控制 secure / non-secure boot 的可用性
 - `[CONFIRMED]` USER 阶段应强制安全启动
 - `[CONFIRMED]` USER/PROD 阶段 SEC1 必须保持签名 + 加密，SEC1 decrypt required 不得被 caller 或调试状态关闭
+- `[CONFIRMED]` USER/PROD 阶段 SEC2 必须保持签名 + 加密，SEC2 decrypt required 不得被 caller 或调试状态关闭
 - `[ASSUMED]` TEST/DEV 阶段可允许非安全启动，用于 bring-up 和开发
 - `[CONFIRMED]` RMA 仅允许受控 signed rescue boot，不得恢复成普通开放调试启动
 
@@ -372,7 +375,8 @@ report 中至少必须反映：
 - `lifecycle_state`
 - `debug_state`
 - `secure_boot_state`
-- `image_confidentiality_policy`（至少表达 SEC1 强制签名 + 加密策略）
+- `image_confidentiality_policy` / `image_protection_policy`（至少表达 SEC1/SEC2 强制签名 + 加密策略）
+- `decrypt_applied` / image_type policy（若采用对应 report 编码）
 - `anti_rollback_state`
 
 ### 9.15.2 当前裁决
@@ -395,7 +399,7 @@ report 中至少必须反映：
 ### 9.16.2 RMA
 - `[CONFIRMED]` RMA 是受权返修路径，不是常驻状态
 - `[CONFIRMED]` 返修调试必须 challenge-response 后有限开放
-- `[CONFIRMED]` RMA / DEBUG 不得绕过 SEC1 加密策略；rescue image 必须使用专用 signer / recovery trust，并由 eHSM / 安全子系统受控验证与解密或按 recovery policy 处理
+- `[CONFIRMED]` RMA / DEBUG 不得绕过 SEC1/SEC2 加密策略；rescue image 必须使用专用 signer / recovery trust，并由 eHSM / 安全子系统受控验证与解密或按 recovery policy 处理
 - `[ASSUMED]` RMA 结束后应恢复量产安全状态，并重新形成报告/审计记录
 
 ---
@@ -420,7 +424,7 @@ report 中至少必须反映：
 | 生命周期统一编码 | 影响 OTP / report / command 接口 | 部分收敛 | 冻结最终编码表 |
 | DEBUG 与 RMA 是否独立编码 | 影响命令 gating 与审计模型 | 未完全冻结 | 冻结状态机 |
 | debug scope bitmap bit-level 定义 | 影响 FW / RTL / verifier / 工具 | 未完全冻结 | 冻结端口位图 |
-| SEC2/后续运行期镜像加密策略 | 影响 USER/PROD 策略和 attestation 可见性 | 未完全冻结 | 冻结除 SEC1 外哪些镜像允许签名 only |
+| runtime signature-only 白名单 | 影响 USER/PROD 策略和 attestation 可见性 | 未完全冻结 | SEC2 已强制加密；仍需冻结 PM/RAS/Codec 等哪些非敏感镜像允许 signature-only |
 | JTAG scope 与 CPLD/MUX 控制权 | 影响板级调试是否能绕过 eHSM 授权 | 未完全冻结 | 冻结 JTAG target scope、MUX 控制寄存器和关闭策略 |
 | USER 下调试授权策略 | 影响量产与售后边界 | 未完全冻结 | 冻结是否允许短时授权 |
 | DEST 阶段允许保留哪些状态查询能力 | 影响退役与审计 | 未完全冻结 | 冻结销毁态策略 |
@@ -433,7 +437,7 @@ report 中至少必须反映：
 2. 首版 USER 态是否允许短时授权 debug，还是完全禁止？  
 3. debug scope bitmap 最终按子系统、功能类还是资源域来编码？  
 4. `RMA -> PROD` 恢复是否必须重新跑一次最小 attestation / smoke validation？  
-5. SEC2 / PM / RAS / Codec 是否首版全部强制加密，还是允许部分非敏感镜像签名 only？  
+5. PM / RAS / Codec 或其他 runtime image 中哪些非敏感镜像允许进入 signature-only 白名单？  
 6. DEST 阶段是否允许只读状态查询用于审计收尾？  
 7. 板级 JTAG MUX / CPLD 的授权控制由 SEC 直接写寄存器，还是由板级 MCU 受控代理执行？  
 

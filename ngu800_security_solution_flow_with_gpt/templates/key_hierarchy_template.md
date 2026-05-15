@@ -3,6 +3,11 @@
 ## Purpose
 Use this template when defining NGU800 key hierarchy / seed derivation / usage separation.
 
+CR-0004 / CR-0005 rule:
+- Prefer eHSM TRM key ID / level / purpose when defined.
+- NGU key names are logical aliases until exact eHSM mapping is owner-confirmed.
+- Any generated implementation detail must be synchronized into `security_workflow/03_detailed_design/10_full_design.md`; `04_impl_design` files are editing shards only.
+
 ## Required Sections
 
 ### 1. Root anchor

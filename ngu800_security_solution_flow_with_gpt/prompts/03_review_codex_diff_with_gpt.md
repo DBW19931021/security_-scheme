@@ -31,8 +31,9 @@ Codex 已经按 CR 修改文件后，用本 prompt 让 GPT 或人工 reviewer �
    - USER 默认关闭未授权 debug
    - security service 必须经 SEC/eHSM 收敛
 8. master/full design 是否达到实现级密度，而不是摘要稿。
-9. 新增实现级建议是否有字段、命令、错误码、状态机、风险冻结项和验证建议支撑。
-10. decision_log、changelog、change_impact 是否需要补充。
+9. CR-0005 后，`10_full_design.md` 是否包含 `04_impl_design` 的完整实现级正文；是否仍存在只在分片可见的字段、命令、错误码、状态机或 source-conformance matrix。
+10. 新增实现级建议是否有字段、命令、错误码、状态机、风险冻结项和验证建议支撑。
+11. decision_log、changelog、change_impact 是否需要补充。
 
 请输出：
 
@@ -56,4 +57,3 @@ Codex 已经按 CR 修改文件后，用本 prompt 让 GPT 或人工 reviewer �
 ## E. 是否允许合入/作为评审稿
 
 给出明确结论和原因。
-

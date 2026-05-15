@@ -2,7 +2,7 @@
 
 > 文档定位：NGU800 / NGU800P 章节级正式详设  
 > 章节文件：`security_workflow/03_detailed_design/05_board_security.md`  
-> 当前状态：V1.0（基于当前约束、baseline 与 `SRC-005` 管理子系统方案增量收敛）  
+> 当前状态：V1.0（基于当前约束、baseline 与 `SRC-005 管理子系统方案` 增量收敛）  
 > 设计标记口径：`[CONFIRMED] / [ASSUMED] / [TBD]`
 
 ---
@@ -44,8 +44,8 @@
 
 ### 10.3.1 管理子系统输入采用策略
 
-- `[CONFIRMED]` `SRC-005` 中的管理子系统总体架构、模块职责、带外管理链路、电源/复位流程、单/双 Die 约束作为系统流程输入采用。
-- `[CONFIRMED]` `SRC-005` 中涉及安全的内容必须经过安全基线二次裁决。
+- `[CONFIRMED]` `SRC-005 管理子系统方案` 中的管理子系统总体架构、模块职责、带外管理链路、电源/复位流程、单/双 Die 约束作为系统流程输入采用。
+- `[CONFIRMED]` `SRC-005 管理子系统方案` 中涉及安全的内容必须经过安全基线二次裁决。
 - `[CONFIRMED]` 若管理子系统流程与 eHSM Root of Trust、SEC 统一控制面、lifecycle gating 或 debug auth 基线冲突，以安全基线为准。
 
 ### 10.3.2 板级信任边界
@@ -88,7 +88,7 @@
 
 ## 10.5 管理子系统输入摘要
 
-`SRC-005` 当前纳入以下系统级输入：
+`SRC-005 管理子系统方案` 当前纳入以下系统级输入：
 
 | 输入主题 | 文档口径 | 安全采用策略 |
 |---|---|---|
@@ -131,7 +131,7 @@ graph TD
 1. BMC/OOB/板级 MCU 可以承载管理流程，但不直接进入 eHSM 或 OTP/eFuse。  
 2. JTAG 的物理接入能力来自板级链路，但授权、scope 和生命周期裁决必须来自 SEC/eHSM。  
 3. 电源、复位、DMA、mailbox 和中断都可能影响安全状态，不能作为纯普通外设看待。  
-4. 管理子系统总体流程遵循 `SRC-005`，安全边界由 `01_constraints.md` 和 `02_baseline.md` 裁决。  
+4. 管理子系统总体流程遵循 `SRC-005 管理子系统方案`，安全边界由 `01_constraints.md` 和 `02_baseline.md` 裁决。  
 
 ---
 
@@ -189,9 +189,9 @@ sequenceDiagram
 
 ## 10.9 JTAG 安全设计
 
-### 10.9.1 `SRC-005` JTAG 能力输入
+### 10.9.1 `SRC-005 管理子系统方案` JTAG 能力输入
 
-`SRC-005` 描述 JTAG 需要支持以下能力：
+`SRC-005 管理子系统方案` 描述 JTAG 需要支持以下能力：
 
 - 可接入 BMC，链路形态为 BMC -> UBB -> OAM -> 板级 MCU/GPU。
 - 可接入 GPU 芯片 JTAGBUS，访问寄存器空间和 DRAM。
@@ -231,7 +231,7 @@ sequenceDiagram
 
 ### 10.10.1 DMA 策略
 
-`SRC-005` 提到 CPU 子系统采用通用 AXI DMA，内部 CPU 分配独立 DMA 通道，低速外设绑定物理 DMA 通道。安全要求如下：
+`SRC-005 管理子系统方案` 提到 CPU 子系统采用通用 AXI DMA，内部 CPU 分配独立 DMA 通道，低速外设绑定物理 DMA 通道。安全要求如下：
 
 - `[CONFIRMED]` DMA 只能访问普通 staging buffer、普通数据 buffer 和经 firewall 显式允许的区域。
 - `[CONFIRMED]` DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区和安全共享缓冲区。
@@ -246,7 +246,7 @@ sequenceDiagram
 
 ### 10.10.3 互斥访问策略
 
-`SRC-005` 中 CPU 子系统互斥访问机制可用于普通共享资源协调，但安全设计要求如下：
+`SRC-005 管理子系统方案` 中 CPU 子系统互斥访问机制可用于普通共享资源协调，但安全设计要求如下：
 
 - `[CONFIRMED]` 互斥寄存器不能替代权限检查。
 - `[CONFIRMED]` 互斥成功不代表具备访问安全资源的权限。
@@ -256,19 +256,20 @@ sequenceDiagram
 
 ## 10.11 电源、上下电和复位安全策略
 
-`SRC-005` 描述板级 MCU 负责 GPU 电源开关、上下电顺序管理、非主电源电流检测、电源初始化配置、电源异常响应和定位。安全设计要求如下：
+`SRC-005 管理子系统方案` 描述板级 MCU 负责 GPU 电源开关、上下电顺序管理、非主电源电流检测、电源初始化配置、电源异常响应和定位。安全设计要求如下：
 
 - `[CONFIRMED]` 影响 GPU 芯片、SEC、eHSM、Flash、DRAM 或安全状态的复位/掉电/PowerBrake 信号必须进入安全状态机。
 - `[CONFIRMED]` USER/PROD 下不得通过板级复位流程绕过 secure boot 或 rollback 检查。
 - `[CONFIRMED]` 异常复位后 debug 默认关闭，JTAG scope 清零。
-- `[CONFIRMED]` 电源异常、PowerBrake、PG/FAULT 事件若影响 attestation 可信状态，必须进入状态记录或报告摘要。
+- `[CONFIRMED]` 电源异常、PowerBrake、PG/FAULT 事件若影响 attestation 可信状态，必须进入状态记录或审计路径。
+- `[TBD]` PowerBrake / PG / FAULT / reset event 是否进入主 attestation report，还是进入扩展 event log。
 - `[ASSUMED]` 板级 MCU 可执行电源策略动作，但高安全影响动作需由 SEC 状态机确认或记录。
 
 ---
 
 ## 10.12 单 Die / 双 Die 与板级绑定
 
-`SRC-005` 描述单 Die / 双 Die 场景下：
+`SRC-005 管理子系统方案` 描述单 Die / 双 Die 场景下：
 
 - 带内管理单/双 Die 封装物理通道都只有一个 PCIe（DIE0 出）。
 - 除 DRAM 地址空间外，两 Die 地址空间需要 BAR 地址分别映射。
@@ -280,9 +281,10 @@ sequenceDiagram
 
 - `[CONFIRMED]` 单 Die / 双 Die 差异不应暴露为安全策略绕过路径。
 - `[CONFIRMED]` 跨 Die 访问必须经过地址映射、权限和 firewall 检查。
-- `[ASSUMED]` board binding / die binding 应进入 attestation measurement 或状态摘要。
+- `[ASSUMED]` board binding / die binding 默认进入 attestation measurement、状态摘要或扩展证明数据。
 - `[TBD]` 双 Die 场景是否需要主/从 Die 分别出具证明，或由主 Die 汇总证明，需与 attestation 方案联动冻结。
-- `[TBD]` board binding 是否首版默认参与 firmware verify decision，需与产品形态和制造流程一起冻结。
+- `[CONFIRMED]` board binding 不默认阻断 SEC1 verify/decrypt/release。
+- `[TBD]` board binding 是否参与 SEC2/runtime image release decision，需与产品形态和制造流程一起冻结。
 
 ---
 
@@ -291,7 +293,7 @@ sequenceDiagram
 | 本章主题 | 对应实现层文件 |
 |---|---|
 | OOB 请求、JTAG 授权代理、状态查询接口 | `04_impl_design/mailbox_if.md` |
-| board/die binding、debug state、电源/复位异常状态进入报告 | `04_impl_design/spdm_report.md` |
+| board/die binding、debug state、电源/复位异常状态进入证明或 event log | `04_impl_design/spdm_report.md` |
 | MANU/ATE/SLT 阶段 JTAG 策略、USER 前测试路径清理 | `04_impl_design/manufacturing_provisioning.md` |
 | lifecycle、debug enable、JTAG disable、control bits | `04_impl_design/efuse_key_fw_header_design.md` |
 | DMA / firewall / UserID / 地址白名单 | `[TBD] firewall_access_rules` |
@@ -304,10 +306,10 @@ sequenceDiagram
 |---|---|---|---|
 | JTAG scope bitmap | 影响 USER 态调试暴露面 | 未冻结 | 冻结 CPU/GPU/DRAM/Flash/安全子系统/板级 MCU scope |
 | JTAG MUX / CPLD 控制权 | 影响是否存在板级直通绕过路径 | 未冻结 | 冻结由 SEC/eHSM 授权结果驱动的控制方式 |
-| BMC / OOB provisioning 代理 | 影响制造链攻击面 | 未冻结 | 冻结是否允许 OOB 承担 provisioning proxy |
-| 管理子系统 DMA 白名单 | 影响安全内存隔离 | 未冻结 | 冻结可访问 buffer、UserID、firewall 策略 |
-| 电源/复位安全状态 | 影响 secure boot 和 attestation 一致性 | 未冻结 | 冻结哪些事件进入安全状态机和报告 |
-| board/die binding | 影响镜像验证、证明和量产兼容性 | 未冻结 | 冻结首版是否启用及字段位置 |
+| BMC / OOB provisioning 代理 | 影响制造链攻击面 | 部分收敛 | `[ASSUMED]` 允许作为 transport proxy；命令格式、认证、审计、失败回滚仍需冻结 |
+| 管理子系统 DMA 白名单 | 影响安全内存隔离 | 部分收敛 | 默认拒绝安全资源；仍需冻结可访问 buffer、UserID、firewall 策略 |
+| 电源/复位安全状态 | 影响 secure boot 和 attestation 一致性 | 未冻结 | 冻结哪些事件进入安全状态机、主 report 或扩展 event log |
+| board/die binding | 影响镜像验证、证明和量产兼容性 | 部分收敛 | 默认进入 attestation；是否参与 SEC2/runtime release decision 后续冻结 |
 
 ---
 
@@ -315,7 +317,7 @@ sequenceDiagram
 
 1. JTAG scope bitmap 最终由 eHSM 原生位图直接承载，还是由 SEC 做 SoC 级二次映射？  
 2. CPLD / JTAG MUX 的控制寄存器由谁写入，是否需要硬件锁定防止板级直通？  
-3. OOB/BMC 是否允许在 MANU 阶段作为 provisioning proxy，如果允许，工站鉴权如何绑定？  
+3. OOB/BMC 作为 provisioning transport proxy 时，命令格式、认证、审计、失败回滚和 rate limit / lockout 如何定义？  
 4. 管理子系统 DMA 的 UserID 和 firewall region 如何划分？  
 5. 电源异常、PowerBrake、PG/FAULT 是否进入 attestation report，还是只进入本地审计？  
 6. 双 Die 场景下，board/die binding 是单 report 汇总还是双 Die 分别证明？  
@@ -325,13 +327,13 @@ sequenceDiagram
 
 ## 10.16 本章结论
 
-本章将 `SRC-005` 管理子系统方案纳入板级安全设计，并形成以下安全裁决：
+本章将 `SRC-005 管理子系统方案` 纳入板级安全设计，并形成以下安全裁决：
 
 - 管理子系统总体架构和系统流程原则上遵循。
 - BMC / OOB / 板级 MCU / 管理子系统不进入 Root of Trust。
 - SMBus/I2C、I3C、PCIe VDM、SPI、UART、JTAG 等带外链路只能作为受控链路，不能直接进入安全执行面。
 - JTAG 文档中描述的高权限访问能力不能按默认功能开放，必须经 lifecycle、debug auth、scope bitmap、MUX gating 和审计控制。
 - 管理子系统 DMA、mailbox、中断、互斥访问、电源复位控制必须纳入 firewall、状态机和审计策略。
-- 单 Die / 双 Die、board binding / die binding 需要与镜像验证、attestation 和制造流程联动冻结。
+- 单 Die / 双 Die、board binding / die binding 默认进入 attestation；是否参与 SEC2/runtime release decision 需要与制造和产品策略联动冻结。
 
-后续若 `SRC-005` 补充字段级接口、JTAG MUX 控制、DMA region、OOB provisioning 或电源复位状态机，本章及 `06_interface.md`、`10_full_design.md`、实现级文档必须同步更新。
+后续若 `SRC-005 管理子系统方案` 补充字段级接口、JTAG MUX 控制、DMA region、OOB provisioning 或电源复位状态机，本章及 `06_interface.md`、`10_full_design.md`、实现级文档必须同步更新。

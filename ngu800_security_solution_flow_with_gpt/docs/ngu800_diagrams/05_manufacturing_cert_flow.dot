@@ -1,0 +1,15 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad="0.18", nodesep="0.35", ranksep="0.45"];
+  node [shape=box, style="rounded,filled", color="#374151", fillcolor="#F8FAFC", fontname="Noto Sans CJK SC", fontsize=20, margin="0.16,0.10"];
+  edge [color="#4B5563", fontname="Noto Sans CJK SC", fontsize=16, arrowsize=0.8];
+
+  manu [label="1. 进入 MANU / Provisioning\n工站建立受控会话", fillcolor="#F1F5F9"];
+  uid [label="2. 读取/生成设备唯一标识\nChip ID / Device UUID / Lot 信息", fillcolor="#E0F2FE"];
+  keygen [label="3. eHSM/安全域生成 Device Attestation KeyPair\n私钥不出安全域", fillcolor="#EEF2FF", penwidth=2];
+  csr [label="4. 导出公钥或 CSR\nCSR 绑定 chip_id / device_uuid / 产品信息", fillcolor="#DCFCE7"];
+  ca [label="5. 厂商 CA/HSM 签发 Device Attestation Cert\nRoot CA 私钥离线保存", fillcolor="#FEF3C7", penwidth=2];
+  write [label="6. 回写证书链\nDevice Cert + Intermediate Cert", fillcolor="#DCFCE7"];
+  db [label="7. 制造数据库登记\n证书序列号、Device ID、批次、工站日志", fillcolor="#FFF7ED"];
+  lock [label="8. 出厂前闭环\n清理测试材料、切 USER、锁定 OTP、冒烟测试", fillcolor="#FEE2E2"];
+  manu -> uid -> keygen -> csr -> ca -> write -> db -> lock;
+}

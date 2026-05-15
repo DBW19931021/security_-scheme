@@ -211,7 +211,6 @@ Applied: 2026-04-27 by Codex after user execution request
 - `security_workflow/03_detailed_design/06_interface.md`
 - `security_workflow/03_detailed_design/07_manufacturing_rma.md`
 - `security_workflow/03_detailed_design/03_detailed_design_master.md`
-- `security_workflow/03_detailed_design/03_detailed_design_master_v2.4.md`
 - `security_workflow/03_detailed_design/10_full_design.md`
 - `security_workflow/04_impl_design/efuse_key_fw_header_design.md`
 - `security_workflow/04_impl_design/mailbox_if.md`
@@ -416,8 +415,8 @@ C-BOOT-04: SEC1 image confidentiality
    - “板级安全待补”
 8. 增加“风险、依赖、冻结项与开放问题”章节，用来承接仍未冻结事项。
 9. 生成或更新导出版文件，建议文件名：
-   - `security_workflow/03_detailed_design/03_detailed_design_master_v2.4.md`
-   - 或根据仓库既有命名规范生成。
+   - `security_workflow/03_detailed_design/10_full_design.md`
+   - 后续汇总版统一沿用该名称生成。
 
 注意：
 

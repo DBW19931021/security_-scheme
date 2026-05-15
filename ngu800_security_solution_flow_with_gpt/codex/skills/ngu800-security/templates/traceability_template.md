@@ -1,4 +1,4 @@
 # NGU800 Traceability Template
 
-| Trace ID | Source | Constraint ID | Baseline Decision | Detailed Design | Impl Design | Code Module | Test Case | Status |
-|---|---|---|---|---|---|---|---|---|
+| Trace ID | Source | Source Status | Constraint ID | Baseline Decision | Detailed Design | Impl Design | Code Module | Test Case | Status |
+|---|---|---|---|---|---|---|---|---|---|

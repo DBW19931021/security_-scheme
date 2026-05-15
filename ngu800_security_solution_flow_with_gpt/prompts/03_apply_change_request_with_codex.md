@@ -14,6 +14,7 @@
 - `05_traceability/file_sync_checklist.md`
 - `05_traceability/design_impact_matrix.md`
 - CR 中列出的所有受影响文件
+- `security_workflow/03_detailed_design/10_full_design.md`，作为 CR-0005 后的完整详设与代码落地主入口
 
 执行规则：
 
@@ -24,7 +25,8 @@
 5. 必须删除或替换 CR 明确列出的旧口径。
 6. 必须按 CR 更新受影响文件。
 7. 如发现 CR 漏列必改文件，先停止并报告，不要擅自扩大修改范围。
-8. 修改完成后更新：
+8. CR-0005 后，`04_impl_design` 是编辑分片，不是独立事实源；实现级正文必须全量同步到 `10_full_design.md`。
+9. 修改完成后更新：
    - `00_project/decision_log.md`（如 CR 有设计裁决）
    - `00_project/changelog.md`
    - `00_project/open_questions.md`（如仍有未关闭问题）
@@ -36,4 +38,3 @@
 - 未修改但检查过的文件
 - 未完成项
 - 建议交给 GPT 复核的重点
-

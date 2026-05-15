@@ -1,7 +1,12 @@
 # NGU800 Mailbox 接口实现级设计（V1.0）
 
-状态：实现级详设  
-适用范围：NGU800 / NGU800P 安全子系统（SEC/C908 ↔ eHSM）  
+> CR-0005 source-of-truth notice:
+> 本文件是 `10_full_design.md` 第 10 章的编辑分片 / extracted implementation shard，不再作为独立事实源。
+> 代码落地、评审和 ChatGPT 方案审查应优先读取 `security_workflow/03_detailed_design/10_full_design.md`。
+> 修改本文件时，必须同步主详设第 10 章；若发生冲突，以 accepted CR、decision_log、official TRM 和 `10_full_design.md` 为准。
+
+状态：实现级详设
+适用范围：NGU800 / NGU800P 安全子系统（SEC/C908 ↔ eHSM）
 定位：供 RTL、SEC FW、eHSM 适配层、Driver、Host 代理层对齐使用
 
 ---
@@ -31,6 +36,7 @@
 - 在项目架构中，eHSM 只接受来自 C908 的任务，其他 Core 或 Master 没有访问通道。
 - eHSM Mailbox 硬件支持最多 16 个通道；每个方向有 2 个 data 寄存器和 1 个 note/status 寄存器。
 - eHSM 固件/Bootloader 已存在 verify、debug auth、lifecycle、counter、UTC 等命令族能力。
+- CR-0004 后，`VERIFY_SEC1 / VERIFY_IMAGE` 是 NGU wrapper/profile，底层必须映射到 eHSM Bootloader / Firmware 原生命令和 native image header。
 
 ## 2.2 项目裁决
 
@@ -202,7 +208,7 @@ typedef struct {
 | Cmd ID | Name | 说明 |
 |---|---|---|
 | 0x0001 | VERIFY_SEC1 | SEC1 验签 + 强制解密 + rollback + measurement |
-| 0x0002 | VERIFY_IMAGE | 固件验签 + 按 `image_type / policy` 执行解密；其中 SEC1 解密强制 |
+| 0x0002 | VERIFY_IMAGE | eHSM native image verify/decrypt + NGU manifest policy check；SEC2 解密强制 |
 | 0x0003 | VERIFY_AND_MEASURE | 验签、按策略解密并写入 measurement |
 | 0x0020 | GET_CHALLENGE | 获取 challenge |
 | 0x0021 | DEBUG_AUTH | 调试鉴权 |
@@ -223,14 +229,24 @@ typedef struct {
 
 ## 8.1 VERIFY_SEC1 / VERIFY_IMAGE
 
-`VERIFY_SEC1` 是 SEC1 专用 profile，可在实现上复用 `VERIFY_IMAGE` 包格式，但策略不可被 caller 降级：
+`VERIFY_SEC1` 是 SEC1 专用 profile，可在实现上复用 `VERIFY_IMAGE` 包格式，但策略不可被 caller 降级。该 profile 不定义新的 eHSM physical header，而是映射到 eHSM Bootloader `bl_verify_image` 或等价 ROM path：
 
-- `image_type` 固定为 `SEC1`
+- eHSM native header 必须是 physical verification container
+- NGU `SEC1` 类型来自 manifest / SEC policy，不写入 eHSM `Image_Type`
 - `decrypt_required` 固定为 1
 - `rollback_policy` 固定启用
 - `measurement_slot` 必须有效
 - 输出地址只能落在 BootROM / SEC 认可的受控执行区或 staging 区
 - Host 不得直接调用该命令，BootROM / SEC 也不得关闭 SEC1 解密
+
+`VERIFY_IMAGE` 中 `image_type == SEC2` 时也必须采用 mandatory decrypt profile：
+
+- 底层优先映射到 eHSM Firmware `soc_verify` 或 owner-confirmed wrapper
+- `decrypt_required` 固定为 1
+- `rollback_policy` 固定启用
+- decrypt failure / policy mismatch 必须阻断 SEC2 release
+
+PM / RAS / Codec 等 runtime image 在 USER/PROD 默认走 verify + decrypt profile；signature-only 只能由产品策略和 image_type 白名单允许。
 
 ### Request
 
@@ -239,13 +255,13 @@ typedef struct {
     ngu_mb_req_hdr_t hdr;
     uint64_t image_addr;
     uint32_t image_len;
-    uint32_t image_type;        /* SEC1 / SEC2 / PMP / RMP / OMP / MMP / RECOVERY */
+    uint32_t ehsm_image_type_expected; /* eHSM native Image_Type profile */
+    uint32_t ngu_image_type_expected;  /* SEC1 / SEC2 / PMP / RMP / OMP / MMP / RECOVERY */
     uint32_t verify_policy;     /* verify only / verify+decrypt / verify+measure */
     uint32_t expected_lcs_mask; /* 允许的 lifecycle */
-    uint32_t decrypt_required;  /* image_type == SEC1 时必须为 1 */
+    uint32_t decrypt_required;  /* SEC1/SEC2 时必须为 1 */
     uint32_t rollback_policy;   /* rollback required / optional / recovery policy */
-    uint32_t key_slot;          /* FW verify / FW encrypt key slot */
-    uint32_t wrapped_cek_present;
+    uint32_t expected_algorithm_profile; /* audit/check only, not algorithm authority */
     uint32_t measurement_slot;
     uint32_t jump_on_pass;      /* 仅对 eHSM FW 或特定路径有效 */
     uint64_t dst_addr;          /* 解密输出地址，0 表示原地/策略定义 */
@@ -257,8 +273,9 @@ typedef struct {
 ```c
 typedef struct {
     ngu_mb_resp_hdr_t hdr;
-    uint32_t verified_version;
-    uint32_t signer_slot;
+    uint32_t ehsm_version_counter_checked;
+    uint32_t ngu_rollback_domain;
+    uint32_t signer_key_ref;
     uint32_t measurement_slot;
     uint32_t rollback_checked;  /* 0/1 */
     uint32_t decrypt_applied;   /* 0/1 */
@@ -268,9 +285,14 @@ typedef struct {
 ```
 
 ### 约束
-- `image_type` 必须参与 eHSM 侧策略检查。
-- `image_type == SEC1` 时，`decrypt_required` 不可被 caller 关闭；若镜像头声明未加密或缺少 wrapped CEK，必须返回 policy mismatch / key error。
-- `VERIFY_SEC1` 必须完成 header 解析、key_id / signer slot 检查、revoke bitmap、version / rollback floor、signer hash / trust anchor、signature、payload hash、解密 / unwrap 和 measurement 记录。
+- `ehsm_image_type_expected` 保持 eHSM TRM 定义；`ngu_image_type_expected` 来自 NGU manifest / policy table。
+- `VERIFY_SEC1` 时，`decrypt_required` 不可被 caller 关闭；若 eHSM native header / manifest policy 不满足加密要求，必须返回 policy mismatch / key error。
+- `VERIFY_IMAGE(SEC2)` 时，`decrypt_required` 不可被 caller 关闭；若 eHSM native header / manifest policy 不满足加密要求，必须返回 policy mismatch / key error 并阻断安全控制面启动。
+- PM / RAS / Codec 若进入 signature-only 白名单，响应中的 `policy_state` 必须能反映该例外路径，供 measurement / attestation 使用。
+- `expected_algorithm_profile` 只能用于一致性检查和审计，不得覆盖 eHSM `SocBootAlg / SocUpgradeAlg` 或等价 control field。
+- eHSM key slot / key ID mapping 必须来自 eHSM TRM 或 `ehsm_source_conformance_matrix.md`，不得由 wrapper 自行发明。
+- per-image CEK / wrapped CEK 不作为已冻结字段；若后续需要，必须通过 eHSM customization CR 增补。
+- `VERIFY_SEC1` 必须完成 eHSM native header 解析、key_id / signer 检查、revoke bitmap、eHSM Version Counter / NGU rollback domain、signer hash / trust anchor、signature、Code region verify/decrypt output 和 measurement 记录。
 - `jump_on_pass` 只允许在明确受控路径启用；不允许让 Host 通过该字段间接控制跳转。
 - `dst_addr` 必须由 SEC 预先做地址白名单检查；SEC1 解密结果只能进入 BootROM / SEC 认可的受控执行区或 staging 区。
 
@@ -477,6 +499,9 @@ sequenceDiagram
 ## 10.3 地址合法性
 - `pkt_addr` / `dst_addr` / `scope_bitmap_addr` 等所有地址必须由 SEC 先做白名单检查。
 - eHSM 侧应再做一次范围检查，防止越界或越权访问。
+- 管理子系统 DMA / Host DMA / OOB DMA 对安全资源默认拒绝，只允许访问 firewall 显式白名单 staging/data buffer。
+- DMA 不得访问 eHSM internal memory、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、cert/policy/metadata 安全区、measurement_table 安全写区域、debug/lifecycle/rollback 控制寄存器。
+- `[TBD]` 具体 UserID、firewall region、地址范围、错误隐藏策略和审计字段由 RTL/实现设计冻结。
 
 ---
 
@@ -516,7 +541,7 @@ sequenceDiagram
 | 0x000D | EHSM_ERR_TIMEOUT | 超时 |
 | 0x000E | EHSM_ERR_NOT_SUPPORTED | 功能未实现 |
 | 0x000F | EHSM_ERR_INTERNAL | 内部错误 |
-| 0x0010 | EHSM_ERR_KEY_SLOT_INVALID | key slot 无效或与 image_type 不匹配 |
+| 0x0010 | EHSM_ERR_KEY_REF_INVALID | eHSM key reference / key policy 无效或与 image policy 不匹配 |
 | 0x0011 | EHSM_ERR_POLICY_MISMATCH | 请求策略、镜像头策略或 lifecycle policy 不一致 |
 
 ---
@@ -537,13 +562,13 @@ sequenceDiagram
 
 # 14. 与 Host 的关系（项目强规则）
 
-1. Host 不直接向 eHSM 发送安全命令  
-2. Host 只能把镜像或请求交给 SEC 控制面  
+1. Host 不直接向 eHSM 发送安全命令
+2. Host 只能把镜像或请求交给 SEC 控制面
 3. SEC 负责：
    - 参数白名单检查
    - 生命周期检查
    - 权限检查
-   - 请求封装  
+   - 请求封装
 4. eHSM 只接受来自 C908/SEC 的安全任务
 
 ---
@@ -589,6 +614,8 @@ sequenceDiagram
 3. 共享内存最终落在管理子系统 IRAM、DDR buffer 还是 firewall 划出的 share memory
 4. `PROVISION_ROOT_MATERIAL` 是否对外暴露为单独命令，还是仅制造态内部接口
 5. Debug port 129 bit 的最终位图映射由谁冻结
+6. OOB/BMC provisioning transport proxy 的 request authentication、anti-replay、audit、failure rollback、rate limit / lockout 字段如何冻结
+7. Runtime signature-only 白名单如何在 `verify_policy` / `policy_state` / attestation report 中编码
 
 ---
 

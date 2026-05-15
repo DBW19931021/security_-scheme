@@ -1,8 +1,8 @@
 # 5. Root of Trust、密钥体系与证书体系
 
-> 文档定位：NGU800 / NGU800P 章节级正式详设  
-> 章节文件：`security_workflow/03_detailed_design/02_key_cert.md`  
-> 当前状态：V1.0（基于当前约束、baseline 与输入资料收敛）  
+> 文档定位：NGU800 / NGU800P 章节级正式详设
+> 章节文件：`security_workflow/03_detailed_design/02_key_cert.md`
+> 当前状态：V1.0（基于当前约束、baseline 与输入资料收敛）
 > 设计标记口径：`[CONFIRMED] / [ASSUMED] / [TBD]`
 
 ---
@@ -55,7 +55,8 @@
 
 ### 5.3.3 双算法策略
 - `[CONFIRMED]` 方案必须同时覆盖国密与国际算法两套栈
-- `[CONFIRMED]` 结构体和报文字段必须显式携带 `algo_family / hash_algo / sig_algo / enc_algo`
+- `[CONFIRMED]` secure boot / upgrade 的算法 authority 来自 eHSM OTP/control field，例如 `SocBootAlg / SocUpgradeAlg`
+- `[CONFIRMED]` NGU manifest / report / mailbox 可记录 expected algorithm profile，用于一致性检查、审计和 attestation，但不得覆盖 eHSM control field
 - `[ASSUMED]` 首版实现可按产品形态选择默认主算法栈，但结构上不得丢失双栈能力
 
 ---
@@ -110,10 +111,10 @@ UDS / Root Secret / Control Bits / Signer Hash / Counter] --> EH[eHSM]
 
 ### 图下说明
 
-1. OTP/eFuse 保存的是**根材料、控制位、signer anchor、counter**，而不是让普通软件直接读取的明文密钥仓库。  
-2. eHSM 是唯一合法的 key usage 执行面。  
-3. DRK 是项目内部逻辑层次，不要求一定以明文字段形式存在，但要求在设计语义上作为各分支 key 的共同上游。  
-4. 固件验签、设备证明、调试鉴权在工程上建议分成不同 key branch，避免权限耦合。  
+1. OTP/eFuse 保存的是**根材料、控制位、signer anchor、counter**，而不是让普通软件直接读取的明文密钥仓库。
+2. eHSM 是唯一合法的 key usage 执行面。
+3. DRK 是项目内部逻辑层次，不要求一定以明文字段形式存在，但要求在设计语义上作为各分支 key 的共同上游。
+4. 固件验签、设备证明、调试鉴权在工程上建议分成不同 key branch，避免权限耦合。
 
 ---
 
@@ -151,9 +152,9 @@ sequenceDiagram
 
 ### 图下说明
 
-1. 所有 key branch 都从 Root / UDS 语义上派生，而不是离散孤立存在。  
-2. 固件验签、设备证明、调试鉴权通过不同 branch 可降低权限串扰。  
-3. Host / Verifier / Debug Client 都不能直接操作私钥，只能通过 SEC → eHSM 的受控路径发起请求。  
+1. 所有 key branch 都从 Root / UDS 语义上派生，而不是离散孤立存在。
+2. 固件验签、设备证明、调试鉴权通过不同 branch 可降低权限串扰。
+3. Host / Verifier / Debug Client 都不能直接操作私钥，只能通过 SEC → eHSM 的受控路径发起请求。
 
 ---
 
@@ -165,7 +166,7 @@ sequenceDiagram
 
 | 组件 | 职责 |
 |---|---|
-| OTP / eFuse | 持久保存根种子、控制位、signer anchor、counter、lifecycle 状态 |
+| OTP / eFuse | 持久保存根种子、eHSM control field、signer anchor、eHSM Version Counter、key ID / level / purpose、lifecycle 状态 |
 | eHSM | 使用根种子，提供 crypto / verify / key / lifecycle / debug auth 服务 |
 | BootROM | 最早启动编排者，负责把控制流程带到安全验证路径，但不是密码学根 |
 
@@ -195,8 +196,8 @@ Root of Trust 的责任不是“替 BootROM 做所有事情”，而是：
 | UDS / Root Secret | 根种子 | 否 | OTP/eFuse → eHSM 使用 | 全生命周期受控 |
 | DRK | 设备根派生密钥 | 否 | eHSM 内部 | 全生命周期受控 |
 | FW Verify Root | 固件验签根 | 否（私钥）/是（公钥或摘要） | eHSM / cert anchor | USER 必须受控 |
-| FW Encrypt Key / KEK | 固件机密性保护，至少对 SEC1 强制启用 | 否 | eHSM | SEC1 强制；SEC2/后续关键固件按产品策略启用 |
-| Image CEK / wrapped CEK | 单镜像或镜像包内容加密密钥及其封装结果 | 否（CEK 明文不得离开 eHSM） | 镜像头 wrapped blob + eHSM unwrap | 与 `image_type / key_slot / lifecycle` 绑定 |
+| FW Encrypt Key / KEK | 固件机密性保护，至少对 SEC1 + SEC2 强制启用 | 否 | eHSM | SEC1/SEC2 强制；PM/RAS/Codec USER/PROD 默认启用，signature-only 例外按产品白名单 |
+| Image CEK / wrapped CEK | 单镜像或镜像包内容加密密钥及其封装结果 | 否（CEK 明文不得离开 eHSM） | `[TBD]`，除非 eHSM owner 确认 secure boot image 支持 per-image wrapped CEK extension | 与 NGU manifest policy / eHSM customization 绑定 |
 | Attestation Seed | 设备证明上游种子 | 否 | eHSM | USER / DEBUG/RMA 受控 |
 | Device Identity Key | 设备证明私钥 | 否 | eHSM | 不得导出 |
 | Alias / Session Key | 证明扩展私钥 | 否 | eHSM | `[ASSUMED]` 首版可选 |
@@ -205,9 +206,11 @@ Root of Trust 的责任不是“替 BootROM 做所有事情”，而是：
 
 ### 5.8.2 当前项目建议
 
-- `[CONFIRMED]` UDS / Root Secret 为最上游根材料
-- `[CONFIRMED]` 固件验签、设备证明、调试鉴权不应直接共用同一把外部暴露身份，而应在语义上分 branch
-- `[ASSUMED]` 首版可先在实现上减少 branch 数量，但结构设计必须预留分支能力
+- `[CONFIRMED]` UDS / Root Secret 为最上游根材料；physical key slot 语义优先按 eHSM key ID / level / purpose 映射。
+- `[CONFIRMED]` 固件验签、设备证明、调试鉴权不应直接共用同一把外部暴露身份，而应在语义上分 branch。
+- `[CONFIRMED]` NGU `FW Verify Key / FW Encrypt Key / Debug Auth Seed / Attestation Seed` 等名称是 logical alias，不是新增 physical key slot。
+- `[ASSUMED]` 首版可先在实现上减少 branch 数量，但结构设计必须预留分支能力。
+- `[TBD]` exact NGU key alias 到 eHSM key ID / level / purpose 的映射仍需 eHSM owner / 实现资料冻结。
 
 ---
 
@@ -235,11 +238,13 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 #### FW Encrypt Branch
 用于：
 - 镜像解密
-- FW_KEK / CEK / wrapped CEK 路径
-- `NGU800:FW:ENC` 与 `NGU800:WRAP:CEK` 语义标签
+- FW_KEK 及 eHSM native decrypt key path
+- per-image CEK / wrapped CEK 仅作为 `[TBD]` extension，不作为首版 physical header 已确认字段
+- `NGU800:FW:ENC` 与 `[TBD] NGU800:WRAP:CEK` 语义标签
 - `[CONFIRMED]` 对 SEC1 为强制启用，SEC1 解密 / unwrap 必须由 eHSM / 安全子系统受控密码服务完成
-- `[ASSUMED]` 对 SEC2、PM、RAS、Codec 等后续关键固件按产品安全策略启用；USER/PROD 产品形态默认建议签名 + 加密
-- `[TBD]` 除 SEC1 外，哪些非敏感运行期镜像允许签名 only，需由产品安全策略冻结
+- `[CONFIRMED]` 对 SEC2 强制启用 FW Encrypt Branch。
+- `[ASSUMED]` 对 PM、RAS、Codec 等后续关键固件在 USER/PROD 产品形态默认启用 FW Encrypt Branch；signature-only 例外按产品安全策略和 image_type 白名单冻结。
+- `[TBD]` 除 SEC1/SEC2 外，哪些非敏感运行期镜像允许 signature-only，需由产品安全策略冻结
 
 #### Attestation Branch
 用于：
@@ -256,7 +261,8 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ### 5.9.3 当前裁决
 
 - `[CONFIRMED]` FW Verify 和 Attestation 不能混为一条“无边界通用签名私钥”
-- `[CONFIRMED]` FW Encrypt Branch 至少对 SEC1 强制启用，且 key slot / key_id 必须与 `image_type = SEC1` 和 lifecycle policy 绑定
+- `[CONFIRMED]` FW Encrypt Branch 至少对 SEC1 + SEC2 强制启用，且 NGU logical image type / lifecycle policy 必须映射到 eHSM native `Image_Type`、key ID / purpose 和 manifest policy。
+- `[TBD]` per-image wrapped CEK、exact key ID、exact key slot mapping 未冻结，不得被实现写死为 physical ABI。
 - `[CONFIRMED]` Debug Auth 必须有独立控制面，不能简单复用普通 attestation 成功即开 debug
 - `[ASSUMED]` DRK 是否在硬件实现中显式存在为中间寄存态不重要，重要的是语义上 branch 上游唯一且受控
 
@@ -299,7 +305,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 ## 5.11 推荐 KDF Label
 
-> 说明：本节给出项目内部建议语义标签，不代表必须锁死到某一种 KDF 标准实现。  
+> 说明：本节给出项目内部建议语义标签，不代表必须锁死到某一种 KDF 标准实现。
 > 若后续采用 HKDF-SM3 / HKDF-SHA256 / 项目自定义 KDF，只要 label 语义保持稳定即可。
 
 | Label | 用途 |
@@ -311,13 +317,14 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 | `NGU800:ATTEST:ALIAS` | Alias / Session 证明 key |
 | `NGU800:DEBUG:AUTH` | 调试鉴权 |
 | `NGU800:REPORT:BIND` | 报告绑定（nonce / session 相关） |
-| `NGU800:WRAP:CEK` | 镜像 CEK wrap / unwrap |
+| `NGU800:WRAP:CEK` | `[TBD]` 镜像 CEK wrap / unwrap extension；需 eHSM owner 确认 secure boot image 支持后才能进入 physical ABI |
 
 ### 5.11.1 使用规则
 
 - `[CONFIRMED]` 不同业务场景必须使用不同 Label
 - `[CONFIRMED]` 不得用同一个 Label 既做固件验签根又做调试鉴权
-- `[CONFIRMED]` SEC1 的 FW Encrypt 派生必须绑定 `image_type = SEC1`、`key_slot`、lifecycle policy 和 rollback version，避免 wrapped CEK 被跨镜像复用
+- `[CONFIRMED]` SEC1 的 FW Encrypt policy 必须绑定 NGU logical image type、eHSM native image profile、lifecycle policy 和 rollback domain，避免解密策略跨镜像误用。
+- `[TBD]` 若后续采用 per-image wrapped CEK，才进一步冻结 CEK wrap label、blob 位置和 eHSM unwrap command。
 - `[ASSUMED]` 若国密和国际算法的 KDF 内核不同，label 语义仍应保持一致
 
 ---
@@ -344,9 +351,9 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 ### 5.12.3 结构体层要求
 
-以下结构中必须显式携带算法族字段：
+以下结构中必须显式表达算法 profile，但不得覆盖 eHSM OTP/control field：
 
-- FW Header
+- NGU protected manifest / expected algorithm profile
 - Attestation Report Header
 - Mailbox request/response 中涉及签名 / hash / enc 的命令
 - Provisioning blob metadata
@@ -363,8 +370,8 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 ### 5.13.1 启动路径
 - 固件验签 branch 为 SEC1 / SEC2 / PM / RAS / Codec 等镜像提供验证能力
-- 固件加密 branch 至少为 SEC1 提供强制解密能力，并为 SEC2 / 后续关键运行期固件提供按策略启用的机密性保护能力
-- rollback floor 需与 OTP counter 绑定
+- 固件加密 branch 至少为 SEC1 + SEC2 提供强制解密能力，并为 PM / RAS / Codec 等后续关键运行期固件提供 USER/PROD 默认机密性保护能力
+- rollback floor / domain 需与 eHSM Version Counter / monotonic counter / owner 确认的等价机制绑定
 - signer hash / revoke / lifecycle mask 必须进入 verify decision
 
 ### 5.13.2 证明路径
@@ -394,7 +401,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ### 5.14.2 USER 前必须完成的动作
 
 1. 锁定 Root / anchor 区
-2. 锁定 SEC1 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter
+2. 锁定 SEC1 / SEC2 解密相关 key slot / FW_KEK 策略 / signer anchor / rollback counter
 3. 清理测试 key / 测试 cert / 测试 debug trust
 4. 开启 secure boot
 5. 开启 anti-rollback
@@ -428,7 +435,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 |---|---|---|---|
 | UDS / Root Secret 注入模式 | 影响制造链和 Root 暴露面 | 部分收敛 | 冻结“直接注入”还是“seed 派生” |
 | signer hash vs full cert chain | 影响镜像格式、证明格式、制造工站 | 部分收敛 | 冻结首版采用模型 |
-| SEC2/后续运行期镜像加密分级 | 影响 FW Encrypt Branch、镜像头和产品策略 | 未完全冻结 | 冻结除 SEC1 外哪些镜像允许签名 only |
+| runtime signature-only 白名单 | 影响 FW Encrypt Branch、镜像头和产品策略 | 未完全冻结 | 冻结除 SEC1/SEC2 外哪些非敏感镜像允许 signature-only |
 | Attestation 是否首版启用 Alias Key | 影响 report / cert / verifier 复杂度 | 未完全冻结 | 冻结首版 identity model |
 | Debug Auth 与 Attestation 的锚点关系 | 影响调试授权链路 | 未完全冻结 | 冻结是否独立 anchor |
 | 双算法默认策略 | 影响产品线和测试矩阵 | 未完全冻结 | 冻结产品策略 |
@@ -437,12 +444,12 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 ## 5.17 开放问题
 
-1. DRK 是否需要在工程文档中显式作为中间对象对外暴露，还是只保留语义层定义？  
-2. FW Verify 与 Attestation 是否共享部分上游派生材料但逻辑分离，还是完全独立 branch？  
-3. Attestation 首版是否仅 Device Identity Key 签名就够，还是必须同步规划 Alias Key？  
-4. 固件验签首版是否只用 OTP signer hash，不携带完整 cert chain？  
-5. Debug auth 的 anchor 是否和 attestation anchor 完全独立？  
-6. 除 SEC1 外，SEC2 / PM / RAS / Codec 中哪些镜像允许在特定产品阶段采用签名 only？  
+1. DRK 是否需要在工程文档中显式作为中间对象对外暴露，还是只保留语义层定义？
+2. FW Verify 与 Attestation 是否共享部分上游派生材料但逻辑分离，还是完全独立 branch？
+3. Attestation 首版是否仅 Device Identity Key 签名就够，还是必须同步规划 Alias Key？
+4. 固件验签首版是否只用 OTP signer hash，不携带完整 cert chain？
+5. Debug auth 的 anchor 是否和 attestation anchor 完全独立？
+6. 除 SEC1/SEC2 外，PM / RAS / Codec 或其他 runtime image 中哪些非敏感镜像允许在特定产品阶段采用 signature-only？
 
 ---
 
@@ -450,13 +457,13 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 本章已将 NGU800 的 Root、密钥体系与证书体系收敛到当前可评审的正式口径：
 
-- Root of Trust = eHSM，BootROM 不是密码学根  
-- UDS / Root Secret 是最上游根材料  
-- 固件验签、设备证明、调试鉴权必须在逻辑上分 branch  
-- FW Encrypt Branch 至少对 SEC1 强制启用，SEC1 解密必须由 eHSM / 安全子系统受控密码服务完成  
-- 私钥不得离开 eHSM  
-- signer hash / trust anchor / cert chain 需要按项目首版策略冻结  
-- 国密与国际算法必须在结构层共存  
-- 制造阶段必须定义 key 注入、锁定、清理和生命周期推进动作  
+- Root of Trust = eHSM，BootROM 不是密码学根
+- UDS / Root Secret 是最上游根材料
+- 固件验签、设备证明、调试鉴权必须在逻辑上分 branch
+- FW Encrypt Branch 至少对 SEC1 + SEC2 强制启用，SEC1/SEC2 解密必须由 eHSM / 安全子系统受控密码服务完成
+- 私钥不得离开 eHSM
+- signer hash / trust anchor / cert chain 需要按项目首版策略冻结
+- 国密与国际算法必须在结构层共存
+- 制造阶段必须定义 key 注入、锁定、清理和生命周期推进动作
 
 后续若 `efuse_key_fw_header_design.md`、`spdm_report.md`、`manufacturing_provisioning.md`、`mailbox_if.md` 冻结字段变更，本章必须同步更新。

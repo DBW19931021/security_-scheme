@@ -26,7 +26,8 @@
 6. 是否破坏安全主路径一致性。
 7. 是否遗漏 decision_log、changelog、open_questions。
 8. 是否仍存在未关闭 TBD/待补关键词。
-9. 是否需要补充 traceability 或 code rules。
+9. CR-0005 后，`10_full_design.md` 是否已经完整包含 `04_impl_design` 的实现级正文，且分片没有形成独立事实源。
+10. 是否需要补充 traceability 或 code rules。
 
 请输出：
 
@@ -46,4 +47,3 @@
 ## E. 是否允许关闭 CR
 
 给出明确结论。
-

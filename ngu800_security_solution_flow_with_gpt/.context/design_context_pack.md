@@ -1,168 +1,197 @@
-# Design Context Pack
+# NGU800 Security Design Context Pack
 
-> 本文件用于交给 GPT 做设计裁决。Codex 生成 context pack 时只整理仓库上下文，不做设计判断。
+> 用途：交给 ChatGPT / 项目组 / security owner 进行详细方案复核与裁决。
+> Codex 在本文件中只整理仓库上下文、证据、冲突、影响面与待裁决问题，不新增 `[CONFIRMED]` 安全结论，不修改安全方案正文。
 
 ## 1. 当前仓库状态
 
 | 字段 | 内容 |
 |---|---|
-| Current git commit hash | `c9e5a6383613c032a891b905c8dc15fdb8c0bf2c` |
-| Working tree status | 存在未提交的流程/skill 相关变更与新增目录；本次仅新增 `.context/design_context_pack.md`，不修改安全方案正文。 |
-| Context pack generated at | 2026-04-27 Asia/Shanghai |
-| Requested topic | 针对 `security_workflow/03_detailed_design/03_detailed_design_master.md`：SEC1 也需要加密；补充内容直接进入 md 并生成可下载文件；章节顺序调整为 Key/Cert 放到安全启动、认证、debug 后；统一大/小标题编号；增加板级安全设计内容。 |
+| 当前工作目录 | `/home/may-pc/share/code/ngu800/secure/security_-scheme/ngu800_security_solution_flow_with_gpt` |
+| Current git commit | `df815e2` |
+| Context pack date | 2026-05-07 Asia/Shanghai |
+| Work mode | `context-pack` |
+| Requested topic | 基于 `security_workflow/03_detailed_design/10_full_design.md`，使用 superpowers / NGU800 security skill 为 ChatGPT 做详细方案设计复核上下文包。 |
+| 本次 Codex 动作边界 | 仅更新 `.context/design_context_pack.md`；不修改 `10_full_design.md`、章节正文、实现设计、code rules、traceability 或 CR。 |
 
-Working tree status 摘要：
+Working tree 当前已有多处未提交变更和删除项。本 context pack 只把这些状态作为风险输入，不判断其来源，也不回退任何文件。
 
-```text
- M codex/skills/ngu800-security/SKILL.md
- M codex/skills/ngu800-security/prompts/03B_逐章生成详设.md
- M codex/skills/ngu800-security/prompts/09_最终检查与增量更新.md
- M codex/skills/ngu800-security/rules/workflow_rules.md
-?? .context/
-?? 00_project/
-?? 05_traceability/
-?? change_requests/
-?? prompts/
-?? tools/check_cr_sync.py
-```
+关键状态：
 
-## 2. inputs_manifest 摘要
+- `security_workflow/03_detailed_design/10_full_design.md` 当前为已修改状态。
+- `security_workflow/03_detailed_design/03_detailed_design_master.md` 当前在工作树中显示为删除。
+- `security_workflow/03_detailed_design/03_detailed_design_master_v2.4.md` 当前在工作树中显示为删除。
+- `codex/skills/ngu800-security/` 与 prompts/templates/rules 有多处未提交变更。
+- `change_requests/CR-0002-readable-source-references.md` 为未跟踪文件。
 
-| Source ID | 文件 / 来源 | 类型 | 状态 | 与本次主题关系 |
-|---|---|---|---|---|
-| `SRC-001` | `security_inputs/current_plan/安全方案.pdf` | 当前安全方案基线 | `draft` / `partial` | 可作为总方案和功能点基线；若与 eHSM、启动方案或后续冻结口径冲突，细节可调整。 |
-| `SRC-002` | `security_inputs/ip_manuals/ehsm/` | eHSM 资料目录级策略 | `confirmed` / `preferred` | eHSM 是 Root of Trust 与密码服务核心输入；SEC1 加密若升级为强制要求，需要检查 eHSM 固件字段、key slot、KDF branch、OTP/eFuse 排布。 |
-| `SRC-003` | `security_inputs/soc_arch/启动方案.pdf` | 启动方案 | `draft` / `preferred` | 启动流程主参考；当前已确认 `sec1` 从 NOR Flash 加载，直接影响 SEC1 加密、验证、装载顺序。 |
-| `SRC-004` | `security_inputs/soc_arch/安全子系统硬件方案.pdf` | 安全子系统硬件方案 | `draft` / `partial` | 用于安全子系统、管理子系统、集成边界判断；与板级章节和接口边界相关。 |
-| `SRC-005` | `security_inputs/board/管理子系统.pdf` | 管理子系统方案 | `draft` / `preferred` | 管理子系统总体架构和流程原则上遵循；涉及安全的内容需二次裁决，不直接继承弱化安全假设。 |
+## 2. 本次上下文包目标
 
-## 3. constraints 摘要
+用户希望形成的协作方式是：
 
-| Constraint ID | Category | Statement 摘要 | Status | 与本次主题关系 |
-|---|---|---|---|---|
-| `C-ROOT-01` | Root of Trust | Root of Trust 必须在 eHSM；BootROM 不持有 Root Private Key。 | `[CONFIRMED]` | SEC1 解密/验签所需密钥和私钥边界必须落在 eHSM，而不是 BootROM 或管理核。 |
-| `C-BOOT-01` | Boot | 所有镜像必须经过安全子系统验签。 | `[CONFIRMED]` | 当前约束明确“验签”，未明确“SEC1 必须加密”；本次变更可能需要 GPT 裁决是否升级约束。 |
-| `C-BOOT-02` | Boot | Boot 顺序必须由安全核控制；Host 不允许直接拉起 MCU。 | `[CONFIRMED]` | SEC1 从 NOR 加载并由 BootROM/eHSM 路径验证，后续由 SEC1/SEC2 收口。 |
-| `C-BOOT-03` | BootROM | BootROM 不实现复杂加解密，只做最小加载、eHSM mailbox 调用、跳转。 | `[CONFIRMED]` | 若 SEC1 强制加密，解密动作不能由 BootROM 软件实现复杂 crypto，应由 eHSM/安全子系统承担。 |
-| `C-IF-01` | Interface | 所有密码操作必须走 eHSM。 | `[CONFIRMED]` | SEC1 解密、镜像验签、key unwrap/KDF 均需通过 eHSM 能力表达。 |
-| `C-KEY-01` | Key | 私钥不可导出，不能被 Host/BootROM/管理核读取。 | `[CONFIRMED]` | SEC1 加密涉及 FW Encrypt Key/KEK/CEK 时必须保持 non-exportable 边界。 |
-| `C-KEY-02` | Key | Key 必须绑定生命周期。 | `[CONFIRMED]` | SEC1 加密密钥启用、调试态/RMA 态行为需与 lifecycle 绑定。 |
-| `C-DEBUG-01` | Debug | USER 态关闭调试能力，禁止 JTAG。 | `[CONFIRMED]` | 板级安全章节纳入 master 时需保持 USER/PROD JTAG 默认关闭。 |
-| `C-DEBUG-02` | Debug/RMA | DEBUG / RMA 必须认证。 | `[CONFIRMED]` | 板级 JTAG、OOB debug、RMA 入口必须经认证和 scope 控制。 |
-| `C-HOST-01` | Host | Host 不可信，只能投递固件/触发流程/读取状态。 | `[CONFIRMED]` | 管理子系统/OOB 不应因为物理独立而高于 Host 信任级别。 |
-| `C-BOARD-01` | Board/OOB | 管理子系统总体架构和流程可遵循，但安全边界必须由安全方案裁决。 | `[CONFIRMED]` | 支撑把 `05_board_security.md` 内容加入 master，同时保留“系统流程可遵循、安全细节需裁决”的口径。 |
-| `C-BOARD-02` | Board/OOB | 带外管理通道不得成为安全策略绕过路径。 | `[CONFIRMED]` | BMC/OOB/SMBus/I3C/JTAG/PCIe VDM 等只能作为受控链路。 |
-| `C-BOARD-03` | Board/OOB Debug | JTAG 必须受 lifecycle、debug auth、scope bitmap 和板级 MUX 联合控制。 | `[CONFIRMED]` | 板级章节并入 master 时必须同步 JTAG 高风险入口策略。 |
-| `C-BOARD-04` | Board/OOB DMA | 管理子系统 DMA、mailbox、中断、互斥访问和复位控制必须隔离和审计。 | `[CONFIRMED]` | 影响 master 中 board/OOB、interface/mailbox、安全状态机内容。 |
-| `C-ATT-01` | Attestation | 必须支持设备认证。 | `[CONFIRMED]` | 板级 binding、debug state、SEC1/SEC2 measurement 可能影响证明报告。 |
-| `C-MFG-01` | Manufacturing | 必须定义 Root Key 灌装与锁定流程。 | `[CONFIRMED]` | SEC1 加密、board binding、JTAG 测试路径锁定可能影响制造流程。 |
+- ChatGPT / 项目组 / security owner：负责安全架构、方案设计、取舍和冻结裁决。
+- Codex：负责把已裁决内容落到仓库文件、实现设计、规则、traceability、测试和代码。
 
-## 4. baseline 摘要
+因此，本轮建议采用 A 路线：
 
-| Baseline Topic | 当前裁决 | Status | 与本次主题关系 |
+| 路线 | 产物 | 作用 |
+|---|---|---|
+| A / context pack | `.context/design_context_pack.md` | 给 ChatGPT / owner 提供复核材料和待裁决问题。 |
+| 后续 B / proposal CR | `change_requests/CR-xxxx-*.md` | ChatGPT / owner 裁决后，由 Codex 起草或应用 CR。 |
+| 后续 C / accepted apply | workflow / impl / rules / traceability | 仅在 CR 或 owner 明确批准后同步正文和实现文件。 |
+
+## 3. 输入资料摘要
+
+| Source ID | 来源 | 当前状态 | 对本次复核的意义 |
 |---|---|---|---|
-| Root of Trust | eHSM 是唯一 Root of Trust；Root Key 在 eFuse/OTP 安全区，BootROM 不持有私钥。 | `CONFIRMED` | SEC1 加密和密钥体系调整不能改变 eHSM RoT 归属。 |
-| Boot / First Verifier | `BootROM -> SEC1(NOR/本地) -> SEC2(Host 下发) -> 子系统 FW`；First Mutable Stage = SEC1；First verifier = eHSM；BootROM 只做最小加载与编排。 | `CONFIRMED` | 本次 SEC1 也需要加密会影响 SEC1 镜像处理规则、FW header、verify/decrypt 顺序。 |
-| Key / Cert | 私钥不出 eHSM；eHSM 负责 verifier、KDF、counter、lifecycle 绑定；首版证书/anchor 模型部分已收敛。 | `CONFIRMED / 部分冻结` | Key/Cert 章节拟移动到 boot/attestation/debug 后统一介绍；SEC1 加密可能要求 FW Encrypt branch 从“预留/可选”变为“强制”。 |
-| Attestation | 需要 measurement table、设备认证、report、nonce、签名与证书/anchor 对接。 | `CONFIRMED / 部分冻结` | 板级 binding、SEC1/SEC2 measurement、加密策略变化可能影响 report 内容。 |
-| Debug / Lifecycle | USER 态关闭 debug；DEBUG/RMA 必须认证；scope、expire、audit、lifecycle gating 需要收口。 | `CONFIRMED / 部分冻结` | 板级 JTAG 和管理子系统 debug 路径必须与该口径一致。 |
-| Interface / Mailbox | FW Header 和 mailbox command model 是冻结敏感项，影响 BootROM/SEC/Host/eHSM 对接。 | `部分冻结` | SEC1 加密可能影响 `VERIFY_SEC1`、`VERIFY_IMAGE`、header 的 enc 字段和错误码。 |
-| Manufacturing / RMA | Root Key 灌装、锁定、USER freeze、测试 trust 清理、RMA auth/audit 需要定义。 | `CONFIRMED / 部分冻结` | SEC1 加密密钥灌装、板级 JTAG 测试路径锁定、board binding 可能影响制造流程。 |
-| Board / OOB | BMC/OOB/管理子系统可承载管理流程，但不进入 Root of Trust；OOB 信任级别不高于 Host。 | `CONFIRMED` | 本次明确要求把板级安全设计加入 master，应采用 `05_board_security.md` 的正式章节内容。 |
+| `SRC-001` | `security_inputs/current_plan/安全方案.pdf` | `draft` / `partial` | 当前方案基线，可作为总体功能输入；细节若与优先级更高来源冲突，需要二次裁决。 |
+| `SRC-002` | `security_inputs/ip_manuals/ehsm/` | `confirmed` / `preferred` | eHSM 资料是 Root of Trust、key slot、OTP/eFuse、counter、生产阶段操作等安全细节的优先来源。 |
+| `SRC-003` | `security_inputs/soc_arch/启动方案.pdf` | `draft` / `preferred` | 启动方案确认 `sec1` 从 NOR Flash 加载，直接影响 SEC1 验证、解密、放行顺序。 |
+| `SRC-004` | `security_inputs/soc_arch/安全子系统硬件方案.pdf` | `draft` / `partial` | 用于安全子系统、管理子系统、集成边界判断。 |
+| `SRC-005` | `security_inputs/board/管理子系统.pdf` | `draft` / `preferred` | 管理子系统总体架构和流程可参考；涉及安全边界时不能直接继承弱安全假设。 |
 
-## 5. 与本次主题相关的原文摘录
+当前 manifest 中已记录的输入/冲突处理结论：
 
-| 文件 | 行号 | 原文摘录 | 为什么相关 |
+- `CF-001` 至 `CF-003` 已按现有 baseline 处理。
+- `CHG-001` 至 `CHG-005` 已纳入输入管理。
+- `SRC-005` 对板级安全、接口边界、Host/管理子系统交互、启动/装载流程、风险章节有影响。
+
+## 4. 已批准或已记录结论摘要
+
+以下为仓库中已有来源表达的结论，本 context pack 不新增确认级裁决。
+
+| 来源 | 结论摘要 | 当前含义 |
+|---|---|---|
+| `CR-0001-sec1-encryption-fw-protection-master-sync.md` | SEC1 需要签名加密；BootROM 不实现复杂解密；SEC1 解密/unwrap 由 eHSM/安全服务承担；SEC2/运行期镜像加密策略保留产品策略空间。 | SEC1 加密已作为 CR-0001 的核心收敛点，但 `10_full_design.md` 仍标为待 GPT / 人工复核。 |
+| `CR-0002-readable-source-references.md` | 改善来源引用可读性。 | 不改变安全架构本身。 |
+| `00_project/decision_log.md` / `DEC-0001` | SEC1 sign+encrypt 已记录为设计决策。 | 可作为后续同步正文/实现设计时的 approved source。 |
+| `00_project/decision_log.md` / `DEC-0002` | Root/Key/Cert 详细说明放在 boot、attestation、debug 之后。 | 影响全书章节顺序和导出版结构。 |
+| `00_project/decision_log.md` / `DEC-0003` | 板级安全设计纳入 master/full design。 | `10_full_design.md` 应持续包含 board/OOB 章节，不应再把它视作待补。 |
+| `00_project/decision_log.md` / `DEC-0004` | master/full design 统一编号。 | 需要防止源章节标题与导出版标题重复叠加。 |
+| `00_project/decision_log.md` / `DEC-0005` | 源文件引用改为更可读的文件名/章节。 | 支撑 ChatGPT/owner 审查时快速定位证据。 |
+
+`10_full_design.md` 当前整合版关键基线表达：
+
+- 版本：V2.4。
+- 状态：`CR-0001 applied，待 GPT / 人工复核`。
+- 定位：整合版，不替代源章节；源章节仍是维护来源。
+- Root of Trust：eHSM。
+- First Mutable Stage：SEC1。
+- First Cryptographic Verifier：eHSM。
+- BootROM：最小加载与编排，不持有 Root Private Key，不实现复杂 crypto。
+- Host：不可信。
+- Board/OOB：不进入 RoT，不高于 Host。
+- Manufacturing：USER freeze、key lock、debug disable、anti-rollback、SEC1 decrypt key / FW_KEK 锁定等为冻结敏感动作。
+
+## 5. `10_full_design.md` 重点证据摘录
+
+以下行号基于当前工作树文件，用于 ChatGPT/owner 复核时快速定位。
+
+| 文件位置 | 摘要 | 设计含义 |
+|---|---|---|
+| `10_full_design.md:3-7` | V2.4，状态为 CR-0001 applied，待 GPT / 人工复核；章节源文件仍是事实来源。 | 不能把整合版直接当成最终冻结版；需要 owner 复核状态。 |
+| `10_full_design.md:50-58` | eHSM RoT、SEC1 first mutable stage、eHSM first verifier、SEC1 sign+encrypt、BootROM minimal、Host untrusted、Board/OOB not RoT。 | 可作为本轮复核的当前 baseline 摘要。 |
+| `10_full_design.md:521-534` | 镜像分类中 SEC1 来自 NOR，由 eHSM 验证，由 BootROM release；SEC1 must sign+encrypt；SEC2/later 通过 SEC1/SEC2 调 eHSM 验证。 | SEC1 加密口径已进入整合版；SEC2/later 仍需要策略裁决。 |
+| `10_full_design.md:572-581` | Verify path 按 image_type/policy 处理 decrypt；SEC1 decrypt mandatory；SEC2/runtime sign+encrypt recommended/assumed，signature-only 可由显式产品策略允许。 | 最需要 ChatGPT/owner 细化的是 SEC2/PM/RAS/Codec 等后续镜像的默认策略和例外条件。 |
+| `10_full_design.md:589-601` | `VERIFY_SEC1` 必须解析 header、检查 revoke/version/signature/hash，并执行 mandatory decrypt/unwrap；decrypt 失败阻断 boot；BootROM 不 fallback。 | 接口、错误码、BootROM 边界、eHSM key slot 都要同步。 |
+| `10_full_design.md:605-614` | `VERIFY_IMAGE` 对后续镜像按策略处理 lifecycle、board_bind_flags、trust anchor、rollback、signature、decrypt。 | 后续镜像策略字段、policy 表和 board binding 需要定稿。 |
+| `10_full_design.md:717-723` | Boot 冻结敏感项包括 VERIFY_SEC1 参数模型、release state、image_type 到 counter_id、USER non-secure boot、recovery trust。 | 这些项目影响接口冻结和实现设计。 |
+| `10_full_design.md:729-733` | Boot 开放问题包括哪些非敏感 runtime image 可 signature-only、recovery image_type/signer、SEC1 role、non-secure maintenance、dual-die/board binding。 | 这些应进入 ChatGPT/owner 裁决清单。 |
+| `10_full_design.md:1267-1274` | Attestation 冻结敏感项包括 Device Identity vs Alias、cert chain、measurement set、image protection policy、session binding、board/die binding。 | attestation 不是单独问题，会被 boot image policy 和 board binding 牵动。 |
+| `10_full_design.md:1416-1419` | Lifecycle flow 中 TEST/DEV/MANUFACTURE/PROD/DEST 已表达；RMA 的 DEBUG/RMA 映射和独立编码仍有 TBD。 | RMA/debug 编码需要 eHSM/OTP 或安全 owner 裁决。 |
+| `10_full_design.md:1516-1519` | eHSM big bitmap confirmed；NGU800 subsystem bit domain assumed；最终 bit-level mapping 和 SRC-005 JTAG targets 到 SoC/board scope 是 TBD。 | JTAG scope/MUX 不应被写成已冻结。 |
+| `10_full_design.md:2051-2053` | CH0 mandatory；CH1/CH2 optional；不要伪造多通道支持。 | mailbox 实现和文档要避免过度承诺。 |
+| `10_full_design.md:2096-2099` | mailbox header/token/length/caller_id SEC/C908 confirmed；lifecycle_state 只作为 quick reject assumed，最终以 eHSM/OTP state 为准。 | 接口层可以快速拒绝，但安全权威仍在 eHSM/OTP。 |
+| `10_full_design.md:3042-3055` | 双算法结构和默认产品算法策略仍 TBD。 | 影响证书、签名、加密、boot policy 与产品 SKU。 |
+| `10_full_design.md:3061-3064` | FW encryption branch 至少 SEC1 mandatory；later images policy-based；rollback floor 绑定 OTP counter。 | SEC1 已收敛；runtime encryption policy 仍未冻结。 |
+| `10_full_design.md:3081-3107` | manufacturing key objects/user actions；Seed/UDS injection assumed；full cert chain provisioning TBD。 | 制造方案需要 owner 决定 root 注入模式、证书链写入和验收方式。 |
+| `10_full_design.md:3499-3511` | USER freeze actions 包括 SECURE_BOOT_EN、DEBUG_AUTH_EN、JTAG_FORCE_DISABLE、ANTI_ROLLBACK_EN、FW_ENCRYPT_EN 至少 SEC1、key slot lock、test trust cleanup、lifecycle USER、audit。 | USER freeze checklist 可作为实现/产测闭环依据，但仍需和 eHSM field-level TRM 对齐。 |
+| `10_full_design.md:3596-3600` | RMA 不允许 long-open debug、不允许 bypass challenge/auth、不允许 test trust/debug 残留、不允许长期开启 SEC1 decrypt bypass；RMA report/status assumed。 | RMA 策略已很明确，但 report/status 和 re-acceptance 仍需裁决。 |
+| `10_full_design.md:3651-3656` | Manufacturing 冻结敏感项包括 Root injection mode、SEC2/later image encryption、OTP readback、provisioning chain、dual-die transaction、RMA re-acceptance。 | 制造冻结前必须关闭这些设计输入。 |
+| `10_full_design.md:3686-3696` | CR-0001 settled：SEC1 encryption、source、eHSM decrypt、BootROM boundary、board security、chapter order。 | 说明 CR-0001 已落入整合版，但还要通过 GPT/人工复核关闭版本状态。 |
+| `10_full_design.md:3697-3710` | Open items：runtime image signature-only policy、SEC2/later encryption、X.509 full chain、image protection policy、board binding、JTAG scope/MUX、DMA/firewall/UserID、OOB proxy、PowerBrake/report、RMA re-attestation/status。 | 这是最直接的下一轮裁决清单。 |
+| `10_full_design.md:3714-3719` | 依赖 eHSM field-level TRM/key slots、管理子系统 field interface、产品安全策略、制造 workstation/HSM/KMS。 | 缺失资料会阻塞最终冻结。 |
+
+## 6. 当前开放问题摘要
+
+| ID | 来源 | 状态 | 需要裁决的核心问题 |
 |---|---|---|---|
-| `security_inputs/inputs_manifest.md` | 12-18 | `SRC-002` eHSM 已定义固件字段、OTP/eFuse 排布、key slot 语义、计数器和生产阶段操作优先按 eHSM 定义设计；`SRC-003` 确认 `sec1` 从 NOR Flash 加载；`SRC-005` 管理子系统总体架构和流程原则上遵循，安全细节需二次裁决。 | 三个输入源分别约束 SEC1 来源、eHSM 加密/密钥能力、板级管理系统采用策略。 |
-| `security_inputs/inputs_manifest.md` | 44-46 | `CHG-005` 新增管理子系统文档，影响总体架构、板级安全、接口边界、Host/管理子系统交互、启动/装载流程及风险章节。 | 说明板级安全不是孤立章节，可能影响 master 和接口/启动边界。 |
-| `security_workflow/01_constraints.md` | 46-74 | `C-BOOT-01` 要求所有镜像经过安全子系统验签；`C-BOOT-03` 要求 BootROM 不实现复杂加解密。 | 当前约束强调验签，SEC1 强制加密尚需裁决；若加密，解密路径不能落到 BootROM 复杂软件实现。 |
-| `security_workflow/01_constraints.md` | 177-185 | 管理子系统总体架构和流程可遵循；涉及 Root、debug、JTAG、secure boot、lifecycle、provisioning、firmware update、secure memory、OTP/eFuse、安全子系统访问时必须以安全基线为准。 | 支撑板级章节进入 master，并限定哪些内容不能盲从管理子系统文档。 |
-| `security_workflow/01_constraints.md` | 227-258 | USER/PROD 默认关闭 JTAG；JTAG 必须经 debug auth、scope bitmap、板级 MUX；管理子系统 DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区等。 | 板级安全并入 master 时必须保留的安全红线。 |
-| `security_workflow/02_baseline.md` | 25-31 | Root of Trust = eHSM；First Mutable Stage = SEC1；BootROM Role = 最小加载与编排；Host 不可信；Board/OOB 可承载管理流程但不进入 RoT。 | 本次 master 调整的全局基线。 |
-| `security_workflow/02_baseline.md` | 77-85 | Secure Boot chain 为 `BootROM -> SEC1（NOR / 本地）-> SEC2（Host 下发）-> 子系统 FW`，所有 firmware 必须经过安全子系统校验。 | SEC1 加密要求必须落在这条启动链里。 |
-| `security_workflow/02_baseline.md` | 108-126 | `SRC-005` 总体架构、模块职责、带外链路、电源/复位流程、单/双 Die 约束作为系统输入；BMC/OOB/Sideband 不高于 Host。 | 板级安全章节进入 master 的 baseline 依据。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 20-26 | 当前集成来源包括 baseline、boot、key/cert、attestation、lifecycle/debug、interface、manufacturing/RMA，未列入 `05_board_security.md`。 | master 尚未正式集成板级安全章节。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 34-40 | 当前已集成章节顺序为 baseline、Root/Key/Cert、安全启动、attestation、lifecycle/debug、interface、manufacturing/RMA。 | 与用户要求“Key/Cert 放到安全启动、认证、debug 后再统一介绍”冲突。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 230-232 | 紧邻出现 `# 二、Root of Trust、密钥体系与证书体系` 与 `# 5. Root of Trust、密钥体系与证书体系`。 | 典型大标题/源章节标题编号混排问题。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 779-783 | 当前 boot 章节写明“量产关键镜像建议支持可选加密，但首版最小必需是完整性和执行放行控制”。 | 与用户“SEC1 也需要加密”存在口径差异。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 943-953 | Verify path 包含 header 解析、key_id/signer hash、revoke、rollback、hash/signature 校验与“可选解密”；并允许 SEC2/运行期固件按策略选择签名 only 或签名+加密。 | 需要 GPT 裁决是否把 SEC1 从可选解密改为强制加密/解密，以及是否影响 SEC2/runtime。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 959-982 | SEC1 校验规则第 8 项为“可选解密”；SEC1/SEC2 发起 `VERIFY_IMAGE` 时第 7 项为“可选解密”。 | SEC1 强制加密的直接修改点候选。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 1098-1116 | 开放问题仍包含“首版是否默认启用关键镜像加密”；本章结论仍为 anti-rollback、吊销、可选解密。 | 若 SEC1 加密被裁决为确定需求，需要关闭/改写此开放问题及结论。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 2411-2415 | 接口命令表中 `VERIFY_IMAGE` 描述为“固件验签 / 可选解密”。 | SEC1/镜像加密若变为强制，需要同步接口描述或标注 SEC1 与其他镜像差异。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | 3148-3163 | `# 八、待补章节清单` 下仍列出 `## 8.2 板级安全设计`，内容是建议补充 BMC/OOB/Sideband trust、板级调试/更新/绑定等。 | master 仍把板级安全作为待补，而仓库已有正式 `05_board_security.md`。 |
-| `security_workflow/03_detailed_design/01_boot.md` | 90-100 | SEC1 执行前必须经 eHSM 验证；后续固件必须经 SEC1/SEC2 调用 eHSM 验证；量产关键镜像建议支持可选加密。 | 源章节本身也含“可选加密”，若只改 master 会产生源/总文档不一致。 |
-| `security_workflow/03_detailed_design/01_boot.md` | 269-299 | Verify path、SEC1 校验规则、后续镜像规则均包含“可选解密”；SEC2/运行期固件可选择签名 only 或签名+加密。 | SEC1 加密影响源章节、master、接口、header 字段的同步范围。 |
-| `security_workflow/03_detailed_design/01_boot.md` | 413-417 | 开放问题包含“首版是否默认启用关键镜像加密”。 | SEC1 加密变更可能关闭或重写该开放问题。 |
-| `security_workflow/03_detailed_design/02_key_cert.md` | 197-237 | FW Encrypt Key / KEK 用于固件机密性保护；FW Encrypt Branch 负责派生/解包 CEK；当前写法为“若首版不启用加密，可逻辑保留实现占位”。 | SEC1 强制加密可能要求 FW Encrypt branch 由可选占位变为至少对 SEC1 必选。 |
-| `security_workflow/03_detailed_design/02_key_cert.md` | 303 | KDF label `NGU800:FW:ENC` 表示固件加密/解密 branch。 | SEC1 加密可复用或扩展该 key branch。 |
-| `security_workflow/03_detailed_design/05_board_security.md` | 45-61 | `SRC-005` 总体架构、模块职责、带外管理链路、电源/复位流程、单/双 Die 约束作为系统流程输入；BMC/OOB/Sideband 不高于 Host。 | 可作为 master 新增板级安全章节的直接来源。 |
-| `security_workflow/03_detailed_design/05_board_security.md` | 80-85 | 不得违反的边界包括 BMC/OOB 不成为 RoT 扩展、管理子系统不得直接修改 lifecycle/secure boot/debug/rollback/root/anchor、JTAG USER/PROD 不常开、DMA 不访问安全区域。 | 板级安全进入 master 时必须保留的安全底线。 |
-| `security_workflow/03_detailed_design/05_board_security.md` | 219-242 | DMA 只能访问普通 staging/data buffer 和 firewall 显式允许区域；不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery、证书/策略、安全共享缓冲区。 | 板级管理子系统和 SEC1/SEC2 安全边界相关。 |
-| `security_workflow/03_detailed_design/05_board_security.md` | 284-310 | 双 Die 证明、board binding 是否参与 firmware verify decision、DMA/firewall/UserID、JTAG scope、MUX 控制权等仍未冻结。 | 板级章节并入 master 时仍需保留开放项，不应被误写成已冻结。 |
-| `security_workflow/03_detailed_design/10_full_design.md` | 513-617 | 完整设计中仍保留“可选解密”“签名 only 或签名+加密”“即使首版不强制镜像加密也预留 enc_algo”。 | 可作为对照：已有更完整整合稿，但加密口径仍与用户本次新要求不同。 |
-| `05_traceability/file_sync_checklist.md` | 9-18 | Boot flow、FW 加密、Board/OOB、Interface/Mailbox 等变更均映射到 constraints、baseline、详细设计、实现设计、traceability、decision/changelog 等同步文件。 | 本次需求影响安全主路径且超过两个文件，按流程应先形成 CR。 |
+| `OQ-0001` | `00_project/open_questions.md` | Open | CR/GPT/Codex 流程试运行粒度、命名、状态流转是否固定。 |
+| `OQ-0003` | `00_project/open_questions.md` | Open | SEC2/PM/RAS/Codec 等后续镜像是否默认加密，哪些可 signature-only。 |
+| `OQ-0004` | `00_project/open_questions.md` | Open | board binding 是否参与 firmware verify decision。 |
+| `OQ-0005` | `00_project/open_questions.md` | Open | JTAG scope bitmap 和板级 MUX 控制权、字段来源、bit-level mapping。 |
+| `OQ-0006` | `00_project/open_questions.md` | Open | 管理子系统 DMA / firewall / UserID / 地址白名单如何冻结。 |
+| `OQ-0007` | `00_project/open_questions.md` | Open | attestation report 中 image protection policy 放在哪里、如何编码。 |
+| `OQ-0008` | `00_project/open_questions.md` | Open | OOB/BMC provisioning proxy 是否允许，允许时边界、认证和审计如何定义。 |
 
-## 6. 已知冲突
+`security_workflow/06_traceability.md` 中当前 blocked / pending 方向：
 
-| 冲突 ID | 冲突描述 | 涉及文件 | 当前状态 | 需要 GPT 裁决的问题 |
-|---|---|---|---|---|
-| `KX-001` | 用户要求“SEC1 也需要加密”，但当前 master、boot、key/cert、full design 中多处仍为“可选加密/可选解密/签名 only 或签名+加密”。 | `03_detailed_design_master.md`; `01_boot.md`; `02_key_cert.md`; `10_full_design.md`; `04_impl_design/efuse_key_fw_header_design.md`; `04_impl_design/mailbox_if.md` | `[OPEN]` | 是否将 SEC1 encryption/decryption 从可选能力升级为 confirmed hard requirement？该要求是否仅适用于 SEC1，还是适用于 SEC2/关键运行期镜像？ |
-| `KX-002` | 当前 constraints/baseline 明确“所有镜像必须验签”，但没有明确“SEC1 必须加密”。 | `01_constraints.md`; `02_baseline.md`; `01_boot.md` | `[OPEN]` | 是否需要新增/修改约束和 baseline，以支撑 SEC1 强制加密，而不是只改 master 文案？ |
-| `KX-003` | 用户要求 Key/Cert 放在安全启动、认证、debug 后统一介绍；当前 master 将 Root/Key/Cert 放在第二章。 | `03_detailed_design_master.md`; `10_full_design.md` | `[OPEN]` | 新的 master 章节顺序应如何定义？Root of Trust 是否与 Key/Cert 一起后移，还是 RoT 总体口径保留在架构/baseline 中、Key/Cert 细节后置？ |
-| `KX-004` | master 中存在大标题中文序号和原章节数字编号叠加，例如 `# 二、...` 后紧接 `# 5. ...`。 | `03_detailed_design_master.md` | `[OPEN]` | 应采用哪一种统一编号规范：全书中文序号、阿拉伯数字多级标题，还是导出版重新编号并去除源章节标题？ |
-| `KX-005` | master 当前集成来源未包含 `05_board_security.md`，并在待补章节中仍列出板级安全设计；但仓库已有正式板级安全章节。 | `03_detailed_design_master.md`; `05_board_security.md`; `10_full_design.md` | `[OPEN]` | 是否直接把 `05_board_security.md` 作为正式章节并入 master？是否同时删除待补列表中的板级安全待补项？ |
-| `KX-006` | 用户要求“直接补充进 md 文件并生成一个可以直接下载的文件”，但当前流程要求影响主路径/多文件的变更必须先生成 CR，不得直接改正文。 | `file_sync_checklist.md`; `CR_template.md`; `prompts/01_generate_context_pack.md`; `03_detailed_design_master.md` | `[OPEN]` | 本次是否按新流程先由 GPT 生成 CR，再由 Codex 应用；导出版文件名和版本号如何确定？ |
+- debug port 129-bit bitmap。
+- JTAG scope / MUX。
+- DMA region / UserID。
+- PowerBrake / PG / FAULT / reset 入 report。
+- image_type 到 counter_id mapping。
+- SEC2/later image encryption policy。
+- board binding 默认策略。
+- shared memory final location。
 
-## 7. 待关闭 TBD
+## 7. 已知复核风险
 
-| TBD ID | 原文位置 | TBD 内容 | Blocking Area | 需要的决策 |
-|---|---|---|---|---|
-| `TBD-SEC1-ENC-001` | `security_workflow/03_detailed_design/01_boot.md:415` | 首版是否默认启用关键镜像加密，还是先只冻结完整性与放行控制。 | Boot / FW Encryption | 裁决 SEC1 是否强制加密；如强制，是否关闭该开放问题或改为 SEC2/runtime 策略问题。 |
-| `TBD-SEC1-ENC-002` | `security_workflow/03_detailed_design/03_detailed_design_master.md:1098` | 首版是否默认启用关键镜像加密。 | Master / Boot / FW Encryption | 与源 boot 章节保持一致；决定 master 中“可选解密”的替换范围。 |
-| `TBD-CERT-001` | `security_workflow/03_detailed_design/02_key_cert.md:273` | 是否首版全面切到 X.509 取决于项目证书基础设施成熟度。 | Key / Cert | Key/Cert 后置章节中需保留或关闭该 TBD。 |
-| `TBD-CERT-002` | `security_workflow/03_detailed_design/02_key_cert.md:280` | 是否要求 report 默认内嵌完整 cert chain。 | Key / Cert / Attestation | 影响 attestation 和 Key/Cert 章节的最终口径。 |
-| `TBD-BOARD-001` | `security_workflow/03_detailed_design/05_board_security.md:284` | 双 Die 场景是否需要主/从 Die 分别出具证明，或由主 Die 汇总证明。 | Board / Attestation | 板级章节并入 master 时需保留为开放问题或由 GPT 裁决。 |
-| `TBD-BOARD-002` | `security_workflow/03_detailed_design/05_board_security.md:285` | board binding 是否首版默认参与 firmware verify decision。 | Board / Boot / Manufacturing | 若 board binding 影响 SEC1/SEC2 验证，需要同步 boot、attestation、manufacturing。 |
-| `TBD-BOARD-003` | `security_workflow/03_detailed_design/05_board_security.md:297` | DMA / firewall / UserID / 地址白名单仍为 `[TBD] firewall_access_rules`。 | Board / Interface / Firewall | 板级章节进入 master 时不能误标为已冻结，需要登记开放项。 |
-| `TBD-BOARD-004` | `security_workflow/03_detailed_design/05_board_security.md:314-321` | JTAG scope bitmap、CPLD/JTAG MUX 控制、OOB provisioning proxy、DMA UserID/firewall region、电源异常入 report、双 Die report、测试路径锁定仍开放。 | Board / Debug / Attestation / Manufacturing | 是否由本次 CR 只集成为开放项，还是同步做部分裁决。 |
-| `TBD-PROCESS-001` | `00_project/open_questions.md` | 变更流程试运行中需确认流程粒度、CR 命名、导出版命名。 | Change Management | 本次是流程试运行，可在 CR 中补充导出版命名和状态流转。 |
+| 风险 ID | 风险描述 | 影响 |
+|---|---|---|
+| `RISK-STATUS-001` | `10_full_design.md` 标为 `CR-0001 applied，待 GPT / 人工复核`，但正文中已有大量 `[CONFIRMED]` 表达。 | 需要 owner 明确 V2.4 是否进入 reviewed/frozen baseline，或继续保持 applied/pending 状态。 |
+| `RISK-SOURCE-001` | `10_full_design.md` 说明源章节仍是事实来源，但当前工作树中 master 文件显示删除。 | 后续同步机制需要明确：`10_full_design.md` 是导出版、主维护源，还是临时整合输出。 |
+| `RISK-SYNC-001` | SEC1 encryption 已进入 CR-0001 和 full design，但后续 SEC2/runtime 加密策略仍 open。 | 如果直接冻结全书，可能误把 assumed/recommended 策略当作 mandatory requirement。 |
+| `RISK-BOARD-001` | Board/OOB 已纳入 full design，但 JTAG scope、MUX、DMA/UserID/firewall、OOB provisioning proxy 仍未冻结。 | 板级章节可以进入方案，但实现和 SoC/板级接口不能提前闭合。 |
+| `RISK-ATT-001` | SPDM/report 实现设计仍是 starter 级别，full design 中 report 项目更多。 | 证明报告结构、image protection policy、board/die binding 需要进一步收敛后才能指导代码。 |
+| `RISK-MFG-001` | Manufacturing 依赖 Root injection mode、OTP readback、provisioning chain、dual-die transaction、RMA re-acceptance。 | 产测流程和 eFuse/OTP 字段验收需要项目组/制造系统输入。 |
+| `RISK-TEMPLATE-001` | skill/templates 已更新，要求更强的 Source Status / Rule Status 约束，但现有 `05_code_rules.md`、`06_traceability.md` 仍可能是旧格式。 | 后续 accepted apply 时可能需要做一次规则/追踪模板升级 CR，避免规则与 traceability 语义漂移。 |
 
 ## 8. 推荐影响文件
 
-| 文件 | 推荐动作 | 原因 |
+本轮不直接修改以下文件，只列出后续若进入 CR / accepted-apply 时的影响面。
+
+| 文件 | 后续动作建议 | 触发条件 |
 |---|---|---|
-| `change_requests/CR_template.md` | `inspect` | 本次影响两个以上文件、影响 boot/key/cert/attestation/debug/interface/manufacturing/board 主路径，应先生成 CR。 |
-| `change_requests/CR-*.md` | `modify` | 建议由 GPT 根据本 context pack 生成正式 Change Request，Codex 再按 CR 修改仓库。 |
-| `00_project/decision_log.md` | `modify` | SEC1 强制加密、章节顺序、板级章节并入 master 都属于设计/文档结构裁决，需要记录。 |
-| `00_project/changelog.md` | `modify` | 后续应用 CR 时需要记录仓库级变更。 |
-| `00_project/open_questions.md` | `modify` | 若仍有 SEC2/runtime 加密策略、board binding、JTAG scope 等未关闭问题，需要登记。 |
-| `security_workflow/01_constraints.md` | `inspect / maybe modify` | 如果 GPT 裁决 SEC1 加密为强制要求，应新增或调整 boot/FW encryption 约束；当前 Codex 不做裁决。 |
-| `security_workflow/02_baseline.md` | `inspect / maybe modify` | 若 SEC1 加密从建议变为 baseline，需同步 Boot/FW protection baseline。 |
-| `security_workflow/03_detailed_design/03_detailed_design_master.md` | `modify` | 用户目标文件：章节顺序、编号、SEC1 加密口径、板级章节并入、待补清单清理。 |
-| `security_workflow/03_detailed_design/01_boot.md` | `inspect / maybe modify` | 源 boot 章节含“可选加密/可选解密”，如果只改 master 会造成源/总文档不一致。 |
-| `security_workflow/03_detailed_design/02_key_cert.md` | `inspect / maybe modify` | FW Encrypt Branch 当前是首版可选/占位，SEC1 强制加密可能要求 key branch、CEK/KEK、KDF 口径升级。 |
-| `security_workflow/03_detailed_design/03_attestation.md` | `inspect` | SEC1 加密和 board binding 可能影响 measurement/report，但是否修改需 GPT 裁决。 |
-| `security_workflow/03_detailed_design/04_lifecycle_debug.md` | `inspect` | 板级 JTAG/OOB debug 需要与 lifecycle/debug auth 章节一致。 |
-| `security_workflow/03_detailed_design/05_board_security.md` | `inspect / no-change likely` | 作为 master 板级章节来源；除非 GPT 发现需补充，否则可不改源章节。 |
-| `security_workflow/03_detailed_design/06_interface.md` | `inspect / maybe modify` | `VERIFY_IMAGE`、`VERIFY_SEC1`、共享内存、OOB 请求可能受 SEC1 加密和板级管理通道影响。 |
-| `security_workflow/03_detailed_design/07_manufacturing_rma.md` | `inspect` | SEC1 加密密钥灌装、USER 前 JTAG 清理、board binding 可能影响制造/RMA。 |
-| `security_workflow/03_detailed_design/10_full_design.md` | `inspect / maybe modify` | 该整合稿包含板级章节和“可选加密”旧口径；若作为导出版来源需同步。 |
-| `security_workflow/04_impl_design/efuse_key_fw_header_design.md` | `inspect / maybe modify` | SEC1 加密会影响 FW header enc 字段、CEK/KEK、OTP/eFuse key/anchor/counter 表达。 |
-| `security_workflow/04_impl_design/mailbox_if.md` | `inspect / maybe modify` | SEC1 解密/验证接口、错误码、policy flags、OOB 管理请求收口可能影响 mailbox。 |
-| `security_workflow/04_impl_design/spdm_report.md` | `inspect` | board binding、debug state、电源/复位事件是否入 report 待裁决。 |
-| `security_workflow/04_impl_design/manufacturing_provisioning.md` | `inspect` | 加密 key provisioning、JTAG 测试路径锁定、OOB provisioning proxy 可能影响制造流程。 |
-| `security_workflow/06_traceability.md` | `modify after CR` | 若正文文件变更，需要同步追踪关系。 |
-| `05_traceability/file_sync_checklist.md` | `inspect / no-change likely` | 已有 Boot/FW encryption/Board/OOB 映射，可用于执行 CR 的同步检查。 |
-| 导出版文件 | `modify / create` | 用户要求生成可直接下载文件；建议在 CR 中明确文件名、版本号、来源 master。 |
+| `change_requests/CR-xxxx-*.md` | 新建或更新 proposal CR。 | ChatGPT/owner 对 V2.4 复核问题给出裁决后。 |
+| `00_project/decision_log.md` | 记录新增或关闭的 owner 决策。 | V2.4 状态、SEC2/later encryption、board binding、JTAG/DMA/OOB 等任何项被裁决。 |
+| `00_project/open_questions.md` | 关闭已裁决项，新增未解决依赖。 | ChatGPT/owner 输出明确结论后。 |
+| `security_inputs/inputs_manifest.md` | 更新 source 状态或新增 eHSM/TRM/board field interface 输入。 | 项目组补充正式资料后。 |
+| `security_workflow/01_constraints.md` | 同步新增/修正约束。 | 后续镜像加密、board binding、debug/DMA/OOB 等从 assumed/TBD 升级为 confirmed/proposed 时。 |
+| `security_workflow/02_baseline.md` | 同步 baseline。 | 安全主路径裁决变化时。 |
+| `security_workflow/03_detailed_design/*.md` | 同步章节正文。 | CR 被接受后。 |
+| `security_workflow/03_detailed_design/10_full_design.md` | 重新导出或更新整合版状态。 | 源章节完成同步后。 |
+| `security_workflow/04_impl_design/efuse_key_fw_header_design.md` | 更新 eFuse/key slot/header/policy/counter mapping。 | eHSM field-level TRM、SEC2/later encryption、board binding 策略明确后。 |
+| `security_workflow/04_impl_design/mailbox_if.md` | 更新 VERIFY_SEC1 / VERIFY_IMAGE / caller / channel / error code / shared memory。 | boot verify/decrypt policy、channel、shared buffer 明确后。 |
+| `security_workflow/04_impl_design/spdm_report.md` | 更新 report schema、measurement、policy、board/die binding、RMA/debug 状态。 | attestation 冻结项裁决后。 |
+| `security_workflow/04_impl_design/manufacturing_provisioning.md` | 更新 provisioning、USER freeze、RMA re-acceptance、dual-die transaction。 | 制造和 RMA 输入明确后。 |
+| `security_workflow/05_code_rules.md` | 升级或同步代码规则。 | accepted apply 阶段，且实现设计足够稳定后。 |
+| `security_workflow/06_traceability.md` | 同步需求到实现/测试追踪。 | 正文或实现设计更新后。 |
 
-## 9. 给 GPT 的问题
+## 9. 建议交给 ChatGPT / owner 的裁决问题
 
-1. SEC1 加密是否应裁决为 `[CONFIRMED]` 强制要求？如果是，是否只限定 SEC1，还是 SEC2/关键运行期 FW 也必须加密？
-2. 如果 SEC1 必须加密，现有“可选解密/可选加密/签名 only”口径应如何替换？是否需要同步 `01_constraints.md`、`02_baseline.md`、`01_boot.md`、`02_key_cert.md`、`06_interface.md` 和实现设计文件？
-3. 新版 master 的章节顺序应如何统一？建议 GPT 裁决是否采用“总览/baseline -> 安全启动 -> 证明/认证 -> 生命周期/debug -> 接口 -> 板级安全 -> Key/Cert -> 制造/RMA -> 风险/开放项/附录”的结构，或给出更合适的顺序。
-4. Root of Trust 概念是否应保留在前置架构/baseline 中，而把密钥体系和证书体系细节后置？这样可以满足用户“Key/Cert 后面统一介绍”同时避免读者找不到 RoT 基线。
-5. `05_board_security.md` 是否直接并入 `03_detailed_design_master.md` 作为正式章节？并入后是否删除待补清单中的板级安全待补项？
-6. 大标题和小标题编号应采用哪套规范？是否在整合 master 时删除源章节原始一级标题，统一重编号为单一体系？
-7. 导出版文件名和版本号如何定义？例如是否生成 `NGU800_安全方案详细设计说明书_整合版_V2.4.md`，并由 master 同步导出。
-8. 本次 CR 是否只处理 master/导出版，还是同时修正源章节，避免后续重新整合时旧口径覆盖新版 master？
+1. `10_full_design.md` V2.4 当前应保持 `CR-0001 applied，待 GPT / 人工复核`，还是可以升级为 reviewed baseline？如果升级，版本号和状态如何写？
+2. `10_full_design.md` 与源章节的关系如何定义：它是导出版、主维护文档，还是临时整合稿？当前 master 文件删除状态是否符合预期？
+3. SEC2、PM、RAS、Codec、non-sensitive runtime image 的默认固件保护策略是什么：默认 sign+encrypt，还是默认 sign-only 并列白名单例外？
+4. signature-only runtime image 的准入条件是什么：image_type、lifecycle、debug state、product SKU、board binding、release policy 是否都必须参与？
+5. Recovery image 的 image_type、signer、trust anchor、rollback counter、decrypt policy 如何定义？是否允许 recovery 走独立 trust anchor？
+6. board binding 是否参与 firmware verify decision？如果参与，是仅用于 attestation，还是参与 verify/decrypt/release 决策？
+7. dual-die 场景中 board/die binding 和 attestation 是分别出 report，还是主 Die 汇总 report？
+8. JTAG scope bitmap、eHSM 129-bit debug bitmap、板级 MUX 控制、SRC-005 JTAG target 到 SoC/board scope 的映射由哪个正式输入冻结？
+9. 管理子系统 DMA / firewall / UserID / interrupt / reset 权限的字段来源、地址范围和默认拒绝策略如何定义？
+10. OOB/BMC 是否允许作为 provisioning proxy？如果允许，认证、命令转发、数据可见性、审计和失败回滚边界是什么？
+11. attestation report 中 image protection policy、decrypt_applied、board_bind_result、debug/RMA state、PowerBrake/PG/FAULT/reset event 应如何编码？
+12. Manufacturing 的 Root injection mode 是 Seed/UDS 注入、直接 root key 注入，还是两者都作为产品选项？对应验收方式是什么？
+13. OTP/eFuse 不可读字段如何做产测验收：只读 digest/status/counter，还是需要 eHSM 提供 attested provisioning report？
+14. RMA 后 re-attestation/status、RMA re-acceptance 和返厂后 USER/PROD 恢复策略如何定义？
+15. 是否需要单独建立下一轮 CR，将 `05_code_rules.md` 与 `06_traceability.md` 升级到新版 Source Status / Rule Status 规则？
+
+## 10. 推荐下一步
+
+建议把本 context pack 交给 ChatGPT / owner，让其先输出：
+
+1. V2.4 的状态裁决。
+2. 必须在详细方案冻结前关闭的问题清单。
+3. 可以保留到实现设计或项目策略阶段的 `[ASSUMED]` / `[TBD]` 清单。
+4. 下一条 Change Request 的标题、范围和状态。
+
+Codex 后续只根据 owner 明确结论或 accepted CR 执行仓库同步。

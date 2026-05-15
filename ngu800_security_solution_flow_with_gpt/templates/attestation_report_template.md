@@ -4,6 +4,10 @@
 Use this template when designing NGU800 remote attestation report or SPDM-style report content.
 The output must reach field level, not just protocol overview.
 
+CR-0005 rule:
+- Attestation report field definitions, measurement blocks, signature coverage and algorithm mapping must be synchronized into `security_workflow/03_detailed_design/10_full_design.md`.
+- `04_impl_design/spdm_report.md` is an editing shard only.
+
 ## Required Sections
 
 ### 1. Design objective

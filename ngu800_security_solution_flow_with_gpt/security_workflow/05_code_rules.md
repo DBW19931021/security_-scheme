@@ -1,8 +1,8 @@
 # NGU800 安全方案 Code Rules（强化版 V1.0）
 
-状态：当前阶段代码约束文件（已纳入 `SRC-005` 管理子系统增量输入）  
-适用范围：BootROM / SEC1 / SEC2 / eHSM 适配层 / Mailbox Driver / Host 代理层 / Provisioning Tool  
-目的：将 `01_constraints.md`、`02_baseline.md`、`04_impl_design/*.md` 的设计结论转成工程开发阶段必须遵守的规则
+状态：当前阶段代码约束文件（已纳入 `SRC-005 管理子系统方案` 增量输入）
+适用范围：BootROM / SEC1 / SEC2 / eHSM 适配层 / Mailbox Driver / Host 代理层 / Provisioning Tool
+目的：将 `01_constraints.md`、`02_baseline.md`、`10_full_design.md` 的设计结论转成工程开发阶段必须遵守的规则；`04_impl_design` 仅作为已同步编辑分片引用
 
 ---
 
@@ -37,7 +37,7 @@
 | R-KEY-001 | MUST NOT | SEC / Host / Driver | 私钥不得导出到 Host、普通核或日志 | C-KEY-01 | Baseline 7 / Key Hierarchy | 密钥泄露 |
 | R-KEY-002 | MUST | eHSM 适配层 | 所有正式安全路径密钥使用必须经 eHSM 内部机制完成 | C-KEY-01 / C-IF-01 | Baseline 7 / Mailbox / Key Hierarchy | 绕过安全边界 |
 | R-KEY-003 | MUST | Key Service / Provisioning | Key 权限必须受 lifecycle gating 控制 | C-KEY-02 | Baseline 8 / Manufacturing | 生命周期策略失效 |
-| R-KEY-004 | MUST | FW Header / Verify Path | `algo_family / hash_algo / sig_algo / enc_algo` 必须由镜像头明确表达，不得写死在代码里 | C-IF-01 / C-ATT-01 | Baseline 9 / FW Header | 双算法失效 |
+| R-KEY-004 | MUST | FW Header / Verify Path | secure boot / upgrade 算法 authority 必须来自 eHSM control field；NGU manifest / mailbox 只能记录 expected algorithm profile，不得覆盖 eHSM `SocBootAlg / SocUpgradeAlg` | C-IF-01 / C-BOOT-06 | Baseline 8.1 / eHSM Conformance Matrix | 双算法或 eHSM 策略失效 |
 
 ---
 
@@ -51,6 +51,8 @@
 | R-BOOT-004 | MUST | Verify Path | 所有可执行固件必须在执行前完成验签 | C-BOOT-01 | Baseline 5 / FW Header | 可执行恶意镜像 |
 | R-BOOT-005 | MUST NOT | Host / 管理核 | Host、管理核不得直接拉起 MCU 或绕过 SEC release 执行 | C-BOOT-02 / C-HOST-01 | Baseline 6 | 执行放行权失控 |
 | R-BOOT-006 | MUST | Verify Path | 反回滚检查必须在执行放行前完成 | C-UPDATE-01 | Baseline 5 / eFuse-Key-FW Header | 回滚攻击 |
+| R-BOOT-007 | MUST | Verify Path | SEC2 在正式安全启动路径中必须 sign + encrypt，decrypt failure 必须阻断安全控制面启动 | C-BOOT-05 | Baseline 5 / mailbox_if | 运行期安全控制面泄露或带病启动 |
+| R-BOOT-008 | MUST | Product Policy / Verify Path | PM/RAS/Codec 等 runtime image 在 USER/PROD 默认 sign + encrypt；signature-only 必须来自显式 image_type 白名单 | C-BOOT-05 | fw_header / spdm_report | signature-only 变成默认弱路径 |
 
 ---
 
@@ -100,12 +102,13 @@
 |---|---|---|---|---|---|---|
 | R-BOARD-001 | MUST | BMC / OOB / Board MCU Proxy | BMC、OOB、板级 MCU、管理子系统只能作为受控链路或代理，不得进入 Root of Trust | C-BOARD-01 / C-BOARD-02 | Baseline 7 / Board Security | OOB 链路变成隐式安全根 |
 | R-BOARD-002 | MUST NOT | BMC / OOB / Board MCU Proxy | OOB 链路不得直接修改 lifecycle、secure boot、debug enable、rollback counter、Root/anchor | C-BOARD-02 | Board Security / Interface | 绕过 SEC/eHSM 控制面 |
-| R-BOARD-003 | MUST | JTAG / CPLD / MUX Control | JTAG 打开必须经过 lifecycle 检查、debug auth、scope bitmap 和失效策略 | C-BOARD-03 / C-DEBUG-02 | Board Security / Lifecycle Debug | 量产调试口失控 |
+| R-BOARD-003 | MUST | JTAG / CPLD / MUX Control | JTAG 打开必须经过 lifecycle 检查、debug auth、scope bitmap、session timeout 和审计 | C-BOARD-03 / C-DEBUG-02 | Board Security / Lifecycle Debug | 量产调试口失控 |
 | R-BOARD-004 | MUST NOT | JTAG / CPLD / MUX Control | USER/PROD 生命周期不得存在板级 JTAG 直通或常开路径 | C-BOARD-03 / C-DEBUG-01 | Board Security | 直接访问寄存器/DRAM/Flash/安全子系统 |
-| R-BOARD-005 | MUST | DMA / Firewall Driver | 管理子系统 DMA 只能访问 firewall 白名单 buffer | C-BOARD-04 / C-ACCESS-02 | Board Security / Interface | DMA 绕过安全隔离 |
-| R-BOARD-006 | MUST NOT | DMA / Firewall Driver | 管理子系统 DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC 执行区、recovery 区、证书/策略区 | C-BOARD-04 / C-ACCESS-01 | Board Security / Interface | 敏感资产暴露 |
+| R-BOARD-005 | MUST | DMA / Firewall Driver | 管理子系统 DMA / Host DMA / OOB DMA 对安全资源默认拒绝，只能访问 firewall 白名单 staging/data buffer | C-BOARD-04 / C-ACCESS-02 | Board Security / Interface | DMA 绕过安全隔离 |
+| R-BOARD-006 | MUST NOT | DMA / Firewall Driver | 管理子系统 DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区、measurement_table 安全写区、debug/lifecycle/rollback 控制寄存器 | C-BOARD-04 / C-ACCESS-01 | Board Security / Interface | 敏感资产暴露 |
 | R-BOARD-007 | MUST | Power / Reset Control | 影响安全启动、恢复、debug 或证明状态的电源/复位/PowerBrake 事件必须进入安全状态机或审计 | C-BOARD-04 | Board Security / Manufacturing | 安全状态不可解释 |
-| R-BOARD-008 | SHOULD | Attestation / Report | board binding / die binding / 关键板级安全状态应进入证明报告或本地审计 | C-BOARD-01 / C-ATT-01 | Board Security / SPDM Report | verifier 无法判断板级状态 |
+| R-BOARD-008 | SHOULD | Attestation / Report | board binding / die binding / 关键板级安全状态应进入证明报告或本地审计；V2.4 不默认阻断 SEC1 | C-BOARD-01 / C-ATT-01 / C-ATT-02 | Board Security / SPDM Report | verifier 无法判断板级状态 |
+| R-BOARD-009 | MUST NOT | OOB / BMC Proxy | OOB/BMC provisioning proxy 不得成为 trust anchor，不得接触 root secret、device private key 或 FW_KEK 明文 | C-BOARD-02 / C-MFG-01 | Interface / Manufacturing | OOB 链路变成制造信任根 |
 
 ---
 
@@ -113,11 +116,22 @@
 
 | Rule ID | Level | Applies To | Rule Statement | Source Constraint | Baseline / Impl | Violation Impact |
 |---|---|---|---|---|---|---|
-| R-FW-001 | MUST | FW Header / Verify | `load_addr / entry_point / image_version / algo_family` 必须进入 signed region | C-BOOT-01 / C-UPDATE-01 | fw_header | 关键执行语义可被篡改 |
-| R-FW-002 | MUST NOT | Verify Path | 不得只验证 payload 而忽略执行属性字段 | C-BOOT-01 | fw_header | 签名覆盖不完整 |
-| R-FW-003 | MUST | Verify Path | rollback floor 必须来自 OTP / monotonic counter，不得只信任镜像自带版本 | C-UPDATE-01 | eFuse-Key-FW Header | 软件可伪造版本 |
+| R-FW-001 | MUST | FW Header / Verify | SEC1/SEC2 的 physical verification header 必须采用 eHSM native secure boot image header，不得使用 NGU 自定义 physical header | C-BOOT-06 | efuse_key_fw_header_design / ehsm_source_conformance_matrix | 两套 physical ABI 冲突 |
+| R-FW-002 | MUST NOT | FW Header / Verify | 不得把 `ngu_fw_min_hdr_t / ngu_fw_signed_hdr_t` 作为 wire/storage verification format | C-BOOT-06 | efuse_key_fw_header_design | eHSM 工具链和验签语义失配 |
+| R-FW-003 | MUST | Verify Path | rollback floor/domain 必须映射到 eHSM Version Counter / monotonic counter / owner-confirmed 等价机制，不得只信任镜像自带版本 | C-UPDATE-01 / C-EHSM-01 | eFuse-Key-FW Header | 软件可伪造版本 |
 | R-FW-004 | MUST | Upgrade Path | 升级成功前不得先提升 counter | C-UPDATE-01 | eFuse-Key-FW Header | 设备锁死或升级异常 |
-| R-FW-005 | SHOULD | FW Path | 镜像机密性若启用，必须通过 wrapped key / 受控 CEK 路径，不得明文散布 CEK | C-IF-01 | fw_header / key_hierarchy | 密钥暴露 |
+| R-FW-005 | MUST | FW Path | SEC1/SEC2 sign+encrypt 必须走 eHSM verify+decrypt output path，不得使用 NVM only verify | C-BOOT-07 | mailbox_if / eFuse-Key-FW Header | 机密性保护失效 |
+| R-FW-006 | MUST | FW Header / Verify Path | eHSM `Image_Type` 必须保持 eHSM TRM 定义；NGU `SEC1/SEC2/runtime` image type 必须放入 manifest / policy table | C-BOOT-06 | eFuse-Key-FW Header | image type 语义冲突 |
+| R-FW-007 | MUST | OTP / Key / Counter | `OTP-0..OTP-7`、`*_MIN_VER`、NGU key names 只能作为 logical view / alias，所有 physical mapping 必须进入 source-conformance matrix | C-EHSM-01 | ehsm_source_conformance_matrix | RTL/制造/代码使用错误字段 |
+| R-FW-008 | MUST NOT | FW Header / Tooling | per-image CEK / wrapped CEK 不得作为已冻结 physical ABI，除非后续 eHSM customization CR 接受 | C-EHSM-01 | eFuse-Key-FW Header | 实现依赖不存在的 eHSM 能力 |
+| R-FW-009 | MUST | Image Packager / Tooling | 平台侧固件制作工具必须生成 eHSM native package，并将 NGU manifest + payload 放入受 eHSM verify/decrypt 保护的 Code region | C-BOOT-08 | 10_full_design 3.10 / 10.3 | 工具产物与设备侧验证路径不一致 |
+| R-FW-010 | MUST NOT | Image Packager / Tooling | 不得把 `header + Signed Region + signature + wrapped_cek + enc_payload` 作为 NGU800 最终 wire/storage physical format | C-BOOT-06 / C-BOOT-08 | efuse_key_fw_header_design 4.4 | 恢复旧自定义 header，绕开 eHSM-native 裁决 |
+| R-FW-011 | MUST | BootROM / SEC Verify Flow | eHSM PASS 前不得信任或解析 NGU manifest 中的 load/entry/policy 字段；必须先完成 eHSM native verify/decrypt output | C-BOOT-08 | 10_full_design 3.10.7 / 10.3 | 恶意 manifest 影响执行放行 |
+| R-FW-012 | SHOULD | Image Packager / CI | image packager 应输出 package manifest dump、source-conformance report、policy check report 和 golden vector，供 BootROM/SEC/eHSM adapter 联调验证 | C-BOOT-08 | efuse_key_fw_header_design 4.4.5 | 工具链与设备侧实现难以审查和复现 |
+| R-FW-013 | MUST | Image Packager / eHSM Adapter | SEC1 的最低认证覆盖范围必须包含完整 Code region，即 `NGU protected manifest + SEC1 payload + padding/alignment counted by Code_Size` | C-BOOT-08 | 10_full_design 3.10.5 | manifest 或 payload 可被篡改后仍被 release |
+| R-FW-014 | MUST | Image Packager / eHSM Adapter | SEC1 正式安全启动路径必须对完整 Code region 使用 eHSM sign+encrypt profile；header 只能作为 eHSM native plaintext metadata，不得承载未保护的 NGU release 决策 | C-BOOT-04 / C-BOOT-08 | 10_full_design 3.10.5 / 3.10.6 | SEC1 机密性或 release policy 被降级 |
+| R-FW-015 | MUST NOT | BootROM / SEC Verify Flow | 若 eHSM native header 中某些字段未被 eHSM 认证/AAD 覆盖，BootROM/SEC 不得将这些字段作为 NGU 项目级 image type、load/entry、lifecycle、measurement 或 release 决策依据 | C-BOOT-08 | 10_full_design 3.10.5 / 10.5.21 | 明文 header 被篡改导致策略绕过 |
+| R-FW-016 | MUST | Test / CI | package golden/tamper vector 必须覆盖篡改 manifest `ngu_image_type`、`entry_addr`、`version_counter`、payload 字节、`Code_Size` 或截断 Code region 后不得 release | C-BOOT-08 | 10_full_design 3.10.6 / 10.5.21 | 缺少失败路径验证，工具链和启动实现可能不一致 |
 
 ---
 
@@ -129,6 +143,8 @@
 | R-ATT-002 | MUST | Report Builder | report header、identity、measurement、lifecycle/debug、nonce/session 绑定信息必须被签名覆盖 | C-ATT-01 / C-DEBUG-02 | spdm_report | 报告可被拼接/重放 |
 | R-ATT-003 | MUST | Verifier Path | measurement 至少覆盖安全启动关键阶段和关键固件版本 | C-ATT-01 / C-BOOT-01 | spdm_report | 证明价值不足 |
 | R-ATT-004 | MUST | Dual Algorithm Support | report 结构不得假设只有单一算法栈 | C-ATT-01 / C-IF-01 | spdm_report | 双算法方案失效 |
+| R-ATT-005 | MUST | Report Builder | lifecycle、debug_state、secure_boot_state、rollback_state 必须进入 report 并被签名覆盖 | C-ATT-02 | spdm_report | RMA/debug 状态可被伪装 |
+| R-ATT-006 | SHOULD | Report Builder | image protection policy、decrypt_applied、board_bind_result 应进入 report 或 measurement flags | C-ATT-02 | spdm_report | verifier 无法识别策略降级或 board 状态 |
 
 ---
 
@@ -141,6 +157,8 @@
 | R-MFG-003 | MUST | MANU→USER 流程 | 进入 USER 前必须清理测试 key / 测试 trust / 测试 debug 路径 | C-MFG-01 / C-DEBUG-01 | manufacturing_provisioning | 测试后门残留 |
 | R-MFG-004 | MUST | Provisioning / Audit | 制造阶段必须留存审计记录 | C-MFG-01 | Baseline 8 | 无法追责 / 回溯 |
 | R-MFG-005 | SHOULD | Provisioning Tool | 对写入后的 OTP 状态做读回校验或等价校验 | C-MFG-01 | manufacturing_provisioning | 灌装不可验证 |
+| R-MFG-006 | MUST | MANU→USER 流程 | USER freeze 必须锁定 SEC1/SEC2 decrypt key / FW_KEK、debug、anti-rollback，并完成 test trust cleanup | C-MFG-01 / C-BOOT-05 | manufacturing_provisioning | 量产冻结不完整 |
+| R-MFG-007 | MUST NOT | RMA Tool | RMA 不得 long-open debug，不得绕过 challenge/auth，不得长期保留 SEC1/SEC2 decrypt bypass | C-MFG-01 / C-DEBUG-02 | manufacturing_provisioning | 返修后门残留 |
 
 ---
 
@@ -165,17 +183,29 @@
 
 ---
 
-# 12. 当前阶段必须优先落地的规则集
+# 12. 文档事实源 / 代码落地规则
+
+| Rule ID | Level | Applies To | Rule Statement | Source Constraint | Baseline / Impl | Violation Impact |
+|---|---|---|---|---|---|---|
+| R-DOC-001 | MUST | FW / Driver / Tool / Test / Reviewer | 代码实现、评审和测试计划必须以 `security_workflow/03_detailed_design/10_full_design.md` 作为完整详设主入口 | CR-0005 | 10_full_design 第 10 章 | 只读分片导致遗漏字段或采用过期 ABI |
+| R-DOC-002 | MUST NOT | FW / Driver / Tool / Test / Reviewer | 不得把 `security_workflow/04_impl_design/*.md` 作为独立事实源覆盖 `10_full_design.md` | CR-0005 | 04_impl_design README / 10_full_design 第 10 章 | 多文档事实源冲突 |
+| R-DOC-003 | MUST | Design Maintainer / Codex | 修改 `04_impl_design` 中字段、结构、状态机、命令、错误码、manufacturing/SPDM 细节时，必须同步到 `10_full_design.md` 第 10 章 | CR-0005 | 10_full_design 第 10 章 | 主详设不能指导代码落地 |
+| R-DOC-004 | MUST | Design Maintainer / Codex | 若 `10_full_design.md` 与 `04_impl_design` 分片冲突，必须按 accepted CR、decision_log、official TRM、`10_full_design.md` 的优先级修正分片 | CR-0005 | decision_log DEC-0015 | 分片反向污染主设计 |
+
+---
+
+# 13. 当前阶段必须优先落地的规则集
 
 首批实现必须优先满足：
 
-1. `R-BOOT-001 ~ R-BOOT-006`
-2. `R-IF-001 ~ R-IF-009`
-3. `R-HOST-001 ~ R-HOST-005`
-4. `R-LCS-001 ~ R-LCS-004`
-5. `R-BOARD-001 ~ R-BOARD-008`
-6. `R-FW-001 ~ R-FW-004`
-7. `R-MFG-001 ~ R-MFG-004`
+1. `R-DOC-001 ~ R-DOC-004`
+2. `R-BOOT-001 ~ R-BOOT-006`
+3. `R-IF-001 ~ R-IF-009`
+4. `R-HOST-001 ~ R-HOST-005`
+5. `R-LCS-001 ~ R-LCS-004`
+6. `R-BOARD-001 ~ R-BOARD-008`
+7. `R-FW-001 ~ R-FW-016`
+8. `R-MFG-001 ~ R-MFG-007`
 
 理由：
 这些规则直接决定：
@@ -185,10 +215,11 @@
 - 是否会留下量产 debug 后门
 - 是否会通过 OOB / JTAG / DMA 留下板级绕过路径
 - 是否能支撑制造灌装闭环
+- 是否能保证代码落地只跟随一份完整详设
 
 ---
 
-# 13. 结论
+# 14. 结论
 
 本文件已经把当前阶段方案结论转成工程执行规则，后续任何实现应按以下顺序落地：
 
@@ -196,10 +227,11 @@
 constraints
 → baseline
 → chapter design
-→ impl design
+→ impl design shards
+→ 10_full_design code landing spec
 → code rules
 → traceability
 → code
 ```
 
-若后续 `mailbox_if.md / spdm_report.md / fw_header.md / manufacturing_provisioning.md` 更新，必须同步更新本文件。
+若后续 `mailbox_if.md / spdm_report.md / fw_header.md / manufacturing_provisioning.md` 更新，必须同步更新 `10_full_design.md` 第 10 章和本文件。
