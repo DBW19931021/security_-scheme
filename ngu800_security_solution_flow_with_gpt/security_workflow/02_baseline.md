@@ -1,7 +1,7 @@
 # NGU800 安全架构 Baseline V2（工程级）
 
-版本：v2.2
-状态：评审版（可用于架构评审 / 方案冻结前阶段）
+版本：v2.3
+状态：评审版（可用于架构评审 / 方案冻结前阶段；`SRC-008 当前收敛安全软件方案 2.0` 已作为当前方案源登记）
 
 ---
 
@@ -22,6 +22,7 @@
 
 | Topic | Current Decision | Status |
 |---|---|---|
+| Current Plan Source | `SRC-008 当前收敛安全软件方案 2.0` 是当前收敛方案基线；除 accepted CR、decision_log、官方 eHSM/TRM、后续用户特殊说明或源内明确例外外，旧 `SRC-001` 不再作为当前方案基线 | CONFIRMED |
 | Root of Trust | eHSM | CONFIRMED |
 | First Mutable Stage | SEC1 | CONFIRMED |
 | First Cryptographic Verifier | eHSM | CONFIRMED |
@@ -35,9 +36,19 @@
 | BootROM Role | 负责最小加载与编排，不负责复杂密码学校验 | CONFIRMED |
 | SEC Role | 启动控制面与 release owner | CONFIRMED |
 | Host Trust Model | 不可信，只投递 SEC2 及后续镜像 / 受保护包，不下发 SEC1 | CONFIRMED |
-| Board / OOB Trust Model | BMC / OOB / 管理子系统可承载管理流程，但不进入 Root of Trust | CONFIRMED |
+| Board / OOB Trust Model | OOB MCU / 板级安全 MCU 纳入板级安全边界，可承载管理、电源复位和 NOR Flash FMC 主区域受控烧写；BMC/OOB Host 仍是不可信请求方；OOB MCU 不进入 Root of Trust | CONFIRMED |
+| FMC Anti-brick Policy | 首版取消 SoC Flash 内部 FMC 备份分区；通过 OOB MCU 受控重刷 NOR Flash 中的 FMC 主区域实现防变砖；BootROM/eHSM 仍负责启动验证裁决 | CONFIRMED / TBD OOB-QSPI ABI |
 | Board Binding Stage Policy | V2.4 阶段 board binding 默认进入 attestation，不默认阻断 SEC1；是否参与 SEC2/runtime release decision 后续冻结 | ASSUMED / TBD |
 | Manufacturing Baseline | 必须定义 key 注入、锁定、审计、生命周期推进 | CONFIRMED |
+
+---
+
+# 2.1 Source Precedence Baseline
+
+- `SRC-008 当前收敛安全软件方案 2.0` 为 2026-06-03 后当前安全软件方案的主输入源。
+- `SRC-001 当前安全方案基线` 降级为历史流程参考；其旧 custom header、旧恢复或旧命名口径不得覆盖 `SRC-008`。
+- eHSM Firmware / Bootloader TRM、accepted CR、`00_project/decision_log.md` 和后续用户明确特殊说明仍可覆盖或细化 `SRC-008`。
+- `SRC-008` 未冻结的 bit-level ABI、exact key ID、exact OTP/control bit、OOB/QSPI register、工具 CLI 和 golden vector 仍按 open questions 追踪，不因本 baseline 登记自动关闭。
 
 ---
 
@@ -134,12 +145,14 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 
 涉及安全的部分采用以下裁决：
 
-- BMC / OOB / 板级 MCU / 管理子系统不进入 Root of Trust。
+- BMC / OOB Host 不可信；OOB MCU / 板级安全 MCU 纳入板级安全边界，但不进入 Root of Trust。
 - SMBus/I2C、I3C、PCIe VDM、SPI、UART、JTAG 只能作为受控管理或转发通道。
-- JTAG、DMA、Flash 更新、电源复位、PowerBrake 等高权限能力必须经 lifecycle、debug auth、firewall、scope 和审计约束。
+- JTAG、DMA、Flash 更新、电源复位、PowerBrake 等高权限能力必须经 lifecycle、debug auth、firewall、scope、授权和审计约束。
 - USER/PROD 下 JTAG 默认关闭，JTAG 打开必须经过 lifecycle + debug auth + scope bitmap + session timeout + audit；板级 MUX 不得被 BMC/OOB 单独打开。
 - 管理子系统 DMA / Host DMA / OOB DMA 对安全资源默认拒绝，只允许访问显式白名单 staging/data buffer。
+- OOB MCU 可通过受控 QSPI/SPI 路径烧写 NOR Flash 中的 FMC 主区域，用于 FMC 损坏、升级失败或不可启动场景的带外恢复；写入成功不等于启动可信。
 - OOB/BMC 可作为 provisioning transport proxy，但不得成为 trust anchor，不得接触 root secret、device private key 或 FW_KEK 明文。
+- BootROM/eHSM 必须在每次复位后重新验证、解密并执行 rollback/revoke/manifest policy；OOB MCU 不得绕过 eHSM 启动裁决，不得降低 rollback counter，不得改写 eFuse/key/counter。
 - Board binding 默认进入 attestation；不默认阻断 SEC1 verify/decrypt/release。
 - 管理子系统文档中若出现未鉴权调试、直接访问安全子系统、直接访问 DRAM/Flash/寄存器空间或绕过 SEC/eHSM 的流程，不作为安全 baseline 采用。
 
@@ -149,6 +162,8 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 |---|---|---|---|
 | 管理子系统总体架构 | 采用 `SRC-005 管理子系统方案` 的模块、链路和流程作为系统输入 | 忽略管理子系统集成 | 需要与板级、电源、复位、OOB 流程对齐 |
 | OOB trust level | BMC/OOB/Sideband 不高于 Host | 将 BMC/OOB 默认视为可信根 | OOB 链路权限高且暴露面大，不能天然可信 |
+| OOB FMC reflash | OOB MCU 作为板级安全执行体，可受控烧写 NOR Flash FMC 主区域 | 由 BMC/OOB Host 直接写启动介质，或 OOB MCU 写入后直接放行 | 防变砖由带外重刷解决；启动可信仍由 BootROM/eHSM 裁决 |
+| FMC anti-brick layout | 单 FMC 主区域 + 受保护恢复状态/审计区 | SoC Flash 内部 FMC 备份分区 / 本地备用启动状态机 | 已有 OOB 受控重刷能力，降低 BootROM/Flash metadata 复杂度 |
 | JTAG access | lifecycle + debug auth + scope + MUX 联合控制 | USER 态常开或板级 MUX 直通 | 防止绕过 secure boot、密钥和运行态隔离 |
 | Management DMA | 仅访问普通白名单 buffer | 访问安全区、执行区、OTP/eHSM 私有区 | DMA 可绕过软件边界，必须硬隔离 |
 | Power/reset control | 纳入安全状态机和审计 | 作为纯板级普通控制 | 复位/掉电会影响安全启动、恢复和 attestation 状态 |
@@ -220,7 +235,7 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 | JTAG / OOB scope 控制 | 影响 USER 态调试暴露面 | 需要冻结 debug scope bitmap、MUX/CPLD 控制权和授权流程 |
 | 管理子系统 DMA / mailbox / reset | 影响安全边界和状态一致性 | 需要冻结 firewall 白名单、可访问 buffer 和审计字段 |
 | runtime image signature-only 白名单 | 影响产品 SKU 与 verifier 策略 | 需要冻结 image_type/lifecycle/SKU/debug/release/rollback 条件 |
-| recovery image 策略 | 影响恢复、返修与安全启动闭环 | 需要冻结 image_type/signer/anchor/counter/decrypt policy |
+| OOB MCU FMC 重刷恢复 ABI | 影响恢复、返修与安全启动闭环 | 需要冻结 OOB secure boot、QSPI ownership、NOR 写保护、恢复授权 capsule、状态/审计记录和掉电保护 |
 
 ---
 

@@ -287,7 +287,7 @@ sequenceDiagram
 
 ### 6.10.5 固件包物理布局与逻辑布局
 
-CR-0006 后，本文把 `SRC-001 当前安全方案基线` 第 7 章中的“固件制作和设备侧解包流程”改写为 eHSM-native 口径。旧的 `header + Signed Region + signature + wrapped_cek + enc_payload` 只能作为流程意图参考，不再作为最终 wire/storage physical format。
+CR-0014 后，本文把 `SRC-008 当前收敛安全软件方案 2.0` 第 4 章 / 第 4.5 节中的“eHSM native package、FMC 安全固件制作和设备侧验证流程”作为当前来源。旧 `SRC-001 当前安全方案基线` 中的 `header + Signed Region + signature + wrapped_cek + enc_payload` 只能作为历史流程意图参考，不再作为最终 wire/storage physical format。
 
 ```mermaid
 flowchart LR
@@ -504,10 +504,10 @@ Host 不得：
 
 ### 6.14.2 恢复规则
 
-- `[CONFIRMED]` 升级失败时必须保证上一个 known-good 镜像仍可启动
-- `[ASSUMED]` 建议对 SEC2 与主要运行期固件采用 A/B 槽位
-- `[ASSUMED]` 恢复镜像应使用专用 recovery trust anchor 签名
-- `[ASSUMED]` 恢复入口必须受 lifecycle 控制且可审计
+- `[CONFIRMED]` 首版 FMC 防变砖不依赖 SoC Flash 内部 `FMC_A/FMC_B`、inactive slot、fallback slot 或 BootROM slot metadata 状态机；FMC 损坏、刷写失败或 verify/decrypt 失败后，恢复路径为 OOB MCU 受控重刷 NOR Flash 固定 FMC 主区域。
+- `[CONFIRMED]` GSP(SEC2) 与 runtime 固件由 Host/PCIe 重新下发并重新走 eHSM verify/decrypt/release，不在片上 Flash 中设计 A/B recovery 分区。
+- `[CONFIRMED]` OOB MCU 只能负责刷写合法性、QSPI/NOR 写入和写后校验；刷写后的 FMC 是否可执行，仍由下一次 BootROM + eHSM verify/decrypt/rollback/revoke/manifest policy 裁决。
+- `[TBD]` OOB MCU secure boot、恢复授权 capsule、QSPI ownership/arbiter、NOR 写保护、掉电保护和审计字段仍需板级 / RTL / security owner 冻结。
 
 ---
 

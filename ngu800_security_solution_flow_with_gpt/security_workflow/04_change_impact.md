@@ -5,6 +5,7 @@
 | Change ID | New / Updated Source | Summary | Priority |
 |---|---|---|---|
 | CHG-005 | `SRC-005 管理子系统方案` / `security_inputs/board/管理子系统.pdf` | 新增管理子系统方案；总体架构、模块职责、带外链路、电源/复位流程、单/双 Die 约束作为系统级输入采用；涉及安全且考虑不足、明显存在漏洞或与既定安全基线冲突的内容不直接继承 | medium |
+| CHG-010 | `SRC-008 当前收敛安全软件方案 2.0` / `security_inputs/current_plan/芯片安全软件方案_2.0.pdf` | 用户明确 2.0 PDF 为最新收敛方案；无特殊说明时当前方案以该版为准，旧 `SRC-001` 降级为历史流程参考 | high |
 
 ## 2. 输入要点提取
 
@@ -180,3 +181,28 @@
 | Traceability freshness | pass | 已新增 `T-FW-PKG-001` |
 | Open questions freshness | pass | 已新增 `OQ-0016` |
 | Unsupported confirmed claims | pass-with-open-items | 未把 per-image CEK / wrapped CEK、manifest ABI、exact key ID、exact command ABI 升级为 `[CONFIRMED]` |
+
+---
+
+## 13. CR-0014 增量影响记录
+
+| 主题 | CR-0014 裁决 | 后续影响 |
+|---|---|---|
+| 当前方案源 | `SRC-008 当前收敛安全软件方案 2.0` 作为当前安全软件方案基线；旧 `SRC-001` 降级为历史流程参考 | 后续 constraints、baseline、full design、code rules、traceability 和导出版方案如无特殊说明均按 `SRC-008` 解释 |
+| 固件包流程来源 | eHSM native package、FMC 制作和设备侧验证流程以 `SRC-008` 第 4 章 / 第 4.5 节为当前来源 | `C-BOOT-08`、`01_boot.md`、`10_full_design.md`、`efuse_key_fw_header_design.md`、`T-FW-PKG-001` 已同步 |
+| 单 FMC + OOB 恢复 | `SRC-008` 与 CR-0013 均确认首版单 FMC 固定分区，OOB MCU 受控重刷，不再采用 FMC A/B fallback | `05_code_rules.md` 已替换旧 CR-0008 A/B 和 key rotation 绑定规则 |
+| 未冻结项 | `SRC-008` 不自动冻结 bit-level ABI、exact key ID、exact OTP/control bit、OOB/QSPI register、工具 CLI/golden vector | open questions 保持不变，字段级实现仍需 owner 后续冻结 |
+
+## 13.1 CR-0014 本轮一致性检查
+
+| Check Item | Result | Notes |
+|---|---|---|
+| CR gate | pass | 已新增 `CR-0014-current-plan-v2-source-of-truth-sync.md`，状态 applied / review pending |
+| Manifest freshness | pass | 已新增 `SRC-008`、`CF-008`、`CHG-010`，并将 `SRC-001` 降级为 historical-reference |
+| Constraint freshness | pass | 已新增 `C-SRC-01`，更新 `C-BOOT-08` 和 `C-UPDATE-02` 来源 |
+| Baseline freshness | pass | 已增加 current plan source baseline |
+| Chapter freshness | pass | `01_boot.md` 已移除 SEC2/runtime A/B 建议残留；`10_full_design.md` 已登记 `SRC-008` |
+| Impl freshness | pass | `efuse_key_fw_header_design.md` 来源已改为 `SRC-008`；未改动 eHSM physical ABI |
+| Code rules freshness | pass | `R-FW-017` 至 `R-FW-020` 已同步单 FMC + OOB 恢复和 OOB 不放行规则 |
+| Traceability freshness | pass | 已新增 `T-SRC-001`，更新 FW package / OOB recovery trace source |
+| Unsupported confirmed claims | pass-with-open-items | 未关闭 manifest ABI、exact eHSM key ID、OOB/QSPI ABI、tool CLI/golden vector 等开放项 |

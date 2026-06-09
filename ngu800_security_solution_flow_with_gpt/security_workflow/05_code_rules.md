@@ -1,6 +1,6 @@
 # NGU800 安全方案 Code Rules（强化版 V1.0）
 
-状态：当前阶段代码约束文件（已纳入 `SRC-005 管理子系统方案` 增量输入）
+状态：当前阶段代码约束文件（已纳入 `SRC-005 管理子系统方案` 和 `SRC-008 当前收敛安全软件方案 2.0` 增量输入）
 适用范围：BootROM / SEC1 / SEC2 / eHSM 适配层 / Mailbox Driver / Host 代理层 / Provisioning Tool
 目的：将 `01_constraints.md`、`02_baseline.md`、`10_full_design.md` 的设计结论转成工程开发阶段必须遵守的规则；`04_impl_design` 仅作为已同步编辑分片引用
 
@@ -132,6 +132,10 @@
 | R-FW-014 | MUST | Image Packager / eHSM Adapter | SEC1 正式安全启动路径必须对完整 Code region 使用 eHSM sign+encrypt profile；header 只能作为 eHSM native plaintext metadata，不得承载未保护的 NGU release 决策 | C-BOOT-04 / C-BOOT-08 | 10_full_design 3.10.5 / 3.10.6 | SEC1 机密性或 release policy 被降级 |
 | R-FW-015 | MUST NOT | BootROM / SEC Verify Flow | 若 eHSM native header 中某些字段未被 eHSM 认证/AAD 覆盖，BootROM/SEC 不得将这些字段作为 NGU 项目级 image type、load/entry、lifecycle、measurement 或 release 决策依据 | C-BOOT-08 | 10_full_design 3.10.5 / 10.5.21 | 明文 header 被篡改导致策略绕过 |
 | R-FW-016 | MUST | Test / CI | package golden/tamper vector 必须覆盖篡改 manifest `ngu_image_type`、`entry_addr`、`version_counter`、payload 字节、`Code_Size` 或截断 Code region 后不得 release | C-BOOT-08 | 10_full_design 3.10.6 / 10.5.21 | 缺少失败路径验证，工具链和启动实现可能不一致 |
+| R-FW-017 | MUST | BootROM / FMC Recovery | FMC 防变砖必须采用单 FMC 固定分区 + OOB MCU 受控重刷路径；BootROM 不得实现 FMC_A/FMC_B、fallback slot 或 `fmc_slot_metadata` 启动选择状态机 | SRC-008 / CR-0013 / C-UPDATE-02 | 10_full_design 3.14.3 | BootROM 复杂度回升或旧 fallback 逻辑绕过当前基线 |
+| R-FW-018 | MUST NOT | GSP / Runtime Update | 不得把 GSP/PM/RAS/Codec 等 Host 下发固件设计成片上 Flash A/B recovery 分区；失败后应由 Host 重新下发并重新走 eHSM verify/release | SRC-008 / CR-0013 | 10_full_design 3.9 / 3.14.2 | 扩大 Flash recovery 范围并影响其他团队边界 |
+| R-FW-019 | MUST | Key Rotation | 密钥 slot / key epoch 轮换不得绑定 FMC_A/B 或 inactive slot；new key 先进入 pending，必须通过新策略包验证、BootROM/eHSM 下一次启动验证和 OOB 可恢复性确认后才能 active，old key 只能先 deprecated | SRC-008 / CR-0013 / C-EHSM-01 | 10_full_design 3.14.4 / 10.3.18.1 | key 轮换导致单 FMC 不可恢复或旧 key 过早撤销 |
+| R-FW-020 | MUST NOT | OOB MCU / Recovery Tool | OOB MCU 刷写 NOR Flash 成功不得被解释为 FMC 可执行；每次重刷后的 FMC 都必须在下一次启动中由 BootROM + eHSM 重新 verify/decrypt/rollback/revoke/manifest policy 裁决 | SRC-008 / CR-0013 / C-UPDATE-02 | 10_full_design 7 / 8.13 / 10.3.18.1 | OOB 刷写路径变成绕过 SoC secure boot 的后门 |
 
 ---
 
@@ -204,7 +208,7 @@
 4. `R-HOST-001 ~ R-HOST-005`
 5. `R-LCS-001 ~ R-LCS-004`
 6. `R-BOARD-001 ~ R-BOARD-008`
-7. `R-FW-001 ~ R-FW-016`
+7. `R-FW-001 ~ R-FW-020`
 8. `R-MFG-001 ~ R-MFG-007`
 
 理由：

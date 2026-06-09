@@ -67,6 +67,12 @@ security_inputs/
 security_inputs/inputs_manifest.md
 ```
 
+当前 source precedence：
+
+- `security_inputs/current_plan/芯片安全软件方案_2.0.pdf` 已登记为 `SRC-008 当前收敛安全软件方案 2.0`。
+- 2026-06-03 后，如无 accepted CR、`00_project/decision_log.md`、官方 eHSM/TRM、后续用户特殊说明或源内明确例外，当前安全软件方案以 `SRC-008` 为准。
+- 旧 `security_inputs/current_plan/安全方案.pdf` / `SRC-001` 仅保留历史流程参考，不再作为当前方案基线。
+
 ### 步骤 1：生成约束表
 执行：
 

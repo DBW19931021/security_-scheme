@@ -1,7 +1,7 @@
 # NGU800 安全约束定义（01_constraints.md）
 
-版本：v1.2
-状态：Draft（当前阶段约束收敛版本）
+版本：v1.3
+状态：Draft（当前阶段约束收敛版本；`SRC-008 当前收敛安全软件方案 2.0` 已登记为当前方案基线）
 适用范围：NGU800 / NGU800P 安全子系统 + 启动链路
 
 ---
@@ -17,7 +17,40 @@
 
 ---
 
-# 2. Root of Trust 约束
+# 2. Source-of-Truth 约束
+
+<a id="c-src-01"></a>
+
+## 【C-SRC-01】当前方案源必须以 `芯片安全软件方案_2.0.pdf` 为准
+
+来源：
+- `SRC-008 当前收敛安全软件方案 2.0`
+- `CR-0014-current-plan-v2-source-of-truth-sync`
+- 用户 2026-06-03 明确指示：`current_plan` 中更新的 `芯片安全软件方案_2.0.pdf` 为最新收敛版本，无特殊说明时均以该版为准
+
+要求：
+- `[CONFIRMED]` 除 accepted CR、`00_project/decision_log.md`、官方 eHSM/TRM、后续用户特殊说明或 `SRC-008` 内明确例外外，当前安全软件方案口径以 `SRC-008 当前收敛安全软件方案 2.0` 为准。
+- `[CONFIRMED]` `SRC-001 当前安全方案基线` 降级为历史流程参考；若其与 `SRC-008` 冲突，必须采用 `SRC-008` 或更高优先级来源。
+- `[CONFIRMED]` 后续更新 constraints、baseline、详细设计、实现级设计、code rules、traceability 和导出版方案时，必须先检查 `inputs_manifest.md` 中的 source precedence。
+- `[TBD]` `SRC-008` 中未给出 bit-level ABI、exact key ID、exact OTP/control bit、OOB/QSPI register 或工具 CLI 的内容，仍保持 open questions，不得因 2.0 PDF 登记而自动升级为字段级冻结。
+
+Evidence：
+- `SRC-008` 覆盖安全启动、FMC/GSP 命名、单 FMC 固定分区、OOB/QSPI 恢复、eHSM native package、密钥/证书/制造、生命周期/Debug、SPDM/attestation、密钥轮换和板级/OOB 边界。
+- 旧 `SRC-001` 已被 `SRC-008` supersede，仍只保留历史流程表达价值。
+
+Decision Rationale：
+- 当前方案源必须唯一明确，避免旧 current_plan、CR 分片和方案导出版之间形成并列事实源。
+- 源优先级升级不等于发明新的 physical ABI；eHSM TRM 和 accepted CR 仍保持更高优先级。
+
+Chapter Binding：
+- all chapters / ch1 / ch3 / ch4 / ch5 / ch7 / ch8 / ch9 / ch10 / ch11 / ch12
+
+Impl Binding：
+- inputs_manifest / 10_full_design / efuse_key_fw_header_design / mailbox_if / spdm_report / manufacturing_provisioning / 05_code_rules / 06_traceability
+
+---
+
+# 3. Root of Trust 约束
 
 <a id="c-root-01"></a>
 
@@ -43,7 +76,7 @@ Impl Binding：
 
 ---
 
-# 3. Secure Boot 约束
+# 4. Secure Boot 约束
 
 <a id="c-boot-01"></a>
 
@@ -127,11 +160,13 @@ Impl Binding：
 - `[CONFIRMED]` SEC2 decrypt failure 必须阻断安全控制面启动。
 - `[ASSUMED]` PM / RAS / Codec 等关键 runtime image 在 USER/PROD 默认 sign + encrypt。
 - `[TBD]` signature-only 只能作为显式白名单例外，准入条件至少绑定 image_type、lifecycle、product SKU、debug state、release policy、rollback policy、是否包含敏感逻辑/数据。
-- `[TBD]` recovery image 的 image_type、signer、trust anchor、rollback counter、decrypt policy 必须在详细设计冻结前关闭。
+- `[CONFIRMED]` 首版不采用长期静态 recovery image；FMC 防变砖依赖 OOB MCU 受控重刷 NOR Flash 中的 FMC 主区域。
+- `[TBD]` 若后续产品策略重新引入静态 rescue/recovery image，其 image_type、signer、trust anchor、rollback counter、decrypt policy 必须单独立项冻结。
 
 Decision Rationale：
 - SEC2 是后续安全控制面，必须同时保护完整性和机密性。
 - PM / RAS / Codec 可能承载关键 runtime 控制逻辑，默认策略应偏保守。
+- FMC 是本地 NOR Flash 中唯一需要片上启动保护的一级可变固件；OOB MCU 受控重刷提供恢复能力后，不再要求 SoC Flash 内部保留 FMC 备份分区。
 - signature-only 作为产品策略例外时必须可被 measurement / attestation 或安全状态表体现。
 
 Chapter Binding：
@@ -203,14 +238,15 @@ Impl Binding：
 
 来源：
 - `CR-0006-firmware-package-build-verify-flow`
-- `SRC-001 当前安全方案基线` 第 6/7 章
+- `SRC-008 当前收敛安全软件方案 2.0` 第 4 章 / 第 4.5 节
+- `SRC-001 当前安全方案基线` 历史流程参考
 - `CR-0004-ehsm-native-header-otp-layout-alignment`
 - `SRC-006 eHSM Firmware TRM`
 - `SRC-007 eHSM Bootloader TRM`
 
 要求：
 - `[CONFIRMED]` 平台侧固件制作工具和设备侧 BootROM/SEC/eHSM verify-decrypt 路径必须使用同一套 eHSM native secure boot image header + NGU protected manifest 契约。
-- `[CONFIRMED]` 平台侧工具不得再生成与 eHSM native header 并列的 NGU physical verification header；`SRC-001` 中的 `header + Signed Region + signature + wrapped_cek + enc_payload` 仅保留为流程意图参考。
+- `[CONFIRMED]` 平台侧工具不得再生成与 eHSM native header 并列的 NGU physical verification header；旧 `SRC-001` 中的 `header + Signed Region + signature + wrapped_cek + enc_payload` 仅保留为历史流程意图参考，当前包格式以 `SRC-008` 的 eHSM native package 口径为准。
 - `[CONFIRMED]` 固件制作流程必须明确 payload、NGU protected manifest、eHSM native header、Code region、版本计数、算法 profile、签名/加密 profile 和发布验收检查之间的关系。
 - `[CONFIRMED]` 设备侧 verify/decrypt 流程必须先由 eHSM 完成 native header 检查、签名校验、rollback / version counter 检查、decrypt output，再由 BootROM / SEC 解析 NGU manifest 并执行项目级 release policy。
 - `[TBD]` `ngu_image_manifest_t` bit-level ABI、eHSM 是否解析 manifest、exact key ID、per-image CEK / wrapped CEK 和工具 CLI / golden vector 仍需 owner 后续冻结。
@@ -255,7 +291,7 @@ Impl Binding：
 
 ---
 
-# 4. Crypto 约束
+# 5. Crypto 约束
 
 <a id="c-if-01"></a>
 
@@ -273,7 +309,7 @@ Impl Binding：
 
 ---
 
-# 5. Key Management 约束
+# 6. Key Management 约束
 
 <a id="c-key-01"></a>
 
@@ -297,7 +333,7 @@ Impl Binding：
 
 ---
 
-# 6. Debug 约束
+# 7. Debug 约束
 
 <a id="c-debug-01"></a>
 
@@ -321,7 +357,7 @@ USER 生命周期：
 
 ---
 
-# 7. Host 约束
+# 8. Host 约束
 
 <a id="c-host-01"></a>
 
@@ -340,7 +376,7 @@ Host 不允许：
 
 ---
 
-# 8. 访问控制约束
+# 9. 访问控制约束
 
 <a id="c-access-01"></a>
 
@@ -368,7 +404,7 @@ Host 不允许：
 
 ---
 
-# 9. Board / Management 约束
+# 10. Board / Management 约束
 
 <a id="c-board-01"></a>
 
@@ -481,7 +517,7 @@ Impl Binding：
 
 ---
 
-# 10. Firmware 更新约束
+# 11. Firmware 更新约束
 
 <a id="c-update-01"></a>
 
@@ -498,13 +534,19 @@ Impl Binding：
 
 ## 【C-UPDATE-02】必须支持受控升级 / 恢复
 
+来源：
+- `SRC-008 当前收敛安全软件方案 2.0`
+- `CR-0013-oob-mcu-secure-boundary-single-fmc-recovery`
+
 - 必须定义升级路径
 - 必须定义失败恢复策略
-- A/B 是否启用可在后续实现中裁决，但恢复机制不能缺失
+- `[CONFIRMED]` 首版 FMC 恢复采用单 FMC 主区域 + OOB MCU 受控重刷，不采用 SoC Flash 内部 FMC 备份分区。
+- OOB MCU 写入 NOR Flash 成功不等于固件可信；BootROM/eHSM 下次启动必须重新执行 verify/decrypt/rollback/revoke/manifest policy。
+- 恢复机制必须冻结 OOB MCU secure boot、QSPI ownership/arbiter、NOR 写保护、恢复授权 capsule、状态/审计记录和掉电保护。
 
 ---
 
-# 11. Attestation 约束
+# 12. Attestation 约束
 
 <a id="c-att-01"></a>
 
@@ -542,7 +584,7 @@ Impl Binding：
 
 ---
 
-# 12. Manufacturing / Provisioning 约束
+# 13. Manufacturing / Provisioning 约束
 
 <a id="c-mfg-01"></a>
 
@@ -557,7 +599,7 @@ Impl Binding：
 
 ---
 
-# 13. 待补充（后续自动收敛）
+# 14. 待补充（后续自动收敛）
 
 - PCIe 安全模型细化
 - SPDM report 字段级定义
@@ -565,4 +607,5 @@ Impl Binding：
 - board binding 是否参与 SEC2/runtime release decision
 - JTAG scope bitmap、CPLD/MUX 控制权和板级调试授权闭环
 - 管理子系统 DMA / mailbox / 复位控制的 firewall 和审计字段
-- recovery image 的 image_type、signer、trust anchor、rollback counter、decrypt policy
+- OOB MCU FMC 重刷恢复 ABI：OOB secure boot、QSPI ownership、NOR 写保护、恢复授权 capsule、状态/审计记录、掉电保护
+- 若未来重新引入静态 rescue/recovery image，则单独冻结 image_type、signer、trust anchor、rollback counter、decrypt policy

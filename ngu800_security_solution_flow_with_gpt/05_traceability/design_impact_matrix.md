@@ -272,3 +272,35 @@
 | 是否影响安全主路径 | `No`，仅增强文档可读性和跳转 |
 | 是否需要 GPT / owner 设计裁决 | `No`，用户已明确授权可读性改造，不改变安全结论 |
 | 是否允许 Codex 直接修改正文 | `Yes, after user execution authorization; Codex only applied readability/linking scope` |
+
+---
+
+## CR-0014 影响矩阵：current_plan 2.0 当前方案源同步
+
+| 层级 | 对象 | 是否影响 | 影响说明 | 必须同步文件 | 状态 |
+|---|---|---|---|---|---|
+| 输入 | inputs manifest / 新资料 | `Yes` | 新增 `SRC-008 当前收敛安全软件方案 2.0`，将 `SRC-001` 降级为历史流程参考 | `security_inputs/inputs_manifest.md` | `applied` |
+| CR | Change Request | `Yes` | 新增 CR-0014，记录 source precedence 与旧口径替换范围 | `change_requests/CR-0014-current-plan-v2-source-of-truth-sync.md` | `applied` |
+| 约束 | `security_workflow/01_constraints.md` | `Yes` | 新增 `C-SRC-01`，更新 `C-BOOT-08` / `C-UPDATE-02` 来源 | `security_workflow/01_constraints.md` | `applied` |
+| Baseline | `security_workflow/02_baseline.md` | `Yes` | 增加 current plan source baseline，不改变 eHSM RoT 等安全主裁决 | `security_workflow/02_baseline.md` | `applied` |
+| 详细设计 | boot | `Yes` | 固件包流程来源改为 `SRC-008`，删除 SEC2/runtime A/B recovery 建议残留 | `03_detailed_design/01_boot.md` | `applied` |
+| 详细设计 | full design | `Yes` | 版本升到 V2.6，登记 `SRC-008` 为当前方案源，并同步固件包实现级来源 | `03_detailed_design/10_full_design.md` | `applied` |
+| 实现设计 | FW header / eFuse | `Yes` | 固件包和设备侧 verify/decrypt 流程来源改为 `SRC-008` | `04_impl_design/efuse_key_fw_header_design.md` | `applied` |
+| Code rules | 开发约束 | `Yes` | 替换旧 CR-0008 FMC A/B / key rotation 绑定规则为单 FMC + OOB 重刷与 OOB 不放行规则 | `security_workflow/05_code_rules.md` | `applied` |
+| Traceability | 追踪链路 | `Yes` | 新增 `T-SRC-001`，更新 `T-FW-PKG-001` 与 `T-UPD-002` 来源 | `security_workflow/06_traceability.md` | `applied` |
+| Change impact | 增量影响记录 | `Yes` | 新增 CR-0014 影响记录和一致性检查 | `security_workflow/04_change_impact.md` | `applied` |
+| Workflow docs | README | `Yes` | 工作流说明增加当前 source precedence | `README_使用说明.md` | `applied` |
+| Project docs | 导出版方案 | `Yes` | 页首/修订说明同步 2.0 PDF 当前为准 | selected `docs/*.md` | `applied` |
+| Project records | 决策/变更 | `Yes` | 记录 DEC-0019、CHG-0011 | `00_project/decision_log.md`; `00_project/changelog.md` | `applied` |
+| Open questions | 未冻结项 | `No` | 仅确认 source precedence，不关闭 manifest ABI、exact key ID、OOB/QSPI ABI 等开放问题 | `00_project/open_questions.md` | `no-change` |
+
+## CR-0014 影响结论
+
+| 项目 | 结论 |
+|---|---|
+| 是否必须建立 CR | `Yes` |
+| 是否影响 baseline | `Yes`，仅增加 source precedence baseline |
+| 是否影响两个以上文件 | `Yes` |
+| 是否影响安全主路径 | `Yes`，涉及 boot / update / OOB recovery / FW package source |
+| 是否需要 GPT / owner 设计裁决 | `Yes`，用户已于 2026-06-03 明确新版 PDF 为当前收敛版 |
+| 是否允许 Codex 直接修改正文 | `Yes, after user execution authorization; Codex only applied source-of-truth and stale-wording sync` |

@@ -5,9 +5,9 @@
 > 代码落地、评审和 ChatGPT 方案审查应优先读取 `security_workflow/03_detailed_design/10_full_design.md`。
 > 修改本文件时，必须同步主详设第 10 章；若发生冲突，以 accepted CR、decision_log、official TRM 和 `10_full_design.md` 为准。
 
-状态：实现级详设（CR-0004 / CR-0006 accepted-apply 后修订）
+状态：实现级详设（CR-0004 / CR-0006 / CR-0014 accepted-apply 后修订）
 适用范围：NGU800 / NGU800P 安全启动、密钥体系、反回滚、制造灌装
-主要来源：`CR-0004`、`CR-0006`、`SRC-001 当前安全方案基线` 第 6/7 章、`SRC-006 eHSM Firmware TRM`、`SRC-007 eHSM Bootloader TRM`
+主要来源：`CR-0004`、`CR-0006`、`CR-0014`、`SRC-008 当前收敛安全软件方案 2.0` 第 4 章 / 第 4.5 节、`SRC-006 eHSM Firmware TRM`、`SRC-007 eHSM Bootloader TRM`
 
 ---
 
@@ -131,7 +131,7 @@ manifest 可承载以下 NGU 项目级逻辑：
 
 #### 4.4.1 旧 current_plan 格式的处理
 
-`SRC-001 当前安全方案基线` 第 6/7 章中描述的：
+旧 `SRC-001 当前安全方案基线` 第 6/7 章中描述的：
 
 ```text
 header + Signed Region + signature + wrapped_cek + enc_payload

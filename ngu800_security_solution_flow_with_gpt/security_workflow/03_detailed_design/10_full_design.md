@@ -1,10 +1,14 @@
-# NGU800 安全方案详细设计说明书（整合版 V2.4）
+# NGU800 安全方案详细设计说明书（整合版 V2.6）
 
-版本：V2.4
-状态：pending review（CR-0001 applied；CR-0003 applied；CR-0004 applied；CR-0005 applied；CR-0006 applied；CR-0007 applied；局部 reviewed，未升级为完整 reviewed baseline）
-生成日期：2026-05-08
+版本：V2.6
+状态：pending review（CR-0001 applied；CR-0003 applied；CR-0004 applied；CR-0005 applied；CR-0006 applied；CR-0007 applied；CR-0008 applied；CR-0013 applied；CR-0014 applied；局部 reviewed，未升级为完整 reviewed baseline）
+生成日期：2026-06-03
 
-> 本文件为 NGU800 安全方案的完整详设与代码落地主入口。CR-0005 后，章节级详设与 `04_impl_design` 实现级分片的有效内容必须在本文可见；`04_impl_design` 仅作为编辑分片 / extracted implementation shard，不再作为独立事实源。本文按 CR-0001 统一章节顺序、标题编号、SEC1 加密口径和板级安全并入状态，按 CR-0003 同步 runtime image policy、board binding、JTAG/DMA/OOB、attestation report、manufacturing/RMA 阶段性裁决，按 CR-0004/CR-0005 同步 eHSM native header、OTP/key/counter source-conformance 和单文档代码落地规则，按 CR-0006 补充固件包格式、平台侧制作流程和设备侧 verify/decrypt 流程，并按 CR-0007 增强“生效约束 ID”的跳转链接与摘要可读性。V2.4 仍保持 pending review，不升级为完整 reviewed baseline。
+> 本文件为 NGU800 安全方案的完整详设与代码落地主入口。CR-0005 后，章节级详设与 `04_impl_design` 实现级分片的有效内容必须在本文可见；`04_impl_design` 仅作为编辑分片 / extracted implementation shard，不再作为独立事实源。本文按 CR-0001 统一章节顺序、标题编号、SEC1 加密口径和板级安全并入状态，按 CR-0003 同步 runtime image policy、board binding、JTAG/DMA/OOB、attestation report、manufacturing/RMA 阶段性裁决，按 CR-0004/CR-0005 同步 eHSM native header、eFuse/key/counter source-conformance 和单文档代码落地规则，按 CR-0006 补充固件包格式、平台侧制作流程和设备侧 verify/decrypt 流程，按 CR-0007 增强“生效约束 ID”的跳转链接与摘要可读性，按 CR-0008 曾将 FMC 防变砖机制收敛为 Flash FMC 双分区，按 CR-0013 更新为 OOB MCU 纳入安全边界并通过受控重刷 NOR Flash 单 FMC 区域实现防变砖，按 CR-0014 登记 `SRC-008 当前收敛安全软件方案 2.0` 为当前方案源。V2.6 仍保持 pending review，不升级为完整 reviewed baseline。
+
+## 当前方案源优先级
+
+`SRC-008 当前收敛安全软件方案 2.0`（`security_inputs/current_plan/芯片安全软件方案_2.0.pdf`）是 2026-06-03 后当前收敛方案基线。除 accepted CR、`00_project/decision_log.md`、官方 eHSM/TRM、后续用户特殊说明或源内明确例外外，本文件、约束、baseline、code rules、traceability 和导出版方案均应按该版解释。旧 `SRC-001 当前安全方案基线` 仅保留历史流程参考价值。
 
 ## 约束链接说明
 
@@ -30,7 +34,7 @@
 # 1. 设计基线摘要
 
 
-版本：v2.2
+版本：v2.3
 状态：评审版（可用于架构评审 / 方案冻结前阶段）
 
 ---
@@ -52,16 +56,19 @@
 
 | Topic | Current Decision | Status |
 |---|---|---|
+| Current Plan Source | `SRC-008 当前收敛安全软件方案 2.0` 是当前收敛方案基线；除 accepted CR、decision_log、官方 eHSM/TRM、后续用户特殊说明或源内明确例外外，旧 `SRC-001` 不再作为当前方案基线 | CONFIRMED |
 | Root of Trust | eHSM | CONFIRMED |
 | First Mutable Stage | FMC（安全抽象名：SEC1） | CONFIRMED |
 | First Cryptographic Verifier | eHSM | CONFIRMED |
 | SEC1/FMC Protection Policy | FMC 是一级固件，在安全链路抽象中等价 SEC1；FMC 来源为 NOR / 本地 Flash，正式安全启动路径必须签名 + 加密，验证与解密服务由 eHSM / 安全子系统提供 | CONFIRMED |
 | SEC2/GSP Protection Policy | GSP 是二级安全管理固件，在安全链路抽象中等价 SEC2；GSP 在正式安全启动路径中必须签名 + 加密，验证、解密、measurement 与 release 由 FMC/GSP 调 eHSM 路径完成 | CONFIRMED |
 | Runtime Image Policy | PM / RAS / Codec 等关键 runtime image 在 USER/PROD 默认签名 + 加密；signature-only 仅允许作为产品白名单例外 | ASSUMED / TBD |
+| FMC Anti-brick Policy | 首版取消 SoC Flash 内部 FMC 备份分区；OOB MCU / 板级安全 MCU 纳入安全边界，通过受控烧写 NOR Flash 中 FMC 主区域实现防变砖；BootROM/eHSM 仍负责启动验证裁决 | CONFIRMED / TBD OOB/QSPI ABI |
 | eHSM Image Container | FMC（SEC1）/ GSP（SEC2）的密码学 verify/decrypt container 采用 eHSM native secure boot image header；NGU 项目 metadata 放入 Code region manifest / policy table | CONFIRMED / TBD |
 | Firmware Package Build/Verify Contract | 平台侧固件制作工具与设备侧 verify/decrypt 路径共享同一 eHSM native header + NGU protected manifest 契约；旧自定义 header 仅作流程意图参考 | CONFIRMED / TBD |
-| OTP / Key / Counter Mapping | physical OTP/control/key/counter 以 eHSM TRM 为准；NGU `OTP-0..OTP-7`、`*_MIN_VER` 和 key name 仅为 logical alias / rollback domain | CONFIRMED / TBD |
-| Algorithm Authority | secure boot / upgrade 验签算法 authority 来自 eHSM OTP/control field；NGU manifest 只记录 expected profile / audit profile | CONFIRMED |
+| eFuse / Key / Counter Mapping | physical eFuse/control/key/counter 以 eHSM TRM 为准；NGU `eFuse-0..eFuse-7`、`*_MIN_VER` 和 key name 仅为 logical alias / rollback domain | CONFIRMED / TBD |
+| Key Slot Rotation Policy | 密钥 slot 用于客户自主 key 轮换、撤销和过渡期兼容；轮换不再绑定 FMC 本地备份分区，必须与 update authorization、rollback/revoke、OOB 可恢复路径联动 | CONFIRMED / TBD exact key ID |
+| Algorithm Authority | secure boot / upgrade 验签算法 authority 来自 eHSM eFuse/control field；NGU manifest 只记录 expected profile / audit profile | CONFIRMED |
 | BootROM Role | 负责最小加载与编排，不负责复杂密码学校验 | CONFIRMED |
 | SEC Role | 启动控制面与 release owner | CONFIRMED |
 | Host Trust Model | 不可信，只投递 GSP（SEC2）及后续镜像 / 受保护包，不下发 FMC（SEC1） | CONFIRMED |
@@ -92,7 +99,7 @@
 
 ### 1.3.1 Root of Trust
 
-- Root Key 存储于 eFuse / OTP 安全区
+- Root Key 存储于 eFuse 安全区
 - Root of Trust 由 eHSM 提供
 - BootROM 不持有私钥
 
@@ -126,7 +133,7 @@
 | BootROM crypto | 不做复杂校验 | BootROM 内嵌完整 crypto 验签路径 | 缩小攻击面，复用 eHSM |
 | Image container | eHSM native header 作为 verify/decrypt container，NGU metadata 进入 protected manifest | NGU 自定义 physical FW header 与 eHSM header 并列 | 避免两套 physical ABI 和工具链冲突 |
 | Firmware package flow | image packager 生成 eHSM native package，设备侧 eHSM 先 verify/decrypt，BootROM/SEC 再解析 NGU manifest 和 release policy | 平台工具生成旧 `header + Signed Region + signature + wrapped_cek + enc_payload` 作为最终 wire/storage 格式 | 保留制作/验证流程的可读性，同时不违背 eHSM TRM |
-| OTP/key/counter | eHSM physical field + NGU logical alias / customization TBD | NGU 自定义 physical OTP 分区、32-bit per-image physical counter、未映射 key slot | follow `SRC-002/SRC-006/SRC-007`，降低 RTL/制造偏差 |
+| eFuse/key/counter | eHSM physical field + NGU logical alias / customization TBD | NGU 自定义 physical eFuse 分区、32-bit per-image physical counter、未映射 key slot | follow `SRC-002/SRC-006/SRC-007`，降低 RTL/制造偏差 |
 | Key ownership | 私钥不出 eHSM | 私钥落在 Host / 管理核 | 不满足安全边界 |
 | Workflow | constraints → baseline → detailed → impl | raw inputs 直接生成 full design | 防止方案漂移 |
 
@@ -148,7 +155,7 @@ BootROM → FMC（SEC1，NOR / 本地）→ GSP（SEC2，Host 下发）→ 子�
 - PM、RAS、Codec 等后续关键 runtime image 在 USER/PROD 产品形态中默认签名 + 加密；若采用 signature-only，必须由产品安全策略显式允许并在 lifecycle / attestation / debug 状态中可见
 - 未验签禁止执行
 - 支持 Anti-rollback；物理承载先对齐 eHSM Version Counter / monotonic counter / owner 确认的等价机制
-- FW Encrypt Branch 至少对 FMC（SEC1）+ GSP（SEC2）强制启用；per-image CEK / wrapped CEK 只有在 eHSM owner 明确支持后才能升级为 CONFIRMED
+- Firmware encrypt domain 至少对 FMC（SEC1）+ GSP（SEC2）强制启用；per-image CEK / wrapped CEK 只有在 eHSM owner 明确支持后才能升级为 CONFIRMED
 - FMC/GSP 的 eHSM native `Image_Type` 不承载 NGU 项目级 FMC/GSP/runtime image type；NGU `ngu_image_type` 放入 protected manifest / policy table
 - FMC（SEC1）/ GSP（SEC2）sign+encrypt 不得走 eHSM NVM only verify；必须使用 verify+decrypt output path 和受控 RAM / staging / output buffer
 - 平台侧固件制作工具必须生成 eHSM native package；NGU manifest、payload、版本、rollback domain、measurement slot 和 expected algorithm profile 必须被 verify/decrypt 成功后的受保护 Code region 覆盖
@@ -193,7 +200,7 @@ BootROM → FMC（SEC1，NOR / 本地）→ GSP（SEC2，Host 下发）→ 子�
 | 管理子系统总体架构 | 采用 `SRC-005 管理子系统方案` 的模块、链路和流程作为系统输入 | 忽略管理子系统集成 | 需要与板级、电源、复位、OOB 流程对齐 |
 | OOB trust level | BMC/OOB/Sideband 不高于 Host | 将 BMC/OOB 默认视为可信根 | OOB 链路权限高且暴露面大，不能天然可信 |
 | JTAG access | lifecycle + debug auth + scope + MUX 联合控制 | USER 态常开或板级 MUX 直通 | 防止绕过 secure boot、密钥和运行态隔离 |
-| Management DMA | 仅访问普通白名单 buffer | 访问安全区、执行区、OTP/eHSM 私有区 | DMA 可绕过软件边界，必须硬隔离 |
+| Management DMA | 仅访问普通白名单 buffer | 访问安全区、执行区、eFuse/eHSM 私有区 | DMA 可绕过软件边界，必须硬隔离 |
 | Power/reset control | 纳入安全状态机和审计 | 作为纯板级普通控制 | 复位/掉电会影响安全启动、恢复和 attestation 状态 |
 
 ---
@@ -215,9 +222,9 @@ BootROM → FMC（SEC1，NOR / 本地）→ GSP（SEC2，Host 下发）→ 子�
 
 | Topic | Decision | Open Issue |
 |---|---|---|
-| Root Key 注入 | 通过制造安全通道灌入 OTP/eFuse | 工站对接细节待定 |
+| Root Key 注入 | 通过制造安全通道灌入 eFuse | 工站对接细节待定 |
 | Root Key 锁定 | MANU → USER 前必须锁定 | 读回校验策略待定 |
-| 测试 Key 清理 | USER 前必须清理 | 测试证书链清理动作待定 |
+| 测试 Key 清理 | USER 前必须清理 | 测试 signer、测试证书和测试调试白名单清理动作待定 |
 | 审计日志 | 制造阶段必须记录 | 日志落点待定 |
 
 ---
@@ -226,7 +233,7 @@ BootROM → FMC（SEC1，NOR / 本地）→ GSP（SEC2，Host 下发）→ 子�
 
 - 方案必须同时支持国密和国际算法栈
 - 实现层不得把算法写死到单一栈
-- secure boot / upgrade 的算法 authority 来自 eHSM OTP/control field，例如 `SocBootAlg / SocUpgradeAlg`
+- secure boot / upgrade 的算法 authority 来自 eHSM eFuse/control field，例如 `SocBootAlg / SocUpgradeAlg`
 - NGU manifest / report / mailbox 可记录 expected algorithm profile，用于一致性检查、审计和 attestation，不得覆盖 eHSM control field
 
 ---
@@ -252,7 +259,7 @@ BootROM → FMC（SEC1，NOR / 本地）→ GSP（SEC2，Host 下发）→ 子�
 graph TD
     BR[BootROM] --> SEC[SEC Core / C908]
     BR --> EH[eHSM]
-    EH --> OTP[eFuse / OTP]
+    EH --> eFuse[eFuse]
     SEC --> EH
     SEC --> FW[SEC1 / SEC2 / Other FW]
     Host --> SEC
@@ -307,17 +314,17 @@ sequenceDiagram
 
 ```mermaid
 graph TD
-    BR[BootROM] -->|locate FMC(SEC1) in NOR / local Flash| FLASH[NOR Flash]
-    BR -->|VERIFY_FMC/VERIFY_SEC1: verify + decrypt mandatory| EH[eHSM]
-    EH --> OTP[OTP / eFuse / Root / Counter / Lifecycle]
-    BR -->|load controlled result| FMC[FMC / SEC1]
-    FMC -->|Host channel + VERIFY_IMAGE| GSP[GSP / SEC2]
-    Host[Host] -->|deliver GSP(SEC2) / runtime protected packages| FMC
-    GSP -->|verify / measure / release| FW[PM / RAS / OMP / RMP / Other FW]
-    GSP -->|Mailbox security services| EH
-    BMC[BMC / OOB / Management] -->|controlled request / board flow| GSP
-    BMC -. no RoT .-> EH
-    Host -. no trust .-> EH
+    BR["BootROM"] -->|"locate FMC/SEC1 in local Flash"| FLASH["NOR Flash / local Flash"]
+    BR -->|"VERIFY_FMC: verify + decrypt mandatory"| EH["eHSM"]
+    EH --> eFuse["eFuse / Root / Counter / Lifecycle"]
+    BR -->|"load controlled result"| FMC["FMC / SEC1"]
+    FMC -->|"Host channel + VERIFY_IMAGE"| GSP["GSP / SEC2"]
+    HOST["Host"] -->|"deliver GSP/runtime protected packages"| FMC
+    GSP -->|"verify / measure / release"| FW["PM / RAS / OMP / RMP / Other FW"]
+    GSP -->|"Mailbox security services"| EH
+    BMC["BMC / OOB / Management"] -->|"controlled request / board flow"| GSP
+    BMC -.->|"no RoT"| EH
+    HOST -.->|"no trust"| EH
 ```
 
 ### 图下说明
@@ -326,7 +333,7 @@ graph TD
 2. BootROM 只做最小初始化、定位 FMC、调用 eHSM 受控接口、根据结果装载或拒绝启动。
 3. eHSM 完成 FMC（SEC1）的验签、解密 / unwrap、rollback、吊销和 measurement 相关安全服务。
 4. GSP 是后续运行期安全控制面，在安全链路抽象中等价 SEC2，负责 Host/OOB 请求收敛、后续固件验证、证明、debug/RMA 和制造流程编排。
-5. Host、BMC、OOB、管理子系统都不是信任根，不能直接访问 eHSM、OTP/eFuse、Secure SRAM 或 release 目标核。
+5. Host、BMC、OOB、管理子系统都不是信任根，不能直接访问 eHSM、eFuse、Secure SRAM 或 release 目标核。
 
 ## 2.3 关键安全路径
 
@@ -337,7 +344,7 @@ graph TD
 | Attestation | GSP（SEC2） | eHSM | Verifier / Host 只验证 report | report 必须覆盖 measurement 和安全状态 |
 | Debug / RMA | GSP（SEC2） | eHSM | BMC/OOB/工具只发起受控请求 | USER/PROD 默认关闭，需 challenge-response、scope、expire、audit |
 | Board / OOB | GSP（SEC2） | eHSM / firewall / audit | BMC/OOB/管理子系统 | 总体流程可遵循，安全边界由安全方案裁决 |
-| Manufacturing | GSP（SEC2） | eHSM / OTP/eFuse | 工站/Host/BMC 是链路 | MANU -> USER 必须灌装、锁定、清理、审计 |
+| Manufacturing | GSP（SEC2） | eHSM / eFuse | 工站/Host/BMC 是链路 | MANU -> USER 必须灌装、锁定、清理、审计 |
 ---
 # 3. 安全启动详细设计
 
@@ -376,7 +383,7 @@ graph TD
 - [C-BOOT-06](../01_constraints.md#c-boot-06) - eHSM native header 与 NGU protected manifest 分层
 - [C-BOOT-07](../01_constraints.md#c-boot-07) - SEC1 / SEC2 加密镜像必须走 verify+decrypt output path
 - [C-BOOT-08](../01_constraints.md#c-boot-08) - 固件制作与设备侧 verify/decrypt 共享 eHSM-native 契约
-- [C-EHSM-01](../01_constraints.md#c-ehsm-01) - OTP / key / counter 必须按 eHSM source-conformance 对齐
+- [C-EHSM-01](../01_constraints.md#c-ehsm-01) - eFuse / key / counter 必须按 eHSM source-conformance 对齐
 - [C-IF-01](../01_constraints.md#c-if-01) - 所有正式密码操作必须走 eHSM
 - [C-HOST-01](../01_constraints.md#c-host-01) - Host 不可信，只能投递镜像、请求服务、读取结果
 - [C-ACCESS-01](../01_constraints.md#c-access-01) - 安全子系统资源必须隔离
@@ -403,7 +410,7 @@ graph TD
 ### 3.3.3 镜像来源
 - `[CONFIRMED]` SEC1 从 NOR Flash / Flash 获取
 - `[CONFIRMED]` SEC2 及后续 PM / RAS / Codec 等固件由 Host 通过 PCIe 下发
-- `[CONFIRMED]` 非安全启动路径应保留，但量产态是否开启必须受 lifecycle + OTP 策略控制
+- `[CONFIRMED]` 非安全启动路径应保留，但量产态是否开启必须受 lifecycle + eFuse 策略控制
 
 ---
 
@@ -412,7 +419,7 @@ graph TD
 | 术语 | 含义 |
 |---|---|
 | BootROM | SoC 最早执行的不可变启动代码，负责最小初始化与启动编排 |
-| eHSM | 安全服务根，负责验证、密钥、OTP、lifecycle、debug auth、counter 等 |
+| eHSM | 安全服务根，负责验证、密钥、eFuse、lifecycle、debug auth、counter 等 |
 | SEC1 | 安全最小 bring-up 固件，负责基础初始化与 Host 通道建立 |
 | SEC2 | 完整安全控制面固件，负责后续固件接收、验证、升级、认证与调试控制 |
 | Staging Buffer | Host 投递镜像的受控缓冲区 |
@@ -450,7 +457,7 @@ graph TD
 
 - BootROM 不得直接承担 SEC1 的复杂密码学校验或复杂解密
 - Host 不得直接 release SEC2 或后续微核
-- 普通非安全 Master 不得直接访问 eHSM、OTP、Secure SRAM
+- 普通非安全 Master 不得直接访问 eHSM、eFuse、Secure SRAM
 - 未验签通过的镜像不得进入执行态
 - rollback floor 不得只依赖镜像内软件字段
 
@@ -464,7 +471,7 @@ graph TD
     PR --> EH[eHSM ROM/BL/FW]
 
     BR --> CFG[secure_boot_enable / lifecycle / strap / control field]
-    EH --> OTP[OTP / eFuse / Key / Lifecycle]
+    EH --> eFuse[eFuse / Key / Lifecycle]
 
     BR -->|locate SEC1| FLASH[NOR Flash]
     BR -->|VERIFY_SEC1 via mailbox| EH
@@ -502,7 +509,7 @@ sequenceDiagram
     BR->>BR: 最小平台初始化
     BR->>BR: 读取 secure_boot_enable / lifecycle / strap
     BR->>EH: 拉起 eHSM / 等待 ready
-    EH->>EH: ROM/BL/FW 自检、OTP装载、生命周期恢复
+    EH->>EH: ROM/BL/FW 自检、eFuse装载、生命周期恢复
     BR->>FL: 定位 SEC1 镜像
     FL-->>BR: 返回 SEC1 镜像地址/内容
     BR->>EH: VERIFY_SEC1(addr,len,type,policy)
@@ -545,14 +552,16 @@ sequenceDiagram
 |---|---|---|---|---|---|
 | 安全启动 | 1 | MANU / USER / DEBUG-RMA | 必须 | 关键镜像必须验证；支持版本/吊销/反回滚 | 正式量产 / 制造验证 / 受控返修 |
 | 非安全启动 | 0 或策略允许 | TEST / DEVE 为主 | 可不参与首阶段镜像验证 | 可允许受控绕过 | 实验室 bring-up / 特定开发调试 |
-| Rescue / Recovery | 策略控制 | DEBUG/RMA 为主 | 必须 | 必须用受控 recovery trust / 特定 signer | 故障恢复 / 返修 |
+| OOB MCU FMC 重刷恢复 | 1 | MANU / USER / DEBUG-RMA | 必须 | OOB MCU 可受控烧写 NOR Flash FMC 主区域；BootROM/eHSM 对烧写后的 FMC 执行同等签名 + 加密、rollback、吊销和 manifest policy 检查 | FMC 升级失败、FMC 损坏、BootROM/eHSM 验证失败后的带外恢复 |
 
 ### 3.8.1 模式选择规则
 
 - `[CONFIRMED]` BootROM 启动后首先读取 `secure_boot_enable / lifecycle / strap / control field`
 - `[CONFIRMED]` 非安全路径应保留，但不应默认允许量产态启用
-- `[ASSUMED]` USER 生命周期下，非安全启动应由 OTP/eFuse + 策略态关闭
-- `[ASSUMED]` Recovery 模式只能通过受控 lifecycle 和授权流程进入
+- `[ASSUMED]` USER 生命周期下，非安全启动应由 eFuse + 策略态关闭
+- `[CONFIRMED]` 首版不引入长期静态独立 recovery FMC；FMC 防变砖采用 OOB MCU 受控重刷 NOR Flash 中 FMC 主区域。
+- `[CONFIRMED]` GSP 及后续 runtime 固件由 Host 下发，失败后可重新下发，不设计片上 recovery 分区。
+- `[CONFIRMED]` 若后续产品策略要求静态 rescue/recovery 固件，并要求其启动也受客户密钥轮换控制，才新增 recovery boot authorization blob 与对应 BootROM/eHSM 验证流程。
 
 ---
 
@@ -560,34 +569,35 @@ sequenceDiagram
 
 | 镜像类型 | 来源 | 谁发起验证 | 谁执行验证 | 谁决定执行放行 | 反回滚检查 |
 |---|---|---|---|---|---|
-| SEC1 | NOR Flash | BootROM | eHSM | BootROM 跳转至 SEC1 | 跳转前检查；签名 + 加密强制 |
+| FMC（SEC1） | NOR Flash / 本地 Flash | BootROM | eHSM | BootROM 定位 FMC 主区域并在 eHSM 验证通过后跳转 | 跳转前检查；签名 + 加密强制；OOB 烧写不降低 rollback 策略 |
 | SEC2 | Host/PCIe | SEC1 | eHSM | SEC1 / SEC2 受控跳转 | 执行前检查；签名 + 加密强制 |
 | PM | Host/PCIe | SEC2 | eHSM | SEC2 release | 放行前检查；USER/PROD 默认签名 + 加密 |
 | RAS | Host/PCIe | SEC2 | eHSM | SEC2 release | 放行前检查；USER/PROD 默认签名 + 加密 |
 | Codec | Host/PCIe | SEC2 | eHSM | SEC2 release | 放行前检查；USER/PROD 默认签名 + 加密 |
-| Recovery | 特殊路径 | SEC2 / Provisioning | eHSM | SEC2 / 受控状态机 | `[TBD]` 独立 image_type / signer / counter / decrypt policy |
 
 ### 3.9.1 当前建议
 
 - `[CONFIRMED]` SEC1 的首次验证由 eHSM 完成
-- `[CONFIRMED]` SEC1 必须签名 + 加密，解密由 eHSM / 安全子系统受控密码服务完成，解密失败必须阻止启动
+- `[CONFIRMED]` FMC(SEC1) 存放在 NOR Flash 主区域，必须签名 + 加密，解密由 eHSM / 安全子系统受控密码服务完成，解密失败必须阻止启动
 - `[CONFIRMED]` SEC2 及后续镜像验证由 SEC1/SEC2 调 eHSM 完成
 - `[CONFIRMED]` SEC2 必须签名 + 加密，解密失败必须阻断安全控制面启动
 - `[CONFIRMED]` Host 不拥有执行放行权
 - `[ASSUMED]` PM / RAS / Codec 在 USER/PROD 默认签名 + 加密；signature-only 只能作为产品策略白名单例外
-- `[ASSUMED]` Recovery 镜像应使用专用 recovery trust anchor，并仅在受控 lifecycle 下允许
-- `[TBD]` Recovery image 的 image_type、signer、trust anchor、rollback counter、decrypt policy 需要在详细设计冻结前关闭
+- `[CONFIRMED]` 首版不定义独立 `Recovery` 项目级 image_type 作为长期静态 recovery FMC；FMC 恢复能力来自 OOB MCU 受控重刷。
+- `[CONFIRMED]` `slot` 在密钥轮换语境中指 key slot / key epoch / revoke 状态，不指 SEC2/runtime 固件 A/B 分区。
+- `[TBD]` OOB MCU 刷写授权 token、QSPI ownership/arbiter、NOR 写保护粒度、掉电恢复和审计字段仍需冻结。
 
 ---
 
 ## 3.10 镜像格式与 eHSM native header 分层
 
-本章不重复完整实现级字段，正式结构以：
+本章是固件包格式、eHSM native header、NGU protected manifest、制作流程和设备侧 verify/decrypt 的主详设入口。CR-0005 后，`04_impl_design` 仅作为编辑分片，不再作为独立事实源；因此本章必须直接展开实现级字段、映射规则和禁止项，不能只引用分片文件。
 
-- `04_impl_design/efuse_key_fw_header_design.md`
-- `04_impl_design/ehsm_source_conformance_matrix.md`
+本章字段遵循以下 source-of-truth 顺序：
 
-为准。CR-0004 接受后，章节级口径如下：
+1. eHSM Firmware TRM / eHSM Bootloader TRM 已定义的 physical field、command、key、counter 和 control field。
+2. 已接受 CR，特别是 CR-0004、CR-0006、CR-0008。
+3. NGU 项目级 manifest / logical alias / SoC integration 字段。此类字段必须明确标记，不得伪装成 eHSM physical field。
 
 ### 3.10.1 eHSM native header
 
@@ -596,6 +606,31 @@ sequenceDiagram
 - `[CONFIRMED]` eHSM header 中的 `Image_Type` 保持 eHSM TRM 定义，不承载 NGU `SEC1 / SEC2 / PM / RAS / Codec / Recovery` 项目级类型。
 - `[CONFIRMED]` `SocBootAlg / SocUpgradeAlg` 或等价 eHSM control field 是 secure boot / upgrade 的算法 authority。
 
+eHSM native secure boot image header 字段如下。Offset / Size 为当前导入的 eHSM TRM source-conformance 结果；如果 eHSM TRM 后续版本变化，必须通过 CR 更新本表和工具链，不允许代码私自漂移。
+
+| eHSM Field | Offset | Size | Mapping Type | NGU 使用规则 |
+|---|---:|---:|---|---|
+| `Signature` | 0 | 256 | `eHSM-native` | 签名/MAC 值，长度和算法语义由 eHSM control field / TRM profile 决定 |
+| `Public_Key` | 256 | 320 | `eHSM-native` | 非对称算法公钥字段；CMAC 等对称认证模式下按 TRM 规则处理，不作为 NGU 自定义证书区 |
+| `Encrypt_IV` | 576 | 16 | `eHSM-native` | AES/SM4 CBC/CMAC 相关 IV 或等价加密元数据，具体语义按 eHSM TRM |
+| `Valid_Flag` | 592 | 4 | `eHSM-native` | eHSM image valid marker；BootROM / SEC 不得把它扩展为 NGU 项目级 release policy |
+| `Image_Type` | 596 | 1 | `eHSM-native` | eHSM TRM 定义的 native image/key/profile 类型，不写入 NGU `FMC/GSP/runtime` 编码 |
+| `Plain_Flag` | 597 | 1 | `eHSM-native` | Code region 是否明文；FMC/SEC1 与 GSP/SEC2 正式路径必须为密文 profile |
+| `Naked_Flag` | 598 | 1 | `eHSM-native` | 裸镜像仅用于 TRM 允许的开发/测试生命周期；USER 正式安全路径不得依赖裸镜像 |
+| `Reserved` | 599 | 5 | `eHSM-native` | 必须按 TRM 置 0；不得擅自承载 NGU 字段 |
+| `Code_Size` | 604 | 4 | `eHSM-native` | Code region 大小；`NGU manifest + payload + padding/alignment` 必须完全落入此范围 |
+| `Version_Counter` | 608 | 16 | `eHSM-native` | eHSM 128-bit one-way counter / version counter 语义；NGU rollback domain 必须映射到该字段或 owner-confirmed counter policy |
+| `Public_Key_Ext` | 624 | 400 | `eHSM-native` | RSA3072 等扩展公钥字段，是否有效由 eHSM 算法 profile 决定 |
+| `Code` | 1024 | `Code_Size` | `eHSM-native` | 明文或密文 Code region；NGU protected manifest 必须放在此区域内 |
+
+字段使用边界：
+
+1. `Signature / Public_Key / Public_Key_Ext / Encrypt_IV` 属于 eHSM native package 的认证/加密材料，不属于 NGU manifest。
+2. `Image_Type` 只表达 eHSM native 语义；NGU 项目级镜像类型必须使用 `ngu_image_type`。
+3. `Plain_Flag` 与 NGU manifest 中的 `decrypt_required` 必须一致；FMC/GSP 若要求强制加密但 native header 表示明文，应视为 policy mismatch。
+4. `Version_Counter` 是 eHSM physical version/counter 输入；NGU `rollback_domain` 只是项目级逻辑域，不能替代 physical counter。
+5. `Reserved` 字段不得被任何工具、BootROM、FMC、GSP 或 Host 私自复用。
+
 ### 3.10.2 NGU protected manifest
 
 - `[CONFIRMED]` NGU 项目级 metadata 放入 eHSM Code region 的 protected manifest / policy table。
@@ -603,14 +638,74 @@ sequenceDiagram
 - manifest 由 BootROM / SEC 在 eHSM verify/decrypt 成功后解析；是否由 eHSM firmware / bootloader 直接解析保持 `[TBD]`。
 - manifest ABI bit-level layout、是否必须位于 Code region 起始位置、extension 格式保持 `[TBD]`。
 
-### 3.10.3 已废弃的旧口径
+推荐逻辑布局：
+
+```text
+[eHSM native image header, 1KB, plaintext]
+
+[Code region, verified/decrypted by eHSM]
+  NGU protected manifest or equivalent manifest extension
+  firmware payload
+  padding / alignment
+```
+
+NGU protected manifest 最低语义字段如下。本文当前只冻结字段语义和安全要求；bit-level ABI、大小端、结构体 packing、TLV/extension 格式仍为 `[TBD]`，但最终实现不得少于这些语义。
+
+| Manifest Concept | Status | 说明 | 设备侧使用规则 |
+|---|---|---|---|
+| `magic` | `[ASSUMED]` | manifest magic，用于快速识别 manifest | 只能在 eHSM PASS 后解析；不作为密码学信任依据 |
+| `manifest_version` | `[ASSUMED]` | manifest ABI / semantic version | BootROM/FMC/GSP 必须拒绝未知且不兼容版本 |
+| `manifest_size` | `[ASSUMED]` | manifest 自身长度 | 必须完全落入 eHSM 输出 Code region |
+| `ngu_image_type` | `[CONFIRMED]` | NGU `FMC/SEC1`、`GSP/SEC2`、`PM`、`RAS`、`Codec` 等项目级类型 | release/measurement/attestation 使用；不得写入 eHSM native `Image_Type` |
+| `security_policy_flags` | `[CONFIRMED]` | sign/encrypt/rollback/measurement/release policy 的项目表达 | FMC/GSP 必须包含 sign_required 与 decrypt_required |
+| `payload_offset` | `[ASSUMED]` | payload 相对 Code region 或 manifest 起点的 offset | 必须边界检查，不得越过 `Code_Size` |
+| `payload_size` | `[ASSUMED]` | payload 长度 | 必须边界检查，并与 measurement/hash 输入一致 |
+| `load_addr` | `[ASSUMED]` | payload 装载地址 | 只能在 eHSM PASS 后使用，且必须命中 BootROM/SEC 白名单 |
+| `entry_addr` | `[ASSUMED]` | payload 入口地址 | 必须落入允许执行区，不能由 Host 直接控制 |
+| `rollback_domain` | `[CONFIRMED]` | NGU logical rollback domain，不是 physical eFuse 32-bit counter | 必须映射到 eHSM Version Counter 或 owner-confirmed rollback policy |
+| `version` / `version_counter_view` | `[ASSUMED]` | 项目级版本视图 | 不得替代 eHSM native `Version_Counter`；用于 policy/attestation 对齐 |
+| `measurement_slot` | `[CONFIRMED]` | measurement / attestation slot | 必须有效且与 image type 匹配 |
+| `lifecycle_mask` | `[CONFIRMED]` | 允许的 lifecycle 集合 | 最终 authority 仍是 eHSM/eFuse lifecycle state |
+| `product_sku_mask` | `[ASSUMED]` | 产品/SKU 策略 | 用于 runtime 白名单或产品裁剪 |
+| `board_binding_policy` | `[ASSUMED]` | board/die binding policy | 默认进入 attestation；是否阻断 release 仍 `[TBD]` |
+| `expected_algorithm_profile` | `[CONFIRMED]` | 期望算法 profile / audit profile | 仅做一致性检查和审计，不覆盖 eHSM control field |
+| `payload_digest` | `[ASSUMED]` | payload digest 或 manifest 内 payload 描述 | hash profile 跟随 eHSM/产品策略；不得替代 eHSM 认证 |
+| `extension_offset` | `[ASSUMED]` | extension/TLV 起点 | 若启用 extension，必须边界检查 |
+| `extension_size` | `[ASSUMED]` | extension/TLV 长度 | 若启用 extension，必须边界检查 |
+
+Manifest 设备侧解析规则：
+
+1. BootROM/FMC/GSP 只能在 eHSM native verify/decrypt PASS 后解析 manifest。
+2. manifest 必须位于 eHSM `Code` region 内，且 manifest、payload、extension、padding 若计入 `Code_Size`，必须被 eHSM 认证覆盖。
+3. manifest 中的 `load_addr / entry_addr / payload_offset / payload_size / lifecycle_mask / measurement_slot` 都属于 release policy 输入，必须做边界和白名单检查。
+4. manifest 中的 `expected_algorithm_profile` 只能与 eHSM control field 做一致性检查；发生冲突时必须失败或记录 policy mismatch，不能覆盖 eHSM 算法选择。
+5. manifest ABI bit-level layout、manifest 是否强制位于 Code region 起始位置、extension/TLV 格式、eHSM firmware 是否直接解析 manifest，仍由 Security Owner / SEC FW / eHSM Owner 冻结。
+
+### 3.10.3 Header / manifest / legacy field source-conformance mapping
+
+| NGU Concept | Current / Old Field | eHSM Native Field / Command | Mapping Type | Source | Status | Notes |
+|---|---|---|---|---|---|---|
+| Physical secure boot image header | `ngu_fw_min_hdr_t`, `ngu_fw_signed_hdr_t` | eHSM 1KB Image Head | `eHSM-native` | `SRC-006`, `SRC-007`, `CR-0004` | `[CONFIRMED]` | 旧 NGU struct 不再作为 physical wire/storage format |
+| Signature | `sig_off / sig_len` | `Signature` offset 0 size 256 | `eHSM-native` | `SRC-006`, `SRC-007` | `[CONFIRMED]` | 长度由 eHSM algorithm control field 决定 |
+| Public key | `cert_off / cert_len`, signer fields | `Public_Key`, `Public_Key_Ext` | `eHSM-native` | `SRC-006`, `SRC-007` | `[CONFIRMED]` | cert chain 是否进入 manifest/report 另行冻结 |
+| Encryption IV | `nonce_iv_*` | `Encrypt_IV` | `eHSM-native` | `SRC-006`, `SRC-007` | `[CONFIRMED]` | 语义按 eHSM TRM |
+| eHSM image type | old `image_type` mixed use | `Image_Type` | `eHSM-native` | `SRC-006`, `SRC-007` | `[CONFIRMED]` | 不承载 NGU FMC/GSP/runtime 编码 |
+| NGU project image type | `IMAGE_TYPE_SEC1/SEC2/...` | NGU manifest `ngu_image_type` | `manifest-extension` | `CR-0004` | `[CONFIRMED]` | release/measurement/attestation 使用 |
+| Algorithm fields | `algo_family/hash_algo/sig_algo/enc_algo` | `SocBootAlg/SocUpgradeAlg` or equivalent control field | `eHSM-native` + `manifest-extension` | `SRC-006`, `CR-0004` | `[CONFIRMED]` | eHSM control field 是 authority；manifest 仅 expected profile |
+| Code size | `payload_len/ciphertext_len` | `Code_Size` | `eHSM-native` | `SRC-006`, `SRC-007` | `[CONFIRMED]` | NGU manifest 可再描述 payload |
+| Protected NGU metadata | old signed header fields | Code region manifest | `manifest-extension` | `CR-0004` | `[CONFIRMED] / [TBD ABI]` | manifest ABI 未冻结 |
+| per-image wrapped CEK | `wrapped_cek_*` | no confirmed native field | `eHSM-customization-TBD` | `CR-0004` | `[TBD]` | 需 eHSM owner 确认 |
+
+### 3.10.4 已废弃口径与当前项目强制规则
+
+已废弃口径：
 
 - `ngu_fw_min_hdr_t / ngu_fw_signed_hdr_t` 不再作为 physical wire/storage verification header。
-- `algo_family / hash_algo / sig_algo / enc_algo` 不再作为镜像头内的算法 authority；如需要，可作为 manifest expected profile / audit profile。
-- `SEC1_MIN_VER / SEC2_MIN_VER / *_MIN_VER` 不再作为 physical OTP 32-bit rollback counter，只作为 NGU logical rollback domain。
+- `algo_family / hash_algo / sig_algo / enc_algo` 不再作为镜像头内的算法 authority；如需要，只能作为 manifest expected profile / audit profile。
+- `SEC1_MIN_VER / SEC2_MIN_VER / *_MIN_VER` 不再作为 physical eFuse 32-bit rollback counter，只作为 NGU logical rollback domain。
 - `key_slot / wrapped_cek_*` 不得被写成 eHSM 已确认字段；per-image CEK / wrapped CEK 保持 `[TBD]`，除非 eHSM owner 后续确认。
 
-### 3.10.4 当前项目建议
+当前项目强制规则：
 
 - `[CONFIRMED]` Host 下发镜像必须先进入 staging buffer
 - `[CONFIRMED]` Verify path 必须能处理：
@@ -629,7 +724,7 @@ sequenceDiagram
 
 ### 3.10.5 固件包物理布局与 SEC1 最终制品组成
 
-CR-0006 后，本文把 `SRC-001 当前安全方案基线` 第 7 章中的“固件制作和设备侧解包流程”改写为 eHSM-native 口径。旧的 `header + Signed Region + signature + wrapped_cek + enc_payload` 只能作为流程意图参考，不再作为最终 wire/storage physical format。
+CR-0014 后，本文把 `SRC-008 当前收敛安全软件方案 2.0` 第 4 章 / 第 4.5 节中的“eHSM native package、FMC 安全固件制作和设备侧验证流程”作为当前来源。旧 `SRC-001 当前安全方案基线` 中的 `header + Signed Region + signature + wrapped_cek + enc_payload` 只能作为历史流程意图参考，不再作为最终 wire/storage physical format。
 
 SEC1 最终发布制品必须表达为一个 eHSM native secure image package。该 package 的物理外观由 eHSM TRM 决定，NGU 不再定义第二套 physical verification header；NGU 只在 eHSM protected Code region 内定义项目级 manifest 和 payload 语义。
 
@@ -912,7 +1007,7 @@ Host 不得：
 - 修改 lifecycle
 - 修改 debug enable
 - 修改 recovery 模式选择
-- 直接访问 secure shared buffer / OTP / Secure SRAM
+- 直接访问 secure shared buffer / eFuse / Secure SRAM
 - 直接写 boot-critical 分区
 
 ### 3.12.3 DMA 访问要求
@@ -966,10 +1061,129 @@ Host 不得：
 
 ### 3.14.2 恢复规则
 
-- `[CONFIRMED]` 升级失败时必须保证上一个 known-good 镜像仍可启动
-- `[ASSUMED]` 建议对 SEC2 与主要运行期固件采用 A/B 槽位
-- `[ASSUMED]` 恢复镜像应使用专用 recovery trust anchor 签名
-- `[ASSUMED]` 恢复入口必须受 lifecycle 控制且可审计
+- `[CONFIRMED]` 首版取消 SoC Flash 内部 FMC 备份分区，不再通过本地备份分区实现防变砖。
+- `[CONFIRMED]` OOB MCU / 板级安全 MCU 纳入板级安全边界，可作为受控带外执行体通过 QSPI 或等价通道烧写 NOR Flash 中的 FMC 主区域。
+- `[CONFIRMED]` OOB MCU 烧写能力不改变启动信任链：FMC 每次启动仍必须由 BootROM 调 eHSM 执行 verify + decrypt、rollback、吊销和 manifest policy 检查。
+- `[CONFIRMED]` OOB MCU 不进入 eHSM Root of Trust，不持有 eHSM 根材料，不直接 release SoC 核，不直接改变 lifecycle / counter / eFuse 安全状态。
+- `[CONFIRMED]` GSP 与主要运行期固件由 Host 下发，失败后由 Host 重新下发，不在片上 Flash 中设计 A/B recovery 分区。
+- `[CONFIRMED]` 不引入长期静态 recovery FMC，不保留 SoC 厂商单方 recovery signer；FMC 损坏或升级失败后的恢复依赖 OOB MCU 受控重刷。
+- `[CONFIRMED]` OOB MCU 刷写请求、FMC 包版本、hash、授权结果、reset reason、BootROM/eHSM 验证结果必须进入 audit / measurement / attestation 可见状态。
+
+### 3.14.3 单 FMC + OOB MCU 受控重刷防变砖
+
+Flash 中只要求一个 boot-critical FMC 主区域，以及必要的受保护状态 / 审计区域。该状态区域不再表达启动分区选择，而是记录最近一次 OOB/运行期刷写请求、包摘要、版本、key epoch、写入结果和启动验证结果，用于审计、RMA 定位和 attestation。
+
+```mermaid
+stateDiagram-v2
+    [*] --> PowerOn
+    PowerOn --> VerifyFMC: BootROM 定位 NOR Flash FMC 主区域
+    VerifyFMC --> BootFMC: eHSM verify+decrypt PASS\nmanifest policy PASS
+    VerifyFMC --> Halt: verify/decrypt/rollback/revoke FAIL
+    BootFMC --> Runtime: FMC 启动并继续拉起 GSP
+    Halt --> OOBRecovery: 等待 OOB MCU 受控重刷
+    OOBRecovery --> PowerOn: OOB MCU 写入新 FMC 后复位
+    Runtime --> [*]
+```
+
+OOB MCU 受控重刷流程如下：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Tool as BMC / OOB Host / 工装
+    participant OOB as OOB MCU / 板级安全 MCU
+    participant NOR as NOR Flash FMC 主区域
+    participant BR as BootROM
+    participant EH as eHSM
+    participant FMC as FMC / SEC1
+
+    Tool->>OOB: 下发 FMC update capsule / secure image package
+    OOB->>OOB: 校验请求来源、授权、生命周期、刷写窗口
+    OOB->>NOR: 获取 QSPI ownership / 解锁受控写窗口
+    OOB->>NOR: 擦写并写入 FMC 主区域
+    OOB->>NOR: 读回校验 / hash / size 检查
+    OOB->>OOB: 记录 capsule_id / version / hash / 写入结果
+    OOB->>BR: 触发 SoC reset / power cycle
+    BR->>NOR: 读取 FMC 主区域
+    BR->>EH: VERIFY_FMC + decrypt + rollback + revoke
+    EH-->>BR: PASS / FAIL
+    alt VERIFY PASS
+        BR->>FMC: 装载并跳转
+        FMC->>FMC: 记录 boot success / measurement / attestation 状态
+    else VERIFY FAIL
+        BR->>BR: 停止启动并记录错误
+        BR-->>OOB: 通过状态寄存器 / 复位原因暴露失败状态
+    end
+```
+
+刷写和恢复规则：
+
+1. OOB MCU 必须具备自身 secure boot、受控升级、调试关闭、命令白名单和审计能力。
+2. OOB MCU 只能写 NOR Flash 中授权的 FMC 主区域和受控状态 / 审计区，不得写 eFuse、eHSM 私有区、SEC 执行区、证书私钥区或 release 控制寄存器。
+3. 写入 NOR 的 FMC 必须仍是 eHSM native secure image package，正式路径强制签名 + 加密。
+4. OOB MCU 写入成功不等于 FMC 可信，可信判定只来自 BootROM 调 eHSM 的 verify/decrypt/rollback/revoke 和 manifest policy 结果。
+5. OOB MCU 不降低 rollback counter，不绕过 key epoch/revoke policy，不关闭 FMC 强制加密策略。
+6. SoC 与 OOB MCU 对 NOR Flash 的访问必须互斥，需硬件 QSPI ownership / arbiter、写保护、掉电保护和 reset reason 设计。
+7. 若 OOB 重刷后仍验证失败，BootROM 不尝试本地备用启动分区，而是保持 fail-stop 状态，等待下一次受控 OOB 重刷。
+
+### 3.14.4 密钥 slot 轮换与 OOB 可恢复路径
+
+密钥 slot 轮换用于服务器厂商 / 用户自主控制固件签名、加密和撤销策略。这里的 `slot` 指 eHSM key ID / eHSM key purpose / owner-confirmed logical key slot / key epoch，不指 FMC/GSP/runtime 固件 A/B 分区。
+
+结合 `SRC-006 eHSM Firmware TRM` 与 `SRC-007 eHSM Bootloader TRM`，eHSM 已提供以下可对齐能力：
+
+| eHSM 能力 | 对 FMC key rotation 的使用方式 |
+|---|---|
+| `SOC FW Verify Key` | normal FMC 启动镜像验签 key alias 的首选映射方向 |
+| `SOC Encrypt Key` | normal FMC 启动镜像解密 key alias 的首选映射方向 |
+| `SOC Upgrade Verify Key` | key rotation capsule / FMC 升级包外层授权验签的候选映射方向 |
+| `SOC Upgrade Encrypt Key` | FMC 升级包或新 key policy 保护材料的候选映射方向 |
+| `SOC Version Counter` | FMC rollback / key epoch 生效顺序的物理 counter 基础候选 |
+| eHSM counter 命令族 | 若产品要求更细粒度 key epoch 或 owner counter，可通过 owner-confirmed counter service 承载 |
+| eFuse key ID / level / purpose | NGU key alias 必须映射到 eHSM 已定义 key ID / level / purpose 或 owner-confirmed customization |
+
+exact key ID、key slot 编号、counter ID 和 revoke 表达方式不得由 BootROM / FMC / Host / Tool 自行发明，必须由 eHSM owner 与安全 owner 冻结。
+
+密钥轮换流程：
+
+```mermaid
+flowchart TD
+    A[服务器厂商下发 key rotation capsule] --> B[使用旧 active key 或 owner authority 验证 capsule]
+    B --> C[安装 new signer / FW_KEK policy 到 pending key epoch]
+    C --> D[用 new key policy 验证新 FMC package]
+    D --> E{新 FMC verify/decrypt PASS?}
+    E -- 否 --> F[保持旧 active key policy，不推进 counter/revoke]
+    E -- 是 --> G[OOB MCU 或受控更新路径写入 FMC 主区域]
+    G --> H[BootROM 下次启动验证 FMC]
+    H --> I{BootROM/eHSM 验证通过?}
+    I -- 否 --> J[保持 fail-stop，允许 OOB 再次重刷]
+    I -- 是 --> K[new key epoch ACTIVE]
+    K --> L[old key 进入 DEPRECATED]
+    L --> M{OOB 可恢复路径和新 key 包已验证?}
+    M -- 否 --> N[禁止 revoke old key]
+    M -- 是 --> O[允许按客户策略 revoke old key]
+```
+
+密钥 slot 状态建议：
+
+| 状态 | 语义 |
+|---|---|
+| `EMPTY` | 未安装 |
+| `PENDING` | 已写入或已授权，但尚未通过新 FMC package 验证和下一次 BootROM/eHSM 启动验证 |
+| `ACTIVE` | 当前启动链允许使用 |
+| `DEPRECATED` | 过渡期仍可用于验证旧包或恢复场景，但不应用于签发新 FMC |
+| `REVOKED` | 已撤销，不得用于 verify/decrypt |
+| `LOCKED` | 不允许再修改，常用于 USER freeze 后的不可变策略 |
+
+密钥轮换强规则：
+
+1. 新 key 安装必须先进入 `PENDING`，不得覆盖当前 `ACTIVE` key。
+2. `PENDING` key 必须成功验证新 FMC package 后，才允许作为下一次启动的候选 key policy。
+3. 新 FMC 写入 NOR 主区域后，必须由 BootROM/eHSM 启动验证通过，new key epoch 才能变为 `ACTIVE`。
+4. old key 必须先进入 `DEPRECATED`，不得在 OOB 可恢复路径和新 key 包验证闭环形成前直接 `REVOKED`。
+5. revoke old key 前必须确认 OOB MCU 可使用新 key 体系重刷并恢复 FMC，且 rollback/revoke 策略不会把设备锁死。
+6. key rotation capsule、FMC update status、BootROM/eHSM 验证结果、old key revoke 都必须进入 audit / attestation 可见状态。
+7. SoC/test signer、测试 key 和测试 debug 白名单必须在 USER freeze 前清理或 revoke，不得作为量产 recovery 入口。
 
 ---
 
@@ -990,23 +1204,25 @@ Host 不得：
 |---|---|---|---|
 | SEC1 验证与解密调用边界 | 直接影响 BootROM / eHSM 接口冻结 | 已基本收敛 | 冻结 `VERIFY_SEC1` 参数模型、强制解密标志和输出 buffer 约束 |
 | release owner 语义 | 直接影响 SEC / Host / 微核控制权 | 已基本收敛 | 冻结 release 状态机 |
-| rollback counter 映射 | 影响 OTP / 升级 / 证明一致性 | 部分收敛 | 冻结 image_type → counter_id |
+| rollback counter 映射 | 影响 eFuse / 升级 / 证明一致性 | 部分收敛 | 冻结 image_type → counter_id |
 | non-secure boot 在 USER 是否完全关闭 | 影响产品策略和客户模式 | 未完全冻结 | 需产品/安全评审裁决 |
 | SEC2 decrypt / release policy | 影响后续安全控制面启动 | 已收敛 | 冻结 SEC2 key slot、wrapped CEK、错误码和 release 状态机 |
 | 固件制作工具契约 | 影响 image packager、BootROM、SEC verify flow、eHSM adapter 联调 | 部分收敛 | 冻结 manifest ABI、工具参数、golden vector、exact eHSM key ID / command mapping |
 | runtime signature-only 白名单 | 影响产品 SKU 与 attestation 策略 | 未完全冻结 | 冻结 image_type / lifecycle / SKU / debug / release / rollback 条件 |
-| recovery trust model | 影响升级与返修路径 | 未完全冻结 | 冻结 signer / lifecycle 条件 |
+| OOB MCU + QSPI FMC 重刷 | 影响 FMC 防变砖、板级恢复和 NOR 写保护 | 方向已收敛，字段级未冻结 | 冻结 OOB MCU secure boot、QSPI ownership/arbiter、NOR boot-critical 写保护、刷写授权 token 和审计字段 |
+| key slot rotation | 影响客户密钥自主轮换、撤销和 FMC 可恢复性 | 方向已收敛，exact eHSM ID 未冻结 | 冻结 normal/update key alias 到 eHSM key ID / purpose / counter / revoke 的映射，并验证 OOB 可恢复路径 |
 
 ---
 
 ## 3.17 开放问题
 
 1. 除 SEC1/SEC2 外，哪些非敏感运行期镜像允许在特定产品阶段采用 signature-only 白名单？
-2. Recovery 是否独立 image_type + 独立 signer / trust anchor / rollback counter / decrypt policy？
-3. SEC1 是否只负责把 SEC2 拉起，还是在首版中继续承担一部分运行期安全控制？
-4. 非安全启动在 TEST/DEVE 之外是否允许保留特定维护入口？
-5. 双Die / 板级绑定策略是否需要在 boot 阶段强制参与 verify decision？
-6. `ngu_image_manifest_t` ABI、image packager CLI、golden vector 和 exact eHSM command 参数如何冻结？
+2. OOB MCU secure boot、QSPI ownership/arbiter、NOR boot-critical 写保护、刷写授权 token、掉电保护和审计字段如何冻结？
+3. key slot rotation 中 normal signer / normal FW_KEK / upgrade verify / upgrade encrypt 的 exact eHSM key ID、purpose、level、counter 和 revoke 表达如何冻结？
+4. SEC1 是否只负责把 SEC2 拉起，还是在首版中继续承担一部分运行期安全控制？
+5. 非安全启动在 TEST/DEVE 之外是否允许保留特定维护入口？
+6. 双Die / 板级绑定策略是否需要在 boot 阶段强制参与 verify decision？
+7. `ngu_image_manifest_t` ABI、image packager CLI、golden vector 和 exact eHSM command 参数如何冻结？
 
 ---
 
@@ -1141,7 +1357,7 @@ Host 不得：
 | Host / Verifier | 发起 challenge / nonce / session；接收并验证报告 | 直接接触证明私钥 |
 | SEC2 | 认证控制面；汇总度量；组织 report；对外响应 | 私自伪造签名 |
 | eHSM | 最终签名、key 使用、挑战生成、状态支持 | 接受非 SEC 的不受控证明请求 |
-| OTP / eFuse | 提供设备根、lifecycle、counter、平台标识基础信息 | 被 Host 直接读取敏感根材料 |
+| eFuse | 提供设备根、lifecycle、counter、平台标识基础信息 | 被 Host 直接读取敏感根材料 |
 
 ---
 
@@ -1151,7 +1367,7 @@ Host 不得：
 graph TD
     V[Verifier / Host] -->|Challenge / Nonce / Request| SEC2[SEC2]
     SEC2 -->|Mailbox GEN_ATTEST_REPORT| EH[eHSM]
-    EH --> OTP[OTP / eFuse / Root / Lifecycle / Counter]
+    EH --> eFuse[eFuse / Root / Lifecycle / Counter]
     SEC2 --> MT[measurement_table]
     SEC2 --> ST[secure boot / debug / version state]
     EH -->|sign / key use| REP[Signed Report]
@@ -1164,7 +1380,7 @@ graph TD
 1. SEC2 是认证控制面，对外可表现为 SPDM Responder。
 2. eHSM 是签名和密钥使用的执行面。
 3. measurement_table 由启动链各阶段产生，最终由 SEC2 汇总维护并对外输出。
-4. OTP/eFuse 提供 device identity seed、lifecycle、counter、chip/platform 标识等基础状态。
+4. eFuse 提供 device identity seed、lifecycle、counter、chip/platform 标识等基础状态。
 
 ---
 
@@ -1202,7 +1418,7 @@ sequenceDiagram
 
 | 对象 | 内容 | 生成/维护位置 | 使用位置 |
 |---|---|---|---|
-| Device UID | 设备唯一标识 | OTP/eFuse | eHSM / 报告 |
+| Device UID | 设备唯一标识 | eFuse | eHSM / 报告 |
 | Device Identity | UID + product info + lifecycle | SEC2 组装 | Host / Verifier |
 | Device Identity Key | 设备证明私钥 | eHSM | 签名 report |
 | Attestation Cert | 设备证明证书 | 制造/灌装阶段 | 报告 / Verifier |
@@ -1212,20 +1428,16 @@ sequenceDiagram
 
 - `[CONFIRMED]` 首版可以 Device Identity Key 为主，不强制首版启用 Alias Key
 - `[ASSUMED]` 预留 Alias / Session-bound key 扩展位
-- `[CONFIRMED]` Attestation Cert 与 Debug Auth Cert 应在语义上区分，不应简单混用
+- `[CONFIRMED]` Attestation Cert 与 Debug Auth Token 应在语义上区分，不应简单混用
 
 ### 4.8.3 证书模型建议
 
-首版优先支持两种模式：
+首版采用一种简化模式：
 
-#### 模式 A：Hash Anchor + 可选 Chain
-- OTP/eFuse 中固化 attestation root hash / signer hash
+#### 模式 A：Hash Anchor + 可选证书块
+- eFuse 中固化 attestation issuer hash / signer hash
 - 报告中带 signer/anchor 标识
-- 如需要，可附带 cert chain blob
-
-#### 模式 B：Full Chain
-- 报告中直接携带完整证书链
-- verifier 侧直接做整链校验
+- 如需要，可附带 Device Attestation Cert Block
 
 当前建议：
 - `[CONFIRMED]` 结构上必须支持 cert chain block
@@ -1304,7 +1516,7 @@ Report Header
 + Measurement Block(s)
 + Lifecycle / Debug Block
 + Firmware Version Block
-+ Cert Chain Block
++ Device Attestation Cert Block
 + Signature Block
 ```
 
@@ -1601,7 +1813,7 @@ Verifier 至少必须执行：
 2. 不同 lifecycle 下的启动策略、调试策略、升级策略和接口开放范围
 3. 安全调试必须经过 challenge-response / debug auth 的控制要求
 4. 调试范围（scope / bitmap）与自动关闭策略
-5. lifecycle 对 OTP/eFuse、非安全启动、镜像接收和 provisioning 的 gating 关系
+5. lifecycle 对 eFuse、非安全启动、镜像接收和 provisioning 的 gating 关系
 6. 生命周期切换的受控条件与不可逆路径
 7. 与实现层文件的映射关系：
    - `04_impl_design/mailbox_if.md`
@@ -1632,7 +1844,7 @@ Verifier 至少必须执行：
 ## 5.3 生效 Baseline 决策
 
 ### 5.3.1 生命周期控制
-- `[CONFIRMED]` lifecycle 必须控制 debug、OTP/eFuse 访问、非安全启动和镜像接受范围
+- `[CONFIRMED]` lifecycle 必须控制 debug、eFuse 访问、非安全启动和镜像接受范围
 - `[CONFIRMED]` USER/PROD 下 SEC1 / SEC2 解密 key / FW_KEK 使用必须受 lifecycle gating，且不可由 debug/RMA 普通请求关闭 SEC1/SEC2 强制解密策略
 - `[CONFIRMED]` USER 生命周期必须关闭未授权 debug
 - `[CONFIRMED]` USER 生命周期应强制安全启动
@@ -1709,7 +1921,7 @@ Verifier 至少必须执行：
 graph TD
     HOST[Host / BMC / OOB] -->|受控请求| SEC2[SEC2]
     SEC2 -->|DEBUG_AUTH / CHANGE_LIFECYCLE| EH[eHSM]
-    EH --> OTP[OTP/eFuse Lifecycle / Control Bits]
+    EH --> eFuse[eFuse Lifecycle / Control Bits]
     EH --> DBG[Debug Auth / Challenge / Scope Control]
     SEC2 --> STATE[Secure Boot / Debug / Update / Non-secure Boot Policy]
     STATE --> REPORT[Attestation Report State Block]
@@ -1717,7 +1929,7 @@ graph TD
 
 ### 图下说明
 
-1. lifecycle 与 debug 的最终裁决在 eHSM + OTP/eFuse 语义层完成。
+1. lifecycle 与 debug 的最终裁决在 eHSM + eFuse 语义层完成。
 2. SEC2 是统一控制面，对外收敛 Host/BMC/OOB 的请求。
 3. Attestation report 必须反映当前 lifecycle/debug 状态，而不是只报告 firmware hash。
 
@@ -1730,7 +1942,7 @@ sequenceDiagram
     participant H as Host/Service Tool
     participant SEC as SEC2
     participant EH as eHSM
-    participant OTP as OTP/eFuse
+    participant eFuse as eFuse
 
     H->>SEC: debug request / lifecycle request
     SEC->>SEC: 参数白名单检查 / 当前状态检查
@@ -1744,7 +1956,7 @@ sequenceDiagram
         SEC-->>H: result
     else Lifecycle 切换
         SEC->>EH: CHANGE_LIFECYCLE
-        EH->>OTP: update lifecycle / control field / lock path
+        EH->>eFuse: update lifecycle / control field / lock path
         EH-->>SEC: success / fail
         SEC-->>H: result
     end
@@ -1753,14 +1965,14 @@ sequenceDiagram
 ### 图下说明
 
 1. debug 开启必须经过 challenge-response 或等价鉴权。
-2. lifecycle 修改必须由受控命令触发，并最终落到 OTP/eFuse / control field。
+2. lifecycle 修改必须由受控命令触发，并最终落到 eFuse / control field。
 3. Host 不能直接改 debug enable 或 lifecycle 寄存器。
 
 ---
 
 ## 5.8 各生命周期策略矩阵
 
-| 生命周期 | Secure Boot | Non-secure Boot | Debug | OTP/eFuse 写操作 | Firmware Update | Provisioning | Recovery / Rescue |
+| 生命周期 | Secure Boot | Non-secure Boot | Debug | eFuse 写操作 | Firmware Update | Provisioning | Recovery / Rescue |
 |---|---|---|---|---|---|---|---|
 | TEST | 可开可关 | 允许 | 高权限开放 | 受控允许 | 允许 | 允许最小测试 | 可选 |
 | DEV | 推荐开启 | 允许 | 允许开发授权 | 受控允许 | 允许 | 视需要 | 可选 |
@@ -1981,7 +2193,8 @@ report 中至少必须反映：
 ### 5.16.2 RMA
 - `[CONFIRMED]` RMA 是受权返修路径，不是常驻状态
 - `[CONFIRMED]` 返修调试必须 challenge-response 后有限开放
-- `[CONFIRMED]` RMA / DEBUG 不得绕过 SEC1 加密策略；rescue image 必须使用专用 signer / recovery trust，并由 eHSM / 安全子系统受控验证与解密或按 recovery policy 处理
+- `[CONFIRMED]` RMA / DEBUG 不得绕过 FMC(SEC1) 加密策略；首版防变砖路径收敛为 OOB MCU 受控重刷 NOR Flash FMC 主区域，不引入长期静态 rescue/recovery FMC
+- `[CONFIRMED]` 若后续产品策略要求静态 rescue/recovery 固件，其 signer / decrypt / authorization policy 必须重新立项确认，并受客户密钥轮换策略与 eHSM 验证流程控制
 - `[ASSUMED]` RMA 结束后应恢复量产安全状态，并重新形成报告/审计记录
 
 ---
@@ -1993,7 +2206,7 @@ report 中至少必须反映：
 | debug auth / lifecycle 命令 / gating / 错误码 | `04_impl_design/mailbox_if.md` |
 | lifecycle/debug 状态块进入证明报告 | `04_impl_design/spdm_report.md` |
 | MANU→USER / RMA 流程、审计与恢复 | `04_impl_design/manufacturing_provisioning.md` |
-| control bits / lifecycle encoding / OTP字段 | `04_impl_design/efuse_key_fw_header_design.md` |
+| control bits / lifecycle encoding / eFuse字段 | `04_impl_design/efuse_key_fw_header_design.md` |
 | SEC1 / SEC2 解密 key / FW_KEK lifecycle gating | `04_impl_design/efuse_key_fw_header_design.md` / `04_impl_design/manufacturing_provisioning.md` |
 | JTAG scope bitmap / CPLD-MUX gating / 板级调试授权闭环 | `04_impl_design/mailbox_if.md` / `[TBD] firewall_access_rules` |
 
@@ -2003,7 +2216,7 @@ report 中至少必须反映：
 
 | Item | Why Sensitive | Current Status | Needed Before Freeze |
 |---|---|---|---|
-| 生命周期统一编码 | 影响 OTP / report / command 接口 | 部分收敛 | 冻结最终编码表 |
+| 生命周期统一编码 | 影响 eFuse / report / command 接口 | 部分收敛 | 冻结最终编码表 |
 | DEBUG 与 RMA 是否独立编码 | 影响命令 gating 与审计模型 | 未完全冻结 | 冻结状态机 |
 | debug scope bitmap bit-level 定义 | 影响 FW / RTL / verifier / 工具 | 未完全冻结 | 冻结端口位图 |
 | runtime signature-only 白名单 | 影响 USER/PROD 策略和 attestation 可见性 | 未完全冻结 | SEC2 已强制加密；仍需冻结 PM/RAS/Codec 等哪些非敏感镜像允许 signature-only |
@@ -2036,7 +2249,7 @@ report 中至少必须反映：
 - attestation 报告必须反映 lifecycle/debug/secure boot/anti-rollback 状态
 - provisioning 和 RMA 都必须被 lifecycle 严格 gating，并形成审计闭环
 
-后续若 `mailbox_if.md`、`spdm_report.md`、`manufacturing_provisioning.md` 或 OTP/lifecycle 字段冻结有变化，本章必须同步更新。
+后续若 `mailbox_if.md`、`spdm_report.md`、`manufacturing_provisioning.md` 或 eFuse/lifecycle 字段冻结有变化，本章必须同步更新。
 ---
 # 6. 内外部接口设计
 
@@ -2094,7 +2307,7 @@ report 中至少必须反映：
 
 ### 6.3.2 Host 边界
 - `[CONFIRMED]` Host 只具备投递能力，不进入信任链
-- `[CONFIRMED]` Host 不得直接访问 eHSM、OTP、Secure SRAM
+- `[CONFIRMED]` Host 不得直接访问 eHSM、eFuse、Secure SRAM
 - `[CONFIRMED]` Host 不得直接放行执行
 
 ### 6.3.3 生命周期与授权
@@ -2120,7 +2333,7 @@ report 中至少必须反映：
 ### 6.4.2 不得违反的边界
 
 - Host 不得直接调用 eHSM 私有命令面
-- 普通 Master 不得直接操作 OTP/eFuse 安全区
+- 普通 Master 不得直接操作 eFuse 安全区
 - Mailbox 请求不得绕过 SEC 的参数白名单与生命周期检查
 - Verify / Debug Auth / Lifecycle / Provisioning 不得在不合法 lifecycle 下开放
 - 共享内存地址不得由 Host 任意指定到安全域
@@ -2136,11 +2349,11 @@ graph TD
     BR[BootROM] -->|早期编排| SEC
     SEC -->|Mailbox Req + Shared Memory Ptr| EH[eHSM]
     EH -->|Mailbox Resp + Result| SEC
-    EH --> OTP[OTP / eFuse]
+    EH --> eFuse[eFuse]
     EH --> ALG[Verify / Key / Debug Auth / Counter / Attestation]
     SEC --> FW[SEC2 / PM / RAS / Codec / Recovery]
     H -. no direct access .-> EH
-    H -. no direct access .-> OTP
+    H -. no direct access .-> eFuse
 ```
 
 ### 图下说明
@@ -2148,7 +2361,7 @@ graph TD
 1. 外部世界（Host / BMC / OOB-MCU）与 eHSM 之间没有直接信任链接口。
 2. 所有正式安全服务调用必须先进入 SEC/C908 控制面。
 3. Mailbox 传递“命令与包地址”，共享内存传递“真实包体”。
-4. OTP/eFuse 只被 eHSM 直接使用，不向外暴露敏感内容。
+4. eFuse 只被 eHSM 直接使用，不向外暴露敏感内容。
 
 ---
 
@@ -2233,7 +2446,7 @@ SEC 负责：
 
 eHSM 负责：
 - 真实安全操作执行
-- OTP / key / counter / lifecycle / verify / auth / attestation 服务
+- eFuse / key / counter / lifecycle / verify / auth / attestation 服务
 - 返回结构化结果和错误码
 
 ### 6.8.3 SEC ↔ Host / BMC / OOB
@@ -2247,7 +2460,7 @@ Host/BMC/OOB 可请求：
 - manufacturing/provisioning 受控步骤（仅 MANU）
 
 Host/BMC/OOB 不可请求：
-- 直接写 OTP 安全区
+- 直接写 eFuse 安全区
 - 直接开关 debug
 - 直接改 lifecycle
 - 直接导出私钥或敏感 key blob
@@ -2306,11 +2519,7 @@ Host/BMC/OOB 不可请求：
 
 ## 6.10 Mailbox 通用模型
 
-本章不重复实现级全部细节，正式字段冻结以：
-
-- `04_impl_design/mailbox_if.md`
-
-为准。这里给出章节级口径。
+本章直接给出 Mailbox 的章节级字段和命令口径；第 10.5 节内嵌了 `mailbox_if.md` 的完整实现级定义。代码落地、评审和联调不得只读取 `04_impl_design` 分片后跳过本文。
 
 ### 6.10.1 设计原则
 
@@ -2379,7 +2588,7 @@ typedef struct {
 - `[CONFIRMED]` `token` 必须用于请求/响应配对
 - `[CONFIRMED]` 所有长度字段必须由 SEC 先做边界检查
 - `[CONFIRMED]` `caller_id` 必须固定为 SEC/C908 安全调用面
-- `[ASSUMED]` `lifecycle_state` 可作为快速拒绝提示，但最终仍以 eHSM 当前状态/OTP 为准
+- `[ASSUMED]` `lifecycle_state` 可作为快速拒绝提示，但最终仍以 eHSM 当前状态/eFuse 为准
 
 ---
 
@@ -2411,7 +2620,7 @@ typedef struct {
 
 ## 6.13 Verify Image 结构
 
-章节级最小结构如下，完整定义以 `mailbox_if.md` 为准。
+本节直接列出 Verify Image 请求/响应结构的章节级字段；第 10.5.21 对 `VERIFY_FMC / VERIFY_SEC1 / VERIFY_IMAGE` 进一步给出实现级约束。若后续 `mailbox_if.md` 分片更新，必须同步本文。
 
 CR-0004 接受后，`VERIFY_SEC1 / VERIFY_IMAGE` 是 NGU wrapper/profile，不直接替代 eHSM 原生命令。SEC1 early boot 应映射到 eHSM Bootloader `bl_verify_image` 或等价 ROM path；SEC2/runtime load 应映射到 eHSM Firmware `soc_verify` 或项目 wrapper。
 
@@ -2474,14 +2683,14 @@ typedef struct {
 | OOB-MCU / 板级 MCU | 板级辅助控制、受控桥接、电源/复位流程执行 | 直接成为安全根、直接打开 debug、直接改 lifecycle |
 | SMBus / I2C / I3C / Sideband | 受控状态传输、简单触发、管理请求转发 | 直接承载高权限安全命令 |
 | JTAG / CPLD / MUX | 授权后按 scope 打开受限调试路径 | USER 常开、板级直通、绕过 eHSM debug auth |
-| 管理子系统 DMA | 访问普通白名单 buffer | 访问 eHSM、OTP/eFuse、Secure SRAM、SEC 执行区、证书/策略区 |
+| 管理子系统 DMA | 访问普通白名单 buffer | 访问 eHSM、eFuse、Secure SRAM、SEC 执行区、证书/策略区 |
 | 电源 / 复位 / PowerBrake | 执行受控电源和故障响应流程 | 绕过 secure boot 失败处理、绕过审计或造成未解释安全状态 |
 
 ### 6.14.2 地址与长度检查
 
 - `[CONFIRMED]` 所有地址参数必须由 SEC 先做白名单检查
 - `[CONFIRMED]` eHSM 侧必须再次做范围检查
-- `[CONFIRMED]` 共享内存不得指向 Secure SRAM / OTP / eHSM 私有区
+- `[CONFIRMED]` 共享内存不得指向 Secure SRAM / eFuse / eHSM 私有区
 - `[CONFIRMED]` Host DMA 不得访问安全执行区和安全共享区
 
 ### 6.14.3 Cache / 一致性规则
@@ -2699,7 +2908,7 @@ Attestation 在外部看起来像：
 
 - `[CONFIRMED]` BMC / OOB-MCU / 板级 MCU / 管理子系统不进入 Root of Trust。
 - `[CONFIRMED]` BMC / OOB / Sideband 的信任级别不高于 Host。
-- `[CONFIRMED]` 板级链路可承载管理请求、状态查询、故障定位和工装流程，但不得直接访问 eHSM、OTP/eFuse、Secure SRAM、Root/anchor 或 lifecycle 控制。
+- `[CONFIRMED]` 板级链路可承载管理请求、状态查询、故障定位和工装流程，但不得直接访问 eHSM、eFuse、Secure SRAM、Root/anchor 或 lifecycle 控制。
 
 ### 7.3.3 高风险入口
 
@@ -2728,7 +2937,7 @@ Attestation 在外部看起来像：
 - 管理子系统不得直接修改 lifecycle、secure boot、debug enable、rollback counter、Root/anchor。
 - JTAG 不得在 USER/PROD 量产态常开。
 - JTAG MUX / CPLD 不得提供绕过 eHSM debug authorization 的直通路径。
-- 管理子系统 DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区。
+- 管理子系统 DMA 不得访问 eHSM、eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区。
 - 电源/复位控制不得绕过安全启动失败处理和审计。
 
 ---
@@ -2759,7 +2968,7 @@ graph TD
     BMC[BMC / OOB Host] -->|SMBus/I2C / I3C / PCIe / Sideband| MCU[板级 MCU / 管理子系统]
     MCU -->|受控管理请求| SEC[SEC / C908]
     SEC -->|Mailbox + Shared Memory| EH[eHSM]
-    EH --> OTP[OTP / eFuse / Lifecycle / Counter]
+    EH --> eFuse[eFuse / Lifecycle / Counter]
 
     MCU -->|Power / Reset / PG / Fault| PWR[电源与复位控制]
     MCU -->|DMA / Mailbox / Interrupt| MGMT[管理子系统内部资源]
@@ -2769,13 +2978,13 @@ graph TD
     EH -->|challenge-response / policy| SEC
 
     BMC -. no direct trust .-> EH
-    MCU -. no direct access .-> OTP
+    MCU -. no direct access .-> eFuse
     JTAG -. no bypass .-> EH
 ```
 
 ### 图下说明
 
-1. BMC/OOB/板级 MCU 可以承载管理流程，但不直接进入 eHSM 或 OTP/eFuse。
+1. BMC/OOB/板级 MCU 可以承载管理流程，但不直接进入 eHSM 或 eFuse。
 2. JTAG 的物理接入能力来自板级链路，但授权、scope 和生命周期裁决必须来自 SEC/eHSM。
 3. 电源、复位、DMA、mailbox 和中断都可能影响安全状态，不能作为纯普通外设看待。
 4. 管理子系统总体流程遵循 `SRC-005 管理子系统方案`，安全边界由 `01_constraints.md` 和 `02_baseline.md` 裁决。
@@ -2881,7 +3090,7 @@ sequenceDiagram
 `SRC-005 管理子系统方案` 提到 CPU 子系统采用通用 AXI DMA，内部 CPU 分配独立 DMA 通道，低速外设绑定物理 DMA 通道。安全要求如下：
 
 - `[CONFIRMED]` DMA 只能访问普通 staging buffer、普通数据 buffer 和经 firewall 显式允许的区域。
-- `[CONFIRMED]` DMA 不得访问 eHSM、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区和安全共享缓冲区。
+- `[CONFIRMED]` DMA 不得访问 eHSM、eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、证书/策略区和安全共享缓冲区。
 - `[CONFIRMED]` DMA 访问必须带 UserID 或等价 master 标识，并经 firewall 策略检查。
 - `[ASSUMED]` 低速外设 DMA 通道应默认最小权限，按外设绑定固定访问范围。
 
@@ -3000,8 +3209,8 @@ sequenceDiagram
 本章定义 NGU800 的 Root of Trust、密钥体系、证书体系和双算法映射口径，明确：
 
 1. Root of Trust 的归属和边界
-2. UDS / Root Secret / DRK / 各分支业务密钥的层级关系
-3. 固件验签、固件解密、设备证明、调试鉴权所依赖的 key branch
+2. UDS / Root Secret / DRK / 设备证明派生域的层级关系
+3. 固件验签、固件解密、设备证明、调试鉴权所依赖的独立 key domain
 4. 证书链 / trust anchor / signer hash 的项目采用策略
 5. 国密与国际算法栈在 key / cert / report / FW header 中的统一承载方式
 6. 与实现层文件的映射关系：
@@ -3009,6 +3218,25 @@ sequenceDiagram
    - `04_impl_design/spdm_report.md`
    - `04_impl_design/manufacturing_provisioning.md`
    - `04_impl_design/mailbox_if.md`
+
+### 8.1.1 本章核心口径
+
+NGU800 密钥体系按三套相互关联、但职责不同的体系组织，不再把所有密钥画成一棵设备内派生树：
+
+| 体系 | 私钥位置 | 设备侧保存内容 | 主要用途 |
+|---|---|---|---|
+| 外部签名 / 授权 / 固件制作加密体系 | 离线 HSM / CA / KMS / 签名服务器 / 受保护调试工具 | public key hash、cert anchor、signer hash、revoke policy、debug/RMA anchor、固件制作加密 key policy | 固件签名、固件制作加密、升级授权、Debug Auth 授权、RMA 授权、设备证书签发 |
+| 设备内部 eHSM key 体系 | eHSM / eFuse / KMU 内部，不导出 | key handle、eFuse key、control field、counter、lifecycle、key slot policy | 固件解密、key unwrap、设备证明私钥使用、Debug Auth 验签执行、counter/lifecycle 管控 |
+| 设备身份与证书体系 | Device Attestation Private Key 在 eHSM 内部；证书签发私钥在离线 HSM | Device Attestation Cert、issuer anchor、cert serial/hash | 设备向外证明身份与当前运行状态 |
+
+关键规则：
+
+1. 启动签名私钥、升级授权私钥、Debug 授权私钥、设备证明证书签发私钥均属于外部签名 / 授权体系，不由设备 DRK 派生，也不进入设备；“启动一套、升级一套、Debug 一套”的简化规则只约束这类外部签名 / 授权私钥。
+2. 设备侧只保存这些外部授权密钥对应的 public key hash、anchor 或 revoke policy，用于 eHSM/SEC 验证外部签名。
+3. Device Attestation Private Key 属于设备内部身份密钥，不得离开 eHSM；设备可导出公钥/CSR，由离线 CA/HSM 签发 Device Attestation Cert。
+4. 固件制作侧的对称加密 / CEK 包裹材料由离线 HSM / KMS 管理，用于生成加密固件包；设备侧的 SoC Encrypt Key、Soc Upgrade Encrypt Key、FW_KEK / image protect key、key unwrap key、counter/lifecycle/control field 属于设备内部 eHSM key 体系，不在“三套外部签名 / 授权私钥”收敛范围内，Host/普通核/OOB/BMC 不得读取。
+5. Debug Auth 的方向是外部授权方签名，设备侧验签并打开受限 scope，不是设备生成 Debug Auth 私钥给外部使用。
+6. DRK 只作为 eHSM 内部 device-local protection/wrapping context 或设备证明派生域语义，不作为外部签名私钥来源，也不作为 FW verify / FW encrypt / debug auth 的软件可见 KDF 上游。
 
 ---
 
@@ -3054,20 +3282,21 @@ sequenceDiagram
 ### 8.4.1 本章必须回答的问题
 
 1. Root Secret / UDS 放在哪里，谁使用？
-2. Device Root Key（DRK）如何从根种子派生？
-3. 固件验签根和固件解密根如何区分？
-4. Attestation 与 Debug Auth 是否复用一套根？
-5. 固件验签采用“OTP 固化公钥摘要”还是“完整 cert chain”？
+2. 外部签名/授权私钥、设备内部 eHSM key、设备证明私钥如何区分？
+3. Attestation Seed / device-local protection context 如何限定为设备证明派生域语义，而不是所有业务 key 的共同上游？
+4. 固件验签根、固件解密根、Debug Auth anchor、Attestation identity key 如何区分？
+5. 固件验签采用“eFuse 固化公钥摘要”还是“完整 cert chain”？
 6. 设备证明采用“Device Identity Key”还是“Alias Key / Session Key”？
-7. 国密 / 国际算法如何在同一套结构中共存？
-8. 制造灌装阶段具体写什么、锁什么、清理什么？
+7. Debug Auth / RMA 授权是外部签名、设备侧验签，还是设备侧签名？本方案必须明确为前者。
+8. 国密 / 国际算法如何在同一套结构中共存？
+9. 制造灌装阶段具体写什么、锁什么、清理什么？
 
 ### 8.4.2 不得违反的边界
 
 - BootROM 不得成为密钥管理中心
 - Host 不得持有或缓存设备私钥
-- 证书链策略不得脱离 Root / OTP / lifecycle 约束单独定义
-- 任何 key branch 都不得绕过 lifecycle gating
+- 证书链策略不得脱离 Root / eFuse / lifecycle 约束单独定义
+- 任何 key domain 都不得绕过 lifecycle gating
 - 量产 USER 态不得保留测试 trust anchor 或测试 signer
 
 ---
@@ -3075,34 +3304,72 @@ sequenceDiagram
 ## 8.5 架构图
 
 ```mermaid
-graph TD
-    OTP[OTP / eFuse
-UDS / Root Secret / Control Bits / Signer Hash / Counter] --> EH[eHSM]
-    EH --> DRK[Device Root Key / DRK]
-    DRK --> FWV[FW Verify Branch]
-    DRK --> FWE[FW Encrypt Branch]
-    DRK --> ATT[Attestation Branch]
-    DRK --> DBG[Debug Auth Branch]
+flowchart TD
+    subgraph OFFLINE["Offline HSM / CA / KMS"]
+        BOOT_SIGN["Secure Boot Signing Key"]
+        UPDATE_AUTH["Update Authorization Signing Key"]
+        DEBUG_AUTH["Debug Authorization Signing Key"]
+        DEV_ATTEST_CA["Device Attestation CA Signing Key"]
+    end
 
-    FWV --> S1[SEC1 Verify]
-    FWV --> S2[SEC2 Verify]
-    FWV --> OTH[PM/RAS/Codec FW Verify]
+    subgraph ANCHOR["Device eFuse / Secure Storage"]
+        BOOT_ANCHOR["Secure Boot Signer Anchor"]
+        UPDATE_ANCHOR["Update Authorization Anchor"]
+        DEBUG_ANCHOR["Debug Authorization Anchor"]
+        CERT_STORE["Device Attestation Cert / Cert Block"]
+        REVOKE_POLICY["Signer / Debug Revoke Bitmap"]
+        KEY_EPOCH_POLICY["Key Epoch Policy"]
+        CONTROL_POLICY["Counter / Lifecycle / Control Field"]
+    end
 
-    ATT --> DI[Device Identity Key]
-    ATT --> ALIAS[Alias / Session Key Optional]
+    subgraph EHSM["Device eHSM / eFuse Key System"]
+        CRK["Chip Root Key / Root Secret"]
+        DRK["DRK / Attestation Seed<br/>device-local protection context"]
+        ENC_KEY["SOC Encrypt Key"]
+        UPG_ENC_KEY["SOC Upgrade Encrypt Key"]
+        FW_VERIFY_HANDLE["SOC FW Verify Handle"]
+        UPG_VERIFY_HANDLE["SOC Upgrade Verify Handle"]
+        DBG_VERIFY_HANDLE["SOC Debug Verify Handle"]
+        DEV_ID["Device Attestation Private Key"]
+        CNT["Version Counter / Lifecycle Service"]
+    end
 
-    DBG --> DAUTH[Challenge / Debug Auth]
+    BOOT_SIGN -->|"sign boot firmware"| FWPKG["FMC / GSP / Runtime Package"]
+    UPDATE_AUTH -->|"sign update capsule"| UPDATE["Update Capsule"]
+    UPDATE_AUTH -->|"sign key rotation capsule"| KEY_ROT_CAP["Key Rotation Capsule"]
+    DEBUG_AUTH -->|"sign challenge + UID + scope + expiry"| DBG_TOKEN["Debug / RMA Auth Token"]
+    DEV_ATTEST_CA -->|"sign device CSR / public key"| CERT_STORE
 
-    EH --> CERT[Signer Hash / Cert Anchor / Cert Chain]
-    Host[Host] -. no private key .-> CERT
+    BOOT_ANCHOR --> FW_VERIFY_HANDLE
+    UPDATE_ANCHOR --> UPG_VERIFY_HANDLE
+    DEBUG_ANCHOR --> DBG_VERIFY_HANDLE
+    REVOKE_POLICY --> EHSM
+    KEY_EPOCH_POLICY --> EHSM
+    CONTROL_POLICY --> EHSM
+
+    CRK --> DRK
+    DRK --> DEV_ID
+    EHSM --> ENC_KEY
+    EHSM --> UPG_ENC_KEY
+    EHSM --> CNT
+
+    FWPKG -->|"verify signature"| FW_VERIFY_HANDLE
+    FWPKG -->|"decrypt / unwrap"| ENC_KEY
+    UPDATE -->|"verify update authorization"| UPG_VERIFY_HANDLE
+    KEY_ROT_CAP -->|"verify key rotation authorization"| UPG_VERIFY_HANDLE
+    DBG_TOKEN -->|"verify debug authorization"| DBG_VERIFY_HANDLE
+    DEV_ID -->|"sign attestation report"| REPORT["Attestation Report"]
 ```
 
 ### 图下说明
 
-1. OTP/eFuse 保存的是**根材料、控制位、signer anchor、counter**，而不是让普通软件直接读取的明文密钥仓库。
-2. eHSM 是唯一合法的 key usage 执行面。
-3. DRK 是项目内部逻辑层次，不要求一定以明文字段形式存在，但要求在设计语义上作为各分支 key 的共同上游。
-4. 固件验签、设备证明、调试鉴权在工程上建议分成不同 key branch，避免权限耦合。
+1. Offline HSM / CA / KMS 按首版三套核心授权域持有启动签名、升级授权、Debug 授权私钥；设备证明证书签发方单独用于签发 Device Attestation Cert。这些私钥不进入设备，也不由设备 DRK 派生。
+2. 设备侧保存的是外部授权体系对应的 public key hash、anchor、revoke bitmap 和 policy，用于 eHSM/SEC 验签。
+3. eHSM 是唯一合法 key usage 执行面；Host/BMC/OOB 只能投递包、提交请求或读取结果，不能直接读取 root secret、设备证明私钥、固件解密 key 或 debug 授权私钥。
+4. DRK / Attestation Seed 只表达 eHSM 内部 device-local protection context / 设备证明派生域语义，不作为 FW verify / FW encrypt / debug auth 的软件可见 KDF 上游。
+5. 固件验签使用 eHSM native `Soc FW Verify Key` / `Soc Upgrade Verify Key` / secure boot signer anchor / update authorization anchor / owner mapping。
+6. 固件制作侧由离线 HSM / KMS 使用 `firmware_packaging_encrypt_key` 或等价 key policy 完成 Code region 加密 / CEK 包裹；设备侧使用 eHSM native `Soc Encrypt Key` / `Soc Upgrade Encrypt Key` / `FW_KEK` 或 image protect key policy / owner mapping 完成解密 / unwrap；这些 key 不属于外部三套签名授权 key，exact key ID / key level / key purpose 仍由 eHSM owner 冻结。
+7. Debug / RMA 首版共用一套 Debug 授权 key / anchor，通过 token 中的 scope、challenge、UID、expiry、reason 区分授权范围；不再拆多级 Debug 授权证书。
 
 ---
 
@@ -3110,39 +3377,48 @@ UDS / Root Secret / Control Bits / Signer Hash / Counter] --> EH[eHSM]
 
 ```mermaid
 sequenceDiagram
-    participant OTP as OTP/eFuse
+    participant HSM as Offline HSM/CA/KMS
+    participant EF as eFuse
     participant EH as eHSM
     participant SEC as SEC/C908
-    participant FW as FW Verify Path
+    participant FW as Firmware Package
     participant V as Verifier
     participant DBG as Debug Client
 
-    OTP->>EH: 提供 UDS / Root Secret / signer anchor / lifecycle / counter
-    EH->>EH: 派生 DRK
-    EH->>EH: 派生 FW Verify / Encrypt / Attestation / Debug branches
+    HSM->>FW: sign boot firmware / update capsule / key rotation capsule
+    HSM->>DBG: issue debug or RMA scoped token
+    EF->>EH: 提供 UDS / Root Secret / signer anchor / lifecycle / counter / key slot policy
+    EH->>EH: 初始化 eHSM key domains
+    EH->>EH: 准备 device-local DRK / Attestation Seed / Device Identity KeyPair
+    EH->>EH: 绑定 FW verify / encrypt key slots 与 lifecycle / key slot policy
+    EH->>EH: 绑定 Debug authorization anchor 与 scope policy
 
-    SEC->>EH: VERIFY_IMAGE(req)
-    EH->>FW: 使用 FW Verify Branch 校验镜像
+    SEC->>EH: VERIFY / DECRYPT_IMAGE(req)
+    EH->>FW: 使用 Soc FW Verify / Upgrade Verify key 或 signer anchor 校验镜像
     FW-->>EH: PASS / FAIL
-    EH-->>SEC: verify result
+    EH->>FW: 按 Soc Encrypt / Upgrade Encrypt / FW_KEK policy 解密输出
+    FW-->>EH: decrypt output / policy result
+    EH-->>SEC: verify / decrypt result
 
     V->>SEC: challenge / nonce
     SEC->>EH: GEN_ATTEST_REPORT
-    EH->>EH: 使用 Attestation Branch 组织并签署 report
+    EH->>EH: 使用 Device Attestation KeyPair / Attestation Seed 组织并签署 report
     EH-->>SEC: signed report
-    SEC-->>V: report
+    SEC-->>V: report + Device Attestation Cert / cert reference
+    V->>V: verify report by device attestation issuer anchor
 
-    DBG->>SEC: debug auth request
+    DBG->>SEC: debug/RMA auth request + scoped token
     SEC->>EH: DEBUG_AUTH
-    EH->>EH: 使用 Debug Auth Branch 校验授权
+    EH->>EH: 使用 Debug authorization anchor 校验 challenge / UID / scope / expiry / reason
     EH-->>SEC: granted / denied
 ```
 
 ### 图下说明
 
-1. 所有 key branch 都从 Root / UDS 语义上派生，而不是离散孤立存在。
-2. 固件验签、设备证明、调试鉴权通过不同 branch 可降低权限串扰。
-3. Host / Verifier / Debug Client 都不能直接操作私钥，只能通过 SEC → eHSM 的受控路径发起请求。
+1. 启动签名、升级授权、Debug/RMA 授权和设备证明证书签发发生在离线 HSM/CA/KMS 或受保护工具侧；设备只保存锚点并验签。
+2. 不再把 FW verify / FW encrypt / debug auth 描述为从 DRK 派生；DRK 只服务 device-local protection context / 设备证明派生域。
+3. 固件验签和固件解密由 eHSM native key slot / signer anchor / FW_KEK policy 支撑，exact key ID / key level / key purpose 仍由 eHSM owner 冻结。
+4. Host / Verifier / Debug Client 都不能直接操作私钥，只能通过 SEC → eHSM 的受控路径发起请求。
 
 ---
 
@@ -3154,7 +3430,7 @@ sequenceDiagram
 
 | 组件 | 职责 |
 |---|---|
-| OTP / eFuse | 持久保存根种子、控制位、signer anchor、counter、lifecycle 状态 |
+| eFuse | 持久保存根种子、控制位、signer anchor、counter、lifecycle 状态 |
 | eHSM | 使用根种子，提供 crypto / verify / key / lifecycle / debug auth 服务 |
 | BootROM | 最早启动编排者，负责把控制流程带到安全验证路径，但不是密码学根 |
 
@@ -3169,7 +3445,7 @@ sequenceDiagram
 
 Root of Trust 的责任不是“替 BootROM 做所有事情”，而是：
 
-1. 提供信任基础（OTP / Root Secret / signer anchor）
+1. 提供信任基础（eFuse / Root Secret / signer anchor）
 2. 提供首个密码学验证能力（eHSM）
 3. 约束后续所有执行放行和生命周期行为
 
@@ -3177,26 +3453,59 @@ Root of Trust 的责任不是“替 BootROM 做所有事情”，而是：
 
 ## 8.8 密钥对象表
 
-### 8.8.1 关键密钥对象
+> 本节不拆分新表，但必须区分三类对象：外部签名 / 授权私钥由离线 HSM / KMS / CA 持有，首版按“启动一套、升级一套、Debug 一套”收敛；固件制作侧加密 / CEK 包裹 key 也由离线 HSM / KMS 管理，用于生成加密固件包；设备侧对称解密 / unwrap key 位于 eHSM key 体系，用于 Code region 解密、FW_KEK / image protect key policy 和 key unwrap，不属于外部签名 key 简化范围。
 
-| Key Object | 作用 | 是否可导出 | 推荐存储 / 使用位置 | 生命周期限制 |
+### 8.8.1 外部签名 / 授权密钥
+
+| 对象 ID | 中文名称 | 私钥位置 | 设备侧保存对象 | 主要用途 | 备注 |
+|---|---|---|---|---|---|
+| `secure_boot_signing_key` | 安全启动固件签名私钥 | 离线 HSM / KMS / 签名服务器 | `secure_boot_signer_anchor` 或 public key hash | 签 FMC、GSP、runtime 启动固件包 | 启动域唯一签名授权；设备只验签，不持有该私钥 |
+| `firmware_packaging_encrypt_key` | 固件制作加密 / CEK 包裹密钥 | 离线 HSM / KMS / 固件打包服务 | 设备侧对应 `soc_encrypt_key`、`soc_upgrade_encrypt_key`、`FW_KEK / image protect key policy` 或 eHSM owner-confirmed 等价映射 | 加密 FMC/GSP Code region，或包裹 per-image CEK / key material | 不是签名授权 key；明文不得离开 HSM/KMS；exact 映射需 eHSM owner 冻结 |
+| `update_authorization_signing_key` | 升级授权签名私钥 | 厂商或客户 HSM / KMS | `update_authorization_anchor`、`key_epoch_policy`、revoke bitmap | 签 update capsule、key rotation capsule | 升级域唯一授权；覆盖新 signer、新 key epoch、旧 key 吊销和 FMC 主区域更新授权 |
+| `debug_authorization_signing_key` | Debug 授权签名私钥 | 厂商或客户 HSM / RMA 服务系统 / 受保护调试工具 | `debug_authorization_anchor`、debug revoke bitmap | 签 Debug/RMA scoped token | Debug 域唯一授权；通过 challenge、UID、scope、expiry、reason 限权 |
+| `device_attestation_ca_signing_key` | 设备证明证书签发私钥 | 厂商或客户 CA / HSM | 设备证明签发方 anchor 或 Verifier 侧 trust anchor | 签发 Device Attestation Cert | 不进入设备；SoC 方案只表达单一签发方 |
+
+### 8.8.2 设备内部 eHSM 密钥与状态
+
+| 对象 ID | 中文名称 | 位置 | 是否可导出 | 主要用途 | 备注 |
+|---|---|---|---:|---|---|
+| `uds` | 设备唯一种子 | eFuse / eHSM 安全区 | 否 | 设备内部根材料上游 | Host、SEC、普通核不可读 |
+| `chip_root_key` | 芯片根密钥 | eHSM 内部或 eFuse key hierarchy | 否 | eHSM 内部 key hierarchy / root protection | 是否显式存在由 eHSM 实现决定 |
+| `drk` | 设备本地保护上下文 | eHSM 内部 | 否 | device-local protection / wrapping context、设备证明域上游语义 | 不代表所有用途私钥来源；不作为 FW verify/encrypt/debug 的软件可见 KDF 上游 |
+| `soc_encrypt_key` | SoC 启动对称解密密钥 | eHSM / eFuse / KMU | 否 | 安全启动镜像 Code region 解密、FW_KEK / image protect key policy | FMC/GSP 正式路径强制使用；不属于外部签名 / 授权私钥 |
+| `soc_upgrade_encrypt_key` | SoC 升级对称解密密钥 | eHSM / eFuse / KMU | 否 | 升级包解密、key material 保护或升级态 FW_KEK / image protect key policy | exact 用法需 eHSM owner 冻结；不属于外部签名 / 授权私钥 |
+| `soc_fw_verify_handle` | SoC 固件验签句柄 | eHSM key handle / public anchor / eFuse policy | 不导出私钥；可使用 public anchor | FMC/GSP/runtime 启动固件验签 | 对应 `secure_boot_signer_anchor` |
+| `soc_upgrade_verify_handle` | SoC 升级验签句柄 | eHSM key handle / public anchor / eFuse policy | 不导出私钥；可使用 public anchor | 升级包、key rotation capsule 验签 | 对应 `update_authorization_anchor` |
+| `soc_debug_verify_handle` | SoC 调试验签句柄 | eHSM key handle / public anchor / eFuse policy | 不导出私钥 | Debug/RMA scoped token 验签 | 对应 `debug_authorization_anchor` |
+| `device_attestation_private_key` | 设备证明私钥 | eHSM 内部 | 否 | 签署 attestation report | 公钥/CSR 可导出给 CA 签证书 |
+| `attestation_alias_key` | 设备证明别名密钥 | eHSM 内部 | 否 | 可选 session / alias attestation 签名 | 首版是否启用仍 `[TBD]` |
+| `image_cek` | 镜像内容对称加密密钥 | eHSM 内部或 eHSM owner-confirmed unwrap path | CEK 明文不得离开 eHSM | 加密单个镜像 payload / Code region | 首版不作为已冻结镜像头字段；仅在 eHSM owner 确认 per-image CEK extension 后启用 |
+| `wrapped_cek` | 被包裹的镜像内容密钥 | 固件包 extension 或 eHSM owner-confirmed container | 不含可直接使用明文 key | 由 eHSM unwrap 得到 `image_cek` | 仅在 eHSM owner 确认 per-image CEK extension 后启用 |
+| `soc_fw_version_counter` | SoC 固件版本计数器 | eHSM / eFuse / counter service | Host 不可修改 | anti-rollback | 物理承载优先对齐 eHSM SOC FW Version Counter |
+| `lifecycle_state` | 生命周期状态 | eHSM / eFuse / 安全寄存器 | Host 不可修改 | TEST/DEVE/MANU/USER/RMA/DEST 策略门控 | 影响 boot、debug、attestation、provisioning |
+| `control_field` | 安全控制位集合 | eHSM / eFuse / control field | Host 不可修改 | secure boot、upgrade、debug、算法 profile 等控制 | `SocBootAlg / SocUpgradeAlg` 或等价字段是算法 authority |
+
+### 8.8.3 证书与锚点对象
+
+| 对象 ID | 中文名称 | 位置 | 用途 | 写入/更新时机 |
 |---|---|---|---|---|
-| UDS / Root Secret | 根种子 | 否 | OTP/eFuse → eHSM 使用 | 全生命周期受控 |
-| DRK | 设备根派生密钥 | 否 | eHSM 内部 | 全生命周期受控 |
-| FW Verify Root | 固件验签根 | 否（私钥）/是（公钥或摘要） | eHSM / cert anchor | USER 必须受控 |
-| FW Encrypt Key / KEK | 固件机密性保护，至少对 SEC1 + SEC2 强制启用 | 否 | eHSM | SEC1/SEC2 强制；PM/RAS/Codec USER/PROD 默认启用，signature-only 例外按产品白名单 |
-| Image CEK / wrapped CEK | `[TBD]` 若后续确需 per-image CEK，由 eHSM owner 确认 extension / customization 后定义 | 否（CEK 明文不得离开 eHSM） | 不作为首版已冻结镜像头字段 | 与 eHSM key policy、NGU `ngu_image_type`、lifecycle 绑定；具体机制待冻结 |
-| Attestation Seed | 设备证明上游种子 | 否 | eHSM | USER / DEBUG/RMA 受控 |
-| Device Identity Key | 设备证明私钥 | 否 | eHSM | 不得导出 |
-| Alias / Session Key | 证明扩展私钥 | 否 | eHSM | `[ASSUMED]` 首版可选 |
-| Debug Auth Seed / Key | 调试鉴权 | 否 | eHSM | DEBUG/RMA 受控 |
-| Signer Hash / Anchor | 固件验签锚点 | 可读摘要 | OTP/eFuse / cert block | USER 必须冻结 |
+| `secure_boot_signer_anchor` | 安全启动 signer 锚点 | eFuse 或 eHSM owner-confirmed 安全存储 | 验证 FMC/GSP/runtime 启动固件签名 | 制造阶段写入，升级授权流程可受控轮换 |
+| `update_authorization_anchor` | 升级授权锚点 | eFuse 或 eHSM owner-confirmed 安全存储 | 验证 update capsule / key rotation capsule | 制造阶段写入，客户接管或 key rotation 时受控更新 |
+| `debug_authorization_anchor` | Debug 授权锚点 | eFuse 或 eHSM owner-confirmed 安全存储 | 验证 Debug/RMA scoped token | 制造阶段写入，USER 前锁定或受控更新 |
+| `device_attestation_cert` | 设备证明证书 | Flash 安全区 / 证书分区 / eHSM 管理存储 | 证明设备公钥属于合法设备 | 制造阶段由 CA 签发后写回 |
+| `device_attestation_issuer_anchor` | 设备证明签发方锚点 | eFuse、证书分区或 Verifier 侧预置 | Verifier 验证设备证明证书 | 按客户接入模式决定是否内嵌 |
+| `signer_revoke_bitmap` | signer 吊销位图 | eFuse、受保护 metadata 或 eHSM owner-confirmed policy | 吊销启动 signer / 升级授权 signer | 受控升级或制造阶段写入 |
+| `debug_revoke_bitmap` | debug 授权吊销位图 | eFuse、受保护 metadata 或 eHSM owner-confirmed policy | 吊销 Debug 授权方或 token serial | 受控升级、RMA 策略或制造阶段写入 |
+| `key_epoch_policy` | 密钥代际策略 | eFuse、受保护 metadata 或 eHSM owner-confirmed policy | 表达 active/next/deprecated/revoked key epoch | 与 update authorization、rollback、revoke 和 OOB 可恢复路径绑定 |
 
-### 8.8.2 当前项目建议
+### 8.8.4 当前项目建议
 
-- `[CONFIRMED]` UDS / Root Secret 为最上游根材料
-- `[CONFIRMED]` 固件验签、设备证明、调试鉴权不应直接共用同一把外部暴露身份，而应在语义上分 branch
-- `[ASSUMED]` 首版可先在实现上减少 branch 数量，但结构设计必须预留分支能力
+- `[CONFIRMED]` UDS / Root Secret 为 eHSM 内部安全域的最上游根材料，但不等价于所有业务 key 都由 DRK 派生。
+- `[CONFIRMED]` 设备证明密钥对 / Alias key 可归入 DRK / Attestation Seed 派生域，私钥不得导出。
+- `[CONFIRMED]` 启动签名、升级授权、Debug/RMA 授权和设备证明证书签发私钥属于外部签名 / 授权体系，设备只保存 anchor/hash/policy。
+- `[CONFIRMED]` 首版安全授权域收敛为启动一套、升级一套、Debug 一套；升级域覆盖 key rotation，Debug 域覆盖 RMA scope，不拆外部多层授权 key。
+- `[CONFIRMED]` 固件验签、固件解密、debug auth 不应直接共用同一把外部暴露身份，也不应描述为由设备证明 DRK 派生。
+- `[TBD]` exact eHSM key ID / key level / key purpose 由 eHSM owner 按 TRM 与项目 key slot 策略冻结。
 
 ---
 
@@ -3205,111 +3514,153 @@ Root of Trust 的责任不是“替 BootROM 做所有事情”，而是：
 ### 8.9.1 推荐逻辑层级
 
 ```text
-UDS / Root Secret
-    ↓ KDF
-Device Root Key (DRK)
-    ↓───────────────┬───────────────────┬───────────────────┬───────────────────┐
-    ↓               ↓                   ↓                   ↓
-FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
+eFuse + eHSM secure storage / control field / lifecycle gating
+    ├─ Device identity / attestation derivation domain
+    │      └─ DRK / Attestation Seed
+    │             ├─ Device Attestation KeyPair
+    │             └─ Alias / Session Key Optional
+    ├─ Firmware verify domain
+    │      └─ Soc FW Verify Key / Soc Upgrade Verify Key / Signer Anchor
+    ├─ Firmware encrypt domain
+    │      └─ Soc Encrypt Key / Soc Upgrade Encrypt Key / FW_KEK Policy
+    └─ Debug auth domain
+           └─ Debug Authorization Anchor / Scope Policy
 ```
 
 ### 8.9.2 设计理由
 
-#### FW Verify Branch
+#### Firmware verify domain
 用于：
 - SEC1 / SEC2 / 后续微核镜像签名校验
 - signer hash / anchor 匹配
 - 吊销 / 版本 / trust chain 判定
+- 不从设备证明 DRK 派生；exact eHSM key ID / key level / key purpose 以 eHSM owner 冻结为准
 
-#### FW Encrypt Branch
+#### Firmware encrypt domain
 用于：
 - 镜像解密
 - FW_KEK / image protect key 路径；exact eHSM key ID / key level / key purpose 以 eHSM TRM 和 source-conformance matrix 为准
-- `NGU800:FW:ENC` 语义标签
+- 该域是设备内部对称加密 / 解密域，不受“外部启动签名一套、升级签名一套、Debug 授权一套”的简化口径影响
 - `[CONFIRMED]` 对 SEC1 为强制启用，SEC1 verify/decrypt output path 必须由 eHSM / 安全子系统受控密码服务完成
-- `[CONFIRMED]` 对 SEC2 强制启用 FW Encrypt Branch。
-- `[ASSUMED]` 对 PM、RAS、Codec 等后续关键固件在 USER/PROD 产品形态默认启用 FW Encrypt Branch；signature-only 例外按产品安全策略和 `ngu_image_type` 白名单冻结。
+- `[CONFIRMED]` 对 SEC2 强制启用 firmware encrypt domain。
+- `[ASSUMED]` 对 PM、RAS、Codec 等后续关键固件在 USER/PROD 产品形态默认启用 firmware encrypt domain；signature-only 例外按产品安全策略和 `ngu_image_type` 白名单冻结。
+- 不从设备证明 DRK 派生；若需要 per-image CEK / wrapped CEK，必须由 eHSM owner 确认 extension / customization
 - `[TBD]` `NGU800:WRAP:CEK` / per-image wrapped CEK 是否存在，取决于 eHSM owner 是否确认 image/container extension
 - `[TBD]` 除 SEC1/SEC2 外，哪些非敏感运行期镜像允许 signature-only，需由产品安全策略冻结
 
-#### Attestation Branch
+#### Device identity / attestation derivation domain
 用于：
 - Device Identity Key
 - Alias / Session-bound attestation key
 - 签署 report / attestation response
+- 可由 UDS / Root Secret / DRK / Attestation Seed 在 eHSM 内部派生或生成，私钥不可导出
 
-#### Debug Auth Branch
+#### Debug auth domain
 用于：
 - challenge-response
 - 调试授权校验
 - scope / time / lifecycle 相关鉴权
+- 与普通 attestation key 独立，不得把 attestation 成功等同于 debug auth 成功
 
 ### 8.9.3 当前裁决
 
 - `[CONFIRMED]` FW Verify 和 Attestation 不能混为一条“无边界通用签名私钥”
-- `[CONFIRMED]` FW Encrypt Branch 至少对 SEC1 + SEC2 强制启用；NGU `ngu_image_type = SEC1/SEC2` 必须映射到 eHSM owner-confirmed FW decrypt key policy 和 lifecycle policy
+- `[CONFIRMED]` FW verify / FW encrypt / debug auth 不从设备证明 DRK 派生；它们分别映射到 eHSM native key slot、anchor 或 owner-confirmed policy。
+- `[CONFIRMED]` Firmware encrypt domain 至少对 SEC1 + SEC2 强制启用；NGU `ngu_image_type = SEC1/SEC2` 必须映射到 eHSM owner-confirmed FW decrypt key policy 和 lifecycle policy
 - `[TBD]` exact eHSM key ID / key level / key purpose 需要由 eHSM owner 确认，不得由 NGU 自行冻结物理 key slot
 - `[CONFIRMED]` Debug Auth 必须有独立控制面，不能简单复用普通 attestation 成功即开 debug
-- `[ASSUMED]` DRK 是否在硬件实现中显式存在为中间寄存态不重要，重要的是语义上 branch 上游唯一且受控
+- `[ASSUMED]` DRK 是否在硬件实现中显式存在为中间寄存态不重要，重要的是文档语义必须限定在设备证明派生域内。
 
 ---
 
 ## 8.10 证书体系设计
 
-### 8.10.1 当前项目面临的两种模型
+### 8.10.1 当前项目采用的简化模型
 
-| 模型 | 描述 | 优点 | 风险 |
-|---|---|---|---|
-| Hash Anchor 模型 | OTP 中保存 signer hash / root hash；镜像或报告中带 signer/cert 信息 | 实现轻、适合首版 | 灵活度受限 |
-| Full Cert Chain 模型 | 镜像 / report 中直接携带完整 cert chain | 标准化程度高，适合长期扩展 | 体积大、实现复杂 |
+首版采用 **eFuse anchor + 可选证书块** 模型：SoC 侧只冻结必要的 signer / authorization / issuer anchor，不在启动、升级、Debug 授权域内拆多层证书链。镜像或 report 可以携带证书块用于外部 verifier 展示和审计，但启动、升级、Debug 的放行裁决必须回到 eFuse anchor / eHSM policy。
 
 ### 8.10.2 当前建议
 
 #### 固件验签路径
-- `[CONFIRMED]` 首版优先采用 **OTP 固化 signer hash / trust anchor** 模型
-- `[ASSUMED]` 可预留镜像中携带 cert chain blob 的能力
-- `[TBD]` 是否直接首版全面切到 X.509 需看项目证书基础设施成熟度
+- `[CONFIRMED]` 首版采用 `secure_boot_signer_anchor` 作为启动域唯一 signer anchor。
+- `[CONFIRMED]` 镜像可预留 cert block，但启动放行不依赖多层证书链。
+- `[CONFIRMED]` key rotation 通过升级授权域完成，不能由普通启动 signer 自行改写设备信任锚。
 
 #### 设备证明路径
 - `[CONFIRMED]` report 中必须支持：
   - Hash Anchor
-  - 可选 Cert Chain Block
-- `[ASSUMED]` 首版 verifier 可本地预置 trust anchor，通过 report 中的 signer / anchor hash 完成快速定位
-- `[TBD]` 是否要求 report 默认内嵌完整 cert chain，需结合客户接入方式和 SPDM verifier 能力冻结
+  - 可选 Device Attestation Cert Block
+- `[CONFIRMED]` 首版 verifier 可本地预置设备证明签发方锚点，通过 report 中的 issuer / anchor hash 完成快速定位。
+- `[TBD]` 是否要求 report 默认内嵌完整设备证明证书块，需结合客户接入方式和 SPDM verifier 能力冻结。
 
-### 8.10.3 证书对象表
+### 8.10.3 Device Attestation Key / CSR / 证书签发流程
+
+```mermaid
+sequenceDiagram
+    participant DEV as Device eHSM
+    participant SEC as SEC/GSP or Provisioning FW
+    participant CA as Offline CA/HSM
+    participant STORE as Device Cert Store
+
+    SEC->>DEV: Generate or derive Device Attestation KeyPair
+    DEV-->>SEC: Public Key / CSR, private key remains inside eHSM
+    SEC->>CA: Submit CSR + chip_id + product info + manufacturing record
+    CA->>CA: Verify manufacturing authorization
+    CA-->>SEC: Device Attestation Cert / Cert Block
+    SEC->>STORE: Write cert block to protected storage
+    SEC->>DEV: Lock identity / lifecycle policy if required
+```
+
+运行时证明方向如下：
+
+```text
+Device eHSM 使用 Device Attestation Private Key 签署 attestation report
+        ↓
+Host / Verifier 使用 Device Attestation Cert 和设备证明签发方锚点验证报告签名
+```
+
+边界规则：
+
+1. Device Attestation Private Key 在设备内部生成或派生，不导出。
+2. 离线 CA/HSM 不需要也不应获得 Device Attestation Private Key。
+3. 离线 CA/HSM 只使用 CA Private Key 对设备公钥/CSR 签发证书。
+4. Device Attestation Cert / cert block 可以写回设备，也可以部分由 Verifier 侧预置，取决于客户接入模式。
+5. Attestation report 必须绑定 nonce、measurement、lifecycle、debug state、secure boot state、rollback state、FMC 版本 / key epoch / 最近恢复状态等安全状态。
+
+### 8.10.4 证书对象表
 
 | Cert / Anchor Object | 用途 | 建议位置 |
 |---|---|---|
-| FW Signer Hash Slot0 | 固件验签国密 signer 锚点 | OTP/eFuse |
-| FW Signer Hash Slot1 | 固件验签国际 signer 锚点 | OTP/eFuse |
-| Debug Auth Anchor | 调试授权锚点 | OTP/eFuse |
-| Attestation Root Hash | 设备证明锚点 | OTP/eFuse |
-| Optional Cert Chain Blob | 报告 / 镜像附带链 | 镜像 / report block |
+| Secure Boot Signer Anchor | 启动固件验签 signer 锚点 | eFuse |
+| Update Authorization Anchor | 升级包和 key rotation capsule 授权锚点 | eFuse |
+| Debug Authorization Anchor | Debug/RMA scoped token 授权锚点 | eFuse |
+| Device Attestation Issuer Anchor | 设备证明签发方锚点 | eFuse 或 Verifier 侧预置 |
+| Optional Device Attestation Cert Block | 报告附带设备证明证书块 | report block / 证书区 |
 
 ---
 
-## 8.11 推荐 KDF Label
+## 8.11 推荐 KDF / Domain Label
 
 > 说明：本节给出项目内部建议语义标签，不代表必须锁死到某一种 KDF 标准实现。
-> 若后续采用 HKDF-SM3 / HKDF-SHA256 / 项目自定义 KDF，只要 label 语义保持稳定即可。
+> 只有设备身份 / attestation 相关 label 表达从 UDS / Root Secret / DRK / Attestation Seed 派生的语义；FW verify / FW encrypt / debug auth 的 label 仅作为 policy / domain tag，不表达从 DRK 派生。
 
-| Label | 用途 |
+| Label / Domain Tag | 用途 |
 |---|---|
-| `NGU800:DRK` | 从 UDS / Root Secret 派生设备根密钥 |
-| `NGU800:FW:VERIFY` | 固件验签 branch |
-| `NGU800:FW:ENC` | 固件加密 / 解密 branch |
+| `NGU800:ATTEST:DRK` | 从 UDS / Root Secret / Attestation Seed 派生设备证明域逻辑根 |
 | `NGU800:ATTEST:DEV` | 设备证明 Device Identity Key |
 | `NGU800:ATTEST:ALIAS` | Alias / Session 证明 key |
-| `NGU800:DEBUG:AUTH` | 调试鉴权 |
 | `NGU800:REPORT:BIND` | 报告绑定（nonce / session 相关） |
+| `NGU800:FW:VERIFY-POLICY` | 固件验签 key slot / signer anchor / lifecycle policy 标签，不是 DRK KDF label |
+| `NGU800:FW:ENC-POLICY` | 固件解密 key slot / FW_KEK / lifecycle policy 标签，不是 DRK KDF label |
+| `NGU800:DEBUG:AUTH-POLICY` | Debug auth anchor / scoped token policy 标签，不是 DRK KDF label |
 | `NGU800:WRAP:CEK` | `[TBD]` 镜像 CEK wrap / unwrap，仅在 eHSM owner 确认 per-image CEK extension 后启用 |
 
 ### 8.11.1 使用规则
 
 - `[CONFIRMED]` 不同业务场景必须使用不同 Label
 - `[CONFIRMED]` 不得用同一个 Label 既做固件验签根又做调试鉴权
-- `[CONFIRMED]` SEC1 的 FW Encrypt 派生必须绑定 NGU `ngu_image_type = SEC1`、eHSM owner-confirmed key policy、lifecycle policy 和 rollback domain，避免解密能力被跨镜像复用
+- `[CONFIRMED]` FW verify / FW encrypt / debug auth 相关 label 默认只作为 policy / domain tag，不得被实现解释为“从 DRK 派生业务 key”。
+- `[CONFIRMED]` SEC1 的 FW Encrypt policy 必须绑定 NGU `ngu_image_type = SEC1`、eHSM owner-confirmed key policy、lifecycle policy 和 rollback domain，避免解密能力被跨镜像复用
 - `[TBD]` 若后续启用 wrapped CEK，必须补充 eHSM customization CR 并冻结 manifest/header 扩展、unwrap command 和 anti-replay 绑定项
 - `[ASSUMED]` 若国密和国际算法的 KDF 内核不同，label 语义仍应保持一致
 
@@ -3357,20 +3708,56 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ## 8.13 与启动 / 证明 / 调试路径的关系
 
 ### 8.13.1 启动路径
-- 固件验签 branch 为 SEC1 / SEC2 / PM / RAS / Codec 等镜像提供验证能力
-- 固件加密 branch 至少为 SEC1 提供强制解密能力，并为 SEC2 / 后续关键运行期固件提供按策略启用的机密性保护能力
-- rollback floor 需与 OTP counter 绑定
+- Firmware verify domain 为 SEC1 / SEC2 / PM / RAS / Codec 等镜像提供验证能力，映射到 eHSM native verify key slot / signer anchor / owner mapping
+- Firmware encrypt domain 至少为 SEC1 提供强制解密能力，并为 SEC2 / 后续关键运行期固件提供按策略启用的机密性保护能力，映射到 eHSM native encrypt key slot / FW_KEK policy
+- rollback floor 需与 eFuse counter 绑定
 - signer hash / revoke / lifecycle mask 必须进入 verify decision
 
 ### 8.13.2 证明路径
-- Attestation branch 负责 report 签名
+- Device identity / attestation derivation domain 负责 report 签名
 - report 中必须带出 secure boot / lifecycle / debug / firmware version 摘要
 - verifier 不能只看签名而不看状态
 
 ### 8.13.3 调试路径
-- Debug auth branch 独立于普通 attestation
+- Debug auth domain 独立于普通 attestation
 - 进入 RMA / DEBUG 时，challenge-response 必须基于独立授权链
 - 不得把“报告签名成功”直接视为“调试可开放”
+
+### 8.13.4 Debug Auth / RMA 授权方向
+
+Debug Auth 用于回答“外部调试请求是否被授权”。方向是：**外部授权方签名，设备侧验签并打开受限 scope**。
+
+| 对象 | 签发/签名方 | 内容 | 设备侧验证依据 |
+|---|---|---|---|
+| Debug/RMA Scoped Token | Debug Authorization Key | challenge、device_uid、lifecycle、scope_bitmap、expiry、reason、session_id、audit_id | 签名、challenge、UID、scope、时效、lifecycle、debug_authorization_anchor |
+
+规则：
+
+1. Debug Authorization Key 在离线 HSM、RMA 服务端或受保护调试工具中，不进入设备。
+2. 设备侧保存 `debug_authorization_anchor`、revoke bitmap、scope policy、lifecycle policy。
+3. eHSM/SEC 必须校验 challenge、UID、scope、lifecycle、expiry、replay counter 和 token 用途。
+4. Debug Auth 通过只表示“允许打开某个受限 debug scope”，不表示设备安全可信。
+5. RMA 作为 Debug 授权 token 的一种 scope，授权结果必须复位清零或按 timeout 自动关闭，并进入 audit / attestation 可见状态。
+
+### 8.13.5 Key Epoch、Key Rotation 与 OOB 可恢复路径的关系
+
+`key epoch / active / next / deprecated / revoked` 是 NGU 为客户密钥轮换、撤销和过渡期兼容定义的逻辑状态机，不等于 eHSM 手册中直接定义的完整状态机，也不等于固定物理 key slot。CR-0013 后，该状态机不再绑定 FMC 双分区，而是必须与 update authorization、rollback/revoke 策略和 OOB MCU 受控重刷能力联动，避免 key revoke 后设备无法通过 OOB 路径恢复。
+
+| 逻辑状态 | 含义 | 与 FMC 恢复的关系 |
+|---|---|---|
+| `ACTIVE` | 当前可启动、可验签/解密的 signer/key policy | BootROM/eHSM 当前接受的 FMC key policy |
+| `PENDING / NEXT` | 新 signer/key policy 已安装或已授权，但还没成为正式 active | 必须验证新 FMC package，并确认 OOB MCU 可用该体系重刷 |
+| `DEPRECATED` | 上一代 key 仍可用于过渡恢复，但不再用于新包 | 用于撤销前的受控兼容窗口 |
+| `REVOKED` | 不再接受该 key | 只有 OOB 可恢复路径和新 key 体系闭环验证后才能进入 |
+
+密钥轮换不是设备派生外部 signing private key，而是：
+
+1. 外部 HSM/KMS/客户系统生成或管理新 signing/update authority。
+2. 通过 key rotation capsule 授权设备安装新 signer anchor / key policy / revoke policy。
+3. 设备侧用当前 active authority 验证 capsule。
+4. 使用 next signer/key policy 验证新 FMC package。
+5. 新 FMC 经 OOB MCU 或受控更新路径写入 NOR Flash 主区域，并在下一次 BootROM/eHSM 启动验证通过后，切换 active key epoch。
+6. 确认 OOB MCU 可使用新 key 体系完成重刷恢复后，才允许吊销上一代 key。
 
 ---
 
@@ -3379,7 +3766,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 ### 8.14.1 制造阶段必须完成的 key / anchor 对象
 
 - UDS / Root Secret
-- FW_KEK / image protect key 或其 eHSM 内部派生种子
+- FW_KEK / image protect key policy / eHSM native encrypt key slot 材料
 - FW signer hash / trust anchor
 - Debug auth anchor
 - Attestation anchor / identity seed
@@ -3401,8 +3788,33 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 - `[CONFIRMED]` 制造阶段必须定义 key 注入、锁定、审计，不得停留在抽象口号
 - `[CONFIRMED]` USER 生命周期下不允许残留测试信任锚
-- `[ASSUMED]` 优先采用“Seed/UDS 注入 + eHSM 内部派生”的模式
+- `[ASSUMED]` 设备证明优先采用“Seed/UDS 注入 + eHSM 内部派生/生成 Device Attestation KeyPair”的模式；固件验签/解密 key slot 与 debug anchor 按 eHSM owner-confirmed provisioning / install / lock 流程处理。
 - `[TBD]` 是否首版支持全量 cert chain 灌装取决于工站和证书服务准备度
+
+### 8.14.4 制造阶段对象表
+
+| 对象 | 制造动作 | USER 前要求 |
+|---|---|---|
+| 设备根材料 | 写入或生成 UDS / Root Secret / Chip Root Key / Device-local protection context 相关 eHSM key material | 锁定、不可读、不可回退 |
+| 固件 signer anchor | 写入 FW signer hash / cert anchor / update signer anchor | 测试 signer 清理；正式 signer / update authority 生效 |
+| 固件解密 key policy | 配置 SOC Encrypt Key / Upgrade Encrypt Key / FW_KEK policy | FMC/GSP 强制加密策略锁定 |
+| 设备证明 key | 设备侧生成或派生 Device Attestation KeyPair，导出 CSR/public key | 私钥不导出；证书链写回并受保护 |
+| Debug/RMA anchor | 写入 `debug_authorization_anchor`、scope policy | USER 默认关闭 debug，测试 debug trust 清理 |
+| Counter / lifecycle / control field | 初始化 rollback counter、lifecycle、secure boot、debug、attestation、算法 control field | 推进 USER；禁止 Host/普通核改写 |
+| 证书与审计 | 记录 chip_id、cert serial/hash、provision profile、lock result | 留存制造审计记录，不记录敏感明文 |
+
+### 8.14.5 对 SoC / 硬件设计的需求
+
+| 需求项 | 设计要求 | 硬件/制造依赖 |
+|---|---|---|
+| eHSM key system | 支持 SOC Encrypt Key、Upgrade Encrypt Key、FW verify handle、Debug verify handle、Device Attestation Private Key 使用 | eHSM KMU/key handle、eFuse key purpose、owner-confirmed key mapping |
+| 外部授权 anchor | 启动签名、升级授权、Debug/RMA 授权的私钥在离线 HSM；设备只保存公钥锚点 | signer hash slot、authorization anchor slot、revoke bitmap |
+| 固件加密路径 | FMC/GSP 必须签名+加密，eHSM 解密输出进入受控 buffer | verify+decrypt command、output buffer 白名单、SEC-only release |
+| Device Attestation key | 设备证明私钥在 eHSM 内部生成/派生，不导出；公钥/CSR 可导出给 CA 签证书 | eHSM PKE/TRNG/KMU、cert store、CSR/provisioning command |
+| Debug Auth gate | Debug Auth 必须支持 challenge、UID、scope、expiry、cert anchor、复位关闭和审计 | eHSM debug auth command、debug scope bitmap、JTAG MUX/debug gate |
+| Key epoch / rotation | active/next/deprecated/revoked 为逻辑状态，需绑定 update authorization、rollback/counter、OOB 可恢复路径 | key epoch metadata、revoke bitmap、counter、OOB recovery status |
+| 双算法配置 | secure boot / upgrade / debug / attestation 算法 profile 由 eHSM control field 或证书 profile 驱动 | SocBootAlg/SocUpgradeAlg、debug auth profile、attestation profile |
+| 证书存储 | 设备证明证书、issuer anchor、cert hash/serial 需要安全存储和写保护 | Flash 安全分区、eFuse anchor、证书区防篡改 |
 
 ---
 
@@ -3410,10 +3822,10 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 | 本章主题 | 对应实现层文件 |
 |---|---|
-| Root / UDS / DRK / signer hash / control bits | `04_impl_design/efuse_key_fw_header_design.md` |
+| Root / UDS / DRK / attestation seed / signer hash / control bits | `04_impl_design/efuse_key_fw_header_design.md` |
 | Device Identity / report / cert block | `04_impl_design/spdm_report.md` |
 | provisioning / lock / lifecycle / audit | `04_impl_design/manufacturing_provisioning.md` |
-| key derive / verify / debug auth 命令面 | `04_impl_design/mailbox_if.md` |
+| attestation key derive / verify / decrypt / debug auth 命令面 | `04_impl_design/mailbox_if.md` |
 
 ---
 
@@ -3423,7 +3835,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 |---|---|---|---|
 | UDS / Root Secret 注入模式 | 影响制造链和 Root 暴露面 | 部分收敛 | 冻结“直接注入”还是“seed 派生” |
 | signer hash vs full cert chain | 影响镜像格式、证明格式、制造工站 | 部分收敛 | 冻结首版采用模型 |
-| runtime signature-only 白名单 | 影响 FW Encrypt Branch、镜像头和产品策略 | 未完全冻结 | 冻结除 SEC1/SEC2 外哪些非敏感镜像允许 signature-only |
+| runtime signature-only 白名单 | 影响 firmware encrypt domain、镜像头和产品策略 | 未完全冻结 | 冻结除 SEC1/SEC2 外哪些非敏感镜像允许 signature-only |
 | Attestation 是否首版启用 Alias Key | 影响 report / cert / verifier 复杂度 | 未完全冻结 | 冻结首版 identity model |
 | Debug Auth 与 Attestation 的锚点关系 | 影响调试授权链路 | 未完全冻结 | 冻结是否独立 anchor |
 | 双算法默认策略 | 影响产品线和测试矩阵 | 未完全冻结 | 冻结产品策略 |
@@ -3432,10 +3844,10 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 
 ## 8.17 开放问题
 
-1. DRK 是否需要在工程文档中显式作为中间对象对外暴露，还是只保留语义层定义？
-2. FW Verify 与 Attestation 是否共享部分上游派生材料但逻辑分离，还是完全独立 branch？
+1. DRK 是否需要在工程文档中显式作为中间对象对外暴露，还是只保留为设备证明派生域内的语义对象？
+2. FW Verify / FW Encrypt 的 exact eHSM key ID、key level、key purpose、slot 状态和 owner mapping 如何冻结？
 3. Attestation 首版是否仅 Device Identity Key 签名就够，还是必须同步规划 Alias Key？
-4. 固件验签首版是否只用 OTP signer hash，不携带完整 cert chain？
+4. 固件验签首版是否只用 eFuse signer hash，不携带完整 cert chain？
 5. Debug auth 的 anchor 是否和 attestation anchor 完全独立？
 6. 除 SEC1/SEC2 外，PM / RAS / Codec 或其他 runtime image 中哪些非敏感镜像允许在特定产品阶段采用 signature-only？
 
@@ -3446,10 +3858,14 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 本章已将 NGU800 的 Root、密钥体系与证书体系收敛到当前可评审的正式口径：
 
 - Root of Trust = eHSM，BootROM 不是密码学根
-- UDS / Root Secret 是最上游根材料
-- 固件验签、设备证明、调试鉴权必须在逻辑上分 branch
-- FW Encrypt Branch 至少对 SEC1 + SEC2 强制启用，SEC1/SEC2 解密必须由 eHSM / 安全子系统受控密码服务完成
-- 私钥不得离开 eHSM
+- 密钥体系采用三域模型：外部签名 / 授权体系、设备内部 eHSM key 体系、设备身份与证书体系
+- 固件签名、升级授权、Debug/RMA 授权、设备证书签发私钥在离线 HSM/CA/KMS/受保护工具侧；设备只保存 anchor/hash/policy 并验签
+- UDS / Root Secret 是设备内部 eHSM 安全域的上游根材料
+- DRK / Attestation Seed 只作为 eHSM 内部 device-local protection context / 设备证明派生域对象，不作为 FW verify / FW encrypt / debug auth 的共同上游
+- 固件验签、固件解密、设备证明、调试鉴权必须在逻辑上分 domain / policy
+- Firmware encrypt domain 至少对 SEC1 + SEC2 强制启用，SEC1/SEC2 解密必须由 eHSM / 安全子系统受控密码服务完成
+- Device Attestation Private Key 不得离开 eHSM；设备可导出 CSR/public key，由离线 CA/HSM 签发 Device Attestation Cert
+- Debug Auth 的方向是外部授权方签名、设备侧验签并打开受限 scope，不得把 attestation 成功等同于 debug 授权成功
 - signer hash / trust anchor / cert chain 需要按项目首版策略冻结
 - 国密与国际算法必须在结构层共存
 - 制造阶段必须定义 key 注入、锁定、清理和生命周期推进动作
@@ -3473,7 +3889,7 @@ FW Verify Branch    FW Encrypt Branch   Attestation Branch  Debug Auth Branch
 1. 制造阶段与生命周期状态的映射关系
 2. Root / UDS / signer anchor / debug anchor / attestation anchor / counter 的灌装对象与顺序
 3. SEC1 强制加密所需 FW_KEK / image protect key 的灌装、锁定和 USER 前冻结要求
-4. OTP / eFuse 写入、校验、锁定、审计的控制要求
+4. eFuse 写入、校验、锁定、审计的控制要求
 5. MANU → USER 的冻结动作集合
 6. 量产部署后的状态约束
 7. RMA / DEBUG 场景下的授权、调试、恢复与重新冻结规则
@@ -3555,7 +3971,7 @@ graph TD
     TOOL --> HOST[Host / BMC / 工装链路]
     HOST --> SEC[SEC / C908]
     SEC --> EH[eHSM]
-    EH --> OTP[OTP / eFuse]
+    EH --> eFuse[eFuse]
     EH --> CFG[Control Bits / Lifecycle / Counter]
     EH --> KEY[Root / Anchor / Attestation / Debug Objects]
 
@@ -3569,7 +3985,7 @@ graph TD
 ### 图下说明
 
 1. 工厂 HSM/KMS 是制造密钥材料的上游管理端，但不直接替代设备内部 Root of Trust。
-2. SEC/C908 是制造流程的控制面，eHSM 是真正执行 Root / OTP / lifecycle / lock 操作的安全执行面。
+2. SEC/C908 是制造流程的控制面，eHSM 是真正执行 Root / eFuse / lifecycle / lock 操作的安全执行面。
 3. USER 冻结不是单条命令，而是一组必须全部成功的冻结动作集合。
 4. RMA 路径是受控旁路，只能临时开放，并且必须回收。
 
@@ -3583,19 +3999,19 @@ sequenceDiagram
     participant HOST as Host/BMC
     participant SEC as SEC/C908
     participant EH as eHSM
-    participant OTP as OTP/eFuse
+    participant eFuse as eFuse
 
     TOOL->>HOST: 下发 provisioning 计划与 blob
     HOST->>SEC: 受控转发 provisioning 请求
     SEC->>SEC: 参数白名单检查 / lifecycle 检查
     SEC->>EH: PROVISION_ROOT_MATERIAL / 写 signer / 写 debug anchor / 写 counter
-    EH->>OTP: 写入目标区
+    EH->>eFuse: 写入目标区
     EH-->>SEC: 写入结果
     SEC->>EH: 校验 / 锁定 / 读状态
     EH-->>SEC: verify / lock result
     SEC->>SEC: 执行 MANU 验证启动
     SEC->>EH: CHANGE_LIFECYCLE(USER)
-    EH->>OTP: 更新 lifecycle / lock 路径
+    EH->>eFuse: 更新 lifecycle / lock 路径
     EH-->>SEC: USER freeze result
     SEC-->>HOST: 返回冻结结果与审计状态
     HOST-->>TOOL: 工站记录结果
@@ -3671,7 +4087,7 @@ sequenceDiagram
 ### 9.9.1 推荐顺序
 
 ```text
-(1) 读取 lifecycle 与 OTP 当前状态
+(1) 读取 lifecycle 与 eFuse 当前状态
     ↓
 (2) 校验设备处于允许 provisioning 的状态
     ↓
@@ -3717,7 +4133,7 @@ sequenceDiagram
 
 ### 9.10.2 命令族
 
-本章对应的实现级接口，以 `04_impl_design/mailbox_if.md` 为准，核心包括：
+本章直接列出制造/provisioning 需要进入受控 Mailbox 的命令族；第 10.5 和第 10.6 已内嵌对应实现级接口、命令字段和制造流程，不能只引用分片文件。核心命令包括：
 
 - `PROVISION_ROOT_MATERIAL`
 - `CHANGE_LIFECYCLE`
@@ -3895,7 +4311,8 @@ RMA / DEBUG 不是普通用户态能力，而是：
 - `[CONFIRMED]` 不得因为进入 RMA 就长期常开 debug
 - `[CONFIRMED]` 不得跳过 challenge / auth 直接开调试口
 - `[CONFIRMED]` 返修完成后不得带着测试 trust 或开放调试出厂
-- `[CONFIRMED]` RMA 不得长期开放 SEC1/SEC2 解密绕过路径；rescue / recovery 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy
+- `[CONFIRMED]` RMA 不得长期开放 FMC(SEC1) / GSP(SEC2) 解密绕过路径；首版 FMC 修复依赖 OOB MCU 受控重刷 NOR Flash FMC 主区域，不依赖常驻静态 recovery 镜像
+- `[CONFIRMED]` 若后续引入静态 rescue/recovery 镜像，不得形成 SoC 厂商单方可启动的后门路径，必须纳入客户密钥轮换、eHSM 验证和审计策略
 - `[ASSUMED]` RMA 完成后，建议重新生成与当前状态一致的最小 report / status 记录，用于归档
 
 ---
@@ -3949,7 +4366,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 |---|---|---|---|
 | Root 注入模式（直接 Root vs Seed/UDS） | 影响制造链安全暴露面 | 部分收敛 | 冻结首版模式 |
 | runtime signature-only 白名单 | 影响 FW_KEK 规划和量产镜像封装 | 未完全冻结 | SEC2 已强制加密；冻结除 SEC1/SEC2 外的 signature-only 白名单 |
-| OTP 是否支持读回校验 | 影响校验策略 | 未完全冻结 | 冻结可读回区和不可读回区策略 |
+| eFuse 是否支持读回校验 | 影响校验策略 | 未完全冻结 | 冻结可读回区和不可读回区策略 |
 | Provisioning 链路承载方式 | 影响工站 / Host / BMC 选型 | 未完全冻结 | 冻结首版工装路径 |
 | 双Die 灌装是否联动事务 | 影响 OAM / 双Die 产品制造 | 未完全冻结 | 冻结联动策略 |
 | RMA 恢复后是否强制再验收 | 影响售后流程与安全闭环 | 未完全冻结 | 冻结返修交付规则 |
@@ -3959,7 +4376,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 ## 9.19 开放问题
 
 1. 首版是否完全采用“Seed/UDS 注入 + eHSM 内部派生”，还是保留直接 Root 材料写入模式？
-2. 不可读 OTP 区域的校验策略最终采用“状态确认”还是“试运行校验”？
+2. 不可读 eFuse 区域的校验策略最终采用“状态确认”还是“试运行校验”？
 3. BMC / OOB-MCU 在某些产品形态下是否允许承担 provisioning 桥接角色？
 4. 双Die 产品是按单设备事务灌装，还是主/从 Die 分步灌装？
 5. RMA 结束后，是否要求强制重新生成 attestation / 状态摘要并归档？
@@ -3995,7 +4412,7 @@ RMA / DEBUG 不是普通用户态能力，而是：
 | 同步要求 | 修改 `04_impl_design` 分片时，必须同步回本章；修改本章实现级字段时，也必须同步对应分片或显式记录分片待同步。 |
 | 安全裁决优先级 | accepted CR / decision_log / official TRM / 本章 / 分片文档。 |
 | TBD 保留 | 合并动作不关闭 `[TBD]`，不把未冻结字段升级为 `[CONFIRMED]`。 |
-| 字段冻结 | C-like 结构、command ID、OTP/control/key/counter mapping 只有在 accepted CR、decision_log 或官方资料支持时才可作为冻结字段。 |
+| 字段冻结 | C-like 结构、command ID、eFuse/control/key/counter mapping 只有在 accepted CR、decision_log 或官方资料支持时才可作为冻结字段。 |
 
 ### 10.1.1 嵌入来源
 
@@ -4031,22 +4448,22 @@ security_workflow/03_detailed_design/10_full_design.md
 
 状态：实现级详设（CR-0004 / CR-0006 accepted-apply 后修订）
 适用范围：NGU800 / NGU800P 安全启动、密钥体系、反回滚、制造灌装
-主要来源：`CR-0004`、`CR-0006`、`SRC-001 当前安全方案基线` 第 6/7 章、`SRC-006 eHSM Firmware TRM`、`SRC-007 eHSM Bootloader TRM`
+主要来源：`CR-0004`、`CR-0006`、`CR-0014`、`SRC-008 当前收敛安全软件方案 2.0` 第 4 章 / 第 4.5 节、`SRC-006 eHSM Firmware TRM`、`SRC-007 eHSM Bootloader TRM`
 
 ---
 
 ### 10.3.1 设计目标
 
-本文档不再定义一套与 eHSM 并列的 physical FW Header、physical OTP/eFuse layout 或 physical key slot。
+本文档不再定义一套与 eHSM 并列的 physical FW Header、physical eFuse layout 或 physical key slot。
 
 本文档收敛以下对象：
 
 1. eHSM native secure boot image header 的项目使用方式
 2. NGU 项目级 manifest / logical policy 与 eHSM native header 的分层
-3. eHSM OTP/control/key/counter 与 NGU logical alias 的映射
+3. eHSM eFuse/control/key/counter 与 NGU logical alias 的映射
 4. SEC1 / SEC2 sign+encrypt 的 verify+decrypt output path
 5. 平台侧固件制作、设备侧 verify/decrypt 与 NGU manifest policy 的落地流程
-6. CR-0004 / CR-0006 后续仍需冻结的 eHSM customization / ABI / key ID / OTP bit / tooling 问题
+6. CR-0004 / CR-0006 后续仍需冻结的 eHSM customization / ABI / key ID / eFuse bit / tooling 问题
 
 ---
 
@@ -4059,7 +4476,7 @@ security_workflow/03_detailed_design/10_full_design.md
 - secure boot image header
 - `Image_Type / Plain_Flag / Naked_Flag / Version_Counter`
 - `SocBootAlg / SocUpgradeAlg` 等 control field
-- OTP key ID / level / purpose
+- eFuse key ID / level / purpose
 - SOC FW / eHSM FW Version Counter
 - `bl_verify_image / soc_verify / fw_upgrade` 等命令语义
 
@@ -4133,9 +4550,9 @@ manifest 可承载以下 NGU 项目级逻辑：
 |---|---|---|
 | `ngu_image_type` | `[CONFIRMED]` | NGU `SEC1 / SEC2 / PM / RAS / Codec / Recovery` 项目级类型 |
 | `security_policy_flags` | `[CONFIRMED]` | sign/encrypt/rollback/measurement/release policy 的项目表达 |
-| `rollback_domain` | `[CONFIRMED]` | NGU logical rollback domain，不是 physical OTP 32-bit counter |
+| `rollback_domain` | `[CONFIRMED]` | NGU logical rollback domain，不是 physical eFuse 32-bit counter |
 | `measurement_slot` | `[CONFIRMED]` | measurement / attestation slot |
-| `lifecycle_mask` | `[CONFIRMED]` | NGU policy gate；最终生命周期 authority 仍在 eHSM/OTP |
+| `lifecycle_mask` | `[CONFIRMED]` | NGU policy gate；最终生命周期 authority 仍在 eHSM/eFuse |
 | `product_sku_mask` | `[ASSUMED]` | 产品策略 |
 | `board_binding_policy` | `[ASSUMED]` | board binding 默认进入 attestation；是否参与 release 仍 TBD |
 | `expected_algorithm_profile` | `[CONFIRMED]` | 仅做一致性检查/审计，不覆盖 eHSM control field |
@@ -4155,7 +4572,7 @@ manifest 可承载以下 NGU 项目级逻辑：
 
 ##### 旧 current_plan 格式的处理
 
-`SRC-001 当前安全方案基线` 第 6/7 章中描述的：
+旧 `SRC-001 当前安全方案基线` 第 6/7 章中描述的：
 
 ```text
 header + Signed Region + signature + wrapped_cek + enc_payload
@@ -4308,7 +4725,7 @@ sequenceDiagram
 
 ### 10.3.13 Algorithm Authority
 
-`[CONFIRMED]` secure boot / upgrade 的算法 authority 来自 eHSM OTP/control field，例如：
+`[CONFIRMED]` secure boot / upgrade 的算法 authority 来自 eHSM eFuse/control field，例如：
 
 - `EhsmCodeVerifyAlg`
 - `EhsmCodeUpgradeAlg`
@@ -4324,26 +4741,26 @@ sequenceDiagram
 
 ---
 
-### 10.3.14 OTP / eFuse Logical View
+### 10.3.14 eFuse Logical View
 
 ### 10.3.15 NGU logical view
 
-`[CONFIRMED]` `OTP-0..OTP-7` 仅保留为 NGU logical view，不表达 physical OTP/eFuse offset。
+`[CONFIRMED]` `eFuse-0..eFuse-7` 仅保留为 NGU logical view，不表达 physical eFuse offset。
 
 | NGU Logical View | 语义 | Mapping Type | Physical Authority |
 |---|---|---|---|
-| OTP-0 lifecycle view | lifecycle / lock / destroy state | `NGU-logical-alias` | eHSM lifecycle / control field / SoC integration |
-| OTP-1 control view | secure boot / debug / algo / rollback policy | `NGU-logical-alias` | eHSM FW Control / SOC Control / hardware control field |
-| OTP-2 root material view | root / UDS / DRK upstream | `NGU-logical-alias` | eHSM OTP key layout / secure storage |
-| OTP-3 anchor view | signer / debug / attest anchor | `NGU-logical-alias` | eHSM key ID / purpose / owner-confirmed anchor slot |
-| OTP-4 rollback view | rollback domain / version state | `NGU-logical-alias` | eHSM Version Counter / customization TBD |
-| OTP-5 identity view | UID / device identity seed | `NGU-logical-alias` | eHSM UID / key layout / attestation design |
-| OTP-6 board/die binding view | board / die binding policy | `NGU-SoC-integration-TBD` | SoC/board integration |
-| OTP-7 non-secure config view | non-secure readonly config | `NGU-SoC-integration-TBD` | SoC/board integration |
+| eFuse-0 lifecycle view | lifecycle / lock / destroy state | `NGU-logical-alias` | eHSM lifecycle / control field / SoC integration |
+| eFuse-1 control view | secure boot / debug / algo / rollback policy | `NGU-logical-alias` | eHSM FW Control / SOC Control / hardware control field |
+| eFuse-2 root material view | root / UDS / DRK upstream | `NGU-logical-alias` | eHSM eFuse key layout / secure storage |
+| eFuse-3 anchor view | signer / debug / attest anchor | `NGU-logical-alias` | eHSM key ID / purpose / owner-confirmed anchor slot |
+| eFuse-4 rollback view | rollback domain / version state | `NGU-logical-alias` | eHSM Version Counter / customization TBD |
+| eFuse-5 identity view | UID / device identity seed | `NGU-logical-alias` | eHSM UID / key layout / attestation design |
+| eFuse-6 board/die binding view | board / die binding policy | `NGU-SoC-integration-TBD` | SoC/board integration |
+| eFuse-7 non-secure config view | non-secure readonly config | `NGU-SoC-integration-TBD` | SoC/board integration |
 
 ### 10.3.16 Control Fields
 
-旧的 `SECURE_BOOT_EN / DEBUG_AUTH_EN / JTAG_FORCE_DISABLE / FW_ENCRYPT_EN / ATTEST_EN / ANTI_ROLLBACK_EN` 不再写成 NGU 自定义 physical OTP bit。
+旧的 `SECURE_BOOT_EN / DEBUG_AUTH_EN / JTAG_FORCE_DISABLE / FW_ENCRYPT_EN / ATTEST_EN / ANTI_ROLLBACK_EN` 不再写成 NGU 自定义 physical eFuse bit。
 
 | NGU Logical Field | Mapping Type | 说明 |
 |---|---|---|
@@ -4368,7 +4785,7 @@ sequenceDiagram
 
 规则：
 
-- NGU `*_MIN_VER` 不得写成 physical OTP 32-bit counter。
+- NGU `*_MIN_VER` 不得写成 physical eFuse 32-bit counter。
 - V1 可使用 eHSM SOC FW Version Counter 作为物理 rollback 基础候选。
 - 若要求 SEC1 / SEC2 / PM / RAS / Codec 独立 rollback counter，必须通过 eHSM customization 或 owner-confirmed monotonic counter service 冻结。
 
@@ -4376,22 +4793,65 @@ sequenceDiagram
 
 ### 10.3.18 Key Hierarchy / Key Slot Mapping
 
-`[CONFIRMED]` eHSM TRM 已定义 OTP key ID / level / purpose。NGU key name 是 logical alias，不是新增 physical key slot。
+`[CONFIRMED]` eHSM TRM 已定义 eFuse key ID / level / purpose。NGU key name 是 logical alias，不是新增 physical key slot。
 
 | NGU Key Concept | Mapping Type | eHSM Mapping Direction | Status |
 |---|---|---|---|
-| UDS / Root Secret | `eHSM-native` / logical root | Chip Root Key / Device Root Key / secure storage | `[CONFIRMED]` |
+| UDS / Root Secret | `eHSM-native` / logical root | Chip Root Key / Attestation Seed / secure storage | `[CONFIRMED]` |
 | FW Verify Key | `NGU-logical-alias` | Soc FW Verify Key / Soc Upgrade Verify Key / owner mapping | `[TBD exact ID]` |
 | FW Encrypt Key / FW_KEK | `NGU-logical-alias` | Soc Encrypt Key / Soc Upgrade Encrypt Key / owner mapping | `[TBD exact ID]` |
-| Debug Auth Key / Seed | `NGU-logical-alias` | Soc Debug Verify Key / User Auth Key / owner mapping | `[TBD exact ID]` |
+| Debug Auth Key / Seed | `NGU-logical-alias` | Soc Debug Verify Key / owner mapping | `[TBD exact ID]` |
 | Attestation Key / Seed | `NGU-logical-alias` | Soc Private Key / Secret Key / owner mapping | `[TBD exact ID]` |
-| Image CEK / wrapped CEK | `eHSM-customization-TBD` | per-image CEK extension requires eHSM support | `[TBD]` |
+| Image CEK | `eHSM-customization-TBD` | per-image CEK plaintext must remain inside eHSM or owner-confirmed secure unwrap path | `[TBD]` |
+| wrapped CEK | `eHSM-customization-TBD` | encrypted key blob carried by image extension or owner-confirmed container | `[TBD]` |
 
 规则：
 
 - 私钥、root secret、FW_KEK 明文不得离开 eHSM / 受控安全环境。
 - exact key ID 不得由 SEC/Host/Tool 自行发明。
 - manufacturing provisioning 必须使用 eHSM install / change lifecycle / change control field 等官方或 owner-confirmed command。
+
+### 10.3.18.1 FMC Key Slot Rotation 与 OOB 恢复 Mapping
+
+CR-0013 后，本方案中的 key slot 轮换只表达客户密钥自主控制、轮换、撤销和过渡期兼容，不表达 FMC/GSP/runtime 固件 A/B 分区。key slot 轮换必须与 update authorization、rollback/revoke、OOB MCU 可恢复路径绑定，确保撤销旧 key 后仍可通过受控 OOB 重刷恢复 FMC。
+
+结合 `SRC-006 eHSM Firmware TRM` 与 `SRC-007 eHSM Bootloader TRM`，eHSM 已定义以下 SOC 侧 key / counter 能力：
+
+| eHSM TRM 能力 | NGU 逻辑用途 | 采用方式 |
+|---|---|---|
+| `Soc FW Verify Key` | 正常 FMC 启动镜像验签 | `normal_fmc_signer` 的首选映射方向，exact key ID 待 eHSM owner 冻结 |
+| `Soc Encrypt Key` | 正常 FMC 启动镜像解密 | `normal_fmc_fw_kek` 的首选映射方向，exact key ID 待 eHSM owner 冻结 |
+| `Soc Upgrade Verify Key` | FMC 升级包 / key rotation capsule 外层授权验签 | `update_authorization_anchor` 的候选映射方向 |
+| `Soc Upgrade Encrypt Key` | FMC 升级包保护、new key policy 保护材料 | `fmc_update_encrypt_policy` 的候选映射方向 |
+| `SOC FW Version Counter` | FMC rollback / key epoch 顺序 | V1 物理 counter 基础候选；更细粒度 key epoch 需 eHSM customization 或 owner-confirmed counter service |
+| counter command family | owner-defined key epoch / revoke 辅助状态 | 仅可在 eHSM owner 确认后作为扩展机制 |
+
+NGU 侧建议的 logical key slot / key epoch 状态如下，均不得直接理解为 eHSM physical key ID：
+
+| NGU logical slot | 推荐 eHSM 映射方向 | 状态机 | 用途 |
+|---|---|---|---|
+| `normal_fmc_signer_0/1` | `Soc FW Verify Key` / owner mapping | `EMPTY/PENDING/ACTIVE/DEPRECATED/REVOKED/LOCKED` | FMC 正常启动镜像验签；`0/1` 表示 key epoch / key slot，不表示 FMC 分区 |
+| `normal_fmc_fw_kek_0/1` | `Soc Encrypt Key` / owner mapping | 同上 | FMC 正常启动镜像解密；`0/1` 表示 key epoch / key slot，不表示 FMC 分区 |
+| `fmc_update_authority_0/1` | `Soc Upgrade Verify Key` / owner mapping | 同上 | 升级域授权；同时覆盖 FMC 升级包和 key rotation capsule |
+| `fmc_update_encrypt_0/1` | `Soc Upgrade Encrypt Key` / owner mapping | 同上 | FMC 升级包或 key policy 保护材料 |
+
+key slot rotation 的设备侧检查顺序：
+
+1. key rotation capsule 必须由当前 active authority 或 owner-confirmed higher authority 授权。
+2. new signer / new FW_KEK policy 只能进入 pending key epoch，不得覆盖当前 active key。
+3. 新 FMC package 必须使用 pending key policy 完成 eHSM verify + decrypt。
+4. 新 FMC manifest 必须声明与 pending key epoch 一致的 `key_epoch` / `rollback_domain` / `sign+encrypt policy`。
+5. OOB MCU 或受控更新路径将新 FMC 写入 NOR Flash 主区域后，BootROM 必须在下一次启动中完成 eHSM verify + decrypt。
+6. BootROM/eHSM 启动验证成功后，pending key epoch 才能成为 active。
+7. old key 只能先进入 deprecated；只有 OOB 可恢复路径和新 key 体系闭环验证后，才允许 revoke old key。
+
+不允许的实现：
+
+- 用 Host 请求字段直接指定 eHSM physical key ID。
+- 在 new key 未验证新 FMC package 前覆盖 active key。
+- 在新 FMC 未经 BootROM/eHSM 启动验证前推进 rollback counter 或 revoke old key。
+- 在 OOB MCU 无法使用新 key 体系恢复 FMC 时 revoke old key。
+- 将 SoC/test signer 保留为 USER 态 recovery 入口。
 
 ---
 
@@ -4433,17 +4893,15 @@ sequenceDiagram
 | lifecycle change | `change_lifecycle` | `[CONFIRMED direction]` |
 | control field change | `change_control_field` | `[CONFIRMED direction]` |
 | version counter init / check | eHSM Version Counter / command policy | `[TBD exact process]` |
-| OTP readback validation | eHSM readback/status/attested validation | `[TBD]` |
+| eFuse readback validation | eHSM readback/status/attested validation | `[TBD]` |
 
 ---
 
 ### 10.3.24 Source-Conformance Matrix
 
-字段级 mapping 见：
+字段级 mapping 已完整展开在本文第 10.4 节 `eHSM Source-Conformance Matrix（CR-0004）`；`04_impl_design/ehsm_source_conformance_matrix.md` 仅作为编辑分片，不能作为独立事实源覆盖本文。
 
-- `security_workflow/04_impl_design/ehsm_source_conformance_matrix.md`
-
-任何后续涉及 header、OTP、key、counter、manufacturing command 的变更，必须同步更新 matrix。
+任何后续涉及 header、eFuse、key、counter、manufacturing command 的变更，必须同步更新 matrix。
 
 ---
 
@@ -4453,11 +4911,11 @@ sequenceDiagram
 |---|---|---|
 | `ngu_image_manifest_t` bit-level ABI | `[TBD]` | Security Owner / SEC FW |
 | eHSM firmware / bootloader 是否解析 NGU manifest | `[TBD]` | eHSM Owner |
-| exact OTP/control bit mapping | `[TBD]` | eHSM / RTL Owner |
+| exact eFuse/control bit mapping | `[TBD]` | eHSM / RTL Owner |
 | exact NGU key alias -> eHSM key ID mapping | `[TBD]` | eHSM / Security Owner |
 | per-image rollback counter | `[TBD]` | eHSM / Product Security |
 | per-image CEK / wrapped CEK | `[TBD]` | eHSM Owner |
-| recovery image policy | `[TBD]` | Security Owner |
+| OOB MCU FMC 重刷与 key slot rotation policy | `[TBD]` | BootROM / eHSM / OOB MCU / Security Owner |
 | board binding release decision | `[TBD]` | Security / Board Owner |
 | image packager CLI / golden vector / package conformance report | `[TBD]` | Tooling Owner / SEC FW Owner |
 
@@ -4470,8 +4928,8 @@ CR-0004 应用后，本文档的实现级基线为：
 - eHSM native secure boot image header 是 SEC1 / SEC2 的密码学 verify/decrypt container。
 - NGU 项目级 metadata 进入 Code region protected manifest，不再定义并列 physical header。
 - 平台侧固件制作工具和设备侧 verify/decrypt 流程必须共享 eHSM native header + NGU protected manifest 契约。
-- eHSM `Image_Type`、算法 control field、Version Counter、OTP key layout 均按 eHSM TRM 作为 physical fact。
-- `OTP-0..OTP-7`、`*_MIN_VER`、NGU key names 仅保留为 logical view / logical alias。
+- eHSM `Image_Type`、算法 control field、Version Counter、eFuse key layout 均按 eHSM TRM 作为 physical fact。
+- `eFuse-0..eFuse-7`、`*_MIN_VER`、NGU key names 仅保留为 logical view / logical alias。
 - SEC1 / SEC2 sign+encrypt 必须使用 verify+decrypt output path，不使用 NVM only verify。
 - 未冻结的 ABI / key ID / counter / wrapped CEK / manifest parser 不得被实现写死。
 
@@ -4484,7 +4942,7 @@ CR-0004 应用后，本文档的实现级基线为：
 > 修改本文件时，必须同步主详设第 10 章；若发生冲突，以 accepted CR、decision_log、official TRM 和 `10_full_design.md` 为准。
 
 状态：实现级 source gate
-适用范围：FW header、OTP/eFuse、control field、version counter、key slot、secure boot command、manufacturing command
+适用范围：FW header、eFuse、control field、version counter、key slot、secure boot command、manufacturing command
 主要来源：`CR-0004`、`SRC-006 eHSM Firmware TRM`、`SRC-007 eHSM Bootloader TRM`
 
 ---
@@ -4518,16 +4976,16 @@ CR-0004 应用后，本文档的实现级基线为：
 
 ---
 
-### 10.4.3 OTP / Control / Counter
+### 10.4.3 eFuse / Control / Counter
 
 | NGU Concept | Current / Old Field | eHSM Native Field / Command | Mapping Type | Source | Status | Notes |
 |---|---|---|---|---|---|---|
-| OTP logical partition | `OTP-0..OTP-7` | eHSM OTP/control/key/counter layout | `NGU-logical-alias` | `CR-0004` | `[CONFIRMED]` | 不表达 physical offset |
+| eFuse logical partition | `eFuse-0..eFuse-7` | eHSM eFuse/control/key/counter layout | `NGU-logical-alias` | `CR-0004` | `[CONFIRMED]` | 不表达 physical offset |
 | Lifecycle | `LIFECYCLE_STATE` | eHSM lifecycle / hardware lifecycle field | `eHSM-native` / `NGU-SoC-integration-TBD` | `SRC-006`, `SRC-007` | `[CONFIRMED] / [TBD bit]` | exact encoding 需 owner/RTL 确认 |
 | Secure boot enable | `SECURE_BOOT_EN` | eHSM / hardware control field | `eHSM-native` / `NGU-SoC-integration-TBD` | `SRC-006`, `CR-0004` | `[CONFIRMED direction]` | exact bit 未冻结 |
 | Algorithm select | `algo_family` | `SocBootAlg`, `SocUpgradeAlg`, `EhsmCodeVerifyAlg`, `EhsmCodeUpgradeAlg` | `eHSM-native` | `SRC-006`, `SRC-007` | `[CONFIRMED]` | NGU 不覆盖 |
 | Anti-rollback counter | `SEC1_MIN_VER`, `SEC2_MIN_VER`, `*_MIN_VER` | eHSM SOC FW / eHSM FW Version Counter | `eHSM-native` + `NGU-logical-alias` | `SRC-006`, `CR-0004` | `[CONFIRMED] / [TBD per-image]` | old fields are logical rollback domains |
-| JTAG force disable | `JTAG_FORCE_DISABLE` | SoC/board JTAG MUX + lifecycle/debug auth | `NGU-SoC-integration-TBD` | `CR-0003`, `CR-0004` | `[TBD bit]` | 不写成 eHSM physical OTP bit |
+| JTAG force disable | `JTAG_FORCE_DISABLE` | SoC/board JTAG MUX + lifecycle/debug auth | `NGU-SoC-integration-TBD` | `CR-0003`, `CR-0004` | `[TBD bit]` | 不写成 eHSM physical eFuse bit |
 | Attestation enable | `ATTEST_EN` | eHSM / SEC policy | `NGU-logical-alias` / `NGU-SoC-integration-TBD` | `CR-0004` | `[TBD bit]` | report/service policy |
 
 ---
@@ -4537,10 +4995,10 @@ CR-0004 应用后，本文档的实现级基线为：
 | NGU Concept | Current / Old Field | eHSM Native Field / Command | Mapping Type | Source | Status | Notes |
 |---|---|---|---|---|---|---|
 | Chip Root | `UDS / Root Secret` | Chip Root Key / secure storage | `eHSM-native` | `SRC-006` | `[CONFIRMED role] / [TBD provisioning flow]` | provisioning flow 待 eHSM/ATE 联调冻结 |
-| Device Root | `DRK` | Device Root Key | `eHSM-native` / `NGU-logical-alias` | `SRC-006` | `[CONFIRMED]` | DRK may be semantic only |
+| Attestation Seed | `attestation_seed` | Device-local protection context / device attestation seed | `eHSM-native` / `NGU-logical-alias` | `SRC-006` | `[CONFIRMED]` | 仅用于设备证明派生域语义，不作为启动/升级/Debug 授权上游 |
 | FW verify | `FW Verify Key` | Soc FW Verify Key / Soc Upgrade Verify Key | `NGU-logical-alias` | `SRC-006` | `[TBD exact ID]` | owner must freeze mapping |
 | FW decrypt | `FW Encrypt Key / FW_KEK` | Soc Encrypt Key / Soc Upgrade Encrypt Key | `NGU-logical-alias` | `SRC-006` | `[TBD exact ID]` | SEC1/SEC2 mandatory use |
-| Debug auth | `Debug Auth Seed / Key` | Soc Debug Verify Key / User Auth Key | `NGU-logical-alias` | `SRC-006` | `[TBD exact ID]` | debug branch independent from attestation |
+| Debug auth | `Debug Authorization Key` | Soc Debug Verify Key | `NGU-logical-alias` | `SRC-006` | `[TBD exact ID]` | debug branch independent from attestation |
 | Attestation | `Attestation Seed / Device Identity Key` | Soc Private Key / Secret Key / owner mapping | `NGU-logical-alias` | `SRC-006` | `[TBD exact ID]` | attestation model TBD |
 
 ---
@@ -4564,7 +5022,7 @@ CR-0004 应用后，本文档的实现级基线为：
 | Key install | `install_random_key`, `install_encrypt_key` | `eHSM-native` | `SRC-006` | `[CONFIRMED direction]` | exact slot mapping TBD |
 | Lifecycle change | `change_lifecycle` | `eHSM-native` | `SRC-006` | `[CONFIRMED direction]` | SEC is control plane |
 | Control field change | `change_control_field` | `eHSM-native` | `SRC-006` | `[CONFIRMED direction]` | exact bit mapping TBD |
-| OTP readback / validation | eHSM status / readback / attested validation | `eHSM-native` / `eHSM-customization-TBD` | `CR-0004` | `[TBD]` | sensitive fields may be non-readable |
+| eFuse readback / validation | eHSM status / readback / attested validation | `eHSM-native` / `eHSM-customization-TBD` | `CR-0004` | `[TBD]` | sensitive fields may be non-readable |
 
 ---
 
@@ -4574,11 +5032,11 @@ CR-0004 应用后，本文档的实现级基线为：
 |---|---|---|
 | manifest ABI bit-level layout | `[TBD]` | SEC FW / tools |
 | eHSM manifest parser | `[TBD]` | eHSM firmware |
-| exact OTP/control bit mapping | `[TBD]` | RTL / eHSM |
+| exact eFuse/control bit mapping | `[TBD]` | RTL / eHSM |
 | exact key ID mapping | `[TBD]` | eHSM / security owner |
 | per-image rollback counter | `[TBD]` | product update policy |
 | per-image CEK / wrapped CEK | `[TBD]` | eHSM customization |
-| recovery image policy | `[TBD]` | recovery / RMA |
+| OOB MCU FMC 重刷与 key slot rotation policy | `[TBD]` | BootROM / eHSM / OOB MCU / Security Owner |
 
 <!-- Embedded from security_workflow/04_impl_design/mailbox_if.md; keep full content synchronized. -->
 ## 10.5 NGU800 Mailbox 接口实现级设计（V1.0）
@@ -4644,7 +5102,7 @@ graph TD
     SEC -->|Mailbox Command + Shared Memory Ptr| EH[eHSM]
     EH -->|Mailbox Response + Shared Memory Result| SEC
     SEC -->|状态 / 结果| H
-    EH --> OTP[eFuse / OTP]
+    EH --> eFuse[eFuse]
     EH --> ALG[HASH / PKE / SKE / TRNG / Counter / UTC]
 ```
 
@@ -4652,7 +5110,7 @@ graph TD
 
 | 角色 | 职责 | 不允许做的事 |
 |---|---|---|
-| Host | 投递镜像 / 请求；读取结果 | 直接调用 eHSM；直接 release 执行；直接访问 key/OTP |
+| Host | 投递镜像 / 请求；读取结果 | 直接调用 eHSM；直接 release 执行；直接访问 key/eFuse |
 | SEC/C908 | 唯一 Mailbox caller；参数封装；生命周期/权限检查；状态机控制 | 绕过 eHSM 进行正式安全路径验签 |
 | eHSM | 安全服务执行者；verify / key / lifecycle / auth / counter / UTC | 接收非 C908 发来的任务 |
 | RTL/Mailbox HW | 提供通道、寄存器、note、中断 | 承担协议级安全语义判断 |
@@ -4766,7 +5224,7 @@ typedef struct {
 ### 10.5.16 头字段约束
 
 - `caller_id` 在本项目中必须固定代表 SEC/C908 安全调用面。
-- `lifecycle_state` 不是最终授权依据，但 eHSM 可用其做快速拒绝；最终仍以 eHSM 侧状态/OTP 为准。
+- `lifecycle_state` 不是最终授权依据，但 eHSM 可用其做快速拒绝；最终仍以 eHSM 侧状态/eFuse 为准。
 - `token` 必须由 SEC 生成，避免并发时响应错配。
 - 所有长度字段必须由 SEC 先做边界检查，再提交到 eHSM。
 
@@ -5088,7 +5546,7 @@ sequenceDiagram
 - `pkt_addr` / `dst_addr` / `scope_bitmap_addr` 等所有地址必须由 SEC 先做白名单检查。
 - eHSM 侧应再做一次范围检查，防止越界或越权访问。
 - 管理子系统 DMA / Host DMA / OOB DMA 对安全资源默认拒绝，只允许访问 firewall 显式白名单 staging/data buffer。
-- DMA 不得访问 eHSM internal memory、OTP/eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、cert/policy/metadata 安全区、measurement_table 安全写区域、debug/lifecycle/rollback 控制寄存器。
+- DMA 不得访问 eHSM internal memory、eFuse、Secure SRAM、SEC1/SEC2 执行区、recovery 区、cert/policy/metadata 安全区、measurement_table 安全写区域、debug/lifecycle/rollback 控制寄存器。
 - `[TBD]` 具体 UserID、firewall region、地址范围、错误隐藏策略和审计字段由 RTL/实现设计冻结。
 
 ---
@@ -5243,7 +5701,7 @@ sequenceDiagram
 
 1. 制造阶段和生命周期阶段的对应关系
 2. Root Secret / Root Key / signer hash / debug anchor 的灌装对象与顺序
-3. OTP / eFuse 写入、锁定、校验、审计要求
+3. eFuse 写入、锁定、校验、审计要求
 4. MANU → USER 的冻结动作
 5. RMA / DEBUG 的授权与恢复规则
 6. 工站、SEC/C908、eHSM、Host/BMC 在制造阶段的职责边界
@@ -5262,8 +5720,8 @@ sequenceDiagram
 - eHSM 是安全服务根和首个密码学验证主体
 - Root Secret / Root Key 不应离开 eHSM 使用域
 - SEC1 在正式安全启动路径中必须签名 + 加密，SEC1 解密 key / FW_KEK 使用必须受 lifecycle gating
-- 生命周期必须受 OTP / eFuse 与 eHSM 联合控制
-- CR-0004 已确认 physical OTP/control/key/counter 排布优先按 eHSM TRM；本文件中的 OTP/eFuse 名称均为 NGU logical view，不能理解为新增 physical offset
+- 生命周期必须受 eFuse 与 eHSM 联合控制
+- CR-0004 已确认 physical eFuse/control/key/counter 排布优先按 eHSM TRM；本文件中的 eFuse 名称均为 NGU logical view，不能理解为新增 physical offset
 - USER 生命周期必须关闭未授权 debug
 - Host 不进入信任链，只能作为受控投递方
 - 制造阶段必须定义 key 注入、锁定、审计和生命周期推进
@@ -5273,7 +5731,7 @@ sequenceDiagram
 
 当前项目对制造链路采用以下裁决：
 
-> **制造工站通过受控 Provisioning 路径与 SEC/C908 交互，由 SEC 调 eHSM 完成 OTP / eFuse 写入与状态变更。**
+> **制造工站通过受控 Provisioning 路径与 SEC/C908 交互，由 SEC 调 eHSM 完成 eFuse 写入与状态变更。**
 
 即：
 - 工站 / Provisioning Tool 不直接操作 Root of Trust 决策逻辑
@@ -5323,8 +5781,8 @@ sequenceDiagram
 | Provisioning Tool / 工站 | 组织灌装步骤、提交请求、记录审计、接收结果 | 直接持有设备证明私钥、直接控制 eHSM 内部策略 |
 | Host / BMC（制造场景） | 作为链路承载方、传输工站请求、获取状态 | 参与 Root of Trust 决策、直接写 Root 密钥到最终安全区 |
 | SEC / C908 | 唯一 provisioning 控制面；参数校验；流程编排；调用 eHSM；状态收敛 | 绕过 eHSM 直接完成正式安全路径密钥使用 |
-| eHSM | OTP/eFuse 写入控制、锁定、lifecycle、counter、debug auth、key 服务执行 | 接受非 SEC 的非受控制造命令 |
-| OTP / eFuse | 按 eHSM TRM 持久保存生命周期、control field、Root 材料、key ID / level / purpose、Version Counter | 被 Host 或普通核直接改写，或被 NGU 自定义 physical layout 覆盖 |
+| eHSM | eFuse 写入控制、锁定、lifecycle、counter、debug auth、key 服务执行 | 接受非 SEC 的非受控制造命令 |
+| eFuse | 按 eHSM TRM 持久保存生命周期、control field、Root 材料、key ID / level / purpose、Version Counter | 被 Host 或普通核直接改写，或被 NGU 自定义 physical layout 覆盖 |
 
 ### 10.6.10 强边界规则
 
@@ -5332,7 +5790,7 @@ sequenceDiagram
 2. Host/BMC 在制造阶段仍然不进入信任链，只是链路承载者。
 3. SEC/C908 必须是唯一 provisioning caller。
 4. eHSM 必须是唯一 Root 材料写入与锁定执行者。
-5. OTP / eFuse 的最终控制位不得通过普通非安全路径直接改写。
+5. eFuse 的最终控制位不得通过普通非安全路径直接改写。
 
 ---
 
@@ -5364,14 +5822,14 @@ sequenceDiagram
 
 ---
 
-### 10.6.14 OTP / eFuse 灌装内容与顺序
+### 10.6.14 eFuse 灌装内容与顺序
 
 ### 10.6.15 推荐灌装顺序
 
 建议顺序如下：
 
 ```text
-(1) 读取当前生命周期和 OTP 状态
+(1) 读取当前生命周期和 eFuse 状态
     ↓
 (2) 验证设备处于允许灌装状态（MANU 或受控 provisioning 态）
     ↓
@@ -5452,7 +5910,7 @@ typedef struct {
 
 - `write_flags` 不得允许任意组合；必须由 SEC 侧先做合法性白名单检查。
 - `target_ref` 必须映射到 eHSM key ID / control field / Version Counter 或已接受 CR 中的 logical alias。
-- Provisioning Tool 不得把 `OTP-0..OTP-7` 当成 physical offset。
+- Provisioning Tool 不得把 `eFuse-0..eFuse-7` 当成 physical offset。
 - `blob_addr/blob_len` 必须满足共享内存白名单和长度边界检查。
 - provisioning 命令必须只允许在受控 lifecycle 下执行。
 
@@ -5467,7 +5925,7 @@ CR-0004 后，制造命令必须优先映射到 eHSM 已定义命令或 owner-co
 | 生命周期推进 | `change_lifecycle` | `[CONFIRMED direction]` |
 | control field 更新 | `change_control_field` | `[CONFIRMED direction]` |
 | 版本计数 / rollback 状态 | eHSM Version Counter / owner-confirmed counter command | `[TBD exact process]` |
-| OTP readback / 验收 | readback / status / attested validation | `[TBD]` |
+| eFuse readback / 验收 | readback / status / attested validation | `[TBD]` |
 
 ---
 
@@ -5477,7 +5935,7 @@ CR-0004 后，制造命令必须优先映射到 eHSM 已定义命令或 owner-co
 
 #### 模式 A：直接写入根材料
 - 工站侧准备 Root Secret / Root KEK 材料
-- 通过受控通道写入 OTP/eFuse 安全区
+- 通过受控通道写入 eFuse 安全区
 - 适合工厂中心化生成密钥模型
 
 #### 模式 B：写入种子 / 设备标识后由 eHSM 内部派生
@@ -5512,7 +5970,7 @@ CR-0004 后，制造命令必须优先映射到 eHSM 已定义命令或 owner-co
 |---|---|---|
 | `SECURE_BOOT_EN` logical policy | 1 | 映射 eHSM / hardware control field，exact bit TBD |
 | `DEBUG_AUTH_EN` logical policy | 1 | 映射 eHSM debug auth / lifecycle policy，exact bit TBD |
-| `JTAG_FORCE_DISABLE` SoC integration policy | 1 | USER 默认关闭 JTAG；属于 SoC/board integration，非 NGU 自定义 eHSM OTP bit |
+| `JTAG_FORCE_DISABLE` SoC integration policy | 1 | USER 默认关闭 JTAG；属于 SoC/board integration，非 NGU 自定义 eHSM eFuse bit |
 | `FW_ENCRYPT_EN` logical policy | 1（至少覆盖 SEC1 + SEC2） | SEC1/SEC2 强制签名 + 加密；PM/RAS/Codec USER/PROD 默认签名 + 加密 |
 | `ATTEST_EN` logical policy | 1 | 启用设备证明；exact control mapping TBD |
 | `ANTI_ROLLBACK_EN` logical policy | 1 | 启用反回滚；物理承载对齐 eHSM Version Counter / owner-confirmed counter |
@@ -5595,7 +6053,7 @@ CR-0004 后，制造命令必须优先映射到 eHSM 已定义命令或 owner-co
 4. `ANTI_ROLLBACK_EN = 1`
 5. `FW_ENCRYPT_EN = 1`，且至少覆盖 SEC1 + SEC2
 6. Root Key / UDS / signer anchor / SEC1/SEC2 解密相关 eHSM key policy / FW_KEK 策略完成锁定
-7. 测试 signer / 测试证书链 / 测试调试白名单全部清除
+7. 测试 signer / 测试证书 / 测试调试白名单全部清除
 8. 如启用 attestation，则 `ATTEST_EN = 1`
 9. 将生命周期推进到 USER
 10. 锁定生命周期回退路径
@@ -5677,7 +6135,8 @@ RMA / DEBUG 不是普通制造路径，而是**受授权的返修分析路径**�
 - 不得因为进入 RMA 就默认长期开放 debug
 - 不得跳过 challenge / auth
 - 不得允许返修后继续带测试 trust 出厂
-- 不得长期开放 SEC1/SEC2 解密绕过路径；RMA / rescue 镜像必须使用专用 signer / recovery trust，并保持 eHSM 受控解密或受控 recovery policy
+- 不得长期开放 FMC(SEC1) / GSP(SEC2) 解密绕过路径；首版 FMC 修复依赖 OOB MCU 受控重刷 NOR Flash FMC 主区域
+- 若后续引入静态 rescue/recovery 镜像，必须重新冻结 signer / decrypt / authorization policy，且不得绕过客户密钥轮换、eHSM 验证和审计策略
 
 ---
 
@@ -5703,7 +6162,7 @@ RMA / DEBUG 不是普通制造路径，而是**受授权的返修分析路径**�
 ### 10.6.51 RTL / FW / Tool 影响
 
 ### 10.6.52 RTL 侧
-- 需要支持 OTP/eFuse 写入控制位与锁位语义
+- 需要支持 eFuse 写入控制位与锁位语义
 - 需要支持生命周期状态持久化与回退限制
 - 需要为 provisioning 命令保留合法状态机支撑
 
@@ -5738,7 +6197,7 @@ RMA / DEBUG 不是普通制造路径，而是**受授权的返修分析路径**�
 ### 10.6.57 开放问题
 
 1. Root Material 首版是否完全采用 seed/UDS 注入，而非直接 Root Key 注入
-2. OTP/eFuse 是否支持对部分区做读回校验，哪些区仅支持状态校验
+2. eFuse 是否支持对部分区做读回校验，哪些区仅支持状态校验
 3. Provisioning Tool 与 SEC 的承载链路最终经由 PCIe、BMC 还是独立工装接口
 4. 双Die 产品的主 / 从 Die 灌装是独立还是联动事务
 5. USER 冻结失败时，允许停留在 MANU，还是进入显式故障态
@@ -5867,7 +6326,7 @@ SEC1 / SEC2 对应 measurement 必须反映 verify + decrypt 成功后的受控�
 字段语义：
 - `ehsm_image_type` 来自 eHSM native header，保持 eHSM TRM 定义。
 - `ngu_image_type` 来自 NGU protected manifest / policy table，用于 SEC1 / SEC2 / PM / RAS / Codec / Recovery 等项目级证明语义。
-- `ehsm_version_counter_checked` 与 `ngu_rollback_domain` 分别表达物理计数器检查结果和 NGU 逻辑 rollback domain，不得把 `*_MIN_VER` 当成 physical OTP counter。
+- `ehsm_version_counter_checked` 与 `ngu_rollback_domain` 分别表达物理计数器检查结果和 NGU 逻辑 rollback domain，不得把 `*_MIN_VER` 当成 physical eFuse counter。
 
 ---
 
@@ -5970,7 +6429,8 @@ typedef struct {
 | Open Item | Blocking Area | 当前状态 | 需要的决策 |
 |---|---|---|---|
 | 除 SEC1/SEC2 外，哪些非敏感 runtime image 允许 signature-only | Boot / Key / Product Policy | `[OPEN]` | SEC2 已强制加密；冻结 PM/RAS/Codec 或其他 runtime image 的白名单和准入条件 |
-| Recovery image 独立策略 | Boot / Recovery / RMA | `[OPEN]` | 冻结 image_type、signer、trust anchor、rollback counter、decrypt policy |
+| OOB MCU FMC 重刷恢复 ABI | Boot / Flash / Recovery / Board | `[OPEN]` | 冻结 OOB MCU secure boot、QSPI ownership/arbiter、NOR boot-critical 写保护、刷写授权 token、掉电保护和审计字段 |
+| FMC key slot rotation mapping | Boot / Key / eHSM / Manufacturing | `[OPEN]` | 冻结 normal signer、normal FW_KEK、upgrade verify/encrypt authority 到 eHSM key ID / purpose / level / revoke / counter 的映射 |
 | X.509 full cert chain 是否首版强制 | Key / Cert / Attestation | `[TBD]` | 冻结证书基础设施成熟度与 report / image 携带方式 |
 | report 中 image protection policy / decrypt_applied / board_bind_result 字段位置 | Attestation / SPDM | `[OPEN]` | 冻结放在 measurement flags、lifecycle block 还是独立 policy block |
 | board binding 是否参与 SEC2/runtime release decision | Board / Boot / Manufacturing | `[TBD]` | V2.4 默认进入 attestation、不阻断 SEC1；后续冻结 release decision |
@@ -5985,7 +6445,7 @@ typedef struct {
 
 | Dependency | 影响 | 当前处理 |
 |---|---|---|
-| eHSM 字段级 TRM / key policy 细节 | FW_KEK、per-image CEK extension、Version Counter、OTP/control field 字段冻结 | 当前按 source-conformance matrix 跟踪；未获 eHSM owner 确认的项保持 `[TBD]` |
+| eHSM 字段级 TRM / key policy 细节 | FW_KEK、per-image CEK extension、Version Counter、eFuse/control field 字段冻结 | 当前按 source-conformance matrix 跟踪；未获 eHSM owner 确认的项保持 `[TBD]` |
 | 管理子系统字段级接口 | OOB、JTAG、DMA、power/reset 安全控制字段 | 当前遵循总体架构和流程，安全边界以安全基线裁决 |
 | 产品安全策略 | runtime signature-only 白名单、非安全启动例外、debug 售后策略 | 当前强制 SEC1/SEC2；PM/RAS/Codec 默认 sign+encrypt，signature-only 白名单保留策略冻结项 |
 | 制造工站 / HSM / KMS | Root/UDS/FW_KEK/provisioning 审计流程 | 当前定义流程级要求，工站接口需进一步冻结 |
@@ -6026,6 +6486,6 @@ typedef struct {
 | CR ID | 主题 | 执行结果 |
 |---|---|---|
 | `CR-0001-sec1-encryption-fw-protection-master-sync` | SEC1 加密、固件保护链、Master 章节重排与板级安全并入 | 已按 CR 落地到源章节、实现级文件、master、导出版和追踪记录 |
-| `CR-0004-ehsm-native-header-otp-layout-alignment` | eHSM native header、OTP/key/counter source-conformance | 已按 CR 落地到主详设和实现级分片，并在第 10 章完整可见 |
+| `CR-0004-ehsm-native-header-efuse-layout-alignment` | eHSM native header、eFuse/key/counter source-conformance | 已按 CR 落地到主详设和实现级分片，并在第 10 章完整可见 |
 | `CR-0005-single-full-design-code-landing-spec` | `10_full_design.md` 作为唯一代码落地详设入口 | 已将 `04_impl_design` 分片正文全量嵌入第 10 章，并将分片定位为非独立事实源 |
 | `CR-0006-firmware-package-build-verify-flow` | 固件包格式、平台侧制作流程与设备侧 verify/decrypt 流程 | 已补充固件包布局图、制作流程图、设备侧验证时序图，并同步 code rules / traceability / open questions |
