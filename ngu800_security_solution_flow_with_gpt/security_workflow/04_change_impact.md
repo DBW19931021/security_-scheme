@@ -111,11 +111,11 @@
 | 主题 | CR-0004 裁决 | 后续影响 |
 |---|---|---|
 | eHSM native image header | physical secure boot image header follow eHSM TRM；NGU `ngu_fw_min_hdr_t / ngu_fw_signed_hdr_t` 不再作为 wire/storage verification header | `01_boot.md`、`06_interface.md`、`10_full_design.md`、`efuse_key_fw_header_design.md`、`mailbox_if.md` 已同步；manifest ABI 仍 `[TBD]` |
-| NGU protected manifest | NGU 项目级 `ngu_image_type`、policy、measurement、rollback domain、expected algorithm profile 放入受保护 manifest / policy table | 需要 eHSM owner 确认 manifest parser 边界和 ABI；当前不写死实现字段 |
+| NGU protected manifest | NGU 项目级 `image_type`、policy、measurement、rollback domain、expected algorithm profile 放入受保护 manifest / policy table | 需要 eHSM owner 确认 manifest parser 边界和 ABI；当前不写死实现字段 |
 | OTP / control field / Version Counter | physical OTP、algorithm control field、key ID / level / purpose、Version Counter follow eHSM TRM；NGU `OTP-0..OTP-7`、`*_MIN_VER` 仅作 logical alias | 新增 `ehsm_source_conformance_matrix.md`；exact key ID、control bit、counter 映射保持 `[TBD]` |
 | SEC1 / SEC2 sign + encrypt | 加密镜像必须走 verify+decrypt output path；NVM only verify 不适用于 SEC1/SEC2 encrypted deploy | `VERIFY_SEC1 / VERIFY_IMAGE` 改为 NGU wrapper/profile，底层映射 eHSM Bootloader/Firmware command |
 | Algorithm authority | `SocBootAlg / SocUpgradeAlg` 或等价 eHSM control field 是算法 authority；NGU profile 仅做审计/一致性检查 | `02_key_cert.md`、`10_full_design.md`、mailbox/provisioning 字段已调整 |
-| Attestation measurement wording | `eHSM Image_Type` 与 NGU `ngu_image_type` 分开进入 measurement 语义 | `spdm_report.md` 已避免把泛化 `image_type` 误写成 eHSM physical header 字段 |
+| Attestation measurement wording | `eHSM Image_Type` 与 NGU manifest `image_type` 分开进入 measurement 语义 | `spdm_report.md` 已避免把泛化 `image_type` 误写成 eHSM physical header 字段 |
 
 ## 10.1 CR-0004 本轮一致性检查
 

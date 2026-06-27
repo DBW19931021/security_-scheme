@@ -1,0 +1,68 @@
+# @(#)cshrc 1.11 89/11/29 SMI
+
+mkdir -p ./run/ddc ./run/log ./run/netlist ./run/report ./run/svf
+
+set TOP = osr_ehsm_top
+
+# set define of top module, format XXXX=>1,XXXX=>2
+
+# set parameter of top module, format p_XXXX=>1,p_XXXX=>2
+# set TOP_PARAM = "p_XXXX=\>1"
+
+# define source path
+# default RTL, when un-available use tokens
+set RTL_PATH = ../../rtl/
+if ( ! -d $RTL_PATH ) then
+    set RTL_PATH = ../../rtl/
+    echo "Tokens"
+endif
+
+set RTL_LIST = ../../filelist/ehsm_rtl.f
+
+# define regression setting
+set REGRESSION_SYN  = 0
+set PERIOD          = 10 
+set TECH            = UMC
+set CORNER          = SS 
+set PUSH            = 0
+
+if ( $REGRESSION_SYN > 0 ) then
+    #set TECH = ( UMC SMIC TSMC_28_HPCPLUS UMC_28_HPC)
+    #set CORNER = ( TT SS FF )
+    #set PUSH = ( 0 1 )
+    set TECH = ( UMC )
+    set CORNER = ( TT SS FF )
+    set PUSH = ( 0 1 )
+
+    foreach k ($PUSH)
+        foreach i ($TECH)
+            foreach j ($CORNER)
+                cd ./run ; dc_shell-t -gui -x "set VER {_`date +%Y%m%d_%H%M%S`}; \
+                set RTL_LIST {`echo $RTL_LIST`}; \
+                set PERIOD {`echo $PERIOD`}; \
+                set TOPCELL {`echo $TOP`}; \
+                set TECH {`echo $i`}; \
+                set CORNER {`echo $j`}; \
+                set REGRESSION {`echo $REGRESSION_SYN`}; \
+                set RTL_PATH {`echo $RTL_PATH`}; \
+                set PUSH {`echo $k`}" \
+                -f ../scripts/compile.tcl | tee ./log/${TOP}_${i}_${j}_${k}.log
+            end
+        end    
+    end    
+else 
+    set TECH = UMC
+    set CORNER = SS 
+    set PUSH = 0
+
+    cd ./run; dc_shell-t -gui -x "set VER {_`date +%Y%m%d_%H%M%S`}; \
+    set RTL_LIST {`echo $RTL_LIST`}; \
+    set PERIOD {`echo $PERIOD`}; \
+    set TOPCELL {`echo $TOP`}; \
+    set TECH {`echo $TECH`}; \
+    set CORNER {`echo $CORNER`}; \
+    set REGRESSION {`echo $REGRESSION_SYN`}; \
+    set RTL_PATH {`echo $RTL_PATH`}; \
+    set PUSH {`echo $PUSH`}" \
+    -f ../scripts/compile.tcl | tee ./log/${TOP}_${TECH}_${CORNER}_${PUSH}.log 
+endif

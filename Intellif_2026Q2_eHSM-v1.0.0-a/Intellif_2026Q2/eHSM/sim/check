@@ -1,0 +1,205 @@
+#!/usr/bin/perl
+
+use Getopt::Long;
+    $Getopt::Long::ignorecase = 0;
+#use strict;
+use Term::ANSIColor;
+
+my %Opt;
+if(!&GetOptions
+      (
+       \%Opt
+         ,'--t:s'
+         ,'--s:s'
+         ,'--h'
+      )
+    )
+  {
+     &print_usage();
+  exit(0);
+}
+if($Opt{'h'}) {
+  &print_usage();
+  exit(0);
+}
+
+$tc_name= "";
+if($Opt{'t'}) {
+    $tc_name = "$Opt{'t'}";
+}
+
+$tc_seed = "";
+if($Opt{'s'}) {
+    $tc_seed = "$Opt{'s'}";
+}
+
+#-------------------------------------------------------
+# Compile design if necessary 
+#-------------------------------------------------------
+if (-e "./simv") {
+    #print "uvm_test_simv already exists!\n";
+} else {
+    system "make compile";
+}
+
+
+#-------------------------------------------------------
+# Start single run or regression or rerun
+#-------------------------------------------------------
+my $timestamp = `date +'%Y%m%d%H%M%S'`;
+chomp($timestamp);
+
+################################################
+
+@tc_list = ();
+@tc_list_pass = ();
+@tc_list_fail = ();
+
+$total_case = 0;
+$total_pass  = 0;
+$total_fail  = 0;
+
+#-------------------------------------------------------
+# Single test for specified testcase
+#-------------------------------------------------------
+if ($tc_name ne "") {
+    run_case();
+    get_report();
+    exit(0);    
+}
+
+sub run_case {
+
+   if ($tc_name ne "") {
+       if ($tc_seed eq "") {
+           $tc_seed = randomSeed(8);
+       }
+   }
+
+   $passed = start_process();
+
+   printf "-------------------------------------------------------------\n";
+   printf "Current case: %s\n", $tc_name;
+   printf "Current percentage: %0d/%0d\n", $i+1, $tc_num;
+
+   if ($passed == 1) {
+       push @tc_list_pass, ${tc_name}._.${tc_seed};
+   }
+   if ($passed == 0) {
+       push @tc_list_fail, ${tc_name}._.${tc_seed};
+   }
+
+   $total_pass = @tc_list_pass;
+   $total_fail = @tc_list_fail;
+}
+
+#-------------------------------------------------------
+# Generate coverage report and regression report
+#-------------------------------------------------------
+sub get_report { 
+
+    push @tc_list, @tc_list_fail;
+    push @tc_list, @tc_list_pass;
+
+    #-------------------------------------------------------
+    # Generate simulation report 
+    #-------------------------------------------------------
+    
+    if(!open RPT, ">./run/rpt/${tc_name}_report_${timestamp}.txt") {
+    	die "Can not open ${tc_name}_report_${timestamp}.txt:$!"
+    }
+    
+    $end_time = `date`;
+    if ($total_fail == 0) {
+        print RPT "Simulation PASSED at $end_time", "\n";
+    } else {
+        print RPT "Simulation FAILED at $end_time", "\n";
+    }
+    print RPT "---------------------------------------------------------------------------------------------", "\n";
+    print RPT "       testcase                       result                    log                          ", "\n";
+    print RPT "---------------------------------------------------------------------------------------------", "\n";
+
+    my $result = "FAILED";
+
+    if(-e "./run/log/${tc_name}_${tc_seed}.log") {
+    	my $fail = `grep -rn -E "FAILED" ./run/log/${tc_name}_${tc_seed}.log`;
+    	my $pass = `grep -rn -E "Run_Pass" ./run/log/${tc_name}_${tc_seed}.log`;
+    	
+    	if(chomp($fail)) {
+    		$result = "FAILED";
+    	}
+        elsif(chomp($pass)) {
+    		$result = "PASSED";
+    	}
+    } else {
+    	print "File not found: ${tc_name}_${tc_seed}.log\n";
+    }
+
+    printf RPT "%-35s   %-6s     %-44s\n", $tc_name, $result, "./run/log/${tc_name}_${tc_seed}.log";
+
+    print RPT "---------------------------------------------------------------------------------------------", "\n";
+    system "gvim ./run/rpt/${tc_name}_report_${timestamp}.txt";
+}
+
+#-----------------------------------------------------------------------
+# return: passed/failed 
+#-----------------------------------------------------------------------
+sub start_process {
+   
+    $start_time = time();
+    system "make run_test SEED=$tc_seed TC=$tc_name";
+    $end_time = time();
+
+    printf "Simulation time: %0d\n", ($end_time - $start_time);
+
+    $simulation_result_pass = `grep -rn -E "Run_Pass" ./run/log/${tc_name}_${tc_seed}.log`;
+    $simulation_result_fail = `grep -rn -E "Run_Fail" ./run/log/${tc_name}_${tc_seed}.log`;
+    $simulation_result_err_rsp = `grep -rn -E "Rsp_Error" ./run/log/${tc_name}_${tc_seed}.log`;
+    $result = "\n\n-------------------------------------------------------\n";
+    $passed = 0;
+
+    if ($simulation_result_fail ne "") {
+        $result .= "Simulation FAILED on ";
+        $passed = 0;
+        print color 'bold red ';
+    } elsif ($simulation_result_err_rsp ne "") {
+        $result .= "Simulation FAILED on ";
+        $passed = 0;
+        print color 'bold red ';
+    } elsif ($simulation_result_pass ne "") {
+        $result .= "Simulation PASSED on ";
+        $passed = 1;
+        print color 'bold green';
+    } else {
+        $passed = 0;
+        $result .= "Simulation FAILED on ";
+        print color 'bold red';
+    }
+
+    
+    $result .= scalar localtime;
+    $result .= "\n-------------------------------------------------------\n";
+    print "$result";
+    print color 'reset';
+    `echo  "$result" >>  ./run/log/${tc_name}_${tc_seed}.log`;
+    $passed;
+}
+
+# Random seed test
+sub randomSeed {
+  my $password;
+  my $_rand;
+  my $password_length = $_[0];
+  if (!$password_length) {
+    $password_length = 8;
+  }
+  my @chars = split(" ",
+  "0 1 2 3 4 5 6 7 8 9");
+  srand(time() ^ ($$ + ($$ << 15)));
+  for (my $i = 0; $i < $password_length; $i++) {
+    $_rand = int(rand 10);
+    $password .= $chars[$_rand];
+  }
+  return $password;
+}
+

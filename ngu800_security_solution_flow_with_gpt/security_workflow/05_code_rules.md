@@ -195,6 +195,7 @@
 | R-DOC-002 | MUST NOT | FW / Driver / Tool / Test / Reviewer | 不得把 `security_workflow/04_impl_design/*.md` 作为独立事实源覆盖 `10_full_design.md` | CR-0005 | 04_impl_design README / 10_full_design 第 10 章 | 多文档事实源冲突 |
 | R-DOC-003 | MUST | Design Maintainer / Codex | 修改 `04_impl_design` 中字段、结构、状态机、命令、错误码、manufacturing/SPDM 细节时，必须同步到 `10_full_design.md` 第 10 章 | CR-0005 | 10_full_design 第 10 章 | 主详设不能指导代码落地 |
 | R-DOC-004 | MUST | Design Maintainer / Codex | 若 `10_full_design.md` 与 `04_impl_design` 分片冲突，必须按 accepted CR、decision_log、official TRM、`10_full_design.md` 的优先级修正分片 | CR-0005 | decision_log DEC-0015 | 分片反向污染主设计 |
+| R-DOC-005 | MUST | Security Component / Build / Test / Tool | 安全组件使用 `components/security`、`include/security` 和功能模块命名；项目自研文件与符号不得恢复芯片前缀，也不得增加旧 API compatibility alias 或 forwarding header | CR-0015 / DEC-0020 | component development principles / rename-security-module OpenSpec | 组件重新耦合芯片代号，形成双命名和长期兼容负担 |
 
 ---
 
@@ -202,7 +203,7 @@
 
 首批实现必须优先满足：
 
-1. `R-DOC-001 ~ R-DOC-004`
+1. `R-DOC-001 ~ R-DOC-005`
 2. `R-BOOT-001 ~ R-BOOT-006`
 3. `R-IF-001 ~ R-IF-009`
 4. `R-HOST-001 ~ R-HOST-005`

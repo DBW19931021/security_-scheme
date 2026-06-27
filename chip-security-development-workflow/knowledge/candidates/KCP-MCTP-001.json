@@ -1,0 +1,27 @@
+{
+  "id": "KCP-MCTP-001",
+  "title": "Use packet-boundary simulation before real mailbox hardware",
+  "current_level": "L0",
+  "target_level": "L1",
+  "category": "transport",
+  "validated_chips": [
+    "ngu800"
+  ],
+  "occurrences": 1,
+  "evidence": [
+    "evidence/verification.md",
+    "evidence/problem-records/PR-001-spdm-data-transfer-size.md",
+    "evidence/problem-records/PR-002-runtime-dram-budget.md"
+  ],
+  "applicability": "Single-producer/single-consumer endpoint transport with unavailable mailbox hardware",
+  "non_applicability": "Multi-writer shared bus or hardware-dependent cache-coherency validation",
+  "counterexamples": [
+    "Requester callback directly invokes responder dispatch"
+  ],
+  "chip_specific_tokens": [],
+  "approval": {
+    "status": "pending",
+    "approved_by": ""
+  },
+  "source_change": "/home/may-pc/share/code/ngu800/secure/gsp-pmp-rmp-omp/components/security/docs/openspec/changes/add-mctp-mailbox-spdm-endpoint"
+}

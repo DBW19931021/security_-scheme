@@ -304,3 +304,59 @@
 | 是否影响安全主路径 | `Yes`，涉及 boot / update / OOB recovery / FW package source |
 | 是否需要 GPT / owner 设计裁决 | `Yes`，用户已于 2026-06-03 明确新版 PDF 为当前收敛版 |
 | 是否允许 Codex 直接修改正文 | `Yes, after user execution authorization; Codex only applied source-of-truth and stale-wording sync` |
+
+---
+
+## CR-0015 影响矩阵：安全组件原子 Rename
+
+| 层级 | 对象 | 是否影响 | 影响说明 | 必须同步文件 | 状态 |
+|---|---|---|---|---|---|
+| 输入 | inputs manifest / 新资料 | `No` | 不新增输入资料 | `security_inputs/inputs_manifest.md` | `no-change` |
+| CR | Change Request | `Yes` | 记录用户确认的原子 rename 和禁止兼容层范围 | `change_requests/CR-0015-security-module-atomic-rename.md` | `applied` |
+| 约束 | `security_workflow/01_constraints.md` | `No` | 不改变安全约束 | `security_workflow/01_constraints.md` | `no-change` |
+| Baseline | `security_workflow/02_baseline.md` | `No` | 不改变 Root of Trust 或安全 baseline | `security_workflow/02_baseline.md` | `no-change` |
+| 详细设计 | code/path references | `Yes` | 只同步旧组件路径和代码符号引用 | relevant detailed design files | `applied` |
+| 实现设计 | component/API references | `Yes` | 同步文件、头文件、函数、类型和宏名称 | relevant implementation design files | `applied` |
+| Code rules | naming rules | `Yes` | supersede 旧 `ngu_*` ABI 保留规则 | `security_workflow/05_code_rules.md`; component development principles | `applied` |
+| Traceability | code/test mapping | `Yes` | 同步新路径和测试入口 | `security_workflow/06_traceability.md` | `applied` |
+| Test | host/packager/target build | `Yes` | 增加负向命名扫描并运行完整回归 | component tests and build targets | `applied` |
+| Project records | decision/changelog | `Yes` | 记录 DEC-0020 和 CHG-0012 | `00_project/decision_log.md`; `00_project/changelog.md` | `applied` |
+| Open questions | security design TBD | `No` | 不新增或关闭安全开放问题 | `00_project/open_questions.md` | `no-change` |
+
+## CR-0015 影响结论
+
+| 项目 | 结论 |
+|---|---|
+| 是否必须建立 CR | `Yes` |
+| 是否影响 baseline | `No` |
+| 是否影响两个以上文件 | `Yes` |
+| 是否影响安全主路径 | `No semantic change`，仅破坏性源码/API 命名迁移 |
+| 是否需要 owner 设计裁决 | `Yes`，用户已于 2026-06-10 选择方案 A |
+| 是否允许 Codex 直接修改正文 | `Yes, after written spec review; only code/path references may change` |
+
+---
+
+## CR-0017 影响矩阵：SPDM Responder Production Service
+
+| 层级 | 对象 | 是否影响 | 影响说明 | 必须同步文件 | 状态 |
+|---|---|---|---|---|---|
+| 输入 | inputs manifest / 新资料 | `No` | 不新增安全输入资料 | `security_inputs/inputs_manifest.md` | `no-change` |
+| CR | Change Request | `Yes` | 记录 responder runtime 从 QEMU test 抽取为 production service | `change_requests/CR-0017-spdm-responder-production-service.md` | `applied` |
+| 约束 / Baseline | RoT、安全语义 | `No` | 不改变 RoT、Host boundary、measurement、certificate 或 signature 语义 | `01_constraints.md`; `02_baseline.md` | `no-change` |
+| 实现设计 | MCTP/SPDM runtime ownership | `Yes` | responder endpoint、adapter、static task 归 production service；requester/test fixtures 留在 QEMU tests | component OpenSpec, Superpowers design/plan and code guide | `applied` |
+| 代码 | production responder service | `Yes` | 新增 service API/实现并进入 GSP component build | `components/security/include/security/spdm`; `components/security/src/spdm`; `components/security/sub.mk` | `applied` |
+| 测试 | host/QEMU contracts | `Yes` | 两轮 TDD，验证 service lifecycle、GET_VERSION、双 task 和 requester self-delete | component responder/runtime tests | `applied` |
+| Traceability | evidence / code map | `Yes` | 新增 OpenSpec requirement、tasks、verification evidence，并更新旧 QEMU code map | component OpenSpec evidence | `applied` |
+| Project records | decision/changelog | `Yes` | 记录 DEC-0022、CHG-0014，并标注 CR-0016 部分被替代 | `00_project/decision_log.md`; `00_project/changelog.md`; `CR-0016` | `applied` |
+| Open questions | QEMU platform blocker | `No` | 不新增问题；真实 QEMU 串口 PASS 继续受既有 address-map blocker 约束 | component known issues | `no-change` |
+
+## CR-0017 影响结论
+
+| 项目 | 结论 |
+|---|---|
+| 是否必须建立 CR | `Yes` |
+| 是否影响 baseline | `No` |
+| 是否影响两个以上文件 | `Yes` |
+| 是否影响安全主路径 | `Implementation ownership only`，不改变 attestation 安全语义 |
+| 是否需要 owner 设计裁决 | `Yes`，用户已确认 production responder service 划分并授权开始调整 |
+| 是否允许 Codex 直接修改正文 | `Yes, implementation-only; only runtime ownership, code, tests and traceability may change` |
