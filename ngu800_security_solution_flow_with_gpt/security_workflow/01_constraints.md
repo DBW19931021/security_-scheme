@@ -1,7 +1,7 @@
 # NGU800 安全约束定义（01_constraints.md）
 
-版本：v1.3
-状态：Draft（当前阶段约束收敛版本；`SRC-008 当前收敛安全软件方案 2.0` 已登记为当前方案基线）
+版本：v1.4
+状态：Draft（当前阶段约束收敛版本；`SRC-008 当前收敛安全软件方案 2.0` 已登记为当前方案基线；`SRC-009 OSR eHSM 软件代码包 4019` 与 `SRC-010 eHSM4.0 ROM Patch 方案` 已登记为新增实现输入）
 适用范围：NGU800 / NGU800P 安全子系统 + 启动链路
 
 ---
@@ -47,6 +47,72 @@ Chapter Binding：
 
 Impl Binding：
 - inputs_manifest / 10_full_design / efuse_key_fw_header_design / mailbox_if / spdm_report / manufacturing_provisioning / 05_code_rules / 06_traceability
+
+---
+
+<a id="c-src-02"></a>
+
+## 【C-SRC-02】eHSM 已提供安全服务必须以 OSR 软件代码包为实现事实源
+
+来源：
+- `SRC-009 OSR eHSM 软件代码包 4019`
+- `CR-0018-osr-ehsm-software-and-rom-patch-source-sync`
+- 用户 2026-06-27 明确指示：后续 HSM 代码已经提供的安全服务原则上以该代码为准，安全方案需要适配该代码
+
+要求：
+- `[CONFIRMED]` eHSM 已提供的安全服务、mailbox command ID、request/response 结构、Host API 行为、secure boot verify/upgrade、OTP/key/counter、debug/lifecycle、外部 OTP/Flash driver API、image tool / OTP tool 对接，必须以 `SRC-009 OSR eHSM 软件代码包 4019` 作为实现级事实源。
+- `[CONFIRMED]` 后续更新 `10_full_design.md`、`04_impl_design/*.md`、code rules、traceability、测试计划和代码时，必须先检查 `security_inputs/sw/` 中 OSR BL/FW/Host/API/tool 的当前代码与随包文档。
+- `[CONFIRMED]` 若当前方案需要的服务、字段、命令或工具行为在 OSR 代码中不存在或语义不同，必须登记差异，并通过 wrapper、policy 限制、eHSM customization 或方案调整 CR 处理，不得在 NGU 文档中直接发明并列 eHSM ABI。
+- `[CONFIRMED]` OSR 代码事实源不改变 Root of Trust = eHSM、Host 不可信、BootROM 不做复杂密码学、SEC1/SEC2 正式路径 sign + encrypt、eHSM first verifier 等已冻结架构原则。
+- `[TBD]` OSR 代码中的 exact command field、error code、OTP offset、key ID、control bit、patch OTP layout、tool CLI 和 golden vector 需要后续逐项 source-conformance，同步到 `10_full_design.md` 与实现级分片后才能作为字段级冻结依据。
+
+Evidence：
+- `security_inputs/sw/SW_changelist.md` 登记 BL、FW、Host API、外部 OTP/Flash driver API、镜像工具、OTP 工具和 Patch 测试说明。
+- `security_inputs/sw/ehsm_host-2.3.1-4019-2ee044d/src/mb.h` 与 `bl_mb.h` 已生成 mailbox 命令 ID 与 req/rsp 结构。
+- `security_inputs/sw/ehsm_fw-2.3.2-4019-5a4a0a9/src/secboot.c` 已体现 OTP 默认 key map、SOC/eHSM version counter 更新、secure boot 初始化和 eHSM ready/fail 状态。
+- OSR FW service 源码包含 `soc_verify`、`fw_upgrade`、OTP key install、debug auth、misc/OTP/control field、counter 等服务实现路径。
+
+Decision Rationale：
+- 方案如果只跟随旧 TRM 抽象或历史详设，可能设计出 OSR 代码当前没有提供的服务、命令字段或工具行为，导致后续代码落地反复返工。
+- 以 OSR 代码作为实现事实源，并保留 accepted CR / decision log / 架构原则作为上层约束，可以同时避免“代码脱离方案”和“方案发明 eHSM ABI”。
+
+Chapter Binding：
+- all chapters / ch3 / ch5 / ch6 / ch8 / ch9 / ch10 / ch11 / ch12
+
+Impl Binding：
+- 10_full_design / efuse_key_fw_header_design / mailbox_if / ehsm_source_conformance_matrix / manufacturing_provisioning / spdm_report / tools/image_packager / tools/provisioning / 05_code_rules / 06_traceability
+
+---
+
+<a id="c-src-03"></a>
+
+## 【C-SRC-03】Vendor eHSM 代码与 Wing 工具链变更必须先提醒、说明并记录
+
+来源：
+- `CR-0019-vendor-code-toolchain-change-control`
+- 用户 2026-07-02 明确指示：eHSM BootROM / Firmware 代码和编译工具链均由 vendor 提供，后续改动必须谨慎；改动前需明确提醒，说明原因、改动点和影响，并记录到相关文档与 OpenSpec
+
+要求：
+- `[CONFIRMED]` 后续修改 `ehsm_bootrom/**`、`ehsm_firmware/**` 下的源码、头文件、链接脚本、CMake/toolchain 文件、构建工具或配置前，必须先明确提醒用户该操作触及 vendor 代码。
+- `[CONFIRMED]` 后续修改 Wing 工具链安装目录、权限、软链接、动态库、`PATH`、`LD_LIBRARY_PATH`、`WING_TOOL_HOME`、`WING_TOOL_BIN` 或工具链相关脚本前，必须先明确提醒用户该操作触及 vendor 工具链或本地构建环境。
+- `[CONFIRMED]` 受控变更前必须说明变更原因、具体改动点、影响范围、回退方式和验证计划；受控变更后必须在相关文档中记录原因、改动点、影响分析、验证结果和遗留风险。
+- `[CONFIRMED]` 默认优先通过外层脚本、环境变量、wrapper、构建参数或文档说明解决问题；必须修改 vendor 内容时，采用最小作用域改动并保留记录。
+- `[CONFIRMED]` 不得把本地临时 workaround、工具链软链接或兼容库替换描述为 vendor 官方行为。
+
+Evidence：
+- `SRC-009 OSR eHSM 软件代码包 4019` 已作为 eHSM 已提供安全服务的实现事实源。
+- FSP OpenSpec 已新增 vendor 代码与工具链变更控制规则。
+- Wing 工具链运行时依赖、权限和环境变量会影响构建可复现性和问题归因。
+
+Decision Rationale：
+- Vendor 代码和工具链是后续适配与联调的事实基础，静默修改会破坏 source-conformance、版本归因和团队评审。
+- 将提醒、原因、影响、回退和验证作为强制前置项，可以降低 vendor 代码分叉、工具链漂移和不可复现构建风险。
+
+Chapter Binding：
+- all chapters / implementation workflow / source-conformance / build and toolchain documentation
+
+Impl Binding：
+- FSP OpenSpec / 05_code_rules / 06_traceability / review checklist / build scripts / toolchain environment docs
 
 ---
 
@@ -288,6 +354,65 @@ Chapter Binding：
 
 Impl Binding：
 - efuse_key_fw_header_design / ehsm_source_conformance_matrix / manufacturing_provisioning / 05_code_rules / 06_traceability
+
+---
+
+<a id="c-ehsm-02"></a>
+
+## 【C-EHSM-02】OSR eHSM 代码必须进入 eHSM source-conformance gate
+
+来源：
+- `SRC-009 OSR eHSM 软件代码包 4019`
+- `CR-0018-osr-ehsm-software-and-rom-patch-source-sync`
+
+要求：
+- `[CONFIRMED]` eHSM 适配层、BootROM/SEC verify flow、mailbox driver、image packager、provisioning tool、debug/lifecycle tool 和测试向量不得只按 NGU 自定义抽象开发，必须逐项对齐 `SRC-009` 中 OSR BL/FW/Host API 的真实接口。
+- `[CONFIRMED]` `bl_verify_image`、`bl_fw_upgrade`、`soc_verify`、`fw_upgrade`、OTP read/write、debug auth、close debug、counter、key install / import / derive / exchange 等服务的存在性、命令 ID、req/rsp 字段和错误模型，应以 OSR 代码和随包 TRM 4019 为实现级对照来源。
+- `[CONFIRMED]` OSR 代码已经提供的 OTP 默认 key map、SOC/eHSM version counter 更新、eHSM ready/fail 状态、fault-injection delay / check 等实现行为，需要纳入后续 `ehsm_source_conformance_matrix.md`、manufacturing、secure boot 和测试设计。
+- `[TBD]` OSR 代码与当前 `10_full_design.md` / `04_impl_design` 的差异清单尚未完成；在完成差异清单前，不得声称 full design 已经完全适配 OSR 代码。
+
+Decision Rationale：
+- CR-0004 建立了 eHSM TRM source-conformance；CR-0018 将 source-conformance 从“文档字段”扩展到“OSR 代码实际提供的服务和 ABI”。
+- 代码事实源进入 gate 后，后续开发可以直接从 OSR API / mailbox / tool 行为出发，减少文档和实现偏差。
+
+Chapter Binding：
+- ch3 / ch5 / ch6 / ch7 / ch9 / ch11 / ch12
+
+Impl Binding：
+- ehsm_source_conformance_matrix / mailbox_if / efuse_key_fw_header_design / manufacturing_provisioning / 10_full_design / 05_code_rules / 06_traceability
+
+---
+
+<a id="c-ehsm-03"></a>
+
+## 【C-EHSM-03】eHSM4.0 ROM Patch 必须作为 OTP + 硬件 BOOT 机制纳入安全约束
+
+来源：
+- `SRC-010 eHSM4.0 ROM Patch 方案`
+- `CR-0018-osr-ehsm-software-and-rom-patch-source-sync`
+
+要求：
+- `[CONFIRMED]` eHSM ROM patch 是硬件 BOOT 从 OTP patch 配置表加载 patch 信息，并在 CPU 访问 IROM 时由 patch 模块对命中地址返回替换指令的机制；它不是 Host、SEC 或普通软件在运行期任意修改 ROM 的热补丁入口。
+- `[CONFIRMED]` Patch 配置表固化在 OTP 中，在 eHSM 初始化时由硬件加载到 eHSM 内部；CPU 对 patch hit 无感，不应产生异常或软件可见的替换流程。
+- `[CONFIRMED]` Patch 地址按 word 对齐；当前输入资料给出 32 行 patch、每行 1 个 word 数据替换的设计方向。
+- `[CONFIRMED]` Patch data 在 OTP 中按明文保存；这属于 patch 模块与 IROM/cipher 位置关系的硬件设计输入，不得被 Host 运行期覆盖。
+- `[CONFIRMED]` `SRC-010` 结论包括：不需要 APB CFG IF；patch hit 时屏蔽 IROM 访问；增加 patch enable 用于整体使能。
+- `[TBD]` NGU 项目的最终 Patch_en / Patch_addr / Patch_data OTP offset、patch enable 编码、patch 表烧录权限、MANU/USER 锁定策略、patch 验收脚本、attestation/audit 是否报告 patch 状态，必须由 RTL/eHSM/security owner 后续冻结。
+
+Evidence：
+- `SRC-010 eHSM4.0 ROM Patch 方案` 描述 patch 流程：eHSM 全局复位释放后，Boot 模块读取 Patch 信息到 ipatch 模块；hardware boot OK 后释放 CPU 复位；CPU 访问 IROM 时 patch hit 则返回替换值，否则正常访问 IROM。
+- `SRC-010` 给出 OTP 增量字段：Patch_en、Patch_addr、Patch_data，并说明相对标准版增加约 0.2KB OTP 空间。
+- `SRC-010` 给出 patch 配置表字段方向：2-bit Patch_en、16-bit word address、32-bit Patch_data。
+
+Decision Rationale：
+- ROM patch 能改变 eHSM ROM 实际执行指令，必须进入 OTP、制造、生命周期、审计和 attestation 影响分析。
+- 若 patch 机制被误解为运行期可写入口，会形成绕过 ROM 固化和安全启动边界的高风险通道。
+
+Chapter Binding：
+- ch3 / ch6 / ch7 / ch9 / ch11 / ch12
+
+Impl Binding：
+- efuse_key_fw_header_design / manufacturing_provisioning / ehsm_source_conformance_matrix / mailbox_if / spdm_report / 05_code_rules / 06_traceability
 
 ---
 
@@ -609,3 +734,5 @@ Impl Binding：
 - 管理子系统 DMA / mailbox / 复位控制的 firewall 和审计字段
 - OOB MCU FMC 重刷恢复 ABI：OOB secure boot、QSPI ownership、NOR 写保护、恢复授权 capsule、状态/审计记录、掉电保护
 - 若未来重新引入静态 rescue/recovery image，则单独冻结 image_type、signer、trust anchor、rollback counter、decrypt policy
+- OSR eHSM 软件代码与 `10_full_design.md` / `04_impl_design` 的逐项差异清单：mailbox command、req/rsp 字段、错误码、OTP/key/counter、debug/lifecycle、tool CLI、golden vector
+- eHSM4.0 ROM Patch 字段级集成：Patch_en / Patch_addr / Patch_data OTP offset、烧录权限、USER 锁定、验收脚本、证明/审计表达

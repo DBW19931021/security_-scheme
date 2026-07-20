@@ -6,6 +6,7 @@
 |---|---|---|---|
 | CHG-005 | `SRC-005 管理子系统方案` / `security_inputs/board/管理子系统.pdf` | 新增管理子系统方案；总体架构、模块职责、带外链路、电源/复位流程、单/双 Die 约束作为系统级输入采用；涉及安全且考虑不足、明显存在漏洞或与既定安全基线冲突的内容不直接继承 | medium |
 | CHG-010 | `SRC-008 当前收敛安全软件方案 2.0` / `security_inputs/current_plan/芯片安全软件方案_2.0.pdf` | 用户明确 2.0 PDF 为最新收敛方案；无特殊说明时当前方案以该版为准，旧 `SRC-001` 降级为历史流程参考 | high |
+| CHG-011 | `SRC-009 OSR eHSM 软件代码包 4019`; `SRC-010 eHSM4.0 ROM Patch 方案` | 用户新增 OSR eHSM BL/FW/Host/API/tool 代码包，并明确后续 HSM 已提供安全服务原则上以 OSR 代码为准；新增 eHSM4.0 ROM Patch 方案作为 OTP + hardware BOOT patch 机制输入 | high |
 
 ## 2. 输入要点提取
 
@@ -18,6 +19,8 @@
 | mailbox / 中断 / 互斥 | 管理子系统存在 mailbox、中断和互斥访问机制 | 只能作为协作机制，不得替代权限检查或安全服务入口 |
 | 电源 / 复位 | 板级 MCU 管理 GPU 电源、上下电顺序、异常响应和定位 | 影响安全状态时必须进入状态机和审计 |
 | 单 Die / 双 Die | OOB 对外只呈现一个管理设备，硬件接口对外只 DIE0 出 OOB 接口 | 需联动 board/die binding、证明报告和跨 Die 访问策略 |
+| OSR eHSM 软件代码 | `security_inputs/sw/` 提供 BL/FW/Host API、mailbox req/rsp、secure boot verify/upgrade、OTP/key/counter、debug/lifecycle、外部 OTP/Flash driver API、image/OTP tool 等真实实现输入 | eHSM 已提供服务必须以 OSR 代码为实现事实源；方案和后续代码不得继续发明并列 eHSM ABI |
+| eHSM ROM Patch | `eHSM4.0 Patch方案.pdf` 描述 OTP patch 表由硬件 BOOT 加载，CPU 访问 IROM 命中时无感返回替换指令 | 作为 ROM 实际执行指令可变更机制纳入 OTP、制造、锁定、验收、审计和 attestation 影响分析 |
 
 ## 3. 受影响约束
 
@@ -29,6 +32,9 @@
 | `C-BOARD-04` | 不存在 | 管理子系统 DMA、mailbox、中断、互斥访问和复位控制必须被隔离和审计 | high |
 | `C-ACCESS-01` / `C-ACCESS-02` | 已要求安全子系统隔离、UserID + Firewall | 适用范围扩展到管理子系统 DMA、OOB 桥接、JTAG MUX、板级复位相关访问路径 | medium |
 | `C-DEBUG-01` / `C-DEBUG-02` | 已要求 USER 关闭调试、DEBUG/RMA 必须认证 | 适用范围扩展到板级 JTAG、CPLD/MUX、边界扫描和板级 MCU 调试路径 | medium |
+| `C-SRC-02` | 不存在 | eHSM 已提供安全服务必须以 OSR 软件代码包为实现事实源 | high |
+| `C-EHSM-02` | `C-EHSM-01` 只覆盖 TRM/OTP/key/counter source-conformance | OSR BL/FW/Host API 代码进入 eHSM source-conformance gate | high |
+| `C-EHSM-03` | 不存在 | eHSM4.0 ROM Patch 作为 OTP + 硬件 BOOT 机制纳入安全约束 | high |
 
 ## 4. 受影响 Baseline
 
@@ -38,6 +44,8 @@
 | JTAG / debug model | `SRC-005 管理子系统方案` 描述 JTAG 具有访问 GPU/CPU/DRAM/Flash/安全子系统能力 | JTAG 不按默认开放能力采用，必须 lifecycle + debug auth + scope + MUX gating |
 | DMA / mailbox / interrupt | `SRC-005 管理子系统方案` 描述管理子系统 DMA、mailbox、中断和互斥机制 | 这些机制只可用于受控协作，不得绕过 SEC/eHSM 和 firewall |
 | Power / reset control | `SRC-005 管理子系统方案` 描述板级电源、上下电和复位管理 | 影响安全状态的事件必须进入安全状态机或审计 |
+| eHSM software source | `SRC-009` 提供 OSR 4019 版本 BL/FW/Host API 和工具输入 | eHSM 已提供服务、mailbox ABI、Host API、tool 行为以 OSR 代码为实现事实源；字段级差异进入后续 source-conformance |
+| eHSM ROM patch | `SRC-010` 提供 ROM patch 机制说明 | Patch 是 OTP + hardware BOOT + CPU/IROM 指令替换机制，不是运行期热补丁入口 |
 
 ## 5. 受影响章节
 
@@ -206,3 +214,67 @@
 | Code rules freshness | pass | `R-FW-017` 至 `R-FW-020` 已同步单 FMC + OOB 恢复和 OOB 不放行规则 |
 | Traceability freshness | pass | 已新增 `T-SRC-001`，更新 FW package / OOB recovery trace source |
 | Unsupported confirmed claims | pass-with-open-items | 未关闭 manifest ABI、exact eHSM key ID、OOB/QSPI ABI、tool CLI/golden vector 等开放项 |
+
+---
+
+## 14. CR-0018 增量影响记录
+
+| 主题 | CR-0018 裁决 | 后续影响 |
+|---|---|---|
+| OSR eHSM 软件事实源 | `SRC-009 OSR eHSM 软件代码包 4019` 是 eHSM 已提供安全服务、mailbox command/req/rsp、Host API、secure boot verify/upgrade、OTP/key/counter、debug/lifecycle、image/OTP tool 行为的实现事实源 | 后续 eHSM adapter、BootROM/SEC verify flow、mailbox driver、image packager、provisioning/debug/lifecycle tool 和测试向量必须从 OSR 代码出发做 source-conformance |
+| 适配原则 | 安全方案需要适配 OSR 代码；若方案需要 OSR 代码未提供或语义不同的服务，先登记差异，再通过 wrapper、policy 限制、eHSM customization 或方案调整 CR 处理 | 不允许在 NGU 文档中直接发明并列 eHSM ABI；但不改变 Root of Trust、Host 不可信、BootROM 最小化、SEC1/SEC2 sign+encrypt 等已冻结原则 |
+| ROM Patch 机制 | `SRC-010 eHSM4.0 ROM Patch 方案` 按 OTP patch 表 + 硬件 BOOT 加载 + CPU/IROM 无感指令替换建模 | 需要进入 OTP 空间、制造烧录、USER 锁定、patch 验收、审计和 attestation/report 影响分析 |
+| 字段级冻结 | OSR command field、error code、OTP offset、key ID、control bit、patch layout、tool CLI、golden vector 仍保持 `[TBD]` | `10_full_design.md` 与 `04_impl_design/*.md` 需要后续专项 CR 做逐项适配 |
+
+## 14.1 CR-0018 方案更新需求判断
+
+| Area | Need Update | Reason | Priority |
+|---|---|---|---|
+| `security_inputs/inputs_manifest.md` | done | 已登记 `SRC-009/SRC-010`、冲突和变更入口 | high |
+| `security_workflow/01_constraints.md` | done | 已新增 `C-SRC-02`、`C-EHSM-02`、`C-EHSM-03` | high |
+| `security_workflow/02_baseline.md` | done | 已增加 OSR 软件事实源、ROM patch baseline、freeze-sensitive items | high |
+| `security_workflow/05_code_rules.md` | done | 已新增 OSR source-conformance、ROM patch 禁止运行期热补丁、patch 制造规则 | high |
+| `security_workflow/06_traceability.md` | done | 已新增 `T-SRC-002`、`T-SRC-003`、`T-EHSM-004`、`T-EHSM-PATCH-001` | high |
+| `security_workflow/03_detailed_design/10_full_design.md` | needed | 需要把 OSR 代码事实源同步到 boot、interface、key/cert、manufacturing、attestation/report 章节和第 10 章实现级落地主规格 | high |
+| `security_workflow/04_impl_design/*.md` | needed | `ehsm_source_conformance_matrix.md`、`mailbox_if.md`、`efuse_key_fw_header_design.md`、`manufacturing_provisioning.md`、`spdm_report.md` 需要逐项对齐 OSR command/field/error/tool 行为和 ROM patch 字段 | high |
+| Code / tests | not-yet | 当前只完成方案输入和约束同步；代码实现前应先完成 OSR source-conformance matrix 与 golden vector | high |
+
+## 14.2 CR-0018 本轮一致性检查
+
+| Check Item | Result | Notes |
+|---|---|---|
+| CR gate | pass | 已新增 `CR-0018-osr-ehsm-software-and-rom-patch-source-sync.md`，状态 applied / owner-review-pending |
+| Manifest freshness | pass | 已新增 `SRC-009/SRC-010`、`CF-009/CF-010`、`CHG-011` |
+| Constraint freshness | pass | 已新增 OSR 软件事实源、source-conformance gate 和 ROM patch 机制约束 |
+| Baseline freshness | pass | 已新增 eHSM software source、ROM patch source、source precedence 和冻结敏感项 |
+| Chapter freshness | pending | `10_full_design.md` 与章节级详设尚未执行字段级适配 |
+| Impl freshness | pending | `04_impl_design` 仍需后续专项对照 OSR 代码和 patch PDF |
+| Code rules freshness | pass | 已新增 `R-FW-021` 至 `R-FW-024`、`R-MFG-008`、`R-DOC-006`、`R-DOC-007` |
+| Traceability freshness | pass | 已新增 OSR source-conformance 和 ROM patch trace rows |
+| Open questions freshness | pass | 已新增 OSR 代码差异清单与 ROM patch 字段级集成开放问题 |
+| Unsupported confirmed claims | pass-with-open-items | 未把 OSR 代码中观察到的字段、offset、key ID、工具 CLI 或 patch OTP layout 自动升级为字段级 `[CONFIRMED]` |
+
+---
+
+## 15. CR-0019 增量影响记录
+
+| 主题 | CR-0019 裁决 | 后续影响 |
+|---|---|---|
+| Vendor 代码变更控制 | 修改 `ehsm_bootrom/**`、`ehsm_firmware/**` 前必须先提醒用户，并说明原因、改动点、影响、回退和验证 | 后续开发不得静默修改 OSR/vendor 代码；需要把变更原因和验证结果写入相关文档 |
+| 工具链变更控制 | 修改 Wing 工具链安装、权限、软链接、动态库、PATH/LD_LIBRARY_PATH 或工具链相关脚本前必须执行同等提醒和记录 | `/opt/wing_tool`、`~/.bashrc`、`WING_TOOL_BIN` 等不再作为可静默调整项；任何 workaround 必须标明本地性质 |
+| OpenSpec 约束 | FSP OpenSpec 增加 vendor 变更控制上下文和 artifact rules | 后续 proposal/design/spec/tasks 生成时必须默认携带该强约束 |
+| 安全方案同步 | constraints/code rules/traceability 新增 vendor 变更控制项 | 代码评审和后续 Codex 任务必须按 `C-SRC-03` / `R-DOC-008` 执行 |
+
+## 15.1 CR-0019 本轮一致性检查
+
+| Check Item | Result | Notes |
+|---|---|---|
+| CR gate | pass | 已新增 `CR-0019-vendor-code-toolchain-change-control.md`，状态 accepted-for-application / applied-by-codex / owner-review-pending |
+| OpenSpec freshness | pass | `fsp/development_constraints/openspec/config.yaml` 与 `fsp/development_constraints/openspec/development_principles.md` 已写入强约束 |
+| Development constraints layout | pass | FSP 根目录旧约束入口已归口到 `fsp/development_constraints/`，并新增目录 README |
+| Manifest freshness | pass | 已新增 `CHG-012` |
+| Constraint freshness | pass | 已新增 `C-SRC-03` |
+| Code rules freshness | pass | 已新增 `R-DOC-008`，并将优先规则范围更新为 `R-DOC-001 ~ R-DOC-008` |
+| Traceability freshness | pass | 已新增 `T-SRC-004` |
+| Vendor source impact | pass | 本 CR 未修改 `ehsm_bootrom/**`、`ehsm_firmware/**` 源码或 Wing 工具链状态 |
+| Unsupported confirmed claims | pass | 本 CR 只冻结变更控制流程，不新增 eHSM ABI、OTP/key/counter 字段或工具 CLI 事实 |

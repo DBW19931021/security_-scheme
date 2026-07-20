@@ -24,6 +24,8 @@
 | OQ-0014 | per-image rollback counter 与 wrapped CEK customization | Update / FW Protection / eHSM | eHSM Owner / Product Security Owner | `[OPEN]` | `CR-0004` 已将 `*_MIN_VER` 降为 logical rollback domain，并将 per-image CEK / wrapped CEK 标为 TBD；若产品要求 per-image counter 或 wrapped CEK，需要 eHSM customization CR |
 | OQ-0015 | SEC1 early boot exact eHSM command path | BootROM / eHSM Bootloader | BootROM Owner / eHSM Owner | `[OPEN]` | `CR-0004` 已要求 SEC1 sign+encrypt 不走 NVM only verify；仍需冻结 BootROM 调用 eHSM Bootloader `bl_verify_image` 或等价 ROM path 的 exact ABI、output buffer 和错误模型 |
 | OQ-0016 | Image packager CLI、manifest ABI 与 golden vector | Tooling / BootROM / SEC FW / eHSM Adapter | Tooling Owner / SEC FW Owner / eHSM Owner | `[OPEN]` | `CR-0006` 已冻结固件制作与设备侧 verify/decrypt 的流程方向；仍需冻结 `ngu_image_manifest_t` bit-level ABI、packager CLI 参数、source-conformance report 格式和 BootROM/SEC/eHSM adapter 联调用 golden vector |
+| OQ-0017 | OSR eHSM 代码与 full/impl design source-conformance 差异清单 | eHSM / Boot / Mailbox / Tooling / Manufacturing | eHSM Owner / Security Owner / SEC FW Owner | `[OPEN]` | `CR-0018` 已裁决 eHSM 已提供安全服务以 `SRC-009` OSR 代码为实现事实源；仍需逐项冻结 OSR 代码/API/tool 与 `10_full_design.md` / `04_impl_design` 的 command ID、req/rsp 字段、错误码、key ID、OTP/control bit、version counter、debug/lifecycle、image/OTP tool CLI 和 golden vector 差异 |
+| OQ-0018 | eHSM4.0 ROM Patch OTP / lifecycle / manufacturing / attestation 集成 | eHSM ROM / OTP / Manufacturing / Attestation | eHSM Owner / RTL Owner / Manufacturing / Security Owner | `[OPEN]` | `CR-0018` 已裁决 ROM patch 是 OTP + hardware BOOT + CPU/IROM 指令替换机制；仍需冻结 Patch_en/Patch_addr/Patch_data offset 和 enable 编码、烧录/锁定/USER 权限、patch 验收脚本、审计记录、attestation/report 是否暴露 patch 状态 |
 
 ## 状态定义
 

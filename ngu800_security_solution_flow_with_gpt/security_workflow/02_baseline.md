@@ -1,7 +1,7 @@
 # NGU800 安全架构 Baseline V2（工程级）
 
-版本：v2.3
-状态：评审版（可用于架构评审 / 方案冻结前阶段；`SRC-008 当前收敛安全软件方案 2.0` 已作为当前方案源登记）
+版本：v2.4
+状态：评审版（可用于架构评审 / 方案冻结前阶段；`SRC-008 当前收敛安全软件方案 2.0` 已作为当前方案源登记；`SRC-009 OSR eHSM 软件代码包 4019` 与 `SRC-010 eHSM4.0 ROM Patch 方案` 已纳入实现输入约束）
 
 ---
 
@@ -23,6 +23,8 @@
 | Topic | Current Decision | Status |
 |---|---|---|
 | Current Plan Source | `SRC-008 当前收敛安全软件方案 2.0` 是当前收敛方案基线；除 accepted CR、decision_log、官方 eHSM/TRM、后续用户特殊说明或源内明确例外外，旧 `SRC-001` 不再作为当前方案基线 | CONFIRMED |
+| eHSM Software Source | `SRC-009 OSR eHSM 软件代码包 4019` 是 eHSM 已提供安全服务、Host API、mailbox command/req/rsp、secure boot/upgrade、OTP/key/counter/debug/lifecycle 和工具对接的实现事实源；字段级差异仍需 source-conformance | CONFIRMED / TBD |
+| eHSM ROM Patch Source | `SRC-010 eHSM4.0 ROM Patch 方案` 作为 eHSM ROM 指令 patch 输入；当前基线只冻结“OTP + 硬件 BOOT + CPU/IROM 无感替换”机制方向，最终 OTP offset、烧录权限和验收脚本仍待冻结 | CONFIRMED / TBD |
 | Root of Trust | eHSM | CONFIRMED |
 | First Mutable Stage | SEC1 | CONFIRMED |
 | First Cryptographic Verifier | eHSM | CONFIRMED |
@@ -48,6 +50,8 @@
 - `SRC-008 当前收敛安全软件方案 2.0` 为 2026-06-03 后当前安全软件方案的主输入源。
 - `SRC-001 当前安全方案基线` 降级为历史流程参考；其旧 custom header、旧恢复或旧命名口径不得覆盖 `SRC-008`。
 - eHSM Firmware / Bootloader TRM、accepted CR、`00_project/decision_log.md` 和后续用户明确特殊说明仍可覆盖或细化 `SRC-008`。
+- `SRC-009 OSR eHSM 软件代码包 4019` 对 eHSM 已提供服务、mailbox ABI、Host API、tool 行为具有实现级优先级；若与旧 TRM 抽象或现有详设字段不一致，必须按 CR-0018 建立差异清单后同步，而不是继续沿用旧抽象。
+- `SRC-010 eHSM4.0 ROM Patch 方案` 补充 ROM patch 机制基线；该机制不授权 Host/SEC 运行期写 patch，不改变 Root of Trust、Host trust boundary 或 secure boot 主路径。
 - `SRC-008` 未冻结的 bit-level ABI、exact key ID、exact OTP/control bit、OOB/QSPI register、工具 CLI 和 golden vector 仍按 open questions 追踪，不因本 baseline 登记自动关闭。
 
 ---
@@ -91,6 +95,8 @@
 | Image container | eHSM native header 作为 verify/decrypt container，NGU metadata 进入 protected manifest | NGU 自定义 physical FW header 与 eHSM header 并列 | 避免两套 physical ABI 和工具链冲突 |
 | Firmware package flow | image packager 生成 eHSM native package，设备侧 eHSM 先 verify/decrypt，BootROM/SEC 再解析 NGU manifest 和 release policy | 平台工具生成旧 `header + Signed Region + signature + wrapped_cek + enc_payload` 作为最终 wire/storage 格式 | 保留制作/验证流程的可读性，同时不违背 eHSM TRM |
 | OTP/key/counter | eHSM physical field + NGU logical alias / customization TBD | NGU 自定义 physical OTP 分区、32-bit per-image physical counter、未映射 key slot | follow `SRC-002/SRC-006/SRC-007`，降低 RTL/制造偏差 |
+| eHSM service source | 已提供服务、mailbox command/req/rsp、Host API、tool 行为以 OSR 软件代码包 4019 为实现事实源 | 在 NGU 文档中发明与 OSR 代码并列的 eHSM ABI | 后续开发必须能直接映射到真实 OSR BL/FW/Host API |
+| eHSM ROM Patch | OTP patch 表由硬件 BOOT 在 CPU release 前加载，CPU 访问 IROM 命中时无感返回替换指令 | 把 ROM patch 解释成 Host/SEC 运行期软件热补丁入口 | Patch 会改变 ROM 实际执行指令，必须纳入 OTP、制造和审计约束 |
 | Key ownership | 私钥不出 eHSM | 私钥落在 Host / 管理核 | 不满足安全边界 |
 | Workflow | constraints → baseline → detailed → impl | raw inputs 直接生成 full design | 防止方案漂移 |
 
@@ -185,6 +191,8 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 - eHSM native secure boot image header 的解析与 verify/decrypt
 - eHSM OTP/control field 中 `SocBootAlg / SocUpgradeAlg` 等算法选择语义
 - eHSM OTP key ID / level / purpose 的 physical key slot 语义
+- OSR BL/FW/Host API 已提供服务的真实 mailbox command、req/rsp、错误模型和工具对接行为
+- eHSM ROM patch 信息在 OTP 中的读取、加载和 CPU/IROM 指令替换机制
 
 ## 8.1 eHSM Source-Conformance Baseline
 
@@ -197,6 +205,8 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 | OTP Layout | `OTP-0..OTP-7` 是 NGU logical view，不表达 physical offset |
 | Version Counter | eHSM SOC FW Version Counter 是首版物理 rollback 基础候选；per-image counter 为 `[TBD]` / `eHSM-customization-TBD` |
 | Key Slot | NGU key name 必须映射到 eHSM key ID / level / purpose；exact mapping 仍为 `[TBD]` |
+| OSR Software Code | eHSM 已提供服务、mailbox command/req/rsp、Host API、外部 OTP/Flash driver API、image/OTP tool 行为必须与 `SRC-009` 对齐；差异进入 `ehsm_source_conformance_matrix.md` |
+| eHSM ROM Patch | Patch 表固化在 OTP，硬件 BOOT 在 CPU release 前加载到 patch 模块；patch hit 返回替换指令并屏蔽 IROM 访问；最终字段和制造流程仍为 `[TBD]` |
 
 ---
 
@@ -208,6 +218,7 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 | Root Key 锁定 | MANU → USER 前必须锁定 | 读回校验策略待定 |
 | 测试 Key 清理 | USER 前必须清理 | 测试证书链清理动作待定 |
 | SEC1 / SEC2 解密 key / FW_KEK 锁定 | MANU → USER 前必须锁定 | key slot 细节待 eHSM TRM 对齐 |
+| ROM Patch 配置 | 若项目启用 eHSM ROM patch，patch OTP 写入、锁定、验收和审计必须纳入制造流程 | Patch_en/Patch_addr/Patch_data offset、USER 锁定和验收脚本待 RTL/eHSM owner 冻结 |
 | RMA 安全边界 | 禁止 long-open debug 和长期 decrypt bypass | re-acceptance 流程待定 |
 | 审计日志 | 制造阶段必须记录 | 日志落点待定 |
 
@@ -236,6 +247,8 @@ BootROM → SEC1（NOR / 本地）→ SEC2（Host 下发）→ 子系统 FW
 | 管理子系统 DMA / mailbox / reset | 影响安全边界和状态一致性 | 需要冻结 firewall 白名单、可访问 buffer 和审计字段 |
 | runtime image signature-only 白名单 | 影响产品 SKU 与 verifier 策略 | 需要冻结 image_type/lifecycle/SKU/debug/release/rollback 条件 |
 | OOB MCU FMC 重刷恢复 ABI | 影响恢复、返修与安全启动闭环 | 需要冻结 OOB secure boot、QSPI ownership、NOR 写保护、恢复授权 capsule、状态/审计记录和掉电保护 |
+| OSR eHSM 代码差异清单 | 直接影响 eHSM adapter、mailbox driver、image packager、provisioning tool 和测试向量 | 需要逐项冻结 command ID、req/rsp 字段、错误码、key ID、OTP/control bit、tool CLI 和 golden vector |
+| eHSM4.0 ROM Patch 字段 | 影响 ROM 实际执行指令、OTP 空间、制造灌装、USER 锁定和证明/审计 | 需要冻结 Patch_en/Patch_addr/Patch_data offset、enable 编码、烧录权限、验收脚本和报告策略 |
 
 ---
 

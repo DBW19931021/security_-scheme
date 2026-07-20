@@ -1,0 +1,10 @@
+#ifndef EHSM_FW_VERSION_H
+#define EHSM_FW_VERSION_H
+
+#define EHSM_FW_VER_MAJOR 2
+#define EHSM_FW_VER_MINOR 3
+#define EHSM_FW_VER_PATCH 2
+
+#define EHSM_FW_VER_PRE_RELEASE ""
+
+#endif // EHSM_FW_VERSION_H

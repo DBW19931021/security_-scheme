@@ -1,6 +1,6 @@
 # NGU800 安全方案 Code Rules（强化版 V1.0）
 
-状态：当前阶段代码约束文件（已纳入 `SRC-005 管理子系统方案` 和 `SRC-008 当前收敛安全软件方案 2.0` 增量输入）
+状态：当前阶段代码约束文件（已纳入 `SRC-005 管理子系统方案`、`SRC-008 当前收敛安全软件方案 2.0`、`SRC-009 OSR eHSM 软件代码包 4019` 和 `SRC-010 eHSM4.0 ROM Patch 方案` 增量输入）
 适用范围：BootROM / SEC1 / SEC2 / eHSM 适配层 / Mailbox Driver / Host 代理层 / Provisioning Tool
 目的：将 `01_constraints.md`、`02_baseline.md`、`10_full_design.md` 的设计结论转成工程开发阶段必须遵守的规则；`04_impl_design` 仅作为已同步编辑分片引用
 
@@ -136,6 +136,10 @@
 | R-FW-018 | MUST NOT | GSP / Runtime Update | 不得把 GSP/PM/RAS/Codec 等 Host 下发固件设计成片上 Flash A/B recovery 分区；失败后应由 Host 重新下发并重新走 eHSM verify/release | SRC-008 / CR-0013 | 10_full_design 3.9 / 3.14.2 | 扩大 Flash recovery 范围并影响其他团队边界 |
 | R-FW-019 | MUST | Key Rotation | 密钥 slot / key epoch 轮换不得绑定 FMC_A/B 或 inactive slot；new key 先进入 pending，必须通过新策略包验证、BootROM/eHSM 下一次启动验证和 OOB 可恢复性确认后才能 active，old key 只能先 deprecated | SRC-008 / CR-0013 / C-EHSM-01 | 10_full_design 3.14.4 / 10.3.18.1 | key 轮换导致单 FMC 不可恢复或旧 key 过早撤销 |
 | R-FW-020 | MUST NOT | OOB MCU / Recovery Tool | OOB MCU 刷写 NOR Flash 成功不得被解释为 FMC 可执行；每次重刷后的 FMC 都必须在下一次启动中由 BootROM + eHSM 重新 verify/decrypt/rollback/revoke/manifest policy 裁决 | SRC-008 / CR-0013 / C-UPDATE-02 | 10_full_design 7 / 8.13 / 10.3.18.1 | OOB 刷写路径变成绕过 SoC secure boot 的后门 |
+| R-FW-021 | MUST | eHSM Adapter / Mailbox Driver / Verify Flow | eHSM 已提供服务的 command ID、req/rsp 字段、错误模型和调用顺序必须以 `SRC-009` 中 OSR BL/FW/Host API 代码为实现事实源；不得发明并列 eHSM ABI | C-SRC-02 / C-EHSM-02 | ehsm_source_conformance_matrix / mailbox_if | 代码无法映射到真实 eHSM 服务，后续联调返工 |
+| R-FW-022 | MUST | BootROM / SEC Verify Flow / Image Packager | SEC1 early verify、SEC2/runtime verify、upgrade、OTP/key/counter/debug/lifecycle 工具必须逐项对齐 OSR `bl_verify_image`、`soc_verify`、`fw_upgrade`、OTP read/write、debug auth、counter 等真实服务能力 | C-EHSM-02 | 10_full_design / mailbox_if / manufacturing_provisioning | 方案调用不存在或语义不同的 eHSM 服务 |
+| R-FW-023 | MUST NOT | BootROM / SEC / Host / Runtime FW | 不得把 eHSM4.0 ROM Patch 当作 Host、SEC 或 runtime FW 可写的运行期热补丁机制；patch 只能按 OTP + 硬件 BOOT 机制建模 | C-EHSM-03 | efuse_key_fw_header_design / manufacturing_provisioning | ROM patch 变成运行期安全旁路 |
+| R-FW-024 | MUST | Test / CI / Reviewer | eHSM source-conformance review 必须覆盖 OSR 软件包版本、mailbox 结构、工具版本、golden/tamper vector 和与 `10_full_design.md` / `04_impl_design` 的差异清单 | C-SRC-02 / C-EHSM-02 | 06_traceability / ehsm_source_conformance_matrix | 文档声称适配但测试未验证真实代码 |
 
 ---
 
@@ -163,6 +167,7 @@
 | R-MFG-005 | SHOULD | Provisioning Tool | 对写入后的 OTP 状态做读回校验或等价校验 | C-MFG-01 | manufacturing_provisioning | 灌装不可验证 |
 | R-MFG-006 | MUST | MANU→USER 流程 | USER freeze 必须锁定 SEC1/SEC2 decrypt key / FW_KEK、debug、anti-rollback，并完成 test trust cleanup | C-MFG-01 / C-BOOT-05 | manufacturing_provisioning | 量产冻结不完整 |
 | R-MFG-007 | MUST NOT | RMA Tool | RMA 不得 long-open debug，不得绕过 challenge/auth，不得长期保留 SEC1/SEC2 decrypt bypass | C-MFG-01 / C-DEBUG-02 | manufacturing_provisioning | 返修后门残留 |
+| R-MFG-008 | MUST | Provisioning Tool / OTP Tool / Audit | 若启用 eHSM ROM Patch，Patch_en/Patch_addr/Patch_data 的写入、锁定、验收和审计必须走制造受控流程；USER 态不得保留普通软件可写 patch 路径 | C-EHSM-03 | manufacturing_provisioning / efuse_key_fw_header_design | Patch 可被篡改为 ROM 绕过路径 |
 
 ---
 
@@ -196,6 +201,9 @@
 | R-DOC-003 | MUST | Design Maintainer / Codex | 修改 `04_impl_design` 中字段、结构、状态机、命令、错误码、manufacturing/SPDM 细节时，必须同步到 `10_full_design.md` 第 10 章 | CR-0005 | 10_full_design 第 10 章 | 主详设不能指导代码落地 |
 | R-DOC-004 | MUST | Design Maintainer / Codex | 若 `10_full_design.md` 与 `04_impl_design` 分片冲突，必须按 accepted CR、decision_log、official TRM、`10_full_design.md` 的优先级修正分片 | CR-0005 | decision_log DEC-0015 | 分片反向污染主设计 |
 | R-DOC-005 | MUST | Security Component / Build / Test / Tool | 安全组件使用 `components/security`、`include/security` 和功能模块命名；项目自研文件与符号不得恢复芯片前缀，也不得增加旧 API compatibility alias 或 forwarding header | CR-0015 / DEC-0020 | component development principles / rename-security-module OpenSpec | 组件重新耦合芯片代号，形成双命名和长期兼容负担 |
+| R-DOC-006 | MUST | Design Maintainer / Codex / Reviewer | 任意 eHSM 相关详设、实现分片、代码或测试更新前，必须检查 `SRC-009` OSR 软件代码包和 `inputs_manifest.md` 的 source precedence，并更新 source-conformance 差异记录 | C-SRC-02 / C-EHSM-02 | inputs_manifest / 10_full_design / ehsm_source_conformance_matrix | 方案继续脱离真实 OSR 代码 |
+| R-DOC-007 | MUST | Design Maintainer / Codex / Reviewer | eHSM4.0 ROM Patch 只能按 `SRC-010` 的 OTP + hardware BOOT + CPU/IROM 指令替换机制描述；字段级 offset、锁定策略和验收脚本未冻结前必须保持 `[TBD]` | C-EHSM-03 | efuse_key_fw_header_design / manufacturing_provisioning / spdm_report | 误冻结字段或把 patch 设计成运行期可写入口 |
+| R-DOC-008 | MUST | Codex / Developer / Reviewer / Build Owner | 修改 vendor 提供的 `ehsm_bootrom/**`、`ehsm_firmware/**` 或 Wing 工具链、工具链动态库/软链接/权限/环境变量前，必须先明确提醒用户，说明变更原因、具体改动点、影响范围、回退方式和验证计划；变更完成后必须记录原因、影响和验证结果 | C-SRC-03 / CR-0019 | FSP OpenSpec / vendor change-control principles / build documentation | 静默修改 vendor 代码或工具链导致 source-conformance 失效、构建不可复现或问题归因困难 |
 
 ---
 
@@ -203,14 +211,14 @@
 
 首批实现必须优先满足：
 
-1. `R-DOC-001 ~ R-DOC-005`
+1. `R-DOC-001 ~ R-DOC-008`
 2. `R-BOOT-001 ~ R-BOOT-006`
 3. `R-IF-001 ~ R-IF-009`
 4. `R-HOST-001 ~ R-HOST-005`
 5. `R-LCS-001 ~ R-LCS-004`
 6. `R-BOARD-001 ~ R-BOARD-008`
-7. `R-FW-001 ~ R-FW-020`
-8. `R-MFG-001 ~ R-MFG-007`
+7. `R-FW-001 ~ R-FW-024`
+8. `R-MFG-001 ~ R-MFG-008`
 
 理由：
 这些规则直接决定：
