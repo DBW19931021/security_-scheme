@@ -1,4 +1,0 @@
-#ifndef MEBDTLS_X509_PARSER
-#define MEBDTLS_X509_PARSER
-
-#endif
