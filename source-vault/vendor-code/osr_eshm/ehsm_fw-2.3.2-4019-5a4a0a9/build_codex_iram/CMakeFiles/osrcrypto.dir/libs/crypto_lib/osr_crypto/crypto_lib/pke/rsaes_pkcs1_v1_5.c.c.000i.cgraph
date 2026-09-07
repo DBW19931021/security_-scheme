@@ -1,0 +1,783 @@
+Trivially needed symbols: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 eme_pkcs1_v1_5_decode/16 eme_pkcs1_v1_5_encode/15
+
+
+Initial Symbol table:
+
+memset_/24 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+RSA_CRTModExp_U8/23 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+pke_modexp_U8/22 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_encode_gen_ps/14 eme_pkcs1_v1_5_encode_gen_ps/14 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_decode/16 eme_pkcs1_v1_5_encode/15 eme_pkcs1_v1_5_encode/15 
+  Calls: 
+rsa_es_pkcs1_v1_5_crt_dec/19 (rsa_es_pkcs1_v1_5_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/24 eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/23 GET_WORD_LEN/10 
+rsa_es_pkcs1_v1_5_dec/18 (rsa_es_pkcs1_v1_5_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdd5af9e990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 pke_modexp_U8/22 rsa_es_pkcs1_v1_5_param_check/13 
+rsa_es_pkcs1_v1_5_enc/17 (rsa_es_pkcs1_v1_5_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdd5af9e880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/22 eme_pkcs1_v1_5_encode/15 GET_BYTE_LEN/11 rsa_es_pkcs1_v1_5_param_check/13 
+eme_pkcs1_v1_5_decode/16 (eme_pkcs1_v1_5_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdd5af9e770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 
+  Calls: memcpy_/20 
+eme_pkcs1_v1_5_encode/15 (eme_pkcs1_v1_5_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdd5af9e660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_enc/17 
+  Calls: memcpy_/20 eme_pkcs1_v1_5_encode_gen_ps/14 memcpy_/20 
+eme_pkcs1_v1_5_encode_gen_ps/14 (eme_pkcs1_v1_5_encode_gen_ps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdd5af9e660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: eme_pkcs1_v1_5_encode/15 
+  Calls: get_rand/21 get_rand/21 
+rsa_es_pkcs1_v1_5_param_check/13 (rsa_es_pkcs1_v1_5_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdd5af9e110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: GET_BYTE_LEN/11 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdd5af9e880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_param_check/13 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memset_/24 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+RSA_CRTModExp_U8/23 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+pke_modexp_U8/22 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_encode_gen_ps/14 eme_pkcs1_v1_5_encode_gen_ps/14 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_decode/16 eme_pkcs1_v1_5_encode/15 eme_pkcs1_v1_5_encode/15 
+  Calls: 
+rsa_es_pkcs1_v1_5_crt_dec/19 (rsa_es_pkcs1_v1_5_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/24 eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/23 GET_WORD_LEN/10 
+rsa_es_pkcs1_v1_5_dec/18 (rsa_es_pkcs1_v1_5_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 pke_modexp_U8/22 rsa_es_pkcs1_v1_5_param_check/13 
+rsa_es_pkcs1_v1_5_enc/17 (rsa_es_pkcs1_v1_5_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/22 eme_pkcs1_v1_5_encode/15 GET_BYTE_LEN/11 rsa_es_pkcs1_v1_5_param_check/13 
+eme_pkcs1_v1_5_decode/16 (eme_pkcs1_v1_5_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 
+  Calls: memcpy_/20 
+eme_pkcs1_v1_5_encode/15 (eme_pkcs1_v1_5_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_enc/17 
+  Calls: memcpy_/20 eme_pkcs1_v1_5_encode_gen_ps/14 memcpy_/20 
+eme_pkcs1_v1_5_encode_gen_ps/14 (eme_pkcs1_v1_5_encode_gen_ps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: eme_pkcs1_v1_5_encode/15 
+  Calls: get_rand/21 get_rand/21 
+rsa_es_pkcs1_v1_5_param_check/13 (rsa_es_pkcs1_v1_5_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: GET_BYTE_LEN/11 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_param_check/13 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+
+
+Initial Symbol table:
+
+memset_/24 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+RSA_CRTModExp_U8/23 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+pke_modexp_U8/22 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_encode_gen_ps/14 eme_pkcs1_v1_5_encode_gen_ps/14 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_decode/16 eme_pkcs1_v1_5_encode/15 eme_pkcs1_v1_5_encode/15 
+  Calls: 
+rsa_es_pkcs1_v1_5_crt_dec/19 (rsa_es_pkcs1_v1_5_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/24 eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/23 GET_WORD_LEN/10 
+rsa_es_pkcs1_v1_5_dec/18 (rsa_es_pkcs1_v1_5_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 pke_modexp_U8/22 rsa_es_pkcs1_v1_5_param_check/13 
+rsa_es_pkcs1_v1_5_enc/17 (rsa_es_pkcs1_v1_5_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/22 eme_pkcs1_v1_5_encode/15 GET_BYTE_LEN/11 rsa_es_pkcs1_v1_5_param_check/13 
+eme_pkcs1_v1_5_decode/16 (eme_pkcs1_v1_5_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 
+  Calls: memcpy_/20 
+eme_pkcs1_v1_5_encode/15 (eme_pkcs1_v1_5_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_enc/17 
+  Calls: memcpy_/20 eme_pkcs1_v1_5_encode_gen_ps/14 memcpy_/20 
+eme_pkcs1_v1_5_encode_gen_ps/14 (eme_pkcs1_v1_5_encode_gen_ps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: eme_pkcs1_v1_5_encode/15 
+  Calls: get_rand/21 get_rand/21 
+rsa_es_pkcs1_v1_5_param_check/13 (rsa_es_pkcs1_v1_5_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: GET_BYTE_LEN/11 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_param_check/13 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memset_/24 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+RSA_CRTModExp_U8/23 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+pke_modexp_U8/22 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_encode_gen_ps/14 eme_pkcs1_v1_5_encode_gen_ps/14 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_pkcs1_v1_5_decode/16 eme_pkcs1_v1_5_encode/15 eme_pkcs1_v1_5_encode/15 
+  Calls: 
+rsa_es_pkcs1_v1_5_crt_dec/19 (rsa_es_pkcs1_v1_5_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/24 eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/23 GET_WORD_LEN/10 
+rsa_es_pkcs1_v1_5_dec/18 (rsa_es_pkcs1_v1_5_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_pkcs1_v1_5_decode/16 GET_BYTE_LEN/11 pke_modexp_U8/22 rsa_es_pkcs1_v1_5_param_check/13 
+rsa_es_pkcs1_v1_5_enc/17 (rsa_es_pkcs1_v1_5_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/22 eme_pkcs1_v1_5_encode/15 GET_BYTE_LEN/11 rsa_es_pkcs1_v1_5_param_check/13 
+eme_pkcs1_v1_5_decode/16 (eme_pkcs1_v1_5_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 
+  Calls: memcpy_/20 
+eme_pkcs1_v1_5_encode/15 (eme_pkcs1_v1_5_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_enc/17 
+  Calls: memcpy_/20 eme_pkcs1_v1_5_encode_gen_ps/14 memcpy_/20 
+eme_pkcs1_v1_5_encode_gen_ps/14 (eme_pkcs1_v1_5_encode_gen_ps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: eme_pkcs1_v1_5_encode/15 
+  Calls: get_rand/21 get_rand/21 
+rsa_es_pkcs1_v1_5_param_check/13 (rsa_es_pkcs1_v1_5_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: GET_BYTE_LEN/11 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 rsa_es_pkcs1_v1_5_dec/18 rsa_es_pkcs1_v1_5_param_check/13 rsa_es_pkcs1_v1_5_enc/17 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+memset_/24 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+RSA_CRTModExp_U8/23 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_modexp_U8/22 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: rsa_es_pkcs1_v1_5_dec/18 (512926472 (estimated locally),0.48 per call) rsa_es_pkcs1_v1_5_enc/17 (169265735 (estimated locally),0.16 per call) 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_pkcs1_v1_5_encode_gen_ps/14 (946076676 (estimated locally),2.77 per call) eme_pkcs1_v1_5_encode_gen_ps/14 (24246958 (estimated locally),0.07 per call) 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_pkcs1_v1_5_decode/16 (74260390 (estimated locally),0.09 per call) eme_pkcs1_v1_5_encode/15 (107407960 (estimated locally),0.31 per call) eme_pkcs1_v1_5_encode/15 (54870309 (estimated locally),0.16 per call) 
+  Calls: 
+rsa_es_pkcs1_v1_5_crt_dec/19 (rsa_es_pkcs1_v1_5_crt_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/24 (1073741824 (estimated locally),1.00 per call) eme_pkcs1_v1_5_decode/16 (354334800 (estimated locally),0.33 per call) RSA_CRTModExp_U8/23 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_pkcs1_v1_5_dec/18 (rsa_es_pkcs1_v1_5_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: eme_pkcs1_v1_5_decode/16 (169265735 (estimated locally),0.16 per call) pke_modexp_U8/22 (512926472 (estimated locally),0.48 per call) rsa_es_pkcs1_v1_5_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_pkcs1_v1_5_enc/17 (rsa_es_pkcs1_v1_5_enc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: pke_modexp_U8/22 (169265735 (estimated locally),0.16 per call) eme_pkcs1_v1_5_encode/15 (512926472 (estimated locally),0.48 per call) rsa_es_pkcs1_v1_5_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+eme_pkcs1_v1_5_decode/16 (eme_pkcs1_v1_5_decode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:782175099 (estimated locally) body
+  Called by: rsa_es_pkcs1_v1_5_crt_dec/19 (354334800 (estimated locally),0.33 per call) rsa_es_pkcs1_v1_5_dec/18 (169265735 (estimated locally),0.16 per call) 
+  Calls: memcpy_/20 (74260390 (estimated locally),0.09 per call) 
+eme_pkcs1_v1_5_encode/15 (eme_pkcs1_v1_5_encode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:341605962 (estimated locally) body
+  Called by: rsa_es_pkcs1_v1_5_enc/17 (512926472 (estimated locally),0.48 per call) 
+  Calls: memcpy_/20 (107407960 (estimated locally),0.31 per call) eme_pkcs1_v1_5_encode_gen_ps/14 (inlined) (24246958 (estimated locally),0.07 per call) memcpy_/20 (54870309 (estimated locally),0.16 per call) 
+eme_pkcs1_v1_5_encode_gen_ps/14 (eme_pkcs1_v1_5_encode_gen_ps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function eme_pkcs1_v1_5_encode_gen_ps/14 is inline copy in eme_pkcs1_v1_5_encode/15
+  Availability: local
+  Function flags: count:24246958 (estimated locally) body local
+  Called by: eme_pkcs1_v1_5_encode/15 (inlined) (24246958 (estimated locally),0.07 per call) 
+  Calls: get_rand/21 (946076676 (estimated locally),2.77 per call) get_rand/21 (24246958 (estimated locally),0.07 per call) 
+rsa_es_pkcs1_v1_5_param_check/13 (rsa_es_pkcs1_v1_5_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local nonfreeing_fn
+  Called by: rsa_es_pkcs1_v1_5_dec/18 (1073741824 (estimated locally),1.00 per call) rsa_es_pkcs1_v1_5_enc/17 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+memset_/24 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+RSA_CRTModExp_U8/23 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modexp_U8/22 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+rsa_es_pkcs1_v1_5_crt_dec/19 (rsa_es_pkcs1_v1_5_crt_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_pkcs1_v1_5_crt_dec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_pkcs1_v1_5_dec/18 (rsa_es_pkcs1_v1_5_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_pkcs1_v1_5_dec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_pkcs1_v1_5_enc/17 (rsa_es_pkcs1_v1_5_enc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_pkcs1_v1_5_enc (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+eme_pkcs1_v1_5_decode/16 (eme_pkcs1_v1_5_decode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.eme_pkcs1_v1_5_decode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:782175099 (estimated locally)
+  Called by: 
+  Calls: 
+eme_pkcs1_v1_5_encode/15 (eme_pkcs1_v1_5_encode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.eme_pkcs1_v1_5_encode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:341605962 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_pkcs1_v1_5_param_check/13 (rsa_es_pkcs1_v1_5_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.rsa_es_pkcs1_v1_5_param_check (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 

@@ -1,0 +1,3055 @@
+Trivially needed symbols: hash_dma_node_steps/45 hash_dma/44 hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_init/41 hash_dma_init_with_iv_and_updated_length/40 hash_node_steps/39 hash/38 hash_final/37 hash_update/36 hash_total_byte_len_update/35 hash_calc_rand_len_msg/34 hash_calc_blocks/33 hash_init_with_iv_and_updated_length/32 hash_init/31 hash_total_bytelen_2_bitlen/28 hash_total_byte_len_add_uint32/26 hash_set_IV/25 hash_get_digest_word_len/23 hash_get_iterator_word_len/22 hash_get_block_word_len/21 check_hash_alg/20 SHA512_256_IV/19 SHA512_224_IV/18 SHA224_IV/17 SHA1_IV/16 SHA512_IV/15 SHA384_IV/14 SHA256_IV/13 MD5_IV/12 SM3_IV/11
+
+
+Initial Symbol table:
+
+hash_set_dma_mode/67 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_set_dma_output_len/66 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 
+  Calls: 
+hash_clear_risr/65 (hash_clear_risr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_disable_dma_interruption/64 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_dma_operate/63 (hash_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: 
+hash_set_msg_total_bit_len/62 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_update_config/61 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_alg/60 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_disable_cpu_interruption/59 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_set_endian_uint32/58 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_hash_mode/57 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_cpu_mode/56 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_check_whether_sha3_alg/55 (hash_check_whether_sha3_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_last_block/54 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 hash_update/36 hash_calc_rand_len_msg/34 
+  Calls: 
+hash_start/53 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_start_calculate/29 
+  Calls: 
+hash_get_iterator/52 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+hash_wait_till_done/51 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_input_msg_u8/50 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_set_msg_len/49 (hash_set_msg_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+memcpy_/48 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_update/36 hash_update/36 hash_update/36 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+memset_/47 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_init/31 
+  Calls: 
+hash_set_iterator/46 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_calc_rand_len_msg/34 hash_calc_blocks/33 hash_set_IV/25 
+  Calls: 
+hash_dma_node_steps/45 (hash_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_init/41 
+hash_dma/44 (hash_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57e0000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_init/41 
+hash_dma_final/43 (hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bfee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: memset_/47 hash_dma_operate/63 hash_set_msg_total_bit_len/62 CAST2UINT32/6 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_set_dma_output_len/66 hash_get_digest_word_len/23 hash_set_last_block/54 hash_addr64_add_uint32/27 hash_dma_operate/63 hash_set_msg_len/49 CAST2UINT32/6 hash_dma_update_recover_register/30 
+hash_dma_update_blocks/42 (hash_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bfdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 
+  Calls: hash_get_iterator/52 hash_dma_operate/63 hash_set_msg_len/49 hash_dma_update_recover_register/30 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 CAST2UINT32/6 
+hash_dma_init/41 (hash_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bfcc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: hash_dma_init_with_iv_and_updated_length/40 
+hash_dma_init_with_iv_and_updated_length/40 (hash_dma_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bfbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init/41 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_get_iterator_word_len/22 memset_/47 CAST2UINT32/6 hash_get_block_word_len/21 check_hash_alg/20 
+hash_node_steps/39 (hash_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bfaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash/38 (hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash_final/37 (hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memset_/47 hash_get_iterator/52 CAST2UINT32/6 hash_calc_rand_len_msg/34 hash_set_msg_total_bit_len/62 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_update_config/61 hash_set_alg/60 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_update/36 (hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_total_byte_len_update/35 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_total_byte_len_update/35 (hash_total_byte_len_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 
+  Calls: hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 
+hash_calc_rand_len_msg/34 (hash_calc_rand_len_msg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_final/37 
+  Calls: hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_last_block/54 hash_set_iterator/46 
+hash_calc_blocks/33 (hash_calc_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 hash_update/36 
+  Calls: hash_get_iterator/52 hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_msg_len/49 hash_set_iterator/46 
+hash_init_with_iv_and_updated_length/32 (hash_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_init/31 CAST2UINT32/6 hash_get_block_word_len/21 
+hash_init/31 (hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 hash_init_with_iv_and_updated_length/32 
+  Calls: hash_get_digest_word_len/23 hash_get_iterator_word_len/22 hash_get_block_word_len/21 memset_/47 check_hash_alg/20 
+hash_dma_update_recover_register/30 (hash_dma_update_recover_register)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb2f57bfdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: hash_set_iterator/46 hash_set_IV/25 hash_set_dma_mode/67 hash_set_dma_output_len/66 hash_clear_risr/65 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_dma_interruption/64 hash_set_endian_uint32/58 hash_set_hash_mode/57 
+hash_start_calculate/29 (hash_start_calculate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb2f57bf440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: hash_start/53 hash_set_IV/25 
+hash_total_bytelen_2_bitlen/28 (hash_total_bytelen_2_bitlen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57bf110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_addr64_add_uint32/27 (hash_addr64_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb2f57bfee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 
+  Calls: 
+hash_total_byte_len_add_uint32/26 (hash_total_byte_len_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_IV/25 (hash_set_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_update_recover_register/30 hash_start_calculate/29 
+  Calls: hash_set_iterator/46 hash_get_IV/24 
+hash_get_IV/24 (hash_get_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb2f5799bb0
+  References: SM3_IV/11 (addr) MD5_IV/12 (addr) SHA256_IV/13 (addr) SHA384_IV/14 (addr) SHA1_IV/16 (addr) SHA512_IV/15 (addr) SHA224_IV/17 (addr) SHA512_224_IV/18 (addr) SHA512_256_IV/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: hash_set_IV/25 
+  Calls: 
+hash_get_digest_word_len/23 (hash_get_digest_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_init/31 
+  Calls: 
+hash_get_iterator_word_len/22 (hash_get_iterator_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+hash_get_block_word_len/21 (hash_get_block_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init_with_iv_and_updated_length/32 hash_init/31 
+  Calls: 
+check_hash_alg/20 (check_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+SHA512_256_IV/19 (SHA512_256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f5799550
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_224_IV/18 (SHA512_224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4e80
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA224_IV/17 (SHA224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4e00
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA1_IV/16 (SHA1_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4d80
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_IV/15 (SHA512_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4d00
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA384_IV/14 (SHA384_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4c80
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA256_IV/13 (SHA256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4c00
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+MD5_IV/12 (MD5_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4b80
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SM3_IV/11 (SM3_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb2f57a4b00
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb2f57bf330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_update_blocks/42 hash_dma_init_with_iv_and_updated_length/40 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_final/37 hash_total_byte_len_update/35 hash_init_with_iv_and_updated_length/32 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+hash_set_dma_mode/67 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_set_dma_output_len/66 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 
+  Calls: 
+hash_clear_risr/65 (hash_clear_risr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_disable_dma_interruption/64 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_dma_operate/63 (hash_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: 
+hash_set_msg_total_bit_len/62 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_update_config/61 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_alg/60 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_disable_cpu_interruption/59 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_set_endian_uint32/58 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_hash_mode/57 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_cpu_mode/56 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_check_whether_sha3_alg/55 (hash_check_whether_sha3_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_last_block/54 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 hash_update/36 hash_calc_rand_len_msg/34 
+  Calls: 
+hash_start/53 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_start_calculate/29 
+  Calls: 
+hash_get_iterator/52 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+hash_wait_till_done/51 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_input_msg_u8/50 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_set_msg_len/49 (hash_set_msg_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+memcpy_/48 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_update/36 hash_update/36 hash_update/36 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+memset_/47 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_init/31 
+  Calls: 
+hash_set_iterator/46 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_calc_rand_len_msg/34 hash_calc_blocks/33 hash_set_IV/25 
+  Calls: 
+hash_dma_node_steps/45 (hash_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_init/41 
+hash_dma/44 (hash_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_init/41 
+hash_dma_final/43 (hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: memset_/47 hash_dma_operate/63 hash_set_msg_total_bit_len/62 CAST2UINT32/6 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_set_dma_output_len/66 hash_get_digest_word_len/23 hash_set_last_block/54 hash_addr64_add_uint32/27 hash_dma_operate/63 hash_set_msg_len/49 CAST2UINT32/6 hash_dma_update_recover_register/30 
+hash_dma_update_blocks/42 (hash_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 
+  Calls: hash_get_iterator/52 hash_dma_operate/63 hash_set_msg_len/49 hash_dma_update_recover_register/30 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 CAST2UINT32/6 
+hash_dma_init/41 (hash_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: hash_dma_init_with_iv_and_updated_length/40 
+hash_dma_init_with_iv_and_updated_length/40 (hash_dma_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init/41 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_get_iterator_word_len/22 memset_/47 CAST2UINT32/6 hash_get_block_word_len/21 check_hash_alg/20 
+hash_node_steps/39 (hash_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash/38 (hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash_final/37 (hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memset_/47 hash_get_iterator/52 CAST2UINT32/6 hash_calc_rand_len_msg/34 hash_set_msg_total_bit_len/62 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_update_config/61 hash_set_alg/60 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_update/36 (hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_total_byte_len_update/35 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_total_byte_len_update/35 (hash_total_byte_len_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 
+  Calls: hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 
+hash_calc_rand_len_msg/34 (hash_calc_rand_len_msg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_final/37 
+  Calls: hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_last_block/54 hash_set_iterator/46 
+hash_calc_blocks/33 (hash_calc_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 hash_update/36 
+  Calls: hash_get_iterator/52 hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_msg_len/49 hash_set_iterator/46 
+hash_init_with_iv_and_updated_length/32 (hash_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_init/31 CAST2UINT32/6 hash_get_block_word_len/21 
+hash_init/31 (hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 hash_init_with_iv_and_updated_length/32 
+  Calls: hash_get_digest_word_len/23 hash_get_iterator_word_len/22 hash_get_block_word_len/21 memset_/47 check_hash_alg/20 
+hash_dma_update_recover_register/30 (hash_dma_update_recover_register)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: hash_set_iterator/46 hash_set_IV/25 hash_set_dma_mode/67 hash_set_dma_output_len/66 hash_clear_risr/65 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_dma_interruption/64 hash_set_endian_uint32/58 hash_set_hash_mode/57 
+hash_start_calculate/29 (hash_start_calculate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: hash_start/53 hash_set_IV/25 
+hash_total_bytelen_2_bitlen/28 (hash_total_bytelen_2_bitlen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_addr64_add_uint32/27 (hash_addr64_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 
+  Calls: 
+hash_total_byte_len_add_uint32/26 (hash_total_byte_len_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_IV/25 (hash_set_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_update_recover_register/30 hash_start_calculate/29 
+  Calls: hash_set_iterator/46 hash_get_IV/24 
+hash_get_IV/24 (hash_get_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: SM3_IV/11 (addr) MD5_IV/12 (addr) SHA256_IV/13 (addr) SHA384_IV/14 (addr) SHA1_IV/16 (addr) SHA512_IV/15 (addr) SHA224_IV/17 (addr) SHA512_224_IV/18 (addr) SHA512_256_IV/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: hash_set_IV/25 
+  Calls: 
+hash_get_digest_word_len/23 (hash_get_digest_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_init/31 
+  Calls: 
+hash_get_iterator_word_len/22 (hash_get_iterator_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+hash_get_block_word_len/21 (hash_get_block_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init_with_iv_and_updated_length/32 hash_init/31 
+  Calls: 
+check_hash_alg/20 (check_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+SHA512_256_IV/19 (SHA512_256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_224_IV/18 (SHA512_224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA224_IV/17 (SHA224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA1_IV/16 (SHA1_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_IV/15 (SHA512_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA384_IV/14 (SHA384_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA256_IV/13 (SHA256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+MD5_IV/12 (MD5_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SM3_IV/11 (SM3_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_update_blocks/42 hash_dma_init_with_iv_and_updated_length/40 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_final/37 hash_total_byte_len_update/35 hash_init_with_iv_and_updated_length/32 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+
+
+Initial Symbol table:
+
+hash_set_dma_mode/67 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_set_dma_output_len/66 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 
+  Calls: 
+hash_clear_risr/65 (hash_clear_risr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_disable_dma_interruption/64 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_dma_operate/63 (hash_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: 
+hash_set_msg_total_bit_len/62 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_update_config/61 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_alg/60 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_disable_cpu_interruption/59 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_set_endian_uint32/58 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_hash_mode/57 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_cpu_mode/56 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_check_whether_sha3_alg/55 (hash_check_whether_sha3_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_last_block/54 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 hash_update/36 hash_calc_rand_len_msg/34 
+  Calls: 
+hash_start/53 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_start_calculate/29 
+  Calls: 
+hash_get_iterator/52 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+hash_wait_till_done/51 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_input_msg_u8/50 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_set_msg_len/49 (hash_set_msg_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+memcpy_/48 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_update/36 hash_update/36 hash_update/36 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+memset_/47 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_init/31 
+  Calls: 
+hash_set_iterator/46 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_calc_rand_len_msg/34 hash_calc_blocks/33 hash_set_IV/25 
+  Calls: 
+hash_dma_node_steps/45 (hash_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_init/41 
+hash_dma/44 (hash_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_init/41 
+hash_dma_final/43 (hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: memset_/47 hash_dma_operate/63 hash_set_msg_total_bit_len/62 CAST2UINT32/6 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_set_dma_output_len/66 hash_get_digest_word_len/23 hash_set_last_block/54 hash_addr64_add_uint32/27 hash_dma_operate/63 hash_set_msg_len/49 CAST2UINT32/6 hash_dma_update_recover_register/30 
+hash_dma_update_blocks/42 (hash_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 
+  Calls: hash_get_iterator/52 hash_dma_operate/63 hash_set_msg_len/49 hash_dma_update_recover_register/30 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 CAST2UINT32/6 
+hash_dma_init/41 (hash_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: hash_dma_init_with_iv_and_updated_length/40 
+hash_dma_init_with_iv_and_updated_length/40 (hash_dma_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init/41 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_get_iterator_word_len/22 memset_/47 CAST2UINT32/6 hash_get_block_word_len/21 check_hash_alg/20 
+hash_node_steps/39 (hash_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash/38 (hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash_final/37 (hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memset_/47 hash_get_iterator/52 CAST2UINT32/6 hash_calc_rand_len_msg/34 hash_set_msg_total_bit_len/62 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_update_config/61 hash_set_alg/60 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_update/36 (hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_total_byte_len_update/35 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_total_byte_len_update/35 (hash_total_byte_len_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 
+  Calls: hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 
+hash_calc_rand_len_msg/34 (hash_calc_rand_len_msg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_final/37 
+  Calls: hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_last_block/54 hash_set_iterator/46 
+hash_calc_blocks/33 (hash_calc_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 hash_update/36 
+  Calls: hash_get_iterator/52 hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_msg_len/49 hash_set_iterator/46 
+hash_init_with_iv_and_updated_length/32 (hash_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_init/31 CAST2UINT32/6 hash_get_block_word_len/21 
+hash_init/31 (hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 hash_init_with_iv_and_updated_length/32 
+  Calls: hash_get_digest_word_len/23 hash_get_iterator_word_len/22 hash_get_block_word_len/21 memset_/47 check_hash_alg/20 
+hash_dma_update_recover_register/30 (hash_dma_update_recover_register)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: hash_set_iterator/46 hash_set_IV/25 hash_set_dma_mode/67 hash_set_dma_output_len/66 hash_clear_risr/65 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_dma_interruption/64 hash_set_endian_uint32/58 hash_set_hash_mode/57 
+hash_start_calculate/29 (hash_start_calculate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: hash_start/53 hash_set_IV/25 
+hash_total_bytelen_2_bitlen/28 (hash_total_bytelen_2_bitlen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_addr64_add_uint32/27 (hash_addr64_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 
+  Calls: 
+hash_total_byte_len_add_uint32/26 (hash_total_byte_len_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_IV/25 (hash_set_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_update_recover_register/30 hash_start_calculate/29 
+  Calls: hash_set_iterator/46 hash_get_IV/24 
+hash_get_IV/24 (hash_get_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: SM3_IV/11 (addr) MD5_IV/12 (addr) SHA256_IV/13 (addr) SHA384_IV/14 (addr) SHA1_IV/16 (addr) SHA512_IV/15 (addr) SHA224_IV/17 (addr) SHA512_224_IV/18 (addr) SHA512_256_IV/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: hash_set_IV/25 
+  Calls: 
+hash_get_digest_word_len/23 (hash_get_digest_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_init/31 
+  Calls: 
+hash_get_iterator_word_len/22 (hash_get_iterator_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+hash_get_block_word_len/21 (hash_get_block_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init_with_iv_and_updated_length/32 hash_init/31 
+  Calls: 
+check_hash_alg/20 (check_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+SHA512_256_IV/19 (SHA512_256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_224_IV/18 (SHA512_224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA224_IV/17 (SHA224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA1_IV/16 (SHA1_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_IV/15 (SHA512_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA384_IV/14 (SHA384_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA256_IV/13 (SHA256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+MD5_IV/12 (MD5_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SM3_IV/11 (SM3_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_update_blocks/42 hash_dma_init_with_iv_and_updated_length/40 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_final/37 hash_total_byte_len_update/35 hash_init_with_iv_and_updated_length/32 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+hash_set_dma_mode/67 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_set_dma_output_len/66 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 
+  Calls: 
+hash_clear_risr/65 (hash_clear_risr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_disable_dma_interruption/64 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 
+  Calls: 
+hash_dma_operate/63 (hash_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: 
+hash_set_msg_total_bit_len/62 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_update_config/61 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_alg/60 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_disable_cpu_interruption/59 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_set_endian_uint32/58 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_hash_mode/57 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_final/37 hash_update/36 
+  Calls: 
+hash_set_cpu_mode/56 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_final/37 hash_update/36 
+  Calls: 
+hash_check_whether_sha3_alg/55 (hash_check_whether_sha3_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_last_block/54 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_update_recover_register/30 hash_update/36 hash_calc_rand_len_msg/34 
+  Calls: 
+hash_start/53 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_start_calculate/29 
+  Calls: 
+hash_get_iterator/52 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+hash_wait_till_done/51 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_input_msg_u8/50 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: 
+hash_set_msg_len/49 (hash_set_msg_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_final/37 hash_calc_blocks/33 
+  Calls: 
+memcpy_/48 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_update/36 hash_update/36 hash_update/36 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+memset_/47 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_final/43 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_init/31 
+  Calls: 
+hash_set_iterator/46 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 hash_calc_rand_len_msg/34 hash_calc_blocks/33 hash_set_IV/25 
+  Calls: 
+hash_dma_node_steps/45 (hash_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_init/41 
+hash_dma/44 (hash_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_dma_final/43 hash_dma_init/41 
+hash_dma_final/43 (hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: memset_/47 hash_dma_operate/63 hash_set_msg_total_bit_len/62 CAST2UINT32/6 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_set_dma_output_len/66 hash_get_digest_word_len/23 hash_set_last_block/54 hash_addr64_add_uint32/27 hash_dma_operate/63 hash_set_msg_len/49 CAST2UINT32/6 hash_dma_update_recover_register/30 
+hash_dma_update_blocks/42 (hash_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 
+  Calls: hash_get_iterator/52 hash_dma_operate/63 hash_set_msg_len/49 hash_dma_update_recover_register/30 hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 CAST2UINT32/6 
+hash_dma_init/41 (hash_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_node_steps/45 hash_dma/44 
+  Calls: hash_dma_init_with_iv_and_updated_length/40 
+hash_dma_init_with_iv_and_updated_length/40 (hash_dma_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init/41 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_get_iterator_word_len/22 memset_/47 CAST2UINT32/6 hash_get_block_word_len/21 check_hash_alg/20 
+hash_node_steps/39 (hash_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash/38 (hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_final/37 hash_update/36 hash_init/31 
+hash_final/37 (hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memset_/47 hash_get_iterator/52 CAST2UINT32/6 hash_calc_rand_len_msg/34 hash_set_msg_total_bit_len/62 hash_total_bytelen_2_bitlen/28 CAST2UINT32/6 hash_set_msg_len/49 hash_check_whether_sha3_alg/55 hash_update_config/61 hash_set_alg/60 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_update/36 (hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 
+  Calls: memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_calc_blocks/33 memcpy_/48 hash_total_byte_len_update/35 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_cpu_interruption/59 hash_set_endian_uint32/58 hash_set_hash_mode/57 hash_set_cpu_mode/56 
+hash_total_byte_len_update/35 (hash_total_byte_len_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 
+  Calls: hash_total_byte_len_add_uint32/26 CAST2UINT32/6 hash_check_whether_sha3_alg/55 
+hash_calc_rand_len_msg/34 (hash_calc_rand_len_msg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_final/37 
+  Calls: hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_last_block/54 hash_set_iterator/46 
+hash_calc_blocks/33 (hash_calc_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_update/36 hash_update/36 
+  Calls: hash_get_iterator/52 hash_wait_till_done/51 hash_input_msg_u8/50 hash_start_calculate/29 hash_set_msg_len/49 hash_set_iterator/46 
+hash_init_with_iv_and_updated_length/32 (hash_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/48 CAST2UINT32/6 hash_init/31 CAST2UINT32/6 hash_get_block_word_len/21 
+hash_init/31 (hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_node_steps/39 hash/38 hash_init_with_iv_and_updated_length/32 
+  Calls: hash_get_digest_word_len/23 hash_get_iterator_word_len/22 hash_get_block_word_len/21 memset_/47 check_hash_alg/20 
+hash_dma_update_recover_register/30 (hash_dma_update_recover_register)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 
+  Calls: hash_set_iterator/46 hash_set_IV/25 hash_set_dma_mode/67 hash_set_dma_output_len/66 hash_clear_risr/65 hash_update_config/61 hash_set_alg/60 hash_set_last_block/54 hash_disable_dma_interruption/64 hash_set_endian_uint32/58 hash_set_hash_mode/57 
+hash_start_calculate/29 (hash_start_calculate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_calc_rand_len_msg/34 hash_calc_blocks/33 
+  Calls: hash_start/53 hash_set_IV/25 
+hash_total_bytelen_2_bitlen/28 (hash_total_bytelen_2_bitlen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_final/37 
+  Calls: 
+hash_addr64_add_uint32/27 (hash_addr64_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 
+  Calls: 
+hash_total_byte_len_add_uint32/26 (hash_total_byte_len_add_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_update_blocks/42 hash_total_byte_len_update/35 
+  Calls: 
+hash_set_IV/25 (hash_set_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_update_recover_register/30 hash_start_calculate/29 
+  Calls: hash_set_iterator/46 hash_get_IV/24 
+hash_get_IV/24 (hash_get_IV)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: SM3_IV/11 (addr) MD5_IV/12 (addr) SHA256_IV/13 (addr) SHA384_IV/14 (addr) SHA1_IV/16 (addr) SHA512_IV/15 (addr) SHA224_IV/17 (addr) SHA512_224_IV/18 (addr) SHA512_256_IV/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: hash_set_IV/25 
+  Calls: 
+hash_get_digest_word_len/23 (hash_get_digest_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_init/31 
+  Calls: 
+hash_get_iterator_word_len/22 (hash_get_iterator_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+hash_get_block_word_len/21 (hash_get_block_word_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init_with_iv_and_updated_length/32 hash_init/31 
+  Calls: 
+check_hash_alg/20 (check_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_init_with_iv_and_updated_length/40 hash_init/31 
+  Calls: 
+SHA512_256_IV/19 (SHA512_256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_224_IV/18 (SHA512_224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA224_IV/17 (SHA224_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA1_IV/16 (SHA1_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA512_IV/15 (SHA512_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA384_IV/14 (SHA384_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SHA256_IV/13 (SHA256_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+MD5_IV/12 (MD5_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SM3_IV/11 (SM3_IV)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: hash_get_IV/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_final/43 hash_dma_update_blocks/42 hash_dma_update_blocks/42 hash_dma_init_with_iv_and_updated_length/40 hash_dma_init_with_iv_and_updated_length/40 hash_final/37 hash_final/37 hash_total_byte_len_update/35 hash_init_with_iv_and_updated_length/32 hash_init_with_iv_and_updated_length/32 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+hash_dma_final.part.0/99 (hash_dma_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: CSWTCH.12/71 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:567069898 (estimated locally) body local split_part
+  Called by: hash_dma_node_steps/45 (37330648 (estimated locally),0.16 per call) hash_dma/44 (169265735 (estimated locally),0.16 per call) hash_dma_final/43 (567069898 (estimated locally),0.53 per call) 
+  Calls: hash_dma_update_recover_register/30 (567069900 (estimated locally),1.00 per call) hash_set_msg_len/49 (283534951 (estimated locally),0.50 per call) hash_dma_operate/63 (283534951 (estimated locally),0.50 per call) hash_set_last_block/54 (400493118 (estimated locally),0.71 per call) hash_set_dma_output_len/66 (400493118 (estimated locally),0.71 per call) hash_check_whether_sha3_alg/55 (400493118 (estimated locally),0.71 per call) hash_set_msg_len/49 (200246558 (estimated locally),0.35 per call) hash_total_byte_len_add_uint32/26 (200246558 (estimated locally),0.35 per call) hash_total_bytelen_2_bitlen/28 (95657781 (estimated locally),0.17 per call) hash_set_msg_total_bit_len/62 (95657781 (estimated locally),0.17 per call) hash_dma_operate/63 (295904341 (estimated locally),0.52 per call) memset_/47 (97648432 (estimated locally),0.17 per call) 
+hash_dma_update_blocks.part.0/94 (hash_dma_update_blocks.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hash_dma_update_blocks.part.0/94 is inline copy in hash_dma_update_blocks/42
+  Availability: local
+  Function flags: count:119587995 (estimated locally) body local split_part
+  Called by: hash_dma_update_blocks/42 (inlined) (119587995 (estimated locally),0.11 per call) 
+  Calls: hash_check_whether_sha3_alg/55 (119587995 (estimated locally),0.11 per call) hash_total_byte_len_add_uint32/26 (59793998 (estimated locally),0.06 per call) hash_dma_update_recover_register/30 (98660096 (estimated locally),0.09 per call) hash_set_msg_len/49 (98660096 (estimated locally),0.09 per call) hash_dma_operate/63 (98660096 (estimated locally),0.09 per call) hash_get_iterator/52 (32557831 (estimated locally),0.03 per call) 
+hash_dma_init_with_iv_and_updated_length.part.0/91 (hash_dma_init_with_iv_and_updated_length.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: CSWTCH.8/69 (read) CSWTCH.10/70 (read) 
+  Referring: 
+  Function hash_dma_init_with_iv_and_updated_length.part.0/91 is inline copy in hash_dma_init_with_iv_and_updated_length/40
+  Availability: local
+  Function flags: count:567069898 (estimated locally) body local split_part
+  Called by: hash_dma_init_with_iv_and_updated_length/40 (inlined) (567069898 (estimated locally),0.53 per call) 
+  Calls: memset_/47 (176078040 (estimated locally),0.16 per call) memcpy_/48 (94148928 (estimated locally),0.09 per call) 
+hash_update.part.0/81 (hash_update.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hash_update.part.0/81 is inline copy in hash_update/36
+  Availability: local
+  Function flags: count:179524266 (estimated locally) body local split_part
+  Called by: hash_update/36 (inlined) (179524266 (estimated locally),0.17 per call) 
+  Calls: hash_set_cpu_mode/56 (179524266 (estimated locally),0.17 per call) hash_set_hash_mode/57 (179524266 (estimated locally),0.17 per call) hash_set_endian_uint32/58 (179524266 (estimated locally),0.17 per call) hash_disable_cpu_interruption/59 (179524266 (estimated locally),0.17 per call) hash_set_last_block/54 (179524266 (estimated locally),0.17 per call) hash_set_alg/60 (179524266 (estimated locally),0.17 per call) hash_update_config/61 (179524266 (estimated locally),0.17 per call) hash_total_byte_len_update/35 (179524266 (estimated locally),0.17 per call) memcpy_/48 (22440533 (estimated locally),0.02 per call) hash_calc_blocks/33 (22440533 (estimated locally),0.02 per call) memcpy_/48 (22440533 (estimated locally),0.02 per call) hash_calc_blocks/33 (25918816 (estimated locally),0.02 per call) memcpy_/48 (12959408 (estimated locally),0.01 per call) 
+hash_init.part.0/76 (hash_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: CSWTCH.8/69 (read) CSWTCH.10/70 (read) CSWTCH.12/71 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:567069898 (estimated locally) body local split_part
+  Called by: hash_node_steps/39 (229727060 (estimated locally),0.65 per call) hash/38 (697932183 (estimated locally),0.65 per call) hash_init/31 (567069898 (estimated locally),0.53 per call) 
+  Calls: memset_/47 (567069900 (estimated locally),1.00 per call) 
+CSWTCH.12/71 (CSWTCH.12)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: hash_get_digest_word_len/23 (read) hash_init.part.0/76 (read) hash_dma_final.part.0/99 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.10/70 (CSWTCH.10)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: hash_get_iterator_word_len/22 (read) hash_init.part.0/76 (read) hash_dma_init_with_iv_and_updated_length.part.0/91 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.8/69 (CSWTCH.8)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: hash_get_block_word_len/21 (read) hash_init.part.0/76 (read) hash_init_with_iv_and_updated_length/32 (read) hash_dma_init_with_iv_and_updated_length.part.0/91 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.4/68 (CSWTCH.4)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: SM3_IV/11 (addr) MD5_IV/12 (addr) SHA256_IV/13 (addr) SHA384_IV/14 (addr) SHA512_IV/15 (addr) SHA1_IV/16 (addr) SHA224_IV/17 (addr) SHA512_224_IV/18 (addr) SHA512_256_IV/19 (addr) 
+  Referring: hash_set_IV/25 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+hash_set_dma_mode/67 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_set_dma_output_len/66 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (400493118 (estimated locally),0.71 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_clear_risr/65 (hash_clear_risr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_disable_dma_interruption/64 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_dma_operate/63 (hash_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (283534951 (estimated locally),0.50 per call) hash_dma_final.part.0/99 (295904341 (estimated locally),0.52 per call) hash_dma_update_blocks.part.0/94 (98660096 (estimated locally),0.09 per call) 
+  Calls: 
+hash_set_msg_total_bit_len/62 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (95657781 (estimated locally),0.17 per call) hash_final/37 (233240212 (estimated locally),0.22 per call) 
+  Calls: 
+hash_update_config/61 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_set_alg/60 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_disable_cpu_interruption/59 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) 
+  Calls: 
+hash_set_endian_uint32/58 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_set_hash_mode/57 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_set_cpu_mode/56 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) 
+  Calls: 
+hash_check_whether_sha3_alg/55 (hash_check_whether_sha3_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (400493118 (estimated locally),0.71 per call) hash_dma_update_blocks.part.0/94 (119587995 (estimated locally),0.11 per call) hash_final/37 (466480424 (estimated locally),0.43 per call) hash_total_byte_len_update/35 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+hash_set_last_block/54 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (400493118 (estimated locally),0.71 per call) hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) hash_calc_rand_len_msg/34 (1073741824 (estimated locally),1.00 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_start/53 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_start_calculate/29 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_get_iterator/52 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_update_blocks.part.0/94 (32557831 (estimated locally),0.03 per call) hash_final/37 (153938539 (estimated locally),0.14 per call) hash_calc_blocks/33 (28866475 (estimated locally),0.24 per call) 
+  Calls: 
+hash_wait_till_done/51 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 (1073741824 (estimated locally),1.00 per call) hash_calc_blocks/33 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+hash_input_msg_u8/50 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 (1073741824 (estimated locally),1.00 per call) hash_calc_blocks/33 (955630224 (estimated locally),8.09 per call) 
+  Calls: 
+hash_set_msg_len/49 (hash_set_msg_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (283534951 (estimated locally),0.50 per call) hash_dma_final.part.0/99 (200246558 (estimated locally),0.35 per call) hash_dma_update_blocks.part.0/94 (98660096 (estimated locally),0.09 per call) hash_final/37 (233240212 (estimated locally),0.22 per call) hash_calc_blocks/33 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/48 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_init_with_iv_and_updated_length.part.0/91 (94148928 (estimated locally),0.09 per call) hash_update.part.0/81 (22440533 (estimated locally),0.02 per call) hash_update.part.0/81 (22440533 (estimated locally),0.02 per call) hash_update.part.0/81 (12959408 (estimated locally),0.01 per call) hash_init_with_iv_and_updated_length/32 (55011364 (estimated locally),0.05 per call) 
+  Calls: 
+memset_/47 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_dma_final.part.0/99 (97648432 (estimated locally),0.17 per call) hash_dma_init_with_iv_and_updated_length.part.0/91 (176078040 (estimated locally),0.16 per call) hash_final/37 (872415232 (estimated locally),0.81 per call) hash_init.part.0/76 (567069900 (estimated locally),1.00 per call) 
+  Calls: 
+hash_set_iterator/46 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_calc_rand_len_msg/34 (524845000 (estimated locally),0.49 per call) hash_calc_blocks/33 (57732950 (estimated locally),0.49 per call) hash_dma_update_recover_register/30 (354334800 (estimated locally),0.33 per call) hash_set_IV/25 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_dma_node_steps/45 (hash_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:229727060 (estimated locally) body
+  Called by: 
+  Calls: hash_dma_final.part.0/99 (37330648 (estimated locally),0.16 per call) hash_dma_update_blocks/42 (1014686025 (estimated locally),4.42 per call) hash_dma_init_with_iv_and_updated_length/40 (229727060 (estimated locally),1.00 per call) 
+hash_dma/44 (hash_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_dma_final.part.0/99 (169265735 (estimated locally),0.16 per call) hash_dma_init_with_iv_and_updated_length/40 (512926472 (estimated locally),0.48 per call) 
+hash_dma_final/43 (hash_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: hash_dma_final.part.0/99 (567069898 (estimated locally),0.53 per call) 
+hash_dma_update_blocks/42 (hash_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_dma_node_steps/45 (1014686025 (estimated locally),4.42 per call) 
+  Calls: hash_dma_update_blocks.part.0/94 (inlined) (119587995 (estimated locally),0.11 per call) 
+hash_dma_init/41 (hash_dma_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_dma_init_with_iv_and_updated_length/40 (1073741824 (estimated locally),1.00 per call) 
+hash_dma_init_with_iv_and_updated_length/40 (hash_dma_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: hash_dma_node_steps/45 (229727060 (estimated locally),1.00 per call) hash_dma/44 (512926472 (estimated locally),0.48 per call) hash_dma_init/41 (1073741824 (estimated locally),1.00 per call) 
+  Calls: hash_dma_init_with_iv_and_updated_length.part.0/91 (inlined) (567069898 (estimated locally),0.53 per call) 
+hash_node_steps/39 (hash_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:353426247 (estimated locally) body
+  Called by: 
+  Calls: hash_final/37 (37904965 (estimated locally),0.11 per call) hash_update/36 (1014686024 (estimated locally),2.87 per call) hash_init.part.0/76 (229727060 (estimated locally),0.65 per call) 
+hash/38 (hash)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: hash_final/37 (76004814 (estimated locally),0.07 per call) hash_update/36 (230317619 (estimated locally),0.21 per call) hash_init.part.0/76 (697932183 (estimated locally),0.65 per call) 
+hash_final/37 (hash_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_node_steps/39 (37904965 (estimated locally),0.11 per call) hash/38 (76004814 (estimated locally),0.07 per call) 
+  Calls: memset_/47 (872415232 (estimated locally),0.81 per call) hash_get_iterator/52 (153938539 (estimated locally),0.14 per call) hash_calc_rand_len_msg/34 (466480424 (estimated locally),0.43 per call) hash_set_msg_total_bit_len/62 (233240212 (estimated locally),0.22 per call) hash_total_bytelen_2_bitlen/28 (233240212 (estimated locally),0.22 per call) hash_set_msg_len/49 (233240212 (estimated locally),0.22 per call) hash_check_whether_sha3_alg/55 (466480424 (estimated locally),0.43 per call) hash_update_config/61 (466480424 (estimated locally),0.43 per call) hash_set_alg/60 (466480424 (estimated locally),0.43 per call) hash_disable_cpu_interruption/59 (466480424 (estimated locally),0.43 per call) hash_set_endian_uint32/58 (466480424 (estimated locally),0.43 per call) hash_set_hash_mode/57 (466480424 (estimated locally),0.43 per call) hash_set_cpu_mode/56 (466480424 (estimated locally),0.43 per call) 
+hash_update/36 (hash_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: hash_node_steps/39 (1014686024 (estimated locally),2.87 per call) hash/38 (230317619 (estimated locally),0.21 per call) 
+  Calls: hash_update.part.0/81 (inlined) (179524266 (estimated locally),0.17 per call) 
+hash_total_byte_len_update/35 (hash_total_byte_len_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: hash_update.part.0/81 (179524266 (estimated locally),0.17 per call) 
+  Calls: hash_total_byte_len_add_uint32/26 (354334800 (estimated locally),0.33 per call) hash_check_whether_sha3_alg/55 (1073741822 (estimated locally),1.00 per call) 
+hash_calc_rand_len_msg/34 (hash_calc_rand_len_msg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_final/37 (466480424 (estimated locally),0.43 per call) 
+  Calls: hash_wait_till_done/51 (1073741824 (estimated locally),1.00 per call) hash_input_msg_u8/50 (1073741824 (estimated locally),1.00 per call) hash_start_calculate/29 (1073741824 (estimated locally),1.00 per call) hash_set_last_block/54 (1073741824 (estimated locally),1.00 per call) hash_set_iterator/46 (524845000 (estimated locally),0.49 per call) 
+hash_calc_blocks/33 (hash_calc_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body
+  Called by: hash_update.part.0/81 (22440533 (estimated locally),0.02 per call) hash_update.part.0/81 (25918816 (estimated locally),0.02 per call) 
+  Calls: hash_get_iterator/52 (28866475 (estimated locally),0.24 per call) hash_wait_till_done/51 (118111600 (estimated locally),1.00 per call) hash_input_msg_u8/50 (955630224 (estimated locally),8.09 per call) hash_start_calculate/29 (118111600 (estimated locally),1.00 per call) hash_set_msg_len/49 (118111600 (estimated locally),1.00 per call) hash_set_iterator/46 (57732950 (estimated locally),0.49 per call) 
+hash_init_with_iv_and_updated_length/32 (hash_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.8/69 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memcpy_/48 (55011364 (estimated locally),0.05 per call) hash_init/31 (166701103 (estimated locally),0.16 per call) 
+hash_init/31 (hash_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: hash_init_with_iv_and_updated_length/32 (166701103 (estimated locally),0.16 per call) 
+  Calls: hash_init.part.0/76 (567069898 (estimated locally),0.53 per call) 
+hash_dma_update_recover_register/30 (hash_dma_update_recover_register)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: hash_dma_final.part.0/99 (567069900 (estimated locally),1.00 per call) hash_dma_update_blocks.part.0/94 (98660096 (estimated locally),0.09 per call) 
+  Calls: hash_set_iterator/46 (354334800 (estimated locally),0.33 per call) hash_set_IV/25 (237404316 (estimated locally),0.22 per call) hash_set_dma_mode/67 (354334800 (estimated locally),0.33 per call) hash_set_dma_output_len/66 (354334800 (estimated locally),0.33 per call) hash_clear_risr/65 (354334800 (estimated locally),0.33 per call) hash_update_config/61 (354334800 (estimated locally),0.33 per call) hash_set_alg/60 (354334800 (estimated locally),0.33 per call) hash_set_last_block/54 (354334800 (estimated locally),0.33 per call) hash_disable_dma_interruption/64 (354334800 (estimated locally),0.33 per call) hash_set_endian_uint32/58 (354334800 (estimated locally),0.33 per call) hash_set_hash_mode/57 (354334800 (estimated locally),0.33 per call) 
+hash_start_calculate/29 (hash_start_calculate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: hash_calc_rand_len_msg/34 (1073741824 (estimated locally),1.00 per call) hash_calc_blocks/33 (118111600 (estimated locally),1.00 per call) 
+  Calls: hash_start/53 (1073741824 (estimated locally),1.00 per call) hash_set_IV/25 (177167400 (estimated locally),0.16 per call) 
+hash_total_bytelen_2_bitlen/28 (hash_total_bytelen_2_bitlen)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body nonfreeing_fn
+  Called by: hash_dma_final.part.0/99 (95657781 (estimated locally),0.17 per call) hash_final/37 (233240212 (estimated locally),0.22 per call) 
+  Calls: 
+hash_total_byte_len_add_uint32/26 (hash_total_byte_len_add_uint32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:114863530 (estimated locally) body nonfreeing_fn
+  Called by: hash_dma_final.part.0/99 (200246558 (estimated locally),0.35 per call) hash_dma_update_blocks.part.0/94 (59793998 (estimated locally),0.06 per call) hash_total_byte_len_update/35 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_set_IV/25 (hash_set_IV)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.4/68 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_dma_update_recover_register/30 (237404316 (estimated locally),0.22 per call) hash_start_calculate/29 (177167400 (estimated locally),0.16 per call) 
+  Calls: hash_set_iterator/46 (1073741824 (estimated locally),1.00 per call) 
+hash_get_digest_word_len/23 (hash_get_digest_word_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.12/71 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_get_iterator_word_len/22 (hash_get_iterator_word_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.10/70 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_get_block_word_len/21 (hash_get_block_word_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.8/69 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+check_hash_alg/20 (check_hash_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+SHA512_256_IV/19 (SHA512_256_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA512_224_IV/18 (SHA512_224_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA224_IV/17 (SHA224_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA1_IV/16 (SHA1_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA512_IV/15 (SHA512_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA384_IV/14 (SHA384_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA256_IV/13 (SHA256_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+MD5_IV/12 (MD5_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SM3_IV/11 (SM3_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Trivially needed variables: CSWTCH.12/71 CSWTCH.10/70 CSWTCH.8/69 CSWTCH.4/68 SHA512_256_IV/19 SHA512_224_IV/18 SHA224_IV/17 SHA1_IV/16 SHA512_IV/15 SHA384_IV/14 SHA256_IV/13 MD5_IV/12 SM3_IV/11
+Removing variables:
+
+Final Symbol table:
+
+hash_dma_final.part.0/99 (hash_dma_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hash_dma_final.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:567069898 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+hash_init.part.0/76 (hash_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hash_init.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:567069898 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+CSWTCH.12/71 (CSWTCH.12)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.12 (implicit_section) artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.10/70 (CSWTCH.10)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.10 (implicit_section) artificial
+  Aux: @0x7fb2f5890900
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.8/69 (CSWTCH.8)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.8 (implicit_section) artificial
+  Aux: @0x7fb2f5890380
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.4/68 (CSWTCH.4)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.4 (implicit_section) artificial
+  Aux: @0x7fb2f5890000
+  References: SM3_IV/11 (addr) MD5_IV/12 (addr) SHA256_IV/13 (addr) SHA384_IV/14 (addr) SHA512_IV/15 (addr) SHA1_IV/16 (addr) SHA224_IV/17 (addr) SHA512_224_IV/18 (addr) SHA512_256_IV/19 (addr) 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+hash_set_dma_mode/67 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_dma_output_len/66 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_clear_risr/65 (hash_clear_risr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_disable_dma_interruption/64 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_dma_operate/63 (hash_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_msg_total_bit_len/62 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_update_config/61 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_alg/60 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_disable_cpu_interruption/59 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_endian_uint32/58 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_hash_mode/57 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_cpu_mode/56 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_check_whether_sha3_alg/55 (hash_check_whether_sha3_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_last_block/54 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_start/53 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_iterator/52 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_wait_till_done/51 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_input_msg_u8/50 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_msg_len/49 (hash_set_msg_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/48 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/47 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_iterator/46 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_dma_node_steps/45 (hash_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_dma_node_steps (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:229727060 (estimated locally)
+  Called by: 
+  Calls: 
+hash_dma/44 (hash_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_dma (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_dma_final/43 (hash_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_dma_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_dma_update_blocks/42 (hash_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_dma_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_dma_init/41 (hash_dma_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_dma_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_dma_init_with_iv_and_updated_length/40 (hash_dma_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_dma_init_with_iv_and_updated_length (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_node_steps/39 (hash_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_node_steps (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:353426247 (estimated locally)
+  Called by: 
+  Calls: 
+hash/38 (hash)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_final/37 (hash_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_update/36 (hash_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_total_byte_len_update/35 (hash_total_byte_len_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_total_byte_len_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_calc_rand_len_msg/34 (hash_calc_rand_len_msg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_calc_rand_len_msg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_calc_blocks/33 (hash_calc_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_calc_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally)
+  Called by: 
+  Calls: 
+hash_init_with_iv_and_updated_length/32 (hash_init_with_iv_and_updated_length)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_init_with_iv_and_updated_length (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_init/31 (hash_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_dma_update_recover_register/30 (hash_dma_update_recover_register)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hash_dma_update_recover_register (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+hash_start_calculate/29 (hash_start_calculate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hash_start_calculate (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+hash_total_bytelen_2_bitlen/28 (hash_total_bytelen_2_bitlen)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_total_bytelen_2_bitlen (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_total_byte_len_add_uint32/26 (hash_total_byte_len_add_uint32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_total_byte_len_add_uint32 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:114863530 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_set_IV/25 (hash_set_IV)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_set_IV (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/23 (hash_get_digest_word_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_get_digest_word_len (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_get_iterator_word_len/22 (hash_get_iterator_word_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_get_iterator_word_len (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_get_block_word_len/21 (hash_get_block_word_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_get_block_word_len (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+check_hash_alg/20 (check_hash_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.check_hash_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+SHA512_256_IV/19 (SHA512_256_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA512_256_IV (implicit_section)
+  Aux: @0x7fb2f582dd00
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA512_224_IV/18 (SHA512_224_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA512_224_IV (implicit_section)
+  Aux: @0x7fb2f57a4e80
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA224_IV/17 (SHA224_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA224_IV (implicit_section)
+  Aux: @0x7fb2f57a4e00
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA1_IV/16 (SHA1_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA1_IV (implicit_section)
+  Aux: @0x7fb2f57a4d80
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA512_IV/15 (SHA512_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA512_IV (implicit_section)
+  Aux: @0x7fb2f57a4d00
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA384_IV/14 (SHA384_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA384_IV (implicit_section)
+  Aux: @0x7fb2f57a4c80
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SHA256_IV/13 (SHA256_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SHA256_IV (implicit_section)
+  Aux: @0x7fb2f57a4c00
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+MD5_IV/12 (MD5_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.MD5_IV (implicit_section)
+  Aux: @0x7fb2f57a4b80
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SM3_IV/11 (SM3_IV)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.SM3_IV (implicit_section)
+  Aux: @0x7fb2f57a4b00
+  References: 
+  Referring: CSWTCH.4/68 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

@@ -1,0 +1,2107 @@
+Trivially needed symbols: uint32_integer_check/41 Bigint_Check_p_1/40 Bigint_Check_1/39 Big_Div2n/38 Get_Multiple2_Number/35 uint32_BigNumCmp/34 uint32_big_num_little_endian_add_little/32 uint8_big_num_big_endian_add_little/31 uint32_BigNum_Check_Zero/30 uint8_BigNum_Check_Zero/29 get_valid_words/28 get_valid_bits/27 get_bit_value_by_index/26 uint32_XOR/25 uint8_XOR/24 u32little_to_u8big_256bits/23 u8big_to_u32little_256bits_self/22 u8big_to_u32little_256bits/21 reverse_byte_array/20 uint32_sleep/19 uint32_clear_8_words/16 uint32_clear/15 uint32_copy_8_words/14 uint32_copy/13 uint32_set/12 memcmp_/11 memset_/10 memcpy_/9
+
+
+Initial Symbol table:
+
+uint32_integer_check/41 (uint32_integer_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/34 uint32_BigNum_Check_Zero/30 
+Bigint_Check_p_1/40 (Bigint_Check_p_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b5b110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Bigint_Check_1/39 (Bigint_Check_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b5b000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Big_Div2n/38 (Big_Div2n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3eee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_less_than_32/36 get_valid_words/28 
+Big_Div2n_n_not_less_than_32/37 (Big_Div2n_n_not_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa8a1b3eee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 
+  Calls: uint32_clear/15 Big_Div2n_n_less_than_32/36 uint32_clear/15 
+Big_Div2n_n_less_than_32/36 (Big_Div2n_n_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa8a1b3ecc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n/38 
+  Calls: 
+Get_Multiple2_Number/35 (Get_Multiple2_Number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3edd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/34 (uint32_BigNumCmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3eaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: uint32_BigNumCmp_internal/33 get_valid_words/28 get_valid_words/28 
+uint32_BigNumCmp_internal/33 (uint32_BigNumCmp_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa8a1b3eaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_BigNumCmp/34 
+  Calls: 
+uint32_big_num_little_endian_add_little/32 (uint32_big_num_little_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/31 (uint8_big_num_big_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/30 (uint32_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: 
+uint8_BigNum_Check_Zero/29 (uint8_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_valid_words/28 (get_valid_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 uint32_BigNumCmp/34 uint32_BigNumCmp/34 
+  Calls: 
+get_valid_bits/27 (get_valid_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_bit_value_by_index/26 (get_bit_value_by_index)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_XOR/25 (uint32_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_XOR/24 (uint8_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b3e000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/23 (u32little_to_u8big_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits_self/22 (u8big_to_u32little_256bits_self)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/21 (u8big_to_u32little_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_sleep/19 (uint32_sleep)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_sleep2/18 uint32_sleep1/17 
+uint32_sleep2/18 (uint32_sleep2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa8a1b25aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_sleep1/17 (uint32_sleep1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa8a1b25880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_clear_8_words/16 (uint32_clear_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_clear/15 (uint32_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_not_less_than_32/37 
+  Calls: 
+uint32_copy_8_words/14 (uint32_copy_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_set/12 (uint32_set)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: memset_/10 
+  Calls: 
+memcmp_/11 (memcmp_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+memset_/10 (memset_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_set/12 
+memcpy_/9 (memcpy_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa8a1b25000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint32_integer_check/41 (uint32_integer_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/34 uint32_BigNum_Check_Zero/30 
+Bigint_Check_p_1/40 (Bigint_Check_p_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Bigint_Check_1/39 (Bigint_Check_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Big_Div2n/38 (Big_Div2n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_less_than_32/36 get_valid_words/28 
+Big_Div2n_n_not_less_than_32/37 (Big_Div2n_n_not_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 
+  Calls: uint32_clear/15 Big_Div2n_n_less_than_32/36 uint32_clear/15 
+Big_Div2n_n_less_than_32/36 (Big_Div2n_n_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n/38 
+  Calls: 
+Get_Multiple2_Number/35 (Get_Multiple2_Number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/34 (uint32_BigNumCmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: uint32_BigNumCmp_internal/33 get_valid_words/28 get_valid_words/28 
+uint32_BigNumCmp_internal/33 (uint32_BigNumCmp_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_BigNumCmp/34 
+  Calls: 
+uint32_big_num_little_endian_add_little/32 (uint32_big_num_little_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/31 (uint8_big_num_big_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/30 (uint32_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: 
+uint8_BigNum_Check_Zero/29 (uint8_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_valid_words/28 (get_valid_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 uint32_BigNumCmp/34 uint32_BigNumCmp/34 
+  Calls: 
+get_valid_bits/27 (get_valid_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_bit_value_by_index/26 (get_bit_value_by_index)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_XOR/25 (uint32_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_XOR/24 (uint8_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/23 (u32little_to_u8big_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits_self/22 (u8big_to_u32little_256bits_self)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/21 (u8big_to_u32little_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_sleep/19 (uint32_sleep)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_sleep2/18 uint32_sleep1/17 
+uint32_sleep2/18 (uint32_sleep2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_sleep1/17 (uint32_sleep1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_clear_8_words/16 (uint32_clear_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_clear/15 (uint32_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_not_less_than_32/37 
+  Calls: 
+uint32_copy_8_words/14 (uint32_copy_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_set/12 (uint32_set)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: memset_/10 
+  Calls: 
+memcmp_/11 (memcmp_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+memset_/10 (memset_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_set/12 
+memcpy_/9 (memcpy_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+
+
+Initial Symbol table:
+
+uint32_integer_check/41 (uint32_integer_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/34 uint32_BigNum_Check_Zero/30 
+Bigint_Check_p_1/40 (Bigint_Check_p_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Bigint_Check_1/39 (Bigint_Check_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Big_Div2n/38 (Big_Div2n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_less_than_32/36 get_valid_words/28 
+Big_Div2n_n_not_less_than_32/37 (Big_Div2n_n_not_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 
+  Calls: uint32_clear/15 Big_Div2n_n_less_than_32/36 uint32_clear/15 
+Big_Div2n_n_less_than_32/36 (Big_Div2n_n_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n/38 
+  Calls: 
+Get_Multiple2_Number/35 (Get_Multiple2_Number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/34 (uint32_BigNumCmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: uint32_BigNumCmp_internal/33 get_valid_words/28 get_valid_words/28 
+uint32_BigNumCmp_internal/33 (uint32_BigNumCmp_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_BigNumCmp/34 
+  Calls: 
+uint32_big_num_little_endian_add_little/32 (uint32_big_num_little_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/31 (uint8_big_num_big_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/30 (uint32_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: 
+uint8_BigNum_Check_Zero/29 (uint8_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_valid_words/28 (get_valid_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 uint32_BigNumCmp/34 uint32_BigNumCmp/34 
+  Calls: 
+get_valid_bits/27 (get_valid_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_bit_value_by_index/26 (get_bit_value_by_index)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_XOR/25 (uint32_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_XOR/24 (uint8_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/23 (u32little_to_u8big_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits_self/22 (u8big_to_u32little_256bits_self)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/21 (u8big_to_u32little_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_sleep/19 (uint32_sleep)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_sleep2/18 uint32_sleep1/17 
+uint32_sleep2/18 (uint32_sleep2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_sleep1/17 (uint32_sleep1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_clear_8_words/16 (uint32_clear_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_clear/15 (uint32_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_not_less_than_32/37 
+  Calls: 
+uint32_copy_8_words/14 (uint32_copy_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_set/12 (uint32_set)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: memset_/10 
+  Calls: 
+memcmp_/11 (memcmp_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+memset_/10 (memset_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_set/12 
+memcpy_/9 (memcpy_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint32_integer_check/41 (uint32_integer_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/34 uint32_BigNum_Check_Zero/30 
+Bigint_Check_p_1/40 (Bigint_Check_p_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Bigint_Check_1/39 (Bigint_Check_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+Big_Div2n/38 (Big_Div2n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_less_than_32/36 get_valid_words/28 
+Big_Div2n_n_not_less_than_32/37 (Big_Div2n_n_not_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 
+  Calls: uint32_clear/15 Big_Div2n_n_less_than_32/36 uint32_clear/15 
+Big_Div2n_n_less_than_32/36 (Big_Div2n_n_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n/38 
+  Calls: 
+Get_Multiple2_Number/35 (Get_Multiple2_Number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/34 (uint32_BigNumCmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: uint32_BigNumCmp_internal/33 get_valid_words/28 get_valid_words/28 
+uint32_BigNumCmp_internal/33 (uint32_BigNumCmp_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_BigNumCmp/34 
+  Calls: 
+uint32_big_num_little_endian_add_little/32 (uint32_big_num_little_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/31 (uint8_big_num_big_endian_add_little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/30 (uint32_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_integer_check/41 
+  Calls: 
+uint8_BigNum_Check_Zero/29 (uint8_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_valid_words/28 (get_valid_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n/38 uint32_BigNumCmp/34 uint32_BigNumCmp/34 
+  Calls: 
+get_valid_bits/27 (get_valid_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_bit_value_by_index/26 (get_bit_value_by_index)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_XOR/25 (uint32_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint8_XOR/24 (uint8_XOR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/23 (u32little_to_u8big_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits_self/22 (u8big_to_u32little_256bits_self)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/21 (u8big_to_u32little_256bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_sleep/19 (uint32_sleep)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_sleep2/18 uint32_sleep1/17 
+uint32_sleep2/18 (uint32_sleep2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_sleep1/17 (uint32_sleep1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: uint32_sleep/19 
+  Calls: 
+uint32_clear_8_words/16 (uint32_clear_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_clear/15 (uint32_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Big_Div2n_n_not_less_than_32/37 Big_Div2n_n_not_less_than_32/37 
+  Calls: 
+uint32_copy_8_words/14 (uint32_copy_8_words)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+uint32_set/12 (uint32_set)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: memset_/10 
+  Calls: 
+memcmp_/11 (memcmp_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+memset_/10 (memset_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_set/12 
+memcpy_/9 (memcpy_)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+uint32_BigNum_Check_Zero.part.0/54 (uint32_BigNum_Check_Zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 45
+  References: 
+  Referring: 
+  Function uint32_BigNum_Check_Zero.part.0/54 is inline copy in uint32_integer_check/41
+  Clone of uint32_BigNum_Check_Zero.part.0/45
+  Availability: local
+  Function flags: count:751619280 (estimated locally) body local split_part nonfreeing_fn
+  Called by: uint32_integer_check/41 (inlined) (751619280 (estimated locally),0.70 per call) 
+  Calls: 
+uint32_set.part.0/53 (uint32_set.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 42
+  References: 
+  Referring: 
+  Function uint32_set.part.0/53 is inline copy in uint32_set/12
+  Clone of uint32_set.part.0/42
+  Availability: local
+  Function flags: count:118111600 (estimated locally) body local split_part nonfreeing_fn
+  Called by: uint32_set/12 (inlined) (118111600 (estimated locally),0.70 per call) 
+  Calls: 
+uint32_sleep1.isra.0/52 (uint32_sleep1.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function uint32_sleep1.isra/52 is inline copy in uint32_sleep/19
+  Clone of uint32_sleep1/17
+  Availability: local
+  Function flags: count:536870912 (estimated locally) local nonfreeing_fn
+  Called by: uint32_sleep/19 (inlined) (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_sleep2.isra.0/51 (uint32_sleep2.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function uint32_sleep2.isra/51 is inline copy in uint32_sleep/19
+  Clone of uint32_sleep2/18
+  Availability: local
+  Function flags: count:536870912 (estimated locally) local nonfreeing_fn
+  Called by: uint32_sleep/19 (inlined) (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_BigNumCmp.part.0/48 (uint32_BigNumCmp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function uint32_BigNumCmp.part.0/48 is inline copy in uint32_BigNumCmp/34
+  Availability: local
+  Function flags: count:526133498 (estimated locally) body local split_part nonfreeing_fn
+  Called by: uint32_BigNumCmp/34 (inlined) (526133498 (estimated locally),0.49 per call) 
+  Calls: get_valid_words.part.0/44 (526133498 (estimated locally),0.49 per call) get_valid_words.part.0/44 (526133498 (estimated locally),0.49 per call) uint32_BigNumCmp_internal/33 (inlined) (257805413 (estimated locally),0.24 per call) 
+uint32_BigNum_Check_Zero.part.0/45 (uint32_BigNum_Check_Zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 54
+  References: 
+  Referring: 
+  Function uint32_BigNum_Check_Zero.part.0/45 is inline copy in uint32_BigNum_Check_Zero/30
+  Availability: local
+  Function flags: count:114863530 (estimated locally) body local split_part nonfreeing_fn
+  Called by: uint32_BigNum_Check_Zero/30 (inlined) (114863530 (estimated locally),0.70 per call) 
+  Calls: 
+get_valid_words.part.0/44 (get_valid_words.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) body local split_part nonfreeing_fn
+  Called by: Big_Div2n/38 (751619280 (estimated locally),0.70 per call) uint32_BigNumCmp.part.0/48 (526133498 (estimated locally),0.49 per call) uint32_BigNumCmp.part.0/48 (526133498 (estimated locally),0.49 per call) get_valid_words/28 (114863530 (estimated locally),0.70 per call) 
+  Calls: 
+uint32_set.part.0/42 (uint32_set.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 53
+  References: 
+  Referring: 
+  Function uint32_set.part.0/42 is inline copy in memset_/10
+  Availability: local
+  Function flags: count:177167400 (estimated locally) body local split_part nonfreeing_fn
+  Called by: memset_/10 (inlined) (177167400 (estimated locally),0.17 per call) 
+  Calls: 
+uint32_integer_check/41 (uint32_integer_check)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: uint32_BigNumCmp/34 (697932184 (estimated locally),0.65 per call) uint32_BigNum_Check_Zero.part.0/54 (inlined) (751619280 (estimated locally),0.70 per call) 
+Bigint_Check_p_1/40 (Bigint_Check_p_1)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+Bigint_Check_1/39 (Bigint_Check_1)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:965239733 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+Big_Div2n/38 (Big_Div2n)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: Big_Div2n_n_not_less_than_32/37 (inlined) (93952410 (estimated locally),0.09 per call) Big_Div2n_n_less_than_32/36 (93952410 (estimated locally),0.09 per call) get_valid_words.part.0/44 (751619280 (estimated locally),0.70 per call) 
+Big_Div2n_n_not_less_than_32/37 (Big_Div2n_n_not_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Big_Div2n_n_not_less_than_32/37 is inline copy in Big_Div2n/38
+  Availability: local
+  Function flags: count:93952410 (estimated locally) body local nonfreeing_fn
+  Called by: Big_Div2n/38 (inlined) (93952410 (estimated locally),0.09 per call) 
+  Calls: uint32_clear/15 (31004295 (estimated locally),0.03 per call) Big_Div2n_n_less_than_32/36 (20772878 (estimated locally),0.02 per call) uint32_clear/15 (62948115 (estimated locally),0.06 per call) 
+Big_Div2n_n_less_than_32/36 (Big_Div2n_n_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) body local nonfreeing_fn
+  Called by: Big_Div2n/38 (93952410 (estimated locally),0.09 per call) Big_Div2n_n_not_less_than_32/37 (20772878 (estimated locally),0.02 per call) 
+  Calls: 
+Get_Multiple2_Number/35 (Get_Multiple2_Number)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:129736388 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/34 (uint32_BigNumCmp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: uint32_integer_check/41 (697932184 (estimated locally),0.65 per call) 
+  Calls: uint32_BigNumCmp.part.0/48 (inlined) (526133498 (estimated locally),0.49 per call) 
+uint32_BigNumCmp_internal/33 (uint32_BigNumCmp_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function uint32_BigNumCmp_internal/33 is inline copy in uint32_BigNumCmp/34
+  Availability: local
+  Function flags: count:257805413 (estimated locally) body local nonfreeing_fn
+  Called by: uint32_BigNumCmp.part.0/48 (inlined) (257805413 (estimated locally),0.24 per call) 
+  Calls: 
+uint32_big_num_little_endian_add_little/32 (uint32_big_num_little_endian_add_little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:328181513 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/31 (uint8_big_num_big_endian_add_little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:328181513 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/30 (uint32_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: uint32_BigNum_Check_Zero.part.0/45 (inlined) (114863530 (estimated locally),0.70 per call) 
+uint8_BigNum_Check_Zero/29 (uint8_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+get_valid_words/28 (get_valid_words)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: get_valid_words.part.0/44 (114863530 (estimated locally),0.70 per call) 
+get_valid_bits/27 (get_valid_bits)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+get_bit_value_by_index/26 (get_bit_value_by_index)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_XOR/25 (uint32_XOR)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:344348684 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint8_XOR/24 (uint8_XOR)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:344348684 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/23 (u32little_to_u8big_256bits)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits_self/22 (u8big_to_u32little_256bits_self)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/21 (u8big_to_u32little_256bits)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:241044080 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_sleep/19 (uint32_sleep)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: uint32_sleep2.isra.0/51 (inlined) (536870912 (estimated locally),0.50 per call) uint32_sleep1.isra.0/52 (inlined) (536870912 (estimated locally),0.50 per call) 
+uint32_sleep2/18 (uint32_sleep2)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:118111600 (estimated locally) body
+  Called by: 
+  Calls: 
+uint32_sleep1/17 (uint32_sleep1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:118111600 (estimated locally) body
+  Called by: 
+  Calls: 
+uint32_clear_8_words/16 (uint32_clear_8_words)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_clear/15 (uint32_clear)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) body nonfreeing_fn
+  Called by: Big_Div2n_n_not_less_than_32/37 (31004295 (estimated locally),0.03 per call) Big_Div2n_n_not_less_than_32/37 (62948115 (estimated locally),0.06 per call) 
+  Calls: 
+uint32_copy_8_words/14 (uint32_copy_8_words)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:344348684 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_set/12 (uint32_set)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: uint32_set.part.0/53 (inlined) (118111600 (estimated locally),0.70 per call) 
+memcmp_/11 (memcmp_)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:234415366 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+memset_/10 (memset_)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1022611257 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: uint32_set.part.0/42 (inlined) (177167400 (estimated locally),0.17 per call) 
+memcpy_/9 (memcpy_)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:321392107 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+cloning uint32_sleep2/18 to uint32_sleep2.isra/51
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+uint32_t uint32_sleep2 (uint32_t count)
+{
+  volatile uint32_t result;
+  uint32_t i;
+  uint32_t b;
+  long unsigned int _1;
+  long unsigned int result.8_2;
+  long unsigned int _3;
+  uint32_t _10;
+  long unsigned int result.9_12;
+
+  <bb 2> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG a => 0
+  # DEBUG b => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  result ={v} 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _1 = b_4 ^ i_5;
+  result.8_2 ={v} result;
+  _3 = _1 | result.8_2;
+  result ={v} _3;
+  # DEBUG BEGIN_STMT
+  result.9_12 ={v} result;
+  b_13 = b_4 ^ result.9_12;
+  # DEBUG b => b_13
+  # DEBUG BEGIN_STMT
+  i_14 = i_5 + 1;
+  # DEBUG i => i_14
+
+  <bb 4> [local count: 1073741824]:
+  # b_4 = PHI <0(2), b_13(3)>
+  # i_5 = PHI <0(2), i_14(3)>
+  # DEBUG i => i_5
+  # DEBUG b => b_4
+  # DEBUG BEGIN_STMT
+  if (i_5 < count_9(D))
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _10 ={v} result;
+  return _10;
+
+}
+
+
+void uint32_sleep2.isra (uint32_t count)
+{
+  uint32_t D.3327;
+  uint32_t b;
+  uint32_t i;
+  volatile uint32_t result;
+  long unsigned int _3;
+  long unsigned int result.8_4;
+  long unsigned int _5;
+  long unsigned int result.9_6;
+  long unsigned int _10;
+
+  <bb 6> [local count: 118111600]:
+
+  <bb 2> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG a => 0
+  # DEBUG b => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  result ={v} 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _3 = b_1 ^ i_2;
+  result.8_4 ={v} result;
+  _5 = _3 | result.8_4;
+  result ={v} _5;
+  # DEBUG BEGIN_STMT
+  result.9_6 ={v} result;
+  b_7 = b_1 ^ result.9_6;
+  # DEBUG b => b_7
+  # DEBUG BEGIN_STMT
+  i_8 = i_2 + 1;
+  # DEBUG i => i_8
+
+  <bb 4> [local count: 1073741824]:
+  # b_1 = PHI <0(2), b_7(3)>
+  # i_2 = PHI <0(2), i_8(3)>
+  # DEBUG i => i_2
+  # DEBUG b => b_1
+  # DEBUG BEGIN_STMT
+  if (i_2 < count_9(D))
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _10 ={v} result;
+  return;
+
+}
+
+
+cloning uint32_sleep1/17 to uint32_sleep1.isra/52
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+uint32_t uint32_sleep1 (uint32_t count)
+{
+  volatile uint32_t result;
+  uint32_t i;
+  long unsigned int _1;
+  long unsigned int result.6_2;
+  long unsigned int _3;
+  uint32_t _9;
+  long unsigned int result.7_11;
+
+  <bb 2> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG a => 0
+  # DEBUG b => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  result ={v} 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _1 = -i_4;
+  result.6_2 ={v} result;
+  _3 = _1 | result.6_2;
+  result ={v} _3;
+  # DEBUG BEGIN_STMT
+  result.7_11 ={v} result;
+  # DEBUG a => 0
+  # DEBUG BEGIN_STMT
+  i_12 = i_4 + 1;
+  # DEBUG i => i_12
+
+  <bb 4> [local count: 1073741824]:
+  # i_4 = PHI <0(2), i_12(3)>
+  # DEBUG i => i_4
+  # DEBUG a => 0
+  # DEBUG BEGIN_STMT
+  if (i_4 < count_8(D))
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _9 ={v} result;
+  return _9;
+
+}
+
+
+void uint32_sleep1.isra (uint32_t count)
+{
+  uint32_t D.3335;
+  uint32_t i;
+  volatile uint32_t result;
+  long unsigned int _2;
+  long unsigned int result.6_3;
+  long unsigned int _4;
+  long unsigned int result.7_5;
+  long unsigned int _8;
+
+  <bb 6> [local count: 118111600]:
+
+  <bb 2> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG a => 0
+  # DEBUG b => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  result ={v} 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _2 = -i_1;
+  result.6_3 ={v} result;
+  _4 = _2 | result.6_3;
+  result ={v} _4;
+  # DEBUG BEGIN_STMT
+  result.7_5 ={v} result;
+  # DEBUG a => 0
+  # DEBUG BEGIN_STMT
+  i_6 = i_1 + 1;
+  # DEBUG i => i_6
+
+  <bb 4> [local count: 1073741824]:
+  # i_1 = PHI <0(2), i_6(3)>
+  # DEBUG i => i_1
+  # DEBUG a => 0
+  # DEBUG BEGIN_STMT
+  if (i_1 < count_7(D))
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _8 ={v} result;
+  return;
+
+}
+
+
+updating call of uint32_sleep/19 -> uint32_sleep2.isra/51: uint32_sleep2 (count_4(D));
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+  updated to:uint32_sleep2.isra (count_4(D));
+updating call of uint32_sleep/19 -> uint32_sleep1.isra/52: uint32_sleep1 (count_4(D));
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+  updated to:uint32_sleep1.isra (count_4(D));
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+get_valid_words.part.0/44 (get_valid_words.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_valid_words.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) local split_part nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_integer_check/41 (uint32_integer_check)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_integer_check (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+Bigint_Check_p_1/40 (Bigint_Check_p_1)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.Bigint_Check_p_1 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+Bigint_Check_1/39 (Bigint_Check_1)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.Bigint_Check_1 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:965239733 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+Big_Div2n/38 (Big_Div2n)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.Big_Div2n (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+Big_Div2n_n_less_than_32/36 (Big_Div2n_n_less_than_32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.Big_Div2n_n_less_than_32 (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 
+Get_Multiple2_Number/35 (Get_Multiple2_Number)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.Get_Multiple2_Number (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:129736388 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/34 (uint32_BigNumCmp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_BigNumCmp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_big_num_little_endian_add_little/32 (uint32_big_num_little_endian_add_little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_big_num_little_endian_add_little (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:328181513 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/31 (uint8_big_num_big_endian_add_little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint8_big_num_big_endian_add_little (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:328181513 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/30 (uint32_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_BigNum_Check_Zero (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint8_BigNum_Check_Zero/29 (uint8_BigNum_Check_Zero)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint8_BigNum_Check_Zero (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+get_valid_words/28 (get_valid_words)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_valid_words (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+get_valid_bits/27 (get_valid_bits)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_valid_bits (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:164090757 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+get_bit_value_by_index/26 (get_bit_value_by_index)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_bit_value_by_index (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_XOR/25 (uint32_XOR)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_XOR (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:344348684 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint8_XOR/24 (uint8_XOR)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint8_XOR (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:344348684 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/23 (u32little_to_u8big_256bits)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.u32little_to_u8big_256bits (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits_self/22 (u8big_to_u32little_256bits_self)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.u8big_to_u32little_256bits_self (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/21 (u8big_to_u32little_256bits)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.u8big_to_u32little_256bits (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.reverse_byte_array (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:241044080 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_sleep/19 (uint32_sleep)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_sleep (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_sleep2/18 (uint32_sleep2)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:118111600 (estimated locally)
+  Called by: 
+  Calls: 
+uint32_sleep1/17 (uint32_sleep1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:118111600 (estimated locally)
+  Called by: 
+  Calls: 
+uint32_clear_8_words/16 (uint32_clear_8_words)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_clear_8_words (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_clear/15 (uint32_clear)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_clear (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_copy_8_words/14 (uint32_copy_8_words)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_copy_8_words (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_copy (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:344348684 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+uint32_set/12 (uint32_set)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_set (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+memcmp_/11 (memcmp_)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.memcmp_ (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:234415366 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+memset_/10 (memset_)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.memset_ (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1022611257 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+memcpy_/9 (memcpy_)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.memcpy_ (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:321392107 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 

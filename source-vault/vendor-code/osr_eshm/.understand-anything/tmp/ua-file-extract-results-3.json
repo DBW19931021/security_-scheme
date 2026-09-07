@@ -1,0 +1,6212 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 26,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/reg_lock.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 60,
+      "callGraph": [
+        {
+          "caller": "sysreg_enable_fun_lock",
+          "callee": "UNUSED",
+          "lineNumber": 43
+        },
+        {
+          "caller": "sysreg_enable_sm_lock",
+          "callee": "UNUSED",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sysreg_umask_sm_lock",
+          "callee": "UNUSED",
+          "lineNumber": 53
+        },
+        {
+          "caller": "sysreg_config_sm_en",
+          "callee": "UNUSED",
+          "lineNumber": 58
+        },
+        {
+          "caller": "sysreg_unlock_reg",
+          "callee": "UNUSED",
+          "lineNumber": 63
+        },
+        {
+          "caller": "sysreg_lock_reg",
+          "callee": "UNUSED",
+          "lineNumber": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/sysreg.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 254,
+      "nonEmptyLines": 211,
+      "functions": [
+        {
+          "name": "sysreg_get_soc_boot_type",
+          "startLine": 84,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "sysreg_get_soc_verify_alg",
+          "startLine": 99,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "sysreg_get_soc_upd_alg",
+          "startLine": 104,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "sysreg_get_fw_upd_alg",
+          "startLine": 109,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "sysreg_get_fw_verify_alg",
+          "startLine": 114,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "sysreg_get_status",
+          "startLine": 119,
+          "endLine": 126,
+          "params": [
+            "index",
+            "status"
+          ]
+        },
+        {
+          "name": "sysreg_set_status",
+          "startLine": 128,
+          "endLine": 152,
+          "params": [
+            "index",
+            "status"
+          ]
+        },
+        {
+          "name": "sysreg_enable_hsm_dbg",
+          "startLine": 154,
+          "endLine": 159,
+          "params": []
+        },
+        {
+          "name": "sysreg_disable_hsm_dbg",
+          "startLine": 161,
+          "endLine": 166,
+          "params": []
+        },
+        {
+          "name": "sysreg_enable_soc_dbg",
+          "startLine": 168,
+          "endLine": 173,
+          "params": []
+        },
+        {
+          "name": "sysreg_disable_soc_dbg",
+          "startLine": 175,
+          "endLine": 180,
+          "params": []
+        },
+        {
+          "name": "sysreg_enable_soc_dbg_ext",
+          "startLine": 182,
+          "endLine": 195,
+          "params": [
+            "zone",
+            "value"
+          ]
+        },
+        {
+          "name": "sysreg_disable_soc_dbg_ext",
+          "startLine": 197,
+          "endLine": 209,
+          "params": [
+            "zone",
+            "value"
+          ]
+        },
+        {
+          "name": "sysreg_get_life_cycle",
+          "startLine": 211,
+          "endLine": 214,
+          "params": []
+        },
+        {
+          "name": "sysreg_get_otpkey_dec_alg",
+          "startLine": 216,
+          "endLine": 219,
+          "params": []
+        },
+        {
+          "name": "sysreg_ahb_dma_cfg",
+          "startLine": 221,
+          "endLine": 229,
+          "params": [
+            "cfg"
+          ]
+        },
+        {
+          "name": "sysreg_get_otp_key_num",
+          "startLine": 231,
+          "endLine": 234,
+          "params": []
+        },
+        {
+          "name": "sysreg_set_gen_reg",
+          "startLine": 236,
+          "endLine": 251,
+          "params": [
+            "zone",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sysreg_get_soc_boot_type",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_soc_verify_alg",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_soc_upd_alg",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_fw_upd_alg",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_fw_verify_alg",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_status",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_set_status",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_enable_hsm_dbg",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_disable_hsm_dbg",
+          "line": 161,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_enable_soc_dbg",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_disable_soc_dbg",
+          "line": 175,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_enable_soc_dbg_ext",
+          "line": 182,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_disable_soc_dbg_ext",
+          "line": 197,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_life_cycle",
+          "line": 211,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_otpkey_dec_alg",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_ahb_dma_cfg",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_get_otp_key_num",
+          "line": 231,
+          "isDefault": false
+        },
+        {
+          "name": "sysreg_set_gen_reg",
+          "line": 236,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sysreg_set_status",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 144
+        },
+        {
+          "caller": "sysreg_set_status",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 146
+        },
+        {
+          "caller": "sysreg_set_status",
+          "callee": "expt_det_add_error",
+          "lineNumber": 148
+        },
+        {
+          "caller": "sysreg_enable_hsm_dbg",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 156
+        },
+        {
+          "caller": "sysreg_enable_hsm_dbg",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 158
+        },
+        {
+          "caller": "sysreg_disable_hsm_dbg",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 163
+        },
+        {
+          "caller": "sysreg_disable_hsm_dbg",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 165
+        },
+        {
+          "caller": "sysreg_enable_soc_dbg",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 170
+        },
+        {
+          "caller": "sysreg_enable_soc_dbg",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 172
+        },
+        {
+          "caller": "sysreg_disable_soc_dbg",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 177
+        },
+        {
+          "caller": "sysreg_disable_soc_dbg",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 179
+        },
+        {
+          "caller": "sysreg_enable_soc_dbg_ext",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 191
+        },
+        {
+          "caller": "sysreg_enable_soc_dbg_ext",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 193
+        },
+        {
+          "caller": "sysreg_disable_soc_dbg_ext",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 205
+        },
+        {
+          "caller": "sysreg_disable_soc_dbg_ext",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 207
+        },
+        {
+          "caller": "sysreg_ahb_dma_cfg",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 223
+        },
+        {
+          "caller": "sysreg_ahb_dma_cfg",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 225
+        },
+        {
+          "caller": "sysreg_ahb_dma_cfg",
+          "callee": "expt_det_add_error",
+          "lineNumber": 227
+        },
+        {
+          "caller": "sysreg_set_gen_reg",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 244
+        },
+        {
+          "caller": "sysreg_set_gen_reg",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 246
+        },
+        {
+          "caller": "sysreg_set_gen_reg",
+          "callee": "expt_det_add_error",
+          "lineNumber": 248
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 18,
+        "functionCount": 18,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/sysreg.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 188,
+      "nonEmptyLines": 141,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/uart_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 147,
+      "nonEmptyLines": 130,
+      "functions": [
+        {
+          "name": "uart_init",
+          "startLine": 95,
+          "endLine": 123,
+          "params": [
+            "cb",
+            "baudrate_div"
+          ]
+        },
+        {
+          "name": "uart_putc",
+          "startLine": 125,
+          "endLine": 129,
+          "params": [
+            "c"
+          ]
+        },
+        {
+          "name": "uart_getc",
+          "startLine": 131,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "uart_set_baudrate",
+          "startLine": 138,
+          "endLine": 144,
+          "params": [
+            "baudrate_div"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "uart_init",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "uart_putc",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "uart_getc",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "uart_set_baudrate",
+          "line": 138,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uart_init",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 102
+        },
+        {
+          "caller": "uart_init",
+          "callee": "cpu_register_int",
+          "lineNumber": 103
+        },
+        {
+          "caller": "uart_init",
+          "callee": "expt_det_add_error",
+          "lineNumber": 114
+        },
+        {
+          "caller": "uart_init",
+          "callee": "uart_set_baudrate",
+          "lineNumber": 116
+        },
+        {
+          "caller": "uart_init",
+          "callee": "cpu_enable_int",
+          "lineNumber": 117
+        },
+        {
+          "caller": "uart_init",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 119
+        },
+        {
+          "caller": "uart_set_baudrate",
+          "callee": "expt_det_add_error",
+          "lineNumber": 142
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/uart_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 32,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/utc_timer_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/utc_timer_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 158,
+      "nonEmptyLines": 131,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/watchdog_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 182,
+      "nonEmptyLines": 161,
+      "functions": [
+        {
+          "name": "watchdog_init",
+          "startLine": 95,
+          "endLine": 123,
+          "params": [
+            "cb"
+          ]
+        },
+        {
+          "name": "watchdog_start",
+          "startLine": 125,
+          "endLine": 153,
+          "params": [
+            "timeout"
+          ]
+        },
+        {
+          "name": "watchdog_feed",
+          "startLine": 155,
+          "endLine": 165,
+          "params": []
+        },
+        {
+          "name": "watchdog_stop",
+          "startLine": 167,
+          "endLine": 179,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "watchdog_init",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "watchdog_start",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "watchdog_feed",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "watchdog_stop",
+          "line": 167,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "watchdog_init",
+          "callee": "watchdog_get_reg_base",
+          "lineNumber": 97
+        },
+        {
+          "caller": "watchdog_init",
+          "callee": "cpu_register_int",
+          "lineNumber": 103
+        },
+        {
+          "caller": "watchdog_init",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 108
+        },
+        {
+          "caller": "watchdog_init",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 114
+        },
+        {
+          "caller": "watchdog_init",
+          "callee": "expt_det_add_error",
+          "lineNumber": 116
+        },
+        {
+          "caller": "watchdog_init",
+          "callee": "cpu_enable_int",
+          "lineNumber": 118
+        },
+        {
+          "caller": "watchdog_start",
+          "callee": "watchdog_get_reg_base",
+          "lineNumber": 127
+        },
+        {
+          "caller": "watchdog_start",
+          "callee": "expt_det_add_error",
+          "lineNumber": 136
+        },
+        {
+          "caller": "watchdog_start",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 141
+        },
+        {
+          "caller": "watchdog_start",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 149
+        },
+        {
+          "caller": "watchdog_start",
+          "callee": "expt_det_add_error",
+          "lineNumber": 151
+        },
+        {
+          "caller": "watchdog_feed",
+          "callee": "watchdog_get_reg_base",
+          "lineNumber": 157
+        },
+        {
+          "caller": "watchdog_feed",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 159
+        },
+        {
+          "caller": "watchdog_feed",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 164
+        },
+        {
+          "caller": "watchdog_stop",
+          "callee": "watchdog_get_reg_base",
+          "lineNumber": 169
+        },
+        {
+          "caller": "watchdog_stop",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 171
+        },
+        {
+          "caller": "watchdog_stop",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 175
+        },
+        {
+          "caller": "watchdog_stop",
+          "callee": "expt_det_add_error",
+          "lineNumber": 177
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/watchdog_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 38,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/main.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "trng_discard_initial_fixed_output",
+          "startLine": 47,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 60,
+          "endLine": 71,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 60,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "trng_discard_initial_fixed_output",
+          "callee": "cpt_trng_reseed",
+          "lineNumber": 51
+        },
+        {
+          "caller": "trng_discard_initial_fixed_output",
+          "callee": "cpt_get_rand",
+          "lineNumber": 54
+        },
+        {
+          "caller": "trng_discard_initial_fixed_output",
+          "callee": "util_memset",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "trng_discard_initial_fixed_output",
+          "lineNumber": 62
+        },
+        {
+          "caller": "main",
+          "callee": "util_memcpy",
+          "lineNumber": 65
+        },
+        {
+          "caller": "main",
+          "callee": "secboot_entry",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/schedule/expt_det.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 231,
+      "nonEmptyLines": 208,
+      "functions": [
+        {
+          "name": "expt_det_init",
+          "startLine": 65,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "expt_det_check_before",
+          "startLine": 73,
+          "endLine": 79,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "expt_det_check_after",
+          "startLine": 81,
+          "endLine": 84,
+          "params": []
+        },
+        {
+          "name": "expt_det_check_idle",
+          "startLine": 86,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "expt_det_add_error",
+          "startLine": 91,
+          "endLine": 213,
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "expt_det_reset_error",
+          "startLine": 215,
+          "endLine": 227,
+          "params": [
+            "code"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "expt_det_init",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "expt_det_check_before",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "expt_det_check_after",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "expt_det_check_idle",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "expt_det_add_error",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "expt_det_reset_error",
+          "line": 215,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "expt_det_init",
+          "callee": "emu_init",
+          "lineNumber": 68
+        },
+        {
+          "caller": "expt_det_check_before",
+          "callee": "UNUSED",
+          "lineNumber": 77
+        },
+        {
+          "caller": "expt_det_check_after",
+          "callee": "watchdog_feed",
+          "lineNumber": 83
+        },
+        {
+          "caller": "expt_det_check_idle",
+          "callee": "watchdog_feed",
+          "lineNumber": 88
+        },
+        {
+          "caller": "expt_det_add_error",
+          "callee": "emu_trigger_fw_error",
+          "lineNumber": 198
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/schedule/expt_det.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 128,
+      "nonEmptyLines": 99,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/schedule/schedule.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 431,
+      "nonEmptyLines": 387,
+      "functions": [
+        {
+          "name": "sch_check_cmd_auth",
+          "startLine": 159,
+          "endLine": 170,
+          "params": [
+            "comm_chl",
+            "cmd_id"
+          ]
+        },
+        {
+          "name": "sch_trans_sch_chl",
+          "startLine": 172,
+          "endLine": 195,
+          "params": [
+            "comm_chl"
+          ]
+        },
+        {
+          "name": "sch_process_srv",
+          "startLine": 197,
+          "endLine": 313,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "sch_check_wfi_mode",
+          "startLine": 315,
+          "endLine": 327,
+          "params": []
+        },
+        {
+          "name": "sch_init",
+          "startLine": 332,
+          "endLine": 345,
+          "params": []
+        },
+        {
+          "name": "sch_start",
+          "startLine": 347,
+          "endLine": 393,
+          "params": []
+        },
+        {
+          "name": "sch_add_cmd",
+          "startLine": 395,
+          "endLine": 412,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "sch_is_cache_full",
+          "startLine": 414,
+          "endLine": 427,
+          "params": [
+            "comm_chl"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sch_init",
+          "line": 332,
+          "isDefault": false
+        },
+        {
+          "name": "sch_start",
+          "line": 347,
+          "isDefault": false
+        },
+        {
+          "name": "sch_add_cmd",
+          "line": 395,
+          "isDefault": false
+        },
+        {
+          "name": "sch_is_cache_full",
+          "line": 414,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mbcmdpars_handle_read_memory",
+          "callee": "is_internal_test_cmds_enable",
+          "lineNumber": 115
+        },
+        {
+          "caller": "mbcmdpars_handle_read_memory",
+          "callee": "memcpy_",
+          "lineNumber": 118
+        },
+        {
+          "caller": "mbcmdpars_handle_read_memory",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 119
+        },
+        {
+          "caller": "mbcmdpars_handle_write_memory",
+          "callee": "is_internal_test_cmds_enable",
+          "lineNumber": 126
+        },
+        {
+          "caller": "mbcmdpars_handle_write_memory",
+          "callee": "memcpy_",
+          "lineNumber": 129
+        },
+        {
+          "caller": "mbcmdpars_handle_write_memory",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 130
+        },
+        {
+          "caller": "mbcmdpars_jump_to_addr",
+          "callee": "is_internal_test_cmds_enable",
+          "lineNumber": 137
+        },
+        {
+          "caller": "mbcmdpars_jump_to_addr",
+          "callee": "memcpy_",
+          "lineNumber": 140
+        },
+        {
+          "caller": "mbcmdpars_jump_to_addr",
+          "callee": "((void (*)(void))cmd->addr)",
+          "lineNumber": 142
+        },
+        {
+          "caller": "mbcmdpars_jump_to_loop",
+          "callee": "is_internal_test_cmds_enable",
+          "lineNumber": 149
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "kms_srv_handler",
+          "lineNumber": 217
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "rng_srv_handler",
+          "lineNumber": 220
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "ske_srv_mac_handler",
+          "lineNumber": 223
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "hash_srv_handler",
+          "lineNumber": 226
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "hmac_srv_handler",
+          "lineNumber": 229
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "pke_srv_sm2_cipher_handler",
+          "lineNumber": 232
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "pke_srv_sm2_sign_handler",
+          "lineNumber": 235
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "pke_srv_rsa_cipher_handler",
+          "lineNumber": 238
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "pke_srv_rsa_sign_handler",
+          "lineNumber": 241
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "pke_srv_ecdsa_handler",
+          "lineNumber": 244
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "ske_srv_cipher_handler",
+          "lineNumber": 247
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "aead_srv_gcm_handler",
+          "lineNumber": 250
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "aead_srv_ccm_handler",
+          "lineNumber": 253
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "misc_srv_handler",
+          "lineNumber": 267
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "dbgauth_srv_handler",
+          "lineNumber": 272
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "otpkinstl_srv_handler",
+          "lineNumber": 276
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "dbgcmdpars_srv_handler",
+          "lineNumber": 279
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "socvrfy_srv_handler",
+          "lineNumber": 282
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "fwup_srv_handler",
+          "lineNumber": 285
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "mbcmdpars_handle_read_memory",
+          "lineNumber": 293
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "mbcmdpars_handle_write_memory",
+          "lineNumber": 296
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "mbcmdpars_jump_to_addr",
+          "lineNumber": 299
+        },
+        {
+          "caller": "sch_process_srv",
+          "callee": "mbcmdpars_jump_to_loop",
+          "lineNumber": 302
+        },
+        {
+          "caller": "sch_check_wfi_mode",
+          "callee": "log_debug",
+          "lineNumber": 319
+        },
+        {
+          "caller": "sch_check_wfi_mode",
+          "callee": "watchdog_stop",
+          "lineNumber": 320
+        },
+        {
+          "caller": "sch_check_wfi_mode",
+          "callee": "watchdog_start",
+          "lineNumber": 322
+        },
+        {
+          "caller": "sch_check_wfi_mode",
+          "callee": "log_debug",
+          "lineNumber": 323
+        },
+        {
+          "caller": "sch_init",
+          "callee": "queue_init",
+          "lineNumber": 338
+        },
+        {
+          "caller": "sch_start",
+          "callee": "log_debug",
+          "lineNumber": 356
+        },
+        {
+          "caller": "sch_start",
+          "callee": "queue_pop",
+          "lineNumber": 359
+        },
+        {
+          "caller": "sch_start",
+          "callee": "util_memcpy",
+          "lineNumber": 362
+        },
+        {
+          "caller": "sch_start",
+          "callee": "expt_det_check_before",
+          "lineNumber": 363
+        },
+        {
+          "caller": "sch_start",
+          "callee": "comm_send_rsp",
+          "lineNumber": 366
+        },
+        {
+          "caller": "sch_start",
+          "callee": "expt_det_check_after",
+          "lineNumber": 367
+        },
+        {
+          "caller": "sch_start",
+          "callee": "sch_check_cmd_auth",
+          "lineNumber": 371
+        },
+        {
+          "caller": "sch_start",
+          "callee": "sch_process_srv",
+          "lineNumber": 374
+        },
+        {
+          "caller": "sch_start",
+          "callee": "comm_send_rsp",
+          "lineNumber": 382
+        },
+        {
+          "caller": "sch_start",
+          "callee": "expt_det_check_after",
+          "lineNumber": 383
+        },
+        {
+          "caller": "sch_start",
+          "callee": "expt_det_check_idle",
+          "lineNumber": 387
+        },
+        {
+          "caller": "sch_start",
+          "callee": "sch_check_wfi_mode",
+          "lineNumber": 388
+        },
+        {
+          "caller": "sch_start",
+          "callee": "comm_poll",
+          "lineNumber": 390
+        },
+        {
+          "caller": "sch_add_cmd",
+          "callee": "sch_trans_sch_chl",
+          "lineNumber": 403
+        },
+        {
+          "caller": "sch_add_cmd",
+          "callee": "queue_push",
+          "lineNumber": 407
+        },
+        {
+          "caller": "sch_is_cache_full",
+          "callee": "sch_trans_sch_chl",
+          "lineNumber": 419
+        },
+        {
+          "caller": "sch_is_cache_full",
+          "callee": "queue_is_full",
+          "lineNumber": 423
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/schedule/schedule.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 33,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/secboot.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 246,
+      "nonEmptyLines": 217,
+      "functions": [
+        {
+          "name": "secboot_wdg_cb",
+          "startLine": 94,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "secboot_drv_init",
+          "startLine": 100,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "secboot_comp_init",
+          "startLine": 114,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "secboot_srv_init",
+          "startLine": 140,
+          "endLine": 144,
+          "params": []
+        },
+        {
+          "name": "secboot_init_hsm",
+          "startLine": 146,
+          "endLine": 161,
+          "params": []
+        },
+        {
+          "name": "secboot_entry",
+          "startLine": 227,
+          "endLine": 243,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "secboot_entry",
+          "line": 227,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "secboot_wdg_cb",
+          "callee": "expt_det_add_error",
+          "lineNumber": 96
+        },
+        {
+          "caller": "secboot_drv_init",
+          "callee": "cpu_platform_init",
+          "lineNumber": 104
+        },
+        {
+          "caller": "secboot_drv_init",
+          "callee": "watchdog_init",
+          "lineNumber": 106
+        },
+        {
+          "caller": "secboot_drv_init",
+          "callee": "watchdog_start",
+          "lineNumber": 108
+        },
+        {
+          "caller": "secboot_comp_init",
+          "callee": "expt_det_init",
+          "lineNumber": 119
+        },
+        {
+          "caller": "secboot_comp_init",
+          "callee": "comm_init",
+          "lineNumber": 121
+        },
+        {
+          "caller": "secboot_comp_init",
+          "callee": "sch_init",
+          "lineNumber": 125
+        },
+        {
+          "caller": "secboot_comp_init",
+          "callee": "kds_init",
+          "lineNumber": 129
+        },
+        {
+          "caller": "secboot_comp_init",
+          "callee": "otpkey_register_keyid_map",
+          "lineNumber": 133
+        },
+        {
+          "caller": "secboot_srv_init",
+          "callee": "crypto_srv_init",
+          "lineNumber": 142
+        },
+        {
+          "caller": "secboot_init_hsm",
+          "callee": "secboot_drv_init",
+          "lineNumber": 150
+        },
+        {
+          "caller": "secboot_init_hsm",
+          "callee": "secboot_comp_init",
+          "lineNumber": 152
+        },
+        {
+          "caller": "secboot_init_hsm",
+          "callee": "secboot_srv_init",
+          "lineNumber": 156
+        },
+        {
+          "caller": "secboot_init_hsm",
+          "callee": "watchdog_feed",
+          "lineNumber": 158
+        },
+        {
+          "caller": "fid_panic_callback",
+          "callee": "expt_det_add_error",
+          "lineNumber": 218
+        },
+        {
+          "caller": "fid_delay_get_random",
+          "callee": "cpt_get_rand_fast",
+          "lineNumber": 223
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "secboot_init_hsm",
+          "lineNumber": 231
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "log_debug",
+          "lineNumber": 232
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "secboot_update_ver_cnt",
+          "lineNumber": 234
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "log_debug",
+          "lineNumber": 235
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "sysreg_set_status",
+          "lineNumber": 236
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "sch_start",
+          "lineNumber": 237
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "watchdog_stop",
+          "lineNumber": 239
+        },
+        {
+          "caller": "secboot_entry",
+          "callee": "sysreg_set_status",
+          "lineNumber": 240
+        }
+      ],
+      "metrics": {
+        "importCount": 14,
+        "exportCount": 1,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/secboot.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 26,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/dbgauth_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 1157,
+      "nonEmptyLines": 1054,
+      "functions": [
+        {
+          "name": "random_delay",
+          "startLine": 107,
+          "endLine": 120,
+          "params": []
+        },
+        {
+          "name": "check_lifecycle_type",
+          "startLine": 131,
+          "endLine": 171,
+          "params": [
+            "e_type",
+            "challenge_data"
+          ]
+        },
+        {
+          "name": "clear_challenge_st",
+          "startLine": 181,
+          "endLine": 202,
+          "params": [
+            "challenge_type"
+          ]
+        },
+        {
+          "name": "set_challenge_st",
+          "startLine": 213,
+          "endLine": 230,
+          "params": [
+            "challenge_type",
+            "challenge_buf"
+          ]
+        },
+        {
+          "name": "acquire_challenge_buffer",
+          "startLine": 241,
+          "endLine": 260,
+          "params": [
+            "challenge_type",
+            "challenge"
+          ]
+        },
+        {
+          "name": "check_rsa_auth_data",
+          "startLine": 271,
+          "endLine": 289,
+          "params": [
+            "debug_auth_st"
+          ]
+        },
+        {
+          "name": "check_sm2_auth_data",
+          "startLine": 300,
+          "endLine": 322,
+          "params": [
+            "debug_auth_st"
+          ]
+        },
+        {
+          "name": "check_ecc_auth_data",
+          "startLine": 333,
+          "endLine": 350,
+          "params": [
+            "debug_auth_st"
+          ]
+        },
+        {
+          "name": "check_auth_data",
+          "startLine": 363,
+          "endLine": 401,
+          "params": [
+            "challenge_type",
+            "debug_auth_st",
+            "challenge"
+          ]
+        },
+        {
+          "name": "check_challenge_data",
+          "startLine": 413,
+          "endLine": 450,
+          "params": [
+            "type",
+            "challenge",
+            "otp_key_logic_id"
+          ]
+        },
+        {
+          "name": "check_verify_data",
+          "startLine": 464,
+          "endLine": 507,
+          "params": [
+            "type",
+            "challenge",
+            "hash_value",
+            "alg",
+            "sp_key_id"
+          ]
+        },
+        {
+          "name": "debug_auth_sm2",
+          "startLine": 519,
+          "endLine": 558,
+          "params": [
+            "debug_auth",
+            "challenge",
+            "inner_hash"
+          ]
+        },
+        {
+          "name": "debug_auth_rsa",
+          "startLine": 560,
+          "endLine": 594,
+          "params": [
+            "debug_auth",
+            "challenge",
+            "inner_hash"
+          ]
+        },
+        {
+          "name": "debug_auth_ecdsa",
+          "startLine": 607,
+          "endLine": 643,
+          "params": [
+            "debug_auth",
+            "challenge",
+            "inner_hash"
+          ]
+        },
+        {
+          "name": "debug_auth_cmac",
+          "startLine": 656,
+          "endLine": 687,
+          "params": [
+            "debug_auth",
+            "challenge",
+            "sp_key_id"
+          ]
+        },
+        {
+          "name": "debug_auth_check_lifecycle_by_type",
+          "startLine": 698,
+          "endLine": 721,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "check_and_verify",
+          "startLine": 733,
+          "endLine": 768,
+          "params": [
+            "type",
+            "debug_auth",
+            "challenge"
+          ]
+        },
+        {
+          "name": "dbgauth_get_challenge_handle",
+          "startLine": 780,
+          "endLine": 820,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "dbgauth_debug_authentication_handle",
+          "startLine": 832,
+          "endLine": 888,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "dbgauth_close_debug_handle",
+          "startLine": 908,
+          "endLine": 946,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "dbgauth_switch_soc_debug_port",
+          "startLine": 957,
+          "endLine": 996,
+          "params": [
+            "mode",
+            "soc_dbg_bitmap"
+          ]
+        },
+        {
+          "name": "dbgauth_srv_acquire_user_auth_result",
+          "startLine": 1009,
+          "endLine": 1012,
+          "params": []
+        },
+        {
+          "name": "dbgauth_srv_handler",
+          "startLine": 1023,
+          "endLine": 1047,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "dbgauth_ehsm_debug_auth",
+          "startLine": 1059,
+          "endLine": 1094,
+          "params": [
+            "challenge_type",
+            "debug_auth_st"
+          ]
+        },
+        {
+          "name": "dbgauth_get_challenge",
+          "startLine": 1106,
+          "endLine": 1124,
+          "params": [
+            "type",
+            "challenge_buf"
+          ]
+        },
+        {
+          "name": "dbgauth_close_debug",
+          "startLine": 1135,
+          "endLine": 1157,
+          "params": [
+            "type"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "dbgauth_srv_acquire_user_auth_result",
+          "line": 1009,
+          "isDefault": false
+        },
+        {
+          "name": "dbgauth_srv_handler",
+          "line": 1023,
+          "isDefault": false
+        },
+        {
+          "name": "dbgauth_ehsm_debug_auth",
+          "line": 1059,
+          "isDefault": false
+        },
+        {
+          "name": "dbgauth_get_challenge",
+          "line": 1106,
+          "isDefault": false
+        },
+        {
+          "name": "dbgauth_close_debug",
+          "line": 1135,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "random_delay",
+          "callee": "cpt_get_rand_fast",
+          "lineNumber": 113
+        },
+        {
+          "caller": "random_delay",
+          "callee": "uint32_sleep",
+          "lineNumber": 118
+        },
+        {
+          "caller": "check_lifecycle_type",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 134
+        },
+        {
+          "caller": "check_lifecycle_type",
+          "callee": "fid_delay",
+          "lineNumber": 135
+        },
+        {
+          "caller": "check_lifecycle_type",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 136
+        },
+        {
+          "caller": "check_lifecycle_type",
+          "callee": "FID_EQ",
+          "lineNumber": 138
+        },
+        {
+          "caller": "check_lifecycle_type",
+          "callee": "fid_panic",
+          "lineNumber": 139
+        },
+        {
+          "caller": "check_lifecycle_type",
+          "callee": "FID_EQ",
+          "lineNumber": 145
+        },
+        {
+          "caller": "clear_challenge_st",
+          "callee": "util_memset",
+          "lineNumber": 184
+        },
+        {
+          "caller": "clear_challenge_st",
+          "callee": "util_memset",
+          "lineNumber": 189
+        },
+        {
+          "caller": "clear_challenge_st",
+          "callee": "util_memset",
+          "lineNumber": 195
+        },
+        {
+          "caller": "check_auth_data",
+          "callee": "check_sm2_auth_data",
+          "lineNumber": 373
+        },
+        {
+          "caller": "check_auth_data",
+          "callee": "check_ecc_auth_data",
+          "lineNumber": 376
+        },
+        {
+          "caller": "check_auth_data",
+          "callee": "check_rsa_auth_data",
+          "lineNumber": 380
+        },
+        {
+          "caller": "check_auth_data",
+          "callee": "acquire_challenge_buffer",
+          "lineNumber": 397
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 470
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "fid_delay",
+          "lineNumber": 471
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 472
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "FID_EQ",
+          "lineNumber": 474
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "fid_panic",
+          "lineNumber": 475
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "FID_EQ",
+          "lineNumber": 481
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "check_challenge_data",
+          "lineNumber": 484
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 494
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "otpkey_get_phyid",
+          "lineNumber": 499
+        },
+        {
+          "caller": "check_verify_data",
+          "callee": "otpkey_read_data",
+          "lineNumber": 501
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "fid_inc_u32",
+          "lineNumber": 528
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "cpt_hash",
+          "lineNumber": 529
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "fid_inc_u32",
+          "lineNumber": 530
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "util_memcmp",
+          "lineNumber": 532
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "fid_inc_u32",
+          "lineNumber": 539
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "cpt_sm2_getZ",
+          "lineNumber": 540
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "cpt_sm2_getE",
+          "lineNumber": 542
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "fid_inc_u32",
+          "lineNumber": 544
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "fid_inc_u32",
+          "lineNumber": 546
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "cpt_sm2_verify",
+          "lineNumber": 547
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "fid_inc_u32",
+          "lineNumber": 548
+        },
+        {
+          "caller": "debug_auth_sm2",
+          "callee": "util_memset",
+          "lineNumber": 555
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 569
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "cpt_hash",
+          "lineNumber": 570
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 571
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "util_memcmp",
+          "lineNumber": 573
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 580
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "cpt_hash",
+          "lineNumber": 581
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 582
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 584
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "lineNumber": 585
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 588
+        },
+        {
+          "caller": "debug_auth_rsa",
+          "callee": "util_memset",
+          "lineNumber": 592
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 616
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "cpt_hash",
+          "lineNumber": 617
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 618
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "util_memcmp",
+          "lineNumber": 620
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 627
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "cpt_hash",
+          "lineNumber": 628
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 629
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 631
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "cpt_ecdsa_verify",
+          "lineNumber": 632
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "fid_inc_u32",
+          "lineNumber": 634
+        },
+        {
+          "caller": "debug_auth_ecdsa",
+          "callee": "util_memset",
+          "lineNumber": 641
+        },
+        {
+          "caller": "debug_auth_cmac",
+          "callee": "fid_inc_u32",
+          "lineNumber": 674
+        },
+        {
+          "caller": "debug_auth_cmac",
+          "callee": "cpt_ske_cmac",
+          "lineNumber": 675
+        },
+        {
+          "caller": "debug_auth_cmac",
+          "callee": "fid_inc_u32",
+          "lineNumber": 677
+        },
+        {
+          "caller": "debug_auth_cmac",
+          "callee": "util_memcmp",
+          "lineNumber": 679
+        },
+        {
+          "caller": "debug_auth_cmac",
+          "callee": "fid_inc_u32",
+          "lineNumber": 683
+        },
+        {
+          "caller": "debug_auth_check_lifecycle_by_type",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 701
+        },
+        {
+          "caller": "debug_auth_check_lifecycle_by_type",
+          "callee": "fid_delay",
+          "lineNumber": 702
+        },
+        {
+          "caller": "debug_auth_check_lifecycle_by_type",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 703
+        },
+        {
+          "caller": "debug_auth_check_lifecycle_by_type",
+          "callee": "FID_EQ",
+          "lineNumber": 705
+        },
+        {
+          "caller": "debug_auth_check_lifecycle_by_type",
+          "callee": "fid_panic",
+          "lineNumber": 706
+        },
+        {
+          "caller": "check_and_verify",
+          "callee": "check_verify_data",
+          "lineNumber": 743
+        },
+        {
+          "caller": "check_and_verify",
+          "callee": "debug_auth_sm2",
+          "lineNumber": 749
+        },
+        {
+          "caller": "check_and_verify",
+          "callee": "debug_auth_ecdsa",
+          "lineNumber": 752
+        },
+        {
+          "caller": "check_and_verify",
+          "callee": "debug_auth_cmac",
+          "lineNumber": 756
+        },
+        {
+          "caller": "check_and_verify",
+          "callee": "debug_auth_rsa",
+          "lineNumber": 759
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "check_lifecycle_type",
+          "lineNumber": 791
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "cpt_get_rand",
+          "lineNumber": 795
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "otp_read",
+          "lineNumber": 798
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "util_memcpy",
+          "lineNumber": 800
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "set_challenge_st",
+          "lineNumber": 804
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 809
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "clear_challenge_st",
+          "lineNumber": 812
+        },
+        {
+          "caller": "dbgauth_get_challenge_handle",
+          "callee": "util_memset",
+          "lineNumber": 817
+        },
+        {
+          "caller": "dbgauth_debug_authentication_handle",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 853
+        },
+        {
+          "caller": "dbgauth_debug_authentication_handle",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 855
+        },
+        {
+          "caller": "dbgauth_debug_authentication_handle",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 859
+        },
+        {
+          "caller": "dbgauth_debug_authentication_handle",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 872
+        },
+        {
+          "caller": "dbgauth_debug_authentication_handle",
+          "callee": "dbgauth_ehsm_debug_auth",
+          "lineNumber": 883
+        },
+        {
+          "caller": "dbgauth_close_debug_handle",
+          "callee": "debug_auth_check_lifecycle_by_type",
+          "lineNumber": 919
+        },
+        {
+          "caller": "dbgauth_close_debug_handle",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 927
+        },
+        {
+          "caller": "dbgauth_close_debug_handle",
+          "callee": "sysreg_disable_hsm_dbg",
+          "lineNumber": 935
+        },
+        {
+          "caller": "dbgauth_close_debug_handle",
+          "callee": "dbgauth_switch_soc_debug_port",
+          "lineNumber": 937
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_enable_soc_dbg_ext",
+          "lineNumber": 970
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_enable_soc_dbg_ext",
+          "lineNumber": 971
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_enable_soc_dbg_ext",
+          "lineNumber": 972
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_enable_soc_dbg_ext",
+          "lineNumber": 973
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_enable_soc_dbg",
+          "lineNumber": 976
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_disable_soc_dbg_ext",
+          "lineNumber": 984
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_disable_soc_dbg_ext",
+          "lineNumber": 985
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_disable_soc_dbg_ext",
+          "lineNumber": 986
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_disable_soc_dbg_ext",
+          "lineNumber": 987
+        },
+        {
+          "caller": "dbgauth_switch_soc_debug_port",
+          "callee": "sysreg_disable_soc_dbg",
+          "lineNumber": 990
+        },
+        {
+          "caller": "dbgauth_srv_handler",
+          "callee": "dbgauth_get_challenge_handle",
+          "lineNumber": 1032
+        },
+        {
+          "caller": "dbgauth_srv_handler",
+          "callee": "dbgauth_debug_authentication_handle",
+          "lineNumber": 1035
+        },
+        {
+          "caller": "dbgauth_srv_handler",
+          "callee": "dbgauth_close_debug_handle",
+          "lineNumber": 1038
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "fid_set_u32",
+          "lineNumber": 1064
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "debug_auth_check_lifecycle_by_type",
+          "lineNumber": 1068
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "check_auth_data",
+          "lineNumber": 1072
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "check_and_verify",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "FID_EQ",
+          "lineNumber": 1078
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "fid_get_u32",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "fid_panic",
+          "lineNumber": 1080
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "random_delay",
+          "lineNumber": 1082
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "FID_EQ",
+          "lineNumber": 1083
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "sysreg_enable_hsm_dbg",
+          "lineNumber": 1084
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "FID_EQ",
+          "lineNumber": 1085
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "dbgauth_switch_soc_debug_port",
+          "lineNumber": 1088
+        },
+        {
+          "caller": "dbgauth_ehsm_debug_auth",
+          "callee": "clear_challenge_st",
+          "lineNumber": 1092
+        },
+        {
+          "caller": "dbgauth_get_challenge",
+          "callee": "check_lifecycle_type",
+          "lineNumber": 1111
+        },
+        {
+          "caller": "dbgauth_get_challenge",
+          "callee": "cpt_get_rand",
+          "lineNumber": 1113
+        },
+        {
+          "caller": "dbgauth_get_challenge",
+          "callee": "otp_read",
+          "lineNumber": 1115
+        },
+        {
+          "caller": "dbgauth_get_challenge",
+          "callee": "util_memcpy",
+          "lineNumber": 1117
+        },
+        {
+          "caller": "dbgauth_get_challenge",
+          "callee": "set_challenge_st",
+          "lineNumber": 1118
+        },
+        {
+          "caller": "dbgauth_close_debug",
+          "callee": "debug_auth_check_lifecycle_by_type",
+          "lineNumber": 1141
+        },
+        {
+          "caller": "dbgauth_close_debug",
+          "callee": "sysreg_disable_hsm_dbg",
+          "lineNumber": 1145
+        },
+        {
+          "caller": "dbgauth_close_debug",
+          "callee": "util_memset",
+          "lineNumber": 1147
+        },
+        {
+          "caller": "dbgauth_close_debug",
+          "callee": "dbgauth_switch_soc_debug_port",
+          "lineNumber": 1148
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 5,
+        "functionCount": 26,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/dbgauth_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 52,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/kms.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 2745,
+      "nonEmptyLines": 2441,
+      "functions": [
+        {
+          "name": "kms_check_alg_and_permit",
+          "startLine": 167,
+          "endLine": 180,
+          "params": [
+            "algo_id",
+            "permit"
+          ]
+        },
+        {
+          "name": "kms_check_key_size_param",
+          "startLine": 182,
+          "endLine": 209,
+          "params": [
+            "algo_id",
+            "key_size",
+            "dh_common_size",
+            "rsa_e_bit_size"
+          ]
+        },
+        {
+          "name": "kms_check_genkey_param",
+          "startLine": 222,
+          "endLine": 242,
+          "params": [
+            "cmd_data"
+          ]
+        },
+        {
+          "name": "kms_fill_key_head",
+          "startLine": 244,
+          "endLine": 305,
+          "params": [
+            "cmd_data",
+            "khead",
+            "key_size"
+          ]
+        },
+        {
+          "name": "kms_gen_rsa_dh_key",
+          "startLine": 307,
+          "endLine": 326,
+          "params": [
+            "cmd_data",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_crypto_gen_ecc_key",
+          "startLine": 328,
+          "endLine": 353,
+          "params": [
+            "algo_id",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_gen_key_data",
+          "startLine": 355,
+          "endLine": 413,
+          "params": [
+            "cmd_data",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_sign_verify_key_data",
+          "startLine": 415,
+          "endLine": 467,
+          "params": [
+            "key_handle",
+            "in",
+            "in_size",
+            "out",
+            "out_size",
+            "mac_action"
+          ]
+        },
+        {
+          "name": "kms_en_dec_key_data",
+          "startLine": 469,
+          "endLine": 512,
+          "params": [
+            "key_handle",
+            "in",
+            "in_size",
+            "out",
+            "out_size",
+            "crypto_dir"
+          ]
+        },
+        {
+          "name": "kms_check_operation_permission",
+          "startLine": 514,
+          "endLine": 520,
+          "params": []
+        },
+        {
+          "name": "kms_get_key_handle_permission",
+          "startLine": 522,
+          "endLine": 555,
+          "params": [
+            "key_handle",
+            "key_permit"
+          ]
+        },
+        {
+          "name": "kms_check_derive_key_params_ext",
+          "startLine": 557,
+          "endLine": 587,
+          "params": [
+            "cmd_data"
+          ]
+        },
+        {
+          "name": "kms_check_derive_key_params",
+          "startLine": 589,
+          "endLine": 628,
+          "params": [
+            "cmd_data"
+          ]
+        },
+        {
+          "name": "kms_check_exchange_sm2_key_params",
+          "startLine": 630,
+          "endLine": 657,
+          "params": [
+            "sm2_param"
+          ]
+        },
+        {
+          "name": "kms_check_exchange_key_params",
+          "startLine": 659,
+          "endLine": 699,
+          "params": [
+            "cmd_data"
+          ]
+        },
+        {
+          "name": "kms_gen_derived_key",
+          "startLine": 701,
+          "endLine": 736,
+          "params": [
+            "cmd_data",
+            "keydata",
+            "create_key",
+            "create_key_size"
+          ]
+        },
+        {
+          "name": "kms_gen_exchange_sm2_key",
+          "startLine": 738,
+          "endLine": 795,
+          "params": [
+            "cmd_data",
+            "local_kdata",
+            "remote_pubkey",
+            "create_key",
+            "create_key_size"
+          ]
+        },
+        {
+          "name": "kms_gen_exchange_key",
+          "startLine": 797,
+          "endLine": 843,
+          "params": [
+            "cmd_data",
+            "local_kdata",
+            "remote_pubkey",
+            "remote_pubkey_size",
+            "create_key",
+            "create_key_size"
+          ]
+        },
+        {
+          "name": "kms_calcu_key_mem_offset",
+          "startLine": 845,
+          "endLine": 899,
+          "params": [
+            "khead",
+            "req_kpart",
+            "koffset",
+            "ksize"
+          ]
+        },
+        {
+          "name": "kms_calcu_key_mem_size",
+          "startLine": 901,
+          "endLine": 930,
+          "params": [
+            "khead",
+            "kmem_size"
+          ]
+        },
+        {
+          "name": "kms_alloc_pairkey_mem",
+          "startLine": 932,
+          "endLine": 985,
+          "params": [
+            "data",
+            "khead",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_alloc_privkey_mem",
+          "startLine": 987,
+          "endLine": 1046,
+          "params": [
+            "data",
+            "khead",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_alloc_pubkey_mem",
+          "startLine": 1060,
+          "endLine": 1093,
+          "params": [
+            "data",
+            "khead",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_alloc_key_mem",
+          "startLine": 1107,
+          "endLine": 1127,
+          "params": [
+            "data",
+            "khead",
+            "req_kpart",
+            "keypair"
+          ]
+        },
+        {
+          "name": "kms_read_otp_key",
+          "startLine": 1142,
+          "endLine": 1180,
+          "params": [
+            "key_handle",
+            "key_buff",
+            "buff_size",
+            "keydata",
+            "req_kpart"
+          ]
+        },
+        {
+          "name": "kms_read_memory_key",
+          "startLine": 1195,
+          "endLine": 1231,
+          "params": [
+            "key_handle",
+            "key_buff",
+            "buff_size",
+            "keydata",
+            "req_kpart"
+          ]
+        },
+        {
+          "name": "kms_calcu_public_key_from_priv",
+          "startLine": 1244,
+          "endLine": 1291,
+          "params": [
+            "cmd_data",
+            "keypair",
+            "key_alg_id",
+            "pkey_max_size"
+          ]
+        },
+        {
+          "name": "kms_check_key_head_validity",
+          "startLine": 1303,
+          "endLine": 1397,
+          "params": [
+            "khead",
+            "import_data_size"
+          ]
+        },
+        {
+          "name": "kms_decrypt_verify_key_data",
+          "startLine": 1412,
+          "endLine": 1498,
+          "params": [
+            "transport_key_handle",
+            "authenticity_key_handle",
+            "key_data",
+            "key_size",
+            "key_signature_data",
+            "key_signature_size"
+          ]
+        },
+        {
+          "name": "kms_sign_encrypt_key_data",
+          "startLine": 1514,
+          "endLine": 1600,
+          "params": [
+            "transport_key_handle",
+            "authenticity_key_handle",
+            "key_data",
+            "key_size",
+            "key_signature_data",
+            "key_signature_size",
+            "req_key_part"
+          ]
+        },
+        {
+          "name": "kms_check_key_write_protection_disable",
+          "startLine": 1611,
+          "endLine": 1635,
+          "params": [
+            "target_key_handle"
+          ]
+        },
+        {
+          "name": "kms_check_import_key_permission",
+          "startLine": 1643,
+          "endLine": 1679,
+          "params": [
+            "import_key_handle",
+            "import_key_permit",
+            "transport_key_handle"
+          ]
+        },
+        {
+          "name": "kms_check_export_key_permission",
+          "startLine": 1685,
+          "endLine": 1713,
+          "params": [
+            "export_key_handle",
+            "transport_key_handle"
+          ]
+        },
+        {
+          "name": "kms_check_derive_key_permission",
+          "startLine": 1726,
+          "endLine": 1775,
+          "params": [
+            "target_key_handle",
+            "derive_key_permit",
+            "parent_key_handle",
+            "derive_type"
+          ]
+        },
+        {
+          "name": "kms_check_exchange_key_permission",
+          "startLine": 1788,
+          "endLine": 1819,
+          "params": [
+            "target_key_handle",
+            "input_permit",
+            "local_key_handle"
+          ]
+        },
+        {
+          "name": "kms_generate_key",
+          "startLine": 1830,
+          "endLine": 1889,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_import_key",
+          "startLine": 1901,
+          "endLine": 1960,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_export_key",
+          "startLine": 1973,
+          "endLine": 2029,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_remove_key",
+          "startLine": 2041,
+          "endLine": 2068,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_derive_key",
+          "startLine": 2080,
+          "endLine": 2148,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_exchange_key",
+          "startLine": 2160,
+          "endLine": 2221,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_calculate_key",
+          "startLine": 2233,
+          "endLine": 2285,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "kms_check_key_usage",
+          "startLine": 2303,
+          "endLine": 2314,
+          "params": [
+            "key_usage_bits",
+            "chk_usage_bits"
+          ]
+        },
+        {
+          "name": "kms_get_ske_alg",
+          "startLine": 2327,
+          "endLine": 2382,
+          "params": [
+            "algo_id",
+            "ske_alg"
+          ]
+        },
+        {
+          "name": "kms_read_dh_field_sz",
+          "startLine": 2384,
+          "endLine": 2401,
+          "params": [
+            "addr",
+            "offset",
+            "buf_size",
+            "max_field_sz",
+            "field_sz"
+          ]
+        },
+        {
+          "name": "kms_read_and_check_dh_sz_param",
+          "startLine": 2403,
+          "endLine": 2437,
+          "params": [
+            "remap_addr",
+            "dh_common_size",
+            "dh_p_sz",
+            "dh_q_sz",
+            "dh_g_sz",
+            "dh_h_sz"
+          ]
+        },
+        {
+          "name": "kms_parse_dh_common_data",
+          "startLine": 2451,
+          "endLine": 2516,
+          "params": [
+            "dh_common_addr",
+            "dh_common_size",
+            "dh_common_buff",
+            "dh_common_buff_size",
+            "dh_para"
+          ]
+        },
+        {
+          "name": "kms_expend_dh_keypair",
+          "startLine": 2532,
+          "endLine": 2564,
+          "params": [
+            "priv_key_data",
+            "priv_key_size",
+            "pub_key_data",
+            "pub_key_size",
+            "dh_p_len",
+            "dh_q_len"
+          ]
+        },
+        {
+          "name": "kms_gen_exchange_dh_key",
+          "startLine": 2566,
+          "endLine": 2596,
+          "params": [
+            "cmd_data",
+            "local_kdata",
+            "remote_pubkey",
+            "remote_pubkey_size",
+            "create_key",
+            "create_key_size"
+          ]
+        },
+        {
+          "name": "kms_read_key",
+          "startLine": 2615,
+          "endLine": 2647,
+          "params": [
+            "key_handle",
+            "key_buff",
+            "buff_size",
+            "keydata",
+            "req_kpart",
+            "check_usage_bits"
+          ]
+        },
+        {
+          "name": "kms_dh_generate_key",
+          "startLine": 2661,
+          "endLine": 2697,
+          "params": [
+            "dh_para",
+            "prikey",
+            "pubkey",
+            "prikey_size"
+          ]
+        },
+        {
+          "name": "kms_srv_handler",
+          "startLine": 2709,
+          "endLine": 2745,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "kms_read_key",
+          "line": 2615,
+          "isDefault": false
+        },
+        {
+          "name": "kms_srv_handler",
+          "line": 2709,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "kms_check_genkey_param",
+          "callee": "kms_check_alg_and_permit",
+          "lineNumber": 228
+        },
+        {
+          "caller": "kms_check_genkey_param",
+          "callee": "kms_check_key_size_param",
+          "lineNumber": 233
+        },
+        {
+          "caller": "kms_fill_key_head",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 287
+        },
+        {
+          "caller": "kms_fill_key_head",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 289
+        },
+        {
+          "caller": "kms_gen_rsa_dh_key",
+          "callee": "kms_parse_dh_common_data",
+          "lineNumber": 318
+        },
+        {
+          "caller": "kms_gen_rsa_dh_key",
+          "callee": "kms_dh_generate_key",
+          "lineNumber": 321
+        },
+        {
+          "caller": "kms_crypto_gen_ecc_key",
+          "callee": "cpt_sm2_getkey",
+          "lineNumber": 336
+        },
+        {
+          "caller": "kms_crypto_gen_ecc_key",
+          "callee": "cpt_ed25519_getkey",
+          "lineNumber": 338
+        },
+        {
+          "caller": "kms_crypto_gen_ecc_key",
+          "callee": "cpt_x25519_getkey",
+          "lineNumber": 340
+        },
+        {
+          "caller": "kms_crypto_gen_ecc_key",
+          "callee": "get_curve_param_type",
+          "lineNumber": 343
+        },
+        {
+          "caller": "kms_crypto_gen_ecc_key",
+          "callee": "cpt_eccp_getkey",
+          "lineNumber": 345
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "kms_gen_rsa_dh_key",
+          "lineNumber": 370
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "cpt_get_rand",
+          "lineNumber": 373
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "kms_crypto_gen_ecc_key",
+          "lineNumber": 375
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "watchdog_stop",
+          "lineNumber": 377
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "cpt_rsa_get_key",
+          "lineNumber": 378
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "watchdog_start",
+          "lineNumber": 380
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 382
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 383
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 384
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "watchdog_stop",
+          "lineNumber": 387
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "cpt_rsa_get_crtkey",
+          "lineNumber": 388
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "watchdog_start",
+          "lineNumber": 391
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 393
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 394
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 395
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 397
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 399
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 401
+        },
+        {
+          "caller": "kms_gen_key_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 403
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "util_memset",
+          "lineNumber": 426
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "kms_read_key",
+          "lineNumber": 433
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "kms_get_ske_alg",
+          "lineNumber": 443
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "cpt_ske_get_block_byte_len",
+          "lineNumber": 451
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "cpt_ske_cmac",
+          "lineNumber": 455
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "cpt_ske_cmac",
+          "lineNumber": 457
+        },
+        {
+          "caller": "kms_sign_verify_key_data",
+          "callee": "util_memset",
+          "lineNumber": 464
+        },
+        {
+          "caller": "kms_en_dec_key_data",
+          "callee": "util_memset",
+          "lineNumber": 479
+        },
+        {
+          "caller": "kms_en_dec_key_data",
+          "callee": "kms_read_key",
+          "lineNumber": 483
+        },
+        {
+          "caller": "kms_en_dec_key_data",
+          "callee": "kms_get_ske_alg",
+          "lineNumber": 493
+        },
+        {
+          "caller": "kms_en_dec_key_data",
+          "callee": "cpt_ske_crypto",
+          "lineNumber": 502
+        },
+        {
+          "caller": "kms_en_dec_key_data",
+          "callee": "cpt_ske_crypto",
+          "lineNumber": 505
+        },
+        {
+          "caller": "kms_en_dec_key_data",
+          "callee": "util_memset",
+          "lineNumber": 509
+        },
+        {
+          "caller": "kms_get_key_handle_permission",
+          "callee": "otpkey_aquire_key_attr",
+          "lineNumber": 540
+        },
+        {
+          "caller": "kms_get_key_handle_permission",
+          "callee": "kds_read_key",
+          "lineNumber": 545
+        },
+        {
+          "caller": "kms_check_derive_key_params",
+          "callee": "kms_check_alg_and_permit",
+          "lineNumber": 595
+        },
+        {
+          "caller": "kms_check_derive_key_params",
+          "callee": "kms_check_derive_key_params_ext",
+          "lineNumber": 623
+        },
+        {
+          "caller": "kms_check_exchange_key_params",
+          "callee": "kms_check_alg_and_permit",
+          "lineNumber": 665
+        },
+        {
+          "caller": "kms_gen_derived_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 717
+        },
+        {
+          "caller": "kms_gen_derived_key",
+          "callee": "cpt_pbkdf2_hmac",
+          "lineNumber": 725
+        },
+        {
+          "caller": "kms_gen_derived_key",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 725
+        },
+        {
+          "caller": "kms_gen_derived_key",
+          "callee": "cpt_ansi_x9_63_kdf",
+          "lineNumber": 730
+        },
+        {
+          "caller": "kms_gen_derived_key",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 730
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 752
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "kms_check_exchange_sm2_key_params",
+          "lineNumber": 754
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 758
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "kms_read_key",
+          "lineNumber": 763
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "cpt_sm2_getZ",
+          "lineNumber": 775
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "cpt_sm2_getZ",
+          "lineNumber": 777
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "cpt_sm2_exchangekey",
+          "lineNumber": 780
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 786
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 788
+        },
+        {
+          "caller": "kms_gen_exchange_sm2_key",
+          "callee": "util_memset",
+          "lineNumber": 793
+        },
+        {
+          "caller": "kms_gen_exchange_key",
+          "callee": "kms_gen_exchange_sm2_key",
+          "lineNumber": 816
+        },
+        {
+          "caller": "kms_gen_exchange_key",
+          "callee": "kms_gen_exchange_dh_key",
+          "lineNumber": 818
+        },
+        {
+          "caller": "kms_gen_exchange_key",
+          "callee": "cpt_x25519_compute_key",
+          "lineNumber": 823
+        },
+        {
+          "caller": "kms_gen_exchange_key",
+          "callee": "get_curve_param_type",
+          "lineNumber": 826
+        },
+        {
+          "caller": "kms_gen_exchange_key",
+          "callee": "GET_BYTE_LEN",
+          "lineNumber": 828
+        },
+        {
+          "caller": "kms_gen_exchange_key",
+          "callee": "cpt_ecdh_compute_key",
+          "lineNumber": 829
+        },
+        {
+          "caller": "kms_calcu_key_mem_offset",
+          "callee": "kms_calcu_key_mem_size",
+          "lineNumber": 857
+        },
+        {
+          "caller": "kms_calcu_key_mem_size",
+          "callee": "util_memset",
+          "lineNumber": 915
+        },
+        {
+          "caller": "kms_alloc_pairkey_mem",
+          "callee": "util_memset",
+          "lineNumber": 950
+        },
+        {
+          "caller": "kms_alloc_privkey_mem",
+          "callee": "util_memset",
+          "lineNumber": 998
+        },
+        {
+          "caller": "kms_alloc_pubkey_mem",
+          "callee": "util_memset",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "kms_alloc_key_mem",
+          "callee": "kms_alloc_pairkey_mem",
+          "lineNumber": 1118
+        },
+        {
+          "caller": "kms_alloc_key_mem",
+          "callee": "kms_alloc_pubkey_mem",
+          "lineNumber": 1120
+        },
+        {
+          "caller": "kms_alloc_key_mem",
+          "callee": "kms_alloc_privkey_mem",
+          "lineNumber": 1122
+        },
+        {
+          "caller": "kms_read_otp_key",
+          "callee": "util_memset",
+          "lineNumber": 1148
+        },
+        {
+          "caller": "kms_read_otp_key",
+          "callee": "otpkey_aquire_key_attr",
+          "lineNumber": 1157
+        },
+        {
+          "caller": "kms_read_otp_key",
+          "callee": "otpkey_get_phyid",
+          "lineNumber": 1169
+        },
+        {
+          "caller": "kms_read_otp_key",
+          "callee": "otpkey_read_data",
+          "lineNumber": 1174
+        },
+        {
+          "caller": "kms_read_memory_key",
+          "callee": "util_memset",
+          "lineNumber": 1207
+        },
+        {
+          "caller": "kms_read_memory_key",
+          "callee": "kds_read_key",
+          "lineNumber": 1209
+        },
+        {
+          "caller": "kms_read_memory_key",
+          "callee": "kms_calcu_key_mem_offset",
+          "lineNumber": 1212
+        },
+        {
+          "caller": "kms_read_memory_key",
+          "callee": "kds_read_key",
+          "lineNumber": 1216
+        },
+        {
+          "caller": "kms_read_memory_key",
+          "callee": "kms_alloc_key_mem",
+          "lineNumber": 1220
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "kms_parse_dh_common_data",
+          "lineNumber": 1257
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "kms_expend_dh_keypair",
+          "lineNumber": 1262
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "cpt_dh_generate_pubkey_from_prikey",
+          "lineNumber": 1265
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "cpt_sm2_get_pubkey_from_prikey",
+          "lineNumber": 1273
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "cpt_x25519_get_pubkey_from_prikey",
+          "lineNumber": 1275
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "cpt_ed25519_get_pubkey_from_prikey",
+          "lineNumber": 1277
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "get_curve_param_type",
+          "lineNumber": 1280
+        },
+        {
+          "caller": "kms_calcu_public_key_from_priv",
+          "callee": "cpt_eccp_get_pubkey_from_prikey",
+          "lineNumber": 1282
+        },
+        {
+          "caller": "kms_check_key_head_validity",
+          "callee": "kms_check_alg_and_permit",
+          "lineNumber": 1313
+        },
+        {
+          "caller": "kms_decrypt_verify_key_data",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 1419
+        },
+        {
+          "caller": "kms_decrypt_verify_key_data",
+          "callee": "kms_calcu_key_mem_size",
+          "lineNumber": 1430
+        },
+        {
+          "caller": "kms_decrypt_verify_key_data",
+          "callee": "kms_en_dec_key_data",
+          "lineNumber": 1448
+        },
+        {
+          "caller": "kms_decrypt_verify_key_data",
+          "callee": "kms_en_dec_key_data",
+          "lineNumber": 1471
+        },
+        {
+          "caller": "kms_decrypt_verify_key_data",
+          "callee": "kms_sign_verify_key_data",
+          "lineNumber": 1492
+        },
+        {
+          "caller": "kms_sign_encrypt_key_data",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 1523
+        },
+        {
+          "caller": "kms_sign_encrypt_key_data",
+          "callee": "kms_calcu_key_mem_size",
+          "lineNumber": 1531
+        },
+        {
+          "caller": "kms_sign_encrypt_key_data",
+          "callee": "util_memcpy",
+          "lineNumber": 1554
+        },
+        {
+          "caller": "kms_sign_encrypt_key_data",
+          "callee": "kms_sign_verify_key_data",
+          "lineNumber": 1578
+        },
+        {
+          "caller": "kms_sign_encrypt_key_data",
+          "callee": "kms_en_dec_key_data",
+          "lineNumber": 1586
+        },
+        {
+          "caller": "kms_check_key_write_protection_disable",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 1618
+        },
+        {
+          "caller": "kms_check_import_key_permission",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 1655
+        },
+        {
+          "caller": "kms_check_export_key_permission",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 1693
+        },
+        {
+          "caller": "kms_check_derive_key_permission",
+          "callee": "kms_check_key_write_protection_disable",
+          "lineNumber": 1732
+        },
+        {
+          "caller": "kms_check_derive_key_permission",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 1738
+        },
+        {
+          "caller": "kms_check_exchange_key_permission",
+          "callee": "kms_check_key_write_protection_disable",
+          "lineNumber": 1795
+        },
+        {
+          "caller": "kms_check_exchange_key_permission",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 1800
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 1838
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_check_operation_permission",
+          "lineNumber": 1840
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "util_memset",
+          "lineNumber": 1846
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_check_genkey_param",
+          "lineNumber": 1847
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_check_key_write_protection_disable",
+          "lineNumber": 1850
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_fill_key_head",
+          "lineNumber": 1865
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_alloc_key_mem",
+          "lineNumber": 1869
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kms_gen_key_data",
+          "lineNumber": 1873
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "kds_write_key",
+          "lineNumber": 1878
+        },
+        {
+          "caller": "kms_generate_key",
+          "callee": "util_memset",
+          "lineNumber": 1885
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 1910
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "kms_check_operation_permission",
+          "lineNumber": 1912
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1921
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1926
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "kms_check_key_head_validity",
+          "lineNumber": 1932
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "kms_check_import_key_permission",
+          "lineNumber": 1936
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "kms_decrypt_verify_key_data",
+          "lineNumber": 1942
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "kds_write_key",
+          "lineNumber": 1948
+        },
+        {
+          "caller": "kms_import_key",
+          "callee": "util_memset",
+          "lineNumber": 1956
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 1981
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "kms_check_operation_permission",
+          "lineNumber": 1983
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "util_memset",
+          "lineNumber": 1989
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "kms_check_export_key_permission",
+          "lineNumber": 1991
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "kds_read_entire_key",
+          "lineNumber": 1993
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "kms_sign_encrypt_key_data",
+          "lineNumber": 2002
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 2009
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 2016
+        },
+        {
+          "caller": "kms_export_key",
+          "callee": "util_memset",
+          "lineNumber": 2025
+        },
+        {
+          "caller": "kms_remove_key",
+          "callee": "kms_check_operation_permission",
+          "lineNumber": 2047
+        },
+        {
+          "caller": "kms_remove_key",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 2055
+        },
+        {
+          "caller": "kms_remove_key",
+          "callee": "kds_remove_key",
+          "lineNumber": 2063
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 2088
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 2089
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "util_memset",
+          "lineNumber": 2091
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_check_operation_permission",
+          "lineNumber": 2093
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_check_derive_key_params",
+          "lineNumber": 2100
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_check_derive_key_permission",
+          "lineNumber": 2103
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_read_key",
+          "lineNumber": 2111
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 2120
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kms_gen_derived_key",
+          "lineNumber": 2125
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "kds_write_key",
+          "lineNumber": 2135
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "util_memset",
+          "lineNumber": 2144
+        },
+        {
+          "caller": "kms_derive_key",
+          "callee": "util_memset",
+          "lineNumber": 2145
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kms_get_key_format_pointer",
+          "lineNumber": 2169
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "util_memset",
+          "lineNumber": 2171
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kms_check_operation_permission",
+          "lineNumber": 2173
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kms_check_exchange_key_params",
+          "lineNumber": 2179
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kms_check_exchange_key_permission",
+          "lineNumber": 2181
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 2185
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kms_read_key",
+          "lineNumber": 2191
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kms_gen_exchange_key",
+          "lineNumber": 2196
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "kds_write_key",
+          "lineNumber": 2207
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "util_memset",
+          "lineNumber": 2216
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "util_memset",
+          "lineNumber": 2217
+        },
+        {
+          "caller": "kms_exchange_key",
+          "callee": "util_memset",
+          "lineNumber": 2218
+        },
+        {
+          "caller": "kms_calculate_key",
+          "callee": "kms_read_key",
+          "lineNumber": 2248
+        },
+        {
+          "caller": "kms_calculate_key",
+          "callee": "kms_calcu_public_key_from_priv",
+          "lineNumber": 2259
+        },
+        {
+          "caller": "kms_calculate_key",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 2268
+        },
+        {
+          "caller": "kms_calculate_key",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 2271
+        },
+        {
+          "caller": "kms_calculate_key",
+          "callee": "util_memset",
+          "lineNumber": 2282
+        },
+        {
+          "caller": "kms_read_dh_field_sz",
+          "callee": "util_memcpy",
+          "lineNumber": 2392
+        },
+        {
+          "caller": "kms_read_and_check_dh_sz_param",
+          "callee": "kms_read_dh_field_sz",
+          "lineNumber": 2413
+        },
+        {
+          "caller": "kms_read_and_check_dh_sz_param",
+          "callee": "kms_read_dh_field_sz",
+          "lineNumber": 2417
+        },
+        {
+          "caller": "kms_read_and_check_dh_sz_param",
+          "callee": "kms_read_dh_field_sz",
+          "lineNumber": 2421
+        },
+        {
+          "caller": "kms_read_and_check_dh_sz_param",
+          "callee": "kms_read_dh_field_sz",
+          "lineNumber": 2426
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 2462
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 2469
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "kms_read_and_check_dh_sz_param",
+          "lineNumber": 2474
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 2485
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 2486
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 2487
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "reverse_byte_array",
+          "lineNumber": 2490
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "util_memset",
+          "lineNumber": 2499
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "util_memset",
+          "lineNumber": 2503
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "util_memset",
+          "lineNumber": 2507
+        },
+        {
+          "caller": "kms_parse_dh_common_data",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 2513
+        },
+        {
+          "caller": "kms_expend_dh_keypair",
+          "callee": "kds_util_memmove",
+          "lineNumber": 2550
+        },
+        {
+          "caller": "kms_expend_dh_keypair",
+          "callee": "util_memset",
+          "lineNumber": 2551
+        },
+        {
+          "caller": "kms_expend_dh_keypair",
+          "callee": "kds_util_memmove",
+          "lineNumber": 2558
+        },
+        {
+          "caller": "kms_expend_dh_keypair",
+          "callee": "util_memset",
+          "lineNumber": 2559
+        },
+        {
+          "caller": "kms_gen_exchange_dh_key",
+          "callee": "kms_parse_dh_common_data",
+          "lineNumber": 2578
+        },
+        {
+          "caller": "kms_gen_exchange_dh_key",
+          "callee": "kms_expend_dh_keypair",
+          "lineNumber": 2586
+        },
+        {
+          "caller": "kms_gen_exchange_dh_key",
+          "callee": "cpt_dh_compute_key",
+          "lineNumber": 2592
+        },
+        {
+          "caller": "kms_read_key",
+          "callee": "kms_get_key_handle_permission",
+          "lineNumber": 2629
+        },
+        {
+          "caller": "kms_read_key",
+          "callee": "kms_check_key_usage",
+          "lineNumber": 2633
+        },
+        {
+          "caller": "kms_read_key",
+          "callee": "kms_read_otp_key",
+          "lineNumber": 2638
+        },
+        {
+          "caller": "kms_read_key",
+          "callee": "kms_read_memory_key",
+          "lineNumber": 2640
+        },
+        {
+          "caller": "kms_dh_generate_key",
+          "callee": "GET_BYTE_LEN",
+          "lineNumber": 2672
+        },
+        {
+          "caller": "kms_dh_generate_key",
+          "callee": "cpt_get_rand",
+          "lineNumber": 2678
+        },
+        {
+          "caller": "kms_dh_generate_key",
+          "callee": "cpt_dh_generate_pubkey_from_prikey",
+          "lineNumber": 2689
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_generate_key",
+          "lineNumber": 2718
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_import_key",
+          "lineNumber": 2721
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_export_key",
+          "lineNumber": 2724
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_derive_key",
+          "lineNumber": 2727
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_exchange_key",
+          "lineNumber": 2730
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_calculate_key",
+          "lineNumber": 2733
+        },
+        {
+          "caller": "kms_srv_handler",
+          "callee": "kms_remove_key",
+          "lineNumber": 2736
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 52,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/misc_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 950,
+      "nonEmptyLines": 863,
+      "functions": [
+        {
+          "name": "misc_data_cmp",
+          "startLine": 119,
+          "endLine": 134,
+          "params": [
+            "r",
+            "i",
+            "s",
+            "o"
+          ]
+        },
+        {
+          "name": "misc_loop_write_otp_unit",
+          "startLine": 148,
+          "endLine": 177,
+          "params": [
+            "addr",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "misc_check_otp_data",
+          "startLine": 191,
+          "endLine": 221,
+          "params": [
+            "addr",
+            "data",
+            "size",
+            "flag"
+          ]
+        },
+        {
+          "name": "misc_write_otp_data",
+          "startLine": 236,
+          "endLine": 264,
+          "params": [
+            "otp_addr",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "misc_chk_otp_write_limit",
+          "startLine": 272,
+          "endLine": 303,
+          "params": [
+            "cmd_data"
+          ]
+        },
+        {
+          "name": "misc_write_otp_handler",
+          "startLine": 316,
+          "endLine": 342,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_read_otp_handler",
+          "startLine": 354,
+          "endLine": 390,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_read_reg_handle",
+          "startLine": 402,
+          "endLine": 431,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_write_reg_handle",
+          "startLine": 443,
+          "endLine": 472,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_life_cycle_convert",
+          "startLine": 480,
+          "endLine": 515,
+          "params": [
+            "dev_lc"
+          ]
+        },
+        {
+          "name": "misc_delete_all_keys",
+          "startLine": 523,
+          "endLine": 530,
+          "params": []
+        },
+        {
+          "name": "misc_chk_chg_lfcycle_limit",
+          "startLine": 541,
+          "endLine": 582,
+          "params": [
+            "chg_lf_type"
+          ]
+        },
+        {
+          "name": "misc_change_lifecycle_handler",
+          "startLine": 594,
+          "endLine": 660,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_change_controlfield_handler",
+          "startLine": 672,
+          "endLine": 720,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_read_version_handler",
+          "startLine": 732,
+          "endLine": 787,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_get_emu_status_handler",
+          "startLine": 801,
+          "endLine": 831,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_set_baudrate_handler",
+          "startLine": 871,
+          "endLine": 889,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "misc_srv_handler",
+          "startLine": 901,
+          "endLine": 950,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "misc_loop_write_otp_unit",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "misc_check_otp_data",
+          "line": 191,
+          "isDefault": false
+        },
+        {
+          "name": "misc_write_otp_data",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "misc_srv_handler",
+          "line": 901,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "misc_data_cmp",
+          "callee": "util_memcmp",
+          "lineNumber": 123
+        },
+        {
+          "caller": "misc_data_cmp",
+          "callee": "util_memcpy",
+          "lineNumber": 130
+        },
+        {
+          "caller": "misc_loop_write_otp_unit",
+          "callee": "otp_read",
+          "lineNumber": 158
+        },
+        {
+          "caller": "misc_loop_write_otp_unit",
+          "callee": "misc_data_cmp",
+          "lineNumber": 160
+        },
+        {
+          "caller": "misc_loop_write_otp_unit",
+          "callee": "otp_write",
+          "lineNumber": 162
+        },
+        {
+          "caller": "misc_check_otp_data",
+          "callee": "otp_read",
+          "lineNumber": 202
+        },
+        {
+          "caller": "misc_check_otp_data",
+          "callee": "misc_data_cmp",
+          "lineNumber": 204
+        },
+        {
+          "caller": "misc_write_otp_data",
+          "callee": "misc_loop_write_otp_unit",
+          "lineNumber": 250
+        },
+        {
+          "caller": "misc_write_otp_data",
+          "callee": "misc_check_otp_data",
+          "lineNumber": 255
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 275
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "fid_delay",
+          "lineNumber": 276
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 277
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 279
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "fid_panic",
+          "lineNumber": 280
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 286
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 289
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 289
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 290
+        },
+        {
+          "caller": "misc_chk_otp_write_limit",
+          "callee": "otp_verify",
+          "lineNumber": 295
+        },
+        {
+          "caller": "misc_write_otp_handler",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 329
+        },
+        {
+          "caller": "misc_write_otp_handler",
+          "callee": "misc_chk_otp_write_limit",
+          "lineNumber": 334
+        },
+        {
+          "caller": "misc_write_otp_handler",
+          "callee": "misc_write_otp_data",
+          "lineNumber": 338
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 359
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "fid_delay",
+          "lineNumber": 360
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 361
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 363
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "fid_panic",
+          "lineNumber": 364
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 376
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 376
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 377
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "otp_read",
+          "lineNumber": 381
+        },
+        {
+          "caller": "misc_read_otp_handler",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 386
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 406
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "fid_delay",
+          "lineNumber": 407
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 408
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "FID_EQ",
+          "lineNumber": 410
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "fid_panic",
+          "lineNumber": 411
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "FID_EQ",
+          "lineNumber": 417
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "FID_EQ",
+          "lineNumber": 417
+        },
+        {
+          "caller": "misc_read_reg_handle",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 420
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 447
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "fid_delay",
+          "lineNumber": 448
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 449
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "FID_EQ",
+          "lineNumber": 451
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "fid_panic",
+          "lineNumber": 452
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "FID_EQ",
+          "lineNumber": 458
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "FID_EQ",
+          "lineNumber": 458
+        },
+        {
+          "caller": "misc_write_reg_handle",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 461
+        },
+        {
+          "caller": "misc_delete_all_keys",
+          "callee": "kds_remove_all_key",
+          "lineNumber": 527
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 545
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "fid_delay",
+          "lineNumber": 546
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 547
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 549
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "fid_panic",
+          "lineNumber": 550
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "misc_life_cycle_convert",
+          "lineNumber": 554
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "FID_EQ",
+          "lineNumber": 563
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "dbgauth_srv_acquire_user_auth_result",
+          "lineNumber": 564
+        },
+        {
+          "caller": "misc_chk_chg_lfcycle_limit",
+          "callee": "misc_delete_all_keys",
+          "lineNumber": 574
+        },
+        {
+          "caller": "misc_change_lifecycle_handler",
+          "callee": "misc_chk_chg_lfcycle_limit",
+          "lineNumber": 640
+        },
+        {
+          "caller": "misc_change_lifecycle_handler",
+          "callee": "misc_write_otp_data",
+          "lineNumber": 647
+        },
+        {
+          "caller": "misc_change_lifecycle_handler",
+          "callee": "misc_write_otp_data",
+          "lineNumber": 654
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 676
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "fid_delay",
+          "lineNumber": 679
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 680
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 682
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "fid_panic",
+          "lineNumber": 683
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "util_memset",
+          "lineNumber": 685
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 698
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 705
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 706
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "FID_EQ",
+          "lineNumber": 709
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "util_memcpy",
+          "lineNumber": 714
+        },
+        {
+          "caller": "misc_change_controlfield_handler",
+          "callee": "misc_write_otp_data",
+          "lineNumber": 715
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "util_memset",
+          "lineNumber": 744
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_pke_get_version",
+          "lineNumber": 770
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_pke_get_driver_version",
+          "lineNumber": 771
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_ske_get_version",
+          "lineNumber": 772
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_ske_get_driver_version",
+          "lineNumber": 773
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_hash_get_version",
+          "lineNumber": 774
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_hash_get_driver_version",
+          "lineNumber": 775
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_trng_get_version",
+          "lineNumber": 776
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "cpt_trng_get_driver_version",
+          "lineNumber": 777
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "otp_read",
+          "lineNumber": 779
+        },
+        {
+          "caller": "misc_read_version_handler",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 781
+        },
+        {
+          "caller": "misc_get_emu_status_handler",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 822
+        },
+        {
+          "caller": "misc_otp_write_for_test_handler",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 848
+        },
+        {
+          "caller": "misc_otp_write_for_test_handler",
+          "callee": "otp_write",
+          "lineNumber": 853
+        },
+        {
+          "caller": "misc_set_baudrate_handler",
+          "callee": "uart_set_baudrate",
+          "lineNumber": 884
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_write_otp_handler",
+          "lineNumber": 910
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_read_otp_handler",
+          "lineNumber": 913
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_write_reg_handle",
+          "lineNumber": 916
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_read_reg_handle",
+          "lineNumber": 919
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_read_version_handler",
+          "lineNumber": 922
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_change_lifecycle_handler",
+          "lineNumber": 925
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_change_controlfield_handler",
+          "lineNumber": 928
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_get_emu_status_handler",
+          "lineNumber": 931
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_set_baudrate_handler",
+          "lineNumber": 936
+        },
+        {
+          "caller": "misc_srv_handler",
+          "callee": "misc_otp_write_for_test_handler",
+          "lineNumber": 940
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 4,
+        "functionCount": 18,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/otpkinstl_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 643,
+      "nonEmptyLines": 599,
+      "functions": [
+        {
+          "name": "write_otp_key",
+          "startLine": 91,
+          "endLine": 120,
+          "params": [
+            "key_id",
+            "attr",
+            "key",
+            "crc"
+          ]
+        },
+        {
+          "name": "otpkinstl_check_life_cycle",
+          "startLine": 131,
+          "endLine": 158,
+          "params": [
+            "key_id",
+            "key_level"
+          ]
+        },
+        {
+          "name": "encrypt_otp_key",
+          "startLine": 174,
+          "endLine": 188,
+          "params": [
+            "alg",
+            "crypto",
+            "encrypt_logic_keyid",
+            "in",
+            "out",
+            "in_bytes",
+            "out_bytes"
+          ]
+        },
+        {
+          "name": "gen_random_otp_key",
+          "startLine": 201,
+          "endLine": 242,
+          "params": [
+            "random_key_type",
+            "cipher_key",
+            "key_len",
+            "encrypt_logic_keyid"
+          ]
+        },
+        {
+          "name": "gen_otp_key_attr",
+          "startLine": 252,
+          "endLine": 260,
+          "params": [
+            "key_attr"
+          ]
+        },
+        {
+          "name": "decrypt_cipher_key",
+          "startLine": 275,
+          "endLine": 328,
+          "params": [
+            "key_id",
+            "indata",
+            "in_len",
+            "key_lvl",
+            "out_key"
+          ]
+        },
+        {
+          "name": "fw_gen_random_otp_key",
+          "startLine": 342,
+          "endLine": 384,
+          "params": [
+            "random_key_type",
+            "key_attr",
+            "key_len"
+          ]
+        },
+        {
+          "name": "fw_encrypt_key",
+          "startLine": 397,
+          "endLine": 455,
+          "params": [
+            "key_attr",
+            "key",
+            "in_key_size"
+          ]
+        },
+        {
+          "name": "otpkinstl_fw_install_random_key",
+          "startLine": 466,
+          "endLine": 506,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "otpkinstl_fw_install_encrypt_key",
+          "startLine": 519,
+          "endLine": 570,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "crc32_mpeg2",
+          "startLine": 583,
+          "endLine": 608,
+          "params": [
+            "in",
+            "num",
+            "crc"
+          ]
+        },
+        {
+          "name": "otpkinstl_srv_handler",
+          "startLine": 622,
+          "endLine": 643,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "otpkinstl_srv_handler",
+          "line": 622,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "write_otp_key",
+          "callee": "util_memset",
+          "lineNumber": 102
+        },
+        {
+          "caller": "write_otp_key",
+          "callee": "util_memcpy",
+          "lineNumber": 103
+        },
+        {
+          "caller": "write_otp_key",
+          "callee": "util_memcpy",
+          "lineNumber": 104
+        },
+        {
+          "caller": "write_otp_key",
+          "callee": "util_memcpy",
+          "lineNumber": 105
+        },
+        {
+          "caller": "write_otp_key",
+          "callee": "otpmap_convert_keyid_to_addr",
+          "lineNumber": 107
+        },
+        {
+          "caller": "write_otp_key",
+          "callee": "otp_verify",
+          "lineNumber": 109
+        },
+        {
+          "caller": "write_otp_key",
+          "callee": "misc_write_otp_data",
+          "lineNumber": 111
+        },
+        {
+          "caller": "otpkinstl_check_life_cycle",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 134
+        },
+        {
+          "caller": "otpkinstl_check_life_cycle",
+          "callee": "fid_delay",
+          "lineNumber": 135
+        },
+        {
+          "caller": "otpkinstl_check_life_cycle",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 136
+        },
+        {
+          "caller": "otpkinstl_check_life_cycle",
+          "callee": "FID_EQ",
+          "lineNumber": 138
+        },
+        {
+          "caller": "otpkinstl_check_life_cycle",
+          "callee": "fid_panic",
+          "lineNumber": 139
+        },
+        {
+          "caller": "encrypt_otp_key",
+          "callee": "otpkey_get_phyid",
+          "lineNumber": 181
+        },
+        {
+          "caller": "encrypt_otp_key",
+          "callee": "cpt_ske_crypto",
+          "lineNumber": 183
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "sysreg_get_otpkey_dec_alg",
+          "lineNumber": 210
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "cpt_get_rand",
+          "lineNumber": 219
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "cpt_sm2_getkey",
+          "lineNumber": 222
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "encrypt_otp_key",
+          "lineNumber": 224
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "cpt_eccp_getkey",
+          "lineNumber": 229
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "encrypt_otp_key",
+          "lineNumber": 231
+        },
+        {
+          "caller": "gen_random_otp_key",
+          "callee": "util_memset",
+          "lineNumber": 240
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "util_memset",
+          "lineNumber": 291
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "sysreg_get_otpkey_dec_alg",
+          "lineNumber": 292
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "cpt_ske_crypto",
+          "lineNumber": 313
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "util_memcpy",
+          "lineNumber": 316
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "crc32_mpeg2",
+          "lineNumber": 317
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "util_memcpy",
+          "lineNumber": 319
+        },
+        {
+          "caller": "decrypt_cipher_key",
+          "callee": "util_memset",
+          "lineNumber": 325
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "otpkinstl_check_life_cycle",
+          "lineNumber": 353
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 360
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 364
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "util_memset",
+          "lineNumber": 373
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "gen_random_otp_key",
+          "lineNumber": 374
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "gen_otp_key_attr",
+          "lineNumber": 376
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "crc32_mpeg2",
+          "lineNumber": 377
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "write_otp_key",
+          "lineNumber": 378
+        },
+        {
+          "caller": "fw_gen_random_otp_key",
+          "callee": "util_memset",
+          "lineNumber": 382
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "otpkinstl_check_life_cycle",
+          "lineNumber": 413
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 421
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 425
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "decrypt_cipher_key",
+          "lineNumber": 436
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "util_memcpy",
+          "lineNumber": 438
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "sysreg_get_otpkey_dec_alg",
+          "lineNumber": 442
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "encrypt_otp_key",
+          "lineNumber": 443
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "gen_otp_key_attr",
+          "lineNumber": 446
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "crc32_mpeg2",
+          "lineNumber": 447
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "write_otp_key",
+          "lineNumber": 448
+        },
+        {
+          "caller": "fw_encrypt_key",
+          "callee": "util_memset",
+          "lineNumber": 452
+        },
+        {
+          "caller": "otpkinstl_fw_install_random_key",
+          "callee": "fw_gen_random_otp_key",
+          "lineNumber": 499
+        },
+        {
+          "caller": "otpkinstl_fw_install_encrypt_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 552
+        },
+        {
+          "caller": "otpkinstl_fw_install_encrypt_key",
+          "callee": "fw_encrypt_key",
+          "lineNumber": 561
+        },
+        {
+          "caller": "otpkinstl_fw_install_encrypt_key",
+          "callee": "util_memset",
+          "lineNumber": 567
+        },
+        {
+          "caller": "otpkinstl_srv_handler",
+          "callee": "otpkinstl_fw_install_random_key",
+          "lineNumber": 631
+        },
+        {
+          "caller": "otpkinstl_srv_handler",
+          "callee": "otpkinstl_fw_install_encrypt_key",
+          "lineNumber": 634
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 12,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/otpkinstl_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 37,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/she/she_key.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/she/she_util.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/socvrfy_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 918,
+      "nonEmptyLines": 813,
+      "functions": [
+        {
+          "name": "socvrfy_header_is_valid",
+          "startLine": 63,
+          "endLine": 79,
+          "params": [
+            "header"
+          ]
+        },
+        {
+          "name": "socvrfy_get_dec_alg",
+          "startLine": 81,
+          "endLine": 98,
+          "params": [
+            "verify_alg"
+          ]
+        },
+        {
+          "name": "socvrfy_verify_pubkey",
+          "startLine": 100,
+          "endLine": 132,
+          "params": [
+            "hash_alg",
+            "pubkey",
+            "pubkey_len",
+            "key_id"
+          ]
+        },
+        {
+          "name": "socvrfy_verify_rsa_signature",
+          "startLine": 134,
+          "endLine": 154,
+          "params": [
+            "hash_value",
+            "signature",
+            "pubkey",
+            "n_bits"
+          ]
+        },
+        {
+          "name": "socvrfy_verify_sm2_signature",
+          "startLine": 156,
+          "endLine": 174,
+          "params": [
+            "hash_value",
+            "signature",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "socvrfy_ecc_p256r1_verify_code_sign",
+          "startLine": 176,
+          "endLine": 190,
+          "params": [
+            "hash_value",
+            "signature",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "socvrfy_verify_signature",
+          "startLine": 192,
+          "endLine": 216,
+          "params": [
+            "verify_alg",
+            "hash_value",
+            "signature",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "socvrfy_read_and_check_header",
+          "startLine": 218,
+          "endLine": 257,
+          "params": [
+            "header_buff",
+            "header_addr",
+            "check_version"
+          ]
+        },
+        {
+          "name": "fwverify_copy_data_dma",
+          "startLine": 259,
+          "endLine": 274,
+          "params": [
+            "src_addr",
+            "dst_addr",
+            "size",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "socvrfy_dec_image",
+          "startLine": 276,
+          "endLine": 310,
+          "params": [
+            "cmd",
+            "header",
+            "dec_phy_key",
+            "dec_alg"
+          ]
+        },
+        {
+          "name": "socvrfy_check_verify_key",
+          "startLine": 312,
+          "endLine": 349,
+          "params": [
+            "verify_key",
+            "verify_alg"
+          ]
+        },
+        {
+          "name": "socvrfy_get_alg_and_key",
+          "startLine": 351,
+          "endLine": 384,
+          "params": [
+            "image_type",
+            "verify_key",
+            "verify_alg",
+            "dec_key",
+            "dec_alg"
+          ]
+        },
+        {
+          "name": "socvrfy_update_otp_ver_cnt",
+          "startLine": 386,
+          "endLine": 409,
+          "params": [
+            "header"
+          ]
+        },
+        {
+          "name": "socvrfy_vry_soc_fw",
+          "startLine": 411,
+          "endLine": 468,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "socvrfy_get_sign_by_alg",
+          "startLine": 470,
+          "endLine": 503,
+          "params": [
+            "image_addr",
+            "signature",
+            "verify_alg"
+          ]
+        },
+        {
+          "name": "socvrfy_calc_sm3_header_hash",
+          "startLine": 505,
+          "endLine": 531,
+          "params": [
+            "hash_ctx",
+            "pukkey",
+            "verify_addr",
+            "verify_size"
+          ]
+        },
+        {
+          "name": "socvrfy_calc_sm3_code_hash",
+          "startLine": 533,
+          "endLine": 580,
+          "params": [
+            "hash_ctx",
+            "verify_addr",
+            "verify_size",
+            "signature"
+          ]
+        },
+        {
+          "name": "socvrfy_calc_sm2_e_value",
+          "startLine": 582,
+          "endLine": 603,
+          "params": [
+            "verify_addr",
+            "data_size",
+            "pukkey",
+            "signature"
+          ]
+        },
+        {
+          "name": "socvrfy_sm2_verify_code_sign",
+          "startLine": 605,
+          "endLine": 633,
+          "params": [
+            "image_addr",
+            "header",
+            "key_id"
+          ]
+        },
+        {
+          "name": "socvrfy_rsa_verify_code_sign",
+          "startLine": 635,
+          "endLine": 672,
+          "params": [
+            "image_addr",
+            "header",
+            "key_id",
+            "verify_alg"
+          ]
+        },
+        {
+          "name": "socvrfy_sym_verify_code_sign",
+          "startLine": 674,
+          "endLine": 722,
+          "params": [
+            "image_addr",
+            "verify_alg",
+            "header",
+            "key_id"
+          ]
+        },
+        {
+          "name": "socvrfy_check_code_sign",
+          "startLine": 724,
+          "endLine": 747,
+          "params": [
+            "image_addr",
+            "verify_alg",
+            "header",
+            "key_id"
+          ]
+        },
+        {
+          "name": "socvrfy_check_param",
+          "startLine": 749,
+          "endLine": 767,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "socvrfy_data_sec_double_check",
+          "startLine": 769,
+          "endLine": 796,
+          "params": [
+            "data",
+            "expect_data",
+            "byte_len",
+            "error_sw",
+            "expect_sw"
+          ]
+        },
+        {
+          "name": "socvrfy_srv_handler",
+          "startLine": 800,
+          "endLine": 813,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "socvrfy_get_and_verify_pubkey",
+          "startLine": 815,
+          "endLine": 859,
+          "params": [
+            "key_head",
+            "pukkey",
+            "verify_alg",
+            "key_id"
+          ]
+        },
+        {
+          "name": "socvrfy_check_fw_header",
+          "startLine": 861,
+          "endLine": 879,
+          "params": [
+            "header",
+            "check_version",
+            "version"
+          ]
+        },
+        {
+          "name": "socvrfy_check_ver_cnt",
+          "startLine": 881,
+          "endLine": 915,
+          "params": [
+            "otp_version_counter",
+            "code_version_counter"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "socvrfy_srv_handler",
+          "line": 800,
+          "isDefault": false
+        },
+        {
+          "name": "socvrfy_get_and_verify_pubkey",
+          "line": 815,
+          "isDefault": false
+        },
+        {
+          "name": "socvrfy_check_fw_header",
+          "line": 861,
+          "isDefault": false
+        },
+        {
+          "name": "socvrfy_check_ver_cnt",
+          "line": 881,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "socvrfy_header_is_valid",
+          "callee": "util_memcpy",
+          "lineNumber": 71
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "cpt_hash",
+          "lineNumber": 108
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "util_memset",
+          "lineNumber": 110
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "otpkey_read_data",
+          "lineNumber": 112
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "cpt_get_rand_fast",
+          "lineNumber": 116
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "uint32_sleep",
+          "lineNumber": 118
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "uint32_cmp_sec",
+          "lineNumber": 119
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "uint32_sleep",
+          "lineNumber": 120
+        },
+        {
+          "caller": "socvrfy_verify_pubkey",
+          "callee": "uint32_cmp_sec",
+          "lineNumber": 121
+        },
+        {
+          "caller": "socvrfy_verify_rsa_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 139
+        },
+        {
+          "caller": "socvrfy_verify_rsa_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 143
+        },
+        {
+          "caller": "socvrfy_verify_rsa_signature",
+          "callee": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "lineNumber": 144
+        },
+        {
+          "caller": "socvrfy_verify_rsa_signature",
+          "callee": "FID_NOT_EQ",
+          "lineNumber": 146
+        },
+        {
+          "caller": "socvrfy_verify_rsa_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 149
+        },
+        {
+          "caller": "socvrfy_verify_rsa_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 151
+        },
+        {
+          "caller": "socvrfy_verify_sm2_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 160
+        },
+        {
+          "caller": "socvrfy_verify_sm2_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 164
+        },
+        {
+          "caller": "socvrfy_verify_sm2_signature",
+          "callee": "cpt_sm2_verify",
+          "lineNumber": 165
+        },
+        {
+          "caller": "socvrfy_verify_sm2_signature",
+          "callee": "FID_NOT_EQ",
+          "lineNumber": 166
+        },
+        {
+          "caller": "socvrfy_verify_sm2_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 169
+        },
+        {
+          "caller": "socvrfy_verify_sm2_signature",
+          "callee": "fid_inc_u32",
+          "lineNumber": 171
+        },
+        {
+          "caller": "socvrfy_ecc_p256r1_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 181
+        },
+        {
+          "caller": "socvrfy_ecc_p256r1_verify_code_sign",
+          "callee": "cpt_ecdsa_verify",
+          "lineNumber": 182
+        },
+        {
+          "caller": "socvrfy_ecc_p256r1_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 183
+        },
+        {
+          "caller": "socvrfy_ecc_p256r1_verify_code_sign",
+          "callee": "FID_NOT_EQ",
+          "lineNumber": 184
+        },
+        {
+          "caller": "socvrfy_ecc_p256r1_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 187
+        },
+        {
+          "caller": "socvrfy_verify_signature",
+          "callee": "socvrfy_verify_rsa_signature",
+          "lineNumber": 199
+        },
+        {
+          "caller": "socvrfy_verify_signature",
+          "callee": "socvrfy_verify_rsa_signature",
+          "lineNumber": 202
+        },
+        {
+          "caller": "socvrfy_verify_signature",
+          "callee": "socvrfy_verify_sm2_signature",
+          "lineNumber": 205
+        },
+        {
+          "caller": "socvrfy_verify_signature",
+          "callee": "socvrfy_ecc_p256r1_verify_code_sign",
+          "lineNumber": 208
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 220
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "fid_delay",
+          "lineNumber": 224
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "sysreg_get_life_cycle",
+          "lineNumber": 225
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "FID_EQ",
+          "lineNumber": 227
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "fid_panic",
+          "lineNumber": 228
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 236
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "fid_inc_u32",
+          "lineNumber": 241
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "otp_read",
+          "lineNumber": 243
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "socvrfy_check_fw_header",
+          "lineNumber": 245
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "FID_EQ",
+          "lineNumber": 247
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "FID_EQ",
+          "lineNumber": 248
+        },
+        {
+          "caller": "socvrfy_read_and_check_header",
+          "callee": "fid_inc_u32",
+          "lineNumber": 253
+        },
+        {
+          "caller": "fwverify_copy_data_dma",
+          "callee": "cpt_ske_dma_crypto",
+          "lineNumber": 269
+        },
+        {
+          "caller": "socvrfy_dec_image",
+          "callee": "fwverify_copy_data_dma",
+          "lineNumber": 296
+        },
+        {
+          "caller": "socvrfy_dec_image",
+          "callee": "cpt_ske_dma_crypto",
+          "lineNumber": 304
+        },
+        {
+          "caller": "socvrfy_check_verify_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 345
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 359
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "otpkey_get_phyid",
+          "lineNumber": 361
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "sysreg_get_soc_verify_alg",
+          "lineNumber": 363
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "socvrfy_get_dec_alg",
+          "lineNumber": 364
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "otpkey_check_usage",
+          "lineNumber": 368
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "otpkey_get_phyid",
+          "lineNumber": 370
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "sysreg_get_fw_verify_alg",
+          "lineNumber": 372
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "socvrfy_get_dec_alg",
+          "lineNumber": 373
+        },
+        {
+          "caller": "socvrfy_get_alg_and_key",
+          "callee": "socvrfy_check_verify_key",
+          "lineNumber": 380
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "otp_read",
+          "lineNumber": 392
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "util_memcpy",
+          "lineNumber": 394
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "fid_delay",
+          "lineNumber": 396
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "uint32_BigNumCmp",
+          "lineNumber": 398
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "uint32_BigNumCmp",
+          "lineNumber": 400
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "misc_write_otp_data",
+          "lineNumber": 403
+        },
+        {
+          "caller": "socvrfy_update_otp_ver_cnt",
+          "callee": "fid_inc_u32",
+          "lineNumber": 406
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fid_set_u32",
+          "lineNumber": 420
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "socvrfy_check_param",
+          "lineNumber": 421
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "socvrfy_read_and_check_header",
+          "lineNumber": 423
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fwverify_copy_data_dma",
+          "lineNumber": 428
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "socvrfy_get_alg_and_key",
+          "lineNumber": 430
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fwverify_copy_data_dma",
+          "lineNumber": 433
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "socvrfy_dec_image",
+          "lineNumber": 436
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "FID_EQ",
+          "lineNumber": 442
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fid_inc_u32",
+          "lineNumber": 444
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "socvrfy_check_code_sign",
+          "lineNumber": 446
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "FID_EQ",
+          "lineNumber": 452
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "FID_NOT_EQ",
+          "lineNumber": 453
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "FID_EQ",
+          "lineNumber": 454
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "socvrfy_update_otp_ver_cnt",
+          "lineNumber": 455
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fid_inc_u32",
+          "lineNumber": 457
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "FID_EQ",
+          "lineNumber": 461
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fid_get_u32",
+          "lineNumber": 462
+        },
+        {
+          "caller": "socvrfy_vry_soc_fw",
+          "callee": "fid_panic",
+          "lineNumber": 463
+        },
+        {
+          "caller": "socvrfy_get_sign_by_alg",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 499
+        },
+        {
+          "caller": "socvrfy_calc_sm3_header_hash",
+          "callee": "cpt_sm2_getZ",
+          "lineNumber": 515
+        },
+        {
+          "caller": "socvrfy_calc_sm3_header_hash",
+          "callee": "cpt_hash_init",
+          "lineNumber": 517
+        },
+        {
+          "caller": "socvrfy_calc_sm3_header_hash",
+          "callee": "cpt_hash_update",
+          "lineNumber": 520
+        },
+        {
+          "caller": "socvrfy_calc_sm3_header_hash",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 523
+        },
+        {
+          "caller": "socvrfy_calc_sm3_header_hash",
+          "callee": "cpt_hash_update",
+          "lineNumber": 526
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "cpt_hash_ctx_switch",
+          "lineNumber": 550
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "cpt_hash_dma_final",
+          "lineNumber": 559
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "util_memcpy",
+          "lineNumber": 561
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "cpt_hash_dma_update_blocks",
+          "lineNumber": 564
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 567
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "cpt_hash_ctx_switch",
+          "lineNumber": 570
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "cpt_hash_update",
+          "lineNumber": 571
+        },
+        {
+          "caller": "socvrfy_calc_sm3_code_hash",
+          "callee": "cpt_hash_final",
+          "lineNumber": 574
+        },
+        {
+          "caller": "socvrfy_calc_sm2_e_value",
+          "callee": "socvrfy_calc_sm3_header_hash",
+          "lineNumber": 595
+        },
+        {
+          "caller": "socvrfy_calc_sm2_e_value",
+          "callee": "socvrfy_calc_sm3_code_hash",
+          "lineNumber": 599
+        },
+        {
+          "caller": "socvrfy_sm2_verify_code_sign",
+          "callee": "util_memcpy",
+          "lineNumber": 618
+        },
+        {
+          "caller": "socvrfy_sm2_verify_code_sign",
+          "callee": "socvrfy_get_sign_by_alg",
+          "lineNumber": 621
+        },
+        {
+          "caller": "socvrfy_sm2_verify_code_sign",
+          "callee": "socvrfy_get_and_verify_pubkey",
+          "lineNumber": 623
+        },
+        {
+          "caller": "socvrfy_sm2_verify_code_sign",
+          "callee": "socvrfy_calc_sm2_e_value",
+          "lineNumber": 626
+        },
+        {
+          "caller": "socvrfy_sm2_verify_code_sign",
+          "callee": "socvrfy_verify_signature",
+          "lineNumber": 628
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "util_memcpy",
+          "lineNumber": 655
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "socvrfy_get_sign_by_alg",
+          "lineNumber": 658
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "socvrfy_get_and_verify_pubkey",
+          "lineNumber": 660
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "cpt_hash_dma",
+          "lineNumber": 663
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "util_memcpy",
+          "lineNumber": 665
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "hash_get_digest_word_len",
+          "lineNumber": 666
+        },
+        {
+          "caller": "socvrfy_rsa_verify_code_sign",
+          "callee": "socvrfy_verify_signature",
+          "lineNumber": 667
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 690
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 694
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "util_memcpy",
+          "lineNumber": 697
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "socvrfy_get_sign_by_alg",
+          "lineNumber": 700
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "otpkey_get_phyid",
+          "lineNumber": 702
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 704
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 706
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "cpt_ske_dma_cmac",
+          "lineNumber": 708
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 711
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "util_memcpy",
+          "lineNumber": 712
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "socvrfy_data_sec_double_check",
+          "lineNumber": 713
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 717
+        },
+        {
+          "caller": "socvrfy_sym_verify_code_sign",
+          "callee": "fid_inc_u32",
+          "lineNumber": 719
+        },
+        {
+          "caller": "socvrfy_check_code_sign",
+          "callee": "socvrfy_sm2_verify_code_sign",
+          "lineNumber": 730
+        },
+        {
+          "caller": "socvrfy_check_code_sign",
+          "callee": "socvrfy_rsa_verify_code_sign",
+          "lineNumber": 735
+        },
+        {
+          "caller": "socvrfy_check_code_sign",
+          "callee": "socvrfy_sym_verify_code_sign",
+          "lineNumber": 739
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "util_memcpy",
+          "lineNumber": 777
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "util_memcpy",
+          "lineNumber": 778
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "cpt_get_rand_fast",
+          "lineNumber": 780
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "uint32_sleep",
+          "lineNumber": 783
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "uint32_cmp_sec",
+          "lineNumber": 784
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "uint32_sleep",
+          "lineNumber": 787
+        },
+        {
+          "caller": "socvrfy_data_sec_double_check",
+          "callee": "uint32_cmp_sec",
+          "lineNumber": 788
+        },
+        {
+          "caller": "socvrfy_srv_handler",
+          "callee": "util_memcpy",
+          "lineNumber": 808
+        },
+        {
+          "caller": "socvrfy_srv_handler",
+          "callee": "socvrfy_vry_soc_fw",
+          "lineNumber": 809
+        },
+        {
+          "caller": "socvrfy_get_and_verify_pubkey",
+          "callee": "util_memcpy",
+          "lineNumber": 848
+        },
+        {
+          "caller": "socvrfy_get_and_verify_pubkey",
+          "callee": "util_memcpy",
+          "lineNumber": 849
+        },
+        {
+          "caller": "socvrfy_get_and_verify_pubkey",
+          "callee": "util_memcpy",
+          "lineNumber": 852
+        },
+        {
+          "caller": "socvrfy_get_and_verify_pubkey",
+          "callee": "socvrfy_verify_pubkey",
+          "lineNumber": 854
+        },
+        {
+          "caller": "socvrfy_check_fw_header",
+          "callee": "socvrfy_header_is_valid",
+          "lineNumber": 868
+        },
+        {
+          "caller": "socvrfy_check_fw_header",
+          "callee": "socvrfy_check_ver_cnt",
+          "lineNumber": 870
+        },
+        {
+          "caller": "socvrfy_check_ver_cnt",
+          "callee": "util_memcpy",
+          "lineNumber": 892
+        },
+        {
+          "caller": "socvrfy_check_ver_cnt",
+          "callee": "util_memcpy",
+          "lineNumber": 893
+        },
+        {
+          "caller": "socvrfy_check_ver_cnt",
+          "callee": "uint32_BigNumCmp",
+          "lineNumber": 901
+        },
+        {
+          "caller": "socvrfy_check_ver_cnt",
+          "callee": "uint32_BigNumCmp",
+          "lineNumber": 903
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 28,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/socvrfy_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 98,
+      "nonEmptyLines": 82,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

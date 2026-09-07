@@ -1,0 +1,2349 @@
+Trivially needed symbols: get_prime/20 PrimeTable_r/13 PrimeTable_s/12
+
+
+Initial Symbol table:
+
+Bigint_Check_1/27 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_modexp_internal/26 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_get_operand_bytes/23 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+pke_pre_calc_mont/22 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 get_prime/20 
+  Calls: 
+get_prime/20 (get_prime)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: primality_test_Fermat/17 bigint_div_table_low/15 bigint_div_table_high/14 prepare_starting_integer/19 get_rand/21 get_PTL/18 
+prepare_starting_integer/19 (prepare_starting_integer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822aac8440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+get_PTL/18 (get_PTL)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822aac8990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+primality_test_Fermat/17 (primality_test_Fermat)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: primality_test_Fermat_internal/16 pke_get_operand_bytes/23 pke_pre_calc_mont/22 GET_WORD_LEN/8 
+primality_test_Fermat_internal/16 (primality_test_Fermat_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: Bigint_Check_1/27 rPKE_A/4 pke_modexp_internal/26 rPKE_A/4 rPKE_B/5 rPKE_A/4 uint32_clear/25 rPKE_B/5 rPKE_B/5 get_rand/21 uint32_clear/25 rPKE_B/5 rPKE_A/4 uint32_copy/24 rPKE_A/4 
+bigint_div_table_low/15 (bigint_div_table_low)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822aac8770
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+bigint_div_table_high/14 (bigint_div_table_high)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822aac8550
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+PrimeTable_r/13 (PrimeTable_r)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f822aac8aa0
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable_s/12 (PrimeTable_s)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f822aadc100
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable/11 (PrimeTable)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822aac8550
+  References: 
+  Referring: bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822aac8660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f822ade1990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_MAX_LEN/7 CAST2UINT32/6 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+Bigint_Check_1/27 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_modexp_internal/26 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_get_operand_bytes/23 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+pke_pre_calc_mont/22 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 get_prime/20 
+  Calls: 
+get_prime/20 (get_prime)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: primality_test_Fermat/17 bigint_div_table_low/15 bigint_div_table_high/14 prepare_starting_integer/19 get_rand/21 get_PTL/18 
+prepare_starting_integer/19 (prepare_starting_integer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+get_PTL/18 (get_PTL)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+primality_test_Fermat/17 (primality_test_Fermat)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: primality_test_Fermat_internal/16 pke_get_operand_bytes/23 pke_pre_calc_mont/22 GET_WORD_LEN/8 
+primality_test_Fermat_internal/16 (primality_test_Fermat_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: Bigint_Check_1/27 rPKE_A/4 pke_modexp_internal/26 rPKE_A/4 rPKE_B/5 rPKE_A/4 uint32_clear/25 rPKE_B/5 rPKE_B/5 get_rand/21 uint32_clear/25 rPKE_B/5 rPKE_A/4 uint32_copy/24 rPKE_A/4 
+bigint_div_table_low/15 (bigint_div_table_low)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+bigint_div_table_high/14 (bigint_div_table_high)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+PrimeTable_r/13 (PrimeTable_r)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable_s/12 (PrimeTable_s)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable/11 (PrimeTable)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+
+
+Initial Symbol table:
+
+Bigint_Check_1/27 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_modexp_internal/26 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_get_operand_bytes/23 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+pke_pre_calc_mont/22 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 get_prime/20 
+  Calls: 
+get_prime/20 (get_prime)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: primality_test_Fermat/17 bigint_div_table_low/15 bigint_div_table_high/14 prepare_starting_integer/19 get_rand/21 get_PTL/18 
+prepare_starting_integer/19 (prepare_starting_integer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+get_PTL/18 (get_PTL)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+primality_test_Fermat/17 (primality_test_Fermat)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: primality_test_Fermat_internal/16 pke_get_operand_bytes/23 pke_pre_calc_mont/22 GET_WORD_LEN/8 
+primality_test_Fermat_internal/16 (primality_test_Fermat_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: Bigint_Check_1/27 rPKE_A/4 pke_modexp_internal/26 rPKE_A/4 rPKE_B/5 rPKE_A/4 uint32_clear/25 rPKE_B/5 rPKE_B/5 get_rand/21 uint32_clear/25 rPKE_B/5 rPKE_A/4 uint32_copy/24 rPKE_A/4 
+bigint_div_table_low/15 (bigint_div_table_low)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+bigint_div_table_high/14 (bigint_div_table_high)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+PrimeTable_r/13 (PrimeTable_r)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable_s/12 (PrimeTable_s)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable/11 (PrimeTable)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+Bigint_Check_1/27 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_modexp_internal/26 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 
+  Calls: 
+pke_get_operand_bytes/23 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+pke_pre_calc_mont/22 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat/17 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 get_prime/20 
+  Calls: 
+get_prime/20 (get_prime)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: primality_test_Fermat/17 bigint_div_table_low/15 bigint_div_table_high/14 prepare_starting_integer/19 get_rand/21 get_PTL/18 
+prepare_starting_integer/19 (prepare_starting_integer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+get_PTL/18 (get_PTL)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+primality_test_Fermat/17 (primality_test_Fermat)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: primality_test_Fermat_internal/16 pke_get_operand_bytes/23 pke_pre_calc_mont/22 GET_WORD_LEN/8 
+primality_test_Fermat_internal/16 (primality_test_Fermat_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: Bigint_Check_1/27 rPKE_A/4 pke_modexp_internal/26 rPKE_A/4 rPKE_B/5 rPKE_A/4 uint32_clear/25 rPKE_B/5 rPKE_B/5 get_rand/21 uint32_clear/25 rPKE_B/5 rPKE_A/4 uint32_copy/24 rPKE_A/4 
+bigint_div_table_low/15 (bigint_div_table_low)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+bigint_div_table_high/14 (bigint_div_table_high)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: PrimeTable/11 (read) PrimeTable/11 (read) PrimeTable/11 (read) 
+  Referring: 
+  Function flags: body
+  Called by: get_prime/20 
+  Calls: 
+PrimeTable_r/13 (PrimeTable_r)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable_s/12 (PrimeTable_s)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+PrimeTable/11 (PrimeTable)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_high/14 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) bigint_div_table_low/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat/17 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 primality_test_Fermat_internal/16 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+prepare_starting_integer.isra.0/39 (prepare_starting_integer.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function prepare_starting_integer.isra/39 is inline copy in get_prime/20
+  Clone of prepare_starting_integer/19
+  Availability: local
+  Function flags: count:77953656 (estimated locally) local nonfreeing_fn
+  Called by: get_prime/20 (inlined) (77953656 (estimated locally),0.33 per call) 
+  Calls: 
+bigint_div_table_high.constprop.0.isra.0/38 (bigint_div_table_high.constprop.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: PrimeTable/11 (read) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Function bigint_div_table_high.constprop.isra/38 is inline copy in get_prime/20
+  Clone of bigint_div_table_high.constprop.0/37
+  Availability: local
+  Function flags: count:77953656 (estimated locally) local nonfreeing_fn
+  Called by: get_prime/20 (inlined) (77953656 (estimated locally),0.33 per call) 
+  Calls: 
+bigint_div_table_high.constprop.0/37 (bigint_div_table_high.constprop)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility:
+  References: 
+  Referring: 
+  Clone of bigint_div_table_high/14
+  Availability: not_available
+  Function flags: count:14598063 (estimated locally)
+  Called by: 
+  Calls: 
+bigint_div_table_low.constprop.0/36 (bigint_div_table_low.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: PrimeTable/11 (read) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Function bigint_div_table_low.constprop/36 is inline copy in get_prime/20
+  Clone of bigint_div_table_low/15
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn
+  Called by: get_prime/20 (inlined) (1073741824 (estimated locally),4.55 per call) 
+  Calls: 
+primality_test_Fermat.constprop.0/35 (primality_test_Fermat.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function primality_test_Fermat.constprop/35 is inline copy in get_prime/20
+  Clone of primality_test_Fermat/17
+  Availability: local
+  Function flags: count:354334800 (estimated locally) local
+  Called by: get_prime/20 (inlined) (354334800 (estimated locally),1.50 per call) 
+  Calls: pke_pre_calc_mont/22 (354334800 (estimated locally),1.50 per call) pke_get_operand_bytes/23 (116930483 (estimated locally),0.49 per call) primality_test_Fermat_internal/16 (inlined) (1032945160 (estimated locally),4.37 per call) 
+Bigint_Check_1/27 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 (112487724 (estimated locally),0.48 per call) 
+  Calls: 
+pke_modexp_internal/26 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 (340871904 (estimated locally),1.44 per call) 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 (340871904 (estimated locally),1.44 per call) primality_test_Fermat_internal/16 (1032945160 (estimated locally),4.37 per call) 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: primality_test_Fermat_internal/16 (1032945160 (estimated locally),4.37 per call) 
+  Calls: 
+pke_get_operand_bytes/23 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: primality_test_Fermat.constprop.0/35 (116930483 (estimated locally),0.49 per call) 
+  Calls: 
+pke_pre_calc_mont/22 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: primality_test_Fermat.constprop.0/35 (354334800 (estimated locally),1.50 per call) 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_prime/20 (236223200 (estimated locally),1.00 per call) primality_test_Fermat_internal/16 (9655949283 (estimated locally),40.88 per call) 
+  Calls: 
+get_prime/20 (get_prime)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) PrimeTable_r/13 (addr) PrimeTable_s/12 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:236223200 (estimated locally) body
+  Called by: 
+  Calls: primality_test_Fermat.constprop.0/35 (inlined) (354334800 (estimated locally),1.50 per call) bigint_div_table_low.constprop.0/36 (inlined) (1073741824 (estimated locally),4.55 per call) bigint_div_table_high.constprop.0.isra.0/38 (inlined) (77953656 (estimated locally),0.33 per call) prepare_starting_integer.isra.0/39 (inlined) (77953656 (estimated locally),0.33 per call) get_rand/21 (236223200 (estimated locally),1.00 per call) 
+prepare_starting_integer/19 (prepare_starting_integer)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741816 (estimated locally) body
+  Called by: 
+  Calls: 
+primality_test_Fermat/17 (primality_test_Fermat)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:348071305 (estimated locally) body
+  Called by: 
+  Calls: 
+primality_test_Fermat_internal/16 (primality_test_Fermat_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function primality_test_Fermat_internal/16 is inline copy in get_prime/20
+  Availability: local
+  Function flags: count:1032945160 (estimated locally) body local
+  Called by: primality_test_Fermat.constprop.0/35 (inlined) (1032945160 (estimated locally),4.37 per call) 
+  Calls: Bigint_Check_1/27 (112487724 (estimated locally),0.48 per call) pke_modexp_internal/26 (340871904 (estimated locally),1.44 per call) uint32_clear/25 (340871904 (estimated locally),1.44 per call) get_rand/21 (9655949283 (estimated locally),40.88 per call) uint32_clear/25 (1032945160 (estimated locally),4.37 per call) uint32_copy/24 (1032945160 (estimated locally),4.37 per call) 
+bigint_div_table_low/15 (bigint_div_table_low)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:114863530 (estimated locally) body
+  Called by: 
+  Calls: 
+bigint_div_table_high/14 (bigint_div_table_high)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:14598063 (estimated locally) body
+  Called by: 
+  Calls: 
+PrimeTable_r/13 (PrimeTable_r)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) bigint_div_table_low.constprop.0/36 (addr) bigint_div_table_high.constprop.0.isra.0/38 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+PrimeTable_s/12 (PrimeTable_s)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: get_prime/20 (addr) get_prime/20 (addr) bigint_div_table_low.constprop.0/36 (addr) bigint_div_table_high.constprop.0.isra.0/38 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+PrimeTable/11 (PrimeTable)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: bigint_div_table_low.constprop.0/36 (read) bigint_div_table_high.constprop.0.isra.0/38 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+cloning primality_test_Fermat/17 to primality_test_Fermat.constprop/35
+    replace map: 2 -> 3
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t primality_test_Fermat (const uint32_t * p, uint32_t pBitLen, uint32_t rounds)
+{
+  uint32_t i;
+  uint32_t p_step;
+  uint32_t ret;
+  long unsigned int _7;
+  long unsigned int _17;
+
+  <bb 2> [local count: 348071305]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG bit_len => pBitLen_6(D)
+  # DEBUG BEGIN_STMT
+  _7 = pBitLen_6(D) + 31;
+  _17 = _7 >> 5;
+  # DEBUG bit_len => NULL
+  # DEBUG pWordLen => _17
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  ret_10 = pke_pre_calc_mont (p_8(D), pBitLen_6(D), 0B);
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  if (ret_10 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 7>; [67.00%]
+
+  <bb 3> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  p_step_12 = pke_get_operand_bytes ();
+  # DEBUG p_step => p_step_12
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 6>; [100.00%]
+
+  <bb 4> [local count: 1014686025]:
+  # DEBUG BEGIN_STMT
+  ret_15 = primality_test_Fermat_internal (p_8(D), _17, p_step_12);
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+  if (ret_15 != 0)
+    goto <bb 7>; [5.50%]
+  else
+    goto <bb 5>; [94.50%]
+
+  <bb 5> [local count: 958878293]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  i_16 = i_2 + 1;
+  # DEBUG i => i_16
+
+  <bb 6> [local count: 1073741824]:
+  # i_2 = PHI <0(3), i_16(5)>
+  # DEBUG i => i_2
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  if (i_2 < rounds_13(D))
+    goto <bb 4>; [94.50%]
+  else
+    goto <bb 7>; [5.50%]
+
+  <bb 7> [local count: 348071307]:
+  # ret_1 = PHI <ret_10(2), 0(6), ret_15(4)>
+  # DEBUG ret => ret_1
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_1;
+
+}
+
+
+uint32_t primality_test_Fermat.constprop (const uint32_t * p, uint32_t pBitLen)
+{
+  uint32_t ret;
+  uint32_t p_step;
+  uint32_t i;
+  uint32_t rounds;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 8> [local count: 348071305]:
+  # DEBUG rounds => 3
+
+  <bb 2> [local count: 348071305]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG bit_len => pBitLen_1(D)
+  # DEBUG BEGIN_STMT
+  _2 = pBitLen_1(D) + 31;
+  _3 = _2 >> 5;
+  # DEBUG bit_len => NULL
+  # DEBUG pWordLen => _3
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  ret_5 = pke_pre_calc_mont (p_4(D), pBitLen_1(D), 0B);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 7>; [67.00%]
+
+  <bb 3> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  p_step_6 = pke_get_operand_bytes ();
+  # DEBUG p_step => p_step_6
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 6>; [100.00%]
+
+  <bb 4> [local count: 1014686025]:
+  # DEBUG BEGIN_STMT
+  ret_7 = primality_test_Fermat_internal (p_4(D), _3, p_step_6);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 != 0)
+    goto <bb 7>; [5.50%]
+  else
+    goto <bb 5>; [94.50%]
+
+  <bb 5> [local count: 958878293]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  i_9 = i_8 + 1;
+  # DEBUG i => i_9
+
+  <bb 6> [local count: 1073741824]:
+  # i_8 = PHI <0(3), i_9(5)>
+  # DEBUG i => i_8
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  if (i_8 <= 2)
+    goto <bb 4>; [94.50%]
+  else
+    goto <bb 7>; [5.50%]
+
+  <bb 7> [local count: 348071307]:
+  # ret_10 = PHI <ret_5(2), ret_7(4), 0(6)>
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_10;
+
+}
+
+
+cloning bigint_div_table_low/15 to bigint_div_table_low.constprop/36
+    replace map: 1 -> &PrimeTable_r, 2 -> &PrimeTable_s, 4 -> 400
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+uint32_t bigint_div_table_low (const uint32_t * a, const uint16_t * r, const double_uint32_t * s, const uint16_t * high_result, uint32_t PTL)
+{
+  uint32_t a2;
+  uint32_t a1;
+  uint32_t carry;
+  uint32_t i;
+  uint32_t ret;
+  long unsigned int _1;
+  const uint16_t * _2;
+  short unsigned int _3;
+  const uint16_t * _4;
+  short unsigned int _5;
+  long unsigned int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long long unsigned int _9;
+  long unsigned int _10;
+  const double_uint32_t * _11;
+  long unsigned int _12;
+  long long unsigned int _13;
+  long long unsigned int _14;
+  long long unsigned int _15;
+  short unsigned int _16;
+  long unsigned int _17;
+  long unsigned int _18;
+
+  <bb 2> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 9>; [100.00%]
+
+  <bb 3> [local count: 1014686025]:
+  # DEBUG BEGIN_STMT
+  _1 = i_20 * 2;
+  _2 = high_result_24(D) + _1;
+  _3 = *_2;
+  carry_26 = (uint32_t) _3;
+  # DEBUG carry => carry_26
+  # DEBUG BEGIN_STMT
+  _4 = r_27(D) + _1;
+  _5 = *_4;
+  _6 = (long unsigned int) _5;
+  _7 = _6 * carry_26;
+  _8 = *a_28(D);
+  a1_29 = _7 + _8;
+  # DEBUG a1 => a1_29
+  # DEBUG BEGIN_STMT
+  if (_8 > a1_29)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 4> [local count: 507343013]:
+  # DEBUG BEGIN_STMT
+  a1_30 = _6 + a1_29;
+  # DEBUG a1 => a1_30
+
+  <bb 5> [local count: 1014686025]:
+  # a1_22 = PHI <a1_29(3), a1_30(4)>
+  # DEBUG a1 => a1_22
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _9 = (long long unsigned int) a1_22;
+  _10 = i_20 * 4;
+  _11 = s_31(D) + _10;
+  _12 = *_11;
+  _13 = (long long unsigned int) _12;
+  _14 = _9 * _13;
+  _15 = _14 >> 32;
+  a2_32 = (uint32_t) _15;
+  # DEBUG a2 => a2_32
+  # DEBUG BEGIN_STMT
+  _16 = PrimeTable[i_20];
+  _17 = (long unsigned int) _16;
+  _18 = _17 * a2_32;
+  carry_33 = a1_22 - _18;
+  # DEBUG carry => carry_33
+  # DEBUG BEGIN_STMT
+  if (_17 <= carry_33)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 7>; [50.00%]
+
+  <bb 6> [local count: 507343013]:
+  # DEBUG BEGIN_STMT
+  carry_34 = carry_33 - _17;
+  # DEBUG carry => carry_34
+
+  <bb 7> [local count: 1014686025]:
+  # carry_21 = PHI <carry_33(5), carry_34(6)>
+  # DEBUG carry => carry_21
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (carry_21 == 0)
+    goto <bb 10>; [5.50%]
+  else
+    goto <bb 8>; [94.50%]
+
+  <bb 8> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  i_35 = i_20 + 1;
+  # DEBUG i => i_35
+
+  <bb 9> [local count: 1073741824]:
+  # i_20 = PHI <0(2), i_35(8)>
+  # DEBUG i => i_20
+  # DEBUG BEGIN_STMT
+  if (i_20 < PTL_23(D))
+    goto <bb 3>; [94.50%]
+  else
+    goto <bb 10>; [5.50%]
+
+  <bb 10> [local count: 114863531]:
+  # ret_19 = PHI <4294967295(7), 0(9)>
+  # DEBUG ret => ret_19
+  # DEBUG BEGIN_STMT
+  return ret_19;
+
+}
+
+
+uint32_t bigint_div_table_low.constprop (const uint32_t * a, const uint16_t * high_result)
+{
+  uint32_t ret;
+  uint32_t i;
+  uint32_t carry;
+  uint32_t a1;
+  uint32_t a2;
+  const uint16_t * r;
+  const double_uint32_t * s;
+  uint32_t PTL;
+  long unsigned int _2;
+  const uint16_t * _4;
+  short unsigned int _5;
+  const uint16_t * _7;
+  short unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _12;
+  long long unsigned int _16;
+  long unsigned int _17;
+  const double_uint32_t * _18;
+  long unsigned int _19;
+  long long unsigned int _20;
+  long long unsigned int _21;
+  long long unsigned int _22;
+  short unsigned int _24;
+  long unsigned int _25;
+  long unsigned int _26;
+
+  <bb 11> [local count: 114863530]:
+  # DEBUG PTL => 400
+  # DEBUG s => &PrimeTable_s
+  # DEBUG r => &PrimeTable_r
+
+  <bb 2> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 9>; [100.00%]
+
+  <bb 3> [local count: 1014686025]:
+  # DEBUG BEGIN_STMT
+  _2 = i_1 * 2;
+  _4 = high_result_3(D) + _2;
+  _5 = *_4;
+  carry_6 = (uint32_t) _5;
+  # DEBUG carry => carry_6
+  # DEBUG BEGIN_STMT
+  _7 = &PrimeTable_r + _2;
+  _8 = *_7;
+  _9 = (long unsigned int) _8;
+  _10 = carry_6 * _9;
+  _12 = *a_11(D);
+  a1_13 = _10 + _12;
+  # DEBUG a1 => a1_13
+  # DEBUG BEGIN_STMT
+  if (_12 > a1_13)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 4> [local count: 507343013]:
+  # DEBUG BEGIN_STMT
+  a1_14 = _9 + a1_13;
+  # DEBUG a1 => a1_14
+
+  <bb 5> [local count: 1014686025]:
+  # a1_15 = PHI <a1_13(3), a1_14(4)>
+  # DEBUG a1 => a1_15
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _16 = (long long unsigned int) a1_15;
+  _17 = i_1 * 4;
+  _18 = &PrimeTable_s + _17;
+  _19 = *_18;
+  _20 = (long long unsigned int) _19;
+  _21 = _16 * _20;
+  _22 = _21 >> 32;
+  a2_23 = (uint32_t) _22;
+  # DEBUG a2 => a2_23
+  # DEBUG BEGIN_STMT
+  _24 = PrimeTable[i_1];
+  _25 = (long unsigned int) _24;
+  _26 = a2_23 * _25;
+  carry_27 = a1_15 - _26;
+  # DEBUG carry => carry_27
+  # DEBUG BEGIN_STMT
+  if (_25 <= carry_27)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 7>; [50.00%]
+
+  <bb 6> [local count: 507343013]:
+  # DEBUG BEGIN_STMT
+  carry_28 = carry_27 - _25;
+  # DEBUG carry => carry_28
+
+  <bb 7> [local count: 1014686025]:
+  # carry_29 = PHI <carry_27(5), carry_28(6)>
+  # DEBUG carry => carry_29
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (carry_29 == 0)
+    goto <bb 10>; [5.50%]
+  else
+    goto <bb 8>; [94.50%]
+
+  <bb 8> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  i_30 = i_1 + 1;
+  # DEBUG i => i_30
+
+  <bb 9> [local count: 1073741824]:
+  # i_1 = PHI <0(2), i_30(8)>
+  # DEBUG i => i_1
+  # DEBUG BEGIN_STMT
+  if (i_1 <= 399)
+    goto <bb 3>; [94.50%]
+  else
+    goto <bb 10>; [5.50%]
+
+  <bb 10> [local count: 114863531]:
+  # ret_31 = PHI <4294967295(7), 0(9)>
+  # DEBUG ret => ret_31
+  # DEBUG BEGIN_STMT
+  return ret_31;
+
+}
+
+
+cloning bigint_div_table_high/14 to bigint_div_table_high.constprop/37
+    replace map: 2 -> &PrimeTable_r, 3 -> &PrimeTable_s, 5 -> 400
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t bigint_div_table_high (const uint32_t * a, uint32_t aWordLen, const uint16_t * r, const double_uint32_t * s, uint16_t * high_result, uint32_t PTL)
+{
+  uint32_t a2;
+  uint32_t a1;
+  uint32_t carry;
+  uint32_t i;
+  int32_t j;
+  long int aWordLen.0_1;
+  long unsigned int _2;
+  const uint16_t * _3;
+  short unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  unsigned int j.1_7;
+  unsigned int _8;
+  const uint32_t * _9;
+  long unsigned int _10;
+  long long unsigned int _11;
+  long unsigned int _12;
+  const double_uint32_t * _13;
+  long unsigned int _14;
+  long long unsigned int _15;
+  long long unsigned int _16;
+  long long unsigned int _17;
+  short unsigned int _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  long unsigned int _21;
+  uint16_t * _22;
+  short unsigned int _23;
+
+  <bb 2> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 11>; [100.00%]
+
+  <bb 3> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG carry => 0
+  # DEBUG BEGIN_STMT
+  aWordLen.0_1 = (long int) aWordLen_32(D);
+  j_33 = aWordLen.0_1 + -1;
+  # DEBUG j => j_33
+  goto <bb 9>; [100.00%]
+
+  <bb 4> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _2 = i_25 * 2;
+  _3 = r_37(D) + _2;
+  _4 = *_3;
+  _5 = (long unsigned int) _4;
+  _6 = _5 * carry_27;
+  j.1_7 = (unsigned int) j_24;
+  _8 = j.1_7 * 4;
+  _9 = a_38(D) + _8;
+  _10 = *_9;
+  a1_39 = _6 + _10;
+  # DEBUG a1 => a1_39
+  # DEBUG BEGIN_STMT
+  if (_10 > a1_39)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  a1_40 = _5 + a1_39;
+  # DEBUG a1 => a1_40
+
+  <bb 6> [local count: 955630224]:
+  # a1_28 = PHI <a1_39(4), a1_40(5)>
+  # DEBUG a1 => a1_28
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _11 = (long long unsigned int) a1_28;
+  _12 = i_25 * 4;
+  _13 = s_41(D) + _12;
+  _14 = *_13;
+  _15 = (long long unsigned int) _14;
+  _16 = _11 * _15;
+  _17 = _16 >> 32;
+  a2_42 = (uint32_t) _17;
+  # DEBUG a2 => a2_42
+  # DEBUG BEGIN_STMT
+  _18 = PrimeTable[i_25];
+  _19 = (long unsigned int) _18;
+  _20 = _19 * a2_42;
+  carry_43 = a1_28 - _20;
+  # DEBUG carry => carry_43
+  # DEBUG BEGIN_STMT
+  if (_19 <= carry_43)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 7> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  carry_44 = carry_43 - _19;
+  # DEBUG carry => carry_44
+
+  <bb 8> [local count: 955630224]:
+  # carry_26 = PHI <carry_43(6), carry_44(7)>
+  # DEBUG carry => carry_26
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  j_45 = j_24 + -1;
+  # DEBUG j => j_45
+
+  <bb 9> [local count: 1073741824]:
+  # j_24 = PHI <j_33(3), j_45(8)>
+  # carry_27 = PHI <0(3), carry_26(8)>
+  # DEBUG carry => carry_27
+  # DEBUG j => j_24
+  # DEBUG BEGIN_STMT
+  if (j_24 >= 0)
+    goto <bb 4>; [89.00%]
+  else
+    goto <bb 10>; [11.00%]
+
+  <bb 10> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _21 = i_25 * 2;
+  _22 = high_result_34(D) + _21;
+  _23 = (short unsigned int) carry_27;
+  *_22 = _23;
+  # DEBUG BEGIN_STMT
+  i_36 = i_25 + 1;
+  # DEBUG i => i_36
+
+  <bb 11> [local count: 132709663]:
+  # i_25 = PHI <0(2), i_36(10)>
+  # DEBUG i => i_25
+  # DEBUG BEGIN_STMT
+  if (i_25 < PTL_31(D))
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 12>; [11.00%]
+
+  <bb 12> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+uint32_t bigint_div_table_high.constprop (const uint32_t * a, uint32_t aWordLen, uint16_t * high_result)
+{
+  int32_t j;
+  uint32_t i;
+  uint32_t carry;
+  uint32_t a1;
+  uint32_t a2;
+  const uint16_t * r;
+  const double_uint32_t * s;
+  uint32_t PTL;
+  long int aWordLen.0_2;
+  long unsigned int _5;
+  const uint16_t * _6;
+  short unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _10;
+  unsigned int j.1_12;
+  unsigned int _13;
+  const uint32_t * _15;
+  long unsigned int _16;
+  long long unsigned int _20;
+  long unsigned int _21;
+  const double_uint32_t * _22;
+  long unsigned int _23;
+  long long unsigned int _24;
+  long long unsigned int _25;
+  long long unsigned int _26;
+  short unsigned int _28;
+  long unsigned int _29;
+  long unsigned int _30;
+  long unsigned int _34;
+  uint16_t * _36;
+  short unsigned int _37;
+
+  <bb 13> [local count: 14598063]:
+  # DEBUG PTL => 400
+  # DEBUG s => &PrimeTable_s
+  # DEBUG r => &PrimeTable_r
+
+  <bb 2> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 11>; [100.00%]
+
+  <bb 3> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG carry => 0
+  # DEBUG BEGIN_STMT
+  aWordLen.0_2 = (long int) aWordLen_1(D);
+  j_3 = aWordLen.0_2 + -1;
+  # DEBUG j => j_3
+  goto <bb 9>; [100.00%]
+
+  <bb 4> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _5 = i_4 * 2;
+  _6 = &PrimeTable_r + _5;
+  _7 = *_6;
+  _8 = (long unsigned int) _7;
+  _10 = _8 * carry_9;
+  j.1_12 = (unsigned int) j_11;
+  _13 = j.1_12 * 4;
+  _15 = a_14(D) + _13;
+  _16 = *_15;
+  a1_17 = _10 + _16;
+  # DEBUG a1 => a1_17
+  # DEBUG BEGIN_STMT
+  if (_16 > a1_17)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  a1_18 = _8 + a1_17;
+  # DEBUG a1 => a1_18
+
+  <bb 6> [local count: 955630224]:
+  # a1_19 = PHI <a1_17(4), a1_18(5)>
+  # DEBUG a1 => a1_19
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _20 = (long long unsigned int) a1_19;
+  _21 = i_4 * 4;
+  _22 = &PrimeTable_s + _21;
+  _23 = *_22;
+  _24 = (long long unsigned int) _23;
+  _25 = _20 * _24;
+  _26 = _25 >> 32;
+  a2_27 = (uint32_t) _26;
+  # DEBUG a2 => a2_27
+  # DEBUG BEGIN_STMT
+  _28 = PrimeTable[i_4];
+  _29 = (long unsigned int) _28;
+  _30 = a2_27 * _29;
+  carry_31 = a1_19 - _30;
+  # DEBUG carry => carry_31
+  # DEBUG BEGIN_STMT
+  if (_29 <= carry_31)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 7> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  carry_32 = carry_31 - _29;
+  # DEBUG carry => carry_32
+
+  <bb 8> [local count: 955630224]:
+  # carry_39 = PHI <carry_31(6), carry_32(7)>
+  # DEBUG carry => carry_39
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  j_33 = j_11 + -1;
+  # DEBUG j => j_33
+
+  <bb 9> [local count: 1073741824]:
+  # j_11 = PHI <j_3(3), j_33(8)>
+  # carry_9 = PHI <0(3), carry_39(8)>
+  # DEBUG carry => carry_9
+  # DEBUG j => j_11
+  # DEBUG BEGIN_STMT
+  if (j_11 >= 0)
+    goto <bb 4>; [89.00%]
+  else
+    goto <bb 10>; [11.00%]
+
+  <bb 10> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _34 = i_4 * 2;
+  _36 = high_result_35(D) + _34;
+  _37 = (short unsigned int) carry_9;
+  *_36 = _37;
+  # DEBUG BEGIN_STMT
+  i_38 = i_4 + 1;
+  # DEBUG i => i_38
+
+  <bb 11> [local count: 132709663]:
+  # i_4 = PHI <0(2), i_38(10)>
+  # DEBUG i => i_4
+  # DEBUG BEGIN_STMT
+  if (i_4 <= 399)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 12>; [11.00%]
+
+  <bb 12> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+cloning bigint_div_table_high.constprop/37 to bigint_div_table_high.constprop.isra/38
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 4, prev_clone_index: 2
+    Will SKIP return.
+uint32_t bigint_div_table_high.constprop (const uint32_t * a, uint32_t aWordLen, uint16_t * high_result)
+{
+  int32_t j;
+  uint32_t i;
+  uint32_t carry;
+  uint32_t a1;
+  uint32_t a2;
+  const uint16_t * r;
+  const double_uint32_t * s;
+  uint32_t PTL;
+  long int aWordLen.0_2;
+  long unsigned int _5;
+  const uint16_t * _6;
+  short unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _10;
+  unsigned int j.1_12;
+  unsigned int _13;
+  const uint32_t * _15;
+  long unsigned int _16;
+  long long unsigned int _20;
+  long unsigned int _21;
+  const double_uint32_t * _22;
+  long unsigned int _23;
+  long long unsigned int _24;
+  long long unsigned int _25;
+  long long unsigned int _26;
+  short unsigned int _28;
+  long unsigned int _29;
+  long unsigned int _30;
+  long unsigned int _34;
+  uint16_t * _36;
+  short unsigned int _37;
+
+  <bb 13> [local count: 14598063]:
+  # DEBUG PTL => 400
+  # DEBUG s => &PrimeTable_s
+  # DEBUG r => &PrimeTable_r
+
+  <bb 2> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 11>; [100.00%]
+
+  <bb 3> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG carry => 0
+  # DEBUG BEGIN_STMT
+  aWordLen.0_2 = (long int) aWordLen_1(D);
+  j_3 = aWordLen.0_2 + -1;
+  # DEBUG j => j_3
+  goto <bb 9>; [100.00%]
+
+  <bb 4> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _5 = i_4 * 2;
+  _6 = &PrimeTable_r + _5;
+  _7 = *_6;
+  _8 = (long unsigned int) _7;
+  _10 = _8 * carry_9;
+  j.1_12 = (unsigned int) j_11;
+  _13 = j.1_12 * 4;
+  _15 = a_14(D) + _13;
+  _16 = *_15;
+  a1_17 = _10 + _16;
+  # DEBUG a1 => a1_17
+  # DEBUG BEGIN_STMT
+  if (_16 > a1_17)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  a1_18 = _8 + a1_17;
+  # DEBUG a1 => a1_18
+
+  <bb 6> [local count: 955630224]:
+  # a1_19 = PHI <a1_17(4), a1_18(5)>
+  # DEBUG a1 => a1_19
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _20 = (long long unsigned int) a1_19;
+  _21 = i_4 * 4;
+  _22 = &PrimeTable_s + _21;
+  _23 = *_22;
+  _24 = (long long unsigned int) _23;
+  _25 = _20 * _24;
+  _26 = _25 >> 32;
+  a2_27 = (uint32_t) _26;
+  # DEBUG a2 => a2_27
+  # DEBUG BEGIN_STMT
+  _28 = PrimeTable[i_4];
+  _29 = (long unsigned int) _28;
+  _30 = a2_27 * _29;
+  carry_31 = a1_19 - _30;
+  # DEBUG carry => carry_31
+  # DEBUG BEGIN_STMT
+  if (_29 <= carry_31)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 7> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  carry_32 = carry_31 - _29;
+  # DEBUG carry => carry_32
+
+  <bb 8> [local count: 955630224]:
+  # carry_39 = PHI <carry_31(6), carry_32(7)>
+  # DEBUG carry => carry_39
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  j_33 = j_11 + -1;
+  # DEBUG j => j_33
+
+  <bb 9> [local count: 1073741824]:
+  # j_11 = PHI <j_3(3), j_33(8)>
+  # carry_9 = PHI <0(3), carry_39(8)>
+  # DEBUG carry => carry_9
+  # DEBUG j => j_11
+  # DEBUG BEGIN_STMT
+  if (j_11 >= 0)
+    goto <bb 4>; [89.00%]
+  else
+    goto <bb 10>; [11.00%]
+
+  <bb 10> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _34 = i_4 * 2;
+  _36 = high_result_35(D) + _34;
+  _37 = (short unsigned int) carry_9;
+  *_36 = _37;
+  # DEBUG BEGIN_STMT
+  i_38 = i_4 + 1;
+  # DEBUG i => i_38
+
+  <bb 11> [local count: 132709663]:
+  # i_4 = PHI <0(2), i_38(10)>
+  # DEBUG i => i_4
+  # DEBUG BEGIN_STMT
+  if (i_4 <= 399)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 12>; [11.00%]
+
+  <bb 12> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+void bigint_div_table_high.constprop.isra (const uint32_t * a, uint32_t aWordLen, uint16_t * high_result)
+{
+  uint32_t D.3399;
+  uint32_t PTL;
+  const double_uint32_t * s;
+  const uint16_t * r;
+  uint32_t a2;
+  uint32_t a1;
+  uint32_t carry;
+  uint32_t i;
+  int32_t j;
+  long int aWordLen.0_2;
+  long unsigned int _5;
+  const uint16_t * _6;
+  short unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _10;
+  unsigned int j.1_12;
+  unsigned int _13;
+  const uint32_t * _15;
+  long unsigned int _16;
+  long long unsigned int _20;
+  long unsigned int _21;
+  const double_uint32_t * _22;
+  long unsigned int _23;
+  long long unsigned int _24;
+  long long unsigned int _25;
+  long long unsigned int _26;
+  short unsigned int _28;
+  long unsigned int _29;
+  long unsigned int _30;
+  long unsigned int _34;
+  uint16_t * _36;
+  short unsigned int _37;
+
+  <bb 14> [local count: 14598063]:
+
+  <bb 2> [local count: 14598063]:
+  # DEBUG PTL => 400
+  # DEBUG s => &PrimeTable_s
+  # DEBUG r => &PrimeTable_r
+
+  <bb 3> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 12>; [100.00%]
+
+  <bb 4> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG carry => 0
+  # DEBUG BEGIN_STMT
+  aWordLen.0_2 = (long int) aWordLen_1(D);
+  j_3 = aWordLen.0_2 + -1;
+  # DEBUG j => j_3
+  goto <bb 10>; [100.00%]
+
+  <bb 5> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _5 = i_4 * 2;
+  _6 = &PrimeTable_r + _5;
+  _7 = *_6;
+  _8 = (long unsigned int) _7;
+  _10 = _8 * carry_9;
+  j.1_12 = (unsigned int) j_11;
+  _13 = j.1_12 * 4;
+  _15 = a_14(D) + _13;
+  _16 = *_15;
+  a1_17 = _10 + _16;
+  # DEBUG a1 => a1_17
+  # DEBUG BEGIN_STMT
+  if (_16 > a1_17)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 7>; [50.00%]
+
+  <bb 6> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  a1_18 = _8 + a1_17;
+  # DEBUG a1 => a1_18
+
+  <bb 7> [local count: 955630224]:
+  # a1_19 = PHI <a1_17(5), a1_18(6)>
+  # DEBUG a1 => a1_19
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _20 = (long long unsigned int) a1_19;
+  _21 = i_4 * 4;
+  _22 = &PrimeTable_s + _21;
+  _23 = *_22;
+  _24 = (long long unsigned int) _23;
+  _25 = _20 * _24;
+  _26 = _25 >> 32;
+  a2_27 = (uint32_t) _26;
+  # DEBUG a2 => a2_27
+  # DEBUG BEGIN_STMT
+  _28 = PrimeTable[i_4];
+  _29 = (long unsigned int) _28;
+  _30 = a2_27 * _29;
+  carry_31 = a1_19 - _30;
+  # DEBUG carry => carry_31
+  # DEBUG BEGIN_STMT
+  if (_29 <= carry_31)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 8> [local count: 477815112]:
+  # DEBUG BEGIN_STMT
+  carry_32 = carry_31 - _29;
+  # DEBUG carry => carry_32
+
+  <bb 9> [local count: 955630224]:
+  # carry_39 = PHI <carry_31(7), carry_32(8)>
+  # DEBUG carry => carry_39
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  j_33 = j_11 + -1;
+  # DEBUG j => j_33
+
+  <bb 10> [local count: 1073741824]:
+  # j_11 = PHI <j_3(4), j_33(9)>
+  # carry_9 = PHI <0(4), carry_39(9)>
+  # DEBUG carry => carry_9
+  # DEBUG j => j_11
+  # DEBUG BEGIN_STMT
+  if (j_11 >= 0)
+    goto <bb 5>; [89.00%]
+  else
+    goto <bb 11>; [11.00%]
+
+  <bb 11> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  _34 = i_4 * 2;
+  _36 = high_result_35(D) + _34;
+  _37 = (short unsigned int) carry_9;
+  *_36 = _37;
+  # DEBUG BEGIN_STMT
+  i_38 = i_4 + 1;
+  # DEBUG i => i_38
+
+  <bb 12> [local count: 132709663]:
+  # i_4 = PHI <0(3), i_38(11)>
+  # DEBUG i => i_4
+  # DEBUG BEGIN_STMT
+  if (i_4 <= 399)
+    goto <bb 4>; [89.00%]
+  else
+    goto <bb 13>; [11.00%]
+
+  <bb 13> [local count: 14598063]:
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+cloning prepare_starting_integer/19 to prepare_starting_integer.isra/39
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+__attribute__((access ("^0[ ]", )))
+uint32_t prepare_starting_integer (uint32_t * p, uint32_t pBitLen, uint32_t pWordLen)
+{
+  uint32_t bitLen;
+  sizetype _1;
+  sizetype _2;
+  uint32_t * _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  sizetype _6;
+  sizetype _7;
+  uint32_t * _8;
+  sizetype _9;
+  sizetype _10;
+  uint32_t * _11;
+  long unsigned int _12;
+  long unsigned int _13;
+  sizetype _14;
+  sizetype _15;
+  uint32_t * _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  long unsigned int _23;
+  long unsigned int _24;
+  long unsigned int _25;
+
+  <bb 2> [local count: 1073741816]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  bitLen_28 = pBitLen_27(D) & 31;
+  # DEBUG bitLen => bitLen_28
+  # DEBUG BEGIN_STMT
+  switch (bitLen_28) <default: <L2>, case 0: <L0>, case 1: <L1>>
+
+  <bb 3> [local count: 357913942]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = pWordLen_29(D) + 1073741823;
+  _2 = _1 * 4;
+  _3 = p_30(D) + _2;
+  _4 = *_3;
+  _5 = _4 | 3221225472;
+  *_3 = _5;
+  # DEBUG BEGIN_STMT
+  goto <bb 6>; [100.00%]
+
+  <bb 4> [local count: 357913942]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  _6 = pWordLen_29(D) + 1073741823;
+  _7 = _6 * 4;
+  _8 = p_30(D) + _7;
+  *_8 = 1;
+  # DEBUG BEGIN_STMT
+  _9 = pWordLen_29(D) + 1073741822;
+  _10 = _9 * 4;
+  _11 = p_30(D) + _10;
+  _12 = *_11;
+  _13 = _12 | 2147483648;
+  *_11 = _13;
+  # DEBUG BEGIN_STMT
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 357913942]:
+<L2>:
+  # DEBUG BEGIN_STMT
+  _14 = pWordLen_29(D) + 1073741823;
+  _15 = _14 * 4;
+  _16 = p_30(D) + _15;
+  _17 = *_16;
+  _18 = 4294967295 << bitLen_28;
+  _19 = ~_18;
+  _20 = _17 & _19;
+  # DEBUG BEGIN_STMT
+  _21 = bitLen_28 + 4294967294;
+  _22 = 3 << _21;
+  _23 = _20 | _22;
+  *_16 = _23;
+  # DEBUG BEGIN_STMT
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _24 = *p_30(D);
+  _25 = _24 | 1;
+  *p_30(D) = _25;
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+__attribute__((access ("^0[ ]", )))
+void prepare_starting_integer.isra (uint32_t * p, uint32_t pBitLen, uint32_t pWordLen)
+{
+  uint32_t D.3406;
+  uint32_t bitLen;
+  sizetype _4;
+  sizetype _5;
+  uint32_t * _7;
+  long unsigned int _8;
+  long unsigned int _9;
+  sizetype _10;
+  sizetype _11;
+  uint32_t * _12;
+  sizetype _13;
+  sizetype _14;
+  uint32_t * _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  sizetype _18;
+  sizetype _19;
+  uint32_t * _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  long unsigned int _23;
+  long unsigned int _24;
+  long unsigned int _25;
+  long unsigned int _26;
+  long unsigned int _27;
+  long unsigned int _28;
+  long unsigned int _29;
+
+  <bb 7> [local count: 1073741816]:
+
+  <bb 2> [local count: 1073741816]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  bitLen_2 = pBitLen_1(D) & 31;
+  # DEBUG bitLen => bitLen_2
+  # DEBUG BEGIN_STMT
+  switch (bitLen_2) <default: <L2>, case 0: <L0>, case 1: <L1>>
+
+  <bb 3> [local count: 357913942]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _4 = pWordLen_3(D) + 1073741823;
+  _5 = _4 * 4;
+  _7 = p_6(D) + _5;
+  _8 = *_7;
+  _9 = _8 | 3221225472;
+  *_7 = _9;
+  # DEBUG BEGIN_STMT
+  goto <bb 6>; [100.00%]
+
+  <bb 4> [local count: 357913942]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  _10 = pWordLen_3(D) + 1073741823;
+  _11 = _10 * 4;
+  _12 = p_6(D) + _11;
+  *_12 = 1;
+  # DEBUG BEGIN_STMT
+  _13 = pWordLen_3(D) + 1073741822;
+  _14 = _13 * 4;
+  _15 = p_6(D) + _14;
+  _16 = *_15;
+  _17 = _16 | 2147483648;
+  *_15 = _17;
+  # DEBUG BEGIN_STMT
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 357913942]:
+<L2>:
+  # DEBUG BEGIN_STMT
+  _18 = pWordLen_3(D) + 1073741823;
+  _19 = _18 * 4;
+  _20 = p_6(D) + _19;
+  _21 = *_20;
+  _22 = 4294967295 << bitLen_2;
+  _23 = ~_22;
+  _24 = _21 & _23;
+  # DEBUG BEGIN_STMT
+  _25 = bitLen_2 + 4294967294;
+  _26 = 3 << _25;
+  _27 = _24 | _26;
+  *_20 = _27;
+  # DEBUG BEGIN_STMT
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _28 = *p_6(D);
+  _29 = _28 | 1;
+  *p_6(D) = _29;
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+updating call of get_prime/20 -> primality_test_Fermat.constprop/35: ret_25 = primality_test_Fermat (p_17(D), pBitLen_14(D), 3);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_25 = primality_test_Fermat.constprop (p_17(D), pBitLen_14(D));
+updating call of get_prime/20 -> bigint_div_table_low.constprop/36: ret_23 = bigint_div_table_low (p_17(D), &PrimeTable_r, &PrimeTable_s, &high_result, 400);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+  updated to:ret_23 = bigint_div_table_low.constprop (p_17(D), &high_result);
+updating call of get_prime/20 -> bigint_div_table_high.constprop.isra/38: bigint_div_table_high (_3, _4, &PrimeTable_r, &PrimeTable_s, &high_result, 400);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 4, prev_clone_index: 2
+    Will SKIP return.
+  updated to:bigint_div_table_high.constprop.isra (_3, _4, &high_result);
+updating call of get_prime/20 -> prepare_starting_integer.isra/39: prepare_starting_integer (p_17(D), pBitLen_14(D), pWordLen_15);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+  updated to:prepare_starting_integer.isra (p_17(D), pBitLen_14(D), pWordLen_15);
+Trivially needed variables: PrimeTable_r/13 PrimeTable_s/12 PrimeTable/11
+Removing variables:
+
+Final Symbol table:
+
+bigint_div_table_high.constprop.0/37 (bigint_div_table_high.constprop)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:14598063 (estimated locally)
+  Called by: 
+  Calls: 
+Bigint_Check_1/27 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modexp_internal/26 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_get_operand_bytes/23 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_pre_calc_mont/22 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/21 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_prime/20 (get_prime)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_prime (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:236223200 (estimated locally)
+  Called by: 
+  Calls: 
+prepare_starting_integer/19 (prepare_starting_integer)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741816 (estimated locally)
+  Called by: 
+  Calls: 
+primality_test_Fermat/17 (primality_test_Fermat)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:348071305 (estimated locally)
+  Called by: 
+  Calls: 
+bigint_div_table_low/15 (bigint_div_table_low)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:114863530 (estimated locally)
+  Called by: 
+  Calls: 
+bigint_div_table_high/14 (bigint_div_table_high)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:14598063 (estimated locally)
+  Called by: 
+  Calls: 
+PrimeTable_r/13 (PrimeTable_r)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.PrimeTable_r (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+PrimeTable_s/12 (PrimeTable_s)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.PrimeTable_s (implicit_section)
+  Aux: @0x7f822aadc100
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+PrimeTable/11 (PrimeTable)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.PrimeTable (implicit_section)
+  Aux: @0x7f822aadc080
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known

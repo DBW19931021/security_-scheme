@@ -1,0 +1,8 @@
+#ifndef TEST_SYS_VERSION_H
+#define TEST_SYS_VERSION_H
+
+#define TEST_SYS_VER_MAJOR 1
+#define TEST_SYS_VER_MINOR 0
+#define TEST_SYS_VER_PATCH 0
+
+#endif // TEST_SYS_VERSION_H

@@ -1,0 +1,669 @@
+Trivially needed symbols: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_init/15
+
+
+Initial Symbol table:
+
+cpu_enable_int/21 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+expt_det_add_error/20 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_stop/18 watchdog_start/16 watchdog_start/16 watchdog_init/15 
+  Calls: 
+cpu_register_int/19 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+watchdog_stop/18 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_feed/17 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f57180e4770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_start/16 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f57180e4660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 expt_det_add_error/20 watchdog_get_reg_base/13 
+watchdog_init/15 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f57180e4550
+  References: watchdog_int_handler/14 (addr) g_watchdog_cb/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/21 expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 cpu_register_int/19 watchdog_get_reg_base/13 
+watchdog_int_handler/14 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7f57180e4220
+  References: g_watchdog_cb/12 (read) g_watchdog_cb/12 (read) 
+  Referring: watchdog_init/15 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/13 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f57180e4000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+g_watchdog_cb/12 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f57180e4330
+  References: 
+  Referring: watchdog_init/15 (write) watchdog_int_handler/14 (read) watchdog_int_handler/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f57180e4550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f57180e4110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+sysreg_config_sm_en/9 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/8 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/7 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/6 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: sysreg_config_sm_en/9 sysreg_umask_sm_lock/8 sysreg_enable_sm_lock/7 sysreg_enable_fun_lock/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+cpu_enable_int/21 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+expt_det_add_error/20 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_stop/18 watchdog_start/16 watchdog_start/16 watchdog_init/15 
+  Calls: 
+cpu_register_int/19 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+watchdog_stop/18 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_feed/17 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_start/16 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 expt_det_add_error/20 watchdog_get_reg_base/13 
+watchdog_init/15 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: watchdog_int_handler/14 (addr) g_watchdog_cb/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/21 expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 cpu_register_int/19 watchdog_get_reg_base/13 
+watchdog_int_handler/14 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_watchdog_cb/12 (read) g_watchdog_cb/12 (read) 
+  Referring: watchdog_init/15 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/13 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+g_watchdog_cb/12 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: watchdog_init/15 (write) watchdog_int_handler/14 (read) watchdog_int_handler/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+
+
+Initial Symbol table:
+
+cpu_enable_int/21 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+expt_det_add_error/20 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_stop/18 watchdog_start/16 watchdog_start/16 watchdog_init/15 
+  Calls: 
+cpu_register_int/19 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+watchdog_stop/18 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_feed/17 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_start/16 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 expt_det_add_error/20 watchdog_get_reg_base/13 
+watchdog_init/15 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: watchdog_int_handler/14 (addr) g_watchdog_cb/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/21 expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 cpu_register_int/19 watchdog_get_reg_base/13 
+watchdog_int_handler/14 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_watchdog_cb/12 (read) g_watchdog_cb/12 (read) 
+  Referring: watchdog_init/15 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/13 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+g_watchdog_cb/12 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: watchdog_init/15 (write) watchdog_int_handler/14 (read) watchdog_int_handler/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpu_enable_int/21 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+expt_det_add_error/20 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_stop/18 watchdog_start/16 watchdog_start/16 watchdog_init/15 
+  Calls: 
+cpu_register_int/19 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: watchdog_init/15 
+  Calls: 
+watchdog_stop/18 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_feed/17 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+watchdog_start/16 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 expt_det_add_error/20 watchdog_get_reg_base/13 
+watchdog_init/15 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: watchdog_int_handler/14 (addr) g_watchdog_cb/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/21 expt_det_add_error/20 sysreg_lock_reg/11 sysreg_unlock_reg/10 cpu_register_int/19 watchdog_get_reg_base/13 
+watchdog_int_handler/14 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_watchdog_cb/12 (read) g_watchdog_cb/12 (read) 
+  Referring: watchdog_init/15 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 watchdog_get_reg_base/13 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/13 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+g_watchdog_cb/12 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: watchdog_init/15 (write) watchdog_int_handler/14 (read) watchdog_int_handler/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: watchdog_stop/18 watchdog_feed/17 watchdog_start/16 watchdog_int_handler/14 watchdog_init/15 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cpu_enable_int/21 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: watchdog_init/15 (195204118 (estimated locally),0.18 per call) 
+  Calls: 
+expt_det_add_error/20 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: watchdog_stop/18 (354334800 (estimated locally),0.33 per call) watchdog_start/16 (132654246 (estimated locally),0.77 per call) watchdog_start/16 (112731620 (estimated locally),0.66 per call) watchdog_init/15 (178240099 (estimated locally),0.17 per call) 
+  Calls: 
+cpu_register_int/19 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: watchdog_init/15 (574129751 (estimated locally),0.53 per call) 
+  Calls: 
+watchdog_stop/18 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/20 (354334800 (estimated locally),0.33 per call) 
+watchdog_feed/17 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+watchdog_start/16 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:171787420 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/20 (132654246 (estimated locally),0.77 per call) expt_det_add_error/20 (112731620 (estimated locally),0.66 per call) 
+watchdog_init/15 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: watchdog_int_handler/14 (addr) g_watchdog_cb/12 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: cpu_enable_int/21 (195204118 (estimated locally),0.18 per call) expt_det_add_error/20 (178240099 (estimated locally),0.17 per call) cpu_register_int/19 (574129751 (estimated locally),0.53 per call) 
+watchdog_int_handler/14 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_watchdog_cb/12 (read) 
+  Referring: watchdog_init/15 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+   Indirect call(751619280 (estimated locally),0.70 per call) num speculative call targets: 0
+g_watchdog_cb/12 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: watchdog_int_handler/14 (read) watchdog_init/15 (write) 
+  Availability: available
+  Varpool flags: initialized
+Trivially needed variables: g_watchdog_cb/12
+Removing variables:
+
+Final Symbol table:
+
+cpu_enable_int/21 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_add_error/20 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_register_int/19 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_stop/18 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_stop (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+watchdog_feed/17 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_feed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+watchdog_start/16 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_start (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:171787420 (estimated locally)
+  Called by: 
+  Calls: 
+watchdog_init/15 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+watchdog_int_handler/14 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.watchdog_int_handler (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+g_watchdog_cb/12 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_watchdog_cb (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

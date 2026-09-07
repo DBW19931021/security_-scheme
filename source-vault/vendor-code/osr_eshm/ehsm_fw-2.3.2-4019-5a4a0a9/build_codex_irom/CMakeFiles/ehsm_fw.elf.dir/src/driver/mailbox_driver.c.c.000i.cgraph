@@ -1,0 +1,960 @@
+Trivially needed symbols: mailbox_clear_recv_notify/32 mailbox_read_recv_notify/31 mailbox_set_send_notify/30 mailbox_read_send_notify/29 mailbox_write/28 mailbox_read/27 mailbox_init/26
+
+
+Initial Symbol table:
+
+expt_det_add_error/35 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_enable_int/34 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_register_int/33 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+mailbox_clear_recv_notify/32 (mailbox_clear_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_recv_notify/31 (mailbox_read_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa4a2a91660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_set_send_notify/30 (mailbox_set_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa4a2a91550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_send_notify/29 (mailbox_read_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa4a2a91440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_write/28 (mailbox_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa4a2a91330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 util_write_volatile_u32/14 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read/27 (mailbox_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa4a2a91220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_read_volatile_u32/13 mailbox_get_reg_base/24 
+mailbox_init/26 (mailbox_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa4a2a91110
+  References: mailbox_int_handler/25 (addr) g_mailbox_cb/23 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/35 sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 cpu_enable_int/34 cpu_register_int/33 
+mailbox_int_handler/25 (mailbox_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fa4a2a48dd0
+  References: g_mailbox_cb/23 (read) g_mailbox_cb/23 (read) 
+  Referring: mailbox_init/26 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+   Indirect callnum speculative call targets: 0
+mailbox_get_reg_base/24 (mailbox_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa4a2a48bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_read_recv_notify/31 mailbox_set_send_notify/30 mailbox_read_send_notify/29 mailbox_write/28 mailbox_read/27 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+g_mailbox_cb/23 (g_mailbox_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa4a2a48ee0
+  References: 
+  Referring: mailbox_init/26 (write) mailbox_int_handler/25 (read) mailbox_int_handler/25 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa4a2a91110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa4a2a48cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+sysreg_config_sm_en/20 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/19 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/18 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/17 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/16 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/15 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa4a2a91330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_write/28 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa4a2a91220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_read/27 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: sysreg_config_sm_en/20 sysreg_umask_sm_lock/19 sysreg_enable_sm_lock/18 sysreg_enable_fun_lock/17 lib_register_unlock/16 lib_register_lock/15 util_u32_copy/12 util_memcmp/11 util_memset/10 util_memcpy/9 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+expt_det_add_error/35 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_enable_int/34 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_register_int/33 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+mailbox_clear_recv_notify/32 (mailbox_clear_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_recv_notify/31 (mailbox_read_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_set_send_notify/30 (mailbox_set_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_send_notify/29 (mailbox_read_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_write/28 (mailbox_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 util_write_volatile_u32/14 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read/27 (mailbox_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_read_volatile_u32/13 mailbox_get_reg_base/24 
+mailbox_init/26 (mailbox_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: mailbox_int_handler/25 (addr) g_mailbox_cb/23 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/35 sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 cpu_enable_int/34 cpu_register_int/33 
+mailbox_int_handler/25 (mailbox_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_mailbox_cb/23 (read) g_mailbox_cb/23 (read) 
+  Referring: mailbox_init/26 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+   Indirect callnum speculative call targets: 0
+mailbox_get_reg_base/24 (mailbox_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_read_recv_notify/31 mailbox_set_send_notify/30 mailbox_read_send_notify/29 mailbox_write/28 mailbox_read/27 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+g_mailbox_cb/23 (g_mailbox_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: mailbox_init/26 (write) mailbox_int_handler/25 (read) mailbox_int_handler/25 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_write/28 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_read/27 
+  Calls: 
+
+
+Initial Symbol table:
+
+expt_det_add_error/35 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_enable_int/34 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_register_int/33 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+mailbox_clear_recv_notify/32 (mailbox_clear_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_recv_notify/31 (mailbox_read_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_set_send_notify/30 (mailbox_set_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_send_notify/29 (mailbox_read_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_write/28 (mailbox_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 util_write_volatile_u32/14 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read/27 (mailbox_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_read_volatile_u32/13 mailbox_get_reg_base/24 
+mailbox_init/26 (mailbox_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: mailbox_int_handler/25 (addr) g_mailbox_cb/23 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/35 sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 cpu_enable_int/34 cpu_register_int/33 
+mailbox_int_handler/25 (mailbox_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_mailbox_cb/23 (read) g_mailbox_cb/23 (read) 
+  Referring: mailbox_init/26 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+   Indirect callnum speculative call targets: 0
+mailbox_get_reg_base/24 (mailbox_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_read_recv_notify/31 mailbox_set_send_notify/30 mailbox_read_send_notify/29 mailbox_write/28 mailbox_read/27 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+g_mailbox_cb/23 (g_mailbox_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: mailbox_init/26 (write) mailbox_int_handler/25 (read) mailbox_int_handler/25 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_write/28 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_read/27 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+expt_det_add_error/35 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_enable_int/34 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+cpu_register_int/33 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mailbox_init/26 
+  Calls: 
+mailbox_clear_recv_notify/32 (mailbox_clear_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_recv_notify/31 (mailbox_read_recv_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_set_send_notify/30 (mailbox_set_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read_send_notify/29 (mailbox_read_send_notify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: mailbox_get_reg_base/24 
+mailbox_write/28 (mailbox_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 util_write_volatile_u32/14 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+mailbox_read/27 (mailbox_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_read_volatile_u32/13 mailbox_get_reg_base/24 
+mailbox_init/26 (mailbox_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: mailbox_int_handler/25 (addr) g_mailbox_cb/23 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/35 sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 cpu_enable_int/34 cpu_register_int/33 
+mailbox_int_handler/25 (mailbox_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_mailbox_cb/23 (read) g_mailbox_cb/23 (read) 
+  Referring: mailbox_init/26 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/22 sysreg_unlock_reg/21 mailbox_get_reg_base/24 
+   Indirect callnum speculative call targets: 0
+mailbox_get_reg_base/24 (mailbox_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_read_recv_notify/31 mailbox_set_send_notify/30 mailbox_read_send_notify/29 mailbox_write/28 mailbox_read/27 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+g_mailbox_cb/23 (g_mailbox_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: mailbox_init/26 (write) mailbox_int_handler/25 (read) mailbox_int_handler/25 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_clear_recv_notify/32 mailbox_set_send_notify/30 mailbox_write/28 mailbox_int_handler/25 mailbox_init/26 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_write/28 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: mailbox_read/27 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+expt_det_add_error/35 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: mailbox_init/26 (488353037 (estimated locally),0.45 per call) 
+  Calls: 
+cpu_enable_int/34 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: mailbox_init/26 (116203861 (estimated locally),0.11 per call) 
+  Calls: 
+cpu_register_int/33 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: mailbox_init/26 (574129752 (estimated locally),0.53 per call) 
+  Calls: 
+mailbox_clear_recv_notify/32 (mailbox_clear_recv_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_read_recv_notify/31 (mailbox_read_recv_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_set_send_notify/30 (mailbox_set_send_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_read_send_notify/29 (mailbox_read_send_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_write/28 (mailbox_write)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_read/27 (mailbox_read)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_init/26 (mailbox_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: mailbox_int_handler/25 (addr) g_mailbox_cb/23 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/35 (488353037 (estimated locally),0.45 per call) cpu_enable_int/34 (116203861 (estimated locally),0.11 per call) cpu_register_int/33 (574129752 (estimated locally),0.53 per call) 
+mailbox_int_handler/25 (mailbox_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_mailbox_cb/23 (read) 
+  Referring: mailbox_init/26 (addr) 
+  Availability: available
+  Function flags: count:63136016 (estimated locally) body
+  Called by: 
+  Calls: 
+   Indirect call(44195211 (estimated locally),0.70 per call) num speculative call targets: 0
+g_mailbox_cb/23 (g_mailbox_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: mailbox_int_handler/25 (read) mailbox_init/26 (write) 
+  Availability: available
+  Varpool flags: initialized
+Trivially needed variables: g_mailbox_cb/23
+Removing variables:
+
+Final Symbol table:
+
+expt_det_add_error/35 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_enable_int/34 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_register_int/33 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_clear_recv_notify/32 (mailbox_clear_recv_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_clear_recv_notify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_read_recv_notify/31 (mailbox_read_recv_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_read_recv_notify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_set_send_notify/30 (mailbox_set_send_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_set_send_notify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_read_send_notify/29 (mailbox_read_send_notify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_read_send_notify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_write/28 (mailbox_write)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_write (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_read/27 (mailbox_read)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_read (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+mailbox_init/26 (mailbox_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mailbox_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+mailbox_int_handler/25 (mailbox_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.mailbox_int_handler (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:63136016 (estimated locally)
+  Called by: 
+  Calls: 
+g_mailbox_cb/23 (g_mailbox_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_mailbox_cb (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

@@ -1,0 +1,3826 @@
+Trivially needed symbols: ske_dma_crypto/42 ske_dma_final/41 ske_dma_update_including_last_block/40 ske_dma_update_blocks/37 ske_dma_init/35 ske_crypto/34 ske_final/33 ske_update_including_last_block/32 ske_check_padding/28 ske_update_blocks/24 ske_init/22 ske_keep_alg_key_iv/21 ske_init_internal/20 ske_set_key/18 ske_set_iv/17 ske_get_key_byte_len/16 ske_get_block_byte_len/15 ske_check_mode/14 ske_check_alg/13 ske_clear_block_tail/12
+
+
+Initial Symbol table:
+
+ske_dma_operate/71 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_unlock_remap/70 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_lock_remap/69 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_disable_dma_linked_list/68 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_set_dma_mode/67 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+memset_/66 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_final/41 ske_final/33 
+  Calls: 
+ske_simple_get_output_block/65 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_wait_till_done/64 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_set_last_block_len/63 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+uint32_big_num_little_endian_add_little/62 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+reverse_byte_array/61 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 ske_counter_add_u32/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/60 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+uint8_XOR/59 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: 
+ske_update_blocks_internal/58 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+ske_set_padding/57 (ske_set_padding)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_c_len_uint32/56 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_cpu_mode/55 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_clear_cfg/54 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_expand_key/53 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+lib_ske_secure_port_config/52 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+ske_disable_secure_port/51 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_last_block/50 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 
+  Calls: 
+ske_set_crypto/49 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_mode/48 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_alg/47 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_endian_uint32/46 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_key_uint32/45 (ske_set_key_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_key/18 
+  Calls: 
+ske_set_iv_uint32/44 (ske_set_iv_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_iv/17 
+  Calls: 
+memcpy_/43 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_keep_iv/23 ske_keep_iv/23 ske_keep_iv/23 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_set_key/18 ske_set_iv/17 
+  Calls: 
+ske_dma_crypto/42 (ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_including_last_block/40 ske_dma_init/35 
+ske_dma_final/41 (ske_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775eb8220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_dma_update_including_last_block/40 (ske_dma_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775eb8110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_update_last_blocks_without_padding/39 (ske_dma_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775eb8110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: ske_dma_operate/71 CAST2UINT32/6 
+ske_dma_update_last_blocks_with_padding/38 (ske_dma_update_last_blocks_with_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: lib_addr_arch32_unlock_remap/70 ske_check_padding/28 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 ske_dma_operate/71 ske_set_last_block_len/63 ske_dma_operate/71 ske_set_last_block_len/63 ske_set_last_block/50 CAST2UINT32/6 
+ske_dma_update_blocks/37 (ske_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775eb8000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_blocks_internal/36 CAST2UINT32/6 
+ske_dma_update_blocks_internal/36 (ske_dma_update_blocks_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775eb8000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks/37 
+  Calls: ske_counter_add_u32/11 lib_addr_arch32_unlock_remap/70 uint8_XOR/59 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_init/35 (ske_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e92cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_keep_alg_key_iv/21 
+ske_crypto/34 (ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e92aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_update_including_last_block/32 ske_init/22 
+ske_final/33 (ske_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e92990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_update_including_last_block/32 (ske_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e92880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 
+ske_update_last_blocks_without_padding/31 (ske_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_dec/30 (ske_update_last_blocks_with_padding_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_check_padding/28 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_enc/29 (ske_update_last_blocks_with_padding_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: CAST2UINT32/6 memcpy_/43 ske_simple_get_output_block/65 ske_wait_till_done/64 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_set_last_block/50 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_check_padding/28 (ske_check_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e92770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_dec/30 
+  Calls: ske_check_iso_7816_4_padding/27 ske_check_pkcs5_7_padding/26 ske_check_ansi_x923_padding/25 
+ske_check_iso_7816_4_padding/27 (ske_check_iso_7816_4_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_pkcs5_7_padding/26 (ske_check_pkcs5_7_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_ansi_x923_padding/25 (ske_check_ansi_x923_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_update_blocks/24 (ske_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e92330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_keep_iv/23 ske_update_blocks_internal/58 ske_keep_iv/23 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 CAST2UINT32/6 
+ske_keep_iv/23 (ske_keep_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_blocks/24 ske_update_blocks/24 
+  Calls: ske_counter_add_u32/11 uint8_XOR/59 memcpy_/43 memcpy_/43 memcpy_/43 
+ske_init/22 (ske_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_keep_alg_key_iv/21 
+ske_keep_alg_key_iv/21 (ske_keep_alg_key_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_init/35 ske_init/22 
+  Calls: memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_block_byte_len/15 
+ske_init_internal/20 (ske_init_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: ske_expand_key/53 lib_ske_secure_port_config/52 ske_expand_key/53 lib_ske_secure_port_config/52 ske_set_key/18 ske_set_key/18 ske_get_key_byte_len/16 ske_disable_secure_port/51 ske_set_last_block/50 ske_set_crypto/49 ske_set_mode/48 ske_set_alg/47 ske_set_endian_uint32/46 ske_set_iv/17 ske_get_block_byte_len/15 ske_check_param/19 
+ske_check_param/19 (ske_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e66bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_check_mode/14 ske_check_alg/13 
+ske_set_key/18 (ske_set_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: ske_set_key_uint32/45 memcpy_/43 
+ske_set_iv/17 (ske_set_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_set_iv_uint32/44 memcpy_/43 
+ske_get_key_byte_len/16 (ske_get_key_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_get_block_byte_len/15 (ske_get_block_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_check_mode/14 (ske_check_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_check_alg/13 (ske_check_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_clear_block_tail/12 (ske_clear_block_tail)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9775e66330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32/11 (ske_counter_add_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e92330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: reverse_byte_array/61 uint32_big_num_little_endian_add_little/62 reverse_byte_array/61 uint8_big_num_big_endian_add_little/60 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9775e66dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks/37 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+ske_dma_operate/71 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_unlock_remap/70 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_lock_remap/69 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_disable_dma_linked_list/68 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_set_dma_mode/67 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+memset_/66 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_final/41 ske_final/33 
+  Calls: 
+ske_simple_get_output_block/65 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_wait_till_done/64 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_set_last_block_len/63 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+uint32_big_num_little_endian_add_little/62 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+reverse_byte_array/61 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 ske_counter_add_u32/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/60 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+uint8_XOR/59 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: 
+ske_update_blocks_internal/58 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+ske_set_padding/57 (ske_set_padding)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_c_len_uint32/56 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_cpu_mode/55 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_clear_cfg/54 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_expand_key/53 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+lib_ske_secure_port_config/52 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+ske_disable_secure_port/51 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_last_block/50 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 
+  Calls: 
+ske_set_crypto/49 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_mode/48 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_alg/47 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_endian_uint32/46 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_key_uint32/45 (ske_set_key_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_key/18 
+  Calls: 
+ske_set_iv_uint32/44 (ske_set_iv_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_iv/17 
+  Calls: 
+memcpy_/43 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_keep_iv/23 ske_keep_iv/23 ske_keep_iv/23 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_set_key/18 ske_set_iv/17 
+  Calls: 
+ske_dma_crypto/42 (ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_including_last_block/40 ske_dma_init/35 
+ske_dma_final/41 (ske_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_dma_update_including_last_block/40 (ske_dma_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_update_last_blocks_without_padding/39 (ske_dma_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: ske_dma_operate/71 CAST2UINT32/6 
+ske_dma_update_last_blocks_with_padding/38 (ske_dma_update_last_blocks_with_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: lib_addr_arch32_unlock_remap/70 ske_check_padding/28 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 ske_dma_operate/71 ske_set_last_block_len/63 ske_dma_operate/71 ske_set_last_block_len/63 ske_set_last_block/50 CAST2UINT32/6 
+ske_dma_update_blocks/37 (ske_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_blocks_internal/36 CAST2UINT32/6 
+ske_dma_update_blocks_internal/36 (ske_dma_update_blocks_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks/37 
+  Calls: ske_counter_add_u32/11 lib_addr_arch32_unlock_remap/70 uint8_XOR/59 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_init/35 (ske_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_keep_alg_key_iv/21 
+ske_crypto/34 (ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_update_including_last_block/32 ske_init/22 
+ske_final/33 (ske_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_update_including_last_block/32 (ske_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 
+ske_update_last_blocks_without_padding/31 (ske_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_dec/30 (ske_update_last_blocks_with_padding_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_check_padding/28 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_enc/29 (ske_update_last_blocks_with_padding_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: CAST2UINT32/6 memcpy_/43 ske_simple_get_output_block/65 ske_wait_till_done/64 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_set_last_block/50 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_check_padding/28 (ske_check_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_dec/30 
+  Calls: ske_check_iso_7816_4_padding/27 ske_check_pkcs5_7_padding/26 ske_check_ansi_x923_padding/25 
+ske_check_iso_7816_4_padding/27 (ske_check_iso_7816_4_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_pkcs5_7_padding/26 (ske_check_pkcs5_7_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_ansi_x923_padding/25 (ske_check_ansi_x923_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_update_blocks/24 (ske_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_keep_iv/23 ske_update_blocks_internal/58 ske_keep_iv/23 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 CAST2UINT32/6 
+ske_keep_iv/23 (ske_keep_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_blocks/24 ske_update_blocks/24 
+  Calls: ske_counter_add_u32/11 uint8_XOR/59 memcpy_/43 memcpy_/43 memcpy_/43 
+ske_init/22 (ske_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_keep_alg_key_iv/21 
+ske_keep_alg_key_iv/21 (ske_keep_alg_key_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_init/35 ske_init/22 
+  Calls: memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_block_byte_len/15 
+ske_init_internal/20 (ske_init_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: ske_expand_key/53 lib_ske_secure_port_config/52 ske_expand_key/53 lib_ske_secure_port_config/52 ske_set_key/18 ske_set_key/18 ske_get_key_byte_len/16 ske_disable_secure_port/51 ske_set_last_block/50 ske_set_crypto/49 ske_set_mode/48 ske_set_alg/47 ske_set_endian_uint32/46 ske_set_iv/17 ske_get_block_byte_len/15 ske_check_param/19 
+ske_check_param/19 (ske_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_check_mode/14 ske_check_alg/13 
+ske_set_key/18 (ske_set_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: ske_set_key_uint32/45 memcpy_/43 
+ske_set_iv/17 (ske_set_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_set_iv_uint32/44 memcpy_/43 
+ske_get_key_byte_len/16 (ske_get_key_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_get_block_byte_len/15 (ske_get_block_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_check_mode/14 (ske_check_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_check_alg/13 (ske_check_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_clear_block_tail/12 (ske_clear_block_tail)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32/11 (ske_counter_add_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: reverse_byte_array/61 uint32_big_num_little_endian_add_little/62 reverse_byte_array/61 uint8_big_num_big_endian_add_little/60 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks/37 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+
+
+Initial Symbol table:
+
+ske_dma_operate/71 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_unlock_remap/70 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_lock_remap/69 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_disable_dma_linked_list/68 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_set_dma_mode/67 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+memset_/66 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_final/41 ske_final/33 
+  Calls: 
+ske_simple_get_output_block/65 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_wait_till_done/64 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_set_last_block_len/63 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+uint32_big_num_little_endian_add_little/62 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+reverse_byte_array/61 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 ske_counter_add_u32/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/60 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+uint8_XOR/59 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: 
+ske_update_blocks_internal/58 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+ske_set_padding/57 (ske_set_padding)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_c_len_uint32/56 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_cpu_mode/55 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_clear_cfg/54 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_expand_key/53 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+lib_ske_secure_port_config/52 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+ske_disable_secure_port/51 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_last_block/50 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 
+  Calls: 
+ske_set_crypto/49 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_mode/48 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_alg/47 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_endian_uint32/46 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_key_uint32/45 (ske_set_key_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_key/18 
+  Calls: 
+ske_set_iv_uint32/44 (ske_set_iv_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_iv/17 
+  Calls: 
+memcpy_/43 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_keep_iv/23 ske_keep_iv/23 ske_keep_iv/23 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_set_key/18 ske_set_iv/17 
+  Calls: 
+ske_dma_crypto/42 (ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_including_last_block/40 ske_dma_init/35 
+ske_dma_final/41 (ske_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_dma_update_including_last_block/40 (ske_dma_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_update_last_blocks_without_padding/39 (ske_dma_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: ske_dma_operate/71 CAST2UINT32/6 
+ske_dma_update_last_blocks_with_padding/38 (ske_dma_update_last_blocks_with_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: lib_addr_arch32_unlock_remap/70 ske_check_padding/28 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 ske_dma_operate/71 ske_set_last_block_len/63 ske_dma_operate/71 ske_set_last_block_len/63 ske_set_last_block/50 CAST2UINT32/6 
+ske_dma_update_blocks/37 (ske_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_blocks_internal/36 CAST2UINT32/6 
+ske_dma_update_blocks_internal/36 (ske_dma_update_blocks_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks/37 
+  Calls: ske_counter_add_u32/11 lib_addr_arch32_unlock_remap/70 uint8_XOR/59 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_init/35 (ske_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_keep_alg_key_iv/21 
+ske_crypto/34 (ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_update_including_last_block/32 ske_init/22 
+ske_final/33 (ske_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_update_including_last_block/32 (ske_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 
+ske_update_last_blocks_without_padding/31 (ske_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_dec/30 (ske_update_last_blocks_with_padding_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_check_padding/28 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_enc/29 (ske_update_last_blocks_with_padding_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: CAST2UINT32/6 memcpy_/43 ske_simple_get_output_block/65 ske_wait_till_done/64 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_set_last_block/50 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_check_padding/28 (ske_check_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_dec/30 
+  Calls: ske_check_iso_7816_4_padding/27 ske_check_pkcs5_7_padding/26 ske_check_ansi_x923_padding/25 
+ske_check_iso_7816_4_padding/27 (ske_check_iso_7816_4_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_pkcs5_7_padding/26 (ske_check_pkcs5_7_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_ansi_x923_padding/25 (ske_check_ansi_x923_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_update_blocks/24 (ske_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_keep_iv/23 ske_update_blocks_internal/58 ske_keep_iv/23 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 CAST2UINT32/6 
+ske_keep_iv/23 (ske_keep_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_blocks/24 ske_update_blocks/24 
+  Calls: ske_counter_add_u32/11 uint8_XOR/59 memcpy_/43 memcpy_/43 memcpy_/43 
+ske_init/22 (ske_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_keep_alg_key_iv/21 
+ske_keep_alg_key_iv/21 (ske_keep_alg_key_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_init/35 ske_init/22 
+  Calls: memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_block_byte_len/15 
+ske_init_internal/20 (ske_init_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: ske_expand_key/53 lib_ske_secure_port_config/52 ske_expand_key/53 lib_ske_secure_port_config/52 ske_set_key/18 ske_set_key/18 ske_get_key_byte_len/16 ske_disable_secure_port/51 ske_set_last_block/50 ske_set_crypto/49 ske_set_mode/48 ske_set_alg/47 ske_set_endian_uint32/46 ske_set_iv/17 ske_get_block_byte_len/15 ske_check_param/19 
+ske_check_param/19 (ske_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_check_mode/14 ske_check_alg/13 
+ske_set_key/18 (ske_set_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: ske_set_key_uint32/45 memcpy_/43 
+ske_set_iv/17 (ske_set_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_set_iv_uint32/44 memcpy_/43 
+ske_get_key_byte_len/16 (ske_get_key_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_get_block_byte_len/15 (ske_get_block_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_check_mode/14 (ske_check_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_check_alg/13 (ske_check_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_clear_block_tail/12 (ske_clear_block_tail)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32/11 (ske_counter_add_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: reverse_byte_array/61 uint32_big_num_little_endian_add_little/62 reverse_byte_array/61 uint8_big_num_big_endian_add_little/60 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks/37 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+ske_dma_operate/71 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_unlock_remap/70 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+lib_addr_arch32_lock_remap/69 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_disable_dma_linked_list/68 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+ske_set_dma_mode/67 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 
+  Calls: 
+memset_/66 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_final/41 ske_final/33 
+  Calls: 
+ske_simple_get_output_block/65 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_wait_till_done/64 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+ske_set_last_block_len/63 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 
+  Calls: 
+uint32_big_num_little_endian_add_little/62 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+reverse_byte_array/61 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 ske_counter_add_u32/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/60 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32/11 
+  Calls: 
+uint8_XOR/59 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: 
+ske_update_blocks_internal/58 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+ske_set_padding/57 (ske_set_padding)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_c_len_uint32/56 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_set_cpu_mode/55 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_clear_cfg/54 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: 
+ske_expand_key/53 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+lib_ske_secure_port_config/52 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: 
+ske_disable_secure_port/51 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_last_block/50 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 
+  Calls: 
+ske_set_crypto/49 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_mode/48 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_alg/47 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_endian_uint32/46 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_init_internal/20 
+  Calls: 
+ske_set_key_uint32/45 (ske_set_key_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_key/18 
+  Calls: 
+ske_set_iv_uint32/44 (ske_set_iv_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_set_iv/17 
+  Calls: 
+memcpy_/43 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_dma_update_blocks_internal/36 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_keep_iv/23 ske_keep_iv/23 ske_keep_iv/23 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_set_key/18 ske_set_iv/17 
+  Calls: 
+ske_dma_crypto/42 (ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_including_last_block/40 ske_dma_init/35 
+ske_dma_final/41 (ske_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_dma_update_including_last_block/40 (ske_dma_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_update_last_blocks_without_padding/39 (ske_dma_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: ske_dma_operate/71 CAST2UINT32/6 
+ske_dma_update_last_blocks_with_padding/38 (ske_dma_update_last_blocks_with_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 
+  Calls: lib_addr_arch32_unlock_remap/70 ske_check_padding/28 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 ske_dma_operate/71 ske_set_last_block_len/63 ske_dma_operate/71 ske_set_last_block_len/63 ske_set_last_block/50 CAST2UINT32/6 
+ske_dma_update_blocks/37 (ske_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_dma_update_blocks_internal/36 CAST2UINT32/6 
+ske_dma_update_blocks_internal/36 (ske_dma_update_blocks_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks/37 
+  Calls: ske_counter_add_u32/11 lib_addr_arch32_unlock_remap/70 uint8_XOR/59 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_dma_operate/71 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 lib_addr_arch32_unlock_remap/70 memcpy_/43 lib_addr_arch32_lock_remap/69 ske_init_internal/20 ske_set_padding/57 ske_disable_dma_linked_list/68 ske_set_c_len_uint32/56 ske_set_dma_mode/67 ske_clear_cfg/54 
+ske_dma_init/35 (ske_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_crypto/42 
+  Calls: ske_keep_alg_key_iv/21 
+ske_crypto/34 (ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_update_including_last_block/32 ske_init/22 
+ske_final/33 (ske_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/66 
+ske_update_including_last_block/32 (ske_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 
+ske_update_last_blocks_without_padding/31 (ske_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_dec/30 (ske_update_last_blocks_with_padding_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: memcpy_/43 ske_check_padding/28 ske_update_blocks_internal/58 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_update_last_blocks_with_padding_enc/29 (ske_update_last_blocks_with_padding_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_including_last_block/32 
+  Calls: CAST2UINT32/6 memcpy_/43 ske_simple_get_output_block/65 ske_wait_till_done/64 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_update_blocks_internal/58 ske_set_last_block_len/63 ske_set_last_block/50 ske_update_blocks_internal/58 CAST2UINT32/6 
+ske_check_padding/28 (ske_check_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 ske_update_last_blocks_with_padding_dec/30 
+  Calls: ske_check_iso_7816_4_padding/27 ske_check_pkcs5_7_padding/26 ske_check_ansi_x923_padding/25 
+ske_check_iso_7816_4_padding/27 (ske_check_iso_7816_4_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_pkcs5_7_padding/26 (ske_check_pkcs5_7_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_check_ansi_x923_padding/25 (ske_check_ansi_x923_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_padding/28 
+  Calls: 
+ske_update_blocks/24 (ske_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_keep_iv/23 ske_update_blocks_internal/58 ske_keep_iv/23 ske_init_internal/20 ske_set_padding/57 ske_set_c_len_uint32/56 ske_set_cpu_mode/55 ske_clear_cfg/54 CAST2UINT32/6 
+ske_keep_iv/23 (ske_keep_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_update_blocks/24 ske_update_blocks/24 
+  Calls: ske_counter_add_u32/11 uint8_XOR/59 memcpy_/43 memcpy_/43 memcpy_/43 
+ske_init/22 (ske_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_crypto/34 
+  Calls: ske_keep_alg_key_iv/21 
+ske_keep_alg_key_iv/21 (ske_keep_alg_key_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_init/35 ske_init/22 
+  Calls: memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_key_byte_len/16 memcpy_/43 ske_get_block_byte_len/15 
+ske_init_internal/20 (ske_init_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_including_last_block/40 ske_dma_update_blocks_internal/36 ske_update_including_last_block/32 ske_update_blocks/24 
+  Calls: ske_expand_key/53 lib_ske_secure_port_config/52 ske_expand_key/53 lib_ske_secure_port_config/52 ske_set_key/18 ske_set_key/18 ske_get_key_byte_len/16 ske_disable_secure_port/51 ske_set_last_block/50 ske_set_crypto/49 ske_set_mode/48 ske_set_alg/47 ske_set_endian_uint32/46 ske_set_iv/17 ske_get_block_byte_len/15 ske_check_param/19 
+ske_check_param/19 (ske_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_check_mode/14 ske_check_alg/13 
+ske_set_key/18 (ske_set_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 ske_init_internal/20 
+  Calls: ske_set_key_uint32/45 memcpy_/43 
+ske_set_iv/17 (ske_set_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_init_internal/20 
+  Calls: ske_set_iv_uint32/44 memcpy_/43 
+ske_get_key_byte_len/16 (ske_get_key_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_get_block_byte_len/15 (ske_get_block_byte_len)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_keep_alg_key_iv/21 ske_init_internal/20 
+  Calls: 
+ske_check_mode/14 (ske_check_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_check_alg/13 (ske_check_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_check_param/19 
+  Calls: 
+ske_clear_block_tail/12 (ske_clear_block_tail)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32/11 (ske_counter_add_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_blocks_internal/36 ske_keep_iv/23 
+  Calls: reverse_byte_array/61 uint32_big_num_little_endian_add_little/62 reverse_byte_array/61 uint8_big_num_big_endian_add_little/60 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ske_dma_update_last_blocks_without_padding/39 ske_dma_update_last_blocks_with_padding/38 ske_dma_update_blocks/37 ske_update_last_blocks_without_padding/31 ske_update_last_blocks_with_padding_dec/30 ske_update_last_blocks_with_padding_enc/29 ske_update_last_blocks_with_padding_enc/29 ske_update_blocks/24 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+__builtin_unreachable/101 (__builtin_unreachable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_keep_iv/23 (0 (precise),0.00 per call) ske_keep_iv/23 (0 (precise),0.00 per call) ske_keep_iv/100 (0 (precise),0.00 per call) ske_keep_iv/100 (0 (precise),0.00 per call) ske_keep_iv/100 (0 (precise),0.00 per call) 
+  Calls: 
+ske_keep_iv/100 (ske_keep_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 23
+  References: 
+  Referring: 
+  Function ske_keep_iv/100 is inline copy in ske_update_blocks/24
+  Clone of ske_keep_iv/23
+  Availability: local
+  Function flags: count:40767231 (estimated locally) body local optimize_size
+  Called by: ske_update_blocks/24 (inlined) (40767231 (estimated locally),0.04 per call) 
+  Calls: memcpy_/43 (1150229 (estimated locally),0.00 per call) memcpy_/43 (1655208 (estimated locally),0.00 per call) __builtin_unreachable/101 (0 (precise),0.00 per call) __builtin_unreachable/101 (0 (precise),0.00 per call) __builtin_unreachable/101 (0 (precise),0.00 per call) 
+ske_init.part.0/99 (ske_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 98
+  References: 
+  Referring: 
+  Function ske_init.part.0/99 is inline copy in ske_dma_crypto/42
+  Clone of ske_init.part.0/83
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local icf_merged split_part optimize_size
+  Called by: ske_dma_crypto/42 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: ske_keep_alg_key_iv/21 (1073741824 (estimated locally),1.00 per call) 
+ske_init.part.0/98 (ske_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 83
+  previous sharing asm name: 99
+  References: 
+  Referring: 
+  Function ske_init.part.0/98 is inline copy in ske_crypto/34
+  Clone of ske_init.part.0/83
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local icf_merged split_part optimize_size
+  Called by: ske_crypto/34 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: ske_keep_alg_key_iv/21 (1073741824 (estimated locally),1.00 per call) 
+ske_check_param.isra.0/97 (ske_check_param.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function ske_check_param.isra/97 is inline copy in ske_init_internal/20
+  Clone of ske_check_param/19
+  Availability: local
+  Function flags: count:872415232 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: ske_init_internal/20 (inlined) (872415232 (estimated locally),0.81 per call) 
+  Calls: ske_check_alg/13 (872415232 (estimated locally),0.81 per call) ske_check_mode/14 (567069900 (estimated locally),0.53 per call) 
+ske_counter_add_u32.constprop.0.isra.0/96 (ske_counter_add_u32.constprop.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of ske_counter_add_u32.constprop.0/93
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: ske_dma_update_blocks_internal/36 (3032816 (estimated locally),0.00 per call) ske_keep_iv/23 (925794 (estimated locally),0.00 per call) 
+  Calls: ske_counter_add_u32.part.0.constprop.0.isra.0/95 (inlined) (536870912 (estimated locally),0.50 per call) uint8_big_num_big_endian_add_little/60 (536870912 (estimated locally),0.50 per call) 
+ske_counter_add_u32.part.0.constprop.0.isra.0/95 (ske_counter_add_u32.part.0.constprop.isra)
+  Type: function definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: 
+  Function ske_counter_add_u32.part.0.constprop.isra/95 is inline copy in ske_counter_add_u32.constprop.isra/96
+  Clone of ske_counter_add_u32.part.0.constprop.0/94
+  Availability: local
+  Function flags: count:536870912 (estimated locally) local split_part optimize_size
+  Called by: ske_counter_add_u32.constprop.0.isra.0/96 (inlined) (536870912 (estimated locally),0.50 per call) 
+  Calls: reverse_byte_array/61 (536870912 (estimated locally),0.50 per call) uint32_big_num_little_endian_add_little/62 (536870912 (estimated locally),0.50 per call) reverse_byte_array/61 (536870912 (estimated locally),0.50 per call) 
+ske_counter_add_u32.part.0.constprop.0/94 (ske_counter_add_u32.part.0.constprop)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: artificial
+  References: 
+  Referring: 
+  Clone of ske_counter_add_u32.part.0/73
+  Availability: not_available
+  Function flags: count:536870912 (estimated locally) split_part optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32.constprop.0/93 (ske_counter_add_u32.constprop)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility:
+  References: 
+  Referring: 
+  Clone of ske_counter_add_u32/11
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_dma_update_including_last_block.part.0/91 (ske_dma_update_including_last_block.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_dma_update_including_last_block.part.0/91 is inline copy in ske_dma_update_including_last_block/40
+  Availability: local
+  Function flags: count:482452438 (estimated locally) body local split_part optimize_size
+  Called by: ske_dma_update_including_last_block/40 (inlined) (482452438 (estimated locally),0.45 per call) 
+  Calls: ske_clear_cfg/54 (103486047 (estimated locally),0.10 per call) ske_set_dma_mode/67 (103486047 (estimated locally),0.10 per call) ske_set_c_len_uint32/56 (103486047 (estimated locally),0.10 per call) ske_disable_dma_linked_list/68 (103486047 (estimated locally),0.10 per call) ske_set_padding/57 (103486047 (estimated locally),0.10 per call) ske_init_internal/20 (103486047 (estimated locally),0.10 per call) ske_dma_update_last_blocks_with_padding/38 (inlined) (25871512 (estimated locally),0.02 per call) ske_dma_update_last_blocks_without_padding/39 (inlined) (25871512 (estimated locally),0.02 per call) 
+ske_update_including_last_block.part.0/88 (ske_update_including_last_block.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_update_including_last_block.part.0/88 is inline copy in ske_update_including_last_block/32
+  Availability: local
+  Function flags: count:205717044 (estimated locally) body local split_part optimize_size
+  Called by: ske_update_including_last_block/32 (inlined) (205717044 (estimated locally),0.19 per call) 
+  Calls: ske_clear_cfg/54 (205717044 (estimated locally),0.19 per call) ske_set_cpu_mode/55 (205717044 (estimated locally),0.19 per call) ske_set_c_len_uint32/56 (205717044 (estimated locally),0.19 per call) ske_set_padding/57 (205717044 (estimated locally),0.19 per call) ske_init_internal/20 (205717044 (estimated locally),0.19 per call) ske_update_last_blocks_with_padding_enc/29 (inlined) (34457605 (estimated locally),0.03 per call) ske_update_last_blocks_with_padding_dec/30 (inlined) (34457605 (estimated locally),0.03 per call) ske_update_last_blocks_without_padding/31 (inlined) (33943312 (estimated locally),0.03 per call) 
+ske_check_padding.part.0/85 (ske_check_padding.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_check_padding.part.0/85 is inline copy in ske_check_padding/28
+  Availability: local
+  Function flags: count:683077785 (estimated locally) body local split_part nonfreeing_fn optimize_size
+  Called by: ske_check_padding/28 (inlined) (683077785 (estimated locally),0.64 per call) 
+  Calls: ske_check_iso_7816_4_padding/27 (inlined) (218789813 (estimated locally),0.20 per call) 
+ske_init.part.0/83 (ske_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 98
+  References: 
+  Referring: 
+  Function ske_init.part.0/83 is inline copy in ske_init/22
+  Availability: local
+  Function flags: count:731110808 (estimated locally) body local icf_merged split_part optimize_size
+  Called by: ske_init/22 (inlined) (731110808 (estimated locally),0.68 per call) 
+  Calls: ske_keep_alg_key_iv/21 (731110808 (estimated locally),0.68 per call) 
+ske_init_internal.part.0/79 (ske_init_internal.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_init_internal.part.0/79 is inline copy in ske_init_internal/20
+  Availability: local
+  Function flags: count:416752759 (estimated locally) body local split_part optimize_size
+  Called by: ske_init_internal/20 (inlined) (416752759 (estimated locally),0.39 per call) 
+  Calls: ske_set_iv/17 (416752759 (estimated locally),0.39 per call) ske_set_endian_uint32/46 (416752759 (estimated locally),0.39 per call) ske_set_alg/47 (416752759 (estimated locally),0.39 per call) ske_set_mode/48 (416752759 (estimated locally),0.39 per call) ske_set_crypto/49 (416752759 (estimated locally),0.39 per call) ske_set_last_block/50 (416752759 (estimated locally),0.39 per call) ske_disable_secure_port/51 (222837700 (estimated locally),0.21 per call) ske_set_key/18 (222837700 (estimated locally),0.21 per call) ske_set_key/18 (45102350 (estimated locally),0.04 per call) lib_ske_secure_port_config/52 (39248408 (estimated locally),0.04 per call) ske_expand_key/53 (12951974 (estimated locally),0.01 per call) lib_ske_secure_port_config/52 (193915059 (estimated locally),0.18 per call) ske_expand_key/53 (137528410 (estimated locally),0.13 per call) 
+ske_counter_add_u32.part.0/73 (ske_counter_add_u32.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:536870912 (estimated locally) body split_part optimize_size
+  Called by: 
+  Calls: 
+ske_dma_operate/71 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 (8280410 (estimated locally),0.01 per call) ske_dma_update_last_blocks_with_padding/38 (4268799 (estimated locally),0.00 per call) ske_dma_update_last_blocks_with_padding/38 (4268799 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (63683722 (estimated locally),0.06 per call) ske_dma_update_last_blocks_without_padding/39 (20760853 (estimated locally),0.02 per call) 
+  Calls: 
+lib_addr_arch32_unlock_remap/70 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 (2732535 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (3802428 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (4308204 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (7604855 (estimated locally),0.01 per call) ske_dma_update_blocks_internal/36 (5284730 (estimated locally),0.00 per call) 
+  Calls: 
+lib_addr_arch32_lock_remap/69 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 (2732535 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (3802428 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (4308204 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (7604855 (estimated locally),0.01 per call) ske_dma_update_blocks_internal/36 (5284730 (estimated locally),0.00 per call) 
+  Calls: 
+ske_disable_dma_linked_list/68 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (103486047 (estimated locally),0.10 per call) ske_dma_update_blocks_internal/36 (127367443 (estimated locally),0.12 per call) 
+  Calls: 
+ske_set_dma_mode/67 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (103486047 (estimated locally),0.10 per call) ske_dma_update_blocks_internal/36 (127367443 (estimated locally),0.12 per call) 
+  Calls: 
+memset_/66 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_final/33 (731110808 (estimated locally),0.68 per call) 
+  Calls: 
+ske_simple_get_output_block/65 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 (619151 (estimated locally),0.00 per call) 
+  Calls: 
+ske_wait_till_done/64 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_enc/29 (1876217 (estimated locally),0.00 per call) 
+  Calls: 
+ske_set_last_block_len/63 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 (4268799 (estimated locally),0.00 per call) ske_dma_update_last_blocks_with_padding/38 (4268799 (estimated locally),0.00 per call) ske_update_last_blocks_with_padding_enc/29 (5685505 (estimated locally),0.01 per call) ske_update_last_blocks_with_padding_enc/29 (5685505 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_big_num_little_endian_add_little/62 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32.part.0.constprop.0.isra.0/95 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+reverse_byte_array/61 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32.part.0.constprop.0.isra.0/95 (536870912 (estimated locally),0.50 per call) ske_counter_add_u32.part.0.constprop.0.isra.0/95 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint8_big_num_big_endian_add_little/60 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_counter_add_u32.constprop.0.isra.0/96 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint8_XOR/59 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_blocks_internal/36 (3802428 (estimated locally),0.00 per call) ske_keep_iv/23 (546219 (estimated locally),0.00 per call) 
+  Calls: 
+ske_update_blocks_internal/58 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_update_last_blocks_with_padding_dec/30 (16798082 (estimated locally),0.02 per call) ske_update_last_blocks_with_padding_dec/30 (11198722 (estimated locally),0.01 per call) ske_update_blocks/24 (40767231 (estimated locally),0.04 per call) ske_update_last_blocks_with_padding_enc/29 (5685505 (estimated locally),0.01 per call) ske_update_last_blocks_with_padding_enc/29 (5685505 (estimated locally),0.01 per call) ske_update_last_blocks_with_padding_enc/29 (34457605 (estimated locally),0.03 per call) ske_update_last_blocks_without_padding/31 (4494295 (estimated locally),0.00 per call) ske_update_last_blocks_without_padding/31 (27238150 (estimated locally),0.03 per call) 
+  Calls: 
+ske_set_padding/57 (ske_set_padding)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (103486047 (estimated locally),0.10 per call) ske_update_including_last_block.part.0/88 (205717044 (estimated locally),0.19 per call) ske_update_blocks/24 (123537063 (estimated locally),0.12 per call) ske_dma_update_blocks_internal/36 (127367443 (estimated locally),0.12 per call) 
+  Calls: 
+ske_set_c_len_uint32/56 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (103486047 (estimated locally),0.10 per call) ske_update_including_last_block.part.0/88 (205717044 (estimated locally),0.19 per call) ske_update_blocks/24 (123537063 (estimated locally),0.12 per call) ske_dma_update_blocks_internal/36 (127367443 (estimated locally),0.12 per call) 
+  Calls: 
+ske_set_cpu_mode/55 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_update_including_last_block.part.0/88 (205717044 (estimated locally),0.19 per call) ske_update_blocks/24 (123537063 (estimated locally),0.12 per call) 
+  Calls: 
+ske_clear_cfg/54 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (103486047 (estimated locally),0.10 per call) ske_update_including_last_block.part.0/88 (205717044 (estimated locally),0.19 per call) ske_update_blocks/24 (123537063 (estimated locally),0.12 per call) ske_dma_update_blocks_internal/36 (127367443 (estimated locally),0.12 per call) 
+  Calls: 
+ske_expand_key/53 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (12951974 (estimated locally),0.01 per call) ske_init_internal.part.0/79 (137528410 (estimated locally),0.13 per call) 
+  Calls: 
+lib_ske_secure_port_config/52 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (39248408 (estimated locally),0.04 per call) ske_init_internal.part.0/79 (193915059 (estimated locally),0.18 per call) 
+  Calls: 
+ske_disable_secure_port/51 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (222837700 (estimated locally),0.21 per call) 
+  Calls: 
+ske_set_last_block/50 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 (8537599 (estimated locally),0.01 per call) ske_init_internal.part.0/79 (416752759 (estimated locally),0.39 per call) ske_update_last_blocks_with_padding_enc/29 (11371010 (estimated locally),0.01 per call) 
+  Calls: 
+ske_set_crypto/49 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (416752759 (estimated locally),0.39 per call) 
+  Calls: 
+ske_set_mode/48 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (416752759 (estimated locally),0.39 per call) 
+  Calls: 
+ske_set_alg/47 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (416752759 (estimated locally),0.39 per call) 
+  Calls: 
+ske_set_endian_uint32/46 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_init_internal.part.0/79 (416752759 (estimated locally),0.39 per call) 
+  Calls: 
+ske_set_key_uint32/45 (ske_set_key_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_set_key/18 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_iv_uint32/44 (ske_set_iv_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_set_iv/17 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/43 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ske_keep_iv/100 (1150229 (estimated locally),0.00 per call) ske_keep_iv/100 (1655208 (estimated locally),0.00 per call) ske_update_last_blocks_with_padding_dec/30 (1829311 (estimated locally),0.00 per call) ske_keep_alg_key_iv/21 (426774123 (estimated locally),0.40 per call) ske_keep_alg_key_iv/21 (219853339 (estimated locally),0.20 per call) ske_keep_alg_key_iv/21 (923753512 (estimated locally),0.86 per call) ske_dma_update_blocks_internal/36 (4308204 (estimated locally),0.00 per call) ske_dma_update_blocks_internal/36 (7604855 (estimated locally),0.01 per call) ske_dma_update_blocks_internal/36 (5284730 (estimated locally),0.00 per call) ske_set_key/18 (1073741824 (estimated locally),1.00 per call) ske_set_iv/17 (1073741824 (estimated locally),1.00 per call) ske_update_last_blocks_with_padding_enc/29 (619151 (estimated locally),0.00 per call) ske_keep_iv/23 (618873 (estimated locally),0.00 per call) ske_update_last_blocks_without_padding/31 (1483117 (estimated locally),0.00 per call) 
+  Calls: 
+ske_dma_crypto/42 (ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_dma_update_including_last_block/40 (354334800 (estimated locally),0.33 per call) ske_init.part.0/99 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ske_dma_final/41 (ske_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.ske_dma_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged optimize_size
+  Called by: 
+  Calls: ske_final/33 (1073741824 (estimated locally),1.00 per call) 
+ske_dma_update_including_last_block/40 (ske_dma_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: ske_dma_crypto/42 (354334800 (estimated locally),0.33 per call) 
+  Calls: ske_dma_update_including_last_block.part.0/91 (inlined) (482452438 (estimated locally),0.45 per call) 
+ske_dma_update_last_blocks_without_padding/39 (ske_dma_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_dma_update_last_blocks_without_padding/39 is inline copy in ske_dma_update_including_last_block/40
+  Availability: local
+  Function flags: count:25871512 (estimated locally) body local optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (inlined) (25871512 (estimated locally),0.02 per call) 
+  Calls: ske_dma_operate/71 (20760853 (estimated locally),0.02 per call) 
+ske_dma_update_last_blocks_with_padding/38 (ske_dma_update_last_blocks_with_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_dma_update_last_blocks_with_padding/38 is inline copy in ske_dma_update_including_last_block/40
+  Availability: local
+  Function flags: count:25871512 (estimated locally) body local optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (inlined) (25871512 (estimated locally),0.02 per call) 
+  Calls: lib_addr_arch32_unlock_remap/70 (2732535 (estimated locally),0.00 per call) ske_check_padding/28 (2732535 (estimated locally),0.00 per call) lib_addr_arch32_lock_remap/69 (2732535 (estimated locally),0.00 per call) ske_dma_operate/71 (8280410 (estimated locally),0.01 per call) ske_dma_operate/71 (4268799 (estimated locally),0.00 per call) ske_set_last_block_len/63 (4268799 (estimated locally),0.00 per call) ske_dma_operate/71 (4268799 (estimated locally),0.00 per call) ske_set_last_block_len/63 (4268799 (estimated locally),0.00 per call) ske_set_last_block/50 (8537599 (estimated locally),0.01 per call) 
+ske_dma_update_blocks/37 (ske_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_dma_update_blocks_internal/36 (inlined) (127367443 (estimated locally),0.12 per call) 
+ske_dma_update_blocks_internal/36 (ske_dma_update_blocks_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_dma_update_blocks_internal/36 is inline copy in ske_dma_update_blocks/37
+  Availability: local
+  Function flags: count:127367443 (estimated locally) body local optimize_size
+  Called by: ske_dma_update_blocks/37 (inlined) (127367443 (estimated locally),0.12 per call) 
+  Calls: ske_counter_add_u32.constprop.0.isra.0/96 (3032816 (estimated locally),0.00 per call) lib_addr_arch32_unlock_remap/70 (3802428 (estimated locally),0.00 per call) uint8_XOR/59 (3802428 (estimated locally),0.00 per call) lib_addr_arch32_lock_remap/69 (3802428 (estimated locally),0.00 per call) lib_addr_arch32_unlock_remap/70 (4308204 (estimated locally),0.00 per call) memcpy_/43 (4308204 (estimated locally),0.00 per call) lib_addr_arch32_lock_remap/69 (4308204 (estimated locally),0.00 per call) ske_dma_operate/71 (63683722 (estimated locally),0.06 per call) lib_addr_arch32_unlock_remap/70 (7604855 (estimated locally),0.01 per call) memcpy_/43 (7604855 (estimated locally),0.01 per call) lib_addr_arch32_lock_remap/69 (7604855 (estimated locally),0.01 per call) lib_addr_arch32_unlock_remap/70 (5284730 (estimated locally),0.00 per call) memcpy_/43 (5284730 (estimated locally),0.00 per call) lib_addr_arch32_lock_remap/69 (5284730 (estimated locally),0.00 per call) ske_init_internal/20 (127367443 (estimated locally),0.12 per call) ske_set_padding/57 (127367443 (estimated locally),0.12 per call) ske_disable_dma_linked_list/68 (127367443 (estimated locally),0.12 per call) ske_set_c_len_uint32/56 (127367443 (estimated locally),0.12 per call) ske_set_dma_mode/67 (127367443 (estimated locally),0.12 per call) ske_clear_cfg/54 (127367443 (estimated locally),0.12 per call) 
+ske_dma_init/35 (ske_dma_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.ske_dma_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged optimize_size
+  Called by: 
+  Calls: ske_init/22 (1073741824 (estimated locally),1.00 per call) 
+ske_crypto/34 (ske_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_update_including_last_block/32 (354334800 (estimated locally),0.33 per call) ske_init.part.0/98 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ske_final/33 (ske_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged optimize_size
+  Called by: ske_dma_final/41 (1073741824 (estimated locally),1.00 per call) 
+  Calls: memset_/66 (731110808 (estimated locally),0.68 per call) 
+ske_update_including_last_block/32 (ske_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: ske_crypto/34 (354334800 (estimated locally),0.33 per call) 
+  Calls: ske_update_including_last_block.part.0/88 (inlined) (205717044 (estimated locally),0.19 per call) 
+ske_update_last_blocks_without_padding/31 (ske_update_last_blocks_without_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_update_last_blocks_without_padding/31 is inline copy in ske_update_including_last_block/32
+  Availability: local
+  Function flags: count:33943312 (estimated locally) body local optimize_size
+  Called by: ske_update_including_last_block.part.0/88 (inlined) (33943312 (estimated locally),0.03 per call) 
+  Calls: memcpy_/43 (1483117 (estimated locally),0.00 per call) ske_update_blocks_internal/58 (4494295 (estimated locally),0.00 per call) ske_update_blocks_internal/58 (27238150 (estimated locally),0.03 per call) 
+ske_update_last_blocks_with_padding_dec/30 (ske_update_last_blocks_with_padding_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_update_last_blocks_with_padding_dec/30 is inline copy in ske_update_including_last_block/32
+  Availability: local
+  Function flags: count:34457605 (estimated locally) body local optimize_size
+  Called by: ske_update_including_last_block.part.0/88 (inlined) (34457605 (estimated locally),0.03 per call) 
+  Calls: memcpy_/43 (1829311 (estimated locally),0.00 per call) ske_check_padding/28 (5543367 (estimated locally),0.01 per call) ske_update_blocks_internal/58 (16798082 (estimated locally),0.02 per call) ske_update_blocks_internal/58 (11198722 (estimated locally),0.01 per call) 
+ske_update_last_blocks_with_padding_enc/29 (ske_update_last_blocks_with_padding_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_update_last_blocks_with_padding_enc/29 is inline copy in ske_update_including_last_block/32
+  Availability: local
+  Function flags: count:34457605 (estimated locally) body local optimize_size
+  Called by: ske_update_including_last_block.part.0/88 (inlined) (34457605 (estimated locally),0.03 per call) 
+  Calls: memcpy_/43 (619151 (estimated locally),0.00 per call) ske_simple_get_output_block/65 (619151 (estimated locally),0.00 per call) ske_wait_till_done/64 (1876217 (estimated locally),0.00 per call) ske_update_blocks_internal/58 (5685505 (estimated locally),0.01 per call) ske_set_last_block_len/63 (5685505 (estimated locally),0.01 per call) ske_update_blocks_internal/58 (5685505 (estimated locally),0.01 per call) ske_set_last_block_len/63 (5685505 (estimated locally),0.01 per call) ske_set_last_block/50 (11371010 (estimated locally),0.01 per call) ske_update_blocks_internal/58 (34457605 (estimated locally),0.03 per call) 
+ske_check_padding/28 (ske_check_padding)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: ske_dma_update_last_blocks_with_padding/38 (2732535 (estimated locally),0.00 per call) ske_update_last_blocks_with_padding_dec/30 (5543367 (estimated locally),0.01 per call) 
+  Calls: ske_check_padding.part.0/85 (inlined) (683077785 (estimated locally),0.64 per call) ske_check_pkcs5_7_padding/26 (inlined) (173338695 (estimated locally),0.16 per call) ske_check_ansi_x923_padding/25 (inlined) (217325344 (estimated locally),0.20 per call) 
+ske_check_iso_7816_4_padding/27 (ske_check_iso_7816_4_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_check_iso_7816_4_padding/27 is inline copy in ske_check_padding/28
+  Availability: local
+  Function flags: count:218789813 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: ske_check_padding.part.0/85 (inlined) (218789813 (estimated locally),0.20 per call) 
+  Calls: 
+ske_check_pkcs5_7_padding/26 (ske_check_pkcs5_7_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_check_pkcs5_7_padding/26 is inline copy in ske_check_padding/28
+  Availability: local
+  Function flags: count:173338695 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: ske_check_padding/28 (inlined) (173338695 (estimated locally),0.16 per call) 
+  Calls: 
+ske_check_ansi_x923_padding/25 (ske_check_ansi_x923_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_check_ansi_x923_padding/25 is inline copy in ske_check_padding/28
+  Availability: local
+  Function flags: count:217325344 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: ske_check_padding/28 (inlined) (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+ske_update_blocks/24 (ske_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_keep_iv/23 (inlined) (13453186 (estimated locally),0.01 per call) ske_update_blocks_internal/58 (40767231 (estimated locally),0.04 per call) ske_keep_iv/100 (inlined) (40767231 (estimated locally),0.04 per call) ske_init_internal/20 (123537063 (estimated locally),0.12 per call) ske_set_padding/57 (123537063 (estimated locally),0.12 per call) ske_set_c_len_uint32/56 (123537063 (estimated locally),0.12 per call) ske_set_cpu_mode/55 (123537063 (estimated locally),0.12 per call) ske_clear_cfg/54 (123537063 (estimated locally),0.12 per call) 
+ske_keep_iv/23 (ske_keep_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 100
+  References: 
+  Referring: 
+  Function ske_keep_iv/23 is inline copy in ske_update_blocks/24
+  Availability: local
+  Function flags: count:13453186 (estimated locally) body local optimize_size
+  Called by: ske_update_blocks/24 (inlined) (13453186 (estimated locally),0.01 per call) 
+  Calls: ske_counter_add_u32.constprop.0.isra.0/96 (925794 (estimated locally),0.00 per call) uint8_XOR/59 (546219 (estimated locally),0.00 per call) memcpy_/43 (618873 (estimated locally),0.00 per call) __builtin_unreachable/101 (0 (precise),0.00 per call) __builtin_unreachable/101 (0 (precise),0.00 per call) 
+ske_init/22 (ske_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged optimize_size
+  Called by: ske_dma_init/35 (1073741824 (estimated locally),1.00 per call) 
+  Calls: ske_init.part.0/83 (inlined) (731110808 (estimated locally),0.68 per call) 
+ske_keep_alg_key_iv/21 (ske_keep_alg_key_iv)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: ske_init.part.0/99 (1073741824 (estimated locally),1.00 per call) ske_init.part.0/98 (1073741824 (estimated locally),1.00 per call) ske_init.part.0/83 (731110808 (estimated locally),0.68 per call) 
+  Calls: memcpy_/43 (426774123 (estimated locally),0.40 per call) memcpy_/43 (219853339 (estimated locally),0.20 per call) memcpy_/43 (923753512 (estimated locally),0.86 per call) 
+ske_init_internal/20 (ske_init_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: ske_dma_update_including_last_block.part.0/91 (103486047 (estimated locally),0.10 per call) ske_update_including_last_block.part.0/88 (205717044 (estimated locally),0.19 per call) ske_update_blocks/24 (123537063 (estimated locally),0.12 per call) ske_dma_update_blocks_internal/36 (127367443 (estimated locally),0.12 per call) 
+  Calls: ske_init_internal.part.0/79 (inlined) (416752759 (estimated locally),0.39 per call) ske_check_param.isra.0/97 (inlined) (872415232 (estimated locally),0.81 per call) 
+ske_check_param/19 (ske_check_param)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+ske_set_key/18 (ske_set_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: ske_init_internal.part.0/79 (222837700 (estimated locally),0.21 per call) ske_init_internal.part.0/79 (45102350 (estimated locally),0.04 per call) 
+  Calls: ske_set_key_uint32/45 (1073741824 (estimated locally),1.00 per call) memcpy_/43 (1073741824 (estimated locally),1.00 per call) 
+ske_set_iv/17 (ske_set_iv)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: ske_init_internal.part.0/79 (416752759 (estimated locally),0.39 per call) 
+  Calls: ske_set_iv_uint32/44 (1073741824 (estimated locally),1.00 per call) memcpy_/43 (1073741824 (estimated locally),1.00 per call) 
+ske_get_key_byte_len/16 (ske_get_key_byte_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_get_block_byte_len/15 (ske_get_block_byte_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_check_mode/14 (ske_check_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741816 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: ske_check_param.isra.0/97 (567069900 (estimated locally),0.53 per call) 
+  Calls: 
+ske_check_alg/13 (ske_check_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: ske_check_param.isra.0/97 (872415232 (estimated locally),0.81 per call) 
+  Calls: 
+ske_clear_block_tail/12 (ske_clear_block_tail)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:214748368 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32/11 (ske_counter_add_u32)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+cloning ske_counter_add_u32/11 to ske_counter_add_u32.constprop/93
+    replace map: 3 -> 1
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+uint32_t ske_counter_add_u32 (uint32_t * a, uint32_t a_words, uint32_t b, uint8_t is_secure)
+{
+  uint32_t ret;
+  long unsigned int _1;
+  unsigned char _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (b_5(D) <= 255)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _1 = a_words_6(D) << 2;
+  _2 = (unsigned char) b_5(D);
+  ret_11 = uint8_big_num_big_endian_add_little (a_8(D), _1, _2, 1);
+  # DEBUG ret => ret_11
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  ret_12 = ske_counter_add_u32.part.0 (a_8(D), a_words_6(D), b_5(D), is_secure_9(D));
+
+  <bb 5> [local count: 1073741824]:
+  # ret_4 = PHI <ret_11(3), ret_12(4)>
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  return ret_4;
+
+}
+
+
+uint32_t ske_counter_add_u32.constprop (uint32_t * a, uint32_t a_words, uint32_t b)
+{
+  uint32_t ret;
+  uint8_t is_secure;
+  long unsigned int _3;
+  unsigned char _4;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG is_secure => 1
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (b_1(D) <= 255)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _3 = a_words_2(D) << 2;
+  _4 = (unsigned char) b_1(D);
+  ret_6 = uint8_big_num_big_endian_add_little (a_5(D), _3, _4, 1);
+  # DEBUG ret => ret_6
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  ret_7 = ske_counter_add_u32.part.0 (a_5(D), a_words_2(D), b_1(D), 1);
+
+  <bb 5> [local count: 1073741824]:
+  # ret_8 = PHI <ret_6(3), ret_7(4)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+cloning ske_counter_add_u32.constprop/93 to ske_counter_add_u32.constprop.isra/96
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+uint32_t ske_counter_add_u32.constprop (uint32_t * a, uint32_t a_words, uint32_t b)
+{
+  uint32_t ret;
+  uint8_t is_secure;
+  long unsigned int _3;
+  unsigned char _4;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG is_secure => 1
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (b_1(D) <= 255)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _3 = a_words_2(D) << 2;
+  _4 = (unsigned char) b_1(D);
+  ret_6 = uint8_big_num_big_endian_add_little (a_5(D), _3, _4, 1);
+  # DEBUG ret => ret_6
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  ret_7 = ske_counter_add_u32.part.0 (a_5(D), a_words_2(D), b_1(D), 1);
+
+  <bb 5> [local count: 1073741824]:
+  # ret_8 = PHI <ret_6(3), ret_7(4)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+void ske_counter_add_u32.constprop.isra (uint32_t * a, uint32_t a_words, uint32_t b)
+{
+  uint32_t D.3749;
+  uint8_t is_secure;
+  uint32_t ret;
+  long unsigned int _3;
+  unsigned char _4;
+
+  <bb 7> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG is_secure => 1
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (b_1(D) <= 255)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _3 = a_words_2(D) << 2;
+  _4 = (unsigned char) b_1(D);
+  ret_6 = uint8_big_num_big_endian_add_little (a_5(D), _3, _4, 1);
+  # DEBUG ret => ret_6
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 536870912]:
+  ret_7 = ske_counter_add_u32.part.0 (a_5(D), a_words_2(D), b_1(D), 1);
+
+  <bb 6> [local count: 1073741824]:
+  # ret_8 = PHI <ret_6(4), ret_7(5)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+cloning ske_counter_add_u32.part.0/73 to ske_counter_add_u32.part.0.constprop/94
+    replace map: 3 -> 1
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+uint32_t ske_counter_add_u32.part.0 (uint32_t * a, uint32_t a_words, uint32_t b, uint8_t is_secure)
+{
+  uint32_t ret;
+  long unsigned int _2;
+
+  <bb 4> [local count: 536870912]:
+
+  <bb 2> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _2 = a_words_1(D) << 2;
+  reverse_byte_array (a_3(D), a_3(D), _2);
+  # DEBUG BEGIN_STMT
+  ret_6 = uint32_big_num_little_endian_add_little (a_3(D), a_words_1(D), b_4(D), is_secure_5(D));
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  reverse_byte_array (a_3(D), a_3(D), _2);
+
+  <bb 3> [local count: 536870912]:
+  # ret_7 = PHI <ret_6(2)>
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  return ret_7;
+
+}
+
+
+uint32_t ske_counter_add_u32.part.0.constprop (uint32_t * a, uint32_t a_words, uint32_t b)
+{
+  uint32_t ret;
+  uint8_t is_secure;
+  long unsigned int _2;
+
+  <bb 5> [local count: 536870912]:
+  # DEBUG is_secure => 1
+
+  <bb 2> [local count: 536870912]:
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _2 = a_words_1(D) << 2;
+  reverse_byte_array (a_3(D), a_3(D), _2);
+  # DEBUG BEGIN_STMT
+  ret_5 = uint32_big_num_little_endian_add_little (a_3(D), a_words_1(D), b_4(D), 1);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  reverse_byte_array (a_3(D), a_3(D), _2);
+
+  <bb 4> [local count: 536870912]:
+  # ret_6 = PHI <ret_5(3)>
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return ret_6;
+
+}
+
+
+cloning ske_counter_add_u32.part.0.constprop/94 to ske_counter_add_u32.part.0.constprop.isra/95
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+uint32_t ske_counter_add_u32.part.0.constprop (uint32_t * a, uint32_t a_words, uint32_t b)
+{
+  uint32_t ret;
+  uint8_t is_secure;
+  long unsigned int _2;
+
+  <bb 5> [local count: 536870912]:
+  # DEBUG is_secure => 1
+
+  <bb 2> [local count: 536870912]:
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _2 = a_words_1(D) << 2;
+  reverse_byte_array (a_3(D), a_3(D), _2);
+  # DEBUG BEGIN_STMT
+  ret_5 = uint32_big_num_little_endian_add_little (a_3(D), a_words_1(D), b_4(D), 1);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  reverse_byte_array (a_3(D), a_3(D), _2);
+
+  <bb 4> [local count: 536870912]:
+  # ret_6 = PHI <ret_5(3)>
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return ret_6;
+
+}
+
+
+void ske_counter_add_u32.part.0.constprop.isra (uint32_t * a, uint32_t a_words, uint32_t b)
+{
+  uint32_t D.3764;
+  uint8_t is_secure;
+  uint32_t ret;
+  long unsigned int _2;
+
+  <bb 6> [local count: 536870912]:
+
+  <bb 2> [local count: 536870912]:
+  # DEBUG is_secure => 1
+
+  <bb 3> [local count: 536870912]:
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _2 = a_words_1(D) << 2;
+  reverse_byte_array (a_3(D), a_3(D), _2);
+  # DEBUG BEGIN_STMT
+  ret_5 = uint32_big_num_little_endian_add_little (a_3(D), a_words_1(D), b_4(D), 1);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  reverse_byte_array (a_3(D), a_3(D), _2);
+
+  <bb 5> [local count: 536870912]:
+  # ret_6 = PHI <ret_5(4)>
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+updating call of ske_counter_add_u32.constprop.isra/96 -> ske_counter_add_u32.part.0.constprop.isra/95: ret_7 = ske_counter_add_u32.part.0 (a_5(D), a_words_2(D), b_1(D), 1);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+  updated to:ske_counter_add_u32.part.0.constprop.isra (a_5(D), a_words_2(D), b_1(D));
+cloning ske_check_param/19 to ske_check_param.isra/97
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t ske_check_param (ske_alg_e alg, ske_mode_e mode, ske_crypto_e crypto, const uint8_t * key, const uint8_t * iv)
+{
+  uint32_t ret;
+  long unsigned int _1;
+  long unsigned int _2;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  _1 = ske_check_alg (alg_5(D));
+  if (_1 != 0)
+    goto <bb 4>; [35.00%]
+  else
+    goto <bb 3>; [65.00%]
+
+  <bb 3> [local count: 697932183]:
+  # DEBUG BEGIN_STMT
+  _2 = ske_check_mode (alg_5(D), mode_6(D));
+  if (_2 != 0)
+    goto <bb 4>; [35.00%]
+  else
+    goto <bb 5>; [65.00%]
+
+  <bb 4> [local count: 846426694]:
+  # DEBUG ret => NULL
+  goto <bb 8>; [100.00%]
+
+  <bb 5> [local count: 453655918]:
+  # DEBUG BEGIN_STMT
+  if (crypto_7(D) > 1)
+    goto <bb 4>; [43.66%]
+  else
+    goto <bb 6>; [56.34%]
+
+  <bb 6> [local count: 255589744]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_6(D) > 1)
+    goto <bb 7>; [59.00%]
+  else
+    goto <bb 8>; [41.00%]
+
+  <bb 7> [local count: 150797950]:
+  if (iv_8(D) == 0B)
+    goto <bb 4>; [18.75%]
+  else
+    goto <bb 8>; [81.25%]
+
+  <bb 8> [local count: 1073741824]:
+  # ret_3 = PHI <1282(4), 0(6), 0(7)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t ske_check_param.isra (ske_alg_e alg, ske_mode_e mode, ske_crypto_e crypto, const uint8_t * iv)
+{
+  uint32_t ret;
+  const uint8_t * key;
+  long unsigned int _2;
+  long unsigned int _4;
+
+  <bb 9> [local count: 1073741822]:
+  # DEBUG D#2 s=> key
+  # DEBUG key => D#2
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  _2 = ske_check_alg (alg_1(D));
+  if (_2 != 0)
+    goto <bb 4>; [35.00%]
+  else
+    goto <bb 3>; [65.00%]
+
+  <bb 3> [local count: 697932183]:
+  # DEBUG BEGIN_STMT
+  _4 = ske_check_mode (alg_1(D), mode_3(D));
+  if (_4 != 0)
+    goto <bb 4>; [35.00%]
+  else
+    goto <bb 5>; [65.00%]
+
+  <bb 4> [local count: 846426694]:
+  # DEBUG ret => NULL
+  goto <bb 8>; [100.00%]
+
+  <bb 5> [local count: 453655918]:
+  # DEBUG BEGIN_STMT
+  if (crypto_5(D) > 1)
+    goto <bb 4>; [43.66%]
+  else
+    goto <bb 6>; [56.34%]
+
+  <bb 6> [local count: 255589744]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_3(D) > 1)
+    goto <bb 7>; [59.00%]
+  else
+    goto <bb 8>; [41.00%]
+
+  <bb 7> [local count: 150797950]:
+  if (iv_6(D) == 0B)
+    goto <bb 4>; [18.75%]
+  else
+    goto <bb 8>; [81.25%]
+
+  <bb 8> [local count: 1073741824]:
+  # ret_7 = PHI <1282(4), 0(6), 0(7)>
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_7;
+
+}
+
+
+updating call of ske_init_internal/20 -> ske_check_param.isra/97: ret_11 = ske_check_param (alg_5(D), mode_6(D), crypto_7(D), key_8(D), iv_9(D));
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_11 = ske_check_param.isra (alg_5(D), mode_6(D), crypto_7(D), iv_9(D));
+updating call of ske_update_blocks/24 -> __builtin_unreachable/101: memcpy_ (_46, _50, _48);
+  updated to:__builtin_unreachable ();
+updating call of ske_update_blocks/24 -> __builtin_unreachable/101: uint8_XOR (_51, _55, _51, _53);
+  updated to:__builtin_unreachable ();
+updating call of ske_update_blocks/24 -> __builtin_unreachable/101: ske_counter_add_u32 (_57, _59, _62, 1);
+  updated to:__builtin_unreachable ();
+updating call of ske_update_blocks/24 -> __builtin_unreachable/101: memcpy_ (_66, _70, _68);
+  updated to:__builtin_unreachable ();
+updating call of ske_update_blocks/24 -> __builtin_unreachable/101: memcpy_ (_71, _75, _73);
+  updated to:__builtin_unreachable ();
+updating call of ske_update_blocks/24 -> ske_counter_add_u32.constprop.isra/96: ske_counter_add_u32 (_90, _92, _95, 1);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+  updated to:ske_counter_add_u32.constprop.isra (_90, _92, _95);
+updating call of ske_dma_update_blocks/37 -> ske_counter_add_u32.constprop.isra/96: ske_counter_add_u32 (_23, _53, _56, 1);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY prev_clone_adjustment , base_index: 2, prev_clone_index: 2
+    Will SKIP return.
+  updated to:ske_counter_add_u32.constprop.isra (_23, _53, _56);
+updating call of ske_dma_crypto/42 -> ske_init.part.0/83: ret_21 = ske_dma_init.part.0 (&ctx, alg_4(D), mode_5(D), crypto_6(D), key_7(D), sp_key_idx_8(D), iv_9(D), padding_10(D));
+  updated to:ret_21 = ske_init.part.0 (&ctx, alg_4(D), mode_5(D), crypto_6(D), key_7(D), sp_key_idx_8(D), iv_9(D), padding_10(D));
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+__builtin_unreachable/101 (__builtin_unreachable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32.constprop.0.isra.0/96 (ske_counter_add_u32.constprop.isra)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.ske_counter_add_u32.constprop.0.isra.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32.part.0.constprop.0/94 (ske_counter_add_u32.part.0.constprop)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:536870912 (estimated locally) split_part optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32.constprop.0/93 (ske_counter_add_u32.constprop)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32.part.0/73 (ske_counter_add_u32.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:536870912 (estimated locally) split_part optimize_size
+  Called by: 
+  Calls: 
+ske_dma_operate/71 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_addr_arch32_unlock_remap/70 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_addr_arch32_lock_remap/69 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_disable_dma_linked_list/68 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_dma_mode/67 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/66 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_simple_get_output_block/65 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_wait_till_done/64 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_last_block_len/63 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint32_big_num_little_endian_add_little/62 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+reverse_byte_array/61 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/60 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint8_XOR/59 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_update_blocks_internal/58 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_padding/57 (ske_set_padding)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_c_len_uint32/56 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_cpu_mode/55 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_clear_cfg/54 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_expand_key/53 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_ske_secure_port_config/52 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_disable_secure_port/51 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_last_block/50 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_crypto/49 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_mode/48 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_alg/47 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_endian_uint32/46 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_key_uint32/45 (ske_set_key_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_iv_uint32/44 (ske_set_iv_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/43 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_dma_crypto/42 (ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_crypto (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_dma_final/41 (ske_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged optimize_size
+  Called by: 
+  Calls: 
+ske_dma_update_including_last_block/40 (ske_dma_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_update_including_last_block (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_dma_update_blocks/37 (ske_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_dma_init/35 (ske_dma_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged optimize_size
+  Called by: 
+  Calls: 
+ske_crypto/34 (ske_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_crypto (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_final/33 (ske_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged optimize_size
+  Called by: 
+  Calls: 
+ske_update_including_last_block/32 (ske_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_update_including_last_block (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_check_padding/28 (ske_check_padding)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_check_padding (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_update_blocks/24 (ske_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_init/22 (ske_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged optimize_size
+  Called by: 
+  Calls: 
+ske_keep_alg_key_iv/21 (ske_keep_alg_key_iv)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_keep_alg_key_iv (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_init_internal/20 (ske_init_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_init_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_check_param/19 (ske_check_param)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_set_key/18 (ske_set_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_set_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_set_iv/17 (ske_set_iv)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_set_iv (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ske_get_key_byte_len/16 (ske_get_key_byte_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_get_key_byte_len (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_get_block_byte_len/15 (ske_get_block_byte_len)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_get_block_byte_len (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_check_mode/14 (ske_check_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_check_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741816 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_check_alg/13 (ske_check_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_check_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_clear_block_tail/12 (ske_clear_block_tail)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_clear_block_tail (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:214748368 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+ske_counter_add_u32/11 (ske_counter_add_u32)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

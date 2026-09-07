@@ -1,0 +1,21 @@
+# eHSM Naked Image Configuration Example
+# Naked image: no signing, no encryption, for development and testing only
+
+[general]
+mode = "boot"
+output = "naked_image.bin"
+
+# Input firmware binary file
+input_bin = "firmware.bin"
+
+# Image type
+image_type = "ehsm-ehsmkey"
+
+# Version counter (16 bytes, 32 hex characters)
+version_counter = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+
+export_c_array = false
+
+[boot]
+# Naked image is generated when sign_key is not provided
+# No sign_key = naked image (only valid_flag, naked_flag, code_size are valid)

@@ -1,0 +1,3489 @@
+Trivially needed symbols: hmac_dma_node_steps/33 hmac_dma/32 hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_dma_init/29 hmac_node_steps/22 hmac/21 hmac_final/20 hmac_sha3_final/19 hmac_update/18 hmac_init/16 hmac_key_state_recover/12 hmac_clear/11
+
+
+Initial Symbol table:
+
+lib_addr_arch32_unlock_remap/76 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+lib_addr_arch32_lock_remap/75 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+hash_dma_final/74 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 
+  Calls: 
+hash_set_dma_output_len/73 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 
+  Calls: 
+hash_dma_update_blocks/72 (hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 
+  Calls: 
+hash_set_dma_mode/71 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 
+  Calls: 
+uint32_copy/70 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 
+  Calls: 
+hash_calc_rand_len_msg/69 (hash_calc_rand_len_msg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_set_msg_total_bit_len/68 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_total_bytelen_2_bitlen/67 (hash_total_bytelen_2_bitlen)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_calc_blocks/66 (hash_calc_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 hmac_non_sha3_update/17 
+  Calls: 
+hash_total_byte_len_add_uint32/65 (hash_total_byte_len_add_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 
+  Calls: 
+hash_get_iterator/64 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 hmac_init_step2/14 
+  Calls: 
+hash_hmac_key_opr_longer_than_one_block/63 (hash_hmac_key_opr_longer_than_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 
+  Calls: 
+hash_final/62 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 
+  Calls: 
+hash_update/61 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_update/18 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+hash_init/60 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+memcpy_/59 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_init_step2/14 hmac_sha3_init/15 
+  Calls: 
+hash_get_digest_word_len/58 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+memset_/57 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_final/20 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+hash_set_iterator/56 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_key_opr_one_block/55 (hash_hmac_key_opr_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_sp_key_opr/54 (hash_hmac_sp_key_opr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_enable_secure_port/53 (hash_hmac_enable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_clear_cfg/52 (hash_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_set_last_block/51 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_init_step2/14 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_clear_hmac_key_mode/50 (hash_clear_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_wait_till_done/49 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_input_msg_u8/48 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_start/47 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_cnt/46 (hash_set_hmac_key_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_len/45 (hash_set_hmac_key_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_block_word_len/44 (hash_get_block_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_set_IV/43 (hash_set_IV)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_iterator_word_len/42 (hash_get_iterator_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_update_config/41 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_alg/40 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_disable_dma_interruption/39 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_endian_uint32/38 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_mode/37 (hash_set_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_mode/36 (hash_set_hmac_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_cpu_mode/35 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_hmac_disable_secure_port/34 (hash_hmac_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_final/20 hmac_update/18 hmac_init_step1/13 hmac_sha3_init/15 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hmac_dma_node_steps/33 (hmac_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_dma_init/29 
+hmac_dma/32 (hmac_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a4635880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_init/29 
+hmac_dma_final/31 (hmac_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a4635770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hash_hmac_disable_secure_port/34 
+hmac_dma_update_blocks/30 (hmac_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a4635660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 
+  Calls: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 hash_hmac_disable_secure_port/34 
+hmac_dma_init/29 (hmac_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a4635550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 
+hmac_non_sha3_dma_final/28 (hmac_non_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a4635770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 hash_dma_final/74 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_update_blocks/27 (hmac_non_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a4635660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 hash_set_dma_output_len/73 hash_set_last_block/51 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_init/26 (hmac_non_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a4635550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: hash_set_dma_mode/71 hmac_init_step2/14 CAST2UINT32/6 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 CAST2UINT32/6 hash_get_iterator_word_len/42 hash_get_block_word_len/44 memset_/57 hmac_init_step1/13 
+hmac_sha3_dma_final/25 (hmac_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a4635330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 memset_/57 lib_addr_arch32_unlock_remap/76 hash_final/62 hash_update/61 memcpy_/59 lib_addr_arch32_lock_remap/75 hash_update/61 hash_init/60 hash_dma_final/74 CAST2UINT32/6 CAST2UINT32/6 
+hmac_sha3_dma_update_blocks/24 (hmac_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a4635220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 
+hmac_sha3_dma_init/23 (hmac_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a4635110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_iterator_word_len/42 memcpy_/59 CAST2UINT32/6 uint32_copy/70 CAST2UINT32/6 hash_get_digest_word_len/58 hmac_sha3_init/15 hash_disable_dma_interruption/39 
+hmac_node_steps/22 (hmac_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a4635440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac/21 (hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45facc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac_final/20 (hmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45fabb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: memset_/57 hash_get_iterator/64 CAST2UINT32/6 hash_calc_rand_len_msg/69 hash_set_msg_total_bit_len/68 hash_total_bytelen_2_bitlen/67 CAST2UINT32/6 hmac_key_state_recover/12 hmac_sha3_final/19 hash_hmac_disable_secure_port/34 
+hmac_sha3_final/19 (hmac_sha3_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45faaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_final/20 
+  Calls: memset_/57 memset_/57 hash_final/62 hash_update/61 hash_update/61 hash_init/60 hash_get_block_word_len/44 hash_final/62 hash_get_digest_word_len/58 
+hmac_update/18 (hmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45fa990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_non_sha3_update/17 hash_update/61 hash_hmac_disable_secure_port/34 
+hmac_non_sha3_update/17 (hmac_non_sha3_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a45fa990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_update/18 
+  Calls: memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_total_byte_len_add_uint32/65 CAST2UINT32/6 hmac_key_state_recover/12 
+hmac_init/16 (hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45fa880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_init_step2/14 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 hash_get_block_word_len/44 hmac_init_step1/13 hmac_sha3_init/15 memset_/57 
+hmac_sha3_init/15 (hmac_sha3_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a45fa330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_sha3_dma_init/23 hmac_init/16 
+  Calls: memset_/57 hash_update/61 hash_init/60 memset_/57 hash_final/62 hash_update/61 hash_init/60 memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_digest_word_len/58 CAST2UINT32/6 hash_get_block_word_len/44 hash_hmac_disable_secure_port/34 
+hmac_init_step2/14 (hmac_init_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a45fa880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_hmac_sp_key_opr/54 hash_get_iterator/64 hash_hmac_key_opr_longer_than_one_block/63 hash_hmac_key_opr_one_block/55 memcpy_/59 hash_set_IV/43 
+hmac_init_step1/13 (hmac_init_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a45fa440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+hmac_key_state_recover/12 (hmac_key_state_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45fa660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_final/20 hmac_non_sha3_update/17 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_start/47 hash_set_last_block/51 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_set_iterator/56 hash_hmac_key_opr_one_block/55 hash_set_IV/43 hash_update_config/41 hash_hmac_disable_secure_port/34 hash_hmac_sp_key_opr/54 hash_update_config/41 hash_hmac_enable_secure_port/53 hash_set_hmac_key_mode/37 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_mode/36 hash_set_cpu_mode/35 
+hmac_clear/11 (hmac_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f43a45fa220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_clear_cfg/52 hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_input_msg_u8/48 hash_start/47 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_get_block_word_len/44 hash_set_IV/43 hash_get_iterator_word_len/42 hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f43a45fa330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_final/20 hmac_final/20 hmac_non_sha3_update/17 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+lib_addr_arch32_unlock_remap/76 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+lib_addr_arch32_lock_remap/75 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+hash_dma_final/74 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 
+  Calls: 
+hash_set_dma_output_len/73 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 
+  Calls: 
+hash_dma_update_blocks/72 (hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 
+  Calls: 
+hash_set_dma_mode/71 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 
+  Calls: 
+uint32_copy/70 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 
+  Calls: 
+hash_calc_rand_len_msg/69 (hash_calc_rand_len_msg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_set_msg_total_bit_len/68 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_total_bytelen_2_bitlen/67 (hash_total_bytelen_2_bitlen)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_calc_blocks/66 (hash_calc_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 hmac_non_sha3_update/17 
+  Calls: 
+hash_total_byte_len_add_uint32/65 (hash_total_byte_len_add_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 
+  Calls: 
+hash_get_iterator/64 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 hmac_init_step2/14 
+  Calls: 
+hash_hmac_key_opr_longer_than_one_block/63 (hash_hmac_key_opr_longer_than_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 
+  Calls: 
+hash_final/62 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 
+  Calls: 
+hash_update/61 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_update/18 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+hash_init/60 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+memcpy_/59 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_init_step2/14 hmac_sha3_init/15 
+  Calls: 
+hash_get_digest_word_len/58 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+memset_/57 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_final/20 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+hash_set_iterator/56 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_key_opr_one_block/55 (hash_hmac_key_opr_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_sp_key_opr/54 (hash_hmac_sp_key_opr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_enable_secure_port/53 (hash_hmac_enable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_clear_cfg/52 (hash_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_set_last_block/51 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_init_step2/14 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_clear_hmac_key_mode/50 (hash_clear_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_wait_till_done/49 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_input_msg_u8/48 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_start/47 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_cnt/46 (hash_set_hmac_key_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_len/45 (hash_set_hmac_key_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_block_word_len/44 (hash_get_block_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_set_IV/43 (hash_set_IV)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_iterator_word_len/42 (hash_get_iterator_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_update_config/41 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_alg/40 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_disable_dma_interruption/39 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_endian_uint32/38 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_mode/37 (hash_set_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_mode/36 (hash_set_hmac_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_cpu_mode/35 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_hmac_disable_secure_port/34 (hash_hmac_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_final/20 hmac_update/18 hmac_init_step1/13 hmac_sha3_init/15 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hmac_dma_node_steps/33 (hmac_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_dma_init/29 
+hmac_dma/32 (hmac_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_init/29 
+hmac_dma_final/31 (hmac_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hash_hmac_disable_secure_port/34 
+hmac_dma_update_blocks/30 (hmac_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 
+  Calls: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 hash_hmac_disable_secure_port/34 
+hmac_dma_init/29 (hmac_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 
+hmac_non_sha3_dma_final/28 (hmac_non_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 hash_dma_final/74 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_update_blocks/27 (hmac_non_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 hash_set_dma_output_len/73 hash_set_last_block/51 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_init/26 (hmac_non_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: hash_set_dma_mode/71 hmac_init_step2/14 CAST2UINT32/6 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 CAST2UINT32/6 hash_get_iterator_word_len/42 hash_get_block_word_len/44 memset_/57 hmac_init_step1/13 
+hmac_sha3_dma_final/25 (hmac_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 memset_/57 lib_addr_arch32_unlock_remap/76 hash_final/62 hash_update/61 memcpy_/59 lib_addr_arch32_lock_remap/75 hash_update/61 hash_init/60 hash_dma_final/74 CAST2UINT32/6 CAST2UINT32/6 
+hmac_sha3_dma_update_blocks/24 (hmac_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 
+hmac_sha3_dma_init/23 (hmac_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_iterator_word_len/42 memcpy_/59 CAST2UINT32/6 uint32_copy/70 CAST2UINT32/6 hash_get_digest_word_len/58 hmac_sha3_init/15 hash_disable_dma_interruption/39 
+hmac_node_steps/22 (hmac_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac/21 (hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac_final/20 (hmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: memset_/57 hash_get_iterator/64 CAST2UINT32/6 hash_calc_rand_len_msg/69 hash_set_msg_total_bit_len/68 hash_total_bytelen_2_bitlen/67 CAST2UINT32/6 hmac_key_state_recover/12 hmac_sha3_final/19 hash_hmac_disable_secure_port/34 
+hmac_sha3_final/19 (hmac_sha3_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_final/20 
+  Calls: memset_/57 memset_/57 hash_final/62 hash_update/61 hash_update/61 hash_init/60 hash_get_block_word_len/44 hash_final/62 hash_get_digest_word_len/58 
+hmac_update/18 (hmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_non_sha3_update/17 hash_update/61 hash_hmac_disable_secure_port/34 
+hmac_non_sha3_update/17 (hmac_non_sha3_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_update/18 
+  Calls: memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_total_byte_len_add_uint32/65 CAST2UINT32/6 hmac_key_state_recover/12 
+hmac_init/16 (hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_init_step2/14 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 hash_get_block_word_len/44 hmac_init_step1/13 hmac_sha3_init/15 memset_/57 
+hmac_sha3_init/15 (hmac_sha3_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_sha3_dma_init/23 hmac_init/16 
+  Calls: memset_/57 hash_update/61 hash_init/60 memset_/57 hash_final/62 hash_update/61 hash_init/60 memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_digest_word_len/58 CAST2UINT32/6 hash_get_block_word_len/44 hash_hmac_disable_secure_port/34 
+hmac_init_step2/14 (hmac_init_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_hmac_sp_key_opr/54 hash_get_iterator/64 hash_hmac_key_opr_longer_than_one_block/63 hash_hmac_key_opr_one_block/55 memcpy_/59 hash_set_IV/43 
+hmac_init_step1/13 (hmac_init_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+hmac_key_state_recover/12 (hmac_key_state_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_final/20 hmac_non_sha3_update/17 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_start/47 hash_set_last_block/51 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_set_iterator/56 hash_hmac_key_opr_one_block/55 hash_set_IV/43 hash_update_config/41 hash_hmac_disable_secure_port/34 hash_hmac_sp_key_opr/54 hash_update_config/41 hash_hmac_enable_secure_port/53 hash_set_hmac_key_mode/37 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_mode/36 hash_set_cpu_mode/35 
+hmac_clear/11 (hmac_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_clear_cfg/52 hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_input_msg_u8/48 hash_start/47 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_get_block_word_len/44 hash_set_IV/43 hash_get_iterator_word_len/42 hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_final/20 hmac_final/20 hmac_non_sha3_update/17 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+
+
+Initial Symbol table:
+
+lib_addr_arch32_unlock_remap/76 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+lib_addr_arch32_lock_remap/75 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+hash_dma_final/74 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 
+  Calls: 
+hash_set_dma_output_len/73 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 
+  Calls: 
+hash_dma_update_blocks/72 (hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 
+  Calls: 
+hash_set_dma_mode/71 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 
+  Calls: 
+uint32_copy/70 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 
+  Calls: 
+hash_calc_rand_len_msg/69 (hash_calc_rand_len_msg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_set_msg_total_bit_len/68 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_total_bytelen_2_bitlen/67 (hash_total_bytelen_2_bitlen)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_calc_blocks/66 (hash_calc_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 hmac_non_sha3_update/17 
+  Calls: 
+hash_total_byte_len_add_uint32/65 (hash_total_byte_len_add_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 
+  Calls: 
+hash_get_iterator/64 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 hmac_init_step2/14 
+  Calls: 
+hash_hmac_key_opr_longer_than_one_block/63 (hash_hmac_key_opr_longer_than_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 
+  Calls: 
+hash_final/62 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 
+  Calls: 
+hash_update/61 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_update/18 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+hash_init/60 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+memcpy_/59 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_init_step2/14 hmac_sha3_init/15 
+  Calls: 
+hash_get_digest_word_len/58 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+memset_/57 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_final/20 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+hash_set_iterator/56 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_key_opr_one_block/55 (hash_hmac_key_opr_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_sp_key_opr/54 (hash_hmac_sp_key_opr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_enable_secure_port/53 (hash_hmac_enable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_clear_cfg/52 (hash_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_set_last_block/51 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_init_step2/14 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_clear_hmac_key_mode/50 (hash_clear_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_wait_till_done/49 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_input_msg_u8/48 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_start/47 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_cnt/46 (hash_set_hmac_key_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_len/45 (hash_set_hmac_key_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_block_word_len/44 (hash_get_block_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_set_IV/43 (hash_set_IV)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_iterator_word_len/42 (hash_get_iterator_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_update_config/41 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_alg/40 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_disable_dma_interruption/39 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_endian_uint32/38 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_mode/37 (hash_set_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_mode/36 (hash_set_hmac_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_cpu_mode/35 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_hmac_disable_secure_port/34 (hash_hmac_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_final/20 hmac_update/18 hmac_init_step1/13 hmac_sha3_init/15 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hmac_dma_node_steps/33 (hmac_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_dma_init/29 
+hmac_dma/32 (hmac_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_init/29 
+hmac_dma_final/31 (hmac_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hash_hmac_disable_secure_port/34 
+hmac_dma_update_blocks/30 (hmac_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 
+  Calls: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 hash_hmac_disable_secure_port/34 
+hmac_dma_init/29 (hmac_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 
+hmac_non_sha3_dma_final/28 (hmac_non_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 hash_dma_final/74 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_update_blocks/27 (hmac_non_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 hash_set_dma_output_len/73 hash_set_last_block/51 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_init/26 (hmac_non_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: hash_set_dma_mode/71 hmac_init_step2/14 CAST2UINT32/6 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 CAST2UINT32/6 hash_get_iterator_word_len/42 hash_get_block_word_len/44 memset_/57 hmac_init_step1/13 
+hmac_sha3_dma_final/25 (hmac_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 memset_/57 lib_addr_arch32_unlock_remap/76 hash_final/62 hash_update/61 memcpy_/59 lib_addr_arch32_lock_remap/75 hash_update/61 hash_init/60 hash_dma_final/74 CAST2UINT32/6 CAST2UINT32/6 
+hmac_sha3_dma_update_blocks/24 (hmac_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 
+hmac_sha3_dma_init/23 (hmac_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_iterator_word_len/42 memcpy_/59 CAST2UINT32/6 uint32_copy/70 CAST2UINT32/6 hash_get_digest_word_len/58 hmac_sha3_init/15 hash_disable_dma_interruption/39 
+hmac_node_steps/22 (hmac_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac/21 (hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac_final/20 (hmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: memset_/57 hash_get_iterator/64 CAST2UINT32/6 hash_calc_rand_len_msg/69 hash_set_msg_total_bit_len/68 hash_total_bytelen_2_bitlen/67 CAST2UINT32/6 hmac_key_state_recover/12 hmac_sha3_final/19 hash_hmac_disable_secure_port/34 
+hmac_sha3_final/19 (hmac_sha3_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_final/20 
+  Calls: memset_/57 memset_/57 hash_final/62 hash_update/61 hash_update/61 hash_init/60 hash_get_block_word_len/44 hash_final/62 hash_get_digest_word_len/58 
+hmac_update/18 (hmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_non_sha3_update/17 hash_update/61 hash_hmac_disable_secure_port/34 
+hmac_non_sha3_update/17 (hmac_non_sha3_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_update/18 
+  Calls: memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_total_byte_len_add_uint32/65 CAST2UINT32/6 hmac_key_state_recover/12 
+hmac_init/16 (hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_init_step2/14 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 hash_get_block_word_len/44 hmac_init_step1/13 hmac_sha3_init/15 memset_/57 
+hmac_sha3_init/15 (hmac_sha3_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_sha3_dma_init/23 hmac_init/16 
+  Calls: memset_/57 hash_update/61 hash_init/60 memset_/57 hash_final/62 hash_update/61 hash_init/60 memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_digest_word_len/58 CAST2UINT32/6 hash_get_block_word_len/44 hash_hmac_disable_secure_port/34 
+hmac_init_step2/14 (hmac_init_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_hmac_sp_key_opr/54 hash_get_iterator/64 hash_hmac_key_opr_longer_than_one_block/63 hash_hmac_key_opr_one_block/55 memcpy_/59 hash_set_IV/43 
+hmac_init_step1/13 (hmac_init_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+hmac_key_state_recover/12 (hmac_key_state_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_final/20 hmac_non_sha3_update/17 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_start/47 hash_set_last_block/51 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_set_iterator/56 hash_hmac_key_opr_one_block/55 hash_set_IV/43 hash_update_config/41 hash_hmac_disable_secure_port/34 hash_hmac_sp_key_opr/54 hash_update_config/41 hash_hmac_enable_secure_port/53 hash_set_hmac_key_mode/37 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_mode/36 hash_set_cpu_mode/35 
+hmac_clear/11 (hmac_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_clear_cfg/52 hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_input_msg_u8/48 hash_start/47 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_get_block_word_len/44 hash_set_IV/43 hash_get_iterator_word_len/42 hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_final/20 hmac_final/20 hmac_non_sha3_update/17 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+lib_addr_arch32_unlock_remap/76 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+lib_addr_arch32_lock_remap/75 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 
+  Calls: 
+hash_dma_final/74 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 
+  Calls: 
+hash_set_dma_output_len/73 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 
+  Calls: 
+hash_dma_update_blocks/72 (hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 
+  Calls: 
+hash_set_dma_mode/71 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 
+  Calls: 
+uint32_copy/70 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 
+  Calls: 
+hash_calc_rand_len_msg/69 (hash_calc_rand_len_msg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_set_msg_total_bit_len/68 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_total_bytelen_2_bitlen/67 (hash_total_bytelen_2_bitlen)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 
+  Calls: 
+hash_calc_blocks/66 (hash_calc_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 hmac_non_sha3_update/17 
+  Calls: 
+hash_total_byte_len_add_uint32/65 (hash_total_byte_len_add_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_update/17 
+  Calls: 
+hash_get_iterator/64 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_final/20 hmac_init_step2/14 
+  Calls: 
+hash_hmac_key_opr_longer_than_one_block/63 (hash_hmac_key_opr_longer_than_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 
+  Calls: 
+hash_final/62 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 
+  Calls: 
+hash_update/61 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_final/19 hmac_update/18 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+hash_init/60 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+memcpy_/59 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_non_sha3_update/17 hmac_init_step2/14 hmac_sha3_init/15 
+  Calls: 
+hash_get_digest_word_len/58 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+memset_/57 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_final/20 hmac_sha3_final/19 hmac_sha3_final/19 hmac_sha3_init/15 hmac_sha3_init/15 hmac_sha3_init/15 hmac_init/16 
+  Calls: 
+hash_set_iterator/56 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_key_opr_one_block/55 (hash_hmac_key_opr_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_sp_key_opr/54 (hash_hmac_sp_key_opr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 
+  Calls: 
+hash_hmac_enable_secure_port/53 (hash_hmac_enable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 
+  Calls: 
+hash_clear_cfg/52 (hash_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_set_last_block/51 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 hmac_init_step2/14 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_clear_hmac_key_mode/50 (hash_clear_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_wait_till_done/49 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_input_msg_u8/48 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_clear/11 
+  Calls: 
+hash_start/47 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_cnt/46 (hash_set_hmac_key_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_len/45 (hash_set_hmac_key_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_block_word_len/44 (hash_get_block_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_sha3_final/19 hmac_sha3_init/15 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_set_IV/43 (hash_set_IV)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step2/14 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_get_iterator_word_len/42 (hash_get_iterator_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_init/16 hmac_clear/11 
+  Calls: 
+hash_update_config/41 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_alg/40 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_disable_dma_interruption/39 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_endian_uint32/38 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_key_mode/37 (hash_set_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_hmac_mode/36 (hash_set_hmac_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_set_cpu_mode/35 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_init_step1/13 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hash_hmac_disable_secure_port/34 (hash_hmac_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_final/20 hmac_update/18 hmac_init_step1/13 hmac_sha3_init/15 hmac_key_state_recover/12 hmac_clear/11 
+  Calls: 
+hmac_dma_node_steps/33 (hmac_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_update_blocks/30 hmac_dma_init/29 
+hmac_dma/32 (hmac_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_dma_final/31 hmac_dma_init/29 
+hmac_dma_final/31 (hmac_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hash_hmac_disable_secure_port/34 
+hmac_dma_update_blocks/30 (hmac_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 
+  Calls: hmac_non_sha3_dma_update_blocks/27 hmac_sha3_dma_update_blocks/24 hash_hmac_disable_secure_port/34 
+hmac_dma_init/29 (hmac_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_node_steps/33 hmac_dma/32 
+  Calls: hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 
+hmac_non_sha3_dma_final/28 (hmac_non_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 hash_dma_final/74 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_update_blocks/27 (hmac_non_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 hash_set_dma_output_len/73 hash_set_last_block/51 hash_set_dma_mode/71 hmac_key_state_recover/12 CAST2UINT32/6 
+hmac_non_sha3_dma_init/26 (hmac_non_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: hash_set_dma_mode/71 hmac_init_step2/14 CAST2UINT32/6 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 CAST2UINT32/6 hash_get_iterator_word_len/42 hash_get_block_word_len/44 memset_/57 hmac_init_step1/13 
+hmac_sha3_dma_final/25 (hmac_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_final/31 
+  Calls: memset_/57 memset_/57 lib_addr_arch32_unlock_remap/76 hash_final/62 hash_update/61 memcpy_/59 lib_addr_arch32_lock_remap/75 hash_update/61 hash_init/60 hash_dma_final/74 CAST2UINT32/6 CAST2UINT32/6 
+hmac_sha3_dma_update_blocks/24 (hmac_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_update_blocks/30 
+  Calls: hash_dma_update_blocks/72 
+hmac_sha3_dma_init/23 (hmac_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_dma_init/29 
+  Calls: memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_iterator_word_len/42 memcpy_/59 CAST2UINT32/6 uint32_copy/70 CAST2UINT32/6 hash_get_digest_word_len/58 hmac_sha3_init/15 hash_disable_dma_interruption/39 
+hmac_node_steps/22 (hmac_node_steps)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac/21 (hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hmac_final/20 hmac_update/18 hmac_init/16 
+hmac_final/20 (hmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: memset_/57 hash_get_iterator/64 CAST2UINT32/6 hash_calc_rand_len_msg/69 hash_set_msg_total_bit_len/68 hash_total_bytelen_2_bitlen/67 CAST2UINT32/6 hmac_key_state_recover/12 hmac_sha3_final/19 hash_hmac_disable_secure_port/34 
+hmac_sha3_final/19 (hmac_sha3_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_final/20 
+  Calls: memset_/57 memset_/57 hash_final/62 hash_update/61 hash_update/61 hash_init/60 hash_get_block_word_len/44 hash_final/62 hash_get_digest_word_len/58 
+hmac_update/18 (hmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_non_sha3_update/17 hash_update/61 hash_hmac_disable_secure_port/34 
+hmac_non_sha3_update/17 (hmac_non_sha3_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_update/18 
+  Calls: memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_calc_blocks/66 memcpy_/59 hash_total_byte_len_add_uint32/65 CAST2UINT32/6 hmac_key_state_recover/12 
+hmac_init/16 (hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_node_steps/22 hmac/21 
+  Calls: hmac_init_step2/14 hash_get_digest_word_len/58 hash_get_iterator_word_len/42 hash_get_block_word_len/44 hmac_init_step1/13 hmac_sha3_init/15 memset_/57 
+hmac_sha3_init/15 (hmac_sha3_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_sha3_dma_init/23 hmac_init/16 
+  Calls: memset_/57 hash_update/61 hash_init/60 memset_/57 hash_final/62 hash_update/61 hash_init/60 memset_/57 memcpy_/59 CAST2UINT32/6 hash_get_digest_word_len/58 CAST2UINT32/6 hash_get_block_word_len/44 hash_hmac_disable_secure_port/34 
+hmac_init_step2/14 (hmac_init_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_hmac_sp_key_opr/54 hash_get_iterator/64 hash_hmac_key_opr_longer_than_one_block/63 hash_hmac_key_opr_one_block/55 memcpy_/59 hash_set_IV/43 
+hmac_init_step1/13 (hmac_init_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_init/26 hmac_init/16 
+  Calls: hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+hmac_key_state_recover/12 (hmac_key_state_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_non_sha3_dma_update_blocks/27 hmac_final/20 hmac_non_sha3_update/17 
+  Calls: hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_start/47 hash_set_last_block/51 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_set_iterator/56 hash_hmac_key_opr_one_block/55 hash_set_IV/43 hash_update_config/41 hash_hmac_disable_secure_port/34 hash_hmac_sp_key_opr/54 hash_update_config/41 hash_hmac_enable_secure_port/53 hash_set_hmac_key_mode/37 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_mode/36 hash_set_cpu_mode/35 
+hmac_clear/11 (hmac_clear)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_clear_cfg/52 hash_set_last_block/51 hash_clear_hmac_key_mode/50 hash_wait_till_done/49 hash_input_msg_u8/48 hash_start/47 hash_set_hmac_key_cnt/46 hash_set_hmac_key_len/45 hash_get_block_word_len/44 hash_set_IV/43 hash_get_iterator_word_len/42 hash_update_config/41 hash_set_alg/40 hash_disable_dma_interruption/39 hash_set_endian_uint32/38 hash_set_hmac_key_mode/37 hash_set_hmac_mode/36 hash_set_cpu_mode/35 hash_hmac_disable_secure_port/34 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hmac_non_sha3_dma_final/28 hmac_sha3_dma_final/25 hmac_sha3_dma_final/25 hmac_non_sha3_dma_update_blocks/27 hmac_non_sha3_dma_init/26 hmac_non_sha3_dma_init/26 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_sha3_dma_init/23 hmac_final/20 hmac_final/20 hmac_non_sha3_update/17 hmac_sha3_init/15 hmac_sha3_init/15 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+hmac_init_step1.part.0/100 (hmac_init_step1.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 77
+  References: 
+  Referring: 
+  Function hmac_init_step1.part.0/100 is inline copy in hmac_init/16
+  Clone of hmac_init_step1.part.0/77
+  Availability: local
+  Function flags: count:147438173 (estimated locally) body local split_part
+  Called by: hmac_init.part.0/91 (inlined) (147438173 (estimated locally),0.14 per call) 
+  Calls: hash_update_config/41 (147438173 (estimated locally),0.14 per call) hash_set_alg/40 (147438173 (estimated locally),0.14 per call) hash_disable_dma_interruption/39 (147438173 (estimated locally),0.14 per call) hash_set_endian_uint32/38 (147438173 (estimated locally),0.14 per call) hash_set_hmac_key_mode/37 (147438173 (estimated locally),0.14 per call) hash_set_hmac_mode/36 (147438173 (estimated locally),0.14 per call) hash_set_cpu_mode/35 (147438173 (estimated locally),0.14 per call) hash_hmac_disable_secure_port/34 (78835191 (estimated locally),0.07 per call) 
+hmac_dma_final.part.0/99 (hmac_dma_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hmac_dma_final.part.0/99 is inline copy in hmac_dma_final/31
+  Availability: local
+  Function flags: count:436207616 (estimated locally) body local split_part
+  Called by: hmac_dma_final/31 (inlined) (436207616 (estimated locally),0.41 per call) 
+  Calls: hash_hmac_disable_secure_port/34 (436207616 (estimated locally),0.41 per call) hmac_sha3_dma_final/25 (436207616 (estimated locally),0.41 per call) 
+hmac_dma_update_blocks.part.0/98 (hmac_dma_update_blocks.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hmac_dma_update_blocks.part.0/98 is inline copy in hmac_dma_update_blocks/30
+  Availability: local
+  Function flags: count:436207616 (estimated locally) body local split_part
+  Called by: hmac_dma_update_blocks/30 (inlined) (436207616 (estimated locally),0.41 per call) 
+  Calls: hash_hmac_disable_secure_port/34 (436207616 (estimated locally),0.41 per call) hash_dma_update_blocks/72 (436207616 (estimated locally),0.41 per call) 
+hmac_final.part.0/95 (hmac_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:708837374 (estimated locally) body local split_part
+  Called by: hmac_node_steps/22 (46663310 (estimated locally),0.20 per call) hmac/21 (143948512 (estimated locally),0.13 per call) hmac_final/20 (708837374 (estimated locally),0.66 per call) 
+  Calls: hash_hmac_disable_secure_port/34 (354418689 (estimated locally),0.50 per call) hmac_sha3_final/19 (354418689 (estimated locally),0.50 per call) hmac_key_state_recover/12 (354418689 (estimated locally),0.50 per call) hash_total_bytelen_2_bitlen/67 (116958166 (estimated locally),0.16 per call) hash_set_msg_total_bit_len/68 (116958166 (estimated locally),0.16 per call) hash_calc_rand_len_msg/69 (116958166 (estimated locally),0.16 per call) hash_get_iterator/64 (38596195 (estimated locally),0.05 per call) memset_/57 (708837377 (estimated locally),1.00 per call) 
+hmac_sha3_final.part.0/93 (hmac_sha3_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hmac_sha3_final.part.0/93 is inline copy in hmac_sha3_final/19
+  Availability: local
+  Function flags: count:236223200 (estimated locally) body local split_part
+  Called by: hmac_sha3_final/19 (inlined) (236223200 (estimated locally),0.55 per call) 
+  Calls: hash_get_digest_word_len/58 (236223200 (estimated locally),0.55 per call) hash_final/62 (236223200 (estimated locally),0.55 per call) hash_get_block_word_len/44 (118111600 (estimated locally),0.28 per call) hash_init/60 (118111600 (estimated locally),0.28 per call) hash_update/61 (38976828 (estimated locally),0.09 per call) hash_update/61 (12862353 (estimated locally),0.03 per call) hash_final/62 (4244577 (estimated locally),0.01 per call) memset_/57 (234822490 (estimated locally),0.55 per call) memset_/57 (1400710 (estimated locally),0.00 per call) 
+hmac_update.part.0/92 (hmac_update.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hmac_update.part.0/92 is inline copy in hmac_update/18
+  Availability: local
+  Function flags: count:152672667 (estimated locally) body local split_part
+  Called by: hmac_update/18 (inlined) (152672667 (estimated locally),0.14 per call) 
+  Calls: hash_hmac_disable_secure_port/34 (152672665 (estimated locally),0.14 per call) hash_update/61 (152672665 (estimated locally),0.14 per call) 
+hmac_init.part.0/91 (hmac_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function hmac_init.part.0/91 is inline copy in hmac_init/16
+  Availability: local
+  Function flags: count:697932184 (estimated locally) body local split_part
+  Called by: hmac_init/16 (inlined) (697932184 (estimated locally),0.65 per call) 
+  Calls: hmac_sha3_init/15 (237611012 (estimated locally),0.22 per call) hmac_init_step1.part.0/100 (inlined) (147438173 (estimated locally),0.14 per call) hash_get_block_word_len/44 (48654597 (estimated locally),0.05 per call) hash_get_iterator_word_len/42 (48654597 (estimated locally),0.05 per call) hash_get_digest_word_len/58 (48654597 (estimated locally),0.05 per call) hmac_init_step2/14 (48654597 (estimated locally),0.05 per call) 
+hmac_init_step1.part.0/77 (hmac_init_step1.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 100
+  References: 
+  Referring: 
+  Function hmac_init_step1.part.0/77 is inline copy in hmac_dma_init/29
+  Availability: local
+  Function flags: count:121636493 (estimated locally) body local split_part
+  Called by: hmac_non_sha3_dma_init/26 (inlined) (121636493 (estimated locally),0.11 per call) 
+  Calls: hash_hmac_disable_secure_port/34 (65039033 (estimated locally),0.06 per call) hash_set_cpu_mode/35 (121636493 (estimated locally),0.11 per call) hash_set_hmac_mode/36 (121636493 (estimated locally),0.11 per call) hash_set_hmac_key_mode/37 (121636493 (estimated locally),0.11 per call) hash_set_endian_uint32/38 (121636493 (estimated locally),0.11 per call) hash_disable_dma_interruption/39 (121636493 (estimated locally),0.11 per call) hash_set_alg/40 (121636493 (estimated locally),0.11 per call) hash_update_config/41 (121636493 (estimated locally),0.11 per call) 
+lib_addr_arch32_unlock_remap/76 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 (4244577 (estimated locally),0.02 per call) 
+  Calls: 
+lib_addr_arch32_lock_remap/75 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_dma_final/25 (4244577 (estimated locally),0.02 per call) 
+  Calls: 
+hash_dma_final/74 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 (68764205 (estimated locally),0.06 per call) hmac_sha3_dma_final/25 (118111600 (estimated locally),0.65 per call) 
+  Calls: 
+hash_set_dma_output_len/73 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 (143948513 (estimated locally),0.13 per call) 
+  Calls: 
+hash_dma_update_blocks/72 (hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_dma_update_blocks.part.0/98 (436207616 (estimated locally),0.41 per call) hmac_non_sha3_dma_update_blocks/27 (143948513 (estimated locally),0.13 per call) 
+  Calls: 
+hash_set_dma_mode/71 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_dma_final/28 (68764205 (estimated locally),0.06 per call) hmac_non_sha3_dma_update_blocks/27 (143948513 (estimated locally),0.13 per call) hmac_non_sha3_dma_init/26 (13246214 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_copy/70 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_dma_init/23 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_calc_rand_len_msg/69 (hash_calc_rand_len_msg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_final.part.0/95 (116958166 (estimated locally),0.16 per call) 
+  Calls: 
+hash_set_msg_total_bit_len/68 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_final.part.0/95 (116958166 (estimated locally),0.16 per call) 
+  Calls: 
+hash_total_bytelen_2_bitlen/67 (hash_total_bytelen_2_bitlen)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_final.part.0/95 (116958166 (estimated locally),0.16 per call) 
+  Calls: 
+hash_calc_blocks/66 (hash_calc_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_update/17 (4018829 (estimated locally),0.00 per call) hmac_non_sha3_update/17 (8187072 (estimated locally),0.01 per call) 
+  Calls: 
+hash_total_byte_len_add_uint32/65 (hash_total_byte_len_add_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_update/17 (50381980 (estimated locally),0.05 per call) 
+  Calls: 
+hash_get_iterator/64 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_final.part.0/95 (38596195 (estimated locally),0.05 per call) hmac_init_step2/14 (124017180 (estimated locally),0.12 per call) 
+  Calls: 
+hash_hmac_key_opr_longer_than_one_block/63 (hash_hmac_key_opr_longer_than_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step2/14 (375809640 (estimated locally),0.35 per call) 
+  Calls: 
+hash_final/62 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_final.part.0/93 (236223200 (estimated locally),0.55 per call) hmac_sha3_final.part.0/93 (4244577 (estimated locally),0.01 per call) hmac_sha3_dma_final/25 (1400710 (estimated locally),0.01 per call) hmac_sha3_init/15 (9506765 (estimated locally),0.05 per call) 
+  Calls: 
+hash_update/61 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_final.part.0/93 (38976828 (estimated locally),0.09 per call) hmac_sha3_final.part.0/93 (12862353 (estimated locally),0.03 per call) hmac_update.part.0/92 (152672665 (estimated locally),0.14 per call) hmac_sha3_dma_final/25 (4244577 (estimated locally),0.02 per call) hmac_sha3_dma_final/25 (12862353 (estimated locally),0.07 per call) hmac_sha3_init/15 (59055800 (estimated locally),0.34 per call) hmac_sha3_init/15 (28808378 (estimated locally),0.17 per call) 
+  Calls: 
+hash_init/60 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_final.part.0/93 (118111600 (estimated locally),0.28 per call) hmac_sha3_dma_final/25 (38976828 (estimated locally),0.21 per call) hmac_sha3_init/15 (118111600 (estimated locally),0.68 per call) hmac_sha3_init/15 (87298115 (estimated locally),0.50 per call) 
+  Calls: 
+memcpy_/59 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_update/17 (2009414 (estimated locally),0.00 per call) hmac_non_sha3_update/17 (8187072 (estimated locally),0.01 per call) hmac_non_sha3_update/17 (8187072 (estimated locally),0.01 per call) hmac_sha3_dma_final/25 (4244577 (estimated locally),0.02 per call) hmac_sha3_dma_init/23 (354334800 (estimated locally),0.33 per call) hmac_sha3_dma_init/23 (354334800 (estimated locally),0.33 per call) hmac_init_step2/14 (375809640 (estimated locally),0.35 per call) hmac_sha3_init/15 (87298115 (estimated locally),0.50 per call) 
+  Calls: 
+hash_get_digest_word_len/58 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_final.part.0/93 (236223200 (estimated locally),0.55 per call) hmac_init.part.0/91 (48654597 (estimated locally),0.05 per call) hmac_non_sha3_dma_init/26 (40140042 (estimated locally),0.04 per call) hmac_sha3_dma_init/23 (354334800 (estimated locally),0.33 per call) hmac_sha3_init/15 (174596230 (estimated locally),1.00 per call) 
+  Calls: 
+memset_/57 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_final.part.0/95 (708837377 (estimated locally),1.00 per call) hmac_sha3_final.part.0/93 (234822490 (estimated locally),0.55 per call) hmac_sha3_final.part.0/93 (1400710 (estimated locally),0.00 per call) hmac_init/16 (574129752 (estimated locally),0.53 per call) hmac_non_sha3_dma_final/28 (436207616 (estimated locally),0.41 per call) hmac_sha3_dma_final/25 (181710155 (estimated locally),1.00 per call) hmac_sha3_dma_final/25 (181710155 (estimated locally),1.00 per call) hmac_non_sha3_dma_init/26 (40140042 (estimated locally),0.04 per call) hmac_sha3_dma_init/23 (1073741824 (estimated locally),1.00 per call) hmac_sha3_init/15 (88583700 (estimated locally),0.51 per call) hmac_sha3_init/15 (3137232 (estimated locally),0.02 per call) hmac_sha3_init/15 (87298115 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_iterator/56 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (86669347 (estimated locally),0.08 per call) 
+  Calls: 
+hash_hmac_key_opr_one_block/55 (hash_hmac_key_opr_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (108662672 (estimated locally),0.10 per call) hmac_init_step2/14 (375809640 (estimated locally),0.35 per call) 
+  Calls: 
+hash_hmac_sp_key_opr/54 (hash_hmac_sp_key_opr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (536870912 (estimated locally),0.50 per call) hmac_init_step2/14 (322122544 (estimated locally),0.30 per call) 
+  Calls: 
+hash_hmac_enable_secure_port/53 (hash_hmac_enable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_clear_cfg/52 (hash_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_clear/11 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+hash_set_last_block/51 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_non_sha3_dma_update_blocks/27 (143948513 (estimated locally),0.13 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_key_state_recover/12 (86669347 (estimated locally),0.08 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step2/14 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_clear_hmac_key_mode/50 (hash_clear_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step2/14 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_wait_till_done/49 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (86669347 (estimated locally),0.08 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+hash_input_msg_u8/48 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_clear/11 (955630224 (estimated locally),8.09 per call) 
+  Calls: 
+hash_start/47 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (86669347 (estimated locally),0.08 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+hash_set_hmac_key_cnt/46 (hash_set_hmac_key_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (86669347 (estimated locally),0.08 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+hash_set_hmac_key_len/45 (hash_set_hmac_key_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (86669347 (estimated locally),0.08 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+hash_get_block_word_len/44 (hash_get_block_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_sha3_final.part.0/93 (118111600 (estimated locally),0.28 per call) hmac_init.part.0/91 (48654597 (estimated locally),0.05 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_non_sha3_dma_init/26 (40140042 (estimated locally),0.04 per call) hmac_sha3_init/15 (174596230 (estimated locally),1.00 per call) 
+  Calls: 
+hash_set_IV/43 (hash_set_IV)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_key_state_recover/12 (108662672 (estimated locally),0.10 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step2/14 (751619279 (estimated locally),0.70 per call) 
+  Calls: 
+hash_get_iterator_word_len/42 (hash_get_iterator_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init.part.0/91 (48654597 (estimated locally),0.05 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_non_sha3_dma_init/26 (40140042 (estimated locally),0.04 per call) hmac_non_sha3_dma_init/26 (40140042 (estimated locally),0.04 per call) hmac_sha3_dma_init/23 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_update_config/41 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (536870912 (estimated locally),0.50 per call) hmac_key_state_recover/12 (536870912 (estimated locally),0.50 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_set_alg/40 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_disable_dma_interruption/39 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_sha3_dma_init/23 (1073741824 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_set_endian_uint32/38 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_set_hmac_key_mode/37 (hash_set_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_set_hmac_mode/36 (hash_set_hmac_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_set_cpu_mode/35 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (147438173 (estimated locally),0.14 per call) hmac_key_state_recover/12 (1073741824 (estimated locally),1.00 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (121636493 (estimated locally),0.11 per call) 
+  Calls: 
+hash_hmac_disable_secure_port/34 (hash_hmac_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_init_step1.part.0/100 (78835191 (estimated locally),0.07 per call) hmac_dma_final.part.0/99 (436207616 (estimated locally),0.41 per call) hmac_dma_update_blocks.part.0/98 (436207616 (estimated locally),0.41 per call) hmac_final.part.0/95 (354418689 (estimated locally),0.50 per call) hmac_update.part.0/92 (152672665 (estimated locally),0.14 per call) hmac_key_state_recover/12 (536870912 (estimated locally),0.50 per call) hmac_clear/11 (118111600 (estimated locally),1.00 per call) hmac_sha3_init/15 (174596230 (estimated locally),1.00 per call) hmac_init_step1.part.0/77 (65039033 (estimated locally),0.06 per call) 
+  Calls: 
+hmac_dma_node_steps/33 (hmac_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:229727060 (estimated locally) body
+  Called by: 
+  Calls: hmac_dma_final/31 (37904965 (estimated locally),0.17 per call) hmac_dma_update_blocks/30 (1014686025 (estimated locally),4.42 per call) hmac_dma_init/29 (229727060 (estimated locally),1.00 per call) 
+hmac_dma/32 (hmac_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hmac_dma_final/31 (354334800 (estimated locally),0.33 per call) hmac_dma_init/29 (1073741824 (estimated locally),1.00 per call) 
+hmac_dma_final/31 (hmac_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hmac_dma_node_steps/33 (37904965 (estimated locally),0.17 per call) hmac_dma/32 (354334800 (estimated locally),0.33 per call) 
+  Calls: hmac_non_sha3_dma_final/28 (inlined) (436207616 (estimated locally),0.41 per call) hmac_dma_final.part.0/99 (inlined) (436207616 (estimated locally),0.41 per call) 
+hmac_dma_update_blocks/30 (hmac_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hmac_dma_node_steps/33 (1014686025 (estimated locally),4.42 per call) 
+  Calls: hmac_non_sha3_dma_update_blocks/27 (inlined) (436207616 (estimated locally),0.41 per call) hmac_dma_update_blocks.part.0/98 (inlined) (436207616 (estimated locally),0.41 per call) 
+hmac_dma_init/29 (hmac_dma_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hmac_dma_node_steps/33 (229727060 (estimated locally),1.00 per call) hmac_dma/32 (1073741824 (estimated locally),1.00 per call) 
+  Calls: hmac_non_sha3_dma_init/26 (inlined) (287897025 (estimated locally),0.27 per call) hmac_sha3_dma_init/23 (397998447 (estimated locally),0.37 per call) 
+hmac_non_sha3_dma_final/28 (hmac_non_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hmac_non_sha3_dma_final/28 is inline copy in hmac_dma_final/31
+  Availability: local
+  Function flags: count:436207616 (estimated locally) body local
+  Called by: hmac_dma_final/31 (inlined) (436207616 (estimated locally),0.41 per call) 
+  Calls: memset_/57 (436207616 (estimated locally),0.41 per call) hash_dma_final/74 (68764205 (estimated locally),0.06 per call) hash_set_dma_mode/71 (68764205 (estimated locally),0.06 per call) hmac_key_state_recover/12 (208376379 (estimated locally),0.19 per call) 
+hmac_non_sha3_dma_update_blocks/27 (hmac_non_sha3_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hmac_non_sha3_dma_update_blocks/27 is inline copy in hmac_dma_update_blocks/30
+  Availability: local
+  Function flags: count:436207616 (estimated locally) body local
+  Called by: hmac_dma_update_blocks/30 (inlined) (436207616 (estimated locally),0.41 per call) 
+  Calls: hash_dma_update_blocks/72 (143948513 (estimated locally),0.13 per call) hash_set_dma_output_len/73 (143948513 (estimated locally),0.13 per call) hash_set_last_block/51 (143948513 (estimated locally),0.13 per call) hash_set_dma_mode/71 (143948513 (estimated locally),0.13 per call) hmac_key_state_recover/12 (436207616 (estimated locally),0.41 per call) 
+hmac_non_sha3_dma_init/26 (hmac_non_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hmac_non_sha3_dma_init/26 is inline copy in hmac_dma_init/29
+  Availability: local
+  Function flags: count:287897025 (estimated locally) body local
+  Called by: hmac_dma_init/29 (inlined) (287897025 (estimated locally),0.27 per call) 
+  Calls: hash_set_dma_mode/71 (13246214 (estimated locally),0.01 per call) hmac_init_step2/14 (40140042 (estimated locally),0.04 per call) hash_get_digest_word_len/58 (40140042 (estimated locally),0.04 per call) hash_get_iterator_word_len/42 (40140042 (estimated locally),0.04 per call) hash_get_iterator_word_len/42 (40140042 (estimated locally),0.04 per call) hash_get_block_word_len/44 (40140042 (estimated locally),0.04 per call) memset_/57 (40140042 (estimated locally),0.04 per call) hmac_init_step1.part.0/77 (inlined) (121636493 (estimated locally),0.11 per call) 
+hmac_sha3_dma_final/25 (hmac_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:181710154 (estimated locally) body local
+  Called by: hmac_dma_final.part.0/99 (436207616 (estimated locally),0.41 per call) 
+  Calls: memset_/57 (181710155 (estimated locally),1.00 per call) memset_/57 (181710155 (estimated locally),1.00 per call) lib_addr_arch32_unlock_remap/76 (4244577 (estimated locally),0.02 per call) hash_final/62 (1400710 (estimated locally),0.01 per call) hash_update/61 (4244577 (estimated locally),0.02 per call) memcpy_/59 (4244577 (estimated locally),0.02 per call) lib_addr_arch32_lock_remap/75 (4244577 (estimated locally),0.02 per call) hash_update/61 (12862353 (estimated locally),0.07 per call) hash_init/60 (38976828 (estimated locally),0.21 per call) hash_dma_final/74 (118111600 (estimated locally),0.65 per call) 
+hmac_sha3_dma_init/23 (hmac_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: hmac_dma_init/29 (397998447 (estimated locally),0.37 per call) 
+  Calls: memset_/57 (1073741824 (estimated locally),1.00 per call) memcpy_/59 (354334800 (estimated locally),0.33 per call) hash_get_iterator_word_len/42 (354334800 (estimated locally),0.33 per call) memcpy_/59 (354334800 (estimated locally),0.33 per call) uint32_copy/70 (354334800 (estimated locally),0.33 per call) hash_get_digest_word_len/58 (354334800 (estimated locally),0.33 per call) hmac_sha3_init/15 (1073741824 (estimated locally),1.00 per call) hash_disable_dma_interruption/39 (1073741824 (estimated locally),1.00 per call) 
+hmac_node_steps/22 (hmac_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:229727060 (estimated locally) body
+  Called by: 
+  Calls: hmac_final.part.0/95 (46663310 (estimated locally),0.20 per call) hmac_update/18 (1014686025 (estimated locally),4.42 per call) hmac_init/16 (229727060 (estimated locally),1.00 per call) 
+hmac/21 (hmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: hmac_final.part.0/95 (143948512 (estimated locally),0.13 per call) hmac_update/18 (354334800 (estimated locally),0.33 per call) hmac_init/16 (1073741822 (estimated locally),1.00 per call) 
+hmac_final/20 (hmac_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: hmac_final.part.0/95 (708837374 (estimated locally),0.66 per call) 
+hmac_sha3_final/19 (hmac_sha3_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:426988172 (estimated locally) body
+  Called by: hmac_final.part.0/95 (354418689 (estimated locally),0.50 per call) 
+  Calls: hmac_sha3_final.part.0/93 (inlined) (236223200 (estimated locally),0.55 per call) 
+hmac_update/18 (hmac_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hmac_node_steps/22 (1014686025 (estimated locally),4.42 per call) hmac/21 (354334800 (estimated locally),0.33 per call) 
+  Calls: hmac_non_sha3_update/17 (inlined) (152672666 (estimated locally),0.14 per call) hmac_update.part.0/92 (inlined) (152672667 (estimated locally),0.14 per call) 
+hmac_non_sha3_update/17 (hmac_non_sha3_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hmac_non_sha3_update/17 is inline copy in hmac_update/18
+  Availability: local
+  Function flags: count:152672666 (estimated locally) body local
+  Called by: hmac_update/18 (inlined) (152672666 (estimated locally),0.14 per call) 
+  Calls: memcpy_/59 (2009414 (estimated locally),0.00 per call) hash_calc_blocks/66 (4018829 (estimated locally),0.00 per call) memcpy_/59 (8187072 (estimated locally),0.01 per call) hash_calc_blocks/66 (8187072 (estimated locally),0.01 per call) memcpy_/59 (8187072 (estimated locally),0.01 per call) hash_total_byte_len_add_uint32/65 (50381980 (estimated locally),0.05 per call) hmac_key_state_recover/12 (152672666 (estimated locally),0.14 per call) 
+hmac_init/16 (hmac_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hmac_node_steps/22 (229727060 (estimated locally),1.00 per call) hmac/21 (1073741822 (estimated locally),1.00 per call) 
+  Calls: hmac_init.part.0/91 (inlined) (697932184 (estimated locally),0.65 per call) memset_/57 (574129752 (estimated locally),0.53 per call) 
+hmac_sha3_init/15 (hmac_sha3_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:174596230 (estimated locally) body local
+  Called by: hmac_init.part.0/91 (237611012 (estimated locally),0.22 per call) hmac_sha3_dma_init/23 (1073741824 (estimated locally),1.00 per call) 
+  Calls: memset_/57 (88583700 (estimated locally),0.51 per call) hash_update/61 (59055800 (estimated locally),0.34 per call) hash_init/60 (118111600 (estimated locally),0.68 per call) memset_/57 (3137232 (estimated locally),0.02 per call) hash_final/62 (9506765 (estimated locally),0.05 per call) hash_update/61 (28808378 (estimated locally),0.17 per call) hash_init/60 (87298115 (estimated locally),0.50 per call) memset_/57 (87298115 (estimated locally),0.50 per call) memcpy_/59 (87298115 (estimated locally),0.50 per call) hash_get_digest_word_len/58 (174596230 (estimated locally),1.00 per call) hash_get_block_word_len/44 (174596230 (estimated locally),1.00 per call) hash_hmac_disable_secure_port/34 (174596230 (estimated locally),1.00 per call) 
+hmac_init_step2/14 (hmac_init_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: hmac_init.part.0/91 (48654597 (estimated locally),0.05 per call) hmac_non_sha3_dma_init/26 (40140042 (estimated locally),0.04 per call) 
+  Calls: hash_set_last_block/51 (1073741824 (estimated locally),1.00 per call) hash_clear_hmac_key_mode/50 (1073741824 (estimated locally),1.00 per call) hash_hmac_sp_key_opr/54 (322122544 (estimated locally),0.30 per call) hash_get_iterator/64 (124017180 (estimated locally),0.12 per call) hash_hmac_key_opr_longer_than_one_block/63 (375809640 (estimated locally),0.35 per call) hash_hmac_key_opr_one_block/55 (375809640 (estimated locally),0.35 per call) memcpy_/59 (375809640 (estimated locally),0.35 per call) hash_set_IV/43 (751619279 (estimated locally),0.70 per call) 
+hmac_key_state_recover/12 (hmac_key_state_recover)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hmac_final.part.0/95 (354418689 (estimated locally),0.50 per call) hmac_non_sha3_dma_final/28 (208376379 (estimated locally),0.19 per call) hmac_non_sha3_dma_update_blocks/27 (436207616 (estimated locally),0.41 per call) hmac_non_sha3_update/17 (152672666 (estimated locally),0.14 per call) 
+  Calls: hash_set_last_block/51 (1073741824 (estimated locally),1.00 per call) hash_clear_hmac_key_mode/50 (1073741824 (estimated locally),1.00 per call) hash_wait_till_done/49 (86669347 (estimated locally),0.08 per call) hash_start/47 (86669347 (estimated locally),0.08 per call) hash_set_last_block/51 (86669347 (estimated locally),0.08 per call) hash_set_hmac_key_cnt/46 (86669347 (estimated locally),0.08 per call) hash_set_hmac_key_len/45 (86669347 (estimated locally),0.08 per call) hash_set_iterator/56 (86669347 (estimated locally),0.08 per call) hash_hmac_key_opr_one_block/55 (108662672 (estimated locally),0.10 per call) hash_set_IV/43 (108662672 (estimated locally),0.10 per call) hash_update_config/41 (536870912 (estimated locally),0.50 per call) hash_hmac_disable_secure_port/34 (536870912 (estimated locally),0.50 per call) hash_hmac_sp_key_opr/54 (536870912 (estimated locally),0.50 per call) hash_update_config/41 (536870912 (estimated locally),0.50 per call) hash_hmac_enable_secure_port/53 (536870912 (estimated locally),0.50 per call) hash_set_hmac_key_mode/37 (1073741824 (estimated locally),1.00 per call) hash_set_alg/40 (1073741824 (estimated locally),1.00 per call) hash_disable_dma_interruption/39 (1073741824 (estimated locally),1.00 per call) hash_set_endian_uint32/38 (1073741824 (estimated locally),1.00 per call) hash_set_hmac_mode/36 (1073741824 (estimated locally),1.00 per call) hash_set_cpu_mode/35 (1073741824 (estimated locally),1.00 per call) 
+hmac_clear/11 (hmac_clear)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body
+  Called by: 
+  Calls: hash_clear_cfg/52 (118111600 (estimated locally),1.00 per call) hash_set_last_block/51 (118111600 (estimated locally),1.00 per call) hash_clear_hmac_key_mode/50 (118111600 (estimated locally),1.00 per call) hash_wait_till_done/49 (118111600 (estimated locally),1.00 per call) hash_input_msg_u8/48 (955630224 (estimated locally),8.09 per call) hash_start/47 (118111600 (estimated locally),1.00 per call) hash_set_hmac_key_cnt/46 (118111600 (estimated locally),1.00 per call) hash_set_hmac_key_len/45 (118111600 (estimated locally),1.00 per call) hash_get_block_word_len/44 (118111600 (estimated locally),1.00 per call) hash_set_IV/43 (118111600 (estimated locally),1.00 per call) hash_get_iterator_word_len/42 (118111600 (estimated locally),1.00 per call) hash_update_config/41 (118111600 (estimated locally),1.00 per call) hash_set_alg/40 (118111600 (estimated locally),1.00 per call) hash_disable_dma_interruption/39 (118111600 (estimated locally),1.00 per call) hash_set_endian_uint32/38 (118111600 (estimated locally),1.00 per call) hash_set_hmac_key_mode/37 (118111600 (estimated locally),1.00 per call) hash_set_hmac_mode/36 (118111600 (estimated locally),1.00 per call) hash_set_cpu_mode/35 (118111600 (estimated locally),1.00 per call) hash_hmac_disable_secure_port/34 (118111600 (estimated locally),1.00 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+hmac_final.part.0/95 (hmac_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hmac_final.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:708837374 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+lib_addr_arch32_unlock_remap/76 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+lib_addr_arch32_lock_remap/75 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_dma_final/74 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_dma_output_len/73 (hash_set_dma_output_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_dma_update_blocks/72 (hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_dma_mode/71 (hash_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_copy/70 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_calc_rand_len_msg/69 (hash_calc_rand_len_msg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_msg_total_bit_len/68 (hash_set_msg_total_bit_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_total_bytelen_2_bitlen/67 (hash_total_bytelen_2_bitlen)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_calc_blocks/66 (hash_calc_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_total_byte_len_add_uint32/65 (hash_total_byte_len_add_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_iterator/64 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_hmac_key_opr_longer_than_one_block/63 (hash_hmac_key_opr_longer_than_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_final/62 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_update/61 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_init/60 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/59 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/58 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/57 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_iterator/56 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_hmac_key_opr_one_block/55 (hash_hmac_key_opr_one_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_hmac_sp_key_opr/54 (hash_hmac_sp_key_opr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_hmac_enable_secure_port/53 (hash_hmac_enable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_clear_cfg/52 (hash_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_last_block/51 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_clear_hmac_key_mode/50 (hash_clear_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_wait_till_done/49 (hash_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_input_msg_u8/48 (hash_input_msg_u8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_start/47 (hash_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_hmac_key_cnt/46 (hash_set_hmac_key_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_hmac_key_len/45 (hash_set_hmac_key_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_block_word_len/44 (hash_get_block_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_IV/43 (hash_set_IV)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_iterator_word_len/42 (hash_get_iterator_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_update_config/41 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_alg/40 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_disable_dma_interruption/39 (hash_disable_dma_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_endian_uint32/38 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_hmac_key_mode/37 (hash_set_hmac_key_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_hmac_mode/36 (hash_set_hmac_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_cpu_mode/35 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_hmac_disable_secure_port/34 (hash_hmac_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_dma_node_steps/33 (hmac_dma_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_dma_node_steps (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:229727060 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_dma/32 (hmac_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_dma (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_dma_final/31 (hmac_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_dma_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_dma_update_blocks/30 (hmac_dma_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_dma_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_dma_init/29 (hmac_dma_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_dma_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_sha3_dma_final/25 (hmac_sha3_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hmac_sha3_dma_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:181710154 (estimated locally) local
+  Called by: 
+  Calls: 
+hmac_sha3_dma_init/23 (hmac_sha3_dma_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hmac_sha3_dma_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+hmac_node_steps/22 (hmac_node_steps)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_node_steps (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:229727060 (estimated locally)
+  Called by: 
+  Calls: 
+hmac/21 (hmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_final/20 (hmac_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_sha3_final/19 (hmac_sha3_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_sha3_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:426988172 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_update/18 (hmac_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_init/16 (hmac_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_sha3_init/15 (hmac_sha3_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hmac_sha3_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:174596230 (estimated locally) local
+  Called by: 
+  Calls: 
+hmac_init_step2/14 (hmac_init_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hmac_init_step2 (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+hmac_key_state_recover/12 (hmac_key_state_recover)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_key_state_recover (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_clear/11 (hmac_clear)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hmac_clear (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally)
+  Called by: 
+  Calls: 

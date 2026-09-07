@@ -1,0 +1,770 @@
+Trivially needed symbols: sm2_getE_final/19 sm2_getE_update/18 sm2_getE_init/17 sm2_getE/16 sm2_getZ/15 g_sm2_default_id/13
+
+
+Initial Symbol table:
+
+hash_final/25 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_final/19 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+hash_update/24 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_update/18 sm2_getE_init/17 sm2_getE/16 sm2_getE/16 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+hash_init/23 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_init/17 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+sm2_curve/22 (sm2_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm2_getZ_internal/14 (addr) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_check_point/21 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 
+  Calls: 
+u8big_to_u32little_256bits/20 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+sm2_getE_final/19 (sm2_getE_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 
+sm2_getE_update/18 (sm2_getE_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faf2ad6d990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 
+sm2_getE_init/17 (sm2_getE_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faf2ad6d880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 hash_init/23 
+sm2_getE/16 (sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faf2ad6d770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 hash_update/24 hash_update/24 hash_init/23 
+sm2_getZ/15 (sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faf2ad6d660
+  References: g_sm2_default_id/13 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sm2_getZ_internal/14 
+sm2_getZ_internal/14 (sm2_getZ_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faf2ad6d660
+  References: sm2_curve/22 (addr) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sm2_getZ/15 
+  Calls: hash_final/25 hash_update/24 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 hash_update/24 hash_init/23 eccp_check_point/21 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 
+g_sm2_default_id/13 (g_sm2_default_id)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faf2ad6d550
+  References: 
+  Referring: sm2_getZ/15 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+hash_final/25 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_final/19 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+hash_update/24 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_update/18 sm2_getE_init/17 sm2_getE/16 sm2_getE/16 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+hash_init/23 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_init/17 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+sm2_curve/22 (sm2_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm2_getZ_internal/14 (addr) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_check_point/21 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 
+  Calls: 
+u8big_to_u32little_256bits/20 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+sm2_getE_final/19 (sm2_getE_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 
+sm2_getE_update/18 (sm2_getE_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 
+sm2_getE_init/17 (sm2_getE_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 hash_init/23 
+sm2_getE/16 (sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 hash_update/24 hash_update/24 hash_init/23 
+sm2_getZ/15 (sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sm2_default_id/13 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sm2_getZ_internal/14 
+sm2_getZ_internal/14 (sm2_getZ_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: sm2_curve/22 (addr) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sm2_getZ/15 
+  Calls: hash_final/25 hash_update/24 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 hash_update/24 hash_init/23 eccp_check_point/21 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 
+g_sm2_default_id/13 (g_sm2_default_id)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm2_getZ/15 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+
+Initial Symbol table:
+
+hash_final/25 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_final/19 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+hash_update/24 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_update/18 sm2_getE_init/17 sm2_getE/16 sm2_getE/16 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+hash_init/23 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_init/17 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+sm2_curve/22 (sm2_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm2_getZ_internal/14 (addr) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_check_point/21 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 
+  Calls: 
+u8big_to_u32little_256bits/20 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+sm2_getE_final/19 (sm2_getE_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 
+sm2_getE_update/18 (sm2_getE_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 
+sm2_getE_init/17 (sm2_getE_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 hash_init/23 
+sm2_getE/16 (sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 hash_update/24 hash_update/24 hash_init/23 
+sm2_getZ/15 (sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sm2_default_id/13 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sm2_getZ_internal/14 
+sm2_getZ_internal/14 (sm2_getZ_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: sm2_curve/22 (addr) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sm2_getZ/15 
+  Calls: hash_final/25 hash_update/24 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 hash_update/24 hash_init/23 eccp_check_point/21 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 
+g_sm2_default_id/13 (g_sm2_default_id)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm2_getZ/15 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+hash_final/25 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_final/19 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+hash_update/24 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_update/18 sm2_getE_init/17 sm2_getE/16 sm2_getE/16 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+hash_init/23 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getE_init/17 sm2_getE/16 sm2_getZ_internal/14 
+  Calls: 
+sm2_curve/22 (sm2_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm2_getZ_internal/14 (addr) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_check_point/21 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 
+  Calls: 
+u8big_to_u32little_256bits/20 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 sm2_getZ_internal/14 
+  Calls: 
+sm2_getE_final/19 (sm2_getE_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 
+sm2_getE_update/18 (sm2_getE_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 
+sm2_getE_init/17 (sm2_getE_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_update/24 hash_init/23 
+sm2_getE/16 (sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_final/25 hash_update/24 hash_update/24 hash_init/23 
+sm2_getZ/15 (sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sm2_default_id/13 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sm2_getZ_internal/14 
+sm2_getZ_internal/14 (sm2_getZ_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: sm2_curve/22 (addr) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sm2_getZ/15 
+  Calls: hash_final/25 hash_update/24 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 hash_update/24 hash_update/24 hash_init/23 eccp_check_point/21 u8big_to_u32little_256bits/20 u8big_to_u32little_256bits/20 
+g_sm2_default_id/13 (g_sm2_default_id)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm2_getZ/15 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+hash_final/25 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sm2_getE_final/19 (1073741824 (estimated locally),1.00 per call) sm2_getE/16 (70716517 (estimated locally),0.07 per call) sm2_getZ_internal/14 (686644 (estimated locally),0.00 per call) 
+  Calls: 
+hash_update/24 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sm2_getE_update/18 (1073741824 (estimated locally),1.00 per call) sm2_getE_init/17 (354334800 (estimated locally),0.33 per call) sm2_getE/16 (29960779 (estimated locally),0.03 per call) sm2_getE/16 (90790239 (estimated locally),0.08 per call) sm2_getZ_internal/14 (2080738 (estimated locally),0.00 per call) sm2_getZ_internal/14 (6305268 (estimated locally),0.01 per call) sm2_getZ_internal/14 (19106871 (estimated locally),0.02 per call) sm2_getZ_internal/14 (57899610 (estimated locally),0.05 per call) sm2_getZ_internal/14 (24530583 (estimated locally),0.02 per call) 
+  Calls: 
+hash_init/23 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sm2_getE_init/17 (1073741824 (estimated locally),1.00 per call) sm2_getE/16 (275121938 (estimated locally),0.26 per call) sm2_getZ_internal/14 (74335101 (estimated locally),0.07 per call) 
+  Calls: 
+sm2_curve/22 (sm2_curve)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm2_getZ_internal/14 (addr) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) sm2_getZ_internal/14 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+eccp_check_point/21 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 (225257884 (estimated locally),0.21 per call) 
+  Calls: 
+u8big_to_u32little_256bits/20 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sm2_getZ_internal/14 (6305268 (estimated locally),0.01 per call) sm2_getZ_internal/14 (6305268 (estimated locally),0.01 per call) sm2_getZ_internal/14 (19106871 (estimated locally),0.02 per call) sm2_getZ_internal/14 (19106871 (estimated locally),0.02 per call) sm2_getZ_internal/14 (225257884 (estimated locally),0.21 per call) sm2_getZ_internal/14 (225257884 (estimated locally),0.21 per call) 
+  Calls: 
+sm2_getE_final/19 (sm2_getE_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_final/25 (1073741824 (estimated locally),1.00 per call) 
+sm2_getE_update/18 (sm2_getE_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_update/24 (1073741824 (estimated locally),1.00 per call) 
+sm2_getE_init/17 (sm2_getE_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_update/24 (354334800 (estimated locally),0.33 per call) hash_init/23 (1073741824 (estimated locally),1.00 per call) 
+sm2_getE/16 (sm2_getE)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_final/25 (70716517 (estimated locally),0.07 per call) hash_update/24 (29960779 (estimated locally),0.03 per call) hash_update/24 (90790239 (estimated locally),0.08 per call) hash_init/23 (275121938 (estimated locally),0.26 per call) 
+sm2_getZ/15 (sm2_getZ)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_sm2_default_id/13 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_getZ_internal/14 (inlined) (225257884 (estimated locally),0.21 per call) 
+sm2_getZ_internal/14 (sm2_getZ_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: sm2_curve/22 (addr) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) sm2_curve/22 (read) 
+  Referring: 
+  Function sm2_getZ_internal/14 is inline copy in sm2_getZ/15
+  Availability: local
+  Function flags: count:225257884 (estimated locally) body local optimize_size
+  Called by: sm2_getZ/15 (inlined) (225257884 (estimated locally),0.21 per call) 
+  Calls: hash_final/25 (686644 (estimated locally),0.00 per call) hash_update/24 (2080738 (estimated locally),0.00 per call) hash_update/24 (6305268 (estimated locally),0.01 per call) u8big_to_u32little_256bits/20 (6305268 (estimated locally),0.01 per call) u8big_to_u32little_256bits/20 (6305268 (estimated locally),0.01 per call) hash_update/24 (19106871 (estimated locally),0.02 per call) u8big_to_u32little_256bits/20 (19106871 (estimated locally),0.02 per call) u8big_to_u32little_256bits/20 (19106871 (estimated locally),0.02 per call) hash_update/24 (57899610 (estimated locally),0.05 per call) hash_update/24 (24530583 (estimated locally),0.02 per call) hash_init/23 (74335101 (estimated locally),0.07 per call) eccp_check_point/21 (225257884 (estimated locally),0.21 per call) u8big_to_u32little_256bits/20 (225257884 (estimated locally),0.21 per call) u8big_to_u32little_256bits/20 (225257884 (estimated locally),0.21 per call) 
+g_sm2_default_id/13 (g_sm2_default_id)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm2_getZ/15 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Trivially needed variables: g_sm2_default_id/13
+Removing variables:
+
+Final Symbol table:
+
+hash_final/25 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_update/24 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_init/23 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_curve/22 (sm2_curve)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+eccp_check_point/21 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/20 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_getE_final/19 (sm2_getE_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm2_getE_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sm2_getE_update/18 (sm2_getE_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm2_getE_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sm2_getE_init/17 (sm2_getE_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm2_getE_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sm2_getE/16 (sm2_getE)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm2_getE (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sm2_getZ/15 (sm2_getZ)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm2_getZ (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+g_sm2_default_id/13 (g_sm2_default_id)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.g_sm2_default_id (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

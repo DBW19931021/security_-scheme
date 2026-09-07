@@ -1,0 +1,1576 @@
+Trivially needed symbols: ecies_ansi_x963_ctx_init/28 e_hmac_init/24 e_xor_enc_init/21 ansi_x963_2001_kdf_init/18 kdf_base_init/16 nist_sp800_56a_concatenation_kdf/15 ansi_x963_2001_kdf/14
+
+
+Initial Symbol table:
+
+uint32_clear/36 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+reverse_byte_array/35 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 octet_string_to_point_conversion/26 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: point_to_octet_string_conversion/25 point_to_octet_string_conversion/25 
+  Calls: 
+hmac_node_steps/33 (hmac_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_imp/23 
+  Calls: 
+hash_get_digest_word_len/32 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: e_hmac_init/24 
+  Calls: 
+uint8_XOR/31 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xor_enc_imp/20 
+  Calls: 
+memset_/30 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mac_base_init/22 enc_base_init/19 kdf_base_init/16 
+  Calls: 
+ansi_x9_63_kdf_node/29 (ansi_x9_63_kdf_node)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_kdf_core/13 
+  Calls: 
+ecies_ansi_x963_ctx_init/28 (ecies_ansi_x963_ctx_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: ansi_x963_get_point_byte_len_from_ciphertext/27 (addr) octet_string_to_point_conversion/26 (addr) point_to_octet_string_conversion/25 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ansi_x963_get_point_byte_len_from_ciphertext/27 (ansi_x963_get_point_byte_len_from_ciphertext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x3a05d40
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: GET_BYTE_LEN/11 
+octet_string_to_point_conversion/26 (octet_string_to_point_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7faecf5e0220
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint32_clear/36 reverse_byte_array/35 reverse_byte_array/35 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+point_to_octet_string_conversion/25 (point_to_octet_string_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7faecf5e0110
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/34 memcpy_/34 GET_BYTE_LEN/11 
+e_hmac_init/24 (e_hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faecf5e0330
+  References: hmac_imp/23 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_get_digest_word_len/32 mac_base_init/22 
+hmac_imp/23 (hmac_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7faecf5a5cc0
+  References: 
+  Referring: e_hmac_init/24 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: hmac_node_steps/33 
+mac_base_init/22 (mac_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faecf5e0330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_hmac_init/24 
+  Calls: memset_/30 
+e_xor_enc_init/21 (e_xor_enc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faecf5a5ee0
+  References: xor_enc_imp/20 (addr) xor_enc_imp/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enc_base_init/19 
+xor_enc_imp/20 (xor_enc_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7faecf5a5990
+  References: 
+  Referring: e_xor_enc_init/21 (addr) e_xor_enc_init/21 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint8_XOR/31 
+enc_base_init/19 (enc_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faecf5a5ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_xor_enc_init/21 
+  Calls: memset_/30 
+ansi_x963_2001_kdf_init/18 (ansi_x963_2001_kdf_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faecf5a5bb0
+  References: ansi_x963_kdf_imp/17 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kdf_base_init/16 
+ansi_x963_kdf_imp/17 (ansi_x963_kdf_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7faecf5a5bb0
+  References: 
+  Referring: ansi_x963_2001_kdf_init/18 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_2001_kdf/14 
+kdf_base_init/16 (kdf_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faecf5a5880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_kdf_init/18 
+  Calls: memset_/30 
+nist_sp800_56a_concatenation_kdf/15 (nist_sp800_56a_concatenation_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faecf5a5660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_2001_kdf/14 (ansi_x963_2001_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faecf5a5550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_kdf_imp/17 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_kdf_core/13 (ansi_x963_kdf_core)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faecf5a5550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: nist_sp800_56a_concatenation_kdf/15 ansi_x963_2001_kdf/14 
+  Calls: ansi_x9_63_kdf_node/29 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faecf5e0110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_get_point_byte_len_from_ciphertext/27 octet_string_to_point_conversion/26 point_to_octet_string_conversion/25 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faecf5e0220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint32_clear/36 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+reverse_byte_array/35 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 octet_string_to_point_conversion/26 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: point_to_octet_string_conversion/25 point_to_octet_string_conversion/25 
+  Calls: 
+hmac_node_steps/33 (hmac_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_imp/23 
+  Calls: 
+hash_get_digest_word_len/32 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: e_hmac_init/24 
+  Calls: 
+uint8_XOR/31 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xor_enc_imp/20 
+  Calls: 
+memset_/30 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mac_base_init/22 enc_base_init/19 kdf_base_init/16 
+  Calls: 
+ansi_x9_63_kdf_node/29 (ansi_x9_63_kdf_node)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_kdf_core/13 
+  Calls: 
+ecies_ansi_x963_ctx_init/28 (ecies_ansi_x963_ctx_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ansi_x963_get_point_byte_len_from_ciphertext/27 (addr) octet_string_to_point_conversion/26 (addr) point_to_octet_string_conversion/25 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ansi_x963_get_point_byte_len_from_ciphertext/27 (ansi_x963_get_point_byte_len_from_ciphertext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: GET_BYTE_LEN/11 
+octet_string_to_point_conversion/26 (octet_string_to_point_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint32_clear/36 reverse_byte_array/35 reverse_byte_array/35 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+point_to_octet_string_conversion/25 (point_to_octet_string_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/34 memcpy_/34 GET_BYTE_LEN/11 
+e_hmac_init/24 (e_hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hmac_imp/23 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_get_digest_word_len/32 mac_base_init/22 
+hmac_imp/23 (hmac_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: e_hmac_init/24 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: hmac_node_steps/33 
+mac_base_init/22 (mac_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_hmac_init/24 
+  Calls: memset_/30 
+e_xor_enc_init/21 (e_xor_enc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: xor_enc_imp/20 (addr) xor_enc_imp/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enc_base_init/19 
+xor_enc_imp/20 (xor_enc_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: e_xor_enc_init/21 (addr) e_xor_enc_init/21 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint8_XOR/31 
+enc_base_init/19 (enc_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_xor_enc_init/21 
+  Calls: memset_/30 
+ansi_x963_2001_kdf_init/18 (ansi_x963_2001_kdf_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ansi_x963_kdf_imp/17 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kdf_base_init/16 
+ansi_x963_kdf_imp/17 (ansi_x963_kdf_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ansi_x963_2001_kdf_init/18 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_2001_kdf/14 
+kdf_base_init/16 (kdf_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_kdf_init/18 
+  Calls: memset_/30 
+nist_sp800_56a_concatenation_kdf/15 (nist_sp800_56a_concatenation_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_2001_kdf/14 (ansi_x963_2001_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_kdf_imp/17 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_kdf_core/13 (ansi_x963_kdf_core)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: nist_sp800_56a_concatenation_kdf/15 ansi_x963_2001_kdf/14 
+  Calls: ansi_x9_63_kdf_node/29 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_get_point_byte_len_from_ciphertext/27 octet_string_to_point_conversion/26 point_to_octet_string_conversion/25 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+
+
+Initial Symbol table:
+
+uint32_clear/36 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+reverse_byte_array/35 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 octet_string_to_point_conversion/26 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: point_to_octet_string_conversion/25 point_to_octet_string_conversion/25 
+  Calls: 
+hmac_node_steps/33 (hmac_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_imp/23 
+  Calls: 
+hash_get_digest_word_len/32 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: e_hmac_init/24 
+  Calls: 
+uint8_XOR/31 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xor_enc_imp/20 
+  Calls: 
+memset_/30 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mac_base_init/22 enc_base_init/19 kdf_base_init/16 
+  Calls: 
+ansi_x9_63_kdf_node/29 (ansi_x9_63_kdf_node)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_kdf_core/13 
+  Calls: 
+ecies_ansi_x963_ctx_init/28 (ecies_ansi_x963_ctx_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ansi_x963_get_point_byte_len_from_ciphertext/27 (addr) octet_string_to_point_conversion/26 (addr) point_to_octet_string_conversion/25 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ansi_x963_get_point_byte_len_from_ciphertext/27 (ansi_x963_get_point_byte_len_from_ciphertext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: GET_BYTE_LEN/11 
+octet_string_to_point_conversion/26 (octet_string_to_point_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint32_clear/36 reverse_byte_array/35 reverse_byte_array/35 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+point_to_octet_string_conversion/25 (point_to_octet_string_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/34 memcpy_/34 GET_BYTE_LEN/11 
+e_hmac_init/24 (e_hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hmac_imp/23 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_get_digest_word_len/32 mac_base_init/22 
+hmac_imp/23 (hmac_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: e_hmac_init/24 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: hmac_node_steps/33 
+mac_base_init/22 (mac_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_hmac_init/24 
+  Calls: memset_/30 
+e_xor_enc_init/21 (e_xor_enc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: xor_enc_imp/20 (addr) xor_enc_imp/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enc_base_init/19 
+xor_enc_imp/20 (xor_enc_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: e_xor_enc_init/21 (addr) e_xor_enc_init/21 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint8_XOR/31 
+enc_base_init/19 (enc_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_xor_enc_init/21 
+  Calls: memset_/30 
+ansi_x963_2001_kdf_init/18 (ansi_x963_2001_kdf_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ansi_x963_kdf_imp/17 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kdf_base_init/16 
+ansi_x963_kdf_imp/17 (ansi_x963_kdf_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ansi_x963_2001_kdf_init/18 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_2001_kdf/14 
+kdf_base_init/16 (kdf_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_kdf_init/18 
+  Calls: memset_/30 
+nist_sp800_56a_concatenation_kdf/15 (nist_sp800_56a_concatenation_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_2001_kdf/14 (ansi_x963_2001_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_kdf_imp/17 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_kdf_core/13 (ansi_x963_kdf_core)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: nist_sp800_56a_concatenation_kdf/15 ansi_x963_2001_kdf/14 
+  Calls: ansi_x9_63_kdf_node/29 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_get_point_byte_len_from_ciphertext/27 octet_string_to_point_conversion/26 point_to_octet_string_conversion/25 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint32_clear/36 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+reverse_byte_array/35 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 octet_string_to_point_conversion/26 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: point_to_octet_string_conversion/25 point_to_octet_string_conversion/25 
+  Calls: 
+hmac_node_steps/33 (hmac_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hmac_imp/23 
+  Calls: 
+hash_get_digest_word_len/32 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: e_hmac_init/24 
+  Calls: 
+uint8_XOR/31 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xor_enc_imp/20 
+  Calls: 
+memset_/30 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: mac_base_init/22 enc_base_init/19 kdf_base_init/16 
+  Calls: 
+ansi_x9_63_kdf_node/29 (ansi_x9_63_kdf_node)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_kdf_core/13 
+  Calls: 
+ecies_ansi_x963_ctx_init/28 (ecies_ansi_x963_ctx_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ansi_x963_get_point_byte_len_from_ciphertext/27 (addr) octet_string_to_point_conversion/26 (addr) point_to_octet_string_conversion/25 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ansi_x963_get_point_byte_len_from_ciphertext/27 (ansi_x963_get_point_byte_len_from_ciphertext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: GET_BYTE_LEN/11 
+octet_string_to_point_conversion/26 (octet_string_to_point_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint32_clear/36 reverse_byte_array/35 reverse_byte_array/35 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+point_to_octet_string_conversion/25 (point_to_octet_string_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/34 memcpy_/34 GET_BYTE_LEN/11 
+e_hmac_init/24 (e_hmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hmac_imp/23 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_get_digest_word_len/32 mac_base_init/22 
+hmac_imp/23 (hmac_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: e_hmac_init/24 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: hmac_node_steps/33 
+mac_base_init/22 (mac_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_hmac_init/24 
+  Calls: memset_/30 
+e_xor_enc_init/21 (e_xor_enc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: xor_enc_imp/20 (addr) xor_enc_imp/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enc_base_init/19 
+xor_enc_imp/20 (xor_enc_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: e_xor_enc_init/21 (addr) e_xor_enc_init/21 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: uint8_XOR/31 
+enc_base_init/19 (enc_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: e_xor_enc_init/21 
+  Calls: memset_/30 
+ansi_x963_2001_kdf_init/18 (ansi_x963_2001_kdf_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ansi_x963_kdf_imp/17 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kdf_base_init/16 
+ansi_x963_kdf_imp/17 (ansi_x963_kdf_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: ansi_x963_2001_kdf_init/18 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_2001_kdf/14 
+kdf_base_init/16 (kdf_base_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_kdf_init/18 
+  Calls: memset_/30 
+nist_sp800_56a_concatenation_kdf/15 (nist_sp800_56a_concatenation_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_2001_kdf/14 (ansi_x963_2001_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_kdf_imp/17 
+  Calls: ansi_x963_kdf_core/13 
+ansi_x963_kdf_core/13 (ansi_x963_kdf_core)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: nist_sp800_56a_concatenation_kdf/15 ansi_x963_2001_kdf/14 
+  Calls: ansi_x9_63_kdf_node/29 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_get_point_byte_len_from_ciphertext/27 octet_string_to_point_conversion/26 point_to_octet_string_conversion/25 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: octet_string_to_point_conversion/26 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+ansi_x963_kdf_core/43 (ansi_x963_kdf_core)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 13
+  References: 
+  Referring: 
+  Function ansi_x963_kdf_core/43 is inline copy in ansi_x963_kdf_imp/17
+  Clone of ansi_x963_kdf_core/13
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x963_kdf_imp/17 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x9_63_kdf_node/29 (1073741824 (estimated locally),1.00 per call) 
+point_to_octet_string_conversion.part.0.isra.0/42 (point_to_octet_string_conversion.part.0.isra)
+  Type: function definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: 
+  Function point_to_octet_string_conversion.part.0.isra/42 is inline copy in point_to_octet_string_conversion/25
+  Clone of point_to_octet_string_conversion.part.0/39
+  Availability: local
+  Function flags: count:594027530 (estimated locally) local split_part
+  Called by: point_to_octet_string_conversion/25 (inlined) (594027530 (estimated locally),0.55 per call) 
+  Calls: memcpy_/34 (190267017 (estimated locally),0.18 per call) memcpy_/34 (594027532 (estimated locally),0.55 per call) 
+point_to_octet_string_conversion.part.0/39 (point_to_octet_string_conversion.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:594027530 (estimated locally) body split_part
+  Called by: 
+  Calls: 
+uint32_clear/36 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+reverse_byte_array/35 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: octet_string_to_point_conversion/26 (217325344 (estimated locally),0.20 per call) octet_string_to_point_conversion/26 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: point_to_octet_string_conversion.part.0.isra.0/42 (190267017 (estimated locally),0.18 per call) point_to_octet_string_conversion.part.0.isra.0/42 (594027532 (estimated locally),0.55 per call) 
+  Calls: 
+hmac_node_steps/33 (hmac_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hmac_imp/23 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_get_digest_word_len/32 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: e_hmac_init/24 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+uint8_XOR/31 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: xor_enc_imp/20 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memset_/30 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: e_hmac_init/24 (1073741824 (estimated locally),1.00 per call) e_xor_enc_init/21 (1073741824 (estimated locally),1.00 per call) ansi_x963_2001_kdf_init/18 (1073741824 (estimated locally),1.00 per call) kdf_base_init/16 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ansi_x9_63_kdf_node/29 (ansi_x9_63_kdf_node)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x963_kdf_core/43 (1073741824 (estimated locally),1.00 per call) ansi_x963_kdf_core/13 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ecies_ansi_x963_ctx_init/28 (ecies_ansi_x963_ctx_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: ansi_x963_get_point_byte_len_from_ciphertext/27 (addr) octet_string_to_point_conversion/26 (addr) point_to_octet_string_conversion/25 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+ansi_x963_get_point_byte_len_from_ciphertext/27 (ansi_x963_get_point_byte_len_from_ciphertext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+octet_string_to_point_conversion/26 (octet_string_to_point_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: uint32_clear/36 (1073741824 (estimated locally),1.00 per call) reverse_byte_array/35 (217325344 (estimated locally),0.20 per call) reverse_byte_array/35 (1073741824 (estimated locally),1.00 per call) 
+point_to_octet_string_conversion/25 (point_to_octet_string_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ecies_ansi_x963_ctx_init/28 (addr) 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: point_to_octet_string_conversion.part.0.isra.0/42 (inlined) (594027530 (estimated locally),0.55 per call) 
+e_hmac_init/24 (e_hmac_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: hmac_imp/23 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_get_digest_word_len/32 (1073741824 (estimated locally),1.00 per call) memset_/30 (1073741824 (estimated locally),1.00 per call) 
+hmac_imp/23 (hmac_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: e_hmac_init/24 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hmac_node_steps/33 (1073741824 (estimated locally),1.00 per call) 
+e_xor_enc_init/21 (e_xor_enc_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: xor_enc_imp/20 (addr) xor_enc_imp/20 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/30 (1073741824 (estimated locally),1.00 per call) 
+xor_enc_imp/20 (xor_enc_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: e_xor_enc_init/21 (addr) e_xor_enc_init/21 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: uint8_XOR/31 (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_2001_kdf_init/18 (ansi_x963_2001_kdf_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: ansi_x963_kdf_imp/17 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/30 (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_kdf_imp/17 (ansi_x963_kdf_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ansi_x963_2001_kdf_init/18 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ansi_x963_kdf_core/43 (inlined) (1073741824 (estimated locally),1.00 per call) 
+kdf_base_init/16 (kdf_base_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/30 (1073741824 (estimated locally),1.00 per call) 
+nist_sp800_56a_concatenation_kdf/15 (nist_sp800_56a_concatenation_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.nist_sp800_56a_concatenation_kdf (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged
+  Called by: 
+  Calls: ansi_x963_2001_kdf/14 (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_2001_kdf/14 (ansi_x963_2001_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged
+  Called by: nist_sp800_56a_concatenation_kdf/15 (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x963_kdf_core/13 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_kdf_core/13 (ansi_x963_kdf_core)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 43
+  References: 
+  Referring: 
+  Function ansi_x963_kdf_core/13 is inline copy in ansi_x963_2001_kdf/14
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x963_2001_kdf/14 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x9_63_kdf_node/29 (1073741824 (estimated locally),1.00 per call) 
+cloning point_to_octet_string_conversion.part.0/39 to point_to_octet_string_conversion.part.0.isra/42
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 0, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7faecf51d540 uint32_t>, alias type:  <pointer_type 0x7faecf87a1f8> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             5. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+uint32_t point_to_octet_string_conversion.part.0 (const struct eccp_curve_st * curve, const uint8_t * x, const uint8_t * y, EC_POINT_FORM point_form, uint8_t * result, uint32_t * r_bytes)
+{
+  uint32_t pByteLen;
+  uint32_t ret;
+  uint32_t D.3916;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  uint8_t * _6;
+  long unsigned int _9;
+  uint8_t * _10;
+  long unsigned int _12;
+  long unsigned int _13;
+
+  <bb 5> [local count: 594027530]:
+
+  <bb 2> [local count: 594027532]:
+  # DEBUG BEGIN_STMT
+  _2 = curve_1(D)->eccp_p_bitLen;
+  # DEBUG bit_len => _2
+  # DEBUG BEGIN_STMT
+  _3 = _2 + 7;
+  _4 = _3 >> 3;
+  # DEBUG bit_len => NULL
+  # DEBUG pByteLen => _4
+  # DEBUG BEGIN_STMT
+  _6 = result_5(D) + 1;
+  memcpy_ (_6, x_7(D), _4);
+  # DEBUG BEGIN_STMT
+  if (point_form_8(D) == 4)
+    goto <bb 3>; [32.03%]
+  else
+    goto <bb 4>; [67.97%]
+
+  <bb 3> [local count: 190267017]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *result_5(D) = 4;
+  # DEBUG BEGIN_STMT
+  _9 = _4 + 1;
+  _10 = result_5(D) + _9;
+  memcpy_ (_10, y_11(D), _4);
+  # DEBUG BEGIN_STMT
+  _12 = _4 << 1;
+  _13 = _12 + 1;
+  *r_bytes_14(D) = _13;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 594027534]:
+  # ret_15 = PHI <1802(2), 0(3)>
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+  return ret_15;
+
+}
+
+
+uint32_t point_to_octet_string_conversion.part.0.isra (const uint32_t ISRA.31, const uint8_t * x, const uint8_t * y, EC_POINT_FORM point_form, uint8_t * result, uint32_t * r_bytes)
+{
+  uint32_t D.3979;
+  uint32_t ret;
+  uint32_t pByteLen;
+  const struct eccp_curve_st * curve;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  uint8_t * _5;
+  long unsigned int _8;
+  uint8_t * _9;
+  long unsigned int _11;
+  long unsigned int _12;
+
+  <bb 6> [local count: 594027530]:
+  # DEBUG D#6 s=> curve
+  # DEBUG curve => D#6
+
+  <bb 2> [local count: 594027530]:
+
+  <bb 3> [local count: 594027532]:
+  # DEBUG BEGIN_STMT
+  _1 = ISRA.31_16(D);
+  # DEBUG bit_len => _1
+  # DEBUG BEGIN_STMT
+  _2 = _1 + 7;
+  _3 = _2 >> 3;
+  # DEBUG bit_len => NULL
+  # DEBUG pByteLen => _3
+  # DEBUG BEGIN_STMT
+  _5 = result_4(D) + 1;
+  memcpy_ (_5, x_6(D), _3);
+  # DEBUG BEGIN_STMT
+  if (point_form_7(D) == 4)
+    goto <bb 4>; [32.03%]
+  else
+    goto <bb 5>; [67.97%]
+
+  <bb 4> [local count: 190267017]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *result_4(D) = 4;
+  # DEBUG BEGIN_STMT
+  _8 = _3 + 1;
+  _9 = result_4(D) + _8;
+  memcpy_ (_9, y_10(D), _3);
+  # DEBUG BEGIN_STMT
+  _11 = _3 << 1;
+  _12 = _11 + 1;
+  *r_bytes_13(D) = _12;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+
+  <bb 5> [local count: 594027534]:
+  # ret_14 = PHI <1802(3), 0(4)>
+  # DEBUG ret => ret_14
+  # DEBUG BEGIN_STMT
+  return ret_14;
+
+}
+
+
+updating call of point_to_octet_string_conversion/25 -> point_to_octet_string_conversion.part.0.isra/42: ret_1 = point_to_octet_string_conversion.part.0 (curve_3(D), x_8(D), y_10(D), point_form_9(D), result_7(D), r_bytes_4(D));
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 0, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7faecf51d540 uint32_t>, alias type:  <pointer_type 0x7faecf87a1f8> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             5. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_1 = point_to_octet_string_conversion.part.0.isra (_12, x_8(D), y_10(D), point_form_9(D), result_7(D), r_bytes_4(D));
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+point_to_octet_string_conversion.part.0/39 (point_to_octet_string_conversion.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:594027530 (estimated locally) split_part
+  Called by: 
+  Calls: 
+uint32_clear/36 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+reverse_byte_array/35 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_node_steps/33 (hmac_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/32 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint8_XOR/31 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/30 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_node/29 (ansi_x9_63_kdf_node)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ecies_ansi_x963_ctx_init/28 (ecies_ansi_x963_ctx_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ecies_ansi_x963_ctx_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+ansi_x963_get_point_byte_len_from_ciphertext/27 (ansi_x963_get_point_byte_len_from_ciphertext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ansi_x963_get_point_byte_len_from_ciphertext (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+octet_string_to_point_conversion/26 (octet_string_to_point_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.octet_string_to_point_conversion (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+point_to_octet_string_conversion/25 (point_to_octet_string_conversion)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.point_to_octet_string_conversion (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+e_hmac_init/24 (e_hmac_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.e_hmac_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hmac_imp/23 (hmac_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hmac_imp (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+e_xor_enc_init/21 (e_xor_enc_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.e_xor_enc_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+xor_enc_imp/20 (xor_enc_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.xor_enc_imp (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ansi_x963_2001_kdf_init/18 (ansi_x963_2001_kdf_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x963_2001_kdf_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ansi_x963_kdf_imp/17 (ansi_x963_kdf_imp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ansi_x963_kdf_imp (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+kdf_base_init/16 (kdf_base_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kdf_base_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+nist_sp800_56a_concatenation_kdf/15 (nist_sp800_56a_concatenation_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.nist_sp800_56a_concatenation_kdf (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged
+  Called by: 
+  Calls: 
+ansi_x963_2001_kdf/14 (ansi_x963_2001_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x963_2001_kdf (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged
+  Called by: 
+  Calls: 

@@ -1,0 +1,836 @@
+Trivially needed symbols: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19
+
+
+Initial Symbol table:
+
+cpu_enable_int/26 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+cpu_register_int/25 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+expt_det_add_error/24 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_enable_hw_int/22 emu_init/20 emu_exception_handler/19 
+  Calls: 
+emu_unlock_err_trig/23 (emu_unlock_err_trig)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_err_trig_lock_reg_base/15 
+emu_enable_hw_int/22 (emu_enable_hw_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f973ad6edd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_trigger_fw_error/21 (emu_trigger_fw_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f973ad6ecc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_status_reg_base/14 
+emu_init/20 (emu_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f973ad6ebb0
+  References: emu_int_handler/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/26 cpu_register_int/25 sysreg_lock_reg/11 expt_det_add_error/24 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_exception_handler/19 (emu_exception_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f973ad6eaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 expt_det_add_error/24 sysreg_lock_reg/11 emu_get_status_reg_base/14 sysreg_unlock_reg/10 get_mcause_value/17 
+emu_int_handler/18 (emu_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7f973ad6e220
+  References: 
+  Referring: emu_init/20 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 
+get_mcause_value/17 (get_mcause_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6e000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_exception_handler/19 
+  Calls: 
+enter_hold_status/16 (enter_hold_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6eaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_int_handler/18 emu_exception_handler/19 
+  Calls: 
+emu_get_err_trig_lock_reg_base/15 (emu_get_err_trig_lock_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 
+  Calls: 
+emu_get_status_reg_base/14 (emu_get_status_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6e110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_trigger_fw_error/21 emu_exception_handler/19 
+  Calls: 
+emu_get_int_reg_base/13 (emu_get_int_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6ebb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+emu_get_int_en_reg_base/12 (emu_get_int_en_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6e330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6e660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f973ad6e440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+sysreg_config_sm_en/9 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/8 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/7 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/6 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: sysreg_config_sm_en/9 sysreg_umask_sm_lock/8 sysreg_enable_sm_lock/7 sysreg_enable_fun_lock/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+cpu_enable_int/26 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+cpu_register_int/25 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+expt_det_add_error/24 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_enable_hw_int/22 emu_init/20 emu_exception_handler/19 
+  Calls: 
+emu_unlock_err_trig/23 (emu_unlock_err_trig)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_err_trig_lock_reg_base/15 
+emu_enable_hw_int/22 (emu_enable_hw_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_trigger_fw_error/21 (emu_trigger_fw_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_status_reg_base/14 
+emu_init/20 (emu_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: emu_int_handler/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/26 cpu_register_int/25 sysreg_lock_reg/11 expt_det_add_error/24 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_exception_handler/19 (emu_exception_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 expt_det_add_error/24 sysreg_lock_reg/11 emu_get_status_reg_base/14 sysreg_unlock_reg/10 get_mcause_value/17 
+emu_int_handler/18 (emu_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: emu_init/20 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 
+get_mcause_value/17 (get_mcause_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_exception_handler/19 
+  Calls: 
+enter_hold_status/16 (enter_hold_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_int_handler/18 emu_exception_handler/19 
+  Calls: 
+emu_get_err_trig_lock_reg_base/15 (emu_get_err_trig_lock_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 
+  Calls: 
+emu_get_status_reg_base/14 (emu_get_status_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_trigger_fw_error/21 emu_exception_handler/19 
+  Calls: 
+emu_get_int_reg_base/13 (emu_get_int_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+emu_get_int_en_reg_base/12 (emu_get_int_en_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+
+
+Initial Symbol table:
+
+cpu_enable_int/26 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+cpu_register_int/25 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+expt_det_add_error/24 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_enable_hw_int/22 emu_init/20 emu_exception_handler/19 
+  Calls: 
+emu_unlock_err_trig/23 (emu_unlock_err_trig)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_err_trig_lock_reg_base/15 
+emu_enable_hw_int/22 (emu_enable_hw_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_trigger_fw_error/21 (emu_trigger_fw_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_status_reg_base/14 
+emu_init/20 (emu_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: emu_int_handler/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/26 cpu_register_int/25 sysreg_lock_reg/11 expt_det_add_error/24 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_exception_handler/19 (emu_exception_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 expt_det_add_error/24 sysreg_lock_reg/11 emu_get_status_reg_base/14 sysreg_unlock_reg/10 get_mcause_value/17 
+emu_int_handler/18 (emu_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: emu_init/20 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 
+get_mcause_value/17 (get_mcause_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_exception_handler/19 
+  Calls: 
+enter_hold_status/16 (enter_hold_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_int_handler/18 emu_exception_handler/19 
+  Calls: 
+emu_get_err_trig_lock_reg_base/15 (emu_get_err_trig_lock_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 
+  Calls: 
+emu_get_status_reg_base/14 (emu_get_status_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_trigger_fw_error/21 emu_exception_handler/19 
+  Calls: 
+emu_get_int_reg_base/13 (emu_get_int_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+emu_get_int_en_reg_base/12 (emu_get_int_en_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpu_enable_int/26 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+cpu_register_int/25 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_init/20 
+  Calls: 
+expt_det_add_error/24 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_enable_hw_int/22 emu_init/20 emu_exception_handler/19 
+  Calls: 
+emu_unlock_err_trig/23 (emu_unlock_err_trig)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_err_trig_lock_reg_base/15 
+emu_enable_hw_int/22 (emu_enable_hw_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/24 expt_det_add_error/24 sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_trigger_fw_error/21 (emu_trigger_fw_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_lock_reg/11 sysreg_unlock_reg/10 emu_get_status_reg_base/14 
+emu_init/20 (emu_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: emu_int_handler/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_int/26 cpu_register_int/25 sysreg_lock_reg/11 expt_det_add_error/24 sysreg_unlock_reg/10 emu_get_int_reg_base/13 emu_get_int_en_reg_base/12 
+emu_exception_handler/19 (emu_exception_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 expt_det_add_error/24 sysreg_lock_reg/11 emu_get_status_reg_base/14 sysreg_unlock_reg/10 get_mcause_value/17 
+emu_int_handler/18 (emu_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: emu_init/20 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: enter_hold_status/16 
+get_mcause_value/17 (get_mcause_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_exception_handler/19 
+  Calls: 
+enter_hold_status/16 (enter_hold_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_int_handler/18 emu_exception_handler/19 
+  Calls: 
+emu_get_err_trig_lock_reg_base/15 (emu_get_err_trig_lock_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 
+  Calls: 
+emu_get_status_reg_base/14 (emu_get_status_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_trigger_fw_error/21 emu_exception_handler/19 
+  Calls: 
+emu_get_int_reg_base/13 (emu_get_int_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+emu_get_int_en_reg_base/12 (emu_get_int_en_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_enable_hw_int/22 emu_init/20 
+  Calls: 
+sysreg_lock_reg/11 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+sysreg_unlock_reg/10 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: emu_unlock_err_trig/23 emu_enable_hw_int/22 emu_trigger_fw_error/21 emu_init/20 emu_exception_handler/19 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cpu_enable_int/26 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: emu_init/20 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpu_register_int/25 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: emu_init/20 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+expt_det_add_error/24 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: emu_unlock_err_trig/23 (524845000 (estimated locally),0.49 per call) emu_enable_hw_int/22 (491907972 (estimated locally),0.46 per call) emu_enable_hw_int/22 (526083991 (estimated locally),0.49 per call) emu_init/20 (1027085590 (estimated locally),0.96 per call) emu_exception_handler/19 (5196486 (estimated locally),0.49 per call) 
+  Calls: 
+emu_unlock_err_trig/23 (emu_unlock_err_trig)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/24 (524845000 (estimated locally),0.49 per call) 
+emu_enable_hw_int/22 (emu_enable_hw_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/24 (491907972 (estimated locally),0.46 per call) expt_det_add_error/24 (526083991 (estimated locally),0.49 per call) 
+emu_trigger_fw_error/21 (emu_trigger_fw_error)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+emu_init/20 (emu_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: emu_int_handler/18 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally) body
+  Called by: 
+  Calls: cpu_enable_int/26 (217325344 (estimated locally),0.20 per call) cpu_register_int/25 (1073741822 (estimated locally),1.00 per call) expt_det_add_error/24 (1027085590 (estimated locally),0.96 per call) 
+emu_exception_handler/19 (emu_exception_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) body executed_once
+  Called by: 
+  Calls: expt_det_add_error/24 (5196486 (estimated locally),0.49 per call) 
+emu_int_handler/18 (emu_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: emu_init/20 (addr) 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) body executed_once
+  Called by: 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+cpu_enable_int/26 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_register_int/25 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_add_error/24 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+emu_unlock_err_trig/23 (emu_unlock_err_trig)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.emu_unlock_err_trig (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+emu_enable_hw_int/22 (emu_enable_hw_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.emu_enable_hw_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+emu_trigger_fw_error/21 (emu_trigger_fw_error)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.emu_trigger_fw_error (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+emu_init/20 (emu_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.emu_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally)
+  Called by: 
+  Calls: 
+emu_exception_handler/19 (emu_exception_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.emu_exception_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) executed_once
+  Called by: 
+  Calls: 
+emu_int_handler/18 (emu_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.emu_int_handler (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) executed_once
+  Called by: 
+  Calls: 

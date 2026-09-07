@@ -1,0 +1,1851 @@
+Trivially needed symbols: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20
+
+
+Initial Symbol table:
+
+memcmp_/33 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt_C2_C3/15 
+  Calls: 
+eccp_pointMul/32 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_check_point/31 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_getkey/30 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+eccp_get_pubkey_from_prikey/29 (eccp_get_pubkey_from_prikey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+uint32_integer_check/28 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+reverse_byte_array/27 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+check_hash_alg/26 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_common_param_check/17 ansi_x963_2001_ecies_common_param_check/17 
+  Calls: 
+e_hmac_init/25 (e_hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+e_xor_enc_init/24 (e_xor_enc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_kdf_init/23 (ansi_x963_2001_kdf_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ecies_ansi_x963_ctx_init/22 (ecies_ansi_x963_ctx_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_ecies_decrypt/21 (ansi_x963_2001_ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_decrypt/16 ansi_x963_2001_kdf_init/23 e_xor_enc_init/24 e_hmac_init/25 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_decrypt_param_check/19 
+   Indirect callnum speculative call targets: 0
+ansi_x963_2001_ecies_encrypt/20 (ansi_x963_2001_ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9008232bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_encrypt/14 e_hmac_init/25 e_xor_enc_init/24 ansi_x963_2001_kdf_init/23 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_encrypt_param_check/18 
+ansi_x963_2001_ecies_decrypt_param_check/19 (ansi_x963_2001_ecies_decrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_encrypt_param_check/18 (ansi_x963_2001_ecies_encrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_common_param_check/17 (ansi_x963_2001_ecies_common_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt_param_check/19 ansi_x963_2001_ecies_encrypt_param_check/18 
+  Calls: check_hash_alg/26 check_hash_alg/26 
+ecies_decrypt/16 (ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ecies_decrypt_C2_C3/15 reverse_byte_array/27 eccp_pointMul/32 uint32_integer_check/28 reverse_byte_array/27 eccp_check_point/31 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_decrypt_C2_C3/15 (ecies_decrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 
+  Calls: memcmp_/33 GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+ecies_encrypt/14 (ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ecies_encrypt_C2_C3/13 reverse_byte_array/27 eccp_pointMul/32 eccp_check_point/31 reverse_byte_array/27 reverse_byte_array/27 reverse_byte_array/27 eccp_getkey/30 eccp_get_pubkey_from_prikey/29 uint32_integer_check/28 reverse_byte_array/27 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_encrypt_C2_C3/13 (ecies_encrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_encrypt/14 
+  Calls: GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt_C2_C3/15 ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt_C2_C3/13 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9008232110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memcmp_/33 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt_C2_C3/15 
+  Calls: 
+eccp_pointMul/32 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_check_point/31 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_getkey/30 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+eccp_get_pubkey_from_prikey/29 (eccp_get_pubkey_from_prikey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+uint32_integer_check/28 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+reverse_byte_array/27 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+check_hash_alg/26 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_common_param_check/17 ansi_x963_2001_ecies_common_param_check/17 
+  Calls: 
+e_hmac_init/25 (e_hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+e_xor_enc_init/24 (e_xor_enc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_kdf_init/23 (ansi_x963_2001_kdf_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ecies_ansi_x963_ctx_init/22 (ecies_ansi_x963_ctx_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_ecies_decrypt/21 (ansi_x963_2001_ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_decrypt/16 ansi_x963_2001_kdf_init/23 e_xor_enc_init/24 e_hmac_init/25 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_decrypt_param_check/19 
+   Indirect callnum speculative call targets: 0
+ansi_x963_2001_ecies_encrypt/20 (ansi_x963_2001_ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_encrypt/14 e_hmac_init/25 e_xor_enc_init/24 ansi_x963_2001_kdf_init/23 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_encrypt_param_check/18 
+ansi_x963_2001_ecies_decrypt_param_check/19 (ansi_x963_2001_ecies_decrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_encrypt_param_check/18 (ansi_x963_2001_ecies_encrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_common_param_check/17 (ansi_x963_2001_ecies_common_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt_param_check/19 ansi_x963_2001_ecies_encrypt_param_check/18 
+  Calls: check_hash_alg/26 check_hash_alg/26 
+ecies_decrypt/16 (ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ecies_decrypt_C2_C3/15 reverse_byte_array/27 eccp_pointMul/32 uint32_integer_check/28 reverse_byte_array/27 eccp_check_point/31 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_decrypt_C2_C3/15 (ecies_decrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 
+  Calls: memcmp_/33 GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+ecies_encrypt/14 (ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ecies_encrypt_C2_C3/13 reverse_byte_array/27 eccp_pointMul/32 eccp_check_point/31 reverse_byte_array/27 reverse_byte_array/27 reverse_byte_array/27 eccp_getkey/30 eccp_get_pubkey_from_prikey/29 uint32_integer_check/28 reverse_byte_array/27 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_encrypt_C2_C3/13 (ecies_encrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_encrypt/14 
+  Calls: GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt_C2_C3/15 ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt_C2_C3/13 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+
+
+Initial Symbol table:
+
+memcmp_/33 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt_C2_C3/15 
+  Calls: 
+eccp_pointMul/32 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_check_point/31 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_getkey/30 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+eccp_get_pubkey_from_prikey/29 (eccp_get_pubkey_from_prikey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+uint32_integer_check/28 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+reverse_byte_array/27 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+check_hash_alg/26 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_common_param_check/17 ansi_x963_2001_ecies_common_param_check/17 
+  Calls: 
+e_hmac_init/25 (e_hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+e_xor_enc_init/24 (e_xor_enc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_kdf_init/23 (ansi_x963_2001_kdf_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ecies_ansi_x963_ctx_init/22 (ecies_ansi_x963_ctx_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_ecies_decrypt/21 (ansi_x963_2001_ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_decrypt/16 ansi_x963_2001_kdf_init/23 e_xor_enc_init/24 e_hmac_init/25 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_decrypt_param_check/19 
+   Indirect callnum speculative call targets: 0
+ansi_x963_2001_ecies_encrypt/20 (ansi_x963_2001_ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_encrypt/14 e_hmac_init/25 e_xor_enc_init/24 ansi_x963_2001_kdf_init/23 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_encrypt_param_check/18 
+ansi_x963_2001_ecies_decrypt_param_check/19 (ansi_x963_2001_ecies_decrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_encrypt_param_check/18 (ansi_x963_2001_ecies_encrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_common_param_check/17 (ansi_x963_2001_ecies_common_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt_param_check/19 ansi_x963_2001_ecies_encrypt_param_check/18 
+  Calls: check_hash_alg/26 check_hash_alg/26 
+ecies_decrypt/16 (ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ecies_decrypt_C2_C3/15 reverse_byte_array/27 eccp_pointMul/32 uint32_integer_check/28 reverse_byte_array/27 eccp_check_point/31 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_decrypt_C2_C3/15 (ecies_decrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 
+  Calls: memcmp_/33 GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+ecies_encrypt/14 (ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ecies_encrypt_C2_C3/13 reverse_byte_array/27 eccp_pointMul/32 eccp_check_point/31 reverse_byte_array/27 reverse_byte_array/27 reverse_byte_array/27 eccp_getkey/30 eccp_get_pubkey_from_prikey/29 uint32_integer_check/28 reverse_byte_array/27 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_encrypt_C2_C3/13 (ecies_encrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_encrypt/14 
+  Calls: GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt_C2_C3/15 ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt_C2_C3/13 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memcmp_/33 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt_C2_C3/15 
+  Calls: 
+eccp_pointMul/32 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_check_point/31 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+eccp_getkey/30 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+eccp_get_pubkey_from_prikey/29 (eccp_get_pubkey_from_prikey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_encrypt/14 
+  Calls: 
+uint32_integer_check/28 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_encrypt/14 
+  Calls: 
+reverse_byte_array/27 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+check_hash_alg/26 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_common_param_check/17 ansi_x963_2001_ecies_common_param_check/17 
+  Calls: 
+e_hmac_init/25 (e_hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+e_xor_enc_init/24 (e_xor_enc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_kdf_init/23 (ansi_x963_2001_kdf_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ecies_ansi_x963_ctx_init/22 (ecies_ansi_x963_ctx_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 ansi_x963_2001_ecies_encrypt/20 
+  Calls: 
+ansi_x963_2001_ecies_decrypt/21 (ansi_x963_2001_ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_decrypt/16 ansi_x963_2001_kdf_init/23 e_xor_enc_init/24 e_hmac_init/25 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_decrypt_param_check/19 
+   Indirect callnum speculative call targets: 0
+ansi_x963_2001_ecies_encrypt/20 (ansi_x963_2001_ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ecies_encrypt/14 e_hmac_init/25 e_xor_enc_init/24 ansi_x963_2001_kdf_init/23 ecies_ansi_x963_ctx_init/22 ansi_x963_2001_ecies_encrypt_param_check/18 
+ansi_x963_2001_ecies_decrypt_param_check/19 (ansi_x963_2001_ecies_decrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_encrypt_param_check/18 (ansi_x963_2001_ecies_encrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 
+ansi_x963_2001_ecies_common_param_check/17 (ansi_x963_2001_ecies_common_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt_param_check/19 ansi_x963_2001_ecies_encrypt_param_check/18 
+  Calls: check_hash_alg/26 check_hash_alg/26 
+ecies_decrypt/16 (ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_decrypt/21 
+  Calls: ecies_decrypt_C2_C3/15 reverse_byte_array/27 eccp_pointMul/32 uint32_integer_check/28 reverse_byte_array/27 eccp_check_point/31 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_decrypt_C2_C3/15 (ecies_decrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 
+  Calls: memcmp_/33 GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+ecies_encrypt/14 (ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x963_2001_ecies_encrypt/20 
+  Calls: ecies_encrypt_C2_C3/13 reverse_byte_array/27 eccp_pointMul/32 eccp_check_point/31 reverse_byte_array/27 reverse_byte_array/27 reverse_byte_array/27 eccp_getkey/30 eccp_get_pubkey_from_prikey/29 uint32_integer_check/28 reverse_byte_array/27 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_BYTE_LEN/11 GET_WORD_LEN/10 
+   Indirect callnum speculative call targets: 0
+ecies_encrypt_C2_C3/13 (ecies_encrypt_C2_C3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_encrypt/14 
+  Calls: GET_BYTE_LEN/11 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt_C2_C3/15 ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt_C2_C3/13 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecies_decrypt/16 ecies_decrypt/16 ecies_encrypt/14 ecies_encrypt/14 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+ansi_x963_2001_ecies_common_param_check/44 (ansi_x963_2001_ecies_common_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 17
+  References: 
+  Referring: 
+  Function ansi_x963_2001_ecies_common_param_check/44 is inline copy in ansi_x963_2001_ecies_decrypt/21
+  Clone of ansi_x963_2001_ecies_common_param_check/17
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x963_2001_ecies_decrypt_param_check/19 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: check_hash_alg/26 (653652554 (estimated locally),0.61 per call) check_hash_alg/26 (312249827 (estimated locally),0.29 per call) 
+ecies_encrypt_C2_C3.isra.0/43 (ecies_encrypt_C2_C3.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function ecies_encrypt_C2_C3.isra/43 is inline copy in ansi_x963_2001_ecies_encrypt/20
+  Clone of ecies_encrypt_C2_C3/13
+  Availability: local
+  Function flags: count:354334800 (estimated locally) local
+  Called by: ecies_encrypt/14 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+   Indirect call(354334800 (estimated locally),0.33 per call) num speculative call targets: 0
+   Indirect call(177167400 (estimated locally),0.16 per call) num speculative call targets: 0
+   Indirect call(88583700 (estimated locally),0.08 per call) num speculative call targets: 0
+ecies_decrypt_C2_C3.isra.0/42 (ecies_decrypt_C2_C3.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function ecies_decrypt_C2_C3.isra/42 is inline copy in ansi_x963_2001_ecies_decrypt/21
+  Clone of ecies_decrypt_C2_C3/15
+  Availability: local
+  Function flags: count:7178747 (estimated locally) local
+  Called by: ecies_decrypt/16 (inlined) (7178747 (estimated locally),0.01 per call) 
+  Calls: memcmp_/33 (1184493 (estimated locally),0.00 per call) 
+   Indirect call(7178747 (estimated locally),0.01 per call) num speculative call targets: 0
+   Indirect call(3589373 (estimated locally),0.00 per call) num speculative call targets: 0
+   Indirect call(769921 (estimated locally),0.00 per call) num speculative call targets: 0
+memcmp_/33 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_decrypt_C2_C3.isra.0/42 (1184493 (estimated locally),0.00 per call) 
+  Calls: 
+eccp_pointMul/32 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_decrypt/16 (21753778 (estimated locally),0.02 per call) ecies_encrypt/14 (14122864 (estimated locally),0.01 per call) 
+  Calls: 
+eccp_check_point/31 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_decrypt/16 (27928846 (estimated locally),0.03 per call) ecies_encrypt/14 (42796557 (estimated locally),0.04 per call) 
+  Calls: 
+eccp_getkey/30 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_encrypt/14 (106300439 (estimated locally),0.10 per call) 
+  Calls: 
+eccp_get_pubkey_from_prikey/29 (eccp_get_pubkey_from_prikey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_encrypt/14 (81851339 (estimated locally),0.08 per call) 
+  Calls: 
+uint32_integer_check/28 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_decrypt/16 (9216519 (estimated locally),0.01 per call) ecies_encrypt/14 (248034361 (estimated locally),0.23 per call) 
+  Calls: 
+reverse_byte_array/27 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecies_decrypt/16 (7178747 (estimated locally),0.01 per call) ecies_decrypt/16 (9216519 (estimated locally),0.01 per call) ecies_encrypt/14 (14122864 (estimated locally),0.01 per call) ecies_encrypt/14 (42796557 (estimated locally),0.04 per call) ecies_encrypt/14 (42796557 (estimated locally),0.04 per call) ecies_encrypt/14 (35079145 (estimated locally),0.03 per call) ecies_encrypt/14 (248034361 (estimated locally),0.23 per call) 
+  Calls: 
+check_hash_alg/26 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x963_2001_ecies_common_param_check/44 (653652554 (estimated locally),0.61 per call) ansi_x963_2001_ecies_common_param_check/44 (312249827 (estimated locally),0.29 per call) ansi_x963_2001_ecies_common_param_check/17 (312249827 (estimated locally),0.29 per call) ansi_x963_2001_ecies_common_param_check/17 (653652554 (estimated locally),0.61 per call) 
+  Calls: 
+e_hmac_init/25 (e_hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 (354334800 (estimated locally),0.33 per call) ansi_x963_2001_ecies_encrypt/20 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+e_xor_enc_init/24 (e_xor_enc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 (84632867 (estimated locally),0.08 per call) ansi_x963_2001_ecies_encrypt/20 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+ansi_x963_2001_kdf_init/23 (ansi_x963_2001_kdf_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 (84632867 (estimated locally),0.08 per call) ansi_x963_2001_ecies_encrypt/20 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+ecies_ansi_x963_ctx_init/22 (ecies_ansi_x963_ctx_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x963_2001_ecies_decrypt/21 (354334800 (estimated locally),0.33 per call) ansi_x963_2001_ecies_encrypt/20 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+ansi_x963_2001_ecies_decrypt/21 (ansi_x963_2001_ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ecies_decrypt/16 (inlined) (84632867 (estimated locally),0.08 per call) ansi_x963_2001_kdf_init/23 (84632867 (estimated locally),0.08 per call) e_xor_enc_init/24 (84632867 (estimated locally),0.08 per call) e_hmac_init/25 (354334800 (estimated locally),0.33 per call) ecies_ansi_x963_ctx_init/22 (354334800 (estimated locally),0.33 per call) ansi_x963_2001_ecies_decrypt_param_check/19 (inlined) (1073741824 (estimated locally),1.00 per call) 
+   Indirect call(354334800 (estimated locally),0.33 per call) num speculative call targets: 0
+ansi_x963_2001_ecies_encrypt/20 (ansi_x963_2001_ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ecies_encrypt/14 (inlined) (354334800 (estimated locally),0.33 per call) e_hmac_init/25 (354334800 (estimated locally),0.33 per call) e_xor_enc_init/24 (354334800 (estimated locally),0.33 per call) ansi_x963_2001_kdf_init/23 (354334800 (estimated locally),0.33 per call) ecies_ansi_x963_ctx_init/22 (354334800 (estimated locally),0.33 per call) ansi_x963_2001_ecies_encrypt_param_check/18 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_2001_ecies_decrypt_param_check/19 (ansi_x963_2001_ecies_decrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ansi_x963_2001_ecies_decrypt_param_check/19 is inline copy in ansi_x963_2001_ecies_decrypt/21
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x963_2001_ecies_decrypt/21 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x963_2001_ecies_common_param_check/44 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_2001_ecies_encrypt_param_check/18 (ansi_x963_2001_ecies_encrypt_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ansi_x963_2001_ecies_encrypt_param_check/18 is inline copy in ansi_x963_2001_ecies_encrypt/20
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x963_2001_ecies_encrypt/20 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x963_2001_ecies_common_param_check/17 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ansi_x963_2001_ecies_common_param_check/17 (ansi_x963_2001_ecies_common_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 44
+  References: 
+  Referring: 
+  Function ansi_x963_2001_ecies_common_param_check/17 is inline copy in ansi_x963_2001_ecies_encrypt/20
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x963_2001_ecies_encrypt_param_check/18 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: check_hash_alg/26 (312249827 (estimated locally),0.29 per call) check_hash_alg/26 (653652554 (estimated locally),0.61 per call) 
+ecies_decrypt/16 (ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecies_decrypt/16 is inline copy in ansi_x963_2001_ecies_decrypt/21
+  Availability: local
+  Function flags: count:84632867 (estimated locally) body local
+  Called by: ansi_x963_2001_ecies_decrypt/21 (inlined) (84632867 (estimated locally),0.08 per call) 
+  Calls: ecies_decrypt_C2_C3.isra.0/42 (inlined) (7178747 (estimated locally),0.01 per call) reverse_byte_array/27 (7178747 (estimated locally),0.01 per call) eccp_pointMul/32 (21753778 (estimated locally),0.02 per call) uint32_integer_check/28 (9216519 (estimated locally),0.01 per call) reverse_byte_array/27 (9216519 (estimated locally),0.01 per call) eccp_check_point/31 (27928846 (estimated locally),0.03 per call) 
+   Indirect call(84632867 (estimated locally),0.08 per call) num speculative call targets: 0
+ecies_decrypt_C2_C3/15 (ecies_decrypt_C2_C3)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+ecies_encrypt/14 (ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecies_encrypt/14 is inline copy in ansi_x963_2001_ecies_encrypt/20
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local
+  Called by: ansi_x963_2001_ecies_encrypt/20 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: ecies_encrypt_C2_C3.isra.0/43 (inlined) (354334800 (estimated locally),0.33 per call) reverse_byte_array/27 (14122864 (estimated locally),0.01 per call) eccp_pointMul/32 (14122864 (estimated locally),0.01 per call) eccp_check_point/31 (42796557 (estimated locally),0.04 per call) reverse_byte_array/27 (42796557 (estimated locally),0.04 per call) reverse_byte_array/27 (42796557 (estimated locally),0.04 per call) reverse_byte_array/27 (35079145 (estimated locally),0.03 per call) eccp_getkey/30 (106300439 (estimated locally),0.10 per call) eccp_get_pubkey_from_prikey/29 (81851339 (estimated locally),0.08 per call) uint32_integer_check/28 (248034361 (estimated locally),0.23 per call) reverse_byte_array/27 (248034361 (estimated locally),0.23 per call) 
+   Indirect call(58465242 (estimated locally),0.05 per call) num speculative call targets: 0
+ecies_encrypt_C2_C3/13 (ecies_encrypt_C2_C3)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cloning ecies_encrypt_C2_C3/13 to ecies_encrypt_C2_C3.isra/43
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 0, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7f90081aa540 uint32_t>, alias type:  <pointer_type 0x7f90085071f8> prefix: ISRA
+                             1. IPA_PARAM_OP_SPLIT , offset: 4, base_index: 1, prev_clone_index: 1, type:  <enumeral_type 0x7f9008241a80 ecies_enc_mac_key_order_e>, alias type:  <pointer_type 0x7f9008266b28> prefix: ISRA
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             5. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             6. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+uint32_t ecies_encrypt_C2_C3 (const struct eccp_curve_st * curve, const struct ECIES_STD * ecies_ctx, struct E_KDF_BASE * kdf_ctx, struct E_MAC_BASE * mac_ctx, struct E_ENC_BASE * enc_ctx, uint8_t * Qx, uint8_t * cipher_C2_C3)
+{
+  uint32_t ret;
+  <unnamed type> _1;
+  long unsigned int _2;
+  <unnamed type> _3;
+  uint8_t * _4;
+  long unsigned int _5;
+  uint8_t * _6;
+  long unsigned int _7;
+  uint8_t * _8;
+  long unsigned int _9;
+  uint8_t * _10;
+  long unsigned int _11;
+  uint32_t (*<T5dd>) (const struct E_KDF_BASE *) _12;
+  uint32_t (*<T5f3>) (struct E_ENC_BASE *) _13;
+  uint8_t * _14;
+  long unsigned int _15;
+  uint8_t * _16;
+  uint32_t (*<T603>) (const struct E_MAC_BASE *) _17;
+  long unsigned int _31;
+  long unsigned int _52;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  enc_ctx_23(D)->output = cipher_C2_C3_24(D);
+  # DEBUG BEGIN_STMT
+  _1 = enc_ctx_23(D)->enc_type;
+  if (_1 == 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  enc_ctx_23(D)->key = cipher_C2_C3_24(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  kdf_ctx_27(D)->input = Qx_28(D);
+  # DEBUG BEGIN_STMT
+  _2 = curve_30(D)->eccp_p_bitLen;
+  # DEBUG bit_len => _2
+  # DEBUG BEGIN_STMT
+  _31 = _2 + 7;
+  _52 = _31 >> 3;
+  # DEBUG bit_len => NULL
+  kdf_ctx_27(D)->input_bytes = _52;
+  # DEBUG BEGIN_STMT
+  _3 = ecies_ctx_33(D)->enc_mac_key_order;
+  if (_3 == 1)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 6>; [66.00%]
+
+  <bb 5> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _4 = enc_ctx_23(D)->key;
+  kdf_ctx_27(D)->out1 = _4;
+  # DEBUG BEGIN_STMT
+  _5 = enc_ctx_23(D)->key_bytes;
+  kdf_ctx_27(D)->out1_bytes = _5;
+  # DEBUG BEGIN_STMT
+  _6 = mac_ctx_34(D)->key;
+  kdf_ctx_27(D)->out2 = _6;
+  # DEBUG BEGIN_STMT
+  _7 = mac_ctx_34(D)->key_bytes;
+  kdf_ctx_27(D)->out2_bytes = _7;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 708669600]:
+  # DEBUG BEGIN_STMT
+  _8 = mac_ctx_34(D)->key;
+  kdf_ctx_27(D)->out1 = _8;
+  # DEBUG BEGIN_STMT
+  _9 = mac_ctx_34(D)->key_bytes;
+  kdf_ctx_27(D)->out1_bytes = _9;
+  # DEBUG BEGIN_STMT
+  _10 = enc_ctx_23(D)->key;
+  kdf_ctx_27(D)->out2 = _10;
+  # DEBUG BEGIN_STMT
+  _11 = enc_ctx_23(D)->key_bytes;
+  kdf_ctx_27(D)->out2_bytes = _11;
+
+  <bb 7> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _12 = kdf_ctx_27(D)->kdf_fun_imp;
+  ret_44 = _12 (kdf_ctx_27(D));
+  # DEBUG ret => ret_44
+  # DEBUG BEGIN_STMT
+  if (ret_44 == 0)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 8> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _13 = enc_ctx_23(D)->enc_fun_imp;
+  ret_46 = _13 (enc_ctx_23(D));
+  # DEBUG ret => ret_46
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_46 == 0)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 9> [local count: 268435456]:
+  # DEBUG BEGIN_STMT
+  _14 = enc_ctx_23(D)->output;
+  mac_ctx_34(D)->msg = _14;
+  # DEBUG BEGIN_STMT
+  _15 = enc_ctx_23(D)->output_bytes;
+  mac_ctx_34(D)->msg_bytes = _15;
+  # DEBUG BEGIN_STMT
+  _16 = cipher_C2_C3_24(D) + _15;
+  mac_ctx_34(D)->mac = _16;
+  # DEBUG BEGIN_STMT
+  _17 = mac_ctx_34(D)->mac_imp;
+  ret_51 = _17 (mac_ctx_34(D));
+  # DEBUG ret => ret_51
+
+  <bb 10> [local count: 1073741824]:
+  # ret_18 = PHI <ret_46(8), ret_51(9), ret_44(7)>
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_18;
+
+}
+
+
+uint32_t ecies_encrypt_C2_C3.isra (const uint32_t ISRA.16, const ecies_enc_mac_key_order_e ISRA.17, struct E_KDF_BASE * kdf_ctx, struct E_MAC_BASE * mac_ctx, struct E_ENC_BASE * enc_ctx, uint8_t * Qx, uint8_t * cipher_C2_C3)
+{
+  uint32_t ret;
+  const struct eccp_curve_st * curve;
+  const struct ECIES_STD * ecies_ctx;
+  <unnamed type> _3;
+  long unsigned int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  <unnamed type> _9;
+  uint8_t * _10;
+  long unsigned int _11;
+  uint8_t * _13;
+  long unsigned int _14;
+  uint8_t * _15;
+  long unsigned int _16;
+  uint8_t * _17;
+  long unsigned int _18;
+  uint32_t (*<T5dd>) (const struct E_KDF_BASE *) _19;
+  uint32_t (*<T5f3>) (struct E_ENC_BASE *) _21;
+  uint8_t * _23;
+  long unsigned int _24;
+  uint8_t * _25;
+  uint32_t (*<T603>) (const struct E_MAC_BASE *) _26;
+
+  <bb 11> [local count: 1073741824]:
+  # DEBUG D#4 s=> curve
+  # DEBUG curve => D#4
+  # DEBUG D#3 s=> ecies_ctx
+  # DEBUG ecies_ctx => D#3
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  enc_ctx_2(D)->output = cipher_C2_C3_1(D);
+  # DEBUG BEGIN_STMT
+  _3 = enc_ctx_2(D)->enc_type;
+  if (_3 == 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  enc_ctx_2(D)->key = cipher_C2_C3_1(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  kdf_ctx_5(D)->input = Qx_4(D);
+  # DEBUG BEGIN_STMT
+  _6 = ISRA.16_36(D);
+  # DEBUG bit_len => _6
+  # DEBUG BEGIN_STMT
+  _7 = _6 + 7;
+  _8 = _7 >> 3;
+  # DEBUG bit_len => NULL
+  kdf_ctx_5(D)->input_bytes = _8;
+  # DEBUG BEGIN_STMT
+  _9 = ISRA.17_38(D);
+  if (_9 == 1)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 6>; [66.00%]
+
+  <bb 5> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _10 = enc_ctx_2(D)->key;
+  kdf_ctx_5(D)->out1 = _10;
+  # DEBUG BEGIN_STMT
+  _11 = enc_ctx_2(D)->key_bytes;
+  kdf_ctx_5(D)->out1_bytes = _11;
+  # DEBUG BEGIN_STMT
+  _13 = mac_ctx_12(D)->key;
+  kdf_ctx_5(D)->out2 = _13;
+  # DEBUG BEGIN_STMT
+  _14 = mac_ctx_12(D)->key_bytes;
+  kdf_ctx_5(D)->out2_bytes = _14;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 708669600]:
+  # DEBUG BEGIN_STMT
+  _15 = mac_ctx_12(D)->key;
+  kdf_ctx_5(D)->out1 = _15;
+  # DEBUG BEGIN_STMT
+  _16 = mac_ctx_12(D)->key_bytes;
+  kdf_ctx_5(D)->out1_bytes = _16;
+  # DEBUG BEGIN_STMT
+  _17 = enc_ctx_2(D)->key;
+  kdf_ctx_5(D)->out2 = _17;
+  # DEBUG BEGIN_STMT
+  _18 = enc_ctx_2(D)->key_bytes;
+  kdf_ctx_5(D)->out2_bytes = _18;
+
+  <bb 7> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _19 = kdf_ctx_5(D)->kdf_fun_imp;
+  ret_20 = _19 (kdf_ctx_5(D));
+  # DEBUG ret => ret_20
+  # DEBUG BEGIN_STMT
+  if (ret_20 == 0)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 8> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _21 = enc_ctx_2(D)->enc_fun_imp;
+  ret_22 = _21 (enc_ctx_2(D));
+  # DEBUG ret => ret_22
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_22 == 0)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 9> [local count: 268435456]:
+  # DEBUG BEGIN_STMT
+  _23 = enc_ctx_2(D)->output;
+  mac_ctx_12(D)->msg = _23;
+  # DEBUG BEGIN_STMT
+  _24 = enc_ctx_2(D)->output_bytes;
+  mac_ctx_12(D)->msg_bytes = _24;
+  # DEBUG BEGIN_STMT
+  _25 = cipher_C2_C3_1(D) + _24;
+  mac_ctx_12(D)->mac = _25;
+  # DEBUG BEGIN_STMT
+  _26 = mac_ctx_12(D)->mac_imp;
+  ret_27 = _26 (mac_ctx_12(D));
+  # DEBUG ret => ret_27
+
+  <bb 10> [local count: 1073741824]:
+  # ret_28 = PHI <ret_20(7), ret_22(8), ret_27(9)>
+  # DEBUG ret => ret_28
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_28;
+
+}
+
+
+updating call of ansi_x963_2001_ecies_encrypt/20 -> ecies_encrypt_C2_C3.isra/43: ret_66 = ecies_encrypt_C2_C3 (curve_4(D), &ecies_ctx, &kdf_ctx.base, &hmac_ctx.base, &xor_ctx.base, &k, _65);
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 0, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7f90081aa540 uint32_t>, alias type:  <pointer_type 0x7f90085071f8> prefix: ISRA
+                             1. IPA_PARAM_OP_SPLIT , offset: 4, base_index: 1, prev_clone_index: 1, type:  <enumeral_type 0x7f9008241a80 ecies_enc_mac_key_order_e>, alias type:  <pointer_type 0x7f9008266b28> prefix: ISRA
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             5. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             6. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+  updated to:ret_66 = ecies_encrypt_C2_C3.isra (_72, _73, &kdf_ctx.base, &hmac_ctx.base, &xor_ctx.base, &k, _65);
+cloning ecies_decrypt_C2_C3/15 to ecies_decrypt_C2_C3.isra/42
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 0, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7f90081aa540 uint32_t>, alias type:  <pointer_type 0x7f90085071f8> prefix: ISRA
+                             1. IPA_PARAM_OP_SPLIT , offset: 4, base_index: 1, prev_clone_index: 1, type:  <enumeral_type 0x7f9008241a80 ecies_enc_mac_key_order_e>, alias type:  <pointer_type 0x7f9008266b28> prefix: ISRA
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             5. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             6. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+uint32_t ecies_decrypt_C2_C3 (const struct eccp_curve_st * curve, const struct ECIES_STD * ecies_ctx, struct E_KDF_BASE * kdf_ctx, const struct E_MAC_BASE * mac_ctx, struct E_ENC_BASE * dec_ctx, uint8_t * Qx, const uint8_t * cipher_C3)
+{
+  uint32_t ret;
+  long unsigned int _1;
+  <unnamed type> _2;
+  uint8_t * _3;
+  long unsigned int _4;
+  uint8_t * _5;
+  long unsigned int _6;
+  uint8_t * _7;
+  long unsigned int _8;
+  uint8_t * _9;
+  long unsigned int _10;
+  uint32_t (*<T5dd>) (const struct E_KDF_BASE *) _11;
+  uint32_t (*<T603>) (const struct E_MAC_BASE *) _12;
+  uint8_t * _13;
+  long unsigned int _14;
+  unsigned char _15;
+  uint32_t (*<T5f3>) (struct E_ENC_BASE *) _16;
+  long unsigned int _25;
+  long unsigned int _46;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  kdf_ctx_21(D)->input = Qx_22(D);
+  # DEBUG BEGIN_STMT
+  _1 = curve_24(D)->eccp_p_bitLen;
+  # DEBUG bit_len => _1
+  # DEBUG BEGIN_STMT
+  _25 = _1 + 7;
+  _46 = _25 >> 3;
+  # DEBUG bit_len => NULL
+  kdf_ctx_21(D)->input_bytes = _46;
+  # DEBUG BEGIN_STMT
+  _2 = ecies_ctx_27(D)->enc_mac_key_order;
+  if (_2 == 1)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _3 = dec_ctx_31(D)->key;
+  kdf_ctx_21(D)->out1 = _3;
+  # DEBUG BEGIN_STMT
+  _4 = dec_ctx_31(D)->key_bytes;
+  kdf_ctx_21(D)->out1_bytes = _4;
+  # DEBUG BEGIN_STMT
+  _5 = mac_ctx_28(D)->key;
+  kdf_ctx_21(D)->out2 = _5;
+  # DEBUG BEGIN_STMT
+  _6 = mac_ctx_28(D)->key_bytes;
+  kdf_ctx_21(D)->out2_bytes = _6;
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 708669599]:
+  # DEBUG BEGIN_STMT
+  _7 = mac_ctx_28(D)->key;
+  kdf_ctx_21(D)->out1 = _7;
+  # DEBUG BEGIN_STMT
+  _8 = mac_ctx_28(D)->key_bytes;
+  kdf_ctx_21(D)->out1_bytes = _8;
+  # DEBUG BEGIN_STMT
+  _9 = dec_ctx_31(D)->key;
+  kdf_ctx_21(D)->out2 = _9;
+  # DEBUG BEGIN_STMT
+  _10 = dec_ctx_31(D)->key_bytes;
+  kdf_ctx_21(D)->out2_bytes = _10;
+
+  <bb 5> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  _11 = kdf_ctx_21(D)->kdf_fun_imp;
+  ret_39 = _11 (kdf_ctx_21(D));
+  # DEBUG ret => ret_39
+  # DEBUG BEGIN_STMT
+  if (ret_39 == 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 6> [local count: 536870911]:
+  # DEBUG BEGIN_STMT
+  _12 = mac_ctx_28(D)->mac_imp;
+  ret_41 = _12 (mac_ctx_28(D));
+  # DEBUG ret => ret_41
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_41 == 0)
+    goto <bb 7>; [33.00%]
+  else
+    goto <bb 9>; [67.00%]
+
+  <bb 7> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  _13 = mac_ctx_28(D)->mac;
+  _14 = mac_ctx_28(D)->mac_bytes;
+  _15 = memcmp_ (cipher_C3_42(D), _13, _14);
+  # DEBUG ret => (uint32_t) _15
+  # DEBUG BEGIN_STMT
+  if (_15 == 0)
+    goto <bb 8>; [65.00%]
+  else
+    goto <bb 9>; [35.00%]
+
+  <bb 8> [local count: 115158810]:
+  # DEBUG BEGIN_STMT
+  _16 = dec_ctx_31(D)->dec_fun_imp;
+  ret_45 = _16 (dec_ctx_31(D));
+  # DEBUG ret => ret_45
+
+  <bb 9> [local count: 1073741824]:
+  # ret_17 = PHI <ret_41(6), 2052(7), ret_45(8), ret_39(5)>
+  # DEBUG ret => ret_17
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_17;
+
+}
+
+
+uint32_t ecies_decrypt_C2_C3.isra (const uint32_t ISRA.21, const ecies_enc_mac_key_order_e ISRA.22, struct E_KDF_BASE * kdf_ctx, const struct E_MAC_BASE * mac_ctx, struct E_ENC_BASE * dec_ctx, uint8_t * Qx, const uint8_t * cipher_C3)
+{
+  uint32_t ret;
+  const struct eccp_curve_st * curve;
+  const struct ECIES_STD * ecies_ctx;
+  long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  <unnamed type> _6;
+  uint8_t * _8;
+  long unsigned int _9;
+  uint8_t * _11;
+  long unsigned int _12;
+  uint8_t * _13;
+  long unsigned int _14;
+  uint8_t * _15;
+  long unsigned int _16;
+  uint32_t (*<T5dd>) (const struct E_KDF_BASE *) _17;
+  uint32_t (*<T603>) (const struct E_MAC_BASE *) _19;
+  uint8_t * _21;
+  long unsigned int _22;
+  unsigned char _24;
+  uint32_t (*<T5f3>) (struct E_ENC_BASE *) _25;
+
+  <bb 10> [local count: 1073741822]:
+  # DEBUG D#17 s=> curve
+  # DEBUG curve => D#17
+  # DEBUG D#16 s=> ecies_ctx
+  # DEBUG ecies_ctx => D#16
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  kdf_ctx_2(D)->input = Qx_1(D);
+  # DEBUG BEGIN_STMT
+  _3 = ISRA.21_32(D);
+  # DEBUG bit_len => _3
+  # DEBUG BEGIN_STMT
+  _4 = _3 + 7;
+  _5 = _4 >> 3;
+  # DEBUG bit_len => NULL
+  kdf_ctx_2(D)->input_bytes = _5;
+  # DEBUG BEGIN_STMT
+  _6 = ISRA.22_34(D);
+  if (_6 == 1)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _8 = dec_ctx_7(D)->key;
+  kdf_ctx_2(D)->out1 = _8;
+  # DEBUG BEGIN_STMT
+  _9 = dec_ctx_7(D)->key_bytes;
+  kdf_ctx_2(D)->out1_bytes = _9;
+  # DEBUG BEGIN_STMT
+  _11 = mac_ctx_10(D)->key;
+  kdf_ctx_2(D)->out2 = _11;
+  # DEBUG BEGIN_STMT
+  _12 = mac_ctx_10(D)->key_bytes;
+  kdf_ctx_2(D)->out2_bytes = _12;
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 708669599]:
+  # DEBUG BEGIN_STMT
+  _13 = mac_ctx_10(D)->key;
+  kdf_ctx_2(D)->out1 = _13;
+  # DEBUG BEGIN_STMT
+  _14 = mac_ctx_10(D)->key_bytes;
+  kdf_ctx_2(D)->out1_bytes = _14;
+  # DEBUG BEGIN_STMT
+  _15 = dec_ctx_7(D)->key;
+  kdf_ctx_2(D)->out2 = _15;
+  # DEBUG BEGIN_STMT
+  _16 = dec_ctx_7(D)->key_bytes;
+  kdf_ctx_2(D)->out2_bytes = _16;
+
+  <bb 5> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  _17 = kdf_ctx_2(D)->kdf_fun_imp;
+  ret_18 = _17 (kdf_ctx_2(D));
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  if (ret_18 == 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 6> [local count: 536870911]:
+  # DEBUG BEGIN_STMT
+  _19 = mac_ctx_10(D)->mac_imp;
+  ret_20 = _19 (mac_ctx_10(D));
+  # DEBUG ret => ret_20
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_20 == 0)
+    goto <bb 7>; [33.00%]
+  else
+    goto <bb 9>; [67.00%]
+
+  <bb 7> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  _21 = mac_ctx_10(D)->mac;
+  _22 = mac_ctx_10(D)->mac_bytes;
+  _24 = memcmp_ (cipher_C3_23(D), _21, _22);
+  # DEBUG ret => (uint32_t) _24
+  # DEBUG BEGIN_STMT
+  if (_24 == 0)
+    goto <bb 8>; [65.00%]
+  else
+    goto <bb 9>; [35.00%]
+
+  <bb 8> [local count: 115158810]:
+  # DEBUG BEGIN_STMT
+  _25 = dec_ctx_7(D)->dec_fun_imp;
+  ret_26 = _25 (dec_ctx_7(D));
+  # DEBUG ret => ret_26
+
+  <bb 9> [local count: 1073741824]:
+  # ret_27 = PHI <ret_18(5), ret_20(6), 2052(7), ret_26(8)>
+  # DEBUG ret => ret_27
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_27;
+
+}
+
+
+updating call of ansi_x963_2001_ecies_decrypt/21 -> ecies_decrypt_C2_C3.isra/42: ret_74 = ecies_decrypt_C2_C3 (curve_10(D), &ecies_ctx, &kdf_ctx.base, &hmac_ctx.base, &xor_ctx.base, &k, _73);
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 0, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7f90081aa540 uint32_t>, alias type:  <pointer_type 0x7f90085071f8> prefix: ISRA
+                             1. IPA_PARAM_OP_SPLIT , offset: 4, base_index: 1, prev_clone_index: 1, type:  <enumeral_type 0x7f9008241a80 ecies_enc_mac_key_order_e>, alias type:  <pointer_type 0x7f9008266b28> prefix: ISRA
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             5. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             6. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+  updated to:ret_74 = ecies_decrypt_C2_C3.isra (_77, _78, &kdf_ctx.base, &hmac_ctx.base, &xor_ctx.base, &k, _73);
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+memcmp_/33 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_pointMul/32 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_check_point/31 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_getkey/30 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_get_pubkey_from_prikey/29 (eccp_get_pubkey_from_prikey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_integer_check/28 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+reverse_byte_array/27 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+check_hash_alg/26 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+e_hmac_init/25 (e_hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+e_xor_enc_init/24 (e_xor_enc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ansi_x963_2001_kdf_init/23 (ansi_x963_2001_kdf_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ecies_ansi_x963_ctx_init/22 (ecies_ansi_x963_ctx_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ansi_x963_2001_ecies_decrypt/21 (ansi_x963_2001_ecies_decrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x963_2001_ecies_decrypt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ansi_x963_2001_ecies_encrypt/20 (ansi_x963_2001_ecies_encrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x963_2001_ecies_encrypt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ecies_decrypt_C2_C3/15 (ecies_decrypt_C2_C3)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ecies_encrypt_C2_C3/13 (ecies_encrypt_C2_C3)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

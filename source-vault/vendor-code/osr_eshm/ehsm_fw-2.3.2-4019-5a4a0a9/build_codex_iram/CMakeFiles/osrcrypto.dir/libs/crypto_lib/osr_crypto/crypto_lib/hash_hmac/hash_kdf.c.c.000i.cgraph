@@ -1,0 +1,2357 @@
+Trivially needed symbols: ansi_x9_63_kdf/22 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac/15
+
+
+Initial Symbol table:
+
+hash_node_steps/44 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 
+  Calls: 
+uint8_BigNum_Check_Zero/43 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: 
+memset_/42 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+uint8_XOR/41 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+hmac_final/40 (hmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hash_update/39 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hmac_key_state_recover/38 (hmac_key_state_recover)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_iterator/37 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_update_config/36 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_alg/35 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_last_block/34 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_disable_cpu_interruption/33 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_endian_uint32/32 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_hash_mode/31 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_cpu_mode/30 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+uint32_copy/29 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_calc_f/14 
+  Calls: 
+hash_get_iterator/28 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_backup/11 
+  Calls: 
+memcpy_/27 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_recover/12 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/26 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 pbkdf2_hmac/15 
+  Calls: 
+hmac_init/25 (hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_calc_f/14 pbkdf2_hmac/15 
+  Calls: 
+check_hash_alg/23 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+ansi_x9_63_kdf/22 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/21 
+ansi_x9_63_kdf_node/21 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f385a136cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf/22 
+  Calls: ansi_x9_63_kdf_digest_remainder/20 memcpy_/27 memcpy_/27 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_digest_remainder/20 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 
+  Calls: memcpy_/27 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_internal/19 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal/19 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f385a136bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: uint8_big_num_big_endian_add_little/26 hash_node_steps/44 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_node_with_xor_in/18 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f385a136990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/42 uint8_XOR/41 memcpy_/27 ansi_x9_63_kdf_internal_check_zero/17 uint8_XOR/41 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal_check_zero/17 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: uint8_BigNum_Check_Zero/43 ansi_x9_63_kdf_internal/19 
+ansi_x9_63_kdf_parameter_check/16 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+pbkdf2_hmac/15 (pbkdf2_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f385a136880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint8_big_num_big_endian_add_little/26 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 hmac_init/25 hash_get_digest_word_len/24 check_hash_alg/23 
+pbkdf2_hmac_calc_f/14 (pbkdf2_hmac_calc_f)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: memcpy_/27 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 uint32_copy/29 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 hash_get_digest_word_len/24 
+pbkdf2_hmac_update_get_mac/13 (pbkdf2_hmac_update_get_mac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_final/40 hash_update/39 hash_update/39 
+pbkdf2_hmac_recover/12 (pbkdf2_hmac_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_key_state_recover/38 hash_set_iterator/37 hash_update_config/36 hash_set_alg/35 hash_set_last_block/34 hash_disable_cpu_interruption/33 hash_set_endian_uint32/32 hash_set_hash_mode/31 hash_set_cpu_mode/30 memcpy_/27 
+pbkdf2_hmac_backup/11 (pbkdf2_hmac_backup)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f385a136440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: hash_get_iterator/28 memcpy_/27 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+hash_node_steps/44 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 
+  Calls: 
+uint8_BigNum_Check_Zero/43 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: 
+memset_/42 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+uint8_XOR/41 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+hmac_final/40 (hmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hash_update/39 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hmac_key_state_recover/38 (hmac_key_state_recover)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_iterator/37 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_update_config/36 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_alg/35 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_last_block/34 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_disable_cpu_interruption/33 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_endian_uint32/32 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_hash_mode/31 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_cpu_mode/30 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+uint32_copy/29 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_calc_f/14 
+  Calls: 
+hash_get_iterator/28 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_backup/11 
+  Calls: 
+memcpy_/27 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_recover/12 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/26 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 pbkdf2_hmac/15 
+  Calls: 
+hmac_init/25 (hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_calc_f/14 pbkdf2_hmac/15 
+  Calls: 
+check_hash_alg/23 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+ansi_x9_63_kdf/22 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/21 
+ansi_x9_63_kdf_node/21 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf/22 
+  Calls: ansi_x9_63_kdf_digest_remainder/20 memcpy_/27 memcpy_/27 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_digest_remainder/20 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 
+  Calls: memcpy_/27 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_internal/19 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal/19 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: uint8_big_num_big_endian_add_little/26 hash_node_steps/44 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_node_with_xor_in/18 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/42 uint8_XOR/41 memcpy_/27 ansi_x9_63_kdf_internal_check_zero/17 uint8_XOR/41 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal_check_zero/17 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: uint8_BigNum_Check_Zero/43 ansi_x9_63_kdf_internal/19 
+ansi_x9_63_kdf_parameter_check/16 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+pbkdf2_hmac/15 (pbkdf2_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint8_big_num_big_endian_add_little/26 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 hmac_init/25 hash_get_digest_word_len/24 check_hash_alg/23 
+pbkdf2_hmac_calc_f/14 (pbkdf2_hmac_calc_f)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: memcpy_/27 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 uint32_copy/29 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 hash_get_digest_word_len/24 
+pbkdf2_hmac_update_get_mac/13 (pbkdf2_hmac_update_get_mac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_final/40 hash_update/39 hash_update/39 
+pbkdf2_hmac_recover/12 (pbkdf2_hmac_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_key_state_recover/38 hash_set_iterator/37 hash_update_config/36 hash_set_alg/35 hash_set_last_block/34 hash_disable_cpu_interruption/33 hash_set_endian_uint32/32 hash_set_hash_mode/31 hash_set_cpu_mode/30 memcpy_/27 
+pbkdf2_hmac_backup/11 (pbkdf2_hmac_backup)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: hash_get_iterator/28 memcpy_/27 
+
+
+Initial Symbol table:
+
+hash_node_steps/44 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 
+  Calls: 
+uint8_BigNum_Check_Zero/43 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: 
+memset_/42 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+uint8_XOR/41 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+hmac_final/40 (hmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hash_update/39 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hmac_key_state_recover/38 (hmac_key_state_recover)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_iterator/37 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_update_config/36 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_alg/35 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_last_block/34 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_disable_cpu_interruption/33 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_endian_uint32/32 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_hash_mode/31 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_cpu_mode/30 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+uint32_copy/29 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_calc_f/14 
+  Calls: 
+hash_get_iterator/28 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_backup/11 
+  Calls: 
+memcpy_/27 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_recover/12 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/26 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 pbkdf2_hmac/15 
+  Calls: 
+hmac_init/25 (hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_calc_f/14 pbkdf2_hmac/15 
+  Calls: 
+check_hash_alg/23 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+ansi_x9_63_kdf/22 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/21 
+ansi_x9_63_kdf_node/21 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf/22 
+  Calls: ansi_x9_63_kdf_digest_remainder/20 memcpy_/27 memcpy_/27 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_digest_remainder/20 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 
+  Calls: memcpy_/27 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_internal/19 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal/19 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: uint8_big_num_big_endian_add_little/26 hash_node_steps/44 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_node_with_xor_in/18 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/42 uint8_XOR/41 memcpy_/27 ansi_x9_63_kdf_internal_check_zero/17 uint8_XOR/41 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal_check_zero/17 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: uint8_BigNum_Check_Zero/43 ansi_x9_63_kdf_internal/19 
+ansi_x9_63_kdf_parameter_check/16 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+pbkdf2_hmac/15 (pbkdf2_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint8_big_num_big_endian_add_little/26 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 hmac_init/25 hash_get_digest_word_len/24 check_hash_alg/23 
+pbkdf2_hmac_calc_f/14 (pbkdf2_hmac_calc_f)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: memcpy_/27 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 uint32_copy/29 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 hash_get_digest_word_len/24 
+pbkdf2_hmac_update_get_mac/13 (pbkdf2_hmac_update_get_mac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_final/40 hash_update/39 hash_update/39 
+pbkdf2_hmac_recover/12 (pbkdf2_hmac_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_key_state_recover/38 hash_set_iterator/37 hash_update_config/36 hash_set_alg/35 hash_set_last_block/34 hash_disable_cpu_interruption/33 hash_set_endian_uint32/32 hash_set_hash_mode/31 hash_set_cpu_mode/30 memcpy_/27 
+pbkdf2_hmac_backup/11 (pbkdf2_hmac_backup)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: hash_get_iterator/28 memcpy_/27 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+hash_node_steps/44 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 
+  Calls: 
+uint8_BigNum_Check_Zero/43 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: 
+memset_/42 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+uint8_XOR/41 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+hmac_final/40 (hmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hash_update/39 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_update_get_mac/13 
+  Calls: 
+hmac_key_state_recover/38 (hmac_key_state_recover)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_iterator/37 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_update_config/36 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_alg/35 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_last_block/34 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_disable_cpu_interruption/33 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_endian_uint32/32 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_hash_mode/31 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+hash_set_cpu_mode/30 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_recover/12 
+  Calls: 
+uint32_copy/29 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_calc_f/14 
+  Calls: 
+hash_get_iterator/28 (hash_get_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac_backup/11 
+  Calls: 
+memcpy_/27 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_recover/12 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 
+  Calls: 
+uint8_big_num_big_endian_add_little/26 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 pbkdf2_hmac/15 
+  Calls: 
+hmac_init/25 (hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 pbkdf2_hmac_calc_f/14 pbkdf2_hmac/15 
+  Calls: 
+check_hash_alg/23 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pbkdf2_hmac/15 
+  Calls: 
+ansi_x9_63_kdf/22 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/21 
+ansi_x9_63_kdf_node/21 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf/22 
+  Calls: ansi_x9_63_kdf_digest_remainder/20 memcpy_/27 memcpy_/27 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_digest_remainder/20 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_node/21 
+  Calls: memcpy_/27 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_internal/19 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal/19 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_digest_remainder/20 ansi_x9_63_kdf_internal_check_zero/17 
+  Calls: uint8_big_num_big_endian_add_little/26 hash_node_steps/44 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_node_with_xor_in/18 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/42 uint8_XOR/41 memcpy_/27 ansi_x9_63_kdf_internal_check_zero/17 uint8_XOR/41 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_internal_check_zero/17 ansi_x9_63_kdf_parameter_check/16 hash_get_digest_word_len/24 
+ansi_x9_63_kdf_internal_check_zero/17 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: uint8_BigNum_Check_Zero/43 ansi_x9_63_kdf_internal/19 
+ansi_x9_63_kdf_parameter_check/16 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ansi_x9_63_kdf_node/21 ansi_x9_63_kdf_internal/19 ansi_x9_63_kdf_node_with_xor_in/18 
+  Calls: 
+pbkdf2_hmac/15 (pbkdf2_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint8_big_num_big_endian_add_little/26 pbkdf2_hmac_calc_f/14 pbkdf2_hmac_backup/11 hmac_init/25 hash_get_digest_word_len/24 check_hash_alg/23 
+pbkdf2_hmac_calc_f/14 (pbkdf2_hmac_calc_f)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: memcpy_/27 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 uint32_copy/29 pbkdf2_hmac_update_get_mac/13 pbkdf2_hmac_recover/12 hash_get_digest_word_len/24 
+pbkdf2_hmac_update_get_mac/13 (pbkdf2_hmac_update_get_mac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_final/40 hash_update/39 hash_update/39 
+pbkdf2_hmac_recover/12 (pbkdf2_hmac_recover)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac_calc_f/14 pbkdf2_hmac_calc_f/14 
+  Calls: hmac_key_state_recover/38 hash_set_iterator/37 hash_update_config/36 hash_set_alg/35 hash_set_last_block/34 hash_disable_cpu_interruption/33 hash_set_endian_uint32/32 hash_set_hash_mode/31 hash_set_cpu_mode/30 memcpy_/27 
+pbkdf2_hmac_backup/11 (pbkdf2_hmac_backup)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pbkdf2_hmac/15 
+  Calls: hash_get_iterator/28 memcpy_/27 
+updating call of pbkdf2_hmac/15 -> __builtin_unreachable/45: hash_get_iterator (0B, _52);
+  updated to:__builtin_unreachable ();
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+pbkdf2_hmac_update_get_mac/55 (pbkdf2_hmac_update_get_mac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 13
+  References: 
+  Referring: 
+  Function pbkdf2_hmac_update_get_mac/55 is inline copy in pbkdf2_hmac/15
+  Clone of pbkdf2_hmac_update_get_mac/13
+  Availability: local
+  Function flags: count:334846389 (estimated locally) body local
+  Called by: pbkdf2_hmac_calc_f.constprop.0/49 (inlined) (334846389 (estimated locally),0.51 per call) 
+  Calls: hash_update/39 (334846389 (estimated locally),0.51 per call) hash_update/39 (110499308 (estimated locally),0.17 per call) hmac_final/40 (36464771 (estimated locally),0.06 per call) 
+ansi_x9_63_kdf_internal_check_zero.part.0/54 (ansi_x9_63_kdf_internal_check_zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 52
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero.part.0/54 is inline copy in ansi_x9_63_kdf_node_with_xor_in/18
+  Clone of ansi_x9_63_kdf_internal_check_zero.part.0/47
+  Availability: local
+  Function flags: count:238956303 (estimated locally) body local split_part
+  Called by: ansi_x9_63_kdf_internal_check_zero/53 (inlined) (238956303 (estimated locally),0.76 per call) 
+  Calls: uint8_BigNum_Check_Zero/43 (238956303 (estimated locally),0.76 per call) 
+ansi_x9_63_kdf_internal_check_zero/53 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 51
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero/53 is inline copy in ansi_x9_63_kdf_node_with_xor_in/18
+  Clone of ansi_x9_63_kdf_internal_check_zero/17
+  Availability: local
+  Function flags: count:724110013 (estimated locally) body local
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 (inlined) (724110013 (estimated locally),2.29 per call) 
+  Calls: ansi_x9_63_kdf_internal/19 (724110013 (estimated locally),2.29 per call) ansi_x9_63_kdf_internal_check_zero.part.0/54 (inlined) (238956303 (estimated locally),0.76 per call) 
+ansi_x9_63_kdf_internal_check_zero.part.0/52 (ansi_x9_63_kdf_internal_check_zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 47
+  previous sharing asm name: 54
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero.part.0/52 is inline copy in ansi_x9_63_kdf_node_with_xor_in/18
+  Clone of ansi_x9_63_kdf_internal_check_zero.part.0/47
+  Availability: local
+  Function flags: count:5591579 (estimated locally) body local split_part
+  Called by: ansi_x9_63_kdf_internal_check_zero/51 (inlined) (5591579 (estimated locally),0.02 per call) 
+  Calls: uint8_BigNum_Check_Zero/43 (5591579 (estimated locally),0.02 per call) 
+ansi_x9_63_kdf_internal_check_zero/51 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 17
+  previous sharing asm name: 53
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero/51 is inline copy in ansi_x9_63_kdf_node_with_xor_in/18
+  Clone of ansi_x9_63_kdf_internal_check_zero/17
+  Availability: local
+  Function flags: count:16944180 (estimated locally) body local
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 (inlined) (16944180 (estimated locally),0.05 per call) 
+  Calls: ansi_x9_63_kdf_internal/19 (16944180 (estimated locally),0.05 per call) ansi_x9_63_kdf_internal_check_zero.part.0/52 (inlined) (5591579 (estimated locally),0.02 per call) 
+pbkdf2_hmac_recover.constprop.0/50 (pbkdf2_hmac_recover.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of pbkdf2_hmac_recover/12
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: pbkdf2_hmac_calc_f.constprop.0/49 (1005902662 (estimated locally),1.53 per call) pbkdf2_hmac_calc_f.constprop.0/49 (1014686023 (estimated locally),1.54 per call) 
+  Calls: memcpy_/27 (1073741824 (estimated locally),1.00 per call) hash_set_cpu_mode/30 (536870912 (estimated locally),0.50 per call) hash_set_hash_mode/31 (536870912 (estimated locally),0.50 per call) hash_set_endian_uint32/32 (536870912 (estimated locally),0.50 per call) hash_disable_cpu_interruption/33 (536870912 (estimated locally),0.50 per call) hash_set_last_block/34 (536870912 (estimated locally),0.50 per call) hash_set_alg/35 (536870912 (estimated locally),0.50 per call) hash_update_config/36 (536870912 (estimated locally),0.50 per call) hash_set_iterator/37 (536870912 (estimated locally),0.50 per call) hmac_key_state_recover/38 (536870912 (estimated locally),0.50 per call) 
+pbkdf2_hmac_calc_f.constprop.0/49 (pbkdf2_hmac_calc_f.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function pbkdf2_hmac_calc_f.constprop/49 is inline copy in pbkdf2_hmac/15
+  Clone of pbkdf2_hmac_calc_f/14
+  Availability: local
+  Function flags: count:1014686023 (estimated locally) local
+  Called by: pbkdf2_hmac/15 (inlined) (1014686023 (estimated locally),1.54 per call) 
+  Calls: hash_get_digest_word_len/24 (1014686023 (estimated locally),1.54 per call) pbkdf2_hmac_recover.constprop.0/50 (1014686023 (estimated locally),1.54 per call) pbkdf2_hmac_update_get_mac/55 (inlined) (334846389 (estimated locally),0.51 per call) uint32_copy/29 (110499310 (estimated locally),0.17 per call) pbkdf2_hmac_recover.constprop.0/50 (1005902662 (estimated locally),1.53 per call) pbkdf2_hmac_update_get_mac/13 (inlined) (969086627 (estimated locally),1.47 per call) memcpy_/27 (36464773 (estimated locally),0.06 per call) 
+ansi_x9_63_kdf_internal_check_zero.part.0/47 (ansi_x9_63_kdf_internal_check_zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 52
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero.part.0/47 is inline copy in ansi_x9_63_kdf_node_with_xor_in/18
+  Availability: local
+  Function flags: count:102409843 (estimated locally) body local split_part
+  Called by: ansi_x9_63_kdf_internal_check_zero/17 (inlined) (102409843 (estimated locally),0.32 per call) 
+  Calls: uint8_BigNum_Check_Zero/43 (102409843 (estimated locally),0.32 per call) 
+hash_node_steps/44 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 (955630224 (estimated locally),3.47 per call) 
+  Calls: 
+uint8_BigNum_Check_Zero/43 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal_check_zero.part.0/54 (238956303 (estimated locally),0.76 per call) ansi_x9_63_kdf_internal_check_zero.part.0/52 (5591579 (estimated locally),0.02 per call) ansi_x9_63_kdf_internal_check_zero.part.0/47 (102409843 (estimated locally),0.32 per call) 
+  Calls: 
+memset_/42 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 (4493186 (estimated locally),0.01 per call) 
+  Calls: 
+uint8_XOR/41 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 (5930463 (estimated locally),0.02 per call) ansi_x9_63_kdf_node_with_xor_in/18 (697607586 (estimated locally),2.21 per call) 
+  Calls: 
+hmac_final/40 (hmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/55 (36464771 (estimated locally),0.06 per call) pbkdf2_hmac_update_get_mac/13 (105533532 (estimated locally),0.16 per call) 
+  Calls: 
+hash_update/39 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_update_get_mac/55 (334846389 (estimated locally),0.51 per call) pbkdf2_hmac_update_get_mac/55 (110499308 (estimated locally),0.17 per call) pbkdf2_hmac_update_get_mac/13 (319798586 (estimated locally),0.49 per call) pbkdf2_hmac_update_get_mac/13 (969086627 (estimated locally),1.47 per call) 
+  Calls: 
+hmac_key_state_recover/38 (hmac_key_state_recover)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_iterator/37 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_update_config/36 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_alg/35 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_last_block/34 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_disable_cpu_interruption/33 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_endian_uint32/32 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_hash_mode/31 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+hash_set_cpu_mode/30 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_copy/29 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_calc_f.constprop.0/49 (110499310 (estimated locally),0.17 per call) 
+  Calls: 
+memcpy_/27 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_recover.constprop.0/50 (1073741824 (estimated locally),1.00 per call) pbkdf2_hmac_calc_f.constprop.0/49 (36464773 (estimated locally),0.06 per call) ansi_x9_63_kdf_node/21 (80630252 (estimated locally),0.08 per call) ansi_x9_63_kdf_node/21 (80630252 (estimated locally),0.08 per call) ansi_x9_63_kdf_digest_remainder/20 (58465242 (estimated locally),0.05 per call) ansi_x9_63_kdf_node_with_xor_in/18 (2541627 (estimated locally),0.01 per call) pbkdf2_hmac/15 (114863530 (estimated locally),0.17 per call) 
+  Calls: 
+uint8_big_num_big_endian_add_little/26 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ansi_x9_63_kdf_internal/19 (315357972 (estimated locally),1.15 per call) pbkdf2_hmac/15 (958878292 (estimated locally),1.45 per call) 
+  Calls: 
+hmac_init/25 (hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac/15 (348071305 (estimated locally),0.53 per call) 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac_calc_f.constprop.0/49 (1014686023 (estimated locally),1.54 per call) ansi_x9_63_kdf_node/21 (1073741822 (estimated locally),1.00 per call) ansi_x9_63_kdf_digest_remainder/20 (1073741824 (estimated locally),1.00 per call) ansi_x9_63_kdf_node_with_xor_in/18 (315975385 (estimated locally),1.00 per call) ansi_x9_63_kdf_internal/19 (275253251 (estimated locally),1.00 per call) pbkdf2_hmac/15 (348071305 (estimated locally),0.53 per call) 
+  Calls: 
+check_hash_alg/23 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pbkdf2_hmac/15 (659069927 (estimated locally),1.00 per call) 
+  Calls: 
+ansi_x9_63_kdf/22 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/21 (1073741824 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_node/21 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: ansi_x9_63_kdf/22 (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x9_63_kdf_digest_remainder/20 (80630252 (estimated locally),0.08 per call) memcpy_/27 (80630252 (estimated locally),0.08 per call) memcpy_/27 (80630252 (estimated locally),0.08 per call) ansi_x9_63_kdf_digest_remainder/20 (460744293 (estimated locally),0.43 per call) hash_get_digest_word_len/24 (1073741822 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_digest_remainder/20 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ansi_x9_63_kdf_node/21 (80630252 (estimated locally),0.08 per call) ansi_x9_63_kdf_node/21 (460744293 (estimated locally),0.43 per call) 
+  Calls: memcpy_/27 (58465242 (estimated locally),0.05 per call) ansi_x9_63_kdf_internal/19 (177167400 (estimated locally),0.16 per call) ansi_x9_63_kdf_internal/19 (1073741824 (estimated locally),1.00 per call) hash_get_digest_word_len/24 (1073741824 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_internal/19 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:275253251 (estimated locally) body
+  Called by: ansi_x9_63_kdf_internal_check_zero/53 (724110013 (estimated locally),2.29 per call) ansi_x9_63_kdf_internal_check_zero/51 (16944180 (estimated locally),0.05 per call) ansi_x9_63_kdf_digest_remainder/20 (177167400 (estimated locally),0.16 per call) ansi_x9_63_kdf_digest_remainder/20 (1073741824 (estimated locally),1.00 per call) ansi_x9_63_kdf_internal_check_zero/17 (310332858 (estimated locally),0.98 per call) 
+  Calls: uint8_big_num_big_endian_add_little/26 (315357972 (estimated locally),1.15 per call) hash_node_steps/44 (955630224 (estimated locally),3.47 per call) hash_get_digest_word_len/24 (275253251 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_node_with_xor_in/18 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:315975385 (estimated locally) body
+  Called by: 
+  Calls: memset_/42 (4493186 (estimated locally),0.01 per call) uint8_XOR/41 (5930463 (estimated locally),0.02 per call) memcpy_/27 (2541627 (estimated locally),0.01 per call) ansi_x9_63_kdf_internal_check_zero/51 (inlined) (16944180 (estimated locally),0.05 per call) uint8_XOR/41 (697607586 (estimated locally),2.21 per call) ansi_x9_63_kdf_internal_check_zero/53 (inlined) (724110013 (estimated locally),2.29 per call) ansi_x9_63_kdf_internal_check_zero/17 (inlined) (310332858 (estimated locally),0.98 per call) hash_get_digest_word_len/24 (315975385 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_internal_check_zero/17 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 51
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero/17 is inline copy in ansi_x9_63_kdf_node_with_xor_in/18
+  Availability: local
+  Function flags: count:310332858 (estimated locally) body local
+  Called by: ansi_x9_63_kdf_node_with_xor_in/18 (inlined) (310332858 (estimated locally),0.98 per call) 
+  Calls: ansi_x9_63_kdf_internal_check_zero.part.0/47 (inlined) (102409843 (estimated locally),0.32 per call) ansi_x9_63_kdf_internal/19 (310332858 (estimated locally),0.98 per call) 
+pbkdf2_hmac/15 (pbkdf2_hmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:659069927 (estimated locally) body
+  Called by: 
+  Calls: uint8_big_num_big_endian_add_little/26 (958878292 (estimated locally),1.45 per call) pbkdf2_hmac_calc_f.constprop.0/49 (inlined) (1014686023 (estimated locally),1.54 per call) memcpy_/27 (114863530 (estimated locally),0.17 per call) hmac_init/25 (348071305 (estimated locally),0.53 per call) hash_get_digest_word_len/24 (348071305 (estimated locally),0.53 per call) check_hash_alg/23 (659069927 (estimated locally),1.00 per call) 
+pbkdf2_hmac_calc_f/14 (pbkdf2_hmac_calc_f)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:128367472 (estimated locally) body
+  Called by: 
+  Calls: 
+pbkdf2_hmac_update_get_mac/13 (pbkdf2_hmac_update_get_mac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 55
+  References: 
+  Referring: 
+  Function pbkdf2_hmac_update_get_mac/13 is inline copy in pbkdf2_hmac/15
+  Availability: local
+  Function flags: count:969086627 (estimated locally) body local
+  Called by: pbkdf2_hmac_calc_f.constprop.0/49 (inlined) (969086627 (estimated locally),1.47 per call) 
+  Calls: hmac_final/40 (105533532 (estimated locally),0.16 per call) hash_update/39 (319798586 (estimated locally),0.49 per call) hash_update/39 (969086627 (estimated locally),1.47 per call) 
+pbkdf2_hmac_recover/12 (pbkdf2_hmac_recover)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cloning pbkdf2_hmac_recover/12 to pbkdf2_hmac_recover.constprop/50
+    replace map: 2 -> 0B
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t pbkdf2_hmac_recover (struct hmac_ctx_st * ctx, const struct hmac_ctx_st * ctx_bak, const uint32_t * iterator)
+{
+  uint32_t ret;
+  <unnamed type> _1;
+  unsigned int _2;
+  <unnamed type> _3;
+  unsigned char _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  uint32_t[36] * _7;
+  unsigned char _8;
+  long unsigned int _9;
+  unsigned char _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  short unsigned int _13;
+  long unsigned int _14;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  memcpy_ (ctx_18(D), ctx_bak_19(D), 540);
+  # DEBUG BEGIN_STMT
+  _1 = ctx_18(D)->hash_ctx[0].alg;
+  _2 = _1 + 4294967287;
+  if (_2 <= 3)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  hash_set_cpu_mode ();
+  # DEBUG BEGIN_STMT
+  hash_set_hash_mode ();
+  # DEBUG BEGIN_STMT
+  hash_set_endian_uint32 ();
+  # DEBUG BEGIN_STMT
+  hash_disable_cpu_interruption ();
+  # DEBUG BEGIN_STMT
+  hash_set_last_block (0);
+  # DEBUG BEGIN_STMT
+  _3 = ctx_18(D)->hash_ctx[0].alg;
+  hash_set_alg (_3);
+  # DEBUG BEGIN_STMT
+  hash_update_config ();
+  # DEBUG BEGIN_STMT
+  _4 = ctx_18(D)->hash_ctx[0].iterator_word_len;
+  _5 = (long unsigned int) _4;
+  hash_set_iterator (iterator_30(D), _5);
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _6 = ctx_18(D)->key_len_flag;
+  _7 = &ctx_18(D)->K0;
+  _8 = ctx_18(D)->hash_ctx[0].block_byte_len;
+  _9 = (long unsigned int) _8;
+  _10 = ctx_18(D)->hash_ctx[0].iterator_word_len;
+  _11 = (long unsigned int) _10;
+  _12 = ctx_18(D)->is_sp_key;
+  _13 = ctx_18(D)->sp_key_idx;
+  _14 = ctx_18(D)->sp_key_bytes;
+  ret_22 = hmac_key_state_recover (_1, _6, _7, _9, _11, _12, _13, _14);
+  # DEBUG ret => ret_22
+
+  <bb 5> [local count: 1073741824]:
+  # ret_15 = PHI <0(3), ret_22(4)>
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+  return ret_15;
+
+}
+
+
+uint32_t pbkdf2_hmac_recover.constprop (struct hmac_ctx_st * ctx, const struct hmac_ctx_st * ctx_bak)
+{
+  uint32_t ret;
+  const uint32_t * iterator;
+  <unnamed type> _3;
+  unsigned int _4;
+  <unnamed type> _5;
+  unsigned char _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  uint32_t[36] * _9;
+  unsigned char _10;
+  long unsigned int _11;
+  unsigned char _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  short unsigned int _15;
+  long unsigned int _16;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG iterator => 0B
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  memcpy_ (ctx_1(D), ctx_bak_2(D), 540);
+  # DEBUG BEGIN_STMT
+  _3 = ctx_1(D)->hash_ctx[0].alg;
+  _4 = _3 + 4294967287;
+  if (_4 <= 3)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  hash_set_cpu_mode ();
+  # DEBUG BEGIN_STMT
+  hash_set_hash_mode ();
+  # DEBUG BEGIN_STMT
+  hash_set_endian_uint32 ();
+  # DEBUG BEGIN_STMT
+  hash_disable_cpu_interruption ();
+  # DEBUG BEGIN_STMT
+  hash_set_last_block (0);
+  # DEBUG BEGIN_STMT
+  _5 = ctx_1(D)->hash_ctx[0].alg;
+  hash_set_alg (_5);
+  # DEBUG BEGIN_STMT
+  hash_update_config ();
+  # DEBUG BEGIN_STMT
+  _6 = ctx_1(D)->hash_ctx[0].iterator_word_len;
+  _7 = (long unsigned int) _6;
+  hash_set_iterator (0B, _7);
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  _8 = ctx_1(D)->key_len_flag;
+  _9 = &ctx_1(D)->K0;
+  _10 = ctx_1(D)->hash_ctx[0].block_byte_len;
+  _11 = (long unsigned int) _10;
+  _12 = ctx_1(D)->hash_ctx[0].iterator_word_len;
+  _13 = (long unsigned int) _12;
+  _14 = ctx_1(D)->is_sp_key;
+  _15 = ctx_1(D)->sp_key_idx;
+  _16 = ctx_1(D)->sp_key_bytes;
+  ret_17 = hmac_key_state_recover (_3, _8, _9, _11, _13, _14, _15, _16);
+  # DEBUG ret => ret_17
+
+  <bb 5> [local count: 1073741824]:
+  # ret_18 = PHI <0(3), ret_17(4)>
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  return ret_18;
+
+}
+
+
+cloning pbkdf2_hmac_calc_f/14 to pbkdf2_hmac_calc_f.constprop/49
+    replace map: 2 -> 0B
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+__attribute__((access ("^3[4]", )))
+uint32_t pbkdf2_hmac_calc_f (const struct hmac_ctx_st * ctx, hash_alg_e alg, const uint32_t * iterator, const uint8_t * counter, const uint8_t * salt, uint32_t salt_bytes, uint32_t iter, uint8_t * out, uint32_t out_bytes)
+{
+  struct hmac_ctx_st ctx_tmp[1];
+  uint32_t j;
+  uint32_t i;
+  uint32_t ret;
+  uint32_t digest_bytes;
+  uint32_t digest_words;
+  uint32_t digest[16];
+  uint32_t result[16];
+  unsigned char _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 128367472]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ctx_ptr => &ctx_tmp
+  # DEBUG BEGIN_STMT
+  _1 = hash_get_digest_word_len (alg_14(D));
+  digest_words_16 = (uint32_t) _1;
+  # DEBUG digest_words => digest_words_16
+  # DEBUG BEGIN_STMT
+  digest_bytes_17 = digest_words_16 << 2;
+  # DEBUG digest_bytes => digest_bytes_17
+  # DEBUG BEGIN_STMT
+  ret_21 = pbkdf2_hmac_recover (&ctx_tmp, ctx_18(D), iterator_19(D));
+  # DEBUG ret => ret_21
+  # DEBUG BEGIN_STMT
+  if (ret_21 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 13>; [67.00%]
+
+  <bb 3> [local count: 42361266]:
+  # DEBUG BEGIN_STMT
+  ret_26 = pbkdf2_hmac_update_get_mac (&ctx_tmp, salt_22(D), salt_bytes_23(D), counter_24(D), 4, &result);
+  # DEBUG ret => ret_26
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_26 == 0)
+    goto <bb 4>; [33.00%]
+  else
+    goto <bb 13>; [67.00%]
+
+  <bb 4> [local count: 13979218]:
+  # DEBUG BEGIN_STMT
+  uint32_copy (&digest, &result, digest_words_16);
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 1
+  goto <bb 10>; [100.00%]
+
+  <bb 5> [local count: 127256293]:
+  # DEBUG BEGIN_STMT
+  ret_30 = pbkdf2_hmac_recover (&ctx_tmp, ctx_18(D), iterator_19(D));
+  # DEBUG ret => ret_30
+  # DEBUG BEGIN_STMT
+  if (ret_30 == 0)
+    goto <bb 6>; [96.34%]
+  else
+    goto <bb 11>; [3.66%]
+
+  <bb 6> [local count: 122598713]:
+  # DEBUG BEGIN_STMT
+  ret_32 = pbkdf2_hmac_update_get_mac (&ctx_tmp, &digest, digest_bytes_17, 0B, 0, &digest);
+  # DEBUG ret => ret_32
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_32 == 0)
+    goto <bb 14>; [96.34%]
+  else
+    goto <bb 11>; [3.66%]
+
+  <bb 14> [local count: 118111600]:
+  goto <bb 8>; [100.00%]
+
+  <bb 7> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _2 = result[j_8];
+  _3 = digest[j_8];
+  _4 = _2 ^ _3;
+  result[j_8] = _4;
+  # DEBUG BEGIN_STMT
+  j_35 = j_8 + 1;
+  # DEBUG j => j_35
+
+  <bb 8> [local count: 1073741824]:
+  # j_8 = PHI <0(14), j_35(7)>
+  # DEBUG j => j_8
+  # DEBUG BEGIN_STMT
+  if (j_8 < digest_words_16)
+    goto <bb 7>; [89.00%]
+  else
+    goto <bb 9>; [11.00%]
+
+  <bb 9> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  i_33 = i_7 + 1;
+  # DEBUG i => i_33
+
+  <bb 10> [local count: 132090817]:
+  # i_7 = PHI <1(4), i_33(9)>
+  # DEBUG i => i_7
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  if (i_7 < iter_28(D))
+    goto <bb 5>; [96.34%]
+  else
+    goto <bb 11>; [3.66%]
+
+  <bb 11> [local count: 13979218]:
+  # ret_5 = PHI <ret_32(6), 0(10), ret_30(5)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 0)
+    goto <bb 12>; [33.00%]
+  else
+    goto <bb 13>; [67.00%]
+
+  <bb 12> [local count: 4613142]:
+  # DEBUG BEGIN_STMT
+  memcpy_ (out_36(D), &result, out_bytes_37(D));
+
+  <bb 13> [local count: 128367472]:
+  # ret_6 = PHI <ret_26(3), 0(12), ret_5(11), ret_21(2)>
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  result ={v} {CLOBBER(eos)};
+  digest ={v} {CLOBBER(eos)};
+  ctx_tmp ={v} {CLOBBER(eos)};
+  return ret_6;
+
+}
+
+
+uint32_t pbkdf2_hmac_calc_f.constprop (const struct hmac_ctx_st * ctx, hash_alg_e alg, const uint8_t * counter, const uint8_t * salt, uint32_t salt_bytes, uint32_t iter, uint8_t * out, uint32_t out_bytes)
+{
+  uint32_t result[16];
+  uint32_t digest[16];
+  uint32_t digest_words;
+  uint32_t digest_bytes;
+  uint32_t ret;
+  uint32_t i;
+  uint32_t j;
+  struct hmac_ctx_st ctx_tmp[1];
+  const uint32_t * iterator;
+  unsigned char _2;
+  long unsigned int _14;
+  long unsigned int _15;
+  long unsigned int _16;
+
+  <bb 15> [local count: 128367472]:
+  # DEBUG iterator => 0B
+
+  <bb 2> [local count: 128367472]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ctx_ptr => &ctx_tmp
+  # DEBUG BEGIN_STMT
+  _2 = hash_get_digest_word_len (alg_1(D));
+  digest_words_3 = (uint32_t) _2;
+  # DEBUG digest_words => digest_words_3
+  # DEBUG BEGIN_STMT
+  digest_bytes_4 = digest_words_3 << 2;
+  # DEBUG digest_bytes => digest_bytes_4
+  # DEBUG BEGIN_STMT
+  ret_6 = pbkdf2_hmac_recover (&ctx_tmp, ctx_5(D), 0B);
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  if (ret_6 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 14>; [67.00%]
+
+  <bb 3> [local count: 42361266]:
+  # DEBUG BEGIN_STMT
+  ret_10 = pbkdf2_hmac_update_get_mac (&ctx_tmp, salt_7(D), salt_bytes_8(D), counter_9(D), 4, &result);
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_10 == 0)
+    goto <bb 4>; [33.00%]
+  else
+    goto <bb 14>; [67.00%]
+
+  <bb 4> [local count: 13979218]:
+  # DEBUG BEGIN_STMT
+  uint32_copy (&digest, &result, digest_words_3);
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 1
+  goto <bb 11>; [100.00%]
+
+  <bb 5> [local count: 127256293]:
+  # DEBUG BEGIN_STMT
+  ret_11 = pbkdf2_hmac_recover (&ctx_tmp, ctx_5(D), 0B);
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  if (ret_11 == 0)
+    goto <bb 6>; [96.34%]
+  else
+    goto <bb 12>; [3.66%]
+
+  <bb 6> [local count: 122598713]:
+  # DEBUG BEGIN_STMT
+  ret_12 = pbkdf2_hmac_update_get_mac (&ctx_tmp, &digest, digest_bytes_4, 0B, 0, &digest);
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (ret_12 == 0)
+    goto <bb 7>; [96.34%]
+  else
+    goto <bb 12>; [3.66%]
+
+  <bb 7> [local count: 118111600]:
+  goto <bb 9>; [100.00%]
+
+  <bb 8> [local count: 955630224]:
+  # DEBUG BEGIN_STMT
+  _14 = result[j_13];
+  _15 = digest[j_13];
+  _16 = _14 ^ _15;
+  result[j_13] = _16;
+  # DEBUG BEGIN_STMT
+  j_17 = j_13 + 1;
+  # DEBUG j => j_17
+
+  <bb 9> [local count: 1073741824]:
+  # j_13 = PHI <0(7), j_17(8)>
+  # DEBUG j => j_13
+  # DEBUG BEGIN_STMT
+  if (digest_words_3 > j_13)
+    goto <bb 8>; [89.00%]
+  else
+    goto <bb 10>; [11.00%]
+
+  <bb 10> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  i_19 = i_18 + 1;
+  # DEBUG i => i_19
+
+  <bb 11> [local count: 132090817]:
+  # i_18 = PHI <1(4), i_19(10)>
+  # DEBUG i => i_18
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  if (i_18 < iter_20(D))
+    goto <bb 5>; [96.34%]
+  else
+    goto <bb 12>; [3.66%]
+
+  <bb 12> [local count: 13979218]:
+  # ret_21 = PHI <ret_11(5), ret_12(6), 0(11)>
+  # DEBUG ret => ret_21
+  # DEBUG BEGIN_STMT
+  if (ret_21 == 0)
+    goto <bb 13>; [33.00%]
+  else
+    goto <bb 14>; [67.00%]
+
+  <bb 13> [local count: 4613142]:
+  # DEBUG BEGIN_STMT
+  memcpy_ (out_22(D), &result, out_bytes_23(D));
+
+  <bb 14> [local count: 128367472]:
+  # ret_24 = PHI <ret_6(2), ret_10(3), ret_21(12), 0(13)>
+  # DEBUG ret => ret_24
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  result ={v} {CLOBBER(eos)};
+  digest ={v} {CLOBBER(eos)};
+  ctx_tmp ={v} {CLOBBER(eos)};
+  return ret_24;
+
+}
+
+
+updating call of pbkdf2_hmac/15 -> pbkdf2_hmac_calc_f.constprop/49: ret_28 = pbkdf2_hmac_calc_f (&ctx_bak, alg_16(D), 0B, &counter, salt_18(D), actual_salt_bytes_3, iter_26(D), current_out_5, _6);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_28 = pbkdf2_hmac_calc_f.constprop (&ctx_bak, alg_16(D), &counter, salt_18(D), actual_salt_bytes_3, iter_26(D), current_out_5, _6);
+updating call of pbkdf2_hmac/15 -> pbkdf2_hmac_recover.constprop/50: ret_39 = pbkdf2_hmac_recover (&ctx_tmp, &ctx_bak, 0B);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_39 = pbkdf2_hmac_recover.constprop (&ctx_tmp, &ctx_bak);
+updating call of pbkdf2_hmac/15 -> pbkdf2_hmac_recover.constprop/50: ret_41 = pbkdf2_hmac_recover (&ctx_tmp, &ctx_bak, 0B);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_41 = pbkdf2_hmac_recover.constprop (&ctx_tmp, &ctx_bak);
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+pbkdf2_hmac_recover.constprop.0/50 (pbkdf2_hmac_recover.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.pbkdf2_hmac_recover.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+hash_node_steps/44 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint8_BigNum_Check_Zero/43 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/42 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint8_XOR/41 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_final/40 (hmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_update/39 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_key_state_recover/38 (hmac_key_state_recover)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_iterator/37 (hash_set_iterator)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_update_config/36 (hash_update_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_alg/35 (hash_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_last_block/34 (hash_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_disable_cpu_interruption/33 (hash_disable_cpu_interruption)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_endian_uint32/32 (hash_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_hash_mode/31 (hash_set_hash_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_set_cpu_mode/30 (hash_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_copy/29 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/27 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint8_big_num_big_endian_add_little/26 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_init/25 (hmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+check_hash_alg/23 (check_hash_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf/22 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_node/21 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf_node (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_digest_remainder/20 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ansi_x9_63_kdf_digest_remainder (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_internal/19 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:275253251 (estimated locally)
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_node_with_xor_in/18 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf_node_with_xor_in (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:315975385 (estimated locally)
+  Called by: 
+  Calls: 
+pbkdf2_hmac/15 (pbkdf2_hmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pbkdf2_hmac (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:659069927 (estimated locally)
+  Called by: 
+  Calls: 
+pbkdf2_hmac_calc_f/14 (pbkdf2_hmac_calc_f)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:128367472 (estimated locally)
+  Called by: 
+  Calls: 
+pbkdf2_hmac_recover/12 (pbkdf2_hmac_recover)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

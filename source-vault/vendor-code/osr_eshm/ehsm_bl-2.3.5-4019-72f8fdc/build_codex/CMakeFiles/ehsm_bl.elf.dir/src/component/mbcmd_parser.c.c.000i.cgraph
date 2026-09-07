@@ -1,0 +1,3354 @@
+Trivially needed symbols: mbcmdpars_parse_cmd/38
+
+
+Initial Symbol table:
+
+selftest_get_test_result/74 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 
+  Calls: 
+cpt_trng_get_driver_version/73 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_trng_get_version/72 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_driver_version/71 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_version/70 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_driver_version/69 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_version/68 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_driver_version/67 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_version/66 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+debug_printf/65 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+uart_set_baudrate/64 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+memset_/63 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/15 
+  Calls: 
+mmap_read_remote_data/62 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: 
+secp256r1/61 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: mbcmdpars_get_secckey/25 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_getkey/60 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_secckey/25 
+  Calls: 
+cpt_ske_crypto/59 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 
+  Calls: 
+cpt_sm2_getkey/58 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_sm2key/24 
+  Calls: 
+otpkey_get_phyid/57 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+otpkey_check_usage/56 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+cpt_get_rand/55 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_symkey/23 
+  Calls: 
+util_crc32/54 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_rankey/26 
+  Calls: 
+sysreg_get_otpkey_dec_alg/53 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: 
+mmap_write_remote_data/52 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: 
+otp_write/51 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_otp_write/29 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/14 
+  Calls: 
+otp_read/49 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_handle_otp_read/30 
+  Calls: 
+mmap_remap_addr_u64/48 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_panic/47 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_delay/46 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+sysreg_get_life_cycle/45 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+selftest_test_alg/44 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+dbgauth_srv_handler/42 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+fwverify_verify_image/40 (fwverify_verify_image)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+fwupd_image_upgrade/39 (fwupd_image_upgrade)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+mbcmdpars_parse_cmd/38 (mbcmdpars_parse_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: mbcmdpars_handle_get_test_result/37 selftest_test_alg/44 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 fwverify_verify_image/40 fwupd_image_upgrade/39 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+mbcmdpars_handle_get_test_result/37 (mbcmdpars_handle_get_test_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 selftest_get_test_result/74 util_memcpy/14 
+mbcmdpars_handle_read_version/36 (mbcmdpars_handle_read_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 otp_read/49 cpt_trng_get_driver_version/73 cpt_trng_get_version/72 cpt_hash_get_driver_version/71 cpt_hash_get_version/70 cpt_ske_get_driver_version/69 cpt_ske_get_version/68 cpt_pke_get_driver_version/67 cpt_pke_get_version/66 util_memcpy/14 util_memset/15 
+mbcmdpars_handle_set_baud/35 (mbcmdpars_handle_set_baud)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: debug_printf/65 cpu_exit_critical/43 uart_set_baudrate/64 cpu_enter_critical/41 util_memcpy/14 
+mbcmdpars_handle_encrypt_key/34 (mbcmdpars_handle_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mmap_read_remote_data/62 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 util_memcpy/14 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_handle_get_randkey/33 (mbcmdpars_handle_get_randkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_get_rankey/26 mbcmdpars_check_lifecycle/27 util_memcpy/14 
+mbcmdpars_handle_reg_read/32 (mbcmdpars_handle_reg_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_reg_write/31 (mbcmdpars_handle_reg_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_read/30 (mbcmdpars_handle_otp_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_read/49 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_write/29 (mbcmdpars_handle_otp_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_write/51 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_enc_keyid/28 (mbcmdpars_get_enc_keyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442f52ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: otpkey_get_phyid/57 otpkey_check_usage/56 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_check_lifecycle/27 (mbcmdpars_check_lifecycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_rankey/26 (mbcmdpars_get_rankey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_randkey/33 
+  Calls: util_memcpy/14 util_crc32/54 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_symkey/23 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_get_secckey/25 (mbcmdpars_get_secckey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3990
+  References: secp256r1/61 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 eccp_getkey/60 
+mbcmdpars_get_sm2key/24 (mbcmdpars_get_sm2key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 cpt_sm2_getkey/58 
+mbcmdpars_get_symkey/23 (mbcmdpars_get_symkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_get_rand/55 
+mbcmdpars_enc_key/22 (mbcmdpars_enc_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 cpt_ske_crypto/59 
+mbcmdpars_dec_key_by_rtlkey/21 (mbcmdpars_dec_key_by_rtlkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442f52cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 util_memcpy/14 cpt_ske_crypto/59 util_memset/15 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+filename/20 (filename)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_write_volatile_u32/19 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/18 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/17 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/16 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442f52bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 
+  Calls: memset_/63 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa442fb3440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 mbcmdpars_handle_get_randkey/33 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: memcpy_/50 
+check_addr_not_word_align/13 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/12 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/11 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/10 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/9 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_read_fw_ctrl_bits/8 (sysreg_read_fw_ctrl_bits)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: filename/20 util_write_volatile_u32/19 util_read_volatile_u32/18 util_u32_copy/17 util_memcmp/16 check_addr_not_word_align/13 GET_BYTE_LEN/12 GET_WORD_LEN/11 GET_MAX_LEN/10 CAST2UINT32/9 sysreg_read_fw_ctrl_bits/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+selftest_get_test_result/74 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 
+  Calls: 
+cpt_trng_get_driver_version/73 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_trng_get_version/72 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_driver_version/71 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_version/70 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_driver_version/69 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_version/68 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_driver_version/67 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_version/66 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+debug_printf/65 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+uart_set_baudrate/64 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+memset_/63 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/15 
+  Calls: 
+mmap_read_remote_data/62 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: 
+secp256r1/61 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: mbcmdpars_get_secckey/25 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_getkey/60 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_secckey/25 
+  Calls: 
+cpt_ske_crypto/59 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 
+  Calls: 
+cpt_sm2_getkey/58 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_sm2key/24 
+  Calls: 
+otpkey_get_phyid/57 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+otpkey_check_usage/56 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+cpt_get_rand/55 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_symkey/23 
+  Calls: 
+util_crc32/54 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_rankey/26 
+  Calls: 
+sysreg_get_otpkey_dec_alg/53 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: 
+mmap_write_remote_data/52 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: 
+otp_write/51 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_otp_write/29 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/14 
+  Calls: 
+otp_read/49 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_handle_otp_read/30 
+  Calls: 
+mmap_remap_addr_u64/48 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_panic/47 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_delay/46 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+sysreg_get_life_cycle/45 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+selftest_test_alg/44 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+dbgauth_srv_handler/42 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+fwverify_verify_image/40 (fwverify_verify_image)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+fwupd_image_upgrade/39 (fwupd_image_upgrade)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+mbcmdpars_parse_cmd/38 (mbcmdpars_parse_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: mbcmdpars_handle_get_test_result/37 selftest_test_alg/44 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 fwverify_verify_image/40 fwupd_image_upgrade/39 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+mbcmdpars_handle_get_test_result/37 (mbcmdpars_handle_get_test_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 selftest_get_test_result/74 util_memcpy/14 
+mbcmdpars_handle_read_version/36 (mbcmdpars_handle_read_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 otp_read/49 cpt_trng_get_driver_version/73 cpt_trng_get_version/72 cpt_hash_get_driver_version/71 cpt_hash_get_version/70 cpt_ske_get_driver_version/69 cpt_ske_get_version/68 cpt_pke_get_driver_version/67 cpt_pke_get_version/66 util_memcpy/14 util_memset/15 
+mbcmdpars_handle_set_baud/35 (mbcmdpars_handle_set_baud)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: debug_printf/65 cpu_exit_critical/43 uart_set_baudrate/64 cpu_enter_critical/41 util_memcpy/14 
+mbcmdpars_handle_encrypt_key/34 (mbcmdpars_handle_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mmap_read_remote_data/62 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 util_memcpy/14 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_handle_get_randkey/33 (mbcmdpars_handle_get_randkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_get_rankey/26 mbcmdpars_check_lifecycle/27 util_memcpy/14 
+mbcmdpars_handle_reg_read/32 (mbcmdpars_handle_reg_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_reg_write/31 (mbcmdpars_handle_reg_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_read/30 (mbcmdpars_handle_otp_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_read/49 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_write/29 (mbcmdpars_handle_otp_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_write/51 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_enc_keyid/28 (mbcmdpars_get_enc_keyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: otpkey_get_phyid/57 otpkey_check_usage/56 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_check_lifecycle/27 (mbcmdpars_check_lifecycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_rankey/26 (mbcmdpars_get_rankey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_randkey/33 
+  Calls: util_memcpy/14 util_crc32/54 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_symkey/23 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_get_secckey/25 (mbcmdpars_get_secckey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secp256r1/61 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 eccp_getkey/60 
+mbcmdpars_get_sm2key/24 (mbcmdpars_get_sm2key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 cpt_sm2_getkey/58 
+mbcmdpars_get_symkey/23 (mbcmdpars_get_symkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_get_rand/55 
+mbcmdpars_enc_key/22 (mbcmdpars_enc_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 cpt_ske_crypto/59 
+mbcmdpars_dec_key_by_rtlkey/21 (mbcmdpars_dec_key_by_rtlkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 util_memcpy/14 cpt_ske_crypto/59 util_memset/15 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 
+  Calls: memset_/63 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 mbcmdpars_handle_get_randkey/33 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: memcpy_/50 
+
+
+Initial Symbol table:
+
+selftest_get_test_result/74 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 
+  Calls: 
+cpt_trng_get_driver_version/73 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_trng_get_version/72 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_driver_version/71 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_version/70 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_driver_version/69 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_version/68 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_driver_version/67 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_version/66 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+debug_printf/65 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+uart_set_baudrate/64 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+memset_/63 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/15 
+  Calls: 
+mmap_read_remote_data/62 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: 
+secp256r1/61 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: mbcmdpars_get_secckey/25 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_getkey/60 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_secckey/25 
+  Calls: 
+cpt_ske_crypto/59 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 
+  Calls: 
+cpt_sm2_getkey/58 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_sm2key/24 
+  Calls: 
+otpkey_get_phyid/57 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+otpkey_check_usage/56 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+cpt_get_rand/55 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_symkey/23 
+  Calls: 
+util_crc32/54 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_rankey/26 
+  Calls: 
+sysreg_get_otpkey_dec_alg/53 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: 
+mmap_write_remote_data/52 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: 
+otp_write/51 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_otp_write/29 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/14 
+  Calls: 
+otp_read/49 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_handle_otp_read/30 
+  Calls: 
+mmap_remap_addr_u64/48 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_panic/47 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_delay/46 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+sysreg_get_life_cycle/45 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+selftest_test_alg/44 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+dbgauth_srv_handler/42 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+fwverify_verify_image/40 (fwverify_verify_image)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+fwupd_image_upgrade/39 (fwupd_image_upgrade)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+mbcmdpars_parse_cmd/38 (mbcmdpars_parse_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: mbcmdpars_handle_get_test_result/37 selftest_test_alg/44 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 fwverify_verify_image/40 fwupd_image_upgrade/39 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+mbcmdpars_handle_get_test_result/37 (mbcmdpars_handle_get_test_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 selftest_get_test_result/74 util_memcpy/14 
+mbcmdpars_handle_read_version/36 (mbcmdpars_handle_read_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 otp_read/49 cpt_trng_get_driver_version/73 cpt_trng_get_version/72 cpt_hash_get_driver_version/71 cpt_hash_get_version/70 cpt_ske_get_driver_version/69 cpt_ske_get_version/68 cpt_pke_get_driver_version/67 cpt_pke_get_version/66 util_memcpy/14 util_memset/15 
+mbcmdpars_handle_set_baud/35 (mbcmdpars_handle_set_baud)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: debug_printf/65 cpu_exit_critical/43 uart_set_baudrate/64 cpu_enter_critical/41 util_memcpy/14 
+mbcmdpars_handle_encrypt_key/34 (mbcmdpars_handle_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mmap_read_remote_data/62 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 util_memcpy/14 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_handle_get_randkey/33 (mbcmdpars_handle_get_randkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_get_rankey/26 mbcmdpars_check_lifecycle/27 util_memcpy/14 
+mbcmdpars_handle_reg_read/32 (mbcmdpars_handle_reg_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_reg_write/31 (mbcmdpars_handle_reg_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_read/30 (mbcmdpars_handle_otp_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_read/49 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_write/29 (mbcmdpars_handle_otp_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_write/51 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_enc_keyid/28 (mbcmdpars_get_enc_keyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: otpkey_get_phyid/57 otpkey_check_usage/56 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_check_lifecycle/27 (mbcmdpars_check_lifecycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_rankey/26 (mbcmdpars_get_rankey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_randkey/33 
+  Calls: util_memcpy/14 util_crc32/54 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_symkey/23 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_get_secckey/25 (mbcmdpars_get_secckey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secp256r1/61 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 eccp_getkey/60 
+mbcmdpars_get_sm2key/24 (mbcmdpars_get_sm2key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 cpt_sm2_getkey/58 
+mbcmdpars_get_symkey/23 (mbcmdpars_get_symkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_get_rand/55 
+mbcmdpars_enc_key/22 (mbcmdpars_enc_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 cpt_ske_crypto/59 
+mbcmdpars_dec_key_by_rtlkey/21 (mbcmdpars_dec_key_by_rtlkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 util_memcpy/14 cpt_ske_crypto/59 util_memset/15 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 
+  Calls: memset_/63 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 mbcmdpars_handle_get_randkey/33 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: memcpy_/50 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+selftest_get_test_result/74 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 
+  Calls: 
+cpt_trng_get_driver_version/73 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_trng_get_version/72 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_driver_version/71 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_hash_get_version/70 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_driver_version/69 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_ske_get_version/68 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_driver_version/67 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+cpt_pke_get_version/66 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 
+  Calls: 
+debug_printf/65 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+uart_set_baudrate/64 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 
+  Calls: 
+memset_/63 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/15 
+  Calls: 
+mmap_read_remote_data/62 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: 
+secp256r1/61 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: mbcmdpars_get_secckey/25 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+eccp_getkey/60 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_secckey/25 
+  Calls: 
+cpt_ske_crypto/59 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 
+  Calls: 
+cpt_sm2_getkey/58 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_sm2key/24 
+  Calls: 
+otpkey_get_phyid/57 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+otpkey_check_usage/56 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 
+  Calls: 
+cpt_get_rand/55 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_symkey/23 
+  Calls: 
+util_crc32/54 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_get_rankey/26 
+  Calls: 
+sysreg_get_otpkey_dec_alg/53 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: 
+mmap_write_remote_data/52 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: 
+otp_write/51 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_otp_write/29 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/14 
+  Calls: 
+otp_read/49 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_handle_otp_read/30 
+  Calls: 
+mmap_remap_addr_u64/48 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_panic/47 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: 
+fid_delay/46 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+sysreg_get_life_cycle/45 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid/28 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 mbcmdpars_check_lifecycle/27 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 mbcmdpars_handle_otp_read/30 
+  Calls: 
+selftest_test_alg/44 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+dbgauth_srv_handler/42 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 mbcmdpars_parse_cmd/38 mbcmdpars_parse_cmd/38 
+  Calls: 
+fwverify_verify_image/40 (fwverify_verify_image)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+fwupd_image_upgrade/39 (fwupd_image_upgrade)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: 
+mbcmdpars_parse_cmd/38 (mbcmdpars_parse_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: mbcmdpars_handle_get_test_result/37 selftest_test_alg/44 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 cpu_exit_critical/43 dbgauth_srv_handler/42 cpu_enter_critical/41 mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 fwverify_verify_image/40 fwupd_image_upgrade/39 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+mbcmdpars_handle_get_test_result/37 (mbcmdpars_handle_get_test_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 selftest_get_test_result/74 util_memcpy/14 
+mbcmdpars_handle_read_version/36 (mbcmdpars_handle_read_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 otp_read/49 cpt_trng_get_driver_version/73 cpt_trng_get_version/72 cpt_hash_get_driver_version/71 cpt_hash_get_version/70 cpt_ske_get_driver_version/69 cpt_ske_get_version/68 cpt_pke_get_driver_version/67 cpt_pke_get_version/66 util_memcpy/14 util_memset/15 
+mbcmdpars_handle_set_baud/35 (mbcmdpars_handle_set_baud)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: debug_printf/65 cpu_exit_critical/43 uart_set_baudrate/64 cpu_enter_critical/41 util_memcpy/14 
+mbcmdpars_handle_encrypt_key/34 (mbcmdpars_handle_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mmap_read_remote_data/62 mbcmdpars_get_enc_keyid/28 mbcmdpars_check_lifecycle/27 util_memcpy/14 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_handle_get_randkey/33 (mbcmdpars_handle_get_randkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: mmap_write_remote_data/52 mbcmdpars_get_rankey/26 mbcmdpars_check_lifecycle/27 util_memcpy/14 
+mbcmdpars_handle_reg_read/32 (mbcmdpars_handle_reg_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_reg_write/31 (mbcmdpars_handle_reg_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: util_memcpy/14 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_read/30 (mbcmdpars_handle_otp_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_read/49 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_handle_otp_write/29 (mbcmdpars_handle_otp_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_parse_cmd/38 
+  Calls: otp_write/51 mmap_remap_addr_u64/48 fid_delay/46 fid_delay/46 fid_delay/46 fid_delay/46 util_memcpy/14 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_enc_keyid/28 (mbcmdpars_get_enc_keyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 
+  Calls: otpkey_get_phyid/57 otpkey_check_usage/56 fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_check_lifecycle/27 (mbcmdpars_check_lifecycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 mbcmdpars_handle_get_randkey/33 
+  Calls: fid_panic/47 fid_delay/46 fid_delay/46 sysreg_get_life_cycle/45 fid_delay/46 sysreg_get_life_cycle/45 
+mbcmdpars_get_rankey/26 (mbcmdpars_get_rankey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_randkey/33 
+  Calls: util_memcpy/14 util_crc32/54 mbcmdpars_get_secckey/25 mbcmdpars_get_sm2key/24 mbcmdpars_get_enc_keyid/28 mbcmdpars_get_symkey/23 sysreg_get_otpkey_dec_alg/53 
+mbcmdpars_get_secckey/25 (mbcmdpars_get_secckey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secp256r1/61 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 eccp_getkey/60 
+mbcmdpars_get_sm2key/24 (mbcmdpars_get_sm2key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_ske_crypto/59 cpt_sm2_getkey/58 
+mbcmdpars_get_symkey/23 (mbcmdpars_get_symkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_get_rankey/26 
+  Calls: cpt_get_rand/55 
+mbcmdpars_enc_key/22 (mbcmdpars_enc_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 cpt_ske_crypto/59 
+mbcmdpars_dec_key_by_rtlkey/21 (mbcmdpars_dec_key_by_rtlkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 
+  Calls: util_memcpy/14 util_crc32/54 util_memcpy/14 cpt_ske_crypto/59 util_memset/15 util_memset/15 sysreg_get_otpkey_dec_alg/53 
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_read_version/36 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 
+  Calls: memset_/63 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 mbcmdpars_handle_read_version/36 mbcmdpars_handle_set_baud/35 mbcmdpars_enc_key/22 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_dec_key_by_rtlkey/21 mbcmdpars_handle_encrypt_key/34 mbcmdpars_get_rankey/26 mbcmdpars_handle_get_randkey/33 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_read/32 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_reg_write/31 mbcmdpars_handle_otp_write/29 mbcmdpars_handle_otp_read/30 
+  Calls: memcpy_/50 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+mbcmdpars_get_sm2key.constprop.0/94 (mbcmdpars_get_sm2key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function mbcmdpars_get_sm2key.constprop/94 is inline copy in mbcmdpars_parse_cmd/38
+  Clone of mbcmdpars_get_sm2key/24
+  Availability: local
+  Function flags: count:259273 (estimated locally) local optimize_size
+  Called by: mbcmdpars_get_rankey/26 (inlined) (259273 (estimated locally),0.00 per call) 
+  Calls: cpt_sm2_getkey/58 (259273 (estimated locally),0.00 per call) cpt_ske_crypto/59 (52477 (estimated locally),0.00 per call) 
+mbcmdpars_get_secckey.constprop.0/93 (mbcmdpars_get_secckey.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: secp256r1/61 (addr) 
+  Referring: 
+  Function mbcmdpars_get_secckey.constprop/93 is inline copy in mbcmdpars_parse_cmd/38
+  Clone of mbcmdpars_get_secckey/25
+  Availability: local
+  Function flags: count:503295 (estimated locally) local optimize_size
+  Called by: mbcmdpars_get_rankey/26 (inlined) (503295 (estimated locally),0.00 per call) 
+  Calls: eccp_getkey/60 (503295 (estimated locally),0.00 per call) cpt_ske_crypto/59 (166087 (estimated locally),0.00 per call) 
+mbcmdpars_get_enc_keyid.constprop.0/92 (mbcmdpars_get_enc_keyid.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of mbcmdpars_get_enc_keyid/28
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: mbcmdpars_get_rankey/26 (2242847 (estimated locally),0.00 per call) mbcmdpars_handle_encrypt_key/34 (22943406 (estimated locally),0.02 per call) 
+  Calls: sysreg_get_life_cycle/45 (1073741824 (estimated locally),1.00 per call) fid_delay/46 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/45 (1073741824 (estimated locally),1.00 per call) fid_delay/46 (1073741824 (estimated locally),1.00 per call) fid_delay/46 (145607981 (estimated locally),0.14 per call) fid_panic/47 (1000937833 (estimated locally),0.93 per call) otpkey_check_usage/56 (241860348 (estimated locally),0.23 per call) otpkey_get_phyid/57 (551726129 (estimated locally),0.51 per call) 
+selftest_get_test_result/74 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 (34195098 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_trng_get_driver_version/73 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_trng_get_version/72 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_hash_get_driver_version/71 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_hash_get_version/70 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_ske_get_driver_version/69 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_ske_get_version/68 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_pke_get_driver_version/67 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_pke_get_version/66 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) 
+  Calls: 
+debug_printf/65 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 (15003752 (estimated locally),0.01 per call) 
+  Calls: 
+uart_set_baudrate/64 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_set_baud/35 (15003752 (estimated locally),0.01 per call) 
+  Calls: 
+memset_/63 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_encrypt_key/34 (1073741824 (estimated locally),1.00 per call) mbcmdpars_dec_key_by_rtlkey/21 (939894 (estimated locally),0.00 per call) mbcmdpars_dec_key_by_rtlkey/21 (939894 (estimated locally),0.00 per call) 
+  Calls: 
+mmap_read_remote_data/62 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 (4643745 (estimated locally),0.00 per call) 
+  Calls: 
+secp256r1/61 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: mbcmdpars_get_secckey.constprop.0/93 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+eccp_getkey/60 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_secckey.constprop.0/93 (503295 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_ske_crypto/59 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_sm2key.constprop.0/94 (52477 (estimated locally),0.00 per call) mbcmdpars_get_secckey.constprop.0/93 (166087 (estimated locally),0.00 per call) mbcmdpars_dec_key_by_rtlkey/21 (613342 (estimated locally),0.00 per call) mbcmdpars_enc_key/22 (143624961 (estimated locally),0.13 per call) 
+  Calls: 
+cpt_sm2_getkey/58 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_sm2key.constprop.0/94 (259273 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_get_phyid/57 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid.constprop.0/92 (551726129 (estimated locally),0.51 per call) 
+  Calls: 
+otpkey_check_usage/56 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid.constprop.0/92 (241860348 (estimated locally),0.23 per call) 
+  Calls: 
+cpt_get_rand/55 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_rankey/26 (2242847 (estimated locally),0.00 per call) 
+  Calls: 
+util_crc32/54 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_dec_key_by_rtlkey/21 (124140 (estimated locally),0.00 per call) mbcmdpars_get_rankey/26 (361251 (estimated locally),0.00 per call) mbcmdpars_enc_key/22 (9883695 (estimated locally),0.01 per call) 
+  Calls: 
+sysreg_get_otpkey_dec_alg/53 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 (1073741824 (estimated locally),1.00 per call) mbcmdpars_dec_key_by_rtlkey/21 (939894 (estimated locally),0.00 per call) mbcmdpars_get_rankey/26 (9612202 (estimated locally),0.01 per call) 
+  Calls: 
+mmap_write_remote_data/52 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 (34195098 (estimated locally),0.03 per call) mbcmdpars_handle_read_version/36 (4498707 (estimated locally),0.00 per call) mbcmdpars_handle_encrypt_key/34 (29069692 (estimated locally),0.03 per call) mbcmdpars_handle_get_randkey/33 (1945510 (estimated locally),0.00 per call) 
+  Calls: 
+otp_write/51 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_otp_write/29 (13883843 (estimated locally),0.01 per call) 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_get_test_result/37 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_read_version/36 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_set_baud/35 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_encrypt_key/34 (1073741824 (estimated locally),1.00 per call) mbcmdpars_dec_key_by_rtlkey/21 (25126 (estimated locally),0.00 per call) mbcmdpars_dec_key_by_rtlkey/21 (124140 (estimated locally),0.00 per call) mbcmdpars_handle_get_randkey/33 (71582788 (estimated locally),0.07 per call) mbcmdpars_get_rankey/26 (361251 (estimated locally),0.00 per call) mbcmdpars_enc_key/22 (9883695 (estimated locally),0.01 per call) mbcmdpars_handle_otp_write/29 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_read/32 (245692 (estimated locally),0.00 per call) mbcmdpars_handle_reg_read/32 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_write/31 (245692 (estimated locally),0.00 per call) mbcmdpars_handle_reg_write/31 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (71582788 (estimated locally),0.07 per call) 
+  Calls: 
+otp_read/49 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_read_version/36 (22226814 (estimated locally),0.02 per call) mbcmdpars_handle_otp_read/30 (13883843 (estimated locally),0.01 per call) 
+  Calls: 
+mmap_remap_addr_u64/48 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_handle_otp_write/29 (13883843 (estimated locally),0.01 per call) mbcmdpars_handle_reg_read/32 (1145417 (estimated locally),0.00 per call) mbcmdpars_handle_reg_write/31 (1145417 (estimated locally),0.00 per call) mbcmdpars_handle_otp_read/30 (13883843 (estimated locally),0.01 per call) 
+  Calls: 
+fid_panic/47 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid.constprop.0/92 (1000937833 (estimated locally),0.93 per call) mbcmdpars_handle_otp_write/29 (66729189 (estimated locally),0.06 per call) mbcmdpars_handle_reg_read/32 (66729189 (estimated locally),0.06 per call) mbcmdpars_handle_reg_write/31 (66729189 (estimated locally),0.06 per call) mbcmdpars_handle_otp_read/30 (66729189 (estimated locally),0.06 per call) mbcmdpars_check_lifecycle/27 (1000937833 (estimated locally),0.93 per call) 
+  Calls: 
+fid_delay/46 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid.constprop.0/92 (1073741824 (estimated locally),1.00 per call) mbcmdpars_get_enc_keyid.constprop.0/92 (1073741824 (estimated locally),1.00 per call) mbcmdpars_get_enc_keyid.constprop.0/92 (145607981 (estimated locally),0.14 per call) mbcmdpars_handle_otp_write/29 (13892683 (estimated locally),0.01 per call) mbcmdpars_handle_otp_write/29 (66729189 (estimated locally),0.06 per call) mbcmdpars_handle_otp_write/29 (9707199 (estimated locally),0.01 per call) mbcmdpars_handle_otp_write/29 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_write/29 (9707199 (estimated locally),0.01 per call) mbcmdpars_handle_otp_write/29 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_write/29 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_read/32 (1146146 (estimated locally),0.00 per call) mbcmdpars_handle_reg_read/32 (5505158 (estimated locally),0.01 per call) mbcmdpars_handle_reg_read/32 (800844 (estimated locally),0.00 per call) mbcmdpars_handle_reg_read/32 (5905580 (estimated locally),0.01 per call) mbcmdpars_handle_reg_read/32 (9707199 (estimated locally),0.01 per call) mbcmdpars_handle_reg_read/32 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_read/32 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_write/31 (1146146 (estimated locally),0.00 per call) mbcmdpars_handle_reg_write/31 (5505158 (estimated locally),0.01 per call) mbcmdpars_handle_reg_write/31 (800844 (estimated locally),0.00 per call) mbcmdpars_handle_reg_write/31 (5905580 (estimated locally),0.01 per call) mbcmdpars_handle_reg_write/31 (9707199 (estimated locally),0.01 per call) mbcmdpars_handle_reg_write/31 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_write/31 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (13892683 (estimated locally),0.01 per call) mbcmdpars_handle_otp_read/30 (66729189 (estimated locally),0.06 per call) mbcmdpars_handle_otp_read/30 (9707199 (estimated locally),0.01 per call) mbcmdpars_handle_otp_read/30 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (9707199 (estimated locally),0.01 per call) mbcmdpars_handle_otp_read/30 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (71582788 (estimated locally),0.07 per call) mbcmdpars_check_lifecycle/27 (145607981 (estimated locally),0.14 per call) mbcmdpars_check_lifecycle/27 (1073741824 (estimated locally),1.00 per call) mbcmdpars_check_lifecycle/27 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sysreg_get_life_cycle/45 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_get_enc_keyid.constprop.0/92 (1073741824 (estimated locally),1.00 per call) mbcmdpars_get_enc_keyid.constprop.0/92 (1073741824 (estimated locally),1.00 per call) mbcmdpars_handle_otp_write/29 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_write/29 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_read/32 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_read/32 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_write/31 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_write/31 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (71582788 (estimated locally),0.07 per call) mbcmdpars_check_lifecycle/27 (1073741824 (estimated locally),1.00 per call) mbcmdpars_check_lifecycle/27 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+selftest_test_alg/44 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_set_baud/35 (15003752 (estimated locally),0.01 per call) 
+  Calls: 
+dbgauth_srv_handler/42 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_set_baud/35 (15003752 (estimated locally),0.01 per call) 
+  Calls: 
+fwverify_verify_image/40 (fwverify_verify_image)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) 
+  Calls: 
+fwupd_image_upgrade/39 (fwupd_image_upgrade)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) 
+  Calls: 
+mbcmdpars_parse_cmd/38 (mbcmdpars_parse_cmd)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741768 (estimated locally) body optimize_size
+  Called by: 
+  Calls: mbcmdpars_handle_get_test_result/37 (inlined) (71582788 (estimated locally),0.07 per call) selftest_test_alg/44 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_read_version/36 (inlined) (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_set_baud/35 (inlined) (71582788 (estimated locally),0.07 per call) cpu_exit_critical/43 (71582788 (estimated locally),0.07 per call) dbgauth_srv_handler/42 (71582788 (estimated locally),0.07 per call) cpu_enter_critical/41 (71582788 (estimated locally),0.07 per call) cpu_exit_critical/43 (71582788 (estimated locally),0.07 per call) dbgauth_srv_handler/42 (71582788 (estimated locally),0.07 per call) cpu_enter_critical/41 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_encrypt_key/34 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_get_randkey/33 (inlined) (71582788 (estimated locally),0.07 per call) fwverify_verify_image/40 (71582788 (estimated locally),0.07 per call) fwupd_image_upgrade/39 (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_read/32 (inlined) (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_reg_write/31 (inlined) (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_write/29 (inlined) (71582788 (estimated locally),0.07 per call) mbcmdpars_handle_otp_read/30 (inlined) (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_get_test_result/37 (mbcmdpars_handle_get_test_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_get_test_result/37 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: mmap_write_remote_data/52 (34195098 (estimated locally),0.03 per call) selftest_get_test_result/74 (34195098 (estimated locally),0.03 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_read_version/36 (mbcmdpars_handle_read_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_read_version/36 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: mmap_write_remote_data/52 (4498707 (estimated locally),0.00 per call) otp_read/49 (22226814 (estimated locally),0.02 per call) cpt_trng_get_driver_version/73 (22226814 (estimated locally),0.02 per call) cpt_trng_get_version/72 (22226814 (estimated locally),0.02 per call) cpt_hash_get_driver_version/71 (22226814 (estimated locally),0.02 per call) cpt_hash_get_version/70 (22226814 (estimated locally),0.02 per call) cpt_ske_get_driver_version/69 (22226814 (estimated locally),0.02 per call) cpt_ske_get_version/68 (22226814 (estimated locally),0.02 per call) cpt_pke_get_driver_version/67 (22226814 (estimated locally),0.02 per call) cpt_pke_get_version/66 (22226814 (estimated locally),0.02 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) memset_/63 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_set_baud/35 (mbcmdpars_handle_set_baud)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_set_baud/35 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: debug_printf/65 (15003752 (estimated locally),0.01 per call) cpu_exit_critical/43 (15003752 (estimated locally),0.01 per call) uart_set_baudrate/64 (15003752 (estimated locally),0.01 per call) cpu_enter_critical/41 (15003752 (estimated locally),0.01 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_encrypt_key/34 (mbcmdpars_handle_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (71582788 (estimated locally),0.07 per call) 
+  Calls: mmap_write_remote_data/52 (29069692 (estimated locally),0.03 per call) mbcmdpars_enc_key/22 (inlined) (143624961 (estimated locally),0.13 per call) mbcmdpars_dec_key_by_rtlkey/21 (inlined) (939894 (estimated locally),0.00 per call) mmap_read_remote_data/62 (4643745 (estimated locally),0.00 per call) mbcmdpars_get_enc_keyid.constprop.0/92 (22943406 (estimated locally),0.02 per call) mbcmdpars_check_lifecycle/27 (113356751 (estimated locally),0.11 per call) memcpy_/50 (1073741824 (estimated locally),1.00 per call) memset_/63 (1073741824 (estimated locally),1.00 per call) sysreg_get_otpkey_dec_alg/53 (1073741824 (estimated locally),1.00 per call) 
+mbcmdpars_handle_get_randkey/33 (mbcmdpars_handle_get_randkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_get_randkey/33 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: mmap_write_remote_data/52 (1945510 (estimated locally),0.00 per call) mbcmdpars_get_rankey/26 (inlined) (9612202 (estimated locally),0.01 per call) mbcmdpars_check_lifecycle/27 (34195098 (estimated locally),0.03 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_reg_read/32 (mbcmdpars_handle_reg_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_reg_read/32 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: memcpy_/50 (245692 (estimated locally),0.00 per call) mmap_remap_addr_u64/48 (1145417 (estimated locally),0.00 per call) fid_delay/46 (1146146 (estimated locally),0.00 per call) fid_delay/46 (5505158 (estimated locally),0.01 per call) fid_delay/46 (800844 (estimated locally),0.00 per call) fid_delay/46 (5905580 (estimated locally),0.01 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) fid_panic/47 (66729189 (estimated locally),0.06 per call) fid_delay/46 (9707199 (estimated locally),0.01 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_reg_write/31 (mbcmdpars_handle_reg_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_reg_write/31 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: memcpy_/50 (245692 (estimated locally),0.00 per call) mmap_remap_addr_u64/48 (1145417 (estimated locally),0.00 per call) fid_delay/46 (1146146 (estimated locally),0.00 per call) fid_delay/46 (5505158 (estimated locally),0.01 per call) fid_delay/46 (800844 (estimated locally),0.00 per call) fid_delay/46 (5905580 (estimated locally),0.01 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) fid_panic/47 (66729189 (estimated locally),0.06 per call) fid_delay/46 (9707199 (estimated locally),0.01 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_otp_read/30 (mbcmdpars_handle_otp_read)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_otp_read/30 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: otp_read/49 (13883843 (estimated locally),0.01 per call) mmap_remap_addr_u64/48 (13883843 (estimated locally),0.01 per call) fid_delay/46 (13892683 (estimated locally),0.01 per call) fid_delay/46 (66729189 (estimated locally),0.06 per call) fid_delay/46 (9707199 (estimated locally),0.01 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) fid_panic/47 (66729189 (estimated locally),0.06 per call) fid_delay/46 (9707199 (estimated locally),0.01 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_handle_otp_write/29 (mbcmdpars_handle_otp_write)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_handle_otp_write/29 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:71582788 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_parse_cmd/38 (inlined) (71582788 (estimated locally),0.07 per call) 
+  Calls: otp_write/51 (13883843 (estimated locally),0.01 per call) mmap_remap_addr_u64/48 (13883843 (estimated locally),0.01 per call) fid_delay/46 (13892683 (estimated locally),0.01 per call) fid_delay/46 (66729189 (estimated locally),0.06 per call) fid_delay/46 (9707199 (estimated locally),0.01 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) memcpy_/50 (71582788 (estimated locally),0.07 per call) fid_panic/47 (66729189 (estimated locally),0.06 per call) fid_delay/46 (9707199 (estimated locally),0.01 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) fid_delay/46 (71582788 (estimated locally),0.07 per call) sysreg_get_life_cycle/45 (71582788 (estimated locally),0.07 per call) 
+mbcmdpars_get_enc_keyid/28 (mbcmdpars_get_enc_keyid)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_check_lifecycle/27 (mbcmdpars_check_lifecycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 (113356751 (estimated locally),0.11 per call) mbcmdpars_handle_get_randkey/33 (34195098 (estimated locally),0.03 per call) 
+  Calls: fid_panic/47 (1000937833 (estimated locally),0.93 per call) fid_delay/46 (145607981 (estimated locally),0.14 per call) fid_delay/46 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/45 (1073741824 (estimated locally),1.00 per call) fid_delay/46 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/45 (1073741824 (estimated locally),1.00 per call) 
+mbcmdpars_get_rankey/26 (mbcmdpars_get_rankey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_get_rankey/26 is inline copy in mbcmdpars_parse_cmd/38
+  Availability: local
+  Function flags: count:9612202 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_handle_get_randkey/33 (inlined) (9612202 (estimated locally),0.01 per call) 
+  Calls: memcpy_/50 (361251 (estimated locally),0.00 per call) util_crc32/54 (361251 (estimated locally),0.00 per call) mbcmdpars_get_secckey.constprop.0/93 (inlined) (503295 (estimated locally),0.00 per call) mbcmdpars_get_sm2key.constprop.0/94 (inlined) (259273 (estimated locally),0.00 per call) mbcmdpars_get_enc_keyid.constprop.0/92 (2242847 (estimated locally),0.00 per call) cpt_get_rand/55 (2242847 (estimated locally),0.00 per call) sysreg_get_otpkey_dec_alg/53 (9612202 (estimated locally),0.01 per call) 
+mbcmdpars_get_secckey/25 (mbcmdpars_get_secckey)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_get_sm2key/24 (mbcmdpars_get_sm2key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_enc_key/22 (mbcmdpars_enc_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_enc_key/22 is inline copy in mbcmdpars_handle_encrypt_key/34
+  Availability: local
+  Function flags: count:143624961 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 (inlined) (143624961 (estimated locally),0.13 per call) 
+  Calls: memcpy_/50 (9883695 (estimated locally),0.01 per call) util_crc32/54 (9883695 (estimated locally),0.01 per call) cpt_ske_crypto/59 (143624961 (estimated locally),0.13 per call) 
+mbcmdpars_dec_key_by_rtlkey/21 (mbcmdpars_dec_key_by_rtlkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function mbcmdpars_dec_key_by_rtlkey/21 is inline copy in mbcmdpars_handle_encrypt_key/34
+  Availability: local
+  Function flags: count:939894 (estimated locally) body local optimize_size
+  Called by: mbcmdpars_handle_encrypt_key/34 (inlined) (939894 (estimated locally),0.00 per call) 
+  Calls: memcpy_/50 (25126 (estimated locally),0.00 per call) util_crc32/54 (124140 (estimated locally),0.00 per call) memcpy_/50 (124140 (estimated locally),0.00 per call) cpt_ske_crypto/59 (613342 (estimated locally),0.00 per call) memset_/63 (939894 (estimated locally),0.00 per call) memset_/63 (939894 (estimated locally),0.00 per call) sysreg_get_otpkey_dec_alg/53 (939894 (estimated locally),0.00 per call) 
+cloning mbcmdpars_get_enc_keyid/28 to mbcmdpars_get_enc_keyid.constprop/92
+    replace map: 1 -> 1
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+uint32_t mbcmdpars_get_enc_keyid (uint8_t key_level, bool_t check_usage, uint16_t * keyid)
+{
+  uint32_t life_cycle2;
+  uint32_t life_cycle;
+  uint16_t phy_key_id;
+  uint32_t enc_keyid;
+  uint32_t ret;
+  long unsigned int _1;
+  long unsigned int _2;
+  short unsigned int phy_key_id.2_3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  life_cycle_9 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle => life_cycle_9
+  # DEBUG BEGIN_STMT
+  fid_delay ();
+  # DEBUG BEGIN_STMT
+  life_cycle2_12 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle2 => life_cycle2_12
+  # DEBUG BEGIN_STMT
+  _1 = fid_delay ();
+  if (_1 == 0)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 3>; [67.00%]
+
+  <bb 3> [local count: 719407024]:
+  if (life_cycle_9 != life_cycle2_12)
+    goto <bb 5>; [79.76%]
+  else
+    goto <bb 4>; [20.24%]
+
+  <bb 4> [local count: 145607981]:
+  _2 = fid_delay ();
+  if (_2 == 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 1000937833]:
+  # DEBUG BEGIN_STMT
+  fid_panic ();
+
+  <bb 6> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  switch (key_level_16(D)) <default: <L30>, case 1: <L31>, case 2: <L28>, case 255: <L7>>
+
+  <bb 7> [local count: 442918502]:
+<L31>:
+  goto <bb 9>; [100.00%]
+
+  <bb 8> [local count: 268435456]:
+<L7>:
+  # DEBUG BEGIN_STMT
+  if (life_cycle_9 > 67108863)
+    goto <bb 13>; [35.00%]
+  else
+    goto <bb 7>; [65.00%]
+
+  <bb 9> [local count: 711353958]:
+  # enc_keyid_27 = PHI <2097154(6), 2097153(7)>
+<L28>:
+  # DEBUG enc_keyid => NULL
+  # DEBUG enc_keyid => NULL
+  # DEBUG ret => NULL
+  # DEBUG enc_keyid => NULL
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  if (check_usage_18(D) == 1)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 11>; [66.00%]
+
+  <bb 10> [local count: 241860348]:
+  # DEBUG BEGIN_STMT
+  ret_20 = otpkey_check_usage (enc_keyid_27, 14, 10, 0);
+  # DEBUG ret => ret_20
+  # DEBUG BEGIN_STMT
+  if (ret_20 == 2774162085)
+    goto <bb 11>; [34.00%]
+  else
+    goto <bb 13>; [66.00%]
+
+  <bb 11> [local count: 551726129]:
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  ret_22 = otpkey_get_phyid (enc_keyid_27, &phy_key_id);
+  # DEBUG ret => ret_22
+  # DEBUG BEGIN_STMT
+  if (ret_22 == 2774162085)
+    goto <bb 12>; [21.72%]
+  else
+    goto <bb 13>; [78.28%]
+
+  <bb 12> [local count: 119834917]:
+  # DEBUG BEGIN_STMT
+  phy_key_id.2_3 = phy_key_id;
+  *keyid_23(D) = phy_key_id.2_3;
+
+  <bb 13> [local count: 1073741824]:
+  # ret_26 = PHI <ret_22(11), 2774162085(12), 81(8), ret_20(10), 260(6)>
+<L30>:
+  # DEBUG enc_keyid => NULL
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  phy_key_id ={v} {CLOBBER(eos)};
+  return ret_26;
+
+}
+
+
+uint32_t mbcmdpars_get_enc_keyid.constprop (uint8_t key_level, uint16_t * keyid)
+{
+  uint32_t ret;
+  uint32_t enc_keyid;
+  uint16_t phy_key_id;
+  uint32_t life_cycle;
+  uint32_t life_cycle2;
+  bool_t check_usage;
+  long unsigned int _3;
+  long unsigned int _4;
+  short unsigned int phy_key_id.2_9;
+
+  <bb 14> [local count: 1073741824]:
+  # DEBUG check_usage => 1
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  life_cycle_1 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle => life_cycle_1
+  # DEBUG BEGIN_STMT
+  fid_delay ();
+  # DEBUG BEGIN_STMT
+  life_cycle2_2 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle2 => life_cycle2_2
+  # DEBUG BEGIN_STMT
+  _3 = fid_delay ();
+  if (_3 == 0)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 3>; [67.00%]
+
+  <bb 3> [local count: 719407024]:
+  if (life_cycle_1 != life_cycle2_2)
+    goto <bb 5>; [79.76%]
+  else
+    goto <bb 4>; [20.24%]
+
+  <bb 4> [local count: 145607981]:
+  _4 = fid_delay ();
+  if (_4 == 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 1000937833]:
+  # DEBUG BEGIN_STMT
+  fid_panic ();
+
+  <bb 6> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  switch (key_level_5(D)) <default: <L3>, case 1: <L0>, case 2: <L2>, case 255: <L1>>
+
+  <bb 7> [local count: 442918502]:
+<L0>:
+  goto <bb 9>; [100.00%]
+
+  <bb 8> [local count: 268435456]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  if (life_cycle_1 > 67108863)
+    goto <bb 13>; [35.00%]
+  else
+    goto <bb 7>; [65.00%]
+
+  <bb 9> [local count: 711353958]:
+  # enc_keyid_6 = PHI <2097154(6), 2097153(7)>
+<L2>:
+  # DEBUG enc_keyid => NULL
+  # DEBUG enc_keyid => NULL
+  # DEBUG ret => NULL
+  # DEBUG enc_keyid => NULL
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  if (1 != 0)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 11>; [66.00%]
+
+  <bb 10> [local count: 241860348]:
+  # DEBUG BEGIN_STMT
+  ret_7 = otpkey_check_usage (enc_keyid_6, 14, 10, 0);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 == 2774162085)
+    goto <bb 11>; [34.00%]
+  else
+    goto <bb 13>; [66.00%]
+
+  <bb 11> [local count: 551726129]:
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  ret_8 = otpkey_get_phyid (enc_keyid_6, &phy_key_id);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 12>; [21.72%]
+  else
+    goto <bb 13>; [78.28%]
+
+  <bb 12> [local count: 119834917]:
+  # DEBUG BEGIN_STMT
+  phy_key_id.2_9 = phy_key_id;
+  *keyid_10(D) = phy_key_id.2_9;
+
+  <bb 13> [local count: 1073741824]:
+  # ret_11 = PHI <260(6), 81(8), ret_7(10), ret_8(11), 2774162085(12)>
+<L3>:
+  # DEBUG enc_keyid => NULL
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  phy_key_id ={v} {CLOBBER(eos)};
+  return ret_11;
+
+}
+
+
+updating call of mbcmdpars_handle_encrypt_key/34 -> mbcmdpars_get_enc_keyid.constprop/92: ret_23 = mbcmdpars_get_enc_keyid (_6, 1, &encrypt_keyid);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:ret_23 = mbcmdpars_get_enc_keyid.constprop (_6, &encrypt_keyid);
+cloning mbcmdpars_get_secckey/25 to mbcmdpars_get_secckey.constprop/93
+    replace map: 1 -> 32
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+uint32_t mbcmdpars_get_secckey (uint8_t * out_key, uint32_t key_length, uint16_t encrypt_keyid, cpt_ske_alg_e encrypt_alg)
+{
+  uint32_t ret;
+  uint8_t * _1;
+  long unsigned int key_length.4_2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = out_key_5(D) + 32;
+  ret_8 = eccp_getkey (&secp256r1, out_key_5(D), _1);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  key_length.4_2 = key_length;
+  ret_12 = cpt_ske_crypto (encrypt_alg_9(D), 1, 0, 0B, encrypt_keyid_10(D), 0B, 0, out_key_5(D), out_key_5(D), key_length.4_2, &key_length);
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  if (ret_12 != 2774162085)
+    goto <bb 5>; [66.00%]
+  else
+    goto <bb 4>; [34.00%]
+
+  <bb 4> [local count: 120473833]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+
+  <bb 5> [local count: 1073741824]:
+  # ret_3 = PHI <2774162085(4), 257(2), 256(3)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t mbcmdpars_get_secckey.constprop (uint8_t * out_key, uint16_t encrypt_keyid, cpt_ske_alg_e encrypt_alg)
+{
+  uint32_t ret;
+  uint32_t key_length;
+  uint8_t * _2;
+  long unsigned int key_length.4_4;
+
+  <bb 6> [local count: 1073741824]:
+  key_length = 32;
+  # DEBUG key_length => key_length
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = out_key_1(D) + 32;
+  ret_3 = eccp_getkey (&secp256r1, out_key_1(D), _2);
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  key_length.4_4 = key_length;
+  ret_7 = cpt_ske_crypto (encrypt_alg_5(D), 1, 0, 0B, encrypt_keyid_6(D), 0B, 0, out_key_1(D), out_key_1(D), key_length.4_4, &key_length);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 != 2774162085)
+    goto <bb 5>; [66.00%]
+  else
+    goto <bb 4>; [34.00%]
+
+  <bb 4> [local count: 120473833]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+
+  <bb 5> [local count: 1073741824]:
+  # ret_8 = PHI <257(2), 256(3), 2774162085(4)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+cloning mbcmdpars_get_sm2key/24 to mbcmdpars_get_sm2key.constprop/94
+    replace map: 1 -> 32
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+uint32_t mbcmdpars_get_sm2key (uint8_t * out_key, uint32_t key_length, uint16_t encrypt_keyid, cpt_ske_alg_e encrypt_alg)
+{
+  uint32_t ret;
+  uint8_t * _1;
+  long unsigned int key_length.3_2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = out_key_5(D) + 32;
+  ret_8 = cpt_sm2_getkey (out_key_5(D), _1);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 5>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+  # DEBUG BEGIN_STMT
+  key_length.3_2 = key_length;
+  ret_12 = cpt_ske_crypto (encrypt_alg_9(D), 1, 0, 0B, encrypt_keyid_10(D), 0B, 0, out_key_5(D), out_key_5(D), key_length.3_2, &key_length);
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  if (ret_12 != 2774162085)
+    goto <bb 5>; [66.00%]
+  else
+    goto <bb 4>; [34.00%]
+
+  <bb 4> [local count: 73890618]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+
+  <bb 5> [local count: 1073741824]:
+  # ret_3 = PHI <2774162085(4), 257(2), 256(3)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t mbcmdpars_get_sm2key.constprop (uint8_t * out_key, uint16_t encrypt_keyid, cpt_ske_alg_e encrypt_alg)
+{
+  uint32_t ret;
+  uint32_t key_length;
+  uint8_t * _2;
+  long unsigned int key_length.3_4;
+
+  <bb 6> [local count: 1073741824]:
+  key_length = 32;
+  # DEBUG key_length => key_length
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = out_key_1(D) + 32;
+  ret_3 = cpt_sm2_getkey (out_key_1(D), _2);
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 == 2774162085)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 5>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+  # DEBUG BEGIN_STMT
+  key_length.3_4 = key_length;
+  ret_7 = cpt_ske_crypto (encrypt_alg_5(D), 1, 0, 0B, encrypt_keyid_6(D), 0B, 0, out_key_1(D), out_key_1(D), key_length.3_4, &key_length);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 != 2774162085)
+    goto <bb 5>; [66.00%]
+  else
+    goto <bb 4>; [34.00%]
+
+  <bb 4> [local count: 73890618]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+
+  <bb 5> [local count: 1073741824]:
+  # ret_8 = PHI <257(2), 256(3), 2774162085(4)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+updating call of mbcmdpars_parse_cmd/38 -> mbcmdpars_get_enc_keyid.constprop/92: ret_131 = mbcmdpars_get_enc_keyid (_124, 1, &encrypt_keyid);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:ret_131 = mbcmdpars_get_enc_keyid.constprop (_124, &encrypt_keyid);
+updating call of mbcmdpars_parse_cmd/38 -> mbcmdpars_get_sm2key.constprop/94: ret_133 = mbcmdpars_get_sm2key (&key_buf, 32, encrypt_keyid.0_132, encrypt_alg_129);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+  updated to:ret_133 = mbcmdpars_get_sm2key.constprop (&key_buf, encrypt_keyid.0_132, encrypt_alg_129);
+updating call of mbcmdpars_parse_cmd/38 -> mbcmdpars_get_secckey.constprop/93: ret_135 = mbcmdpars_get_secckey (&key_buf, 32, encrypt_keyid.1_134, encrypt_alg_129);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+  updated to:ret_135 = mbcmdpars_get_secckey.constprop (&key_buf, encrypt_keyid.1_134, encrypt_alg_129);
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+mbcmdpars_get_enc_keyid.constprop.0/92 (mbcmdpars_get_enc_keyid.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.mbcmdpars_get_enc_keyid.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+selftest_get_test_result/74 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_trng_get_driver_version/73 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_trng_get_version/72 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_get_driver_version/71 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_get_version/70 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_get_driver_version/69 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_get_version/68 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_pke_get_driver_version/67 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_pke_get_version/66 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+debug_printf/65 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uart_set_baudrate/64 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/63 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_read_remote_data/62 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secp256r1/61 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+eccp_getkey/60 (eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_crypto/59 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getkey/58 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_get_phyid/57 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_check_usage/56 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_get_rand/55 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_crc32/54 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/53 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_write_remote_data/52 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otp_write/51 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otp_read/49 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_remap_addr_u64/48 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_panic/47 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_delay/46 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/45 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+selftest_test_alg/44 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+dbgauth_srv_handler/42 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fwverify_verify_image/40 (fwverify_verify_image)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fwupd_image_upgrade/39 (fwupd_image_upgrade)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_parse_cmd/38 (mbcmdpars_parse_cmd)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.mbcmdpars_parse_cmd (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741768 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_handle_encrypt_key/34 (mbcmdpars_handle_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.mbcmdpars_handle_encrypt_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_get_enc_keyid/28 (mbcmdpars_get_enc_keyid)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_check_lifecycle/27 (mbcmdpars_check_lifecycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.mbcmdpars_check_lifecycle (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_get_secckey/25 (mbcmdpars_get_secckey)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_get_sm2key/24 (mbcmdpars_get_sm2key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

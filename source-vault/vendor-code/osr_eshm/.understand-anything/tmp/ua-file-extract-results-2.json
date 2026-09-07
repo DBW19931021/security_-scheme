@@ -1,0 +1,6240 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 26,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/cmd_pool.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 146,
+      "nonEmptyLines": 125,
+      "functions": [
+        {
+          "name": "cmdpool_get_cmd_index",
+          "startLine": 49,
+          "endLine": 67,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "cmdpool_init",
+          "startLine": 72,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "cmdpool_alloc",
+          "startLine": 94,
+          "endLine": 118,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "cmdpool_free",
+          "startLine": 120,
+          "endLine": 142,
+          "params": [
+            "packet"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "cmdpool_init",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "cmdpool_alloc",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "cmdpool_free",
+          "line": 120,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "cmdpool_init",
+          "callee": "util_memset",
+          "lineNumber": 78
+        },
+        {
+          "caller": "cmdpool_init",
+          "callee": "queue_init",
+          "lineNumber": 79
+        },
+        {
+          "caller": "cmdpool_init",
+          "callee": "queue_push",
+          "lineNumber": 82
+        },
+        {
+          "caller": "cmdpool_alloc",
+          "callee": "queue_pop",
+          "lineNumber": 103
+        },
+        {
+          "caller": "cmdpool_alloc",
+          "callee": "util_memcpy",
+          "lineNumber": 105
+        },
+        {
+          "caller": "cmdpool_alloc",
+          "callee": "cmdpool_get_cmd_index",
+          "lineNumber": 106
+        },
+        {
+          "caller": "cmdpool_free",
+          "callee": "cmdpool_get_cmd_index",
+          "lineNumber": 128
+        },
+        {
+          "caller": "cmdpool_free",
+          "callee": "queue_push",
+          "lineNumber": 134
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/cmd_pool.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 28,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/comm.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 414,
+      "nonEmptyLines": 365,
+      "functions": [
+        {
+          "name": "comm_read_mbox_data",
+          "startLine": 63,
+          "endLine": 72,
+          "params": [
+            "channel"
+          ]
+        },
+        {
+          "name": "comm_mbox_recv_cb",
+          "startLine": 74,
+          "endLine": 79,
+          "params": [
+            "mb_ch_bitmap"
+          ]
+        },
+        {
+          "name": "comm_uart_recv_cb",
+          "startLine": 81,
+          "endLine": 101,
+          "params": []
+        },
+        {
+          "name": "comm_send_mbox_rsp",
+          "startLine": 103,
+          "endLine": 125,
+          "params": [
+            "mbox_chl",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "comm_send_dbg_rsp",
+          "startLine": 127,
+          "endLine": 154,
+          "params": []
+        },
+        {
+          "name": "comm_is_mb_channel",
+          "startLine": 156,
+          "endLine": 167,
+          "params": [
+            "channel"
+          ]
+        },
+        {
+          "name": "comm_process_dbg_data",
+          "startLine": 169,
+          "endLine": 218,
+          "params": []
+        },
+        {
+          "name": "comm_init_packet",
+          "startLine": 226,
+          "endLine": 262,
+          "params": [
+            "packet",
+            "cmd_addr",
+            "channel",
+            "cmd_tag"
+          ]
+        },
+        {
+          "name": "comm_handle_gen_mbox_data",
+          "startLine": 264,
+          "endLine": 284,
+          "params": [
+            "mb_data",
+            "channel"
+          ]
+        },
+        {
+          "name": "comm_send_gen_mbox_rsp",
+          "startLine": 286,
+          "endLine": 318,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "comm_poll_mb_chl",
+          "startLine": 320,
+          "endLine": 342,
+          "params": []
+        },
+        {
+          "name": "comm_init",
+          "startLine": 347,
+          "endLine": 369,
+          "params": []
+        },
+        {
+          "name": "comm_send_rsp",
+          "startLine": 371,
+          "endLine": 395,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "comm_poll",
+          "startLine": 397,
+          "endLine": 411,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "comm_init",
+          "line": 347,
+          "isDefault": false
+        },
+        {
+          "name": "comm_send_rsp",
+          "line": 371,
+          "isDefault": false
+        },
+        {
+          "name": "comm_poll",
+          "line": 397,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "comm_read_mbox_data",
+          "callee": "mailbox_read",
+          "lineNumber": 68
+        },
+        {
+          "caller": "comm_read_mbox_data",
+          "callee": "comm_handle_gen_mbox_data",
+          "lineNumber": 70
+        },
+        {
+          "caller": "comm_uart_recv_cb",
+          "callee": "uart_getc",
+          "lineNumber": 86
+        },
+        {
+          "caller": "comm_uart_recv_cb",
+          "callee": "dbgcmdpars_append_data",
+          "lineNumber": 89
+        },
+        {
+          "caller": "comm_uart_recv_cb",
+          "callee": "expt_det_add_error",
+          "lineNumber": 94
+        },
+        {
+          "caller": "comm_uart_recv_cb",
+          "callee": "dbgcmdpars_init_parser",
+          "lineNumber": 95
+        },
+        {
+          "caller": "comm_send_mbox_rsp",
+          "callee": "mailbox_read_send_notify",
+          "lineNumber": 111
+        },
+        {
+          "caller": "comm_send_mbox_rsp",
+          "callee": "mailbox_read_send_notify",
+          "lineNumber": 113
+        },
+        {
+          "caller": "comm_send_mbox_rsp",
+          "callee": "mailbox_write",
+          "lineNumber": 116
+        },
+        {
+          "caller": "comm_send_mbox_rsp",
+          "callee": "mailbox_set_send_notify",
+          "lineNumber": 119
+        },
+        {
+          "caller": "comm_send_mbox_rsp",
+          "callee": "mailbox_set_send_notify",
+          "lineNumber": 121
+        },
+        {
+          "caller": "comm_send_dbg_rsp",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 134
+        },
+        {
+          "caller": "comm_send_dbg_rsp",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 136
+        },
+        {
+          "caller": "comm_send_dbg_rsp",
+          "callee": "uart_putc",
+          "lineNumber": 141
+        },
+        {
+          "caller": "comm_send_dbg_rsp",
+          "callee": "dbgcmdpars_init_parser",
+          "lineNumber": 149
+        },
+        {
+          "caller": "comm_send_dbg_rsp",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 150
+        },
+        {
+          "caller": "comm_send_dbg_rsp",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 152
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 177
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 179
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "dbgcmdpars_recv_complete",
+          "lineNumber": 184
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cmdpool_alloc",
+          "lineNumber": 186
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "expt_det_add_error",
+          "lineNumber": 190
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 191
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 193
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "dbgcmdpars_trans_to_packet",
+          "lineNumber": 197
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 199
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 201
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cmdpool_free",
+          "lineNumber": 202
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "sch_add_cmd",
+          "lineNumber": 208
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 210
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 212
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "dbgcmdpars_init_parser",
+          "lineNumber": 213
+        },
+        {
+          "caller": "comm_process_dbg_data",
+          "callee": "cmdpool_free",
+          "lineNumber": 214
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 234
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "sch_add_cmd",
+          "lineNumber": 240
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "mailbox_clear_recv_notify",
+          "lineNumber": 244
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "mailbox_read_recv_notify",
+          "lineNumber": 245
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "mailbox_read",
+          "lineNumber": 247
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "util_memcpy",
+          "lineNumber": 248
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "expt_det_add_error",
+          "lineNumber": 252
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "cmdpool_free",
+          "lineNumber": 255
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "mailbox_set_send_notify",
+          "lineNumber": 258
+        },
+        {
+          "caller": "comm_init_packet",
+          "callee": "cmdpool_free",
+          "lineNumber": 259
+        },
+        {
+          "caller": "comm_handle_gen_mbox_data",
+          "callee": "sch_is_cache_full",
+          "lineNumber": 271
+        },
+        {
+          "caller": "comm_handle_gen_mbox_data",
+          "callee": "util_memcpy",
+          "lineNumber": 272
+        },
+        {
+          "caller": "comm_handle_gen_mbox_data",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 273
+        },
+        {
+          "caller": "comm_handle_gen_mbox_data",
+          "callee": "cmdpool_alloc",
+          "lineNumber": 275
+        },
+        {
+          "caller": "comm_handle_gen_mbox_data",
+          "callee": "comm_init_packet",
+          "lineNumber": 277
+        },
+        {
+          "caller": "comm_handle_gen_mbox_data",
+          "callee": "mailbox_set_send_notify",
+          "lineNumber": 280
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 299
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 300
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "util_memcpy",
+          "lineNumber": 302
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "util_memcpy",
+          "lineNumber": 303
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 308
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "util_memcpy",
+          "lineNumber": 312
+        },
+        {
+          "caller": "comm_send_gen_mbox_rsp",
+          "callee": "comm_send_mbox_rsp",
+          "lineNumber": 313
+        },
+        {
+          "caller": "comm_poll_mb_chl",
+          "callee": "mailbox_read_recv_notify",
+          "lineNumber": 328
+        },
+        {
+          "caller": "comm_poll_mb_chl",
+          "callee": "expt_det_reset_error",
+          "lineNumber": 330
+        },
+        {
+          "caller": "comm_poll_mb_chl",
+          "callee": "comm_read_mbox_data",
+          "lineNumber": 331
+        },
+        {
+          "caller": "comm_poll_mb_chl",
+          "callee": "expt_det_add_error",
+          "lineNumber": 335
+        },
+        {
+          "caller": "comm_init",
+          "callee": "cmdpool_init",
+          "lineNumber": 351
+        },
+        {
+          "caller": "comm_init",
+          "callee": "uart_init",
+          "lineNumber": 353
+        },
+        {
+          "caller": "comm_init",
+          "callee": "mailbox_init",
+          "lineNumber": 357
+        },
+        {
+          "caller": "comm_init",
+          "callee": "dbgcmdpars_init_parser",
+          "lineNumber": 361
+        },
+        {
+          "caller": "comm_send_rsp",
+          "callee": "comm_send_dbg_rsp",
+          "lineNumber": 378
+        },
+        {
+          "caller": "comm_send_rsp",
+          "callee": "comm_is_mb_channel",
+          "lineNumber": 379
+        },
+        {
+          "caller": "comm_send_rsp",
+          "callee": "comm_send_gen_mbox_rsp",
+          "lineNumber": 381
+        },
+        {
+          "caller": "comm_send_rsp",
+          "callee": "comm_send_dbg_rsp",
+          "lineNumber": 383
+        },
+        {
+          "caller": "comm_send_rsp",
+          "callee": "util_memset",
+          "lineNumber": 390
+        },
+        {
+          "caller": "comm_send_rsp",
+          "callee": "cmdpool_free",
+          "lineNumber": 391
+        },
+        {
+          "caller": "comm_poll",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 402
+        },
+        {
+          "caller": "comm_poll",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 406
+        },
+        {
+          "caller": "comm_poll",
+          "callee": "comm_poll_mb_chl",
+          "lineNumber": 408
+        },
+        {
+          "caller": "comm_poll",
+          "callee": "comm_process_dbg_data",
+          "lineNumber": 410
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 14,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/comm.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 41,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/crypto_api.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 2866,
+      "nonEmptyLines": 2720,
+      "functions": [
+        {
+          "name": "cpt_err_code_to_ehsm_code",
+          "startLine": 63,
+          "endLine": 72,
+          "params": [
+            "cpt_err_code",
+            "success_code"
+          ]
+        },
+        {
+          "name": "cpt_err_code_to_ehsm_code_sec",
+          "startLine": 83,
+          "endLine": 92,
+          "params": [
+            "cpt_err_code",
+            "success_code"
+          ]
+        },
+        {
+          "name": "cpt_ske_get_block_byte_len",
+          "startLine": 142,
+          "endLine": 145,
+          "params": [
+            "ske_alg"
+          ]
+        },
+        {
+          "name": "cpt_set_ske_ctx_key",
+          "startLine": 160,
+          "endLine": 182,
+          "params": [
+            "ctx",
+            "is_sp_key",
+            "key",
+            "sp_key_id",
+            "key_bytes"
+          ]
+        },
+        {
+          "name": "cpt_clear_ske_ctx_key",
+          "startLine": 190,
+          "endLine": 197,
+          "params": [
+            "ctx"
+          ]
+        },
+        {
+          "name": "cpt_ske_crypto",
+          "startLine": 227,
+          "endLine": 233,
+          "params": [
+            "alg",
+            "mode",
+            "crypto",
+            "key",
+            "sp_key_idx",
+            "iv",
+            "padding",
+            "in",
+            "out",
+            "in_bytes",
+            "out_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_init",
+          "startLine": 256,
+          "endLine": 261,
+          "params": [
+            "ctx",
+            "alg",
+            "mode",
+            "crypto",
+            "key",
+            "sp_key_idx",
+            "iv",
+            "padding"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_update_blocks",
+          "startLine": 279,
+          "endLine": 286,
+          "params": [
+            "ctx",
+            "in_h",
+            "in_l",
+            "out_h",
+            "out_l",
+            "bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_update_including_last_block",
+          "startLine": 308,
+          "endLine": 315,
+          "params": [
+            "ctx",
+            "in_h",
+            "in_l",
+            "out_h",
+            "out_l",
+            "in_bytes",
+            "out_bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_crypto",
+          "startLine": 347,
+          "endLine": 356,
+          "params": [
+            "alg",
+            "mode",
+            "crypto",
+            "key",
+            "sp_key_idx",
+            "iv",
+            "padding",
+            "in_h",
+            "in_l",
+            "out_h",
+            "out_l",
+            "in_bytes",
+            "out_bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_final",
+          "startLine": 366,
+          "endLine": 370,
+          "params": [
+            "ctx"
+          ]
+        },
+        {
+          "name": "cpt_ske_xts_update_including_last_2_blocks",
+          "startLine": 386,
+          "endLine": 391,
+          "params": [
+            "ctx",
+            "in",
+            "out",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_xts_final",
+          "startLine": 401,
+          "endLine": 405,
+          "params": [
+            "ctx"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_xts_init",
+          "startLine": 428,
+          "endLine": 445,
+          "params": [
+            "ctx",
+            "alg",
+            "crypto",
+            "xts_style",
+            "key",
+            "sp_key_idx",
+            "i",
+            "c_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_xts_update_blocks",
+          "startLine": 469,
+          "endLine": 488,
+          "params": [
+            "ctx",
+            "in_h",
+            "in_l",
+            "out_h",
+            "out_l",
+            "bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_cbc_init",
+          "startLine": 518,
+          "endLine": 523,
+          "params": [
+            "ctx",
+            "alg",
+            "crypto",
+            "key",
+            "sp_key_idx",
+            "iv",
+            "padding"
+          ]
+        },
+        {
+          "name": "cpt_ske_cbc_update_blocks",
+          "startLine": 538,
+          "endLine": 542,
+          "params": [
+            "ctx",
+            "in",
+            "out",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_cbc_final",
+          "startLine": 552,
+          "endLine": 556,
+          "params": [
+            "ctx"
+          ]
+        },
+        {
+          "name": "cpt_ske_cbc_mac_init",
+          "startLine": 574,
+          "endLine": 579,
+          "params": [
+            "ctx",
+            "alg",
+            "mac_action",
+            "padding",
+            "key",
+            "sp_key_idx",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_cbc_mac_update",
+          "startLine": 591,
+          "endLine": 595,
+          "params": [
+            "ctx",
+            "msg",
+            "msg_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_cbc_mac_final",
+          "startLine": 609,
+          "endLine": 613,
+          "params": [
+            "ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "cpt_cbc_mac_ctx_dma2cpu",
+          "startLine": 626,
+          "endLine": 644,
+          "params": [
+            "dma_ctx",
+            "cpu_ctx",
+            "dma_data_sz",
+            "is_verify"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_cbc_mac_init",
+          "startLine": 661,
+          "endLine": 672,
+          "params": [
+            "ctx",
+            "alg",
+            "key",
+            "sp_key_idx",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "startLine": 687,
+          "endLine": 701,
+          "params": [
+            "ctx",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "startLine": 735,
+          "endLine": 759,
+          "params": [
+            "mac_ctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "startLine": 772,
+          "endLine": 790,
+          "params": [
+            "mac_ctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_cmac_ctx_dma_2_cpu",
+          "startLine": 801,
+          "endLine": 808,
+          "params": [
+            "dma_ctx",
+            "cpu_ctx",
+            "is_verify"
+          ]
+        },
+        {
+          "name": "cpt_ske_cmac_init",
+          "startLine": 824,
+          "endLine": 829,
+          "params": [
+            "ctx",
+            "alg",
+            "mac_action",
+            "key",
+            "sp_key_idx",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_cmac_update",
+          "startLine": 842,
+          "endLine": 846,
+          "params": [
+            "ctx",
+            "msg",
+            "msg_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_cmac_final",
+          "startLine": 859,
+          "endLine": 863,
+          "params": [
+            "ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "cpt_ske_cmac",
+          "startLine": 885,
+          "endLine": 890,
+          "params": [
+            "alg",
+            "mac_action",
+            "key",
+            "sp_key_idx",
+            "msg",
+            "msg_bytes",
+            "mac",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_cmac_init",
+          "startLine": 906,
+          "endLine": 911,
+          "params": [
+            "ctx",
+            "alg",
+            "key",
+            "sp_key_idx",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_cmac_update_blocks_excluding_last_block",
+          "startLine": 925,
+          "endLine": 932,
+          "params": [
+            "ctx",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_cmac",
+          "startLine": 956,
+          "endLine": 962,
+          "params": [
+            "alg",
+            "key",
+            "sp_key_idx",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "mac_h",
+            "mac_l",
+            "mac_bytes",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_cmac_rctx_switch_dma_ctx",
+          "startLine": 996,
+          "endLine": 1019,
+          "params": [
+            "mac_rctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_cmac_rctx_switch_cpu_ctx",
+          "startLine": 1032,
+          "endLine": 1050,
+          "params": [
+            "mac_rctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_ske_gmac_init",
+          "startLine": 1075,
+          "endLine": 1080,
+          "params": [
+            "ctx",
+            "alg",
+            "mac_action",
+            "key",
+            "sp_key_idx",
+            "iv",
+            "iv_bytes",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_gmac_update",
+          "startLine": 1094,
+          "endLine": 1098,
+          "params": [
+            "ctx",
+            "msg",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_gmac_final",
+          "startLine": 1112,
+          "endLine": 1116,
+          "params": [
+            "ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "cpt_gmac_rctx_switch_cpu_ctx",
+          "startLine": 1140,
+          "endLine": 1158,
+          "params": [
+            "mac_ctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_ske_gcm_init",
+          "startLine": 1183,
+          "endLine": 1188,
+          "params": [
+            "ctx",
+            "alg",
+            "crypto",
+            "key",
+            "sp_key_idx",
+            "iv",
+            "iv_bytes",
+            "aad_bytes",
+            "c_bytes",
+            "mac_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_gcm_update_blocks_aad",
+          "startLine": 1204,
+          "endLine": 1208,
+          "params": [
+            "ctx",
+            "aad",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_gcm_update_blocks",
+          "startLine": 1229,
+          "endLine": 1233,
+          "params": [
+            "ctx",
+            "in",
+            "out",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_gcm_final",
+          "startLine": 1247,
+          "endLine": 1251,
+          "params": [
+            "ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_gcm_update_blocks",
+          "startLine": 1273,
+          "endLine": 1280,
+          "params": [
+            "ctx",
+            "in_h",
+            "in_l",
+            "in_bytes",
+            "out_h",
+            "out_l",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_gcm_update_final",
+          "startLine": 1296,
+          "endLine": 1302,
+          "params": [
+            "ctx",
+            "mac_h",
+            "mac_l",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_gcm_rctx_switch_ctx",
+          "startLine": 1326,
+          "endLine": 1345,
+          "params": [
+            "context_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_ske_ccm_init",
+          "startLine": 1369,
+          "endLine": 1374,
+          "params": [
+            "ctx",
+            "alg",
+            "crypto",
+            "key",
+            "sp_key_idx",
+            "nonce",
+            "M",
+            "L",
+            "aad_bytes",
+            "c_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_ccm_update_aad",
+          "startLine": 1387,
+          "endLine": 1391,
+          "params": [
+            "ctx",
+            "aad"
+          ]
+        },
+        {
+          "name": "cpt_ske_ccm_update_blocks",
+          "startLine": 1412,
+          "endLine": 1416,
+          "params": [
+            "ctx",
+            "in",
+            "out",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_ske_ccm_final",
+          "startLine": 1430,
+          "endLine": 1434,
+          "params": [
+            "ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_ccm_update_blocks",
+          "startLine": 1457,
+          "endLine": 1464,
+          "params": [
+            "ctx",
+            "in_h",
+            "in_l",
+            "in_bytes",
+            "out_h",
+            "out_l",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ske_dma_ccm_update_final",
+          "startLine": 1480,
+          "endLine": 1486,
+          "params": [
+            "ctx",
+            "mac_h",
+            "mac_l",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_ccm_rctx_switch_ctx",
+          "startLine": 1510,
+          "endLine": 1529,
+          "params": [
+            "context_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_hash_rctx_switch_dma_ctx",
+          "startLine": 1544,
+          "endLine": 1580,
+          "params": [
+            "rctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_hash_rctx_switch_cpu_ctx",
+          "startLine": 1593,
+          "endLine": 1634,
+          "params": [
+            "rctx_addr",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_hash_ctx_switch",
+          "startLine": 1647,
+          "endLine": 1674,
+          "params": [
+            "cpu_ctx",
+            "dma_ctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cpt_hash_init",
+          "startLine": 1685,
+          "endLine": 1689,
+          "params": [
+            "ctx",
+            "alg"
+          ]
+        },
+        {
+          "name": "cpt_hash_update",
+          "startLine": 1701,
+          "endLine": 1705,
+          "params": [
+            "ctx",
+            "msg",
+            "msg_bytes"
+          ]
+        },
+        {
+          "name": "cpt_hash_final",
+          "startLine": 1717,
+          "endLine": 1721,
+          "params": [
+            "ctx",
+            "digest"
+          ]
+        },
+        {
+          "name": "cpt_hash",
+          "startLine": 1734,
+          "endLine": 1738,
+          "params": [
+            "alg",
+            "msg",
+            "msg_bytes",
+            "digest"
+          ]
+        },
+        {
+          "name": "cpt_hash_dma_update_blocks",
+          "startLine": 1751,
+          "endLine": 1758,
+          "params": [
+            "ctx",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_hash_dma_final",
+          "startLine": 1774,
+          "endLine": 1781,
+          "params": [
+            "ctx",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "digest_h",
+            "digest_l",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_hash_dma",
+          "startLine": 1796,
+          "endLine": 1803,
+          "params": [
+            "alg",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "digest_h",
+            "digest_l",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_build_hmac_cpu_ctx_without_hash",
+          "startLine": 1815,
+          "endLine": 1835,
+          "params": [
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "is_sp_key",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cpt_build_hmac_dma_ctx_without_hash",
+          "startLine": 1847,
+          "endLine": 1867,
+          "params": [
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "is_sp_key",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cpt_hmac_init",
+          "startLine": 1883,
+          "endLine": 1888,
+          "params": [
+            "ctx",
+            "alg",
+            "key",
+            "sp_key_idx",
+            "key_bytes"
+          ]
+        },
+        {
+          "name": "cpt_hmac_update",
+          "startLine": 1900,
+          "endLine": 1904,
+          "params": [
+            "ctx",
+            "msg",
+            "msg_bytes"
+          ]
+        },
+        {
+          "name": "cpt_hmac_final",
+          "startLine": 1916,
+          "endLine": 1920,
+          "params": [
+            "ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "cpt_hmac_dma",
+          "startLine": 1941,
+          "endLine": 1948,
+          "params": [
+            "alg",
+            "key",
+            "sp_key_idx",
+            "key_bytes",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "mac_h",
+            "mac_l",
+            "callback",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_hmac_dma_update_blocks",
+          "startLine": 1960,
+          "endLine": 1966,
+          "params": [
+            "ctx",
+            "msg_h",
+            "msg_l",
+            "msg_bytes",
+            "dma_cfg"
+          ]
+        },
+        {
+          "name": "cpt_eccp_get_pubkey_from_prikey",
+          "startLine": 1978,
+          "endLine": 1982,
+          "params": [
+            "curve",
+            "priKey",
+            "pubKey"
+          ]
+        },
+        {
+          "name": "cpt_eccp_getkey",
+          "startLine": 1994,
+          "endLine": 1998,
+          "params": [
+            "curve",
+            "priKey",
+            "pubKey"
+          ]
+        },
+        {
+          "name": "cpt_ecdsa_sign",
+          "startLine": 2014,
+          "endLine": 2019,
+          "params": [
+            "curve",
+            "E",
+            "EByteLen",
+            "rand_k",
+            "priKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_ecdsa_verify",
+          "startLine": 2034,
+          "endLine": 2039,
+          "params": [
+            "curve",
+            "E",
+            "EByteLen",
+            "pubKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_rsa_modexp",
+          "startLine": 2054,
+          "endLine": 2059,
+          "params": [
+            "a",
+            "e",
+            "n",
+            "out",
+            "eBitLen",
+            "nBitLen"
+          ]
+        },
+        {
+          "name": "cpt_rsa_get_key",
+          "startLine": 2075,
+          "endLine": 2079,
+          "params": [
+            "e",
+            "d",
+            "n",
+            "eBitLen",
+            "nBitLen"
+          ]
+        },
+        {
+          "name": "cpt_rsa_get_crtkey",
+          "startLine": 2099,
+          "endLine": 2104,
+          "params": [
+            "e",
+            "p",
+            "q",
+            "dp",
+            "dq",
+            "u",
+            "n",
+            "eBitLen",
+            "nBitLen"
+          ]
+        },
+        {
+          "name": "cpt_rsa_modexp_with_pub",
+          "startLine": 2123,
+          "endLine": 2130,
+          "params": [
+            "a",
+            "e",
+            "d",
+            "n",
+            "out",
+            "eBitLen",
+            "nBitLen"
+          ]
+        },
+        {
+          "name": "cpt_rsa_crt_modexp_with_pub",
+          "startLine": 2149,
+          "endLine": 2156,
+          "params": [
+            "a",
+            "p",
+            "q",
+            "dp",
+            "dq",
+            "u",
+            "e",
+            "out",
+            "eBitLen",
+            "nBitLen"
+          ]
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_sign_by_msg_digest",
+          "startLine": 2177,
+          "endLine": 2184,
+          "params": [
+            "msg_hash_alg",
+            "mgf_hash_alg",
+            "salt",
+            "salt_bytes",
+            "msg_digest",
+            "d",
+            "n",
+            "n_bits",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_sign",
+          "startLine": 2206,
+          "endLine": 2213,
+          "params": [
+            "msg_hash_alg",
+            "mgf_hash_alg",
+            "salt",
+            "salt_bytes",
+            "msg",
+            "msg_bytes",
+            "d",
+            "n",
+            "n_bits",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_crt_sign_by_msg_digest",
+          "startLine": 2233,
+          "endLine": 2240,
+          "params": [
+            "msg_hash_alg",
+            "mgf_hash_alg",
+            "salt",
+            "salt_bytes",
+            "msg_digest",
+            "d",
+            "n_bits",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "startLine": 2261,
+          "endLine": 2268,
+          "params": [
+            "msg_hash_alg",
+            "mgf_hash_alg",
+            "salt_bytes",
+            "msg_digest",
+            "e",
+            "e_bits",
+            "n",
+            "n_bits",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_sm2_verify",
+          "startLine": 2280,
+          "endLine": 2284,
+          "params": [
+            "E",
+            "pubKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_sm2_sign",
+          "startLine": 2300,
+          "endLine": 2304,
+          "params": [
+            "E",
+            "rand_k",
+            "priKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "cpt_sm2_get_pubkey_from_prikey",
+          "startLine": 2315,
+          "endLine": 2319,
+          "params": [
+            "priKey",
+            "pubKey"
+          ]
+        },
+        {
+          "name": "cpt_sm2_getkey",
+          "startLine": 2330,
+          "endLine": 2334,
+          "params": [
+            "priKey",
+            "pubKey"
+          ]
+        },
+        {
+          "name": "cpt_sm2_encrypt",
+          "startLine": 2355,
+          "endLine": 2360,
+          "params": [
+            "M",
+            "MByteLen",
+            "rand_k",
+            "pubKey",
+            "order",
+            "C",
+            "CByteLen"
+          ]
+        },
+        {
+          "name": "cpt_sm2_decrypt",
+          "startLine": 2376,
+          "endLine": 2381,
+          "params": [
+            "C",
+            "CByteLen",
+            "priKey",
+            "order",
+            "M",
+            "MByteLen"
+          ]
+        },
+        {
+          "name": "cpt_sm2_exchangekey",
+          "startLine": 2405,
+          "endLine": 2411,
+          "params": [
+            "role",
+            "dA",
+            "PB",
+            "rA",
+            "RA",
+            "RB",
+            "ZA",
+            "ZB",
+            "kByteLen",
+            "KA",
+            "S1",
+            "SA"
+          ]
+        },
+        {
+          "name": "cpt_ecdh_compute_key",
+          "startLine": 2426,
+          "endLine": 2431,
+          "params": [
+            "curve",
+            "local_prikey",
+            "peer_pubkey",
+            "key",
+            "keyByteLen",
+            "kdf"
+          ]
+        },
+        {
+          "name": "cpt_get_rand",
+          "startLine": 2441,
+          "endLine": 2445,
+          "params": [
+            "random",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_get_rand_fast",
+          "startLine": 2455,
+          "endLine": 2459,
+          "params": [
+            "random",
+            "bytes"
+          ]
+        },
+        {
+          "name": "cpt_trng_reseed",
+          "startLine": 2472,
+          "endLine": 2475,
+          "params": []
+        },
+        {
+          "name": "cpt_trng_get_drbg_alg",
+          "startLine": 2484,
+          "endLine": 2487,
+          "params": []
+        },
+        {
+          "name": "cpt_trng_set_global_init_config",
+          "startLine": 2497,
+          "endLine": 2501,
+          "params": [
+            "config"
+          ]
+        },
+        {
+          "name": "cpt_sm2_getZ",
+          "startLine": 2517,
+          "endLine": 2521,
+          "params": [
+            "ID",
+            "byteLenofID",
+            "pubKey",
+            "Z"
+          ]
+        },
+        {
+          "name": "cpt_sm2_getE",
+          "startLine": 2534,
+          "endLine": 2538,
+          "params": [
+            "M",
+            "byteLen",
+            "Z",
+            "E"
+          ]
+        },
+        {
+          "name": "cpt_ed25519_get_pubkey_from_prikey",
+          "startLine": 2549,
+          "endLine": 2553,
+          "params": [
+            "prikey",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "cpt_ed25519_getkey",
+          "startLine": 2564,
+          "endLine": 2568,
+          "params": [
+            "prikey",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "cpt_ed25519_sign",
+          "startLine": 2592,
+          "endLine": 2597,
+          "params": [
+            "mode",
+            "prikey",
+            "pubkey",
+            "ctx",
+            "ctxByteLen",
+            "M",
+            "MByteLen",
+            "RS"
+          ]
+        },
+        {
+          "name": "cpt_ed25519_verify",
+          "startLine": 2619,
+          "endLine": 2624,
+          "params": [
+            "mode",
+            "pubkey",
+            "ctx",
+            "ctxByteLen",
+            "M",
+            "MByteLen",
+            "RS"
+          ]
+        },
+        {
+          "name": "cpt_x25519_get_pubkey_from_prikey",
+          "startLine": 2634,
+          "endLine": 2638,
+          "params": [
+            "prikey",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "cpt_x25519_getkey",
+          "startLine": 2648,
+          "endLine": 2652,
+          "params": [
+            "prikey",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "cpt_x25519_compute_key",
+          "startLine": 2666,
+          "endLine": 2671,
+          "params": [
+            "local_prikey",
+            "peer_pubkey",
+            "key",
+            "keyByteLen",
+            "kdf"
+          ]
+        },
+        {
+          "name": "cpt_dh_generate_pubkey_from_prikey",
+          "startLine": 2686,
+          "endLine": 2690,
+          "params": [
+            "dh_para",
+            "prikey",
+            "pubkey"
+          ]
+        },
+        {
+          "name": "cpt_dh_compute_key",
+          "startLine": 2705,
+          "endLine": 2710,
+          "params": [
+            "dh_para",
+            "local_prikey",
+            "peer_pubkey",
+            "key"
+          ]
+        },
+        {
+          "name": "cpt_pbkdf2_hmac_kmu",
+          "startLine": 2727,
+          "endLine": 2732,
+          "params": [
+            "hash_alg",
+            "sp_key_idx",
+            "pwd_bytes",
+            "salt",
+            "salt_bytes",
+            "iter",
+            "dst_key_idx"
+          ]
+        },
+        {
+          "name": "cpt_pbkdf2_hmac",
+          "startLine": 2749,
+          "endLine": 2754,
+          "params": [
+            "alg",
+            "pwd",
+            "sp_key_idx",
+            "pwd_bytes",
+            "salt",
+            "salt_bytes",
+            "iter",
+            "out",
+            "out_bytes"
+          ]
+        },
+        {
+          "name": "cpt_ansi_x9_63_kdf",
+          "startLine": 2773,
+          "endLine": 2778,
+          "params": [
+            "alg",
+            "Z",
+            "Z_bytes",
+            "shared_info",
+            "shared_info_bytes",
+            "k1",
+            "k1_bytes",
+            "k2",
+            "k2_bytes"
+          ]
+        },
+        {
+          "name": "cpt_pke_get_version",
+          "startLine": 2786,
+          "endLine": 2789,
+          "params": []
+        },
+        {
+          "name": "cpt_pke_get_driver_version",
+          "startLine": 2797,
+          "endLine": 2800,
+          "params": []
+        },
+        {
+          "name": "cpt_ske_get_version",
+          "startLine": 2808,
+          "endLine": 2811,
+          "params": []
+        },
+        {
+          "name": "cpt_ske_get_driver_version",
+          "startLine": 2819,
+          "endLine": 2822,
+          "params": []
+        },
+        {
+          "name": "cpt_hash_get_version",
+          "startLine": 2830,
+          "endLine": 2833,
+          "params": []
+        },
+        {
+          "name": "cpt_hash_get_driver_version",
+          "startLine": 2841,
+          "endLine": 2844,
+          "params": []
+        },
+        {
+          "name": "cpt_trng_get_version",
+          "startLine": 2852,
+          "endLine": 2855,
+          "params": []
+        },
+        {
+          "name": "cpt_trng_get_driver_version",
+          "startLine": 2863,
+          "endLine": 2866,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "cpt_ske_get_block_byte_len",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_set_ske_ctx_key",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_clear_ske_ctx_key",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_crypto",
+          "line": 227,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_init",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_update_blocks",
+          "line": 279,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_update_including_last_block",
+          "line": 308,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_crypto",
+          "line": 347,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_final",
+          "line": 366,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_xts_update_including_last_2_blocks",
+          "line": 386,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_xts_final",
+          "line": 401,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_xts_init",
+          "line": 428,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_xts_update_blocks",
+          "line": 469,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cbc_init",
+          "line": 518,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cbc_update_blocks",
+          "line": 538,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cbc_final",
+          "line": 552,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cbc_mac_init",
+          "line": 574,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cbc_mac_update",
+          "line": 591,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cbc_mac_final",
+          "line": 609,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_cbc_mac_ctx_dma2cpu",
+          "line": 626,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_cbc_mac_init",
+          "line": 661,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "line": 687,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "line": 735,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "line": 772,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_cmac_ctx_dma_2_cpu",
+          "line": 801,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cmac_init",
+          "line": 824,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cmac_update",
+          "line": 842,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cmac_final",
+          "line": 859,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_cmac",
+          "line": 885,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_cmac_init",
+          "line": 906,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_cmac_update_blocks_excluding_last_block",
+          "line": 925,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_cmac",
+          "line": 956,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_cmac_rctx_switch_dma_ctx",
+          "line": 996,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_cmac_rctx_switch_cpu_ctx",
+          "line": 1032,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gmac_init",
+          "line": 1075,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gmac_update",
+          "line": 1094,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gmac_final",
+          "line": 1112,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_gmac_rctx_switch_cpu_ctx",
+          "line": 1140,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gcm_init",
+          "line": 1183,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gcm_update_blocks_aad",
+          "line": 1204,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gcm_update_blocks",
+          "line": 1229,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_gcm_final",
+          "line": 1247,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_gcm_update_blocks",
+          "line": 1273,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_gcm_update_final",
+          "line": 1296,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_gcm_rctx_switch_ctx",
+          "line": 1326,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_ccm_init",
+          "line": 1369,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_ccm_update_aad",
+          "line": 1387,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_ccm_update_blocks",
+          "line": 1412,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_ccm_final",
+          "line": 1430,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_ccm_update_blocks",
+          "line": 1457,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_dma_ccm_update_final",
+          "line": 1480,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ccm_rctx_switch_ctx",
+          "line": 1510,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_rctx_switch_dma_ctx",
+          "line": 1544,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_rctx_switch_cpu_ctx",
+          "line": 1593,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_ctx_switch",
+          "line": 1647,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_init",
+          "line": 1685,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_update",
+          "line": 1701,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_final",
+          "line": 1717,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash",
+          "line": 1734,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_dma_update_blocks",
+          "line": 1751,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_dma_final",
+          "line": 1774,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_dma",
+          "line": 1796,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_build_hmac_cpu_ctx_without_hash",
+          "line": 1815,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_build_hmac_dma_ctx_without_hash",
+          "line": 1847,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hmac_init",
+          "line": 1883,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hmac_update",
+          "line": 1900,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hmac_final",
+          "line": 1916,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hmac_dma",
+          "line": 1941,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hmac_dma_update_blocks",
+          "line": 1960,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_eccp_get_pubkey_from_prikey",
+          "line": 1978,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_eccp_getkey",
+          "line": 1994,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ecdsa_sign",
+          "line": 2014,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ecdsa_verify",
+          "line": 2034,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_modexp",
+          "line": 2054,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_get_key",
+          "line": 2075,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_get_crtkey",
+          "line": 2099,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_modexp_with_pub",
+          "line": 2123,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_crt_modexp_with_pub",
+          "line": 2149,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_sign_by_msg_digest",
+          "line": 2177,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_sign",
+          "line": 2206,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_crt_sign_by_msg_digest",
+          "line": 2233,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "line": 2261,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_verify",
+          "line": 2280,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_sign",
+          "line": 2300,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_get_pubkey_from_prikey",
+          "line": 2315,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_getkey",
+          "line": 2330,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_encrypt",
+          "line": 2355,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_decrypt",
+          "line": 2376,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_exchangekey",
+          "line": 2405,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ecdh_compute_key",
+          "line": 2426,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_get_rand",
+          "line": 2441,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_get_rand_fast",
+          "line": 2455,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_trng_reseed",
+          "line": 2472,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_trng_get_drbg_alg",
+          "line": 2484,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_trng_set_global_init_config",
+          "line": 2497,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_getZ",
+          "line": 2517,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_sm2_getE",
+          "line": 2534,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ed25519_get_pubkey_from_prikey",
+          "line": 2549,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ed25519_getkey",
+          "line": 2564,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ed25519_sign",
+          "line": 2592,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ed25519_verify",
+          "line": 2619,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_x25519_get_pubkey_from_prikey",
+          "line": 2634,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_x25519_getkey",
+          "line": 2648,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_x25519_compute_key",
+          "line": 2666,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_dh_generate_pubkey_from_prikey",
+          "line": 2686,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_dh_compute_key",
+          "line": 2705,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_pbkdf2_hmac_kmu",
+          "line": 2727,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_pbkdf2_hmac",
+          "line": 2749,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ansi_x9_63_kdf",
+          "line": 2773,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_pke_get_version",
+          "line": 2786,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_pke_get_driver_version",
+          "line": 2797,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_get_version",
+          "line": 2808,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_ske_get_driver_version",
+          "line": 2819,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_get_version",
+          "line": 2830,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_hash_get_driver_version",
+          "line": 2841,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_trng_get_version",
+          "line": 2852,
+          "isDefault": false
+        },
+        {
+          "name": "cpt_trng_get_driver_version",
+          "line": 2863,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "cpt_err_code_to_ehsm_code_sec",
+          "callee": "FID_EQ",
+          "lineNumber": 86
+        },
+        {
+          "caller": "cbcmac_cpu_update_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 115
+        },
+        {
+          "caller": "cbcmac_cpu_update_internal",
+          "callee": "cpt_ske_cbc_mac_update",
+          "lineNumber": 117
+        },
+        {
+          "caller": "cpt_ske_get_block_byte_len",
+          "callee": "ske_get_block_byte_len",
+          "lineNumber": 144
+        },
+        {
+          "caller": "cpt_set_ske_ctx_key",
+          "callee": "util_memcpy",
+          "lineNumber": 176
+        },
+        {
+          "caller": "cpt_clear_ske_ctx_key",
+          "callee": "util_memset",
+          "lineNumber": 193
+        },
+        {
+          "caller": "cpt_ske_crypto",
+          "callee": "ske_crypto",
+          "lineNumber": 231
+        },
+        {
+          "caller": "cpt_ske_crypto",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 232
+        },
+        {
+          "caller": "cpt_ske_dma_init",
+          "callee": "ske_dma_init",
+          "lineNumber": 259
+        },
+        {
+          "caller": "cpt_ske_dma_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 260
+        },
+        {
+          "caller": "cpt_ske_dma_update_blocks",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 283
+        },
+        {
+          "caller": "cpt_ske_dma_update_blocks",
+          "callee": "ske_dma_update_blocks",
+          "lineNumber": 284
+        },
+        {
+          "caller": "cpt_ske_dma_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 285
+        },
+        {
+          "caller": "cpt_ske_dma_update_including_last_block",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 312
+        },
+        {
+          "caller": "cpt_ske_dma_update_including_last_block",
+          "callee": "ske_dma_update_including_last_block",
+          "lineNumber": 313
+        },
+        {
+          "caller": "cpt_ske_dma_update_including_last_block",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 314
+        },
+        {
+          "caller": "cpt_ske_dma_crypto",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 352
+        },
+        {
+          "caller": "cpt_ske_dma_crypto",
+          "callee": "ske_dma_crypto",
+          "lineNumber": 353
+        },
+        {
+          "caller": "cpt_ske_dma_crypto",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 355
+        },
+        {
+          "caller": "cpt_ske_dma_final",
+          "callee": "ske_dma_final",
+          "lineNumber": 368
+        },
+        {
+          "caller": "cpt_ske_dma_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 369
+        },
+        {
+          "caller": "cpt_ske_xts_update_including_last_2_blocks",
+          "callee": "ske_xts_update_including_last_2_blocks",
+          "lineNumber": 389
+        },
+        {
+          "caller": "cpt_ske_xts_update_including_last_2_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 390
+        },
+        {
+          "caller": "cpt_ske_xts_final",
+          "callee": "ske_xts_final",
+          "lineNumber": 403
+        },
+        {
+          "caller": "cpt_ske_xts_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 404
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 432
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 433
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 434
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 435
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 436
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 437
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 438
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "UNUSED",
+          "lineNumber": 439
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "ske_dma_xts_init",
+          "lineNumber": 442
+        },
+        {
+          "caller": "cpt_ske_dma_xts_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 444
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 473
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 474
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 475
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 476
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 477
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 478
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 479
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "UNUSED",
+          "lineNumber": 480
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 484
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "ske_dma_xts_update_blocks",
+          "lineNumber": 485
+        },
+        {
+          "caller": "cpt_ske_dma_xts_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 486
+        },
+        {
+          "caller": "cpt_ske_cbc_init",
+          "callee": "ske_cbc_init",
+          "lineNumber": 521
+        },
+        {
+          "caller": "cpt_ske_cbc_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 522
+        },
+        {
+          "caller": "cpt_ske_cbc_update_blocks",
+          "callee": "ske_cbc_update_blocks",
+          "lineNumber": 540
+        },
+        {
+          "caller": "cpt_ske_cbc_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 541
+        },
+        {
+          "caller": "cpt_ske_cbc_final",
+          "callee": "ske_cbc_final",
+          "lineNumber": 554
+        },
+        {
+          "caller": "cpt_ske_cbc_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 555
+        },
+        {
+          "caller": "cpt_ske_cbc_mac_init",
+          "callee": "ske_cbc_mac_init",
+          "lineNumber": 577
+        },
+        {
+          "caller": "cpt_ske_cbc_mac_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 578
+        },
+        {
+          "caller": "cpt_ske_cbc_mac_update",
+          "callee": "ske_cbc_mac_update",
+          "lineNumber": 593
+        },
+        {
+          "caller": "cpt_ske_cbc_mac_update",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 594
+        },
+        {
+          "caller": "cpt_ske_cbc_mac_final",
+          "callee": "ske_cbc_mac_final",
+          "lineNumber": 611
+        },
+        {
+          "caller": "cpt_ske_cbc_mac_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 612
+        },
+        {
+          "caller": "cpt_cbc_mac_ctx_dma2cpu",
+          "callee": "UNUSED",
+          "lineNumber": 630
+        },
+        {
+          "caller": "cpt_cbc_mac_ctx_dma2cpu",
+          "callee": "UNUSED",
+          "lineNumber": 631
+        },
+        {
+          "caller": "cpt_cbc_mac_ctx_dma2cpu",
+          "callee": "util_memcpy",
+          "lineNumber": 633
+        },
+        {
+          "caller": "cpt_cbc_mac_ctx_dma2cpu",
+          "callee": "util_memcpy",
+          "lineNumber": 635
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_init",
+          "callee": "ske_cbc_mac_init",
+          "lineNumber": 667
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_init",
+          "callee": "ske_dma_cbc_mac_init",
+          "lineNumber": 669
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 671
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "callee": "UNUSED",
+          "lineNumber": 692
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "callee": "UNUSED",
+          "lineNumber": 693
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "callee": "cbcmac_cpu_update_internal",
+          "lineNumber": 694
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 697
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "callee": "ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "lineNumber": 698
+        },
+        {
+          "caller": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 699
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 738
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 740
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 742
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 744
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 748
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 750
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 752
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 757
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 775
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 776
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 779
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 782
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 783
+        },
+        {
+          "caller": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 788
+        },
+        {
+          "caller": "cpt_cmac_ctx_dma_2_cpu",
+          "callee": "util_memcpy",
+          "lineNumber": 803
+        },
+        {
+          "caller": "cpt_ske_cmac_init",
+          "callee": "ske_cmac_init",
+          "lineNumber": 827
+        },
+        {
+          "caller": "cpt_ske_cmac_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 828
+        },
+        {
+          "caller": "cpt_ske_cmac_update",
+          "callee": "ske_cmac_update",
+          "lineNumber": 844
+        },
+        {
+          "caller": "cpt_ske_cmac_update",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 845
+        },
+        {
+          "caller": "cpt_ske_cmac_final",
+          "callee": "ske_cmac_final",
+          "lineNumber": 861
+        },
+        {
+          "caller": "cpt_ske_cmac_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 862
+        },
+        {
+          "caller": "cpt_ske_cmac",
+          "callee": "ske_cmac",
+          "lineNumber": 888
+        },
+        {
+          "caller": "cpt_ske_cmac",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 889
+        },
+        {
+          "caller": "cpt_ske_dma_cmac_init",
+          "callee": "ske_dma_cmac_init",
+          "lineNumber": 909
+        },
+        {
+          "caller": "cpt_ske_dma_cmac_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 910
+        },
+        {
+          "caller": "cpt_ske_dma_cmac_update_blocks_excluding_last_block",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 929
+        },
+        {
+          "caller": "cpt_ske_dma_cmac_update_blocks_excluding_last_block",
+          "callee": "ske_dma_cmac_update_blocks_excluding_last_block",
+          "lineNumber": 930
+        },
+        {
+          "caller": "cpt_ske_dma_cmac_update_blocks_excluding_last_block",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 931
+        },
+        {
+          "caller": "cpt_ske_dma_cmac",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 959
+        },
+        {
+          "caller": "cpt_ske_dma_cmac",
+          "callee": "ske_dma_cmac",
+          "lineNumber": 960
+        },
+        {
+          "caller": "cpt_ske_dma_cmac",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 961
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 999
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1001
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1003
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 1009
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1010
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_dma_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1017
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_cpu_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 1035
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_cpu_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1036
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1039
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 1042
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1043
+        },
+        {
+          "caller": "cpt_cmac_rctx_switch_cpu_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1048
+        },
+        {
+          "caller": "cpt_ske_gmac_init",
+          "callee": "ske_gmac_init",
+          "lineNumber": 1078
+        },
+        {
+          "caller": "cpt_ske_gmac_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "cpt_ske_gmac_update",
+          "callee": "ske_gmac_update",
+          "lineNumber": 1096
+        },
+        {
+          "caller": "cpt_ske_gmac_update",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1097
+        },
+        {
+          "caller": "cpt_ske_gmac_final",
+          "callee": "ske_gmac_final",
+          "lineNumber": 1114
+        },
+        {
+          "caller": "cpt_ske_gmac_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1115
+        },
+        {
+          "caller": "cpt_gmac_rctx_switch_cpu_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 1143
+        },
+        {
+          "caller": "cpt_gmac_rctx_switch_cpu_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1144
+        },
+        {
+          "caller": "cpt_gmac_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1147
+        },
+        {
+          "caller": "cpt_gmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 1150
+        },
+        {
+          "caller": "cpt_gmac_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1151
+        },
+        {
+          "caller": "cpt_gmac_rctx_switch_cpu_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1156
+        },
+        {
+          "caller": "cpt_ske_gcm_init",
+          "callee": "ske_gcm_init",
+          "lineNumber": 1186
+        },
+        {
+          "caller": "cpt_ske_gcm_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1187
+        },
+        {
+          "caller": "cpt_ske_gcm_update_blocks_aad",
+          "callee": "ske_gcm_update_blocks_aad",
+          "lineNumber": 1206
+        },
+        {
+          "caller": "cpt_ske_gcm_update_blocks_aad",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1207
+        },
+        {
+          "caller": "cpt_ske_gcm_update_blocks",
+          "callee": "ske_gcm_update_blocks",
+          "lineNumber": 1231
+        },
+        {
+          "caller": "cpt_ske_gcm_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1232
+        },
+        {
+          "caller": "cpt_ske_gcm_final",
+          "callee": "ske_gcm_final",
+          "lineNumber": 1249
+        },
+        {
+          "caller": "cpt_ske_gcm_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1250
+        },
+        {
+          "caller": "cpt_ske_dma_gcm_update_blocks",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1277
+        },
+        {
+          "caller": "cpt_ske_dma_gcm_update_blocks",
+          "callee": "ske_dma_gcm_update_blocks",
+          "lineNumber": 1278
+        },
+        {
+          "caller": "cpt_ske_dma_gcm_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1279
+        },
+        {
+          "caller": "cpt_ske_dma_gcm_update_final",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1299
+        },
+        {
+          "caller": "cpt_ske_dma_gcm_update_final",
+          "callee": "ske_dma_gcm_update_final",
+          "lineNumber": 1300
+        },
+        {
+          "caller": "cpt_ske_dma_gcm_update_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1301
+        },
+        {
+          "caller": "cpt_gcm_rctx_switch_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 1329
+        },
+        {
+          "caller": "cpt_gcm_rctx_switch_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1330
+        },
+        {
+          "caller": "cpt_gcm_rctx_switch_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1334
+        },
+        {
+          "caller": "cpt_gcm_rctx_switch_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 1337
+        },
+        {
+          "caller": "cpt_gcm_rctx_switch_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1338
+        },
+        {
+          "caller": "cpt_gcm_rctx_switch_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1343
+        },
+        {
+          "caller": "cpt_ske_ccm_init",
+          "callee": "ske_ccm_init",
+          "lineNumber": 1372
+        },
+        {
+          "caller": "cpt_ske_ccm_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1373
+        },
+        {
+          "caller": "cpt_ske_ccm_update_aad",
+          "callee": "ske_ccm_update_aad",
+          "lineNumber": 1389
+        },
+        {
+          "caller": "cpt_ske_ccm_update_aad",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1390
+        },
+        {
+          "caller": "cpt_ske_ccm_update_blocks",
+          "callee": "ske_ccm_update_blocks",
+          "lineNumber": 1414
+        },
+        {
+          "caller": "cpt_ske_ccm_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1415
+        },
+        {
+          "caller": "cpt_ske_ccm_final",
+          "callee": "ske_ccm_final",
+          "lineNumber": 1432
+        },
+        {
+          "caller": "cpt_ske_ccm_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1433
+        },
+        {
+          "caller": "cpt_ske_dma_ccm_update_blocks",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1461
+        },
+        {
+          "caller": "cpt_ske_dma_ccm_update_blocks",
+          "callee": "ske_dma_ccm_update_blocks",
+          "lineNumber": 1462
+        },
+        {
+          "caller": "cpt_ske_dma_ccm_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1463
+        },
+        {
+          "caller": "cpt_ske_dma_ccm_update_final",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1483
+        },
+        {
+          "caller": "cpt_ske_dma_ccm_update_final",
+          "callee": "ske_dma_ccm_update_final",
+          "lineNumber": 1484
+        },
+        {
+          "caller": "cpt_ske_dma_ccm_update_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1485
+        },
+        {
+          "caller": "cpt_ccm_rctx_switch_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 1513
+        },
+        {
+          "caller": "cpt_ccm_rctx_switch_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1514
+        },
+        {
+          "caller": "cpt_ccm_rctx_switch_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1518
+        },
+        {
+          "caller": "cpt_ccm_rctx_switch_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 1521
+        },
+        {
+          "caller": "cpt_ccm_rctx_switch_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1522
+        },
+        {
+          "caller": "cpt_ccm_rctx_switch_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1527
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 1547
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1549
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1552
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1554
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1555
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1564
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1565
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1572
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_dma_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1578
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 1596
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 1598
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1601
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1603
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1604
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1605
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1617
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1618
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1619
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "util_memcpy",
+          "lineNumber": 1626
+        },
+        {
+          "caller": "cpt_hash_rctx_switch_cpu_ctx",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 1632
+        },
+        {
+          "caller": "cpt_hash_ctx_switch",
+          "callee": "util_memcpy",
+          "lineNumber": 1650
+        },
+        {
+          "caller": "cpt_hash_ctx_switch",
+          "callee": "util_memcpy",
+          "lineNumber": 1651
+        },
+        {
+          "caller": "cpt_hash_ctx_switch",
+          "callee": "util_memcpy",
+          "lineNumber": 1661
+        },
+        {
+          "caller": "cpt_hash_ctx_switch",
+          "callee": "util_memcpy",
+          "lineNumber": 1662
+        },
+        {
+          "caller": "cpt_hash_init",
+          "callee": "hash_init",
+          "lineNumber": 1687
+        },
+        {
+          "caller": "cpt_hash_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1688
+        },
+        {
+          "caller": "cpt_hash_update",
+          "callee": "hash_update",
+          "lineNumber": 1703
+        },
+        {
+          "caller": "cpt_hash_update",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1704
+        },
+        {
+          "caller": "cpt_hash_final",
+          "callee": "hash_final",
+          "lineNumber": 1719
+        },
+        {
+          "caller": "cpt_hash_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1720
+        },
+        {
+          "caller": "cpt_hash",
+          "callee": "hash",
+          "lineNumber": 1736
+        },
+        {
+          "caller": "cpt_hash",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1737
+        },
+        {
+          "caller": "cpt_hash_dma_update_blocks",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1755
+        },
+        {
+          "caller": "cpt_hash_dma_update_blocks",
+          "callee": "hash_dma_update_blocks",
+          "lineNumber": 1756
+        },
+        {
+          "caller": "cpt_hash_dma_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1757
+        },
+        {
+          "caller": "cpt_hash_dma_final",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1778
+        },
+        {
+          "caller": "cpt_hash_dma_final",
+          "callee": "hash_dma_final",
+          "lineNumber": 1779
+        },
+        {
+          "caller": "cpt_hash_dma_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1780
+        },
+        {
+          "caller": "cpt_hash_dma",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1800
+        },
+        {
+          "caller": "cpt_hash_dma",
+          "callee": "hash_dma",
+          "lineNumber": 1801
+        },
+        {
+          "caller": "cpt_hash_dma",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1802
+        },
+        {
+          "caller": "cpt_build_hmac_cpu_ctx_without_hash",
+          "callee": "cpt_hmac_init",
+          "lineNumber": 1822
+        },
+        {
+          "caller": "cpt_build_hmac_cpu_ctx_without_hash",
+          "callee": "cpt_hmac_init",
+          "lineNumber": 1824
+        },
+        {
+          "caller": "cpt_build_hmac_cpu_ctx_without_hash",
+          "callee": "util_memcpy",
+          "lineNumber": 1828
+        },
+        {
+          "caller": "cpt_build_hmac_dma_ctx_without_hash",
+          "callee": "cpt_hmac_init",
+          "lineNumber": 1854
+        },
+        {
+          "caller": "cpt_build_hmac_dma_ctx_without_hash",
+          "callee": "cpt_hmac_init",
+          "lineNumber": 1856
+        },
+        {
+          "caller": "cpt_build_hmac_dma_ctx_without_hash",
+          "callee": "util_memcpy",
+          "lineNumber": 1860
+        },
+        {
+          "caller": "cpt_hmac_init",
+          "callee": "hmac_init",
+          "lineNumber": 1886
+        },
+        {
+          "caller": "cpt_hmac_init",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1887
+        },
+        {
+          "caller": "cpt_hmac_update",
+          "callee": "hmac_update",
+          "lineNumber": 1902
+        },
+        {
+          "caller": "cpt_hmac_update",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1903
+        },
+        {
+          "caller": "cpt_hmac_final",
+          "callee": "hmac_final",
+          "lineNumber": 1918
+        },
+        {
+          "caller": "cpt_hmac_final",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1919
+        },
+        {
+          "caller": "cpt_hmac_dma",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1945
+        },
+        {
+          "caller": "cpt_hmac_dma",
+          "callee": "hmac_dma",
+          "lineNumber": 1946
+        },
+        {
+          "caller": "cpt_hmac_dma",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1947
+        },
+        {
+          "caller": "cpt_hmac_dma_update_blocks",
+          "callee": "sysreg_ahb_dma_cfg",
+          "lineNumber": 1963
+        },
+        {
+          "caller": "cpt_hmac_dma_update_blocks",
+          "callee": "hmac_dma_update_blocks",
+          "lineNumber": 1964
+        },
+        {
+          "caller": "cpt_hmac_dma_update_blocks",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1965
+        },
+        {
+          "caller": "cpt_eccp_get_pubkey_from_prikey",
+          "callee": "eccp_get_pubkey_from_prikey",
+          "lineNumber": 1980
+        },
+        {
+          "caller": "cpt_eccp_get_pubkey_from_prikey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1981
+        },
+        {
+          "caller": "cpt_eccp_getkey",
+          "callee": "eccp_getkey",
+          "lineNumber": 1996
+        },
+        {
+          "caller": "cpt_eccp_getkey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 1997
+        },
+        {
+          "caller": "cpt_ecdsa_sign",
+          "callee": "ecdsa_sign",
+          "lineNumber": 2017
+        },
+        {
+          "caller": "cpt_ecdsa_sign",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2018
+        },
+        {
+          "caller": "cpt_ecdsa_verify",
+          "callee": "ecdsa_verify",
+          "lineNumber": 2037
+        },
+        {
+          "caller": "cpt_ecdsa_verify",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2038
+        },
+        {
+          "caller": "cpt_rsa_modexp",
+          "callee": "RSA_ModExp",
+          "lineNumber": 2057
+        },
+        {
+          "caller": "cpt_rsa_modexp",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2058
+        },
+        {
+          "caller": "cpt_rsa_get_key",
+          "callee": "RSA_GetKey",
+          "lineNumber": 2077
+        },
+        {
+          "caller": "cpt_rsa_get_key",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2078
+        },
+        {
+          "caller": "cpt_rsa_get_crtkey",
+          "callee": "RSA_GetCRTKey",
+          "lineNumber": 2102
+        },
+        {
+          "caller": "cpt_rsa_get_crtkey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2103
+        },
+        {
+          "caller": "cpt_rsa_modexp_with_pub",
+          "callee": "UNUSED",
+          "lineNumber": 2126
+        },
+        {
+          "caller": "cpt_rsa_modexp_with_pub",
+          "callee": "UNUSED",
+          "lineNumber": 2127
+        },
+        {
+          "caller": "cpt_rsa_modexp_with_pub",
+          "callee": "RSA_ModExp",
+          "lineNumber": 2128
+        },
+        {
+          "caller": "cpt_rsa_modexp_with_pub",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2129
+        },
+        {
+          "caller": "cpt_rsa_crt_modexp_with_pub",
+          "callee": "UNUSED",
+          "lineNumber": 2152
+        },
+        {
+          "caller": "cpt_rsa_crt_modexp_with_pub",
+          "callee": "UNUSED",
+          "lineNumber": 2153
+        },
+        {
+          "caller": "cpt_rsa_crt_modexp_with_pub",
+          "callee": "RSA_CRTModExp",
+          "lineNumber": 2154
+        },
+        {
+          "caller": "cpt_rsa_crt_modexp_with_pub",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2155
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_sign_by_msg_digest",
+          "callee": "rsa_ssa_pss_sign_by_msg_digest",
+          "lineNumber": 2181
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_sign_by_msg_digest",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2183
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_sign",
+          "callee": "rsa_ssa_pss_sign",
+          "lineNumber": 2211
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_sign",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2212
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_crt_sign_by_msg_digest",
+          "callee": "rsa_ssa_pss_crt_sign_by_msg_digest",
+          "lineNumber": 2237
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_crt_sign_by_msg_digest",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2239
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "callee": "rsa_ssa_pss_verify_by_msg_digest",
+          "lineNumber": 2265
+        },
+        {
+          "caller": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "callee": "cpt_err_code_to_ehsm_code_sec",
+          "lineNumber": 2267
+        },
+        {
+          "caller": "cpt_sm2_verify",
+          "callee": "sm2_verify",
+          "lineNumber": 2282
+        },
+        {
+          "caller": "cpt_sm2_verify",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2283
+        },
+        {
+          "caller": "cpt_sm2_sign",
+          "callee": "sm2_sign",
+          "lineNumber": 2302
+        },
+        {
+          "caller": "cpt_sm2_sign",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2303
+        },
+        {
+          "caller": "cpt_sm2_get_pubkey_from_prikey",
+          "callee": "sm2_get_pubkey_from_prikey",
+          "lineNumber": 2317
+        },
+        {
+          "caller": "cpt_sm2_get_pubkey_from_prikey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2318
+        },
+        {
+          "caller": "cpt_sm2_getkey",
+          "callee": "sm2_getkey",
+          "lineNumber": 2332
+        },
+        {
+          "caller": "cpt_sm2_getkey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2333
+        },
+        {
+          "caller": "cpt_sm2_encrypt",
+          "callee": "sm2_encrypt",
+          "lineNumber": 2358
+        },
+        {
+          "caller": "cpt_sm2_encrypt",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2359
+        },
+        {
+          "caller": "cpt_sm2_decrypt",
+          "callee": "sm2_decrypt",
+          "lineNumber": 2379
+        },
+        {
+          "caller": "cpt_sm2_decrypt",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2380
+        },
+        {
+          "caller": "cpt_sm2_exchangekey",
+          "callee": "sm2_exchangekey",
+          "lineNumber": 2409
+        },
+        {
+          "caller": "cpt_sm2_exchangekey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2410
+        },
+        {
+          "caller": "cpt_ecdh_compute_key",
+          "callee": "ecdh_compute_key",
+          "lineNumber": 2429
+        },
+        {
+          "caller": "cpt_ecdh_compute_key",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2430
+        },
+        {
+          "caller": "cpt_get_rand",
+          "callee": "get_rand",
+          "lineNumber": 2443
+        },
+        {
+          "caller": "cpt_get_rand",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2444
+        },
+        {
+          "caller": "cpt_get_rand_fast",
+          "callee": "get_rand_fast",
+          "lineNumber": 2457
+        },
+        {
+          "caller": "cpt_get_rand_fast",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2458
+        },
+        {
+          "caller": "cpt_trng_reseed",
+          "callee": "trng_reseed",
+          "lineNumber": 2474
+        },
+        {
+          "caller": "cpt_trng_get_drbg_alg",
+          "callee": "trng_get_drbg_alg",
+          "lineNumber": 2486
+        },
+        {
+          "caller": "cpt_trng_set_global_init_config",
+          "callee": "trng_set_global_init_config",
+          "lineNumber": 2499
+        },
+        {
+          "caller": "cpt_trng_set_global_init_config",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2500
+        },
+        {
+          "caller": "cpt_sm2_getZ",
+          "callee": "sm2_getZ",
+          "lineNumber": 2519
+        },
+        {
+          "caller": "cpt_sm2_getZ",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2520
+        },
+        {
+          "caller": "cpt_sm2_getE",
+          "callee": "sm2_getE",
+          "lineNumber": 2536
+        },
+        {
+          "caller": "cpt_sm2_getE",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2537
+        },
+        {
+          "caller": "cpt_ed25519_get_pubkey_from_prikey",
+          "callee": "ed25519_get_pubkey_from_prikey",
+          "lineNumber": 2551
+        },
+        {
+          "caller": "cpt_ed25519_get_pubkey_from_prikey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2552
+        },
+        {
+          "caller": "cpt_ed25519_getkey",
+          "callee": "ed25519_getkey",
+          "lineNumber": 2566
+        },
+        {
+          "caller": "cpt_ed25519_getkey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2567
+        },
+        {
+          "caller": "cpt_ed25519_sign",
+          "callee": "ed25519_sign",
+          "lineNumber": 2595
+        },
+        {
+          "caller": "cpt_ed25519_sign",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2596
+        },
+        {
+          "caller": "cpt_ed25519_verify",
+          "callee": "ed25519_verify",
+          "lineNumber": 2622
+        },
+        {
+          "caller": "cpt_ed25519_verify",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2623
+        },
+        {
+          "caller": "cpt_x25519_get_pubkey_from_prikey",
+          "callee": "x25519_get_pubkey_from_prikey",
+          "lineNumber": 2636
+        },
+        {
+          "caller": "cpt_x25519_get_pubkey_from_prikey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2637
+        },
+        {
+          "caller": "cpt_x25519_getkey",
+          "callee": "x25519_getkey",
+          "lineNumber": 2650
+        },
+        {
+          "caller": "cpt_x25519_getkey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2651
+        },
+        {
+          "caller": "cpt_x25519_compute_key",
+          "callee": "x25519_compute_key",
+          "lineNumber": 2669
+        },
+        {
+          "caller": "cpt_x25519_compute_key",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2670
+        },
+        {
+          "caller": "cpt_dh_generate_pubkey_from_prikey",
+          "callee": "dh_generate_pubkey_from_prikey",
+          "lineNumber": 2688
+        },
+        {
+          "caller": "cpt_dh_generate_pubkey_from_prikey",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2689
+        },
+        {
+          "caller": "cpt_dh_compute_key",
+          "callee": "dh_compute_key",
+          "lineNumber": 2708
+        },
+        {
+          "caller": "cpt_dh_compute_key",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2709
+        },
+        {
+          "caller": "cpt_pbkdf2_hmac_kmu",
+          "callee": "pbkdf2_hmac_kmu",
+          "lineNumber": 2730
+        },
+        {
+          "caller": "cpt_pbkdf2_hmac_kmu",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2731
+        },
+        {
+          "caller": "cpt_pbkdf2_hmac",
+          "callee": "pbkdf2_hmac",
+          "lineNumber": 2752
+        },
+        {
+          "caller": "cpt_pbkdf2_hmac",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2753
+        },
+        {
+          "caller": "cpt_ansi_x9_63_kdf",
+          "callee": "ansi_x9_63_kdf",
+          "lineNumber": 2776
+        },
+        {
+          "caller": "cpt_ansi_x9_63_kdf",
+          "callee": "cpt_err_code_to_ehsm_code",
+          "lineNumber": 2777
+        },
+        {
+          "caller": "cpt_pke_get_version",
+          "callee": "pke_get_version",
+          "lineNumber": 2788
+        },
+        {
+          "caller": "cpt_pke_get_driver_version",
+          "callee": "pke_get_driver_version",
+          "lineNumber": 2799
+        },
+        {
+          "caller": "cpt_ske_get_version",
+          "callee": "ske_get_version",
+          "lineNumber": 2810
+        },
+        {
+          "caller": "cpt_ske_get_driver_version",
+          "callee": "ske_get_driver_version",
+          "lineNumber": 2821
+        },
+        {
+          "caller": "cpt_hash_get_version",
+          "callee": "hash_get_version",
+          "lineNumber": 2832
+        },
+        {
+          "caller": "cpt_hash_get_driver_version",
+          "callee": "hash_get_driver_version",
+          "lineNumber": 2843
+        },
+        {
+          "caller": "cpt_trng_get_version",
+          "callee": "trng_get_version",
+          "lineNumber": 2854
+        },
+        {
+          "caller": "cpt_trng_get_driver_version",
+          "callee": "trng_get_driver_version",
+          "lineNumber": 2865
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 117,
+        "functionCount": 119,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/crypto_api.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 2036,
+      "nonEmptyLines": 1896,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/dbgcmd_parser.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 727,
+      "nonEmptyLines": 636,
+      "functions": [
+        {
+          "name": "dbg_get_challenge",
+          "startLine": 95,
+          "endLine": 116,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_close_debug",
+          "startLine": 118,
+          "endLine": 139,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_check_debug_verify_param",
+          "startLine": 141,
+          "endLine": 160,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_check_challenge_param",
+          "startLine": 162,
+          "endLine": 184,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_check_close_debug_param",
+          "startLine": 186,
+          "endLine": 200,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_parse_asym_verify_data",
+          "startLine": 202,
+          "endLine": 222,
+          "params": [
+            "cmd_param",
+            "ehsm_debug_auth"
+          ]
+        },
+        {
+          "name": "dbg_parse_rsa_data",
+          "startLine": 224,
+          "endLine": 261,
+          "params": [
+            "cmd_param",
+            "ehsm_debug_auth"
+          ]
+        },
+        {
+          "name": "dbg_parse_sym_verify_data",
+          "startLine": 263,
+          "endLine": 278,
+          "params": [
+            "cmd_param",
+            "ehsm_debug_auth"
+          ]
+        },
+        {
+          "name": "dbg_parse_verify_data",
+          "startLine": 280,
+          "endLine": 319,
+          "params": [
+            "cmd_param",
+            "ehsm_debug_auth"
+          ]
+        },
+        {
+          "name": "dbg_debug_verify",
+          "startLine": 321,
+          "endLine": 352,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_build_random_resp",
+          "startLine": 354,
+          "endLine": 394,
+          "params": [
+            "challenge_buf",
+            "challenge_len",
+            "ret_buf",
+            "ret_code",
+            "type"
+          ]
+        },
+        {
+          "name": "dbg_build_verify_resp",
+          "startLine": 396,
+          "endLine": 441,
+          "params": [
+            "ret_buf",
+            "ret_code"
+          ]
+        },
+        {
+          "name": "dbg_build_close_debug_resp",
+          "startLine": 443,
+          "endLine": 465,
+          "params": [
+            "ret_buf",
+            "ret_code"
+          ]
+        },
+        {
+          "name": "dbg_handle_cmd",
+          "startLine": 467,
+          "endLine": 505,
+          "params": [
+            "cmd_param"
+          ]
+        },
+        {
+          "name": "dbg_analysis_parser",
+          "startLine": 507,
+          "endLine": 533,
+          "params": [
+            "parser"
+          ]
+        },
+        {
+          "name": "dbg_hextochar_interenl",
+          "startLine": 535,
+          "endLine": 547,
+          "params": [
+            "tmp"
+          ]
+        },
+        {
+          "name": "dbg_chartohex_interenl",
+          "startLine": 549,
+          "endLine": 564,
+          "params": [
+            "tmp"
+          ]
+        },
+        {
+          "name": "dbg_hextochar",
+          "startLine": 575,
+          "endLine": 589,
+          "params": [
+            "in",
+            "len",
+            "out"
+          ]
+        },
+        {
+          "name": "dbg_chartohex",
+          "startLine": 601,
+          "endLine": 615,
+          "params": [
+            "in",
+            "len",
+            "out"
+          ]
+        },
+        {
+          "name": "dbgcmdpars_init_parser",
+          "startLine": 620,
+          "endLine": 635,
+          "params": [
+            "parser"
+          ]
+        },
+        {
+          "name": "dbgcmdpars_append_data",
+          "startLine": 637,
+          "endLine": 670,
+          "params": [
+            "parser",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "dbgcmdpars_recv_complete",
+          "startLine": 672,
+          "endLine": 687,
+          "params": [
+            "parser"
+          ]
+        },
+        {
+          "name": "dbgcmdpars_srv_handler",
+          "startLine": 689,
+          "endLine": 708,
+          "params": [
+            "packet"
+          ]
+        },
+        {
+          "name": "dbgcmdpars_trans_to_packet",
+          "startLine": 710,
+          "endLine": 724,
+          "params": [
+            "parser",
+            "packet"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "dbgcmdpars_init_parser",
+          "line": 620,
+          "isDefault": false
+        },
+        {
+          "name": "dbgcmdpars_append_data",
+          "line": 637,
+          "isDefault": false
+        },
+        {
+          "name": "dbgcmdpars_recv_complete",
+          "line": 672,
+          "isDefault": false
+        },
+        {
+          "name": "dbgcmdpars_srv_handler",
+          "line": 689,
+          "isDefault": false
+        },
+        {
+          "name": "dbgcmdpars_trans_to_packet",
+          "line": 710,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "dbg_get_challenge",
+          "callee": "dbg_check_challenge_param",
+          "lineNumber": 103
+        },
+        {
+          "caller": "dbg_get_challenge",
+          "callee": "dbg_build_random_resp",
+          "lineNumber": 105
+        },
+        {
+          "caller": "dbg_get_challenge",
+          "callee": "dbgauth_get_challenge",
+          "lineNumber": 110
+        },
+        {
+          "caller": "dbg_get_challenge",
+          "callee": "dbg_build_random_resp",
+          "lineNumber": 111
+        },
+        {
+          "caller": "dbg_close_debug",
+          "callee": "dbg_check_close_debug_param",
+          "lineNumber": 124
+        },
+        {
+          "caller": "dbg_close_debug",
+          "callee": "dbg_build_close_debug_resp",
+          "lineNumber": 126
+        },
+        {
+          "caller": "dbg_close_debug",
+          "callee": "dbgauth_close_debug",
+          "lineNumber": 130
+        },
+        {
+          "caller": "dbg_close_debug",
+          "callee": "dbg_build_close_debug_resp",
+          "lineNumber": 132
+        },
+        {
+          "caller": "dbg_close_debug",
+          "callee": "dbg_build_close_debug_resp",
+          "lineNumber": 134
+        },
+        {
+          "caller": "dbg_parse_asym_verify_data",
+          "callee": "util_memset",
+          "lineNumber": 211
+        },
+        {
+          "caller": "dbg_parse_asym_verify_data",
+          "callee": "dbg_chartohex",
+          "lineNumber": 212
+        },
+        {
+          "caller": "dbg_parse_asym_verify_data",
+          "callee": "util_memcpy",
+          "lineNumber": 213
+        },
+        {
+          "caller": "dbg_parse_asym_verify_data",
+          "callee": "dbg_chartohex",
+          "lineNumber": 214
+        },
+        {
+          "caller": "dbg_parse_asym_verify_data",
+          "callee": "util_memcpy",
+          "lineNumber": 215
+        },
+        {
+          "caller": "dbg_parse_rsa_data",
+          "callee": "util_memset",
+          "lineNumber": 249
+        },
+        {
+          "caller": "dbg_parse_rsa_data",
+          "callee": "dbg_chartohex",
+          "lineNumber": 250
+        },
+        {
+          "caller": "dbg_parse_rsa_data",
+          "callee": "util_memcpy",
+          "lineNumber": 251
+        },
+        {
+          "caller": "dbg_parse_rsa_data",
+          "callee": "dbg_chartohex",
+          "lineNumber": 252
+        },
+        {
+          "caller": "dbg_parse_rsa_data",
+          "callee": "util_memcpy",
+          "lineNumber": 253
+        },
+        {
+          "caller": "dbg_parse_sym_verify_data",
+          "callee": "util_memset",
+          "lineNumber": 271
+        },
+        {
+          "caller": "dbg_parse_sym_verify_data",
+          "callee": "dbg_chartohex",
+          "lineNumber": 273
+        },
+        {
+          "caller": "dbg_parse_sym_verify_data",
+          "callee": "util_memcpy",
+          "lineNumber": 274
+        },
+        {
+          "caller": "dbg_parse_verify_data",
+          "callee": "dbg_parse_asym_verify_data",
+          "lineNumber": 292
+        },
+        {
+          "caller": "dbg_parse_verify_data",
+          "callee": "dbg_parse_asym_verify_data",
+          "lineNumber": 297
+        },
+        {
+          "caller": "dbg_parse_verify_data",
+          "callee": "dbg_parse_sym_verify_data",
+          "lineNumber": 301
+        },
+        {
+          "caller": "dbg_parse_verify_data",
+          "callee": "dbg_parse_sym_verify_data",
+          "lineNumber": 305
+        },
+        {
+          "caller": "dbg_parse_verify_data",
+          "callee": "dbg_parse_rsa_data",
+          "lineNumber": 309
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "util_memset",
+          "lineNumber": 327
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_check_debug_verify_param",
+          "lineNumber": 328
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "util_memset",
+          "lineNumber": 332
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_parse_verify_data",
+          "lineNumber": 334
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbgauth_ehsm_debug_auth",
+          "lineNumber": 336
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_build_verify_resp",
+          "lineNumber": 338
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_build_verify_resp",
+          "lineNumber": 340
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_build_verify_resp",
+          "lineNumber": 342
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_build_verify_resp",
+          "lineNumber": 345
+        },
+        {
+          "caller": "dbg_debug_verify",
+          "callee": "dbg_build_verify_resp",
+          "lineNumber": 348
+        },
+        {
+          "caller": "dbg_build_random_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 365
+        },
+        {
+          "caller": "dbg_build_random_resp",
+          "callee": "dbg_hextochar",
+          "lineNumber": 376
+        },
+        {
+          "caller": "dbg_build_random_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 379
+        },
+        {
+          "caller": "dbg_build_random_resp",
+          "callee": "util_memset",
+          "lineNumber": 384
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 406
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 408
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 413
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 417
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 421
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 425
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 429
+        },
+        {
+          "caller": "dbg_build_verify_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 433
+        },
+        {
+          "caller": "dbg_build_close_debug_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 450
+        },
+        {
+          "caller": "dbg_build_close_debug_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 452
+        },
+        {
+          "caller": "dbg_build_close_debug_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 455
+        },
+        {
+          "caller": "dbg_build_close_debug_resp",
+          "callee": "util_memcpy",
+          "lineNumber": 457
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "util_memcmp",
+          "lineNumber": 479
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "dbg_get_challenge",
+          "lineNumber": 480
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "util_memcmp",
+          "lineNumber": 483
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "dbg_debug_verify",
+          "lineNumber": 484
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "util_memcmp",
+          "lineNumber": 487
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "dbg_close_debug",
+          "lineNumber": 488
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "util_memcmp",
+          "lineNumber": 491
+        },
+        {
+          "caller": "dbg_handle_cmd",
+          "callee": "util_memcpy",
+          "lineNumber": 494
+        },
+        {
+          "caller": "dbg_analysis_parser",
+          "callee": "util_memset",
+          "lineNumber": 516
+        },
+        {
+          "caller": "dbg_analysis_parser",
+          "callee": "dbg_handle_cmd",
+          "lineNumber": 524
+        },
+        {
+          "caller": "dbg_analysis_parser",
+          "callee": "util_memcpy",
+          "lineNumber": 526
+        },
+        {
+          "caller": "dbg_hextochar",
+          "callee": "dbg_hextochar_interenl",
+          "lineNumber": 584
+        },
+        {
+          "caller": "dbg_hextochar",
+          "callee": "dbg_hextochar_interenl",
+          "lineNumber": 585
+        },
+        {
+          "caller": "dbg_hextochar",
+          "callee": "util_memcpy",
+          "lineNumber": 588
+        },
+        {
+          "caller": "dbg_chartohex",
+          "callee": "dbg_chartohex_interenl",
+          "lineNumber": 607
+        },
+        {
+          "caller": "dbg_chartohex",
+          "callee": "dbg_chartohex_interenl",
+          "lineNumber": 610
+        },
+        {
+          "caller": "dbg_chartohex",
+          "callee": "util_memcpy",
+          "lineNumber": 614
+        },
+        {
+          "caller": "dbgcmdpars_init_parser",
+          "callee": "util_memset",
+          "lineNumber": 630
+        },
+        {
+          "caller": "dbgcmdpars_append_data",
+          "callee": "dbgcmdpars_init_parser",
+          "lineNumber": 664
+        },
+        {
+          "caller": "dbgcmdpars_srv_handler",
+          "callee": "dbg_analysis_parser",
+          "lineNumber": 703
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 5,
+        "functionCount": 24,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/dbgcmd_parser.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 63,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/kds.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 575,
+      "nonEmptyLines": 516,
+      "functions": [
+        {
+          "name": "check_key_handle_exist",
+          "startLine": 82,
+          "endLine": 132,
+          "params": [
+            "key_handle",
+            "idx"
+          ]
+        },
+        {
+          "name": "find_unused_key_handle_idx",
+          "startLine": 134,
+          "endLine": 170,
+          "params": [
+            "idx"
+          ]
+        },
+        {
+          "name": "adjust_mem_node_size",
+          "startLine": 172,
+          "endLine": 251,
+          "params": [
+            "node_index",
+            "adjust_size",
+            "adjust_mode"
+          ]
+        },
+        {
+          "name": "kds_write_key",
+          "startLine": 265,
+          "endLine": 341,
+          "params": [
+            "data",
+            "size",
+            "handle"
+          ]
+        },
+        {
+          "name": "kds_read_key",
+          "startLine": 355,
+          "endLine": 385,
+          "params": [
+            "key_handle",
+            "offset",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "kds_read_entire_key",
+          "startLine": 398,
+          "endLine": 429,
+          "params": [
+            "key_handle",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "kds_remove_key",
+          "startLine": 440,
+          "endLine": 471,
+          "params": [
+            "key_handle"
+          ]
+        },
+        {
+          "name": "kds_init",
+          "startLine": 483,
+          "endLine": 508,
+          "params": [
+            "ram_key_addr",
+            "ram_key_size"
+          ]
+        },
+        {
+          "name": "kds_remove_all_key",
+          "startLine": 517,
+          "endLine": 538,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "kds_write_key",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "kds_read_key",
+          "line": 355,
+          "isDefault": false
+        },
+        {
+          "name": "kds_read_entire_key",
+          "line": 398,
+          "isDefault": false
+        },
+        {
+          "name": "kds_remove_key",
+          "line": 440,
+          "isDefault": false
+        },
+        {
+          "name": "kds_init",
+          "line": 483,
+          "isDefault": false
+        },
+        {
+          "name": "kds_remove_all_key",
+          "line": 517,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "find_unused_key_handle_idx",
+          "callee": "check_key_handle_exist",
+          "lineNumber": 151
+        },
+        {
+          "caller": "adjust_mem_node_size",
+          "callee": "kds_util_memmove",
+          "lineNumber": 225
+        },
+        {
+          "caller": "adjust_mem_node_size",
+          "callee": "kds_get_node_addr",
+          "lineNumber": 225
+        },
+        {
+          "caller": "adjust_mem_node_size",
+          "callee": "kds_get_node_addr",
+          "lineNumber": 225
+        },
+        {
+          "caller": "kds_write_key",
+          "callee": "find_unused_key_handle_idx",
+          "lineNumber": 287
+        },
+        {
+          "caller": "kds_write_key",
+          "callee": "check_key_handle_exist",
+          "lineNumber": 294
+        },
+        {
+          "caller": "kds_write_key",
+          "callee": "adjust_mem_node_size",
+          "lineNumber": 301
+        },
+        {
+          "caller": "kds_write_key",
+          "callee": "find_unused_key_handle_idx",
+          "lineNumber": 305
+        },
+        {
+          "caller": "kds_write_key",
+          "callee": "util_memcpy",
+          "lineNumber": 336
+        },
+        {
+          "caller": "kds_write_key",
+          "callee": "kds_get_node_addr",
+          "lineNumber": 336
+        },
+        {
+          "caller": "kds_read_key",
+          "callee": "check_key_handle_exist",
+          "lineNumber": 370
+        },
+        {
+          "caller": "kds_read_key",
+          "callee": "util_memcpy",
+          "lineNumber": 379
+        },
+        {
+          "caller": "kds_read_key",
+          "callee": "kds_get_node_addr",
+          "lineNumber": 379
+        },
+        {
+          "caller": "kds_read_entire_key",
+          "callee": "check_key_handle_exist",
+          "lineNumber": 413
+        },
+        {
+          "caller": "kds_read_entire_key",
+          "callee": "util_memcpy",
+          "lineNumber": 422
+        },
+        {
+          "caller": "kds_read_entire_key",
+          "callee": "kds_get_node_addr",
+          "lineNumber": 422
+        },
+        {
+          "caller": "kds_remove_key",
+          "callee": "check_key_handle_exist",
+          "lineNumber": 456
+        },
+        {
+          "caller": "kds_remove_key",
+          "callee": "adjust_mem_node_size",
+          "lineNumber": 460
+        },
+        {
+          "caller": "kds_remove_key",
+          "callee": "util_memset",
+          "lineNumber": 464
+        },
+        {
+          "caller": "kds_init",
+          "callee": "util_memset",
+          "lineNumber": 494
+        },
+        {
+          "caller": "kds_remove_all_key",
+          "callee": "util_memset",
+          "lineNumber": 526
+        },
+        {
+          "caller": "kds_remove_all_key",
+          "callee": "util_memset",
+          "lineNumber": 527
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 6,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/kds.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 32,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/otp_key.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 246,
+      "nonEmptyLines": 214,
+      "functions": [
+        {
+          "name": "otpkey_get_keyid_map_idx",
+          "startLine": 48,
+          "endLine": 68,
+          "params": [
+            "logic_key_id",
+            "idx"
+          ]
+        },
+        {
+          "name": "otpkey_check_key_usage",
+          "startLine": 70,
+          "endLine": 88,
+          "params": [
+            "attr",
+            "algo_type",
+            "key_level",
+            "key_usage"
+          ]
+        },
+        {
+          "name": "otpkey_gen_key_data",
+          "startLine": 90,
+          "endLine": 104,
+          "params": [
+            "attr",
+            "out"
+          ]
+        },
+        {
+          "name": "otpkey_register_keyid_map",
+          "startLine": 109,
+          "endLine": 124,
+          "params": [
+            "keyid_map",
+            "keyid_num"
+          ]
+        },
+        {
+          "name": "otpkey_check_usage",
+          "startLine": 126,
+          "endLine": 153,
+          "params": [
+            "key_id",
+            "algo_type",
+            "key_level",
+            "key_usage"
+          ]
+        },
+        {
+          "name": "otpkey_aquire_key_attr",
+          "startLine": 155,
+          "endLine": 188,
+          "params": [
+            "key_id",
+            "otp_key_attr"
+          ]
+        },
+        {
+          "name": "otpkey_read_data",
+          "startLine": 190,
+          "endLine": 217,
+          "params": [
+            "key_id",
+            "out"
+          ]
+        },
+        {
+          "name": "otpkey_get_phyid",
+          "startLine": 219,
+          "endLine": 246,
+          "params": [
+            "key_id",
+            "phy_id"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "otpkey_register_keyid_map",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "otpkey_check_usage",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "otpkey_aquire_key_attr",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "otpkey_read_data",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "otpkey_get_phyid",
+          "line": 219,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "otpkey_check_key_usage",
+          "callee": "kmu_check_key_attr",
+          "lineNumber": 84
+        },
+        {
+          "caller": "otpkey_gen_key_data",
+          "callee": "kmu_get_keyid_data",
+          "lineNumber": 96
+        },
+        {
+          "caller": "otpkey_check_usage",
+          "callee": "otpkey_get_keyid_map_idx",
+          "lineNumber": 145
+        },
+        {
+          "caller": "otpkey_check_usage",
+          "callee": "otpkey_check_key_usage",
+          "lineNumber": 148
+        },
+        {
+          "caller": "otpkey_aquire_key_attr",
+          "callee": "otpkey_get_keyid_map_idx",
+          "lineNumber": 174
+        },
+        {
+          "caller": "otpkey_aquire_key_attr",
+          "callee": "kmu_check_key_attr",
+          "lineNumber": 178
+        },
+        {
+          "caller": "otpkey_aquire_key_attr",
+          "callee": "util_memcpy",
+          "lineNumber": 183
+        },
+        {
+          "caller": "otpkey_read_data",
+          "callee": "otpkey_get_keyid_map_idx",
+          "lineNumber": 205
+        },
+        {
+          "caller": "otpkey_read_data",
+          "callee": "otpkey_gen_key_data",
+          "lineNumber": 212
+        },
+        {
+          "caller": "otpkey_get_phyid",
+          "callee": "otpkey_get_keyid_map_idx",
+          "lineNumber": 234
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/otp_key.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 123,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/otp_map.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 43,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/queue.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 137,
+      "nonEmptyLines": 114,
+      "functions": [
+        {
+          "name": "queue_is_empty",
+          "startLine": 41,
+          "endLine": 53,
+          "params": [
+            "queue"
+          ]
+        },
+        {
+          "name": "queue_init",
+          "startLine": 58,
+          "endLine": 74,
+          "params": [
+            "queue",
+            "queue_elements",
+            "elements_count"
+          ]
+        },
+        {
+          "name": "queue_push",
+          "startLine": 76,
+          "endLine": 99,
+          "params": [
+            "queue",
+            "data"
+          ]
+        },
+        {
+          "name": "queue_pop",
+          "startLine": 101,
+          "endLine": 121,
+          "params": [
+            "queue",
+            "queue_data"
+          ]
+        },
+        {
+          "name": "queue_is_full",
+          "startLine": 123,
+          "endLine": 133,
+          "params": [
+            "queue"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "queue_init",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "queue_push",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "queue_pop",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "queue_is_full",
+          "line": 123,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "queue_pop",
+          "callee": "queue_is_empty",
+          "lineNumber": 107
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/queue.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 37,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/component/util.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 33,
+      "callGraph": [
+        {
+          "caller": "util_memcpy",
+          "callee": "memcpy_",
+          "lineNumber": 9
+        },
+        {
+          "caller": "util_memset",
+          "callee": "memset_",
+          "lineNumber": 14
+        },
+        {
+          "caller": "util_memcmp",
+          "callee": "memcmp_",
+          "lineNumber": 19
+        },
+        {
+          "caller": "util_u32_copy",
+          "callee": "uint32_copy",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/counter_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/counter_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 165,
+      "nonEmptyLines": 138,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/emu_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 274,
+      "nonEmptyLines": 238,
+      "functions": [
+        {
+          "name": "enter_hold_status",
+          "startLine": 96,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "get_mcause_value",
+          "startLine": 105,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "emu_int_handler",
+          "startLine": 117,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "emu_exception_handler",
+          "startLine": 125,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "emu_init",
+          "startLine": 145,
+          "endLine": 184,
+          "params": []
+        },
+        {
+          "name": "emu_trigger_fw_error",
+          "startLine": 186,
+          "endLine": 210,
+          "params": [
+            "err"
+          ]
+        },
+        {
+          "name": "emu_enable_hw_int",
+          "startLine": 212,
+          "endLine": 251,
+          "params": [
+            "enable"
+          ]
+        },
+        {
+          "name": "emu_unlock_err_trig",
+          "startLine": 253,
+          "endLine": 270,
+          "params": [
+            "unlock"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "emu_exception_handler",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "emu_init",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "emu_trigger_fw_error",
+          "line": 186,
+          "isDefault": false
+        },
+        {
+          "name": "emu_enable_hw_int",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "emu_unlock_err_trig",
+          "line": 253,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "emu_int_handler",
+          "callee": "enter_hold_status",
+          "lineNumber": 120
+        },
+        {
+          "caller": "emu_exception_handler",
+          "callee": "get_mcause_value",
+          "lineNumber": 127
+        },
+        {
+          "caller": "emu_exception_handler",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 129
+        },
+        {
+          "caller": "emu_exception_handler",
+          "callee": "emu_get_status_reg_base",
+          "lineNumber": 130
+        },
+        {
+          "caller": "emu_exception_handler",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 136
+        },
+        {
+          "caller": "emu_exception_handler",
+          "callee": "expt_det_add_error",
+          "lineNumber": 139
+        },
+        {
+          "caller": "emu_exception_handler",
+          "callee": "enter_hold_status",
+          "lineNumber": 142
+        },
+        {
+          "caller": "emu_init",
+          "callee": "emu_get_int_en_reg_base",
+          "lineNumber": 148
+        },
+        {
+          "caller": "emu_init",
+          "callee": "emu_get_int_reg_base",
+          "lineNumber": 149
+        },
+        {
+          "caller": "emu_init",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 155
+        },
+        {
+          "caller": "emu_init",
+          "callee": "expt_det_add_error",
+          "lineNumber": 173
+        },
+        {
+          "caller": "emu_init",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 177
+        },
+        {
+          "caller": "emu_init",
+          "callee": "cpu_register_int",
+          "lineNumber": 178
+        },
+        {
+          "caller": "emu_init",
+          "callee": "cpu_enable_int",
+          "lineNumber": 180
+        },
+        {
+          "caller": "emu_trigger_fw_error",
+          "callee": "emu_get_status_reg_base",
+          "lineNumber": 190
+        },
+        {
+          "caller": "emu_trigger_fw_error",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 200
+        },
+        {
+          "caller": "emu_trigger_fw_error",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 206
+        },
+        {
+          "caller": "emu_enable_hw_int",
+          "callee": "emu_get_int_en_reg_base",
+          "lineNumber": 214
+        },
+        {
+          "caller": "emu_enable_hw_int",
+          "callee": "emu_get_int_reg_base",
+          "lineNumber": 215
+        },
+        {
+          "caller": "emu_enable_hw_int",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 217
+        },
+        {
+          "caller": "emu_enable_hw_int",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 238
+        },
+        {
+          "caller": "emu_enable_hw_int",
+          "callee": "expt_det_add_error",
+          "lineNumber": 243
+        },
+        {
+          "caller": "emu_enable_hw_int",
+          "callee": "expt_det_add_error",
+          "lineNumber": 248
+        },
+        {
+          "caller": "emu_unlock_err_trig",
+          "callee": "emu_get_err_trig_lock_reg_base",
+          "lineNumber": 256
+        },
+        {
+          "caller": "emu_unlock_err_trig",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 263
+        },
+        {
+          "caller": "emu_unlock_err_trig",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 265
+        },
+        {
+          "caller": "emu_unlock_err_trig",
+          "callee": "expt_det_add_error",
+          "lineNumber": 268
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/emu_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 91,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/kmu_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 208,
+      "nonEmptyLines": 179,
+      "functions": [
+        {
+          "name": "kmu_check_param",
+          "startLine": 70,
+          "endLine": 87,
+          "params": [
+            "algo_type",
+            "key_level"
+          ]
+        },
+        {
+          "name": "kmu_verify_attr_field",
+          "startLine": 89,
+          "endLine": 101,
+          "params": [
+            "key_id",
+            "mask",
+            "offset",
+            "value"
+          ]
+        },
+        {
+          "name": "kmu_config",
+          "startLine": 106,
+          "endLine": 135,
+          "params": [
+            "key_id",
+            "sec_port_sel"
+          ]
+        },
+        {
+          "name": "kmu_config_derive_key",
+          "startLine": 137,
+          "endLine": 160,
+          "params": [
+            "key_id"
+          ]
+        },
+        {
+          "name": "kmu_check_key_attr",
+          "startLine": 162,
+          "endLine": 189,
+          "params": [
+            "key_id",
+            "algo_type",
+            "key_level"
+          ]
+        },
+        {
+          "name": "kmu_get_keyid_data",
+          "startLine": 191,
+          "endLine": 208,
+          "params": [
+            "key_id",
+            "data",
+            "size"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "kmu_config",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "kmu_config_derive_key",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "kmu_check_key_attr",
+          "line": 162,
+          "isDefault": false
+        },
+        {
+          "name": "kmu_get_keyid_data",
+          "line": 191,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "kmu_verify_attr_field",
+          "callee": "kmu_get_reg_base",
+          "lineNumber": 92
+        },
+        {
+          "caller": "kmu_config",
+          "callee": "kmu_get_reg_base",
+          "lineNumber": 110
+        },
+        {
+          "caller": "kmu_config",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 119
+        },
+        {
+          "caller": "kmu_config",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 123
+        },
+        {
+          "caller": "kmu_config",
+          "callee": "expt_det_add_error",
+          "lineNumber": 125
+        },
+        {
+          "caller": "kmu_config_derive_key",
+          "callee": "sysreg_get_otp_key_num",
+          "lineNumber": 140
+        },
+        {
+          "caller": "kmu_config_derive_key",
+          "callee": "kmu_get_reg_base",
+          "lineNumber": 141
+        },
+        {
+          "caller": "kmu_config_derive_key",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 144
+        },
+        {
+          "caller": "kmu_config_derive_key",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 151
+        },
+        {
+          "caller": "kmu_config_derive_key",
+          "callee": "expt_det_add_error",
+          "lineNumber": 153
+        },
+        {
+          "caller": "kmu_check_key_attr",
+          "callee": "kmu_check_param",
+          "lineNumber": 169
+        },
+        {
+          "caller": "kmu_check_key_attr",
+          "callee": "kmu_verify_attr_field",
+          "lineNumber": 175
+        },
+        {
+          "caller": "kmu_check_key_attr",
+          "callee": "kmu_verify_attr_field",
+          "lineNumber": 176
+        },
+        {
+          "caller": "kmu_check_key_attr",
+          "callee": "kmu_verify_attr_field",
+          "lineNumber": 177
+        },
+        {
+          "caller": "kmu_get_keyid_data",
+          "callee": "kmu_get_reg_base",
+          "lineNumber": 194
+        },
+        {
+          "caller": "kmu_get_keyid_data",
+          "callee": "util_read_volatile_u32",
+          "lineNumber": 202
+        },
+        {
+          "caller": "kmu_get_keyid_data",
+          "callee": "util_memcpy",
+          "lineNumber": 203
+        },
+        {
+          "caller": "kmu_get_keyid_data",
+          "callee": "util_memset",
+          "lineNumber": 204
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/kmu_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 51,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/mailbox_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 243,
+      "nonEmptyLines": 210,
+      "functions": [
+        {
+          "name": "mailbox_init",
+          "startLine": 108,
+          "endLine": 137,
+          "params": [
+            "cb"
+          ]
+        },
+        {
+          "name": "mailbox_read",
+          "startLine": 139,
+          "endLine": 153,
+          "params": [
+            "channel",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "mailbox_write",
+          "startLine": 155,
+          "endLine": 172,
+          "params": [
+            "channel",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "mailbox_read_send_notify",
+          "startLine": 174,
+          "endLine": 188,
+          "params": [
+            "channel",
+            "notify"
+          ]
+        },
+        {
+          "name": "mailbox_set_send_notify",
+          "startLine": 190,
+          "endLine": 206,
+          "params": [
+            "channel",
+            "notify"
+          ]
+        },
+        {
+          "name": "mailbox_read_recv_notify",
+          "startLine": 208,
+          "endLine": 222,
+          "params": [
+            "channel",
+            "notify"
+          ]
+        },
+        {
+          "name": "mailbox_clear_recv_notify",
+          "startLine": 224,
+          "endLine": 240,
+          "params": [
+            "channel",
+            "notify"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "mailbox_init",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "mailbox_read",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "mailbox_write",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "mailbox_read_send_notify",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "mailbox_set_send_notify",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "mailbox_read_recv_notify",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "mailbox_clear_recv_notify",
+          "line": 224,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mailbox_init",
+          "callee": "cpu_register_int",
+          "lineNumber": 117
+        },
+        {
+          "caller": "mailbox_init",
+          "callee": "cpu_enable_int",
+          "lineNumber": 119
+        },
+        {
+          "caller": "mailbox_init",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 124
+        },
+        {
+          "caller": "mailbox_init",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 125
+        },
+        {
+          "caller": "mailbox_init",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 128
+        },
+        {
+          "caller": "mailbox_init",
+          "callee": "expt_det_add_error",
+          "lineNumber": 130
+        },
+        {
+          "caller": "mailbox_read",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 147
+        },
+        {
+          "caller": "mailbox_read",
+          "callee": "util_read_volatile_u32",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mailbox_write",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 163
+        },
+        {
+          "caller": "mailbox_write",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 164
+        },
+        {
+          "caller": "mailbox_write",
+          "callee": "util_write_volatile_u32",
+          "lineNumber": 165
+        },
+        {
+          "caller": "mailbox_write",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 166
+        },
+        {
+          "caller": "mailbox_read_send_notify",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 182
+        },
+        {
+          "caller": "mailbox_set_send_notify",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 198
+        },
+        {
+          "caller": "mailbox_set_send_notify",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 199
+        },
+        {
+          "caller": "mailbox_set_send_notify",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 201
+        },
+        {
+          "caller": "mailbox_read_recv_notify",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 216
+        },
+        {
+          "caller": "mailbox_clear_recv_notify",
+          "callee": "mailbox_get_reg_base",
+          "lineNumber": 232
+        },
+        {
+          "caller": "mailbox_clear_recv_notify",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 233
+        },
+        {
+          "caller": "mailbox_clear_recv_notify",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 235
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/mailbox_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 49,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/otp/otp_driver.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 29,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/driver/otp/simulate/otp_driver.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 122,
+      "nonEmptyLines": 103,
+      "functions": [
+        {
+          "name": "otp_init",
+          "startLine": 46,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "otp_read",
+          "startLine": 51,
+          "endLine": 66,
+          "params": [
+            "addr",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "otp_write",
+          "startLine": 68,
+          "endLine": 85,
+          "params": [
+            "addr",
+            "data",
+            "size"
+          ]
+        },
+        {
+          "name": "otp_verify",
+          "startLine": 87,
+          "endLine": 119,
+          "params": [
+            "addr",
+            "size"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "otp_init",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "otp_read",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "otp_write",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "otp_verify",
+          "line": 87,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "otp_read",
+          "callee": "util_memcpy",
+          "lineNumber": 61
+        },
+        {
+          "caller": "otp_write",
+          "callee": "util_memcpy",
+          "lineNumber": 80
+        },
+        {
+          "caller": "otp_verify",
+          "callee": "util_memset",
+          "lineNumber": 106
+        },
+        {
+          "caller": "otp_verify",
+          "callee": "util_memcmp",
+          "lineNumber": 109
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# eHSM Boot Image Configuration Example
+
+[general]
+mode = "boot"
+output = "ehsm_boot_image.bin"
+
+# Input firmware binary file
+input_bin = "firmware.bin"
+
+# Image type: can use number (0/1/2/3) or name
+# 0 = "ehsm-ehsmkey"   - eHSM image, using eHSM key
+# 1 = "soc-sockey"     - SoC image, using SoC key
+# 2 = "soc-ehsmkey"    - SoC image, using eHSM key
+# 3 = "patch-ehsmkey"  - eHSM Patch image
+image_type = "ehsm-ehsmkey"
+
+# Version counter (16 bytes, 32 hex characters)
+version_counter = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+
+export_c_array = false
+
+[boot]
+# Signing key file path
+# If not provided, a naked image will be generated
+sign_key = "keys/sm2-key.toml"
+
+# Encryption key file path (requires sign_key to be set)
+# If not provided, image is signed but not encrypted (plain_flag = 1)
+enc_key = "keys/sm4-key.toml"
+
+# Initialization vector (optional, 16-byte HEX string)
+# If not provided, a random IV will be generated
+iv = "5ED24925293ACB755C50D8B263A2A3CC"
+
+# Extra data injection (optional)
+# [[boot.extra_data]]
+# offset = 600
+# value = "AABBCCDD"

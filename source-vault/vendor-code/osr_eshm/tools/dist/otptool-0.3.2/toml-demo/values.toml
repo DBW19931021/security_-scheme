@@ -1,0 +1,145 @@
+lifecycle = "test"
+uid = "00000000000000000000000000000001"
+
+bus_cipher_en = "enable"
+ram_cipher_en = "enable"
+trng_self_test_skip = "disable"
+trng_sclk_sel = "internal"
+# pke_monitor_en = "enable"
+bypass_nvm_cipher = "enable"
+key_alg_sel = "sm4"
+patch_en = "disable"
+random_clk_en = "enable"
+trng_rst_times = "1111"        # 15
+trng_timeout = "00000010"      # 64
+boot_sm_en = "disable"
+boot_sm_umask = "disable"
+boot_self_test = "disable"
+boot_oscca_en = "disable"
+random_clock_level = "disable"
+hsm_verify_alg = "sm2"
+hsm_upgrade_alg = "sm2"
+watchdog_level = "disable"
+uart_log_en = "disable"
+soc_verify_alg = "sm2"
+soc_upgrade_alg = "sm2"
+
+hsm_ver_ctr = "01000000000000000000000000000000"
+soc_ver_ctr = "01000000000000000000000000000000"
+
+# === Slot 0 ===
+[chip_root_key]
+level = 1
+value = "0000000000000000000000000000000000000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 1 ===
+[device_root_key]
+level = 1
+value = "1111111111111111111111111111111100000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 2 ===
+[user_root_key]
+level = 1
+value = "2222222222222222222222222222222200000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 3 ===
+[ehsm_debug_key]
+level = 1
+value = "04176F969D5933D53EE5721B5655300DD215931076F0C9A800E1CF9157F12050EFF55900D0EDF7ACAE22B100DB1DC6242E74ED02BECC47C207935F8B466157E0FA"
+lifecycle = "available"
+type = "pub"
+# "none", "auto", "sm3", "sha256", default is "none" if hash = xxx not exists
+# you can also use true/false instead of "auto"/"none"
+hash = "auto"
+
+# === Slot 4 (共享 ehsm_upg_verify_key) ===
+[ehsm_fw_verify_key]
+level = 1
+value = "d4f0c229e109726370477d8464fe7c7241575fd7321adb9560108eff3a05a87e"
+lifecycle = "available"
+type = "pub"
+pub = "04176F969D5933D53EE5721B5655300DD215931076F0C9A800E1CF9157F12050EFF55900D0EDF7ACAE22B100DB1DC6242E74ED02BECC47C207935F8B466157E0FA"
+pri = "0CF7220CF31A8EB709BAAAA4F5D02E4C0147052C34F64ABDBAC0888646C74F2B"
+
+
+# === Slot 5 (共享 ehsm_upg_encrypt_key) ===
+[ehsm_encrypt_key]
+level = 1
+value = "9FEBA879C596E5022C22C1EA76260EF39FEBA879C596E5022C22C1EA76260EF3"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 6 (轮换槽位: SoC FW Verify Rotation) ===
+# 初始为空（不写值，保持 OTP 未编程态），密钥由运行时密钥轮换流程写入
+
+# === Slot 7 (轮换槽位: SoC Encrypt Rotation) ===
+# 初始为空（不写值，保持 OTP 未编程态），密钥由运行时密钥轮换流程写入
+
+# === Slot 8 ===
+[secret_key_key]
+level = 2
+value = "8888888888888888888888888888888800000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+no_crc32 = true
+
+# === Slot 9 ===
+[soc_debug_key]
+level = 2
+value = "d4f0c229e109726370477d8464fe7c7241575fd7321adb9560108eff3a05a87e"
+lifecycle = "available"
+type = "pub"
+pub = "04176F969D5933D53EE5721B5655300DD215931076F0C9A800E1CF9157F12050EFF55900D0EDF7ACAE22B100DB1DC6242E74ED02BECC47C207935F8B466157E0FA"
+pri = "0CF7220CF31A8EB709BAAAA4F5D02E4C0147052C34F64ABDBAC0888646C74F2B"
+
+
+# === Slot 10 (共享 soc_upg_verify_key) ===
+[soc_fw_verify_key]
+level = 2
+value = "d4f0c229e109726370477d8464fe7c7241575fd7321adb9560108eff3a05a87e"
+lifecycle = "available"
+type = "pub"
+pub = "04176F969D5933D53EE5721B5655300DD215931076F0C9A800E1CF9157F12050EFF55900D0EDF7ACAE22B100DB1DC6242E74ED02BECC47C207935F8B466157E0FA"
+pri = "0CF7220CF31A8EB709BAAAA4F5D02E4C0147052C34F64ABDBAC0888646C74F2B"
+
+
+# === Slot 11 (共享 soc_upg_encrypt_key) ===
+[soc_encrypt_key]
+level = 2
+value = "9FEBA879C596E5022C22C1EA76260EF39FEBA879C596E5022C22C1EA76260EF3"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 12 (轮换槽位: SoC Debug Rotation) ===
+# 初始为空（不写值，保持 OTP 未编程态），密钥由运行时密钥轮换流程写入
+
+# === Slot 13 ===
+[uds_key]
+level = 2
+value = "dddddddddddddddddddddddddddddddd00000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 14 ===
+[device_private_key]
+level = 2
+value = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee00000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+# === Slot 15 (最后一个物理 slot) ===
+[user_auth_key]
+level = 2
+value = "9999999999999999999999999999999900000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+last_key = true
+
+# === 密钥轮换 Bitmap (初始未轮换) ===
+key_rotation_bitmap = "00"

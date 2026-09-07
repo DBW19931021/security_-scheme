@@ -1,0 +1,1777 @@
+Trivially needed symbols: sm9_h1_h2/31 sm9_n2_compl/28 sm9_n2_inv/27 sm9_n2_h/26 sm9_n2/25 sm9_n_compl/24 sm9_pairing_calc/23 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u8big_2_u32little/20 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u32little_2_u8big/17 sm9_fp_eccp_point_u8big_2_u32little/16 sm9_G2_Py0_Py1/15 sm9_G2_Px0_Px1/14 sm9p256v1_n_1/13
+
+
+Initial Symbol table:
+
+uint32_clear/44 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: 
+uint32_big_num_little_endian_add_little/43 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_modadd_modsub_256bits/42 (pke_modadd_modsub_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/41 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod/30 
+  Calls: 
+pke_sub/40 (pke_sub)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 
+  Calls: 
+hash_node_steps/38 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 sm9_h1_h2/31 
+  Calls: 
+sm9_pairing/37 (sm9_pairing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_pairing_calc/23 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/36 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_pairing_calc/23 
+  Calls: 
+sm9_curve/35 (sm9_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_h1_h2_mod/30 (read) sm9_h1_h2_mod/30 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+uint32_copy_8_words/34 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_u32little_2_u8big/21 
+  Calls: 
+u32little_to_u8big_256bits/33 (u32little_to_u8big_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp_eccp_point_u32little_2_u8big/17 sm9_fp_eccp_point_u32little_2_u8big/17 
+  Calls: 
+u8big_to_u32little_256bits/32 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u8big_2_u32little/20 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 sm9_fp_eccp_point_u8big_2_u32little/16 
+  Calls: 
+sm9_h1_h2/31 (sm9_h1_h2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_h1_h2_mod/30 hash_node_steps/38 memcpy_/39 hash_node_steps/38 
+sm9_h1_h2_mod/30 (sm9_h1_h2_mod)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_n_compl/24 (addr) sm9_n2/25 (addr) sm9_n2_h/26 (addr) sm9_n2_compl/28 (addr) sm9_n2_inv/27 (addr) sm9p256v1_n_1/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2/31 
+  Calls: uint32_clear/44 uint32_clear/44 uint32_big_num_little_endian_add_little/43 pke_modadd_modsub_256bits/42 pke_mod_add_sub_mul_256bits_internal/41 sm9_h1_h2_mod_primitive/29 pke_sub/40 sm9_h1_h2_mod_primitive/29 u8big_to_u32little_256bits/32 
+sm9_h1_h2_mod_primitive/29 (sm9_h1_h2_mod_primitive)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: pke_mod_add_sub_mul_256bits_internal/41 pke_mod_add_sub_mul_256bits_internal/41 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_n2_compl/28 (sm9_n2_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871d2000
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_inv/27 (sm9_n2_inv)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871bc900
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_h/26 (sm9_n2_h)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871bc880
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2/25 (sm9_n2)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871bc800
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n_compl/24 (sm9_n_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871bc780
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_pairing_calc/23 (sm9_pairing_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871bc700
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_G2_Px0_Px1/14 (addr) sm9_G2_Py0_Py1/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_pairing/37 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_fp12_in_pke_ram_u32little_2_u8big/22 (sm9_fp12_in_pke_ram_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871abcc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 rPKE_A/4 
+sm9_fp12_u32little_2_u8big/21 (sm9_fp12_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871abbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_copy_8_words/34 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp12_u8big_2_u32little/20 (sm9_fp12_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871abaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u8big_to_u32little_256bits/32 
+sm9_fp2_eccp_point_u32little_2_u8big/19 (sm9_fp2_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871ab990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp2_eccp_point_u8big_2_u32little/18 (sm9_fp2_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871ab880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp_eccp_point_u32little_2_u8big/17 (sm9_fp_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871ab770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp_eccp_point_u8big_2_u32little/16 (sm9_fp_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871ab660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_G2_Py0_Py1/15 (sm9_G2_Py0_Py1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871ab550
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_G2_Px0_Px1/14 (sm9_G2_Px0_Px1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871b4700
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9p256v1_n_1/13 (sm9p256v1_n_1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1a871b4680
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f1a871abcc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint32_clear/44 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: 
+uint32_big_num_little_endian_add_little/43 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_modadd_modsub_256bits/42 (pke_modadd_modsub_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/41 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod/30 
+  Calls: 
+pke_sub/40 (pke_sub)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 
+  Calls: 
+hash_node_steps/38 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 sm9_h1_h2/31 
+  Calls: 
+sm9_pairing/37 (sm9_pairing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_pairing_calc/23 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/36 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_pairing_calc/23 
+  Calls: 
+sm9_curve/35 (sm9_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_h1_h2_mod/30 (read) sm9_h1_h2_mod/30 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+uint32_copy_8_words/34 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_u32little_2_u8big/21 
+  Calls: 
+u32little_to_u8big_256bits/33 (u32little_to_u8big_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp_eccp_point_u32little_2_u8big/17 sm9_fp_eccp_point_u32little_2_u8big/17 
+  Calls: 
+u8big_to_u32little_256bits/32 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u8big_2_u32little/20 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 sm9_fp_eccp_point_u8big_2_u32little/16 
+  Calls: 
+sm9_h1_h2/31 (sm9_h1_h2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_h1_h2_mod/30 hash_node_steps/38 memcpy_/39 hash_node_steps/38 
+sm9_h1_h2_mod/30 (sm9_h1_h2_mod)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_n_compl/24 (addr) sm9_n2/25 (addr) sm9_n2_h/26 (addr) sm9_n2_compl/28 (addr) sm9_n2_inv/27 (addr) sm9p256v1_n_1/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2/31 
+  Calls: uint32_clear/44 uint32_clear/44 uint32_big_num_little_endian_add_little/43 pke_modadd_modsub_256bits/42 pke_mod_add_sub_mul_256bits_internal/41 sm9_h1_h2_mod_primitive/29 pke_sub/40 sm9_h1_h2_mod_primitive/29 u8big_to_u32little_256bits/32 
+sm9_h1_h2_mod_primitive/29 (sm9_h1_h2_mod_primitive)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: pke_mod_add_sub_mul_256bits_internal/41 pke_mod_add_sub_mul_256bits_internal/41 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_n2_compl/28 (sm9_n2_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_inv/27 (sm9_n2_inv)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_h/26 (sm9_n2_h)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2/25 (sm9_n2)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n_compl/24 (sm9_n_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_pairing_calc/23 (sm9_pairing_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_G2_Px0_Px1/14 (addr) sm9_G2_Py0_Py1/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_pairing/37 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_fp12_in_pke_ram_u32little_2_u8big/22 (sm9_fp12_in_pke_ram_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 rPKE_A/4 
+sm9_fp12_u32little_2_u8big/21 (sm9_fp12_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_copy_8_words/34 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp12_u8big_2_u32little/20 (sm9_fp12_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u8big_to_u32little_256bits/32 
+sm9_fp2_eccp_point_u32little_2_u8big/19 (sm9_fp2_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp2_eccp_point_u8big_2_u32little/18 (sm9_fp2_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp_eccp_point_u32little_2_u8big/17 (sm9_fp_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp_eccp_point_u8big_2_u32little/16 (sm9_fp_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_G2_Py0_Py1/15 (sm9_G2_Py0_Py1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_G2_Px0_Px1/14 (sm9_G2_Px0_Px1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9p256v1_n_1/13 (sm9p256v1_n_1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 
+  Calls: 
+
+
+Initial Symbol table:
+
+uint32_clear/44 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: 
+uint32_big_num_little_endian_add_little/43 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_modadd_modsub_256bits/42 (pke_modadd_modsub_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/41 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod/30 
+  Calls: 
+pke_sub/40 (pke_sub)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 
+  Calls: 
+hash_node_steps/38 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 sm9_h1_h2/31 
+  Calls: 
+sm9_pairing/37 (sm9_pairing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_pairing_calc/23 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/36 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_pairing_calc/23 
+  Calls: 
+sm9_curve/35 (sm9_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_h1_h2_mod/30 (read) sm9_h1_h2_mod/30 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+uint32_copy_8_words/34 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_u32little_2_u8big/21 
+  Calls: 
+u32little_to_u8big_256bits/33 (u32little_to_u8big_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp_eccp_point_u32little_2_u8big/17 sm9_fp_eccp_point_u32little_2_u8big/17 
+  Calls: 
+u8big_to_u32little_256bits/32 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u8big_2_u32little/20 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 sm9_fp_eccp_point_u8big_2_u32little/16 
+  Calls: 
+sm9_h1_h2/31 (sm9_h1_h2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_h1_h2_mod/30 hash_node_steps/38 memcpy_/39 hash_node_steps/38 
+sm9_h1_h2_mod/30 (sm9_h1_h2_mod)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_n_compl/24 (addr) sm9_n2/25 (addr) sm9_n2_h/26 (addr) sm9_n2_compl/28 (addr) sm9_n2_inv/27 (addr) sm9p256v1_n_1/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2/31 
+  Calls: uint32_clear/44 uint32_clear/44 uint32_big_num_little_endian_add_little/43 pke_modadd_modsub_256bits/42 pke_mod_add_sub_mul_256bits_internal/41 sm9_h1_h2_mod_primitive/29 pke_sub/40 sm9_h1_h2_mod_primitive/29 u8big_to_u32little_256bits/32 
+sm9_h1_h2_mod_primitive/29 (sm9_h1_h2_mod_primitive)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: pke_mod_add_sub_mul_256bits_internal/41 pke_mod_add_sub_mul_256bits_internal/41 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_n2_compl/28 (sm9_n2_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_inv/27 (sm9_n2_inv)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_h/26 (sm9_n2_h)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2/25 (sm9_n2)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n_compl/24 (sm9_n_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_pairing_calc/23 (sm9_pairing_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_G2_Px0_Px1/14 (addr) sm9_G2_Py0_Py1/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_pairing/37 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_fp12_in_pke_ram_u32little_2_u8big/22 (sm9_fp12_in_pke_ram_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 rPKE_A/4 
+sm9_fp12_u32little_2_u8big/21 (sm9_fp12_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_copy_8_words/34 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp12_u8big_2_u32little/20 (sm9_fp12_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u8big_to_u32little_256bits/32 
+sm9_fp2_eccp_point_u32little_2_u8big/19 (sm9_fp2_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp2_eccp_point_u8big_2_u32little/18 (sm9_fp2_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp_eccp_point_u32little_2_u8big/17 (sm9_fp_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp_eccp_point_u8big_2_u32little/16 (sm9_fp_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_G2_Py0_Py1/15 (sm9_G2_Py0_Py1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_G2_Px0_Px1/14 (sm9_G2_Px0_Px1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9p256v1_n_1/13 (sm9p256v1_n_1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint32_clear/44 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: 
+uint32_big_num_little_endian_add_little/43 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_modadd_modsub_256bits/42 (pke_modadd_modsub_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/41 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod_primitive/29 sm9_h1_h2_mod/30 
+  Calls: 
+pke_sub/40 (pke_sub)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 
+  Calls: 
+hash_node_steps/38 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2/31 sm9_h1_h2/31 
+  Calls: 
+sm9_pairing/37 (sm9_pairing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_pairing_calc/23 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/36 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod_primitive/29 sm9_pairing_calc/23 
+  Calls: 
+sm9_curve/35 (sm9_curve)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_h1_h2_mod/30 (read) sm9_h1_h2_mod/30 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+uint32_copy_8_words/34 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_u32little_2_u8big/21 
+  Calls: 
+u32little_to_u8big_256bits/33 (u32little_to_u8big_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp2_eccp_point_u32little_2_u8big/19 sm9_fp_eccp_point_u32little_2_u8big/17 sm9_fp_eccp_point_u32little_2_u8big/17 
+  Calls: 
+u8big_to_u32little_256bits/32 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u32little_2_u8big/21 sm9_fp12_u8big_2_u32little/20 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 sm9_fp_eccp_point_u8big_2_u32little/16 
+  Calls: 
+sm9_h1_h2/31 (sm9_h1_h2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_h1_h2_mod/30 hash_node_steps/38 memcpy_/39 hash_node_steps/38 
+sm9_h1_h2_mod/30 (sm9_h1_h2_mod)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_n_compl/24 (addr) sm9_n2/25 (addr) sm9_n2_h/26 (addr) sm9_n2_compl/28 (addr) sm9_n2_inv/27 (addr) sm9p256v1_n_1/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2/31 
+  Calls: uint32_clear/44 uint32_clear/44 uint32_big_num_little_endian_add_little/43 pke_modadd_modsub_256bits/42 pke_mod_add_sub_mul_256bits_internal/41 sm9_h1_h2_mod_primitive/29 pke_sub/40 sm9_h1_h2_mod_primitive/29 u8big_to_u32little_256bits/32 
+sm9_h1_h2_mod_primitive/29 (sm9_h1_h2_mod_primitive)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_h1_h2_mod/30 sm9_h1_h2_mod/30 
+  Calls: pke_mod_add_sub_mul_256bits_internal/41 pke_mod_add_sub_mul_256bits_internal/41 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_n2_compl/28 (sm9_n2_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_inv/27 (sm9_n2_inv)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_h/26 (sm9_n2_h)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n2/25 (sm9_n2)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_n_compl/24 (sm9_n_compl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_pairing_calc/23 (sm9_pairing_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_G2_Px0_Px1/14 (addr) sm9_G2_Py0_Py1/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm9_fp12_in_pke_ram_u32little_2_u8big/22 sm9_pairing/37 sm9_fp2_eccp_point_u8big_2_u32little/18 sm9_fp_eccp_point_u8big_2_u32little/16 pke_load_modulus_and_pre_monts_256bits/36 
+sm9_fp12_in_pke_ram_u32little_2_u8big/22 (sm9_fp12_in_pke_ram_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 rPKE_A/4 
+sm9_fp12_u32little_2_u8big/21 (sm9_fp12_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_copy_8_words/34 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp12_u8big_2_u32little/20 (sm9_fp12_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u8big_to_u32little_256bits/32 
+sm9_fp2_eccp_point_u32little_2_u8big/19 (sm9_fp2_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp2_eccp_point_u8big_2_u32little/18 (sm9_fp2_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_fp_eccp_point_u32little_2_u8big/17 (sm9_fp_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 u32little_to_u8big_256bits/33 
+sm9_fp_eccp_point_u8big_2_u32little/16 (sm9_fp_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_pairing_calc/23 
+  Calls: u8big_to_u32little_256bits/32 u8big_to_u32little_256bits/32 
+sm9_G2_Py0_Py1/15 (sm9_G2_Py0_Py1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9_G2_Px0_Px1/14 (sm9_G2_Px0_Px1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sm9p256v1_n_1/13 (sm9p256v1_n_1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big/22 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+sm9_fp_eccp_point_u8big_2_u32little.part.0/52 (sm9_fp_eccp_point_u8big_2_u32little.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 46
+  References: 
+  Referring: 
+  Function sm9_fp_eccp_point_u8big_2_u32little.part.0/52 is inline copy in sm9_fp_eccp_point_u8big_2_u32little/16
+  Clone of sm9_fp_eccp_point_u8big_2_u32little.part.0/46
+  Availability: local
+  Function flags: count:574129752 (estimated locally) body local split_part
+  Called by: sm9_fp_eccp_point_u8big_2_u32little/16 (inlined) (574129752 (estimated locally),0.53 per call) 
+  Calls: u8big_to_u32little_256bits/32 (574129752 (estimated locally),0.53 per call) u8big_to_u32little_256bits/32 (574129752 (estimated locally),0.53 per call) 
+sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (sm9_fp12_in_pke_ram_u32little_2_u8big.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:268435456 (estimated locally) body local split_part
+  Called by: sm9_pairing_calc/23 (120633283 (estimated locally),0.11 per call) sm9_fp12_in_pke_ram_u32little_2_u8big/22 (268435456 (estimated locally),0.70 per call) 
+  Calls: u32little_to_u8big_256bits/33 (805306368 (estimated locally),3.00 per call) u32little_to_u8big_256bits/33 (805306368 (estimated locally),3.00 per call) u32little_to_u8big_256bits/33 (805306368 (estimated locally),3.00 per call) u32little_to_u8big_256bits/33 (805306368 (estimated locally),3.00 per call) 
+sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (sm9_fp2_eccp_point_u8big_2_u32little.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:281323581 (estimated locally) body local split_part
+  Called by: sm9_pairing_calc/23 (195462474 (estimated locally),0.18 per call) sm9_fp2_eccp_point_u8big_2_u32little/18 (281323581 (estimated locally),0.26 per call) 
+  Calls: u8big_to_u32little_256bits/32 (281323581 (estimated locally),1.00 per call) u8big_to_u32little_256bits/32 (281323581 (estimated locally),1.00 per call) u8big_to_u32little_256bits/32 (281323581 (estimated locally),1.00 per call) u8big_to_u32little_256bits/32 (281323581 (estimated locally),1.00 per call) 
+sm9_fp_eccp_point_u8big_2_u32little.part.0/46 (sm9_fp_eccp_point_u8big_2_u32little.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 52
+  References: 
+  Referring: 
+  Function sm9_fp_eccp_point_u8big_2_u32little.part.0/46 is inline copy in sm9_pairing_calc/23
+  Availability: local
+  Function flags: count:195462474 (estimated locally) body local split_part
+  Called by: sm9_pairing_calc/23 (inlined) (195462474 (estimated locally),0.18 per call) 
+  Calls: u8big_to_u32little_256bits/32 (195462474 (estimated locally),0.18 per call) u8big_to_u32little_256bits/32 (195462474 (estimated locally),0.18 per call) 
+sm9_h1_h2_mod_primitive.part.0/45 (sm9_h1_h2_mod_primitive.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function sm9_h1_h2_mod_primitive.part.0/45 is inline copy in sm9_h1_h2_mod_primitive/29
+  Availability: local
+  Function flags: count:116930483 (estimated locally) body local split_part
+  Called by: sm9_h1_h2_mod_primitive/29 (inlined) (116930483 (estimated locally),0.11 per call) 
+  Calls: pke_mod_add_sub_mul_256bits_internal/41 (116930483 (estimated locally),0.11 per call) 
+uint32_clear/44 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 (116930483 (estimated locally),0.11 per call) sm9_h1_h2_mod/30 (116930483 (estimated locally),0.11 per call) 
+  Calls: 
+uint32_big_num_little_endian_add_little/43 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 (3273040 (estimated locally),0.00 per call) 
+  Calls: 
+pke_modadd_modsub_256bits/42 (pke_modadd_modsub_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 (9918302 (estimated locally),0.01 per call) 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/41 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 (30055460 (estimated locally),0.03 per call) sm9_h1_h2_mod_primitive/29 (354334800 (estimated locally),0.33 per call) sm9_h1_h2_mod_primitive.part.0/45 (116930483 (estimated locally),0.11 per call) 
+  Calls: 
+pke_sub/40 (pke_sub)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2_mod/30 (38587059 (estimated locally),0.04 per call) 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2/31 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_node_steps/38 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_h1_h2/31 (354334800 (estimated locally),0.33 per call) sm9_h1_h2/31 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+sm9_pairing/37 (sm9_pairing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_pairing_calc/23 (365555404 (estimated locally),0.34 per call) 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/36 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_pairing_calc/23 (731110808 (estimated locally),0.68 per call) sm9_h1_h2_mod_primitive/29 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+sm9_curve/35 (sm9_curve)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (read) sm9_h1_h2_mod/30 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) sm9_pairing_calc/23 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+uint32_copy_8_words/34 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_fp12_u32little_2_u8big/21 (920304120 (estimated locally),4.20 per call) 
+  Calls: 
+u32little_to_u8big_256bits/33 (u32little_to_u8big_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (805306368 (estimated locally),3.00 per call) sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (805306368 (estimated locally),3.00 per call) sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (805306368 (estimated locally),3.00 per call) sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (805306368 (estimated locally),3.00 per call) sm9_fp2_eccp_point_u32little_2_u8big/19 (281323581 (estimated locally),0.26 per call) sm9_fp2_eccp_point_u32little_2_u8big/19 (281323581 (estimated locally),0.26 per call) sm9_fp2_eccp_point_u32little_2_u8big/19 (281323581 (estimated locally),0.26 per call) sm9_fp2_eccp_point_u32little_2_u8big/19 (281323581 (estimated locally),0.26 per call) sm9_fp_eccp_point_u32little_2_u8big/17 (574129752 (estimated locally),0.53 per call) sm9_fp_eccp_point_u32little_2_u8big/17 (574129752 (estimated locally),0.53 per call) 
+  Calls: 
+u8big_to_u32little_256bits/32 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm9_fp_eccp_point_u8big_2_u32little.part.0/52 (574129752 (estimated locally),0.53 per call) sm9_fp_eccp_point_u8big_2_u32little.part.0/52 (574129752 (estimated locally),0.53 per call) sm9_fp12_u32little_2_u8big/21 (920304120 (estimated locally),4.20 per call) sm9_fp12_u32little_2_u8big/21 (920304120 (estimated locally),4.20 per call) sm9_fp12_u8big_2_u32little/20 (991171080 (estimated locally),5.88 per call) sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (281323581 (estimated locally),1.00 per call) sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (281323581 (estimated locally),1.00 per call) sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (281323581 (estimated locally),1.00 per call) sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (281323581 (estimated locally),1.00 per call) sm9_fp_eccp_point_u8big_2_u32little.part.0/46 (195462474 (estimated locally),0.18 per call) sm9_fp_eccp_point_u8big_2_u32little.part.0/46 (195462474 (estimated locally),0.18 per call) sm9_h1_h2_mod/30 (116930483 (estimated locally),0.11 per call) 
+  Calls: 
+sm9_h1_h2/31 (sm9_h1_h2)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: sm9_h1_h2_mod/30 (inlined) (116930483 (estimated locally),0.11 per call) hash_node_steps/38 (354334800 (estimated locally),0.33 per call) memcpy_/39 (354334800 (estimated locally),0.33 per call) hash_node_steps/38 (1073741822 (estimated locally),1.00 per call) 
+sm9_h1_h2_mod/30 (sm9_h1_h2_mod)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_n_compl/24 (addr) sm9_n2/25 (addr) sm9_n2_h/26 (addr) sm9_n2_compl/28 (addr) sm9_n2_inv/27 (addr) sm9p256v1_n_1/13 (addr) 
+  Referring: 
+  Function sm9_h1_h2_mod/30 is inline copy in sm9_h1_h2/31
+  Availability: local
+  Function flags: count:116930483 (estimated locally) body local
+  Called by: sm9_h1_h2/31 (inlined) (116930483 (estimated locally),0.11 per call) 
+  Calls: uint32_clear/44 (116930483 (estimated locally),0.11 per call) uint32_clear/44 (116930483 (estimated locally),0.11 per call) uint32_big_num_little_endian_add_little/43 (3273040 (estimated locally),0.00 per call) pke_modadd_modsub_256bits/42 (9918302 (estimated locally),0.01 per call) pke_mod_add_sub_mul_256bits_internal/41 (30055460 (estimated locally),0.03 per call) sm9_h1_h2_mod_primitive/29 (12733729 (estimated locally),0.01 per call) pke_sub/40 (38587059 (estimated locally),0.04 per call) sm9_h1_h2_mod_primitive/29 (116930483 (estimated locally),0.11 per call) u8big_to_u32little_256bits/32 (116930483 (estimated locally),0.11 per call) 
+sm9_h1_h2_mod_primitive/29 (sm9_h1_h2_mod_primitive)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: sm9_h1_h2_mod/30 (12733729 (estimated locally),0.01 per call) sm9_h1_h2_mod/30 (116930483 (estimated locally),0.11 per call) 
+  Calls: sm9_h1_h2_mod_primitive.part.0/45 (inlined) (116930483 (estimated locally),0.11 per call) pke_mod_add_sub_mul_256bits_internal/41 (354334800 (estimated locally),0.33 per call) pke_load_modulus_and_pre_monts_256bits/36 (1073741822 (estimated locally),1.00 per call) 
+sm9_n2_compl/28 (sm9_n2_compl)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_inv/27 (sm9_n2_inv)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_h/26 (sm9_n2_h)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n2/25 (sm9_n2)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n_compl/24 (sm9_n_compl)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_pairing_calc/23 (sm9_pairing_calc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_curve/35 (read) sm9_G2_Px0_Px1/14 (addr) sm9_G2_Py0_Py1/15 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (120633283 (estimated locally),0.11 per call) sm9_pairing/37 (365555404 (estimated locally),0.34 per call) sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (195462474 (estimated locally),0.18 per call) sm9_fp_eccp_point_u8big_2_u32little.part.0/46 (inlined) (195462474 (estimated locally),0.18 per call) pke_load_modulus_and_pre_monts_256bits/36 (731110808 (estimated locally),0.68 per call) 
+sm9_fp12_in_pke_ram_u32little_2_u8big/22 (sm9_fp12_in_pke_ram_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:383479221 (estimated locally) body
+  Called by: 
+  Calls: sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (268435456 (estimated locally),0.70 per call) 
+sm9_fp12_u32little_2_u8big/21 (sm9_fp12_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:219196719 (estimated locally) body
+  Called by: 
+  Calls: uint32_copy_8_words/34 (920304120 (estimated locally),4.20 per call) u8big_to_u32little_256bits/32 (920304120 (estimated locally),4.20 per call) u8big_to_u32little_256bits/32 (920304120 (estimated locally),4.20 per call) 
+sm9_fp12_u8big_2_u32little/20 (sm9_fp12_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168511721 (estimated locally) body
+  Called by: 
+  Calls: u8big_to_u32little_256bits/32 (991171080 (estimated locally),5.88 per call) 
+sm9_fp2_eccp_point_u32little_2_u8big/19 (sm9_fp2_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 (281323581 (estimated locally),0.26 per call) u32little_to_u8big_256bits/33 (281323581 (estimated locally),0.26 per call) u32little_to_u8big_256bits/33 (281323581 (estimated locally),0.26 per call) u32little_to_u8big_256bits/33 (281323581 (estimated locally),0.26 per call) 
+sm9_fp2_eccp_point_u8big_2_u32little/18 (sm9_fp2_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (281323581 (estimated locally),0.26 per call) 
+sm9_fp_eccp_point_u32little_2_u8big/17 (sm9_fp_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: u32little_to_u8big_256bits/33 (574129752 (estimated locally),0.53 per call) u32little_to_u8big_256bits/33 (574129752 (estimated locally),0.53 per call) 
+sm9_fp_eccp_point_u8big_2_u32little/16 (sm9_fp_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sm9_fp_eccp_point_u8big_2_u32little.part.0/52 (inlined) (574129752 (estimated locally),0.53 per call) 
+sm9_G2_Py0_Py1/15 (sm9_G2_Py0_Py1)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_G2_Px0_Px1/14 (sm9_G2_Px0_Px1)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_pairing_calc/23 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9p256v1_n_1/13 (sm9p256v1_n_1)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: sm9_h1_h2_mod/30 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Trivially needed variables: sm9_n2_compl/28 sm9_n2_inv/27 sm9_n2_h/26 sm9_n2/25 sm9_n_compl/24 sm9_G2_Py0_Py1/15 sm9_G2_Px0_Px1/14 sm9p256v1_n_1/13
+Removing variables:
+
+Final Symbol table:
+
+sm9_fp12_in_pke_ram_u32little_2_u8big.part.0/48 (sm9_fp12_in_pke_ram_u32little_2_u8big.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm9_fp12_in_pke_ram_u32little_2_u8big.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:268435456 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+sm9_fp2_eccp_point_u8big_2_u32little.part.0/47 (sm9_fp2_eccp_point_u8big_2_u32little.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm9_fp2_eccp_point_u8big_2_u32little.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:281323581 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+uint32_clear/44 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_big_num_little_endian_add_little/43 (uint32_big_num_little_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modadd_modsub_256bits/42 (pke_modadd_modsub_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/41 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_sub/40 (pke_sub)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_node_steps/38 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sm9_pairing/37 (sm9_pairing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/36 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sm9_curve/35 (sm9_curve)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+uint32_copy_8_words/34 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+u32little_to_u8big_256bits/33 (u32little_to_u8big_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+u8big_to_u32little_256bits/32 (u8big_to_u32little_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sm9_h1_h2/31 (sm9_h1_h2)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_h1_h2 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_h1_h2_mod_primitive/29 (sm9_h1_h2_mod_primitive)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm9_h1_h2_mod_primitive (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+sm9_n2_compl/28 (sm9_n2_compl)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_n2_compl (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_inv/27 (sm9_n2_inv)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_n2_inv (implicit_section)
+  Aux: @0x7f1a871bc900
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n2_h/26 (sm9_n2_h)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_n2_h (implicit_section)
+  Aux: @0x7f1a871bc880
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n2/25 (sm9_n2)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_n2 (implicit_section)
+  Aux: @0x7f1a871bc800
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_n_compl/24 (sm9_n_compl)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_n_compl (implicit_section)
+  Aux: @0x7f1a871bc780
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_pairing_calc/23 (sm9_pairing_calc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_pairing_calc (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp12_in_pke_ram_u32little_2_u8big/22 (sm9_fp12_in_pke_ram_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp12_in_pke_ram_u32little_2_u8big (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:383479221 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp12_u32little_2_u8big/21 (sm9_fp12_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp12_u32little_2_u8big (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:219196719 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp12_u8big_2_u32little/20 (sm9_fp12_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp12_u8big_2_u32little (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168511721 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp2_eccp_point_u32little_2_u8big/19 (sm9_fp2_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp2_eccp_point_u32little_2_u8big (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp2_eccp_point_u8big_2_u32little/18 (sm9_fp2_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp2_eccp_point_u8big_2_u32little (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp_eccp_point_u32little_2_u8big/17 (sm9_fp_eccp_point_u32little_2_u8big)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp_eccp_point_u32little_2_u8big (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_fp_eccp_point_u8big_2_u32little/16 (sm9_fp_eccp_point_u8big_2_u32little)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sm9_fp_eccp_point_u8big_2_u32little (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sm9_G2_Py0_Py1/15 (sm9_G2_Py0_Py1)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_G2_Py0_Py1 (implicit_section)
+  Aux: @0x7f1a871bc700
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9_G2_Px0_Px1/14 (sm9_G2_Px0_Px1)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9_G2_Px0_Px1 (implicit_section)
+  Aux: @0x7f1a871b4700
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+sm9p256v1_n_1/13 (sm9p256v1_n_1)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.sm9p256v1_n_1 (implicit_section)
+  Aux: @0x7f1a871b4680
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

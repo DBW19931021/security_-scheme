@@ -1,0 +1,112 @@
+# Changelog
+
+- 2026-09-01：登记SRC-0036并接受ADR-0033。Native Header原`ngu_reserved[8]`改为offset1016的LE32 `ngu_header_crc32`和offset1020的4B零reserved；CRC固定采用CRC-32/ISO-HDLC并覆盖offset256～1015，避免包含Signature或CRC自身造成生成循环。Preflight和Vendor PASS后均重算，CRC通过不形成认证；旧8B零reserved包拒绝。已同步主详设、Package/Loader/ABI、BootROM/FMC状态机、OpenSpec、测试与工程约束；未修改产品代码或制包器。
+
+- 2026-08-04：登记SRC-0024并按负责人澄清将OTP Table 34与16-slot Key表确立为`security_-scheme`唯一方案基线；纠正ADR-0025/0026及派生文档中slot3～5 Level、slot6～15对象顺序、Device Private/UDS/DICE槽号和权限，以及“精确OTP offset未知”旧记录。baremetal manifest只作为同一基线的派生测试清单，不再并列为第二基准。
+
+## Unreleased
+
+- 2026-08-26：登记SRC-0035并接受ADR-0032，将`source-vault/vendor_rtl`设为eHSM内部硬件实现细节、当前RTL实现基线和问题查询第一入口。完成121个RTL文件、5733091 bytes、树哈希、顶层候选、OSR/Wing版本和目录能力盘点；新增RTL调查工作流，强制tree hash、top/filelist/define/parameter/generate/wrapper/elaboration、实例链和逻辑锥证据。SRC-0035保持`VENDOR_IMPLEMENTATION`，不覆盖SRC-0022 SoC数值或产品方案；目录只读，Key/KEK字面量禁止复制、外发或用于量产。当前缺正式delivery note/filelist和构建/仿真Evidence；未修改RTL、软件或测试代码。
+
+- 2026-08-21：登记SRC-0033/CE-SEC-016并接受ADR-0030。NGU800P type 1 SoC镜像删除128B NGU Manifest，唯一格式改为`Native Header[1024] + Code[Code_Size]`；复用`Public_Key_Ext[400]`末16B，offset1008写LE64 `load_addr`、offset1016保留8B且必须全0。代码复核确认当前Vendor RSA-3072只消费384B扩展模数，OTP公钥Key ID只哈希重组后的指数+模数，尾16B不属于公钥输入但位于镜像签名/CMAC覆盖范围。`Code_Size`成为认证、解密、搬移和Measurement唯一长度，`entry_addr=load_addr`，原地搬移源由`target+1152`改为`target+1024`；旧Manifest包、fallback和dual parser禁止。已同步主详设、接口、架构、Stage专题、ADR/OpenSpec、计划和项目状态；未修改产品代码、Vendor FSP或制包工具，E2E实现仍需单独授权。
+
+- 2026-08-20：在登录状态下逐行核对飞书`Security`最终表，确认当前业务基线为连续`NGU800P-D0-SECURITY-001～063`：47条Mailbox BASIC、7条eHSM负向、7条SoC软件/协同、2条EDA/硬件协同；软件/BSP主导范围为`001～061`。本地v5的76条口径降为历史快照，因企业策略禁止飞书下载/导出而未创建新的XLSX镜像。同步更新用例目录、架构说明、Codex开发指导、项目组介绍、工作流记录和机读状态；明确Debug挑战类型门禁及Firewall配置Owner负向覆盖缺口。未修改飞书、baremetal、eHSM固件或产品代码，未执行目标测试。
+
+- 2026-08-14：登记SRC-0030并将三个Firewall的配置Owner统一为启动核；eHSM和其他核均无配置权限。配置Owner判定并入`SOC-FW-SRAM-RECFG-001`：非启动核配置写被拒绝，仅启动核遍历SRAM五Region完成地址范围和允许Master ID重新配置；`EDA-FW-EHSM-MASTER-001`补充真实eHSM配置写拒绝。数据访问权限矩阵不变，SEC_CFG/SPIFC不执行成功重新配置。最终表更新为`NGU800P_Security_Case_Table_Final_v5.xlsx`；未修改baremetal/eHSM固件，未执行目标测试。
+
+- 2026-08-14：登记SRC-0029并修正SEC_CFG/SPIFC Firewall默认权限。`SOC-FW-SECCFG-001`和`SOC-FW-SPIFC-001`改为仅启动核允许、eHSM和其他核拒绝；`EDA-FW-EHSM-MASTER-001`按目标验证SEC_CFG/SPIFC拒绝、SRAM五Region允许。SRAM两条Case及其默认启动核/eHSM允许策略不变。最终表更新为`NGU800P_Security_Case_Table_Final_v4.xlsx`，v3保留为历史；未修改baremetal/eHSM固件，未执行目标测试。
+
+- 2026-08-14：按复审意见逐条重写最终表76条“前置条件、输出、测试目的”。66条Mailbox Case明确eHSM正常启动及BL/FW阶段，将`service channel 1/poll/100 ms合同有效`改为服务通道1、轮询等待和单次命令100 ms超时配置；输出逐Case绑定API返回、原始响应、关键数据和状态，`002`不再包含写前/写后字段；测试目的直接说明要证明的命令功能或安全属性，删除“允许副作用”。自动审计确认三类字段均非空、66条阶段全部匹配、旧模板及“合同”命中0项，重新导入、公式扫描和五段视觉检查通过。修订表保存为`NGU800P_Security_Case_Table_Final_v3.xlsx`；未修改baremetal/eHSM固件，未执行目标测试。
+- 2026-08-13：按复审意见精简最终表全部76条“通过准则”。52条Mailbox BASIC逐命令保留API返回、关键输出和必要清理，14条eHSM负向逐功能保留预期拒绝、禁止副作用和合法复测，7条SoC及3条EDA直接绑定寄存器、Debug、Firewall、IRQ或错误注入结果；公共PASS/FAIL/INCONCLUSIVE及Host本地拒绝边界移入说明文档。自动审计确认准则全部非空、旧通用模板命中0项、最长84个字符，重新导入、公式扫描和五段视觉检查通过。修订表保存为`NGU800P_Security_Case_Table_Final_v2.xlsx`，旧最终表保留；未修改baremetal/eHSM固件，未执行目标测试。
+- 2026-08-13：按复审意见重写最终表52条Mailbox BASIC和14条eHSM负向的“输入”列。每条Case现明确实际API、关键参数、调用顺序、内部参数矩阵及该命令特有的读回/恢复/删除动作；`NGU800P-D0-SECURITY-001`只执行版本结构清零、`ehsm_get_version`、保存`0xff10`响应和检查BL type，不再附带无关算法循环、资源清理或健康查询。自动审计确认66条输入互不重复、旧通用模板命中0项；重新导入、公式扫描和五段视觉检查通过。未修改baremetal/eHSM固件，未执行目标测试。
+- 2026-08-13：登记SRC-0028，参考mailbox/spinlock的最终表格式和过程说明粒度，形成安全测试13列最终表。单一`Security`工作表连续编号`NGU800P-D0-SECURITY-001～076`，包含52条Mailbox BASIC、14条eHSM负向、7条SoC软件/协同和3条EDA/硬件需求；Codex只移植`001～073`。同步形成SoC总体架构、各安全功能、Case分组/逐项说明、用例目录和全过程记录。表格已分段目视检查，重新导入确认`A1:M77`且公式错误为0；未修改baremetal、eHSM固件或产品代码，未执行目标测试或Git操作。
+- 2026-08-13：登记SRC-0027并形成安全测试工作簿v0.3.8 SoC安全功能收敛版。Mailbox保持52条BASIC+14条eHSM负向；SoC收敛为7条软件/协同Case，Codex移植指导合计73条。明确`dbg_en_cfg`与`soc_dbg_en_out`分工；SEC_CFG/SPIFC Firewall只测默认权限且不改配置；SRAM默认权限和重新配置保留两条并各自在Case内遍历5个Region；Mailbox保留真实eHSM响应IRQ Case。严重错误组合中断和ECC 1-bit独立中断列为EDA必测，eHSM Master无公开访问路径时列为条件性EDA。工作簿12个工作表已重新导入、公式错误扫描为0并完成逐表视觉检查；未修改baremetal或eHSM固件，未执行目标测试或Git操作。
+- 2026-08-04：形成安全测试用例v0.3.5中文术语说明版。保持v0.3.4的52条Mailbox BASIC、14条真实到达eHSM的负向用例、8条SoC软件用例、74条Codex移植指导和8项硬件补充验证需求不变；将oracle、fixture、vector、stage、baseline、raw response/status等说明性术语统一改为中文解释，新增“术语说明”工作表。命令名/ID、寄存器名、用例ID、错误码、状态码和门禁码继续保留原标识，便于后续与代码和日志匹配。工作簿重新导入、公式和视觉检查通过；未修改`baremetal`或eHSM固件，未执行安全测试或Git操作。
+- 2026-08-03：按“可通过软件配置构造功能case”复审原8项硬件需求并形成v0.3.4。8项均建立或关联软件功能case：新增`SOC-MAILBOX-001/002`、`SOC-HSM-ERROR-001`、`SOC-RESET-001`、`SOC-IRQ-001`，连同既有Firewall两项和HSM读取通路，SoC软件由3条增至8条；Codex可移植总数由69增至74。硬件表继续保留8项，但只补充内部译码、逐周期/CDC、逐bit、精确复位相位和多源IRQ并发，不再把整个功能目标判为纯硬件。产品首版仍可poll，独立测试Profile可验证IRQ；绑定未冻结时软件case为INCONCLUSIVE。未修改`baremetal`或eHSM固件，未执行构建、安全测试或Git操作。
+- 2026-08-03：纠正安全测试DUT边界并形成v0.3.3：Host仅是激励/提交/观测端，eHSM固件和硬件均为被测对象。保留52条Mailbox BASIC，新建14条真正到达eHSM的负向用例（验签、升级、Crypto、认证、Key、OTP、状态和协议），并保留3条SoC软件用例，共69条Codex可移植用例；Host本地NULL/buffer/local-enum/timeout/log负向仍为0。负向PASS必须有Mailbox提交、command ID、raw response、预期拒绝、无禁止副作用和失败后服务健康证据；Host本地拒绝不得冒充eHSM PASS。8项硬件验证需求保持独立。v0.3.2保留为历史；未修改`baremetal`或eHSM固件，未执行构建、安全测试或Git操作。
+- 2026-08-03：按负责人八点复审形成安全测试v0.3.2流片前硬件验证聚焦版：删除主要测试Host软件bug的BOUNDARY/POLICY及与BASIC重复的Mailbox Path软件用例；保留52条Mailbox BASIC，SoC软件收敛为Firewall配置权限、SRAM隔离和HSM状态/错误寄存器读通路3条，共55条Codex可移植用例。单列8项RTL/DV/SoC硬件验证需求，覆盖Mailbox译码/时序、Firewall内部阻断、HSM逐位映射/错误注入、复位和中断。明确Firewall配置不依赖鉴权/LCS、C908可配置而非安全管理核不可配置，并统一禁止eHSM BL/FW定制、测试命令或测试钩子。v0.3/v0.3.1保留为历史；未修改`baremetal`、未执行构建、安全测试或Git操作。
+- 2026-08-03：按流片前风险裁剪原则形成安全测试v0.3.1：保留52条目标Mailbox命令的全量BASIC，把公共Host/Adapter/transport边界集中为10条共享BOUNDARY，仅对OTP/Key/Debug/LCS/寄存器/验签升级等高风险命令族增加10条风险BOUNDARY和10条POLICY，共82条Mailbox case family；保留67条SoC集成用例，总计149条。补充case/vector拆分原则、风险/难度/流片门禁及逐项Codex移植指导；v0.3作为历史保留。未修改`baremetal`，未执行构建、安全测试或Git操作。
+- 2026-07-29：形成安全测试v0.3设计包：52条eHSM BL/FW目标Mailbox命令派生156条BASIC/BOUNDARY/POLICY用例，补充67条SoC Mailbox/Firewall/HSM状态错误映射/复位中断用例，共223条；新增Codex移植指导、工作流记录和机器状态，登记到测试矩阵及顶层任务。状态为`PROPOSED_DESIGN_COMPLETE / NOT_EXECUTED`；v0.2逐项对账和Vendor Demo二级组合仍待完成，未修改`baremetal`、未执行测试或Git操作。
+- 2026-07-29：按负责人“复杂证书流程放到Host/KMS离线系统”原则修订证书Profile：Device不构造PKCS#10、不解析X.509、不执行完整链/时间/吊销策略；只生成不可导出Key、导出公钥、签固定PoP、验证signed install ticket与本地device/Profile/Key/Root/hash并原子保存Host预生成SPDM Blob。Host/CA承担证书构造、完整验链和量产证明。同步ADR-0026/0027、OpenSpec、主详设、专题、计划和状态；未修改代码仓、Vendor快照或测试工作簿，未执行Git。
+- 2026-07-29：接受ADR-0026并关闭OPEN-CONFLICT-013及OPEN-DESIGN-014的软件设计裁决：冻结DEV阶段Root→Level2→证书→MANU/USER、每设备单Attestation Profile、opaque UDS、物理Key ID 0～15、Cert0/Cert1各64 KiB无active pointer布局，以及独立Provisioning FW+canonical CBOR/COSE signed recipe+typed command制造接口。OpenSpec更新为设计已批准、实施未授权；Vendor/RTL/Flash/KMS/CA/MES及wire事项保留为实施绑定。未修改代码仓、Vendor快照或测试工作簿，未执行Git。
+- 2026-07-29：接受ADR-0025并把主详设第10章从原则摘要扩展为完整工程设计：量产RTL Root/Install KEK按die唯一，OTP采用16槽对象基线；补齐KMS/KEK数据流、RTL/DFT个性化、独立Provisioning FW、signed recipe/typed command、Root→Level2灌装、Device Private/PoP/CSR/CA、Cert0/Cert1各64 KiB候选、Key Rotation掉电、审计/清零和测试DoR。建立OpenSpec `device-personalization-and-provisioning-v1`及OPEN-CONFLICT-012/013；证书布局、制造协议、灌装顺序、单/双Attestation槽和UDS类型等待负责人裁决。未修改代码仓、Vendor快照或测试工作簿，未执行Git。
+- 2026-07-28：完成本轮确定性复核：BootROM入口以FMC reset/clock/NX和Measurement Owner硬件readback建立基线，先失效Header再清零/回读整个Region；release状态机不设独立digest状态，Manifest无expected digest，loader在`LOADED_AND_READBACK_VERIFIED`内完成源/目标双摘要；SoC stage固定Vendor type 1，eHSM FW单列type 0专用流程。Context/Measurement在两个PMA候选下均固定data clean/invalidate零调用；context落入各stage专用`.ehsm_context_arena` section；Host ingress采用撤权readback、冻结generation/length、SHA-256 seal digest和提交前复核四步合同。RMA固定由DEBUG LCS承载但使用独立授权和只读诊断白名单。
+- 2026-07-28：继续按负责人确定性要求收敛：C908全链路只使用baremetal System Address且不存在Local/System映射；三套Secure Package Profile全部实现并测试；Attestation同时支持P-256与SM2；首版eHSM只使用one-shot typed API，不启用流式API、不分配`ehsm_session_st`；context arena属性只保留`NON_CACHEABLE/HARDWARE_COHERENT`并延期到SoC稳定后裁决。同步删除“或等价”等非确定ABI措辞，固定`security_abi_registry.json`、`uint8_t counter[16]`、`NOT_VERIFIED_BY_POLICY`和`security_error_report_to_ras()`。
+- 2026-07-28：按负责人最终裁决直接收敛主详设及关联基线：Debug token无scope且只控制一个SoC全局开关；FMC固定type 1，BootROM `check_version=0`并由BL暂存认证candidate，FMC初始化回传expected candidate且BL exact-match后commit/readback，proof后才接收同值GSP；eHSM初始只运行BL，GSP等待Host下发type 0 FW后请求BL验证/启动，运行期更新只写inactive并在reset后由BL最终验证；Key Rotation以云天定制需求为目标且实现标记`BLOCKED_BY_VENDOR_DELIVERY`。同步冻结全程poll、Mailbox方向/16通道独占、response-address guard、Lifecycle删Key终态、Measurement `RELEASE_AUTHORIZED`与State不可变、Attestation持久不可导出Key、静态X.509和SPDM `DESIGN_BLOCKED_BY_PROFILE_INPUT`边界。
+- 2026-07-27：负责人逐项批准ADR-0022/OpenSpec `measurement-table-abi-v1`最终逻辑ABI：采用128B Header、实际数量的128B紧凑Firmware Entry和唯一128B SoC State，`total_len=256+fw_entry_count×128`；BootROM作为隐式可信测量根且不建普通Entry；删除`state_entry_count/generation/eHSM状态/Measurement地址domain/key_id/signer_id/时间戳`，每结构只保留一个reserved并保留CRC-32C/32位commit。每次启动先失效Header并清零整个固定Region；Firmware以`fw_type+die_id+instance_id`唯一。该日曾保留的Manifest `measurement_slot`随后由ADR-0024删除，Entry身份现由stage producer按实际实例元组生成。关闭OPEN-DESIGN-007，新增OPEN-DESIGN-021管理最大独立实例数及物理容量；未修改工作簿、两个代码仓、Vendor快照或执行Git。
+- 2026-07-27：按负责人反馈精简ADR-0022/OpenSpec/主详设Measurement ABI：对照SRC-0016恢复`fw_entry_count/state_entry_count`，删除Measurement `table_flags/algorithm_profile`及其他冗余候选字段；形成128B Header、8×128B Firmware、1×128B State、总长1280B的布局图；保留原字段并仅加入已批准的16字节counter、64位地址+domain、generation、CRC和commit；增加BootROM slot并登记可信摘要源待补。旧4224B候选被替代且从未授权编码。
+- 2026-07-27：形成ADR-0022和OpenSpec `measurement-table-abi-v1`候选：提出128字节Header、16个256字节Entry、slot 0～6固定映射、CRC-32C、末尾32位commit、成功Entry同generation不可变、64位generation、eHSM FW authenticated-package digest和SPDM双bitmap snapshot；重写Measurement接口并合入主详设第9章，更新Open Question、Feature、开发/任务和测试矩阵。等待负责人批准，未修改v0.2工作簿、两个代码仓、Vendor快照或执行Git。
+- 2026-07-27：完成SRC-0015《云天励飞26Q2 定制需求方案》全文抽取和逐页复核，接受ADR-0021并建立OpenSpec `soc-key-rotation-v1`：冻结SoC Verify/Encrypt/Debug三类Key、每类一次、HSM 1字节Bitmap、48字节双层封装、USER鉴权、写新Key→Bitmap→destroy旧Key→reset机制。CE-SEC-013确认当前Vendor快照无专用轮换命令，通用安装接口拒绝USER/DEBUG且不得替代；建立OPEN-CONFLICT-011，物理slot/bit、Vendor ABI/版本、掉电/KMS/recipe继续由OPEN-DESIGN-014管理。未修改代码仓、Vendor快照或执行Git。
+- 2026-07-27：接受ADR-0020并关闭OPEN-DESIGN-003/011/013/016/017/018/020：冻结各stage失败终态、单一provisioning/release matrix、Lifecycle/Debug/RMA/DESTROY、inactive更新/OOB/Recovery、Die0 Multi-Die安全根、统一RAS/审计/清零和流片前发布原则。该日SPDM初步条款已由2026-07-28最终Profile阻断裁决更新；OPEN-DESIGN-019的产品/EMU no-stub与host-unit mock隔离已批准。
+- 2026-07-27：接受ADR-0019并关闭OPEN-CONFLICT-005/009、OPEN-DESIGN-006：澄清不存在32字节Counter歧义，Vendor手册/Header/代码始终为16字节，旧差异是SRC-0016的32位/4字节示例；产品统一为`rollback_counter[16]`。Manifest v1在offset124新增Host可读`uint32_t version`，不参与防回滚且总长保持128字节。FMC在GSP完整验证和loader成功后主动调用eHSM BL新增专用update/readback API，提交被证明后才提交Measurement并release；GSP不向Host开放安全服务。本次只更新`security_-scheme`设计/约束/计划，未修改代码仓、Vendor快照或执行Git。
+- 2026-07-24：完成唯一主详设第5章规范性合入：2 MiB双地址、P1常驻/启动复用、统一layout源、权限矩阵和Owner转换、Host ingress/plaintext/执行区状态机、BootROM/FMC尾部回收、Firewall/PMP/PMA分工、cache、清零、错误和测试要求；最终PC/linker、容量、PMA/Firewall参数和Runtime顺序继续开放。未修改两个代码仓或Vendor快照，未执行Git、构建或安全测试。
+- 2026-07-24：完成唯一主详设第4章规范性合入：eHSM BL/Host双路径移植、Vendor direct 16通道Mailbox、ready/self-test、BootROM/FMC/GSP首版poll、typed Adapter、单context/单在途、cache/deadline、timeout quarantine、GSP终身Owner、RAS终态、代码落点和测试要求；真实MMIO、PMA、deadline/RAS数值作为平台输入继续开放。未修改两个代码仓或Vendor快照，未执行Git、构建或安全测试。
+- 2026-07-24：接受ADR-0017并关闭OPEN-DESIGN-004；冻结三套产品Secure Package Profile：SHA-256+RSA-2048-PSS+AES-128-CBC、SHA-256+ECDSA-P256+AES-128-CBC、SM3+SM2+SM4-CBC，其他Vendor算法仅作baremetal能力/回归输入；具体provisioning绑定进入OPEN-DESIGN-011。
+- 2026-07-24：将已批准的Vendor原生Package、NGU Manifest v1、公共ABI Registry、各stage准入、真实制包发布与golden/negative corpus完整合入唯一主详设第3章；同步任务、计划和项目状态，未修改代码仓或执行Git。
+- 初始化 SoC 安全工程工作空间、模板、项目级 Skills 和检查工具。
+- 登记首批 15 份 Vendor 文档和 2 份 NGU800P 初步方案基线，建立 Source Card、入库报告和基线关系筛查。
+- 登记 OSR eHSM 代码混合快照和历史 Review 文档集，建立 17 条候选发现的重新验证流程。
+- 接受 ADR-0001，明确系统方案/软件方案层级、Vendor eHSM/Core 边界、密钥轮换批准状态、Vendor 文档不保密分类和代码快照级版本管理。
+- 接受 ADR-0002，保留 PDF 为原始基线，新增方案基线控制入口，并建立方案、Vendor 文档/代码和 Evidence 冲突的强制升级与负责人裁决流程。
+- 复核并登记 eHSM BL/Host 自检位图冲突，FINDING-TRNG-05 更新为 `CONFLICTING / revalidated_conflict`。
+- 接受ADR-0003：批准W0-R1-01～04、06～10，R1-05版本化Handoff保持待解释后评审；新增并批准R1-11，规定现有test/stub/demo/历史Expected不作为目标或最终oracle，EMU/产品禁止stub、simulated success及有最终落地风险的编码方式。
+- 根据Vendor回复和负责人裁决关闭OPEN-CONFLICT-001：采用Bootloader自检位图，bit18/`0x40000`=`TRNG`；Host定义错误，bit19/`0x80000`保持unknown/reserved；v0.2不修改，v0.3计划高亮更新用例093。
+- 明确BootROM/FMC/GSP优先移植/复用OSR Host通用业务代码，NGU800P port、构建隔离、项目ABI、错误和安全门禁独立落实；实际改动量待实施调查确认。
+- 登记 SRC-0020 安全测试用例初版，生成保留统一模板且带黄色/绿色/橙色变更标识的 v0.2，共 100 条用例。
+- 建立安全测试版本、覆盖、冲突和 Evidence 流程；新增密钥轮换异常/掉电、更新原子性、TRNG 健康、多 Die/Firewall、故障注入、清零和 SPDM 异常等覆盖。
+- 发现并登记 SRC-0016 Die1 measurement 表述冲突，建立 OPEN-CONFLICT-002；相关验收预期等待负责人裁决。
+- 只读盘点公司软件栈安全组件，识别可复用的 image/manifest/policy/measurement/MCTP/SPDM 框架，以及仍需替换的 eHSM/crypto/cert/transport stub；未修改公司代码、未运行测试。
+- 建立 20 项安全 Feature 落实矩阵和 T-4～T0 四周工作计划，明确方案细节闭环、生产接口、实现出口和 EMU 准入门禁。
+- 建立 EMU 测试 readiness、L0～L4 验证层级、Wave 0～4 执行波次、v0.3/v0.4 工作簿计划和 Evidence 批次结构；v0.2 保持不变。
+- 按负责人补充信息修正仓库/Owner：GSP 在 `gsp-pmp-rmp-omp` 交付可完全指导开发的安全软件详设和正式实现，在实际目录名 `baremetal` 交付测试 case、EMU runner 和工具；`security_-scheme` 保留治理、追踪和 Evidence 索引。
+- 再次明确三仓边界：GSP 仍是详设/实现/测试实现责任方，但正式详设、全部任务规划、测试策略/计划/工作簿和开发追溯统一保存在 `security_-scheme`；`gsp-pmp-rmp-omp` 只承载软件实现，`baremetal` 只承载可执行测试、EMU runner 和工具。本次未修改两个代码仓。
+- 登记SRC-0021 `Work × Codex轻量协作工作流`并适配现有布局：正式设计继续使用03/04/05目录，调查任务使用INV-SEC，代码证据使用CE-SEC，追溯复用现有Requirement/Feature/Test矩阵和ADR/CHANGELOG；创建首批BootROM/eHSM与FMC/GSP只读调查任务。
+- 完成INV-SEC-001并形成CE-SEC-001：确认默认BootROM无生产eHSM/FMC链、可选demo走synthetic package和stub、Vendor OSR port的timeout为空实现；回填安全启动、eHSM Mailbox和BootROM首轮详设，并修正Feature矩阵中的实际目录和代码证据。
+- 完成INV-SEC-002并形成CE-SEC-002：确认FMC/GSP默认仍为hello-world、验证链止于stub/内存measurement、制包工具不签名加密且无loader/jump；回填FMC、GSP、防回滚和完整启动链首轮详设。
+- 登记OPEN-CONFLICT-003：GSP packager/tests的`0x1000_0808_0000`与linker/README的`0x1010_0808_0000`属于未定义的地址域/remap关系，裁决前阻断GSP manifest地址、loader/jump和精确测试预期。
+- 建立`NGU800P安全软件开发计划`：按W0～W4拆分DEV-SEC-001～013和TST-SEC-001～005候选任务，明确三仓代码落点、依赖、DoR/DoD、阻塞和相对排期；候选任务不等于编码授权。
+- 新增统一实施任务模板，强制记录目标仓库、既有工作区修改归属、设计契约、OpenSpec、测试/Evidence和无Git/无提交约束；启动`TASK-SEC-DEV-PLAN-001`，尚未修改两个代码仓。
+- 形成W0首轮设计评审包：基于CE-SEC-001/002整理10项可批准原则、eHSM/Package/Counter/Measurement待补参数、三项冲突建议和首批任务准入差距。
+- 曾提出BootROM/FMC/GSP版本化Handoff ABI首轮候选，并将错误处理从空模板补齐为stage/domain/raw-code、严重度、传播、终态和清零契约；Handoff后由ADR-0004裁决为当前不采用。
+- 将版本化Handoff文档明确标记为W0-R1-05待评审提议，补充其与函数调用/eHSM context的区别、最小合同、版本化含义和替代选项；未授权编码。
+- 接受ADR-0004：OPEN-CONFLICT-002采用推荐Option A，内部Measurement Table独立记录Die1实例；OPEN-CONFLICT-003采用推荐Option A，GSP Manifest使用NoC/system canonical domain和`0x1010_0808_0000`。
+- W0-R1-05改为`deferred_not_adopted_for_current_baseline`：当前不新增Handoff结构、专用SRAM、commit协议或编码/测试任务；跨阶段度量、加载和错误分别由Measurement Table、Manifest/loader及统一错误/日志机制承担。
+- 细化DD-02双路径：baremetal完整覆盖Vendor `ehsm_demo_test()`全部功能/case并优先复用无差异command组包；gsp产品路径第一阶段主要使用`bl_demo`能力，只复用底层函数和协议格式，payload、安全启动/SPDM调用及任务串联以软件方案为准。
+- 新增`docs/05-software-design/ehsm-osr-host-porting.md`和`tests/cases/EHSM-DEMO-CASE-CATALOG.md`，登记BL/FW一级功能、被注释/可选入口、BL重复Debug Auth待核实项和二级case展开门禁；未修改两个代码仓或v0.2工作簿。
+- 创建INV/CE-SEC-003，只读记录`ehsm_demo_test()`的Root→BL/FW调用链、BL重复Debug Auth和未解析`test_parallel()`引用；二级command/case与`bl_demo`复用映射继续进行。
+- 将工程计划收敛为两个顶层任务：`TASK-SEC-BAREMETAL-EHSM-001`负责baremetal eHSM全接口/全能力测试，`TASK-SEC-SOC-FW-001`负责Wing-M130/eHSM BL集成和C908 BootROM/FMC/GSP安全固件详设/开发；原DD/DEV/EMU/INV/TST记录保留为从属工作包。
+- 形成`SOC安全固件首轮详设评审包-启动链与核心合同.md`，登记11项核心合同、Manifest/verify/loader候选语义和B0-R1评审方向；当前仍不授权产品编码。
+- 深入复核SRC-0016/SRC-0017相关PDF页面，登记OPEN-CONFLICT-004（Measurement 32位地址与64位canonical地址/Owner冲突）和OPEN-CONFLICT-005（16字节native counter、32位示例counter及比较/更新语义冲突）；受影响ABI冻结和编码任务暂停。
+- OPEN-CONFLICT-004获得部分裁决：Measurement `load_addr`保留并改为`uint64_t`，同时遵守显式address domain规则；`entry_addr`和地址字段职责未决，最终ABI仍未冻结。
+- 接受ADR-0005：Version/rollback Counter宽度以Vendor为准统一为16字节，禁止32位最终ABI/截断；Wing-M130/eHSM BL保持Vendor业务基线，只处理确认的NGU800P集成缺口。counter比较/更新语义和Measurement `entry_addr`仍开放。
+- 将FW-C-001～011明确为逐项详细设计检查表，而不是要求负责人一次性批准11套ABI；后续只对安全策略、冲突、Owner边界和不可逆行为提交具体裁决。
+- 关闭OPEN-CONFLICT-004：Measurement `load_addr`和`entry_addr`均保留为`uint64_t`并分别携带显式domain；二者只作loader成功执行后的审计快照，Manifest/loader保持执行地址唯一Owner。
+- 完成INV/CE-SEC-004并接受ADR-0006：新增`security-ram-layout.md`独立详设，确认local `0x1000_0500_0000`起始2 MiB安全RAM总体边界，形成BootROM/FMC/GSP执行、Host ingress、plaintext、eHSM packet、Measurement、RAS/guard等P0分区草案和Firewall/清零/生命周期规则。
+- 冻结NGU800P Mailbox机制follow Vendor，以及“security只记录/阻断/上报，reset/watchdog/隔离由RAS策略决定并执行”的产品职责边界；Vendor reset函数不进入production普通timeout/retry路径。
+- 登记OPEN-CONFLICT-006：新2 MiB安全RAM目标与当前BootROM/FMC/GSP 080x linker及PMP/RMP/OMP/MMP占用冲突；裁决前停止最终绝对地址、linker、Manifest默认地址和精确Expected冻结，未修改两个代码仓。
+- 接受ADR-0007并否决P0静态永久切片：新2 MiB替代旧080x，PMP/RMP/MMP常驻，BootROM/FMC使用尾部启动复用区并回收，GSP/Measurement/Mailbox连续，SPDM/MCTP等计入GSP；P1容量仍为审查样例。
+- OPEN-CONFLICT-006更新为部分裁决：剩余C908 PC/linker地址视图、GSP/OMP关系、精确容量和Firewall参数继续阻断最终linker/Manifest/Expected。
+- 接受ADR-0008：eHSM作为受信任master可以访问整个2 MiB安全RAM，不设置Region级Firewall限制；Host隔离和adapter地址/长度/生命周期检查保留。
+- 评估Vendor `ehsm_ctx_intl_st`和interrupt/async/流式生命周期后，负责人批准取消独立64 KiB Mailbox Region，改用BootROM/FMC/GSP各自固定`EHSM_CONTEXT_ARENA`；通用异步/流式及timeout未闭环context不得放普通函数栈，具体arena参数留在B0-R2冻结。
+- 完成INV/CE-SEC-006：复核Vendor TRM、Host/BL代码和NGU800P中断头文件，冻结当前16个Mailbox channel、Host→remote→eHSM remap地址转换链、BootROM poll及ready/error门禁；负责人确认eHSM访问SoC RAM不携带/不强制软件可依赖的non-cacheable属性，第7项RAS通道/pre-ready持久化保持待项目组裁决。
+- 将“现有Vendor资料已明确的eHSM/Core内禀硬件特性和交付行为默认作为基线、不得重复列为open question”写入AGENTS和OpenSpec约束；该规则不允许Vendor资料越权定义NGU800P SoC参数或项目软件策略。
+- 完成INV/CE-SEC-007：确认当前4 KiB、84-message通用`SECURITY_SUBSYS_MAILBOX`与Vendor 16×4 KiB eHSM Mailbox不兼容，建立OPEN-CONFLICT-007并禁止把`0x1000/0x1010_0841_0000`作为eHSM默认base；收敛C908 64字节cache line、64位微秒timer、IRQ和Makefile平台原语，登记CDK工程仍引用不存在dummy组件的构建元数据缺口。
+- 登记SRC-0022并接受ADR-0009：NGU800P SoC地址、寄存器和IRQ硬件常量以RTL同步`baremetal`生成头为第一权威源，GSP同名头仅为实现镜像，Vendor示例地址不得覆盖；该权威不扩展到baremetal test/stub/demo/Expected或产品策略。
+- 依据SRC-0022修正B0-R2：冻结2 MiB RAM的local/remap与NoC/system数值，以及4 KiB/84-message SoC Mailbox数值；撤回OPEN-CONFLICT-007“默认新增64 KiB SoC孔径”的建议，改为确认该块是否为eHSM wrapper及其channel/note/interrupt/status/error映射；该中间结论随后由ADR-0010取代。
+- 接受ADR-0010并完成最终收敛：OPEN-CONFLICT-007采用Vendor direct Option A，Vendor公共源码不修改，4 KiB通用Mailbox不用于eHSM；direct aperture/status准确宏转为RTL/地址头集成同步门禁。
+- 冻结eHSM驱动模式：BootROM/FMC/GSP首版全程poll；Vendor FW ready后的interrupt仅作为后续独立优化，并受IRQ/callback/锁/context门禁约束。
+- 冻结RAS未ready早期终态：静态最小错误记录、阻断release/撤权/清零、有限deadline只重试上报，超时后记录`RAS_REPORT_UNAVAILABLE`、关闭普通中断并进入无限WFI fail-stop循环；不创建Handoff ABI、不自行reset。
+- 完成INV/CE-SEC-008并接受ADR-0011：Vendor poll只有send前cache钩子，timeout公共返回码不能判定命令提交状态；冻结每stage一个64字节对齐/256字节context slot和单在途、GSP唯一service、active cache/timeout scope、首版零自动retry及timeout quarantine。
+- 新增`docs/04-interfaces/ehsm-host-adapter.md`，形成可指导编码的结构体/API、port scope、状态机、错误结果和Host/EMU测试合同；最终PMA、direct MMIO和operation timeout数值仍保持显式输入门禁。
+- 接受ADR-0012：BootROM直接读取SoC LCS并只比较counter不写；ready明确要求done=1且error=0；Vendor FW由GSP阶段加载；确定完成的验证失败允许Device重新arm接收，上位机负责是否发送新package，completion unknown仍quarantine。
+- 最终批准“GSP package作为全SoC global security epoch锚点、FMC唯一更新counter”：FMC/GSP epoch必须一致，高版本update成功并回读可证明后release；eHSM FW/PMP/RMP/MMP匹配已提交epoch，失败镜像隔离等待Host重发；签名bundle/整包原子激活为可选增强。
+- 接受ADR-0013并建立`ehsm-product-operation-profile.md`：GSP镜像集合固定为eHSM FW/PMP/RMP/MMP；签名、RNG、Hash和软件方案Feature要求的eHSM能力进入产品；通用算法低优先级面向内部模块开放，Host API待定；GSP发起受控操作、eHSM作LCS最终授权；确定完成的单Runtime失败局部隔离。
+- 新增`measurement-table.md`并批准BootROM→FMC epoch合同：BootROM在跳转前commit唯一FMC Measurement条目及已验证16字节epoch；FMC只消费当前generation可信条目，要求FMC/GSP epoch一致，并按counter update/readback→GSP Measurement commit→release顺序执行；不新增Handoff。
+- 完成INV/CE-SEC-009：复核Vendor原生包、Host/BL verify函数体和两个公司仓安全组件；确认Vendor API只返回raw status、公司Manifest/stub/零签名packager不构成产品实现。
+- 新增`secure-firmware-package.md`和`image-verify-loader.md`：形成Vendor Header→protected Manifest→payload digest→loader→Measurement/counter→stage release候选合同，启动B0-R3 package/verify/loader切片。
+- 登记OPEN-CONFLICT-008：SRC-0016原生`Image_Type`简化说明与Vendor 0/1/2/3定义不一致，Vendor direct verify未检查Header `Code_Size`等于命令长度；推荐保持Vendor不变并在项目边界双阶段精确校验。
+- 接受ADR-0016：GSP替代旧OMP/Q&P产品固件，OMP不再作为独立产品镜像、RAM、package、Measurement、counter或release对象；关闭OPEN-CONFLICT-006的产品角色子项。
+- 明确最终正式交付是一份可独立阅读的`NGU800P安全软件详细设计.md`；专题文件继续逐章收敛，但批准的规范性内容必须合入主文档，开放项在章节原位和统一附录双重呈现。
+- 完成INV/CE-SEC-011：确认Vendor 16字节Version Counter按thermometer/unary位模式推进，BL成功验证只暂存candidate，Vendor FW启动时才写OTP并回读校验；Host声明的64位通用Counter在匹配FW中无实现且不能替代。
+- 登记OPEN-CONFLICT-009：批准方案要求FMC在release GSP前提交/readback global epoch，但现有Vendor提交路径依赖由GSP加载的Vendor FW。优先请求Vendor提供production-LCS typed 16字节Version Counter接口；裁决前阻断counter写入和FMC→GSP最终release编码。
+- 负责人决定Counter细节延期收敛：当前统一按16字节值并默认存在FMC可用的读/比较/提交/状态接口继续完整详设；OPEN-CONFLICT-009改为实现/EMU前的Vendor绑定门禁，不重开GSP加载Vendor FW职责。

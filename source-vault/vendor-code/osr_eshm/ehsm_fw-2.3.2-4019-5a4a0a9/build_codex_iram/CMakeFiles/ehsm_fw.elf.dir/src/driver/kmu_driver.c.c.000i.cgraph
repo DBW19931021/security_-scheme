@@ -1,0 +1,852 @@
+Trivially needed symbols: kmu_get_keyid_data/29 kmu_check_key_attr/28 kmu_config_derive_key/27 kmu_config/26
+
+
+Initial Symbol table:
+
+memset_/33 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/32 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+sysreg_get_otp_key_num/31 (sysreg_get_otp_key_num)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 
+  Calls: 
+expt_det_add_error/30 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memcpy/11 util_read_volatile_u32/15 kmu_get_reg_base/23 
+kmu_check_key_attr/28 (kmu_check_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f28789f0440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_check_param/24 
+kmu_config_derive_key/27 (kmu_config_derive_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f28789f0330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 sysreg_get_otp_key_num/31 
+kmu_config/26 (kmu_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f28789f0220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 
+kmu_verify_attr_field/25 (kmu_verify_attr_field)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789f0440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 kmu_check_key_attr/28 kmu_check_key_attr/28 
+  Calls: kmu_get_reg_base/23 
+kmu_check_param/24 (kmu_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789f0000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 
+  Calls: 
+kmu_get_reg_base/23 (kmu_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789ccbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 kmu_verify_attr_field/25 kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789f0220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789cccc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_config_sm_en/20 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/19 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/18 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/17 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_write_volatile_u32/16 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789cc110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: 
+util_u32_copy/14 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/13 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memset_/33 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f28789cc220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memcpy_/32 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: sysreg_config_sm_en/20 sysreg_umask_sm_lock/19 sysreg_enable_sm_lock/18 sysreg_enable_fun_lock/17 util_write_volatile_u32/16 util_u32_copy/14 util_memcmp/13 check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memset_/33 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/32 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+sysreg_get_otp_key_num/31 (sysreg_get_otp_key_num)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 
+  Calls: 
+expt_det_add_error/30 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memcpy/11 util_read_volatile_u32/15 kmu_get_reg_base/23 
+kmu_check_key_attr/28 (kmu_check_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_check_param/24 
+kmu_config_derive_key/27 (kmu_config_derive_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 sysreg_get_otp_key_num/31 
+kmu_config/26 (kmu_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 
+kmu_verify_attr_field/25 (kmu_verify_attr_field)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 kmu_check_key_attr/28 kmu_check_key_attr/28 
+  Calls: kmu_get_reg_base/23 
+kmu_check_param/24 (kmu_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 
+  Calls: 
+kmu_get_reg_base/23 (kmu_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 kmu_verify_attr_field/25 kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memset_/33 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memcpy_/32 
+
+
+Initial Symbol table:
+
+memset_/33 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/32 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+sysreg_get_otp_key_num/31 (sysreg_get_otp_key_num)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 
+  Calls: 
+expt_det_add_error/30 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memcpy/11 util_read_volatile_u32/15 kmu_get_reg_base/23 
+kmu_check_key_attr/28 (kmu_check_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_check_param/24 
+kmu_config_derive_key/27 (kmu_config_derive_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 sysreg_get_otp_key_num/31 
+kmu_config/26 (kmu_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 
+kmu_verify_attr_field/25 (kmu_verify_attr_field)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 kmu_check_key_attr/28 kmu_check_key_attr/28 
+  Calls: kmu_get_reg_base/23 
+kmu_check_param/24 (kmu_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 
+  Calls: 
+kmu_get_reg_base/23 (kmu_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 kmu_verify_attr_field/25 kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memset_/33 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memcpy_/32 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memset_/33 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/32 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+sysreg_get_otp_key_num/31 (sysreg_get_otp_key_num)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 
+  Calls: 
+expt_det_add_error/30 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memcpy/11 util_read_volatile_u32/15 kmu_get_reg_base/23 
+kmu_check_key_attr/28 (kmu_check_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_verify_attr_field/25 kmu_check_param/24 
+kmu_config_derive_key/27 (kmu_config_derive_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 sysreg_get_otp_key_num/31 
+kmu_config/26 (kmu_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/30 sysreg_lock_reg/22 sysreg_unlock_reg/21 kmu_get_reg_base/23 
+kmu_verify_attr_field/25 (kmu_verify_attr_field)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 kmu_check_key_attr/28 kmu_check_key_attr/28 
+  Calls: kmu_get_reg_base/23 
+kmu_check_param/24 (kmu_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_check_key_attr/28 
+  Calls: 
+kmu_get_reg_base/23 (kmu_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 kmu_verify_attr_field/25 kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_lock_reg/22 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+sysreg_unlock_reg/21 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_config_derive_key/27 kmu_config/26 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memset_/33 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kmu_get_keyid_data/29 
+  Calls: memcpy_/32 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+memset_/33 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: kmu_get_keyid_data/29 (65766687 (estimated locally),0.06 per call) 
+  Calls: 
+memcpy_/32 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: kmu_get_keyid_data/29 (65766687 (estimated locally),0.06 per call) 
+  Calls: 
+sysreg_get_otp_key_num/31 (sysreg_get_otp_key_num)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: kmu_config_derive_key/27 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+expt_det_add_error/30 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: kmu_config_derive_key/27 (91847875 (estimated locally),0.09 per call) kmu_config/26 (205266880 (estimated locally),0.19 per call) 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/33 (65766687 (estimated locally),0.06 per call) memcpy_/32 (65766687 (estimated locally),0.06 per call) 
+kmu_check_key_attr/28 (kmu_check_key_attr)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: kmu_check_param/24 (inlined) (1073741822 (estimated locally),1.00 per call) 
+kmu_config_derive_key/27 (kmu_config_derive_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/30 (91847875 (estimated locally),0.09 per call) sysreg_get_otp_key_num/31 (1073741824 (estimated locally),1.00 per call) 
+kmu_config/26 (kmu_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/30 (205266880 (estimated locally),0.19 per call) 
+kmu_check_param/24 (kmu_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function kmu_check_param/24 is inline copy in kmu_check_key_attr/28
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local nonfreeing_fn
+  Called by: kmu_check_key_attr/28 (inlined) (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+memset_/33 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/32 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/31 (sysreg_get_otp_key_num)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_add_error/30 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kmu_get_keyid_data (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+kmu_check_key_attr/28 (kmu_check_key_attr)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kmu_check_key_attr (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+kmu_config_derive_key/27 (kmu_config_derive_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kmu_config_derive_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+kmu_config/26 (kmu_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kmu_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

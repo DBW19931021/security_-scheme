@@ -1,0 +1,1776 @@
+Trivially needed symbols: rsa_ssa_pss_verify/26 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign/22 rsa_ssa_pss_sign_by_msg_digest/21
+
+
+Initial Symbol table:
+
+memcmp_/39 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 
+  Calls: 
+RSA_CRTModExp/38 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+reverse_byte_array/37 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+hash/36 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_sign/22 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/35 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_encode_by_msg_digest_internal_step2/14 
+  Calls: 
+hash_final/34 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_update/33 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_init/32 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memcpy_/31 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+get_rand/30 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memset_/29 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign/22 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+pke_modexp_U8/28 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+hash_get_digest_word_len/27 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+rsa_ssa_pss_verify/26 (rsa_ssa_pss_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_verify_by_msg_digest/25 hash/36 
+rsa_ssa_pss_verify_by_msg_digest/25 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9197cab110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify/26 
+  Calls: memset_/29 emsa_pss_verify_by_msg_digest/20 hash_get_digest_word_len/27 pke_modexp_U8/28 GET_BYTE_LEN/11 
+rsa_ssa_pss_crt_sign/24 (rsa_ssa_pss_crt_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9197cab000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_crt_sign_by_msg_digest/23 hash/36 
+rsa_ssa_pss_crt_sign_by_msg_digest/23 (rsa_ssa_pss_crt_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9197c6dee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign/24 
+  Calls: memset_/29 reverse_byte_array/37 GET_BYTE_LEN/11 RSA_CRTModExp/38 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 GET_BYTE_LEN/11 GET_WORD_LEN/10 reverse_byte_array/37 GET_BYTE_LEN/11 emsa_pss_encode_by_msg_digest/15 GET_WORD_LEN/10 hash_get_digest_word_len/27 
+rsa_ssa_pss_sign/22 (rsa_ssa_pss_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9197c6ddd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_sign_by_msg_digest/21 hash/36 
+rsa_ssa_pss_sign_by_msg_digest/21 (rsa_ssa_pss_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9197c6dcc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_sign/22 
+  Calls: memset_/29 pke_modexp_U8/28 emsa_pss_encode_by_msg_digest/15 hash_get_digest_word_len/27 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest/20 (emsa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197cab110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 
+  Calls: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 
+emsa_pss_verify_by_msg_digest_internal_step3/19 (emsa_pss_verify_by_msg_digest_internal_step3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197cab110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: memset_/29 memcmp_/39 hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step2/18 (emsa_pss_verify_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6d990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: emsa_pss_verify_db_check_padding2/17 rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_verify_db_check_padding2/17 (emsa_pss_verify_db_check_padding2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6d990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step1/16 (emsa_pss_verify_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6d880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest/15 (emsa_pss_encode_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6dcc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest_internal_step1/13 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step2/14 (emsa_pss_encode_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6dcc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step1/13 (emsa_pss_encode_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6d440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 memset_/29 memcpy_/31 get_rand/30 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6d550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_db_check_padding2/17 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest/15 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9197c6dee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memcmp_/39 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 
+  Calls: 
+RSA_CRTModExp/38 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+reverse_byte_array/37 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+hash/36 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_sign/22 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/35 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_encode_by_msg_digest_internal_step2/14 
+  Calls: 
+hash_final/34 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_update/33 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_init/32 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memcpy_/31 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+get_rand/30 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memset_/29 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign/22 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+pke_modexp_U8/28 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+hash_get_digest_word_len/27 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+rsa_ssa_pss_verify/26 (rsa_ssa_pss_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_verify_by_msg_digest/25 hash/36 
+rsa_ssa_pss_verify_by_msg_digest/25 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify/26 
+  Calls: memset_/29 emsa_pss_verify_by_msg_digest/20 hash_get_digest_word_len/27 pke_modexp_U8/28 GET_BYTE_LEN/11 
+rsa_ssa_pss_crt_sign/24 (rsa_ssa_pss_crt_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_crt_sign_by_msg_digest/23 hash/36 
+rsa_ssa_pss_crt_sign_by_msg_digest/23 (rsa_ssa_pss_crt_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign/24 
+  Calls: memset_/29 reverse_byte_array/37 GET_BYTE_LEN/11 RSA_CRTModExp/38 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 GET_BYTE_LEN/11 GET_WORD_LEN/10 reverse_byte_array/37 GET_BYTE_LEN/11 emsa_pss_encode_by_msg_digest/15 GET_WORD_LEN/10 hash_get_digest_word_len/27 
+rsa_ssa_pss_sign/22 (rsa_ssa_pss_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_sign_by_msg_digest/21 hash/36 
+rsa_ssa_pss_sign_by_msg_digest/21 (rsa_ssa_pss_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_sign/22 
+  Calls: memset_/29 pke_modexp_U8/28 emsa_pss_encode_by_msg_digest/15 hash_get_digest_word_len/27 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest/20 (emsa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 
+  Calls: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 
+emsa_pss_verify_by_msg_digest_internal_step3/19 (emsa_pss_verify_by_msg_digest_internal_step3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: memset_/29 memcmp_/39 hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step2/18 (emsa_pss_verify_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: emsa_pss_verify_db_check_padding2/17 rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_verify_db_check_padding2/17 (emsa_pss_verify_db_check_padding2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step1/16 (emsa_pss_verify_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest/15 (emsa_pss_encode_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest_internal_step1/13 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step2/14 (emsa_pss_encode_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step1/13 (emsa_pss_encode_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 memset_/29 memcpy_/31 get_rand/30 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_db_check_padding2/17 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest/15 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+
+
+Initial Symbol table:
+
+memcmp_/39 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 
+  Calls: 
+RSA_CRTModExp/38 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+reverse_byte_array/37 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+hash/36 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_sign/22 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/35 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_encode_by_msg_digest_internal_step2/14 
+  Calls: 
+hash_final/34 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_update/33 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_init/32 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memcpy_/31 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+get_rand/30 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memset_/29 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign/22 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+pke_modexp_U8/28 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+hash_get_digest_word_len/27 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+rsa_ssa_pss_verify/26 (rsa_ssa_pss_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_verify_by_msg_digest/25 hash/36 
+rsa_ssa_pss_verify_by_msg_digest/25 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify/26 
+  Calls: memset_/29 emsa_pss_verify_by_msg_digest/20 hash_get_digest_word_len/27 pke_modexp_U8/28 GET_BYTE_LEN/11 
+rsa_ssa_pss_crt_sign/24 (rsa_ssa_pss_crt_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_crt_sign_by_msg_digest/23 hash/36 
+rsa_ssa_pss_crt_sign_by_msg_digest/23 (rsa_ssa_pss_crt_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign/24 
+  Calls: memset_/29 reverse_byte_array/37 GET_BYTE_LEN/11 RSA_CRTModExp/38 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 GET_BYTE_LEN/11 GET_WORD_LEN/10 reverse_byte_array/37 GET_BYTE_LEN/11 emsa_pss_encode_by_msg_digest/15 GET_WORD_LEN/10 hash_get_digest_word_len/27 
+rsa_ssa_pss_sign/22 (rsa_ssa_pss_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_sign_by_msg_digest/21 hash/36 
+rsa_ssa_pss_sign_by_msg_digest/21 (rsa_ssa_pss_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_sign/22 
+  Calls: memset_/29 pke_modexp_U8/28 emsa_pss_encode_by_msg_digest/15 hash_get_digest_word_len/27 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest/20 (emsa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 
+  Calls: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 
+emsa_pss_verify_by_msg_digest_internal_step3/19 (emsa_pss_verify_by_msg_digest_internal_step3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: memset_/29 memcmp_/39 hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step2/18 (emsa_pss_verify_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: emsa_pss_verify_db_check_padding2/17 rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_verify_db_check_padding2/17 (emsa_pss_verify_db_check_padding2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step1/16 (emsa_pss_verify_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest/15 (emsa_pss_encode_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest_internal_step1/13 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step2/14 (emsa_pss_encode_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step1/13 (emsa_pss_encode_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 memset_/29 memcpy_/31 get_rand/30 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_db_check_padding2/17 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest/15 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memcmp_/39 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 
+  Calls: 
+RSA_CRTModExp/38 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+reverse_byte_array/37 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+hash/36 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_sign/22 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/35 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_encode_by_msg_digest_internal_step2/14 
+  Calls: 
+hash_final/34 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_update/33 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+hash_init/32 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memcpy_/31 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+get_rand/30 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 
+  Calls: 
+memset_/29 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step3/19 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign/24 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign/22 emsa_pss_encode_by_msg_digest_internal_step1/13 emsa_pss_encode_by_msg_digest_internal_step1/13 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+pke_modexp_U8/28 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+hash_get_digest_word_len/27 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+rsa_ssa_pss_verify/26 (rsa_ssa_pss_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_verify_by_msg_digest/25 hash/36 
+rsa_ssa_pss_verify_by_msg_digest/25 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify/26 
+  Calls: memset_/29 emsa_pss_verify_by_msg_digest/20 hash_get_digest_word_len/27 pke_modexp_U8/28 GET_BYTE_LEN/11 
+rsa_ssa_pss_crt_sign/24 (rsa_ssa_pss_crt_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_crt_sign_by_msg_digest/23 hash/36 
+rsa_ssa_pss_crt_sign_by_msg_digest/23 (rsa_ssa_pss_crt_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign/24 
+  Calls: memset_/29 reverse_byte_array/37 GET_BYTE_LEN/11 RSA_CRTModExp/38 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 reverse_byte_array/37 GET_BYTE_LEN/11 GET_WORD_LEN/10 reverse_byte_array/37 GET_BYTE_LEN/11 emsa_pss_encode_by_msg_digest/15 GET_WORD_LEN/10 hash_get_digest_word_len/27 
+rsa_ssa_pss_sign/22 (rsa_ssa_pss_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/29 rsa_ssa_pss_sign_by_msg_digest/21 hash/36 
+rsa_ssa_pss_sign_by_msg_digest/21 (rsa_ssa_pss_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_sign/22 
+  Calls: memset_/29 pke_modexp_U8/28 emsa_pss_encode_by_msg_digest/15 hash_get_digest_word_len/27 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest/20 (emsa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 
+  Calls: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 
+emsa_pss_verify_by_msg_digest_internal_step3/19 (emsa_pss_verify_by_msg_digest_internal_step3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: memset_/29 memcmp_/39 hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step2/18 (emsa_pss_verify_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: emsa_pss_verify_db_check_padding2/17 rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_verify_db_check_padding2/17 (emsa_pss_verify_db_check_padding2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_verify_by_msg_digest_internal_step1/16 (emsa_pss_verify_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 
+  Calls: GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest/15 (emsa_pss_encode_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest_internal_step1/13 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step2/14 (emsa_pss_encode_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/35 GET_BYTE_LEN/11 
+emsa_pss_encode_by_msg_digest_internal_step1/13 (emsa_pss_encode_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 
+  Calls: hash_final/34 hash_update/33 hash_update/33 hash_update/33 memset_/29 hash_init/32 memset_/29 memcpy_/31 get_rand/30 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 emsa_pss_verify_db_check_padding2/17 emsa_pss_verify_by_msg_digest_internal_step2/18 emsa_pss_verify_by_msg_digest_internal_step1/16 rsa_ssa_pss_verify_by_msg_digest/25 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 emsa_pss_encode_by_msg_digest_internal_step2/14 emsa_pss_encode_by_msg_digest/15 rsa_ssa_pss_sign_by_msg_digest/21 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 rsa_ssa_pss_crt_sign_by_msg_digest/23 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+emsa_pss_verify_by_msg_digest_internal_step1.constprop.0/51 (emsa_pss_verify_by_msg_digest_internal_step1.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function emsa_pss_verify_by_msg_digest_internal_step1.constprop/51 is inline copy in rsa_ssa_pss_verify_by_msg_digest/25
+  Clone of emsa_pss_verify_by_msg_digest_internal_step1/16
+  Availability: local
+  Function flags: count:67128615 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 (inlined) (67128615 (estimated locally),0.06 per call) 
+  Calls: 
+memcmp_/39 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 (448804 (estimated locally),0.00 per call) 
+  Calls: 
+RSA_CRTModExp/38 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+reverse_byte_array/37 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 (116930483 (estimated locally),0.11 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash/36 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_crt_sign/24 (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_sign/22 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/35 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 (32067340 (estimated locally),0.03 per call) emsa_pss_encode_by_msg_digest_internal_step2/14 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_final/34 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 (1360011 (estimated locally),0.00 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (19293530 (estimated locally),0.02 per call) 
+  Calls: 
+hash_update/33 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 (1360011 (estimated locally),0.00 per call) emsa_pss_verify_by_msg_digest_internal_step3/19 (1152404 (estimated locally),0.00 per call) emsa_pss_verify_by_msg_digest_internal_step3/19 (3492133 (estimated locally),0.00 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (19293530 (estimated locally),0.02 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (116930483 (estimated locally),0.11 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+hash_init/32 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step3/19 (10582222 (estimated locally),0.01 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (1073741823 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/31 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 (908869841 (estimated locally),0.85 per call) 
+  Calls: 
+get_rand/30 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: emsa_pss_encode_by_msg_digest_internal_step1/13 (164871983 (estimated locally),0.15 per call) 
+  Calls: 
+memset_/29 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify/26 (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_verify_by_msg_digest/25 (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_crt_sign/24 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_sign/22 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_sign_by_msg_digest/21 (1073741824 (estimated locally),1.00 per call) emsa_pss_verify_by_msg_digest_internal_step3/19 (10582222 (estimated locally),0.01 per call) emsa_pss_verify_by_msg_digest_internal_step3/19 (3492133 (estimated locally),0.00 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (354334800 (estimated locally),0.33 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (991305832 (estimated locally),0.92 per call) 
+  Calls: 
+pke_modexp_U8/28 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 (163512972 (estimated locally),0.15 per call) rsa_ssa_pss_sign_by_msg_digest/21 (169265735 (estimated locally),0.16 per call) 
+  Calls: 
+hash_get_digest_word_len/27 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 (67128615 (estimated locally),0.06 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (1073741822 (estimated locally),1.00 per call) rsa_ssa_pss_sign_by_msg_digest/21 (512926472 (estimated locally),0.48 per call) 
+  Calls: 
+rsa_ssa_pss_verify/26 (rsa_ssa_pss_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memset_/29 (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_verify_by_msg_digest/25 (354334800 (estimated locally),0.33 per call) hash/36 (1073741824 (estimated locally),1.00 per call) 
+rsa_ssa_pss_verify_by_msg_digest/25 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: rsa_ssa_pss_verify/26 (354334800 (estimated locally),0.33 per call) 
+  Calls: memset_/29 (1073741824 (estimated locally),1.00 per call) emsa_pss_verify_by_msg_digest/20 (inlined) (67128615 (estimated locally),0.06 per call) hash_get_digest_word_len/27 (67128615 (estimated locally),0.06 per call) pke_modexp_U8/28 (163512972 (estimated locally),0.15 per call) 
+rsa_ssa_pss_crt_sign/24 (rsa_ssa_pss_crt_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memset_/29 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_crt_sign_by_msg_digest/23 (354334800 (estimated locally),0.33 per call) hash/36 (1073741824 (estimated locally),1.00 per call) 
+rsa_ssa_pss_crt_sign_by_msg_digest/23 (rsa_ssa_pss_crt_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: rsa_ssa_pss_crt_sign/24 (354334800 (estimated locally),0.33 per call) 
+  Calls: memset_/29 (1073741824 (estimated locally),1.00 per call) reverse_byte_array/37 (116930483 (estimated locally),0.11 per call) RSA_CRTModExp/38 (354334800 (estimated locally),0.33 per call) reverse_byte_array/37 (354334800 (estimated locally),0.33 per call) reverse_byte_array/37 (354334800 (estimated locally),0.33 per call) reverse_byte_array/37 (354334800 (estimated locally),0.33 per call) reverse_byte_array/37 (354334800 (estimated locally),0.33 per call) reverse_byte_array/37 (354334800 (estimated locally),0.33 per call) reverse_byte_array/37 (354334800 (estimated locally),0.33 per call) emsa_pss_encode_by_msg_digest/15 (1073741822 (estimated locally),1.00 per call) hash_get_digest_word_len/27 (1073741822 (estimated locally),1.00 per call) 
+rsa_ssa_pss_sign/22 (rsa_ssa_pss_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memset_/29 (354334800 (estimated locally),0.33 per call) rsa_ssa_pss_sign_by_msg_digest/21 (354334800 (estimated locally),0.33 per call) hash/36 (1073741824 (estimated locally),1.00 per call) 
+rsa_ssa_pss_sign_by_msg_digest/21 (rsa_ssa_pss_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: rsa_ssa_pss_sign/22 (354334800 (estimated locally),0.33 per call) 
+  Calls: memset_/29 (1073741824 (estimated locally),1.00 per call) pke_modexp_U8/28 (169265735 (estimated locally),0.16 per call) emsa_pss_encode_by_msg_digest/15 (512926472 (estimated locally),0.48 per call) hash_get_digest_word_len/27 (512926472 (estimated locally),0.48 per call) 
+emsa_pss_verify_by_msg_digest/20 (emsa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function emsa_pss_verify_by_msg_digest/20 is inline copy in rsa_ssa_pss_verify_by_msg_digest/25
+  Availability: local
+  Function flags: count:67128615 (estimated locally) body local optimize_size
+  Called by: rsa_ssa_pss_verify_by_msg_digest/25 (inlined) (67128615 (estimated locally),0.06 per call) 
+  Calls: emsa_pss_verify_by_msg_digest_internal_step3/19 (inlined) (10582222 (estimated locally),0.01 per call) emsa_pss_verify_by_msg_digest_internal_step2/18 (inlined) (32067340 (estimated locally),0.03 per call) emsa_pss_verify_by_msg_digest_internal_step1.constprop.0/51 (inlined) (67128615 (estimated locally),0.06 per call) 
+emsa_pss_verify_by_msg_digest_internal_step3/19 (emsa_pss_verify_by_msg_digest_internal_step3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function emsa_pss_verify_by_msg_digest_internal_step3/19 is inline copy in rsa_ssa_pss_verify_by_msg_digest/25
+  Availability: local
+  Function flags: count:10582222 (estimated locally) body local optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 (inlined) (10582222 (estimated locally),0.01 per call) 
+  Calls: memset_/29 (10582222 (estimated locally),0.01 per call) memcmp_/39 (448804 (estimated locally),0.00 per call) hash_final/34 (1360011 (estimated locally),0.00 per call) hash_update/33 (1360011 (estimated locally),0.00 per call) hash_update/33 (1152404 (estimated locally),0.00 per call) hash_update/33 (3492133 (estimated locally),0.00 per call) memset_/29 (3492133 (estimated locally),0.00 per call) hash_init/32 (10582222 (estimated locally),0.01 per call) 
+emsa_pss_verify_by_msg_digest_internal_step2/18 (emsa_pss_verify_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function emsa_pss_verify_by_msg_digest_internal_step2/18 is inline copy in rsa_ssa_pss_verify_by_msg_digest/25
+  Availability: local
+  Function flags: count:32067340 (estimated locally) body local optimize_size
+  Called by: emsa_pss_verify_by_msg_digest/20 (inlined) (32067340 (estimated locally),0.03 per call) 
+  Calls: emsa_pss_verify_db_check_padding2/17 (inlined) (16033670 (estimated locally),0.01 per call) rsa_pkcs1_mgf1_with_xor_in/35 (32067340 (estimated locally),0.03 per call) 
+emsa_pss_verify_db_check_padding2/17 (emsa_pss_verify_db_check_padding2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function emsa_pss_verify_db_check_padding2/17 is inline copy in rsa_ssa_pss_verify_by_msg_digest/25
+  Availability: local
+  Function flags: count:16033670 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: emsa_pss_verify_by_msg_digest_internal_step2/18 (inlined) (16033670 (estimated locally),0.01 per call) 
+  Calls: 
+emsa_pss_verify_by_msg_digest_internal_step1/16 (emsa_pss_verify_by_msg_digest_internal_step1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+emsa_pss_encode_by_msg_digest/15 (emsa_pss_encode_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: rsa_ssa_pss_crt_sign_by_msg_digest/23 (1073741822 (estimated locally),1.00 per call) rsa_ssa_pss_sign_by_msg_digest/21 (512926472 (estimated locally),0.48 per call) 
+  Calls: emsa_pss_encode_by_msg_digest_internal_step2/14 (inlined) (354334800 (estimated locally),0.33 per call) emsa_pss_encode_by_msg_digest_internal_step1/13 (inlined) (1073741824 (estimated locally),1.00 per call) 
+emsa_pss_encode_by_msg_digest_internal_step2/14 (emsa_pss_encode_by_msg_digest_internal_step2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function emsa_pss_encode_by_msg_digest_internal_step2/14 is inline copy in emsa_pss_encode_by_msg_digest/15
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/35 (354334800 (estimated locally),0.33 per call) 
+emsa_pss_encode_by_msg_digest_internal_step1/13 (emsa_pss_encode_by_msg_digest_internal_step1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function emsa_pss_encode_by_msg_digest_internal_step1/13 is inline copy in emsa_pss_encode_by_msg_digest/15
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: emsa_pss_encode_by_msg_digest/15 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: hash_final/34 (19293530 (estimated locally),0.02 per call) hash_update/33 (19293530 (estimated locally),0.02 per call) hash_update/33 (116930483 (estimated locally),0.11 per call) hash_update/33 (354334800 (estimated locally),0.33 per call) memset_/29 (354334800 (estimated locally),0.33 per call) hash_init/32 (1073741823 (estimated locally),1.00 per call) memset_/29 (991305832 (estimated locally),0.92 per call) memcpy_/31 (908869841 (estimated locally),0.85 per call) get_rand/30 (164871983 (estimated locally),0.15 per call) 
+updating call of rsa_ssa_pss_verify_by_msg_digest/25 -> emsa_pss_verify_by_msg_digest_internal_step1.constprop/51: ret_35 = emsa_pss_verify_by_msg_digest_internal_step1 (salt_bytes_28(D), msg_digest_bytes_26, iftmp.1_10, _7, &observed_salt_bytes);
+  updated to:ret_35 = emsa_pss_verify_by_msg_digest_internal_step1.constprop (salt_bytes_28(D), msg_digest_bytes_26, iftmp.1_10, _7, &observed_salt_bytes);
+cloning emsa_pss_verify_by_msg_digest_internal_step1/16 to emsa_pss_verify_by_msg_digest_internal_step1.constprop/51
+uint32_t emsa_pss_verify_by_msg_digest_internal_step1 (int32_t salt_bytes, uint32_t msg_digest_bytes, const uint8_t * em, uint32_t em_bits, uint32_t * observed_salt_bytes)
+{
+  uint32_t ret;
+  uint32_t tmp;
+  long unsigned int salt_bytes.4_1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  sizetype _5;
+  const uint8_t * _6;
+  unsigned char _7;
+  unsigned char _8;
+  int _9;
+  int _10;
+  int _11;
+  long unsigned int _16;
+  long unsigned int _24;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG bit_len => em_bits_15(D)
+  # DEBUG BEGIN_STMT
+  _16 = em_bits_15(D) + 7;
+  _24 = _16 >> 3;
+  # DEBUG bit_len => NULL
+  # DEBUG em_bytes => _24
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  if (msg_digest_bytes_17(D) == 0)
+    goto <bb 8>; [35.00%]
+  else
+    goto <bb 3>; [65.00%]
+
+  <bb 3> [local count: 697932183]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (salt_bytes_19(D) >= 0)
+    goto <bb 4>; [59.00%]
+  else
+    goto <bb 7>; [41.00%]
+
+  <bb 4> [local count: 411779990]:
+  # DEBUG BEGIN_STMT
+  salt_bytes.4_1 = (long unsigned int) salt_bytes_19(D);
+  _2 = salt_bytes.4_1 + msg_digest_bytes_17(D);
+  _3 = _2 + 2;
+  if (_3 > _24)
+    goto <bb 5>; [35.00%]
+  else
+    goto <bb 6>; [65.00%]
+
+  <bb 5> [local count: 144122997]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 1842
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  *observed_salt_bytes_20(D) = salt_bytes.4_1;
+  # DEBUG ret => 1842
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  goto <bb 8>; [100.00%]
+
+  <bb 6> [local count: 267656993]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  *observed_salt_bytes_20(D) = salt_bytes.4_1;
+  goto <bb 9>; [100.00%]
+
+  <bb 7> [local count: 286152193]:
+  # DEBUG BEGIN_STMT
+  _4 = msg_digest_bytes_17(D) + 2;
+  if (_4 > _24)
+    goto <bb 8>; [35.00%]
+  else
+    goto <bb 9>; [65.00%]
+
+  <bb 8> [local count: 890763111]:
+  # DEBUG ret => NULL
+  goto <bb 12>; [100.00%]
+
+  <bb 9> [local count: 453655918]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _5 = _24 + 4294967295;
+  _6 = em_22(D) + _5;
+  _7 = *_6;
+  if (_7 != 188)
+    goto <bb 8>; [51.11%]
+  else
+    goto <bb 10>; [48.89%]
+
+  <bb 10> [local count: 221792377]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  tmp_23 = em_bits_15(D) & 7;
+  # DEBUG tmp => tmp_23
+  # DEBUG BEGIN_STMT
+  if (tmp_23 != 0)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 12>; [50.00%]
+
+  <bb 11> [local count: 110896189]:
+  _8 = *em_22(D);
+  _9 = (int) _8;
+  _10 = 255 << tmp_23;
+  _11 = _9 & _10;
+  if (_11 != 0)
+    goto <bb 8>; [35.00%]
+  else
+    goto <bb 12>; [65.00%]
+
+  <bb 12> [local count: 1073741824]:
+  # ret_12 = PHI <1842(8), 0(10), 0(11)>
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_12;
+
+}
+
+
+uint32_t emsa_pss_verify_by_msg_digest_internal_step1.constprop (int32_t salt_bytes, uint32_t msg_digest_bytes, const uint8_t * em, uint32_t em_bits, uint32_t * observed_salt_bytes)
+{
+  uint32_t tmp;
+  uint32_t ret;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int salt_bytes.4_6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _10;
+  sizetype _11;
+  const uint8_t * _13;
+  unsigned char _14;
+  unsigned char _16;
+  int _17;
+  int _18;
+  int _19;
+
+  <bb 13> [local count: 1073741822]:
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG bit_len => em_bits_1(D)
+  # DEBUG BEGIN_STMT
+  _2 = em_bits_1(D) + 7;
+  _3 = _2 >> 3;
+  # DEBUG bit_len => NULL
+  # DEBUG em_bytes => _3
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  if (msg_digest_bytes_4(D) == 0)
+    goto <bb 8>; [35.00%]
+  else
+    goto <bb 3>; [65.00%]
+
+  <bb 3> [local count: 697932183]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (salt_bytes_5(D) >= 0)
+    goto <bb 4>; [59.00%]
+  else
+    goto <bb 7>; [41.00%]
+
+  <bb 4> [local count: 411779990]:
+  # DEBUG BEGIN_STMT
+  salt_bytes.4_6 = (long unsigned int) salt_bytes_5(D);
+  _7 = msg_digest_bytes_4(D) + salt_bytes.4_6;
+  _8 = _7 + 2;
+  if (_3 < _8)
+    goto <bb 5>; [35.00%]
+  else
+    goto <bb 6>; [65.00%]
+
+  <bb 5> [local count: 144122997]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 1842
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  *observed_salt_bytes_9(D) = salt_bytes.4_6;
+  # DEBUG ret => 1842
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  goto <bb 8>; [100.00%]
+
+  <bb 6> [local count: 267656993]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  *observed_salt_bytes_9(D) = salt_bytes.4_6;
+  goto <bb 9>; [100.00%]
+
+  <bb 7> [local count: 286152193]:
+  # DEBUG BEGIN_STMT
+  _10 = msg_digest_bytes_4(D) + 2;
+  if (_3 < _10)
+    goto <bb 8>; [35.00%]
+  else
+    goto <bb 9>; [65.00%]
+
+  <bb 8> [local count: 890763111]:
+  # DEBUG ret => NULL
+  goto <bb 12>; [100.00%]
+
+  <bb 9> [local count: 453655918]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _11 = _3 + 4294967295;
+  _13 = em_12(D) + _11;
+  _14 = *_13;
+  if (_14 != 188)
+    goto <bb 8>; [51.11%]
+  else
+    goto <bb 10>; [48.89%]
+
+  <bb 10> [local count: 221792377]:
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  tmp_15 = em_bits_1(D) & 7;
+  # DEBUG tmp => tmp_15
+  # DEBUG BEGIN_STMT
+  if (tmp_15 != 0)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 12>; [50.00%]
+
+  <bb 11> [local count: 110896189]:
+  _16 = *em_12(D);
+  _17 = (int) _16;
+  _18 = 255 << tmp_15;
+  _19 = _17 & _18;
+  if (_19 != 0)
+    goto <bb 8>; [35.00%]
+  else
+    goto <bb 12>; [65.00%]
+
+  <bb 12> [local count: 1073741824]:
+  # ret_20 = PHI <1842(8), 0(10), 0(11)>
+  # DEBUG ret => ret_20
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_20;
+
+}
+
+
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+memcmp_/39 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+RSA_CRTModExp/38 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+reverse_byte_array/37 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash/36 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/35 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_final/34 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_update/33 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_init/32 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/31 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_rand/30 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/29 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_modexp_U8/28 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/27 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_verify/26 (rsa_ssa_pss_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_ssa_pss_verify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/25 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_ssa_pss_verify_by_msg_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_crt_sign/24 (rsa_ssa_pss_crt_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_ssa_pss_crt_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_crt_sign_by_msg_digest/23 (rsa_ssa_pss_crt_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_ssa_pss_crt_sign_by_msg_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_sign/22 (rsa_ssa_pss_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_ssa_pss_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_sign_by_msg_digest/21 (rsa_ssa_pss_sign_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_ssa_pss_sign_by_msg_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+emsa_pss_verify_by_msg_digest_internal_step1/16 (emsa_pss_verify_by_msg_digest_internal_step1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+emsa_pss_encode_by_msg_digest/15 (emsa_pss_encode_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.emsa_pss_encode_by_msg_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 

@@ -1,0 +1,607 @@
+schema_version: 1
+questions:
+  - id: OPEN-TOOL-001
+    topic: OpenSpec CLI
+    question: 何时在远端正式安装并运行 OpenSpec 初始化？
+    status: open
+    evidence_state: DOCUMENTED
+    owner: ""
+  - id: OPEN-REPO-001
+    topic: 公司代码仓库基线
+    question: 当前大量未提交修改由谁维护，后续任务允许直接修改哪些文件，哪些既有修改必须保护？
+    status: open
+    evidence_state: DOCUMENTED
+    owner: ""
+  - id: OPEN-SRC-001
+    topic: 首批资料适用性
+    question: 已登记 Vendor 文档分别适用于 eHSM 及其内部 Core 的哪些修订和软件版本？Vendor 范围已确认不包含 NGU800P SoC。
+    status: open
+    evidence_state: DOCUMENTED
+    owner: ""
+  - id: OPEN-SRC-002
+    topic: Vendor 文档版本关系
+    question: OSR eHSM HP 标准、Custom Design 和 4019 系列资料之间的优先级、差异和替代关系是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: ""
+  - id: OPEN-SRC-003
+    topic: Vendor 验证基线
+    question: TC、TP、VR 对应的 eHSM RTL、firmware、bootloader 和验证环境版本是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: ""
+  - id: OPEN-BASELINE-001
+    topic: NGU800P 方案基线关系
+    question: SRC-0016 与 SRC-0017 的上位/下位或替代关系是什么？
+    status: resolved
+    evidence_state: DOCUMENTED
+    owner: ""
+    resolution_date: 2026-07-21
+    resolution: SRC-0017 是系统/架构上位方案；SRC-0016 是依赖 SRC-0017 的软件工程落地下位方案，二者不是替代关系。
+  - id: OPEN-BASELINE-002
+    topic: 密钥轮换策略批准
+    question: SRC-0015 中的密钥轮换策略是否已批准？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: ""
+    resolution_date: 2026-07-21
+    resolution: 密钥轮换策略已经批准；具体流程、参数和工程实现以 SRC-0016 或其后续有效版本为准，Vendor 建议原文不是最终方案。
+  - id: OPEN-BASELINE-003
+    topic: NGU800P 方案基线控制信息
+    question: SRC-0016 与 SRC-0017 各自的正式 Owner、批准版本、批准日期和适用芯片修订是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: ""
+  - id: OPEN-BASELINE-004
+    topic: 密钥轮换方案落地
+    question: 已批准的密钥轮换策略是否已经完整体现在 SRC-0016 v1.2；若未完整体现，应进入哪个后续版本？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    evidence:
+      - decisions/ADR-0021-soc-key-rotation-vendor-mechanism.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - sources/source-cards/SRC-0015.md
+    resolution_date: 2026-07-27
+    resolution: SRC-0016 v1.2原PDF保持不变；负责人指定轮换机制参考SRC-0015，并通过ADR-0021及主详设第10章作为受控软件方案增量。ADR-0026已关闭OPEN-DESIGN-014的软件设计裁决；Vendor定制ABI、Bitmap/掉电原子性、KMS托管和可执行制造recipe继续作为实施绑定。
+  - id: OPEN-CODE-001
+    topic: Vendor 代码交付来源
+    question: SRC-0018 的正式交付批次、原始压缩包哈希、交付责任人和保密要求是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: ""
+  - id: OPEN-CODE-002
+    topic: Bootloader 版本关系
+    question: SW_changelist.md 中的 ehsm_bl-2.3.5-4019-eaec20c 与 SRC-0018 实际目录 ehsm_bl-2.3.5-4019-72f8fdc 是替代、补丁、重打包还是记录错误？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: ""
+  - id: OPEN-REVIEW-001
+    topic: 历史代码 Review 来源
+    question: SRC-0019 的作者、reviewer、批准状态、构建/测试环境和独立 Evidence 分别是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: ""
+  - id: OPEN-REVIEW-002
+    topic: 历史候选发现处置
+    question: SRC-0019 中 17 条 FINDING 候选项哪些已提交 Vendor、获得回复、完成修复或已关闭？
+    status: open
+    evidence_state: ASSUMPTION
+    owner: ""
+  - id: OPEN-CONFLICT-001
+    topic: eHSM 自检结果位图协议
+    question: eHSM 4019 自检结果位图应采用 BL 的 TRNG=0x40000，还是 Host API 的 SHA256=0x40000/TRNG=0x80000；当前 BL/Host 版本是否正式配套？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-SRC-0012-SRC-0014-TRNG-BITMAP.md
+    resolution_date: 2026-07-22
+    resolution: Vendor回复确认Bootloader定义正确、Host定义错误；当前4019项目采用bit18/0x40000=TRNG，bit19/0x80000不解释为TRNG，详见ADR-0003。原始Vendor回复材料待补充入库。
+  - id: OPEN-CONFLICT-002
+    topic: Die1 Measurement 策略
+    question: SRC-0016 中 Die1 固件是否应形成独立 measurement table/SPDM 条目；NGU_FW_TYPE_DIE1_FW 与 die_id 是当前有效定义还是预留？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-SRC-0016-DIE1-MEASUREMENT.md
+    resolution_date: 2026-07-22
+    resolution: 内部Measurement Table始终以NGU_FW_TYPE_DIE1_FW、die_id=1独立记录Die1实际实例；相同映像可使用相同digest，但不得丢失实例语义。SPDM聚合时仍须让Verifier确认Die1有效measurement/release状态，见ADR-0004。
+  - id: OPEN-CONFLICT-003
+    topic: GSP Header Overlay Load/Entry System Address
+    question: GSP/SEC2 Header Overlay、loader、linker、C908 PC和eHSM共享descriptor使用哪一种地址表达？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-CODE-GSP-ADDRESS-DOMAIN.md
+    resolution_date: 2026-07-22
+    resolution: 2026-07-28最终裁决废止早期地址转换方案；ADR-0030进一步删除Manifest并固定Header offset1008为LE64 load_addr、entry_addr等于load_addr。C908、Header Overlay、loader、linker和eHSM descriptor全部直接使用baremetal MANAGEMENT_NOC_S9_SRAM_BASE/SIZE定义的System Address，不建立Local/System映射；local/remap输入和旧0x1010_0808_0000拒绝。
+  - id: OPEN-CONFLICT-004
+    topic: Measurement地址字段宽度与职责
+    question: Measurement load_addr/entry_addr的宽度、domain和相对Header Overlay/loader的职责是什么？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-MEASUREMENT-ADDRESS-WIDTH-OWNERSHIP.md
+    resolution_date: 2026-07-22
+    resolution: Measurement中的load_addr和entry_addr均保留为uint64_t System Address且不携带domain；二者只记录loader成功执行后的审计快照，不能反向驱动load/jump。ADR-0030固定Header Overlay只存load_addr，typed-stage loader保持执行地址唯一Owner，entry_addr=load_addr，见ADR-0005/0022/0030。
+  - id: OPEN-CONFLICT-005
+    topic: Version/rollback Counter宽度、比较与更新
+    question: Vendor手册/代码的16字节Version_Counter与SRC-0016旧uint32_t Measurement示例应采用哪个宽度和产品命名？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-COUNTER-WIDTH-COMPARE-UPDATE.md
+    resolution_date: 2026-07-27
+    resolution: ADR-0019确认不存在32字节歧义；旧差异是SRC-0016的32位uint32_t示例与Vendor 16字节值。产品唯一使用16字节rollback_counter，Native Header、Measurement、工具和API不得截断为32/64位或另建第二套Counter。删除Manifest后唯一包内来源仍为Vendor Header Version_Counter。
+    evidence:
+      - evidence/code-investigations/CE-SEC-011-vendor-version-counter-contract.md
+      - decisions/ADR-0019-rollback-counter-manifest-version-and-no-host-gsp-service.md
+  - id: OPEN-CONFLICT-006
+    topic: 2 MiB安全RAM Region、PMA与Firewall输入
+    question: C908和全部产品软件已统一使用baremetal System Address，2 MiB精确Region offset/size已由SRC-0031/ADR-0028冻结；当前还需冻结PMA属性、Firewall窗口参数、MMP DDR Profile及release link map峰值Evidence。
+    status: open
+    evidence_state: CONFLICTING
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-SECURITY-RAM-TARGET-AND-CURRENT-LINKERS.md
+    partial_resolution_date: 2026-08-19
+    partial_resolution: 新2 MiB目标正式替代旧080x，产品软件唯一使用MANAGEMENT_NOC_S9_SRAM_BASE=0x1010_0500_0000、SIZE=0x200000的System Address。SRC-0031/ADR-0028冻结精确布局：GSP静态880 KiB、FMC启动复用128 KiB、Measurement 16 KiB、PMP 256 KiB、RMP 256 KiB、Host ingress 512 KiB；MMP主要驻留DDR。独立plaintext Region取消，FMC/GSP/PMP/RMP采用Host ingress分离、尚未运行目标Region受控原地加载；FMC退出后其128 KiB经撤权、清零和回读才可加入GSP动态池，Measurement不被复用。eHSM可访问整个2 MiB，独立Mailbox Region继续采用stage-local固定EHSM_CONTEXT_ARENA。PMA属性、Firewall绑定、MMP DDR carveout/release及release link map峰值Evidence仍待输入。
+    evidence:
+      - evidence/code-investigations/CE-SEC-004-security-ram-map-and-mailbox.md
+      - evidence/code-investigations/CE-SEC-010-ngu800p-ehsm-mmio-memory-view-pma.md
+      - decisions/ADR-0028-security-sram-fixed-layout-and-in-place-loader.md
+    recommendation: 直接实现ADR-0028的固定offset/size和受控原地加载；由平台Owner补齐PMA/Firewall/MMP DDR Profile，由各Runtime Owner提供release link map、data/BSS/stack/heap峰值证明。未取得这些Evidence前不发布最终linker或MMP地址。
+  - id: OPEN-CONFLICT-007
+    topic: NGU800P通用Mailbox与Vendor eHSM Mailbox绑定
+    question: NGU800P采用Vendor direct 16×4 KiB Mailbox合同还是把4 KiB SECURITY_SUBSYS_MAILBOX作为协议wrapper？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-NGU800P-GENERIC-VS-EHSM-MAILBOX-MMIO.md
+    evidence: evidence/code-investigations/CE-SEC-007-ngu800p-ehsm-port-binding.md
+    resolution_date: 2026-07-23
+    resolution: eHSM交互固定follow Vendor direct实现并见ADR-0010，Vendor公共代码原则上不可修改；采用16 channel、每channel 0x1000 stride的direct Mailbox合同，4 KiB/84-message SECURITY_SUBSYS_MAILBOX不用于eHSM wrapper。NGU800P通过custom header、port函数、外部构建和项目adapter移植；direct aperture/status准确宏须同步进入SRC-0022，缺失时阻断真实MMIO，但不重开transport方向。
+  - id: OPEN-CONFLICT-014
+    topic: SRC-0025 Firewall 默认值、Region 与 RTL 绑定
+    question: Firewall 总开关/Region reset、五个 Region 地址、R4 Master 名称、bit27 标签、实例 base、高 16 位/安全属性/lock/burst 应以哪个目标 D0 RTL/CSR 版本为准？
+    status: open
+    evidence_state: CONFLICTING
+    owner: 项目负责人；RTL/Firewall/IP/寄存器 Owner 待指定
+    conflict_report: sources/conflict-reports/CONFLICT-SRC-0025-FIREWALL-DEFAULTS-AND-BINDING.md
+    source_ids:
+      - SRC-0025
+      - SRC-0022
+    impact: 阻断产品 MMIO base/offset/field 头、量产 Region policy、reset Expected 和最终硬件 PASS oracle；不阻断 UserId/authority 机读映射、软件校验与参数化测试设计。
+    recommendation: 取得目标 D0/tape-out RTL instance、CSR 生成源和 reset/DV Evidence；更新 SRC-0022 或登记其后继 Source revision 后再冻结产品编码。
+  - id: OPEN-CONFLICT-015
+    topic: SRC-0026 SEC_CFG 地址、窗口和未冻结寄存器语义
+    question: 目标D0 SEC_CFG实例应使用0x1010_07B0_0000/4 KiB还是SRC-0022的0x1010_0820_0000/16 KiB；FW error、LCS、Debug、UID-valid及跨32-bit读取一致性合同分别是什么？
+    status: open
+    evidence_state: CONFLICTING
+    owner: 项目负责人；RTL/Integration/eHSM BL-FW/Security-eFuse/Debug Owner 待指定
+    conflict_report: sources/conflict-reports/CONFLICT-SRC-0026-SEC-CFG-ADDRESS-AND-SEMANTICS.md
+    source_ids:
+      - SRC-0026
+      - SRC-0022
+      - SRC-0018
+    impact: 阻断SEC_CFG产品MMIO base/size、真实driver访问、FW error逐bit解码、LCS编码API、普通软件Debug写API和UID稳定性最终PASS；不阻断参数化offset/bit模型、fake-MMIO单元测试、读取顺序和DV计划。
+    recommendation: 由目标D0 RTL/CSR生成源和readback Evidence冻结实例与窗口；由eHSM BL/FW、Security/eFuse和Debug Owner补齐缺失语义并同步SRC-0022或登记后继Source。
+  - id: OPEN-CONFLICT-008
+    topic: Vendor原生包Image_Type与Code_Size语义
+    question: 是否保持Vendor原生Image_Type 0/1/2/3和Bootloader代码不变，由NGU release工具/adapter在提交前及eHSM PASS后强制Code_Size等于package_size减1024，并由受信typed-stage registry区分FMC/GSP/PMP/RMP/MMP？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-VENDOR-NATIVE-PACKAGE-SEMANTICS.md
+    evidence: evidence/code-investigations/CE-SEC-009-secure-package-verify-loader-contract.md
+    resolution_date: 2026-07-23
+    resolution: 项目负责人批准ADR-0014的Vendor wire和双阶段长度合同；ADR-0030替代其中Manifest方案，ADR-0033进一步冻结Header CRC。Vendor wire保留Image_Type=0/1/2/3且公共代码不变；FMC/GSP/PMP/RMP/MMP及Die1固定type 1，type 2/3拒绝，type 0只用于eHSM FW。项目身份来自受信typed-stage registry；type 1 Header offset1008为LE64 load_addr、offset1016为覆盖Header 256到1015的LE32 CRC-32/ISO-HDLC、offset1020为零reserved[4]。release工具/adapter在提交前及PASS后强制Code_Size等于package_size减1024并重算Header CRC；失败禁止loader、Measurement和release。旧Manifest及旧8字节零reserved包无兼容路径。
+  - id: OPEN-CONFLICT-009
+    topic: Vendor版本计数器提交机制与FMC/GSP release顺序
+    question: FMC如何在release GSP前主动提交16字节SoC rollback_counter，而不依赖GSP后续加载eHSM FW或映射Host通用Counter？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-VENDOR-VERSION-COUNTER-COMMIT-SEQUENCE.md
+    evidence:
+      - evidence/code-investigations/CE-SEC-011-vendor-version-counter-contract.md
+      - decisions/ADR-0019-rollback-counter-manifest-version-and-no-host-gsp-service.md
+    resolution_date: 2026-07-28
+    resolution: eHSM BL新增专用16字节SoC staged-candidate commit API。BootROM固定以check_version=0验证Vendor type 1 FMC，BL暂存认证candidate；FMC初始化把FMC Measurement中的expected candidate再次传给BL。BL必须先逐字节匹配RAM candidate，无candidate/失效/不一致时在OTP改动前拒绝；一致后低值拒绝、相等不写、高值单向写并权威readback。proof成立后才接收以check_version=0验证且counter等于已提交值的GSP。不得使用ehsm_read_counter(uint64_t)、raw OTP、GSP值或FW启动副作用替代。准确command ID/packing/LCS权限属于实施冻结项。
+  - id: OPEN-CONFLICT-010
+    topic: BootROM secure_boot Strap位号与软件寄存器映射
+    question: SRC-0023截图把boot_pin.secure_boot标为bit[3]，而SRC-0022的MGMT/SEC STRAP_PIN生成头均把SEC_BOOT定义为bit0、bit3定义为DIE_ID；两者是否是顶层pin向量到软件寄存器的重排，BootROM应读取哪个寄存器镜像和位？
+    status: blocked_by_rtl_sync
+    evidence_state: CONFLICTING
+    owner: 项目负责人；SoC/RTL/BootROM启动Owner
+    conflict_report: sources/conflict-reports/CONFLICT-BOOTROM-SECURE-BOOT-STRAP-BIT-AND-POLICY.md
+    evidence:
+      - evidence/code-investigations/CE-SEC-012-bootrom-secure-mode-strap-checklist.md
+      - sources/source-cards/SRC-0023.md
+      - sources/source-cards/SRC-0022.md
+    resolution_date: 2026-07-29
+    resolution: 项目负责人指定以SRC-0023截图为本项Strap产品权威，固定boot_pin.secure_boot[3]、default 0、0为非安全启动、1为安全启动；在non_sec_boot=0时USER忽略Strap强制安全。SRC-0034/ADR-0031新增的non_sec_boot=1最高优先级覆盖由OPEN-DESIGN-024另行绑定。当前SRC-0022生成头把bit0命名为SEC_BOOT、bit3命名为DIE_ID，与Strap合同冲突。Strap策略不再开放，但BootROM真实寄存器绑定和EMU确定性Expected必须等待RTL/生成头修正，或等待经批准的顶层pin到软件字段映射及对应命名宏；不得直接使用当前bit0、当前bit3或私有裸位号。
+    decision: decisions/ADR-0018-bootrom-strap-lifecycle-and-lcs-timing.md
+  - id: OPEN-CONFLICT-011
+    topic: SRC-0015 SoC Key轮换目标与当前Vendor代码交付差距
+    question: 哪个Vendor定制Host/BL/FW交付和release note实现SRC-0015的专用轮换命令、HSM Bitmap、USER授权、旧Key destroy和掉电恢复？
+    status: blocked_by_vendor_delivery
+    evidence_state: CONFIRMED
+    owner: Vendor接口Owner；eHSM交付Owner；GSP Key/Provisioning Owner
+    conflict_report: sources/conflict-reports/CONFLICT-SRC-0015-CURRENT-VENDOR-KEY-ROTATION.md
+    evidence:
+      - evidence/code-investigations/CE-SEC-013-soc-key-rotation-delivery-gap.md
+      - decisions/ADR-0021-soc-key-rotation-vendor-mechanism.md
+      - sources/source-cards/SRC-0015.md
+    resolution_date: 2026-07-28
+    resolution: Key Rotation以云天定制需求作为目标设计，后续Vendor Host/BL/FW按主详设第10章更新。当前产品实现和EMU标记BLOCKED_BY_VENDOR_DELIVERY，直到匹配的定制TRM、Host API、BL/FW和release note交付；禁止用当前通用INSTALL_RANDOM_KEY/INSTALL_ENCRYPT_KEY模拟轮换。本项不阻断详设评审。
+  - id: OPEN-CONFLICT-012
+    topic: 一机一密RTL Key目标与Vendor共享宏集成方式
+    question: 量产RTL Root/Install KEK按die唯一后，NGU800P采用何种隐藏个性化载体、Secure ATE接口、CPU/Debug/Scan不可读控制、lock和operation proof，而不是在共享netlist中固化同一Vendor RTL宏常量？
+    status: target_accepted_implementation_binding_pending
+    evidence_state: CONFLICTING
+    owner: RTL/DFT Owner；eHSM集成Owner；KMS/制造Owner
+    conflict_report: sources/conflict-reports/CONFLICT-PER-DIE-RTL-KEY-VS-VENDOR-SHARED-MACRO.md
+    evidence:
+      - decisions/ADR-0025-device-unique-rtl-key-and-16-slot-otp-baseline.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - sources/source-cards/SRC-0017.md
+      - sources/source-cards/SRC-0018.md
+      - sources/source-cards/SRC-0035.md
+      - decisions/ADR-0032-ehsm-vendor-rtl-authority-and-query-rules.md
+    resolution_date: 2026-07-29
+    resolution: 产品目标已批准为一机一密，至少RTL Root、Install KEK eHSM/SoC及启用的Scan授权秘密按die唯一且软件不可读。SRC-0035已确认当前源码候选路径使用共享字面量宏，但缺正式elaboration和逐die载体，不能作为量产完成证据。Vendor宏只能表达集成接口，不能作为量产共享值。实现可采用hidden OTP/eFuse、PUF/Helper Data、Key Ladder或等价机制，但必须由RTL/DFT/制造提供逐die注入/派生、lock、negative-read和operation proof；到齐前量产实现状态为BLOCKED_BY_RTL_BINDING，Key字面量禁止复制或外发。
+  - id: OPEN-CONFLICT-013
+    topic: 16槽OTP的Key层级、灌装阶段、Attestation容量与UDS类型
+    question: Level1/Level2对象如何保证灌装先后顺序；单个Device Private槽是按设备选择P-256或SM2，还是扩槽实现同机双持久路径；截图表格行序、Level、Key类型、权限和Table 34是否作为唯一方案基线？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    conflict_report: sources/conflict-reports/CONFLICT-16-SLOT-OTP-PROVISIONING-ORDER-AND-ATTESTATION.md
+    evidence:
+      - decisions/ADR-0025-device-unique-rtl-key-and-16-slot-otp-baseline.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+      - decisions/ADR-0026-provisioning-attestation-certificate-and-manufacturing-contract.md
+      - decisions/ADR-0034-nonsecure-manufacturing-provisioning-and-user-final-commit.md
+      - sources/source-cards/SRC-0017.md
+      - sources/source-cards/SRC-0018.md
+      - sources/source-cards/SRC-0024.md
+    resolution_date: 2026-08-04
+    resolution: ADR-0026/SRC-0024/ADR-0034冻结设备在DEV完成RTL个性化→Chip Root→slot1～5 Level1→目标Profile Level2（slot6/7/12轮换位置保持blank）→Device Private/UDS proof→Cert0→最终配置产品安全启动预演；DEV→MANU前对象完整，MANU只收口，MANU→USER最后提交。每设备只选择一个Attestation Profile，槽14一把私钥，UDS固定slot13/Level2/asymm/七项权限；Table 34和物理Key ID固定。Vendor BL/RTL/Flash/KMS/CA/MES未到齐内容是实施绑定。
+  - id: OPEN-DESIGN-001
+    topic: NGU800P eHSM Port 参数
+    question: Vendor direct Mailbox方向、16 channel、System Address同值校验、三stage首版poll、单在途、零自动retry、timeout quarantine和RAS未ready终态已冻结；当前还需补齐direct aperture/status/error权威宏，并冻结2 MiB共享RAM的PMA属性、各operation deadline、service channel/arena容量及RAS实际上报通道。
+    status: open
+    evidence_state: PROPOSED
+    owner: ""
+    partial_resolution_date: 2026-07-24
+    partial_resolution: ADR-0010冻结Vendor direct Host实现：Vendor公共代码不修改，16个channel、0x1000 stride，4 KiB通用Mailbox不用于eHSM wrapper。C908、共享descriptor和eHSM remote字段统一携带baremetal System Address；ehsm_port_addr_to_raddr()/ehsm_port_raddr_to_addr()只校验active descriptor范围并同值返回，不建立Local/System映射。eHSM BL内部继续使用Vendor SYS_SOC_MEM_BAL/BAH与mmap_remap_addr_u64()，SoC侧不复制该内部映射。BootROM、FMC和GSP首版均固定EHSM_DRV_MODE_WAIT_AND_POLL。ready/error按错误优先且hw_boot_done与bootloader_done同时满足后放行。每stage一个64字节对齐/256字节context slot、最多一条在途，GSP唯一service串行化；首版自动retry为0，timeout视为acceptance unknown并quarantine。PMA属性延期到SoC稳定后在NON_CACHEABLE与HARDWARE_COHERENT中裁决。RAS未ready时有限上报等待，随后关闭普通中断并进入无限WFI fail-stop循环。16路SoC IRQ为APLIC 9/source 78～93，只约束未来interrupt；direct aperture/status准确宏仍是集成门禁。
+    evidence:
+      - evidence/code-investigations/CE-SEC-006-ehsm-mailbox-vendor-baseline.md
+      - evidence/code-investigations/CE-SEC-007-ngu800p-ehsm-port-binding.md
+      - evidence/code-investigations/CE-SEC-008-vendor-poll-cache-timeout-and-late-response.md
+      - evidence/code-investigations/CE-SEC-010-ngu800p-ehsm-mmio-memory-view-pma.md
+  - id: OPEN-DESIGN-002
+    topic: BootROM/FMC/GSP Handoff后续重开条件
+    question: 当前不设计Handoff；只有Measurement Table、Header Overlay/typed-stage loader及批准接口无法满足具体且可复现的跨阶段可信状态需求时，才重新提出最小机制并裁决其物理合同。
+    status: deferred
+    evidence_state: PROPOSED
+    owner: ""
+    decision_dependency: W0-R1-05_deferred_not_adopted_for_current_baseline
+    resolution_date: 2026-07-22
+    resolution: 当前不采用版本化Handoff，不冻结专用SRAM或ABI；跨阶段度量信息使用Measurement Table，Header Overlay承载不带domain的System Address load且entry固定等于load，错误走统一错误/日志。仅在出现具体必要性时重新提案，见ADR-0004/0030。
+  - id: OPEN-DESIGN-003
+    topic: 安全启动失败终态
+    question: BootROM eHSM/FMC失败、FMC验证GSP失败、GSP验证Runtime失败和不可逆命令timeout时，security侧分别采用halt/wait/restricted service/OOB wait中的哪种fail-close终态、上报何种RAS event/action request；RAS最终选择何种reset/watchdog/隔离动作？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    evidence:
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    partial_resolution_date: 2026-07-23
+    partial_resolution: ADR-0010已冻结RAS未ready的早期终态：阻断release，静态slot提交最小EARLY_SECURITY_ERROR_RECORD，撤销权限并尽力清零，在有限deadline内只重试RAS上报；超时记录RAS_REPORT_UNAVAILABLE，关闭普通中断并进入无限WFI fail-stop循环，仅允许平台批准的Reset/NMI退出，不继续启动、不自行reset、不盲目重试原安全操作。
+    resolution_date: 2026-07-27
+    resolution: ADR-0020冻结各stage终态：BootROM失败不release并在RAS不可用时进入无限WFI fail-stop循环；FMC只可对确定可清理且无不可逆副作用的接收失败重新arm；GSP单Runtime失败只隔离对应Runtime及依赖者；eHSM timeout或OTP/Counter状态未知时quarantine且不自动retry。security只请求RAS动作、不直接reset。精确event ID、通道和平台动作表作为集成输入。
+  - id: OPEN-DESIGN-004
+    topic: 产品算法发布 Profile
+    question: 签名、随机数、Hash及安全软件方案要求的eHSM能力已确认属于产品；其准确算法/模式/强度分别是什么，MD5、SHA-512/256、AES-192-XTS、DES/TDES属于产品、兼容、测试还是禁用？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    evidence:
+      - decisions/ADR-0017-three-product-secure-package-algorithm-profiles.md
+      - docs/04-interfaces/security-common-abi.md
+      - docs/04-interfaces/secure-firmware-package.md
+    resolution_date: 2026-07-24
+    resolution: 项目负责人批准三套产品Secure Package算法Profile：SHA-256+RSA-2048+AES-128-CBC、SHA-256+ECDSA/secp256r1+AES-128-CBC、SM3+SM2+SM4-CBC。RSA按Vendor原生RSASSA-PSS/SHA-256绑定，ECC为raw 64字节P-256签名，SM2按Vendor SM3/Z值/raw 64字节格式，CBC固定16字节IV和无padding；Profile ID为1/2/3。所有产品构建保留三条路径，三套均须通过完整启动链、更新链和负向测试，不允许SKU裁剪。其他Vendor算法只进入baremetal能力/回归测试，产品Package/policy/release拒绝。
+  - id: OPEN-DESIGN-005
+    topic: eHSM Context内存放置与生命周期
+    question: 是否取消独立SEC_RAM_EHSM_MAILBOX物理Region，改为BootROM/FMC/GSP各自固定EHSM_CONTEXT_ARENA；每stage的channel/context并发数、slot大小、cache属性、对齐及timeout/late-response回收规则是什么？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    resolution_date: 2026-07-23
+    resolution: 批准取消独立SEC_RAM_EHSM_MAILBOX物理Region；BootROM/FMC各在尾部启动复用区内的stage data/BSS设置专用.ehsm_context_arena linker section，GSP在SEC_RAM_GSP_COMPLEX data区设置同名专用section，不另建固定pool或Firewall Region。ADR-0011冻结首版每stage一个64字节对齐、256字节context slot及最多一条在途事务，GSP通过唯一service串行化；首版不使用interrupt/async/send-and-peek或流式API，只使用one-shot typed API且不分配ehsm_session_st；timeout/异常busy后slot和service quarantine，迟到响应未闭环前不得复用。最终PMA、service channel、I/O descriptor容量及arena总大小仍作为B0-R2集成输入，不重开物理Region或首版并发选择。
+  - id: OPEN-DESIGN-006
+    topic: GSP安全服务Host API
+    question: 是否向Host开放GSP通用算法、Key/Certificate/Rotation、raw eHSM或其他安全服务API？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    evidence:
+      - decisions/ADR-0019-rollback-counter-manifest-version-and-no-host-gsp-service.md
+    resolution_date: 2026-07-27
+    resolution: 不向Host开放GSP安全服务。受信任SoC内部模块仍可按ADR-0013使用低优先级typed service；固件下发、SPDM、受控Debug/OOB等独立产品协议按各自设计，不构成通用GSP服务开放。禁止raw Vendor command passthrough。
+  - id: OPEN-DESIGN-007
+    topic: Measurement Table最终ABI与Commit
+    question: BootROM→FMC rollback_counter producer/consumer及门禁已冻结；Measurement Table最终magic/version/C layout、可变entry、integrity、commit原子宽度、reset清理和SPDM快照如何实现？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    partial_resolution_date: 2026-07-23
+    partial_resolution: BootROM在跳转FMC前提交唯一、verify PASS、RELEASE_AUTHORIZED且已commit的FMC条目及BL staged candidate。FMC只从该条目取得expected candidate，初始化调用BL exact-match commit/readback；随后GSP以check_version=0验证并等于已提交值，再按GSP Measurement commit→release顺序执行；不新增Handoff。
+    resolution_date: 2026-07-27
+    resolution: 负责人批准ADR-0022最终逻辑ABI：128B Header、实际数量的128B紧凑Firmware Entry、唯一128B SoC State，total_len=256+fw_entry_count×128；BootROM作为隐式可信测量根且不建普通Entry；删除state_entry_count、generation、eHSM状态、Measurement地址domain、key_id/signer_id和时间戳；每结构只保留一个reserved，保留CRC-32C和32位commit。Firmware以fw_type+die_id+instance_id唯一；ADR-0030确认包内不携带measurement_slot或身份，Entry身份由stage producer按受信topology元组生成。State提交后Table最终完成。ADR-0028又固定物理Region为16 KiB、理论最多126个Firmware Entry；产品实际实例数、PMA/cache/Firewall和SPDM wire block由独立输入管理。
+    implementation_boundaries: 逻辑ABI和16 KiB物理Region已关闭；最大独立Firmware/微核实例数只用于冻结产品实际max_fw_entries且必须不超过126。PMA/cache和Firewall继续由OPEN-CONFLICT-006管理，对齐32位store跨master可见性必须在编码前用平台Evidence证明；SPDM wire由OPEN-DESIGN-015管理。
+    evidence:
+      - docs/04-interfaces/measurement-table.md
+      - decisions/ADR-0022-measurement-table-abi-v1.md
+      - openspec/changes/measurement-table-abi-v1/proposal.md
+  - id: OPEN-DESIGN-008
+    topic: NGU Native Header Overlay与发布制包ABI
+    question: 是否批准删除Manifest，以Header offset1008/1016/1020承载load/Header CRC/reserved、Code_Size作为唯一长度、entry=load、typed-stage registry以及真实签名/加密工具链？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    evidence:
+      - docs/04-interfaces/secure-firmware-package.md
+      - docs/04-interfaces/image-verify-loader.md
+      - evidence/code-investigations/CE-SEC-009-secure-package-verify-loader-contract.md
+      - evidence/code-investigations/CE-SEC-016-native-header-tail-and-signature-coverage.md
+      - decisions/ADR-0030-remove-manifest-and-use-native-header-tail.md
+      - decisions/ADR-0033-native-header-crc32-format-check.md
+    resolution_date: 2026-08-21
+    resolution: 项目负责人批准ADR-0030/0033：删除NGU Manifest，type 1包固定Header[1024]+Code[Code_Size]；offset1008到1015为LE64 load_addr，offset1016到1019为LE32 CRC-32/ISO-HDLC并覆盖Header 256到1015，offset1020到1023为零reserved；Code_Size是签名、加密、搬移和Measurement唯一长度，entry_addr=load_addr。CRC在preflight和Vendor PASS后双检但不替代密码认证。identity/Profile/policy来自typed-stage registry和provisioning matrix，counter只来自Header，version只在外部release metadata。Loader执行target+1024源Code/目标回读双摘要；旧Manifest、旧8字节零reserved、fallback和dual parser拒绝。中心registry、真实签名/加密制包及Vendor PASS前后长度/Overlay门禁保持有效。
+  - id: OPEN-DESIGN-009
+    topic: GSP eHSM Service唯一Owner
+    question: 是否由GSP第一个、最高优先级的security_service_task从bootstrap到runtime持续持有唯一eHSM service/context，并让其他task只能通过typed queue提交请求，避免启动Owner向运行期Owner隐式移交？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人
+    evidence:
+      - docs/05-software-design/boot-stage-state-machines.md
+      - docs/04-interfaces/ehsm-host-adapter.md
+    resolution_date: 2026-07-24
+    resolution: 项目负责人批准推荐方案并见ADR-0015。GSP第一个、最高优先级的security_service_task从bootstrap到runtime持续作为唯一eHSM service/context Owner；其他task只能通过typed queue请求服务，不得直接调用Vendor Host API、Mailbox port或取得raw handle。bootstrap门禁完成后同一task转入长期service loop，不发生Owner移交；quarantine后只允许RAS批准的新boot instance重新初始化。
+  - id: OPEN-DESIGN-010
+    topic: PMP/RMP/MMP启动依赖与Release Profile
+    question: PMP、RMP、MMP各自从何处接收package、相互依赖图是什么、由哪个寄存器/IPC/reset vector完成release，以及单镜像失败后哪些最小服务仍可保留？PMP/RMP的SRAM Region和容量已固定，MMP DDR Profile仍待输入。
+    status: open
+    evidence_state: UNKNOWN
+    owner: 项目负责人；各Runtime Owner和平台Owner待指定
+    evidence:
+      - docs/05-software-design/boot-stage-state-machines.md
+      - docs/05-software-design/gsp.md
+    recommendation: 由各Runtime Owner提供link map/入口/release和依赖事实后写入中心stage profile；MMP还必须补齐受保护DDR carveout、eHSM/CPU可达性、Firewall/IOMMU和cache合同。在资料到齐前不按名称猜测固定加载顺序。
+    deferral_date: 2026-07-24
+    deferral_note: 项目负责人确认所需资料后续补充；SRC-0031已明确MMP主要使用DDR、PMP/RMP各占安全SRAM 256 KiB。当前仍阻断PMP/RMP/MMP精确加载顺序、release代码、MMP地址及对应Expected冻结。
+  - id: OPEN-DESIGN-011
+    topic: 三套算法Profile的Provisioning与Release绑定
+    question: 全部产品必须实现并测试Profile 1/2/3；具体设备/SKU和包如何绑定Profile、SoC/eHSM key域、boot/upgrade密钥对象、board binding和LCS mask？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Provisioning/KMS/发布Owner待指定
+    evidence:
+      - decisions/ADR-0017-three-product-secure-package-algorithm-profiles.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+      - docs/04-interfaces/security-common-abi.md
+      - docs/04-interfaces/secure-firmware-package.md
+    recommendation: 建立单一受控provisioning/release matrix，逐设备/SKU和镜像绑定Profile、Vendor Image_Type/key域、boot/upgrade key ID、board/LCS策略；Native Header Overlay/CRC、OTP配置、制包器和发布Evidence均从该矩阵生成，不把“支持三套”等同于同一设备同时接受任意套件。
+    deferral_date: 2026-07-24
+    deferral_note: 不阻断主详设第4章、公共parser和与具体Profile无关的状态机；在制包器实现、OTP/provisioning或首批EMU产品包生成前必须冻结。
+    resolution_date: 2026-07-27
+    resolution: 批准单一受控provisioning/release matrix。所有产品构建必须保留Profile 1/2/3三条实现路径并分别通过完整启动链、更新链和负向测试；matrix逐设备/SKU和包选择具体Profile、固定SoC stage Vendor type 1、key域、boot/upgrade key ID、board binding和LCS mask，不得用于裁剪算法路径。Native Header Overlay/CRC、OTP recipe、制包器、测试Expected和release Evidence从同一行生成，缺少精确匹配默认拒绝。
+  - id: OPEN-DESIGN-012
+    topic: BootROM Lifecycle与secure_boot Strap启动模式矩阵
+    question: LCS、Strap和来源有效性组合如何选择安全启动或受限非安全启动；非安全路径允许哪些FMC格式、Debug/OTP/接口和记录行为？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Product Security/Lifecycle/BootROM Owner待指定
+    evidence:
+      - source-vault/internal-specs/bootrom-checklist/SRC-0023/bootrom_secure_boot_checklist.md
+      - evidence/code-investigations/CE-SEC-012-bootrom-secure-mode-strap-checklist.md
+      - docs/05-software-design/bootrom.md
+    resolution_date: 2026-07-24
+    resolution: SRC-0034/ADR-0031已在既有矩阵前增加non_sec_boot最高优先级覆盖；ADR-0034进一步冻结两个非安全子Profile。可靠值1时包括USER在内均进入RESTRICTED_NONSECURE；值0时USER强制安全，DEV/MANU且boot_pin.secure_boot[3]=0选择MANUFACTURING_PROVISIONING，其他非安全原因选择RESTRICTED_NONSECURE，Strap=1选择安全。两个子Profile使用独立镜像/权限/release且禁止fallback；BootROM不写OTP，制造FW仅调用eHSM BL typed接口。policy-fuse绑定受OPEN-DESIGN-024阻断，Strap绑定受OPEN-CONFLICT-010阻断。
+    decision: decisions/ADR-0024-manifest-simplification-boot-mode-and-ehsm-self-test.md
+  - id: OPEN-DESIGN-013
+    topic: Lifecycle、Debug、RMA与Destroy产品权限矩阵
+    question: SoC LCS的RTL raw值/精确合法转换、USER到DEBUG/RMA的持久状态语义、SoC全局Debug开关期限/主体/关闭证明以及DESTROY后保留能力分别是什么？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Lifecycle/Debug/RAS Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - docs/03-architecture/lifecycle.md
+      - docs/03-architecture/debug-authentication.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    resolution_date: 2026-07-28
+    resolution: LCS raw值来自RTL同步的baremetal生成头；项目普通转换仅允许TEST→DEV→MANU→USER→DEBUG→DESTROY相邻边，直接DESTROY仅走独立二次授权入口。进入DEBUG前删除全部FW RAM/NVM用户Key，LCS写失败进入KEYS_DELETED_LCS_UNCHANGED。Debug token不绑定scope，SoC只有一个全局Debug enable，Die0/Die1同步；timeout/reset/LCS变化/安全错误/显式close均关闭。RMA固定由DEBUG LCS承载但必须使用独立RMA授权和只读诊断白名单，不新增RMA LCS且不关闭安全启动；普通Debug token不得替代RMA授权。DESTROY不可恢复。全局开关寄存器、最长期限、授权主体和RAS映射进入产品权限矩阵。
+  - id: OPEN-DESIGN-014
+    topic: OTP/Key/Certificate Slot、轮换与制造Recipe
+    question: 产品key/cert对象分别占用哪些slot/partition，Active Bitmap/active pointer如何编码和原子提交，制造灌装顺序、掉电恢复、寿命/耗尽和USER态轮换授权是什么？
+    status: resolved_design
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Provisioning/KMS/Flash/制造Owner待指定
+    evidence:
+      - sources/source-cards/SRC-0015.md
+      - evidence/code-investigations/CE-SEC-013-soc-key-rotation-delivery-gap.md
+      - sources/conflict-reports/CONFLICT-SRC-0015-CURRENT-VENDOR-KEY-ROTATION.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - docs/03-architecture/key-management.md
+      - docs/03-architecture/certificate-management.md
+      - docs/04-interfaces/otp-efuse.md
+      - decisions/ADR-0021-soc-key-rotation-vendor-mechanism.md
+      - decisions/ADR-0025-device-unique-rtl-key-and-16-slot-otp-baseline.md
+      - decisions/ADR-0026-provisioning-attestation-certificate-and-manufacturing-contract.md
+      - decisions/ADR-0034-nonsecure-manufacturing-provisioning-and-user-final-commit.md
+      - openspec/changes/device-personalization-and-provisioning-v1/proposal.md
+      - sources/conflict-reports/CONFLICT-PER-DIE-RTL-KEY-VS-VENDOR-SHARED-MACRO.md
+      - sources/conflict-reports/CONFLICT-16-SLOT-OTP-PROVISIONING-ORDER-AND-ATTESTATION.md
+    partial_resolution_date: 2026-07-29
+    partial_resolution: SoC Key轮换以SRC-0015为准；一机一密、Table 34和16槽由ADR-0025/SRC-0024冻结；ADR-0026进一步批准Chip Root→Level1→Level2顺序、每设备单Attestation Profile、slot13 UDS七项权限、物理Key ID 0～15、Cert0/Cert1各64KiB无active pointer的A/B布局以及独立Provisioning FW+signed recipe+typed command。
+    resolution_date: 2026-09-02
+    resolution: 软件设计已关闭。ADR-0034进一步冻结DEV/MANU非安全制造子Profile、eHSM BL不信任C908的typed制造接口、PROGRAMMING_PARTIAL恢复条件、最终配置产品安全启动预演和MANU→USER最后提交。Vendor制造BL交付由OPEN-DESIGN-025管理，轮换由OPEN-CONFLICT-011管理，RTL逐die实现由OPEN-CONFLICT-012管理；外部接口继续作为实施绑定。
+  - id: OPEN-DESIGN-015
+    topic: Device Attestation与SPDM产品Profile
+    question: 首版SPDM transport、消息/证书上限、算法协商、Measurement block映射、证书slot/key绑定、secure session握手/重放/关闭合同是什么？
+    status: deferred
+    evidence_state: PROPOSED
+    owner: 项目负责人；SPDM/Host/Certificate Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - docs/03-architecture/device-attestation.md
+      - docs/04-interfaces/spdm.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    partial_resolution_date: 2026-07-27
+    partial_resolution: 首版固定证书KEY_EXCHANGE→FINISH secure session，拒绝PSK和无会话fallback；ADR-0029冻结Cert0/1保存Root→Intermediate→Device Attestation Issuer静态前缀，由GSP根据FMC/GSP Measurement生成一级动态Firmware Alias Leaf，eHSM内部派生Alias Key并完成Issuer签Leaf、Alias签Report/transcript。软件保留P-256与SM2两套能力，每台设备只选择一个Provisioning Profile并只持久化一把slot14 Issuer Private Key；不支持同机双长期身份。Measurement不返回地址并使用summary block。当前开放范围只剩transport、消息/完整链上限、block index、Measurement对外映射和session wire细节；冻结前wire发布标记DESIGN_BLOCKED_BY_PROFILE_INPUT。
+    deferral_date: 2026-07-27
+    deferral_note: 负责人确认Measurement内部Entry到SPDM对外block的具体映射暂不裁决。该延期不阻断核心安全启动、内部Measurement Table ABI或测试规划；SPDM responder最终wire/互操作实现保持不可交付，不得以临时映射宣称完成。
+  - id: OPEN-DESIGN-016
+    topic: 正常更新、OOB与Recovery产品合同
+    question: Flash partition/slot、metadata原子格式、正常更新transport、OOB token和anti-replay、Flash写Owner、受限恢复服务以及counter已推进但新镜像不可用时如何恢复？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Flash/Update/OOB/RAS Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - docs/03-architecture/firmware-update.md
+      - docs/03-architecture/recovery.md
+      - docs/04-interfaces/oob-interface.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    recommendation: 正常更新只写inactive slot并读回，原子提交metadata后reset；OOB只验证外层请求并写固定FMC候选分区，下一次BootROM/eHSM仍作最终判定；禁止回退到较低rollback_counter或未验证镜像。
+    resolution_date: 2026-07-27
+    resolution: 批准推荐方案。正常更新只写inactive slot并读回校验；metadata固定为A/B双副本，每份包含单调sequence、integrity和commit-last，启动扫描选择最大有效sequence，相同sequence内容冲突进入RECOVERY_REQUIRED；下一次真实安全启动作最终判定。OOB只写固定FMC候选分区，不修改LCS/Counter/Key/Measurement；禁止低rollback_counter或未验证fallback。Counter已推进而候选不可用时进入受限恢复，等待相同或更高值有效包。
+  - id: OPEN-DESIGN-017
+    topic: Multi-Die、UCIe与跨DieFirewall/Release
+    question: Die1镜像/地址/容量、UCIe descriptor与链路安全假设、transfer/readback primitive、master/target ID、Firewall粒度、reset/release寄存器、依赖图和RAS动作是什么？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Multi-Die/UCIe/RTL/Firewall Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - decisions/ADR-0004-die1-measurement-gsp-address-and-handoff-scope.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    recommendation: Die0作为安全根完成Die1验签解密和受控传输；Die1保持独立Measurement/release实例；目标读回digest、Firewall最终化后才release，失败只隔离对应Die和依赖者。
+    resolution_date: 2026-07-27
+    resolution: 批准推荐方案。Die0是安全根并通过Die0 GSP/eHSM验证、解密、传输和读回Die1；Die1保持独立Measurement/release/失败实例；digest和Firewall最终状态证明后才release，失败只隔离Die1及依赖者。精确descriptor、地址/容量、master/target ID和reset/release寄存器来自RTL/平台Profile。
+  - id: OPEN-DESIGN-018
+    topic: 统一RAS、审计、Deadline、并发与清零参数
+    question: 各错误domain对应什么RAS event/action，审计存在哪里并使用何种sequence/time，security service的priority/stack/queue/deadline是多少，受限恢复和secure-zero如何证明？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；RAS/RTOS/Platform Security Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - docs/05-software-design/error-handling.md
+      - docs/05-software-design/logging-audit.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    recommendation: 保持错误严重度与RAS动作分离、单eHSM Owner、零自动retry、timeout quarantine和敏感日志最小化；用EMU测量冻结数值参数，不以拍脑袋常量进入产品。
+    resolution_date: 2026-07-27
+    resolution: 批准推荐方案。错误severity与RAS动作分离，保持单eHSM Owner、自动retry为0、timeout quarantine、敏感日志最小化和受控secure-zero；priority/stack/queue/deadline、审计容量/时间源、RAS event ID和清零硬件参数由EMU和平台资料冻结，不得使用无证据常量。
+  - id: OPEN-DESIGN-019
+    topic: 构建、配置生成、签名与正式发布门禁
+    question: 正式toolchain/flags、中心registry生成流程、KMS签名接口、SBOM和release artifact格式、Vendor/Host兼容矩阵Owner及no-stub扫描规则是什么？
+    status: open
+    evidence_state: PROPOSED
+    owner: 项目负责人；Build/Release/KMS Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    partial_resolution_date: 2026-07-27
+    partial_resolution: 负责人批准产品/EMU禁止stub、simulated success、test key/cert/provider、伪RNG、零签名、silent fallback和未批准hardcode；测试mock只允许在构建隔离的host-unit target，且必须证明未进入EMU/产品。2026-07-28进一步批准“每类字段一个权威源+统一生成器”组织：固定security_abi_registry.yaml、security_product_profiles.yaml、security_provisioning_release_matrix.yaml、security_ram_layout.yaml四个项目源，生成C header、linker include、制包/测试schema和security_abi_registry.json审计快照；不使用巨型配置、不复制SRC-0022/Vendor权威常量、不生成密钥。正式toolchain/flags、KMS、SBOM、兼容矩阵和发布Owner仍待输入，因此问题保持部分开放。
+    recommendation: 建议采用“每类字段单一权威Owner+项目生成物”，不是一个巨型配置文件。SoC地址/寄存器/IRQ继续以SRC-0022 baremetal生成头为权威，Vendor协议常量继续以Vendor手册/代码为权威；项目只维护自有ABI ID、Product Profile和Provisioning Matrix，并引用硬件/Vendor宏及版本。项目源可分成少量文件，由脚本生成C header、linker include、制包/测试schema和审计快照；人工评审源和生成差异，生成器不生成密钥、不含秘密。产品/EMU no-stub和host-unit隔离规则已经批准。
+  - id: OPEN-DESIGN-020
+    topic: 流片前测试覆盖、Evidence与发布签署
+    question: Feature/case覆盖阈值、case和Evidence Owner、EMU/样片必跑矩阵、缺陷/waiver准入和最终安全方案签署人是谁？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；Verification/Release Owner待指定
+    evidence:
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - docs/06-verification/EMU-TEST-READINESS-PLAN.md
+      - decisions/ADR-0020-runtime-provisioning-attestation-update-and-release-principles.md
+    recommendation: Feature 001～020均形成Source→Design→Code→Case→Evidence闭环；高严重度缺陷关闭，任何环境缺能力标记BLOCKED而非PASS，剩余风险必须显式签署。
+    resolution_date: 2026-07-27
+    resolution: 批准推荐方案。Feature 001～020必须形成Source→Design→Code→Case→Evidence闭环；高严重度缺陷关闭，环境缺能力只能标记BLOCKED，waiver记录Owner/范围/期限/批准，流片前安全方案和release artifact由指定负责人签署。具体覆盖阈值、Owner姓名和签署名单在验证执行前补齐。
+  - id: OPEN-DESIGN-021
+    topic: Measurement最大Firmware实例容量
+    question: NGU800P一次启动最多存在多少个独立验证、加载或release/隔离的FMC/GSP/eHSM FW/PMP/RMP/MMP/Die1实例；同一镜像在多个微核上是共享一次release还是分别release？
+    status: open
+    evidence_state: UNKNOWN
+    owner: 项目负责人；PMP/RMP/MMP/Die1与平台Owner待指定
+    recommendation: 按ADR-0022以fw_type+die_id+instance_id形成实际紧凑Entry；共享同一代码且整体release的微核只占一项，独立加载或release的实例分别占项。Measurement物理Region已固定16 KiB，按256+128×N公式最多容纳126个Firmware Entry；仍须由完整启动拓扑冻结产品max_fw_entries、边界测试和SPDM最大block数。
+    evidence:
+      - decisions/ADR-0022-measurement-table-abi-v1.md
+      - docs/04-interfaces/measurement-table.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+  - id: OPEN-DESIGN-022
+    topic: Device静态Issuer前缀、DICE动态Leaf与轻量安装Profile v1
+    question: 是否采用Root、Intermediate、Device Attestation Issuer三张静态前缀加GSP一级动态Firmware Alias Leaf，并保持离线PKI、固定PoP、signed install ticket、Cert0/1 A/B和SPDM SlotID 0？
+    status: resolved
+    evidence_state: CONFIRMED
+    owner: 项目负责人；CA/PKI/SPDM/Manufacturing Owner待指定
+    recommendation: 按ADR-0029实现单层动态证明；静态Device Issuer必须CA/pathLen=0/keyCertSign，GSP固定Profile组装动态Leaf，slot13 UDS/CDI/Alias private不可导出。企业OID/DN/有效期、eHSM命令和SPDM wire转OPEN-DESIGN-023/015管理。
+    resolution_date: 2026-08-19
+    resolution: 项目负责人批准SRC-0032方向。BootROM只贡献FMC最终readback Hash，FMC只贡献GSP Hash；GSP构造96字节TCB Context，经eHSM以slot13 UDS不导出派生一级Alias Key，组装动态Firmware Alias Leaf并由slot14 Device Issuer签发，Alias Key签Report/SPDM transcript。Cert0/1只存Root→Intermediate→Device Issuer静态前缀，SPDM Slot0运行期拼接动态Leaf。Device继续不构造PKCS#10、不解析通用X.509。
+    evidence:
+      - decisions/ADR-0027-device-certificate-chain-and-installation-profile-v1.md
+      - docs/03-architecture/certificate-management.md
+      - docs/03-architecture/device-attestation.md
+      - docs/04-interfaces/spdm.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+      - openspec/changes/device-personalization-and-provisioning-v1/proposal.md
+      - decisions/ADR-0029-dice-style-single-dynamic-attestation-certificate.md
+      - openspec/changes/dice-single-dynamic-attestation-v1/specs/dice-attestation/spec.md
+  - id: OPEN-DESIGN-023
+    topic: DICE一级动态证书的eHSM与Certificate Profile绑定
+    question: slot13 UDS的Key Attribute是否支持域分离KDF和确定性P-256/SM2 Alias KeyGen；准确command/handle生命周期/清零如何绑定；动态Leaf的企业OID、DN、有效期、AlgorithmIdentifier、SM2 ID和TCB扩展编码是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: Vendor/eHSM、PKI/CA、GSP与SPDM Owner待指定
+    recommendation: 以ADR-0029 typed接口为唯一方向；UDS/CDI/Alias private必须不导出，eHSM只做Hash/KDF/KeyGen/Sign，GSP只做固定ProfileX.509组装。输入到齐前禁止用软件KDF、临时OID、自签Leaf或通用raw Key接口替代。
+    evidence:
+      - decisions/ADR-0029-dice-style-single-dynamic-attestation-certificate.md
+      - docs/03-architecture/certificate-management.md
+      - docs/04-interfaces/ehsm-product-operation-profile.md
+      - docs/04-interfaces/spdm.md
+  - id: OPEN-DESIGN-024
+    topic: non_sec_boot eFuse物理绑定、只读镜像与烧写锁定
+    question: `non_sec_boot`在目标D0 eFuse中的准确word/bit/offset、blank/programmed编码、ECC/valid与镜像规则是什么；复位时由哪个硬件视图锁存并只读暴露给BootROM；DEV/MANU由谁授权、烧写、readback和锁定；若要求USER安全链失效后再断言该位，独立强授权维修硬件入口是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: SoC RTL/eFuse、BootROM、Provisioning/制造与安全Owner待指定
+    recommendation: 按ADR-0031/0034只向BootROM提供专用、复位稳定、只读、带valid/ecc_ok/mirror_match的逻辑快照，不开放raw eFuse。DEV/MANU烧写只能在制造子Profile调用typed接口；USER事后逃生必须独立于C908产品启动。准确命名宏/API、reset domain、访问权限、0→1烧写recipe、独立维修入口和锁定Evidence到齐前，产品port保持`BLOCKED_BY_NON_SEC_BOOT_BINDING`，且不得声明USER起不来后仍可开启。
+    evidence:
+      - source-vault/internal-specs/bootrom-policy/SRC-0034/ngu800p-non-sec-boot-efuse-input.md
+      - decisions/ADR-0031-non-sec-boot-efuse-override.md
+      - decisions/ADR-0034-nonsecure-manufacturing-provisioning-and-user-final-commit.md
+      - docs/04-interfaces/otp-efuse.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+  - id: OPEN-DESIGN-025
+    topic: eHSM BL制造Key安装、部分写恢复与Lifecycle提交接口
+    question: Vendor哪个BL版本和TRM/Host API将提供typed capability/identity/object query、wrapped install、internal generate、public-key/fixed-PoP/proof、finalize和相邻LCS转换；各命令的硬件制造授权、接受点、PROGRAMMING_PARTIAL、readback、掉电恢复和状态码是什么？
+    status: blocked_by_vendor_delivery
+    evidence_state: PROPOSED
+    owner: Vendor eHSM BL Owner；GSP Provisioning Owner；制造/RTL Owner
+    recommendation: 以ADR-0034和主详设10.7.4/10.9.4为目标合同。BL必须把C908视为不可信caller并验证LCS、硬件制造条件、ticket、device和固定对象顺序；交付到齐前量产Provisioning保持`BLOCKED_BY_VENDOR_DELIVERY`，不得用raw OTP或当前通用安装接口模拟。
+    evidence:
+      - decisions/ADR-0034-nonsecure-manufacturing-provisioning-and-user-final-commit.md
+      - docs/04-interfaces/otp-efuse.md
+      - docs/05-software-design/NGU800P安全软件详细设计.md
+  - id: OPEN-EMU-001
+    topic: EMU 能力和版本清单
+    question: EMU首个可用日期、RTL/eHSM/BootROM版本、加载/日志/reset/power-cut/OTP/eFuse/Flash/Mailbox/Firewall/UCIe能力及不可逆资源策略是什么？
+    status: open
+    evidence_state: UNKNOWN
+    owner: ""

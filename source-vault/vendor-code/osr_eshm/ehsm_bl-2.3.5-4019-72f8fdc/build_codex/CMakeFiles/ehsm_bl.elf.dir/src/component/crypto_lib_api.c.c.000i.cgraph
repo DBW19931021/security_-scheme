@@ -1,0 +1,4949 @@
+Trivially needed symbols: lib_hash_secure_port_config/66 lib_ske_secure_port_config/65 cpt_trng_get_driver_version/64 cpt_trng_get_version/63 cpt_hash_get_driver_version/62 cpt_hash_get_version/61 cpt_ske_get_driver_version/60 cpt_ske_get_version/59 cpt_pke_get_driver_version/58 cpt_pke_get_version/57 cpt_sm2_getE/56 cpt_sm2_getZ/55 cpt_trng_reseed/54 cpt_get_rand_fast/53 cpt_get_rand/52 cpt_sm2_exchangekey/51 cpt_sm2_decrypt/50 cpt_sm2_encrypt/49 cpt_sm2_getkey/48 cpt_sm2_sign/47 cpt_sm2_verify/46 cpt_rsa_ssa_pss_verify_by_msg_digest/45 cpt_rsa_crt_modexp_with_pub/44 cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 cpt_ecdsa_verify/41 cpt_ecdsa_sign/40 cpt_hmac/39 cpt_hash_dma_final/38 cpt_hash/37 cpt_hash_final/36 cpt_hash_update/35 cpt_hash_init/34 cpt_hash_ctx_switch/33 cpt_cmac_ctx_cpu_2_dma/32 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_cmac/30 cpt_ske_cmac_final/29 cpt_ske_cmac_update/28 cpt_ske_cmac_init/27 cpt_ske_cbc_final/26 cpt_ske_cbc_update_blocks/25 cpt_ske_cbc_init/24 cpt_ske_dma_crypto/23 cpt_ske_crypto/22
+
+
+Initial Symbol table:
+
+kmu_config/111 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_hash_secure_port_config/66 lib_ske_secure_port_config/65 
+  Calls: 
+ske_set_secure_port/110 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_ske_secure_port_config/65 
+  Calls: 
+trng_get_driver_version/109 (trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_driver_version/64 
+  Calls: 
+trng_get_version/108 (trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_version/63 
+  Calls: 
+hash_get_driver_version/107 (hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_driver_version/62 
+  Calls: 
+hash_get_version/106 (hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_version/61 
+  Calls: 
+ske_get_driver_version/105 (ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_driver_version/60 
+  Calls: 
+ske_get_version/104 (ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_version/59 
+  Calls: 
+pke_get_driver_version/103 (pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_driver_version/58 
+  Calls: 
+pke_get_version/102 (pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_version/57 
+  Calls: 
+sm2_getE/101 (sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getE/56 
+  Calls: 
+sm2_getZ/100 (sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getZ/55 
+  Calls: 
+trng_reseed/99 (trng_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_reseed/54 
+  Calls: 
+get_rand_fast/98 (get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand_fast/53 
+  Calls: 
+get_rand/97 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand/52 
+  Calls: 
+sm2_exchangekey/96 (sm2_exchangekey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_exchangekey/51 
+  Calls: 
+sm2_decrypt/95 (sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_decrypt/50 
+  Calls: 
+sm2_encrypt/94 (sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_encrypt/49 
+  Calls: 
+sm2_getkey/93 (sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getkey/48 
+  Calls: 
+sm2_sign/92 (sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_sign/47 
+  Calls: 
+sm2_verify/91 (sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_verify/46 
+  Calls: 
+fid_delay/90 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_err_code_to_ehsm_code_sec/21 cpt_err_code_to_ehsm_code_sec/21 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/89 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: 
+RSA_CRTModExp/88 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_crt_modexp_with_pub/44 
+  Calls: 
+RSA_ModExp/87 (RSA_ModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 
+  Calls: 
+ecdsa_verify/86 (ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_verify/41 
+  Calls: 
+ecdsa_sign/85 (ecdsa_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_sign/40 
+  Calls: 
+hmac/84 (hmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hmac/39 
+  Calls: 
+hash_dma_final/83 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 
+  Calls: 
+hash/82 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash/37 
+  Calls: 
+hash_final/81 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_final/36 
+  Calls: 
+hash_update/80 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_update/35 
+  Calls: 
+hash_init/79 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_init/34 
+  Calls: 
+memcpy_/78 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+ske_dma_cmac_update_including_last_block/77 (ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_cmac_update_including_last_block/31 
+  Calls: 
+ske_cmac/76 (ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac/30 
+  Calls: 
+ske_cmac_final/75 (ske_cmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_final/29 
+  Calls: 
+ske_cmac_update/74 (ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_update/28 
+  Calls: 
+ske_cmac_init/73 (ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_init/27 
+  Calls: 
+ske_cbc_final/72 (ske_cbc_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_final/26 
+  Calls: 
+ske_cbc_update_blocks/71 (ske_cbc_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_update_blocks/25 
+  Calls: 
+ske_cbc_init/70 (ske_cbc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_init/24 
+  Calls: 
+ske_dma_crypto/69 (ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_crypto/23 
+  Calls: 
+sysreg_ahb_dma_cfg/68 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_dma_crypto/23 
+  Calls: 
+ske_crypto/67 (ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_crypto/22 
+  Calls: 
+lib_hash_secure_port_config/66 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 
+lib_ske_secure_port_config/65 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 ske_set_secure_port/110 
+cpt_trng_get_driver_version/64 (cpt_trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_driver_version/109 
+cpt_trng_get_version/63 (cpt_trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_version/108 
+cpt_hash_get_driver_version/62 (cpt_hash_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_driver_version/107 
+cpt_hash_get_version/61 (cpt_hash_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_version/106 
+cpt_ske_get_driver_version/60 (cpt_ske_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_driver_version/105 
+cpt_ske_get_version/59 (cpt_ske_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_version/104 
+cpt_pke_get_driver_version/58 (cpt_pke_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_driver_version/103 
+cpt_pke_get_version/57 (cpt_pke_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_version/102 
+cpt_sm2_getE/56 (cpt_sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getE/101 
+cpt_sm2_getZ/55 (cpt_sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getZ/100 
+cpt_trng_reseed/54 (cpt_trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b86000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_reseed/99 
+cpt_get_rand_fast/53 (cpt_get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand_fast/98 
+cpt_get_rand/52 (cpt_get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand/97 
+cpt_sm2_exchangekey/51 (cpt_sm2_exchangekey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_exchangekey/96 
+cpt_sm2_decrypt/50 (cpt_sm2_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_decrypt/95 
+cpt_sm2_encrypt/49 (cpt_sm2_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_encrypt/94 
+cpt_sm2_getkey/48 (cpt_sm2_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getkey/93 
+cpt_sm2_sign/47 (cpt_sm2_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_sign/92 
+cpt_sm2_verify/46 (cpt_sm2_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_verify/91 
+cpt_rsa_ssa_pss_verify_by_msg_digest/45 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code_sec/21 rsa_ssa_pss_verify_by_msg_digest/89 
+cpt_rsa_crt_modexp_with_pub/44 (cpt_rsa_crt_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_CRTModExp/88 
+cpt_rsa_modexp_with_pub/43 (cpt_rsa_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_rsa_modexp/42 (cpt_rsa_modexp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_ecdsa_verify/41 (cpt_ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_verify/86 
+cpt_ecdsa_sign/40 (cpt_ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_sign/85 
+cpt_hmac/39 (cpt_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b73000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hmac/84 
+cpt_hash_dma_final/38 (cpt_hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_dma_final/83 sysreg_ahb_dma_cfg/68 
+cpt_hash/37 (cpt_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash/82 
+cpt_hash_final/36 (cpt_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_final/81 
+cpt_hash_update/35 (cpt_hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_update/80 
+cpt_hash_init/34 (cpt_hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_init/79 
+cpt_hash_ctx_switch/33 (cpt_hash_ctx_switch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+cpt_cmac_ctx_cpu_2_dma/32 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 
+cpt_ske_dma_cmac_update_including_last_block/31 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_cmac_update_including_last_block/77 sysreg_ahb_dma_cfg/68 
+cpt_ske_cmac/30 (cpt_ske_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac/76 
+cpt_ske_cmac_final/29 (cpt_ske_cmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_final/75 
+cpt_ske_cmac_update/28 (cpt_ske_cmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_update/74 
+cpt_ske_cmac_init/27 (cpt_ske_cmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_init/73 
+cpt_ske_cbc_final/26 (cpt_ske_cbc_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_final/72 
+cpt_ske_cbc_update_blocks/25 (cpt_ske_cbc_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_update_blocks/71 
+cpt_ske_cbc_init/24 (cpt_ske_cbc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875b66000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_init/70 
+cpt_ske_dma_crypto/23 (cpt_ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875a4aee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_crypto/69 sysreg_ahb_dma_cfg/68 
+cpt_ske_crypto/22 (cpt_ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f7875a4add0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_crypto/67 
+cpt_err_code_to_ehsm_code_sec/21 (cpt_err_code_to_ehsm_code_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f7875b73660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: fid_delay/90 fid_delay/90 
+cpt_err_code_to_ehsm_code/20 (cpt_err_code_to_ehsm_code)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f7875a4add0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_sm2_getE/56 cpt_sm2_getZ/55 cpt_get_rand_fast/53 cpt_get_rand/52 cpt_sm2_exchangekey/51 cpt_sm2_decrypt/50 cpt_sm2_encrypt/49 cpt_sm2_getkey/48 cpt_sm2_sign/47 cpt_sm2_verify/46 cpt_rsa_crt_modexp_with_pub/44 cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 cpt_ecdsa_verify/41 cpt_ecdsa_sign/40 cpt_hmac/39 cpt_hash_dma_final/38 cpt_hash/37 cpt_hash_final/36 cpt_hash_update/35 cpt_hash_init/34 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_cmac/30 cpt_ske_cmac_final/29 cpt_ske_cmac_update/28 cpt_ske_cmac_init/27 cpt_ske_cbc_final/26 cpt_ske_cbc_update_blocks/25 cpt_ske_cbc_init/24 cpt_ske_dma_crypto/23 cpt_ske_crypto/22 
+  Calls: 
+sysreg_read_fw_ctrl_bits/19 (sysreg_read_fw_ctrl_bits)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/18 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/17 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/16 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/15 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f7875b66880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_cmac_ctx_cpu_2_dma/32 
+  Calls: memcpy_/78 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: sysreg_read_fw_ctrl_bits/19 rPKE_B/18 rPKE_A/17 lib_register_unlock/16 lib_register_lock/15 util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 util_memset/10 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+kmu_config/111 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_hash_secure_port_config/66 lib_ske_secure_port_config/65 
+  Calls: 
+ske_set_secure_port/110 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_ske_secure_port_config/65 
+  Calls: 
+trng_get_driver_version/109 (trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_driver_version/64 
+  Calls: 
+trng_get_version/108 (trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_version/63 
+  Calls: 
+hash_get_driver_version/107 (hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_driver_version/62 
+  Calls: 
+hash_get_version/106 (hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_version/61 
+  Calls: 
+ske_get_driver_version/105 (ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_driver_version/60 
+  Calls: 
+ske_get_version/104 (ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_version/59 
+  Calls: 
+pke_get_driver_version/103 (pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_driver_version/58 
+  Calls: 
+pke_get_version/102 (pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_version/57 
+  Calls: 
+sm2_getE/101 (sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getE/56 
+  Calls: 
+sm2_getZ/100 (sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getZ/55 
+  Calls: 
+trng_reseed/99 (trng_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_reseed/54 
+  Calls: 
+get_rand_fast/98 (get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand_fast/53 
+  Calls: 
+get_rand/97 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand/52 
+  Calls: 
+sm2_exchangekey/96 (sm2_exchangekey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_exchangekey/51 
+  Calls: 
+sm2_decrypt/95 (sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_decrypt/50 
+  Calls: 
+sm2_encrypt/94 (sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_encrypt/49 
+  Calls: 
+sm2_getkey/93 (sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getkey/48 
+  Calls: 
+sm2_sign/92 (sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_sign/47 
+  Calls: 
+sm2_verify/91 (sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_verify/46 
+  Calls: 
+fid_delay/90 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_err_code_to_ehsm_code_sec/21 cpt_err_code_to_ehsm_code_sec/21 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/89 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: 
+RSA_CRTModExp/88 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_crt_modexp_with_pub/44 
+  Calls: 
+RSA_ModExp/87 (RSA_ModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 
+  Calls: 
+ecdsa_verify/86 (ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_verify/41 
+  Calls: 
+ecdsa_sign/85 (ecdsa_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_sign/40 
+  Calls: 
+hmac/84 (hmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hmac/39 
+  Calls: 
+hash_dma_final/83 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 
+  Calls: 
+hash/82 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash/37 
+  Calls: 
+hash_final/81 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_final/36 
+  Calls: 
+hash_update/80 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_update/35 
+  Calls: 
+hash_init/79 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_init/34 
+  Calls: 
+memcpy_/78 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+ske_dma_cmac_update_including_last_block/77 (ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_cmac_update_including_last_block/31 
+  Calls: 
+ske_cmac/76 (ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac/30 
+  Calls: 
+ske_cmac_final/75 (ske_cmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_final/29 
+  Calls: 
+ske_cmac_update/74 (ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_update/28 
+  Calls: 
+ske_cmac_init/73 (ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_init/27 
+  Calls: 
+ske_cbc_final/72 (ske_cbc_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_final/26 
+  Calls: 
+ske_cbc_update_blocks/71 (ske_cbc_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_update_blocks/25 
+  Calls: 
+ske_cbc_init/70 (ske_cbc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_init/24 
+  Calls: 
+ske_dma_crypto/69 (ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_crypto/23 
+  Calls: 
+sysreg_ahb_dma_cfg/68 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_dma_crypto/23 
+  Calls: 
+ske_crypto/67 (ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_crypto/22 
+  Calls: 
+lib_hash_secure_port_config/66 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 
+lib_ske_secure_port_config/65 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 ske_set_secure_port/110 
+cpt_trng_get_driver_version/64 (cpt_trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_driver_version/109 
+cpt_trng_get_version/63 (cpt_trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_version/108 
+cpt_hash_get_driver_version/62 (cpt_hash_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_driver_version/107 
+cpt_hash_get_version/61 (cpt_hash_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_version/106 
+cpt_ske_get_driver_version/60 (cpt_ske_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_driver_version/105 
+cpt_ske_get_version/59 (cpt_ske_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_version/104 
+cpt_pke_get_driver_version/58 (cpt_pke_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_driver_version/103 
+cpt_pke_get_version/57 (cpt_pke_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_version/102 
+cpt_sm2_getE/56 (cpt_sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getE/101 
+cpt_sm2_getZ/55 (cpt_sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getZ/100 
+cpt_trng_reseed/54 (cpt_trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_reseed/99 
+cpt_get_rand_fast/53 (cpt_get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand_fast/98 
+cpt_get_rand/52 (cpt_get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand/97 
+cpt_sm2_exchangekey/51 (cpt_sm2_exchangekey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_exchangekey/96 
+cpt_sm2_decrypt/50 (cpt_sm2_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_decrypt/95 
+cpt_sm2_encrypt/49 (cpt_sm2_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_encrypt/94 
+cpt_sm2_getkey/48 (cpt_sm2_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getkey/93 
+cpt_sm2_sign/47 (cpt_sm2_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_sign/92 
+cpt_sm2_verify/46 (cpt_sm2_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_verify/91 
+cpt_rsa_ssa_pss_verify_by_msg_digest/45 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code_sec/21 rsa_ssa_pss_verify_by_msg_digest/89 
+cpt_rsa_crt_modexp_with_pub/44 (cpt_rsa_crt_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_CRTModExp/88 
+cpt_rsa_modexp_with_pub/43 (cpt_rsa_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_rsa_modexp/42 (cpt_rsa_modexp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_ecdsa_verify/41 (cpt_ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_verify/86 
+cpt_ecdsa_sign/40 (cpt_ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_sign/85 
+cpt_hmac/39 (cpt_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hmac/84 
+cpt_hash_dma_final/38 (cpt_hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_dma_final/83 sysreg_ahb_dma_cfg/68 
+cpt_hash/37 (cpt_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash/82 
+cpt_hash_final/36 (cpt_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_final/81 
+cpt_hash_update/35 (cpt_hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_update/80 
+cpt_hash_init/34 (cpt_hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_init/79 
+cpt_hash_ctx_switch/33 (cpt_hash_ctx_switch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+cpt_cmac_ctx_cpu_2_dma/32 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 
+cpt_ske_dma_cmac_update_including_last_block/31 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_cmac_update_including_last_block/77 sysreg_ahb_dma_cfg/68 
+cpt_ske_cmac/30 (cpt_ske_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac/76 
+cpt_ske_cmac_final/29 (cpt_ske_cmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_final/75 
+cpt_ske_cmac_update/28 (cpt_ske_cmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_update/74 
+cpt_ske_cmac_init/27 (cpt_ske_cmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_init/73 
+cpt_ske_cbc_final/26 (cpt_ske_cbc_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_final/72 
+cpt_ske_cbc_update_blocks/25 (cpt_ske_cbc_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_update_blocks/71 
+cpt_ske_cbc_init/24 (cpt_ske_cbc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_init/70 
+cpt_ske_dma_crypto/23 (cpt_ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_crypto/69 sysreg_ahb_dma_cfg/68 
+cpt_ske_crypto/22 (cpt_ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_crypto/67 
+cpt_err_code_to_ehsm_code_sec/21 (cpt_err_code_to_ehsm_code_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: fid_delay/90 fid_delay/90 
+cpt_err_code_to_ehsm_code/20 (cpt_err_code_to_ehsm_code)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_sm2_getE/56 cpt_sm2_getZ/55 cpt_get_rand_fast/53 cpt_get_rand/52 cpt_sm2_exchangekey/51 cpt_sm2_decrypt/50 cpt_sm2_encrypt/49 cpt_sm2_getkey/48 cpt_sm2_sign/47 cpt_sm2_verify/46 cpt_rsa_crt_modexp_with_pub/44 cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 cpt_ecdsa_verify/41 cpt_ecdsa_sign/40 cpt_hmac/39 cpt_hash_dma_final/38 cpt_hash/37 cpt_hash_final/36 cpt_hash_update/35 cpt_hash_init/34 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_cmac/30 cpt_ske_cmac_final/29 cpt_ske_cmac_update/28 cpt_ske_cmac_init/27 cpt_ske_cbc_final/26 cpt_ske_cbc_update_blocks/25 cpt_ske_cbc_init/24 cpt_ske_dma_crypto/23 cpt_ske_crypto/22 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_cmac_ctx_cpu_2_dma/32 
+  Calls: memcpy_/78 
+
+
+Initial Symbol table:
+
+kmu_config/111 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_hash_secure_port_config/66 lib_ske_secure_port_config/65 
+  Calls: 
+ske_set_secure_port/110 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_ske_secure_port_config/65 
+  Calls: 
+trng_get_driver_version/109 (trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_driver_version/64 
+  Calls: 
+trng_get_version/108 (trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_version/63 
+  Calls: 
+hash_get_driver_version/107 (hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_driver_version/62 
+  Calls: 
+hash_get_version/106 (hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_version/61 
+  Calls: 
+ske_get_driver_version/105 (ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_driver_version/60 
+  Calls: 
+ske_get_version/104 (ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_version/59 
+  Calls: 
+pke_get_driver_version/103 (pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_driver_version/58 
+  Calls: 
+pke_get_version/102 (pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_version/57 
+  Calls: 
+sm2_getE/101 (sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getE/56 
+  Calls: 
+sm2_getZ/100 (sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getZ/55 
+  Calls: 
+trng_reseed/99 (trng_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_reseed/54 
+  Calls: 
+get_rand_fast/98 (get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand_fast/53 
+  Calls: 
+get_rand/97 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand/52 
+  Calls: 
+sm2_exchangekey/96 (sm2_exchangekey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_exchangekey/51 
+  Calls: 
+sm2_decrypt/95 (sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_decrypt/50 
+  Calls: 
+sm2_encrypt/94 (sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_encrypt/49 
+  Calls: 
+sm2_getkey/93 (sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getkey/48 
+  Calls: 
+sm2_sign/92 (sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_sign/47 
+  Calls: 
+sm2_verify/91 (sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_verify/46 
+  Calls: 
+fid_delay/90 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_err_code_to_ehsm_code_sec/21 cpt_err_code_to_ehsm_code_sec/21 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/89 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: 
+RSA_CRTModExp/88 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_crt_modexp_with_pub/44 
+  Calls: 
+RSA_ModExp/87 (RSA_ModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 
+  Calls: 
+ecdsa_verify/86 (ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_verify/41 
+  Calls: 
+ecdsa_sign/85 (ecdsa_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_sign/40 
+  Calls: 
+hmac/84 (hmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hmac/39 
+  Calls: 
+hash_dma_final/83 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 
+  Calls: 
+hash/82 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash/37 
+  Calls: 
+hash_final/81 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_final/36 
+  Calls: 
+hash_update/80 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_update/35 
+  Calls: 
+hash_init/79 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_init/34 
+  Calls: 
+memcpy_/78 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+ske_dma_cmac_update_including_last_block/77 (ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_cmac_update_including_last_block/31 
+  Calls: 
+ske_cmac/76 (ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac/30 
+  Calls: 
+ske_cmac_final/75 (ske_cmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_final/29 
+  Calls: 
+ske_cmac_update/74 (ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_update/28 
+  Calls: 
+ske_cmac_init/73 (ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_init/27 
+  Calls: 
+ske_cbc_final/72 (ske_cbc_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_final/26 
+  Calls: 
+ske_cbc_update_blocks/71 (ske_cbc_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_update_blocks/25 
+  Calls: 
+ske_cbc_init/70 (ske_cbc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_init/24 
+  Calls: 
+ske_dma_crypto/69 (ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_crypto/23 
+  Calls: 
+sysreg_ahb_dma_cfg/68 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_dma_crypto/23 
+  Calls: 
+ske_crypto/67 (ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_crypto/22 
+  Calls: 
+lib_hash_secure_port_config/66 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 
+lib_ske_secure_port_config/65 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 ske_set_secure_port/110 
+cpt_trng_get_driver_version/64 (cpt_trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_driver_version/109 
+cpt_trng_get_version/63 (cpt_trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_version/108 
+cpt_hash_get_driver_version/62 (cpt_hash_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_driver_version/107 
+cpt_hash_get_version/61 (cpt_hash_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_version/106 
+cpt_ske_get_driver_version/60 (cpt_ske_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_driver_version/105 
+cpt_ske_get_version/59 (cpt_ske_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_version/104 
+cpt_pke_get_driver_version/58 (cpt_pke_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_driver_version/103 
+cpt_pke_get_version/57 (cpt_pke_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_version/102 
+cpt_sm2_getE/56 (cpt_sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getE/101 
+cpt_sm2_getZ/55 (cpt_sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getZ/100 
+cpt_trng_reseed/54 (cpt_trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_reseed/99 
+cpt_get_rand_fast/53 (cpt_get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand_fast/98 
+cpt_get_rand/52 (cpt_get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand/97 
+cpt_sm2_exchangekey/51 (cpt_sm2_exchangekey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_exchangekey/96 
+cpt_sm2_decrypt/50 (cpt_sm2_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_decrypt/95 
+cpt_sm2_encrypt/49 (cpt_sm2_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_encrypt/94 
+cpt_sm2_getkey/48 (cpt_sm2_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getkey/93 
+cpt_sm2_sign/47 (cpt_sm2_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_sign/92 
+cpt_sm2_verify/46 (cpt_sm2_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_verify/91 
+cpt_rsa_ssa_pss_verify_by_msg_digest/45 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code_sec/21 rsa_ssa_pss_verify_by_msg_digest/89 
+cpt_rsa_crt_modexp_with_pub/44 (cpt_rsa_crt_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_CRTModExp/88 
+cpt_rsa_modexp_with_pub/43 (cpt_rsa_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_rsa_modexp/42 (cpt_rsa_modexp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_ecdsa_verify/41 (cpt_ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_verify/86 
+cpt_ecdsa_sign/40 (cpt_ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_sign/85 
+cpt_hmac/39 (cpt_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hmac/84 
+cpt_hash_dma_final/38 (cpt_hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_dma_final/83 sysreg_ahb_dma_cfg/68 
+cpt_hash/37 (cpt_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash/82 
+cpt_hash_final/36 (cpt_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_final/81 
+cpt_hash_update/35 (cpt_hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_update/80 
+cpt_hash_init/34 (cpt_hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_init/79 
+cpt_hash_ctx_switch/33 (cpt_hash_ctx_switch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+cpt_cmac_ctx_cpu_2_dma/32 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 
+cpt_ske_dma_cmac_update_including_last_block/31 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_cmac_update_including_last_block/77 sysreg_ahb_dma_cfg/68 
+cpt_ske_cmac/30 (cpt_ske_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac/76 
+cpt_ske_cmac_final/29 (cpt_ske_cmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_final/75 
+cpt_ske_cmac_update/28 (cpt_ske_cmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_update/74 
+cpt_ske_cmac_init/27 (cpt_ske_cmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_init/73 
+cpt_ske_cbc_final/26 (cpt_ske_cbc_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_final/72 
+cpt_ske_cbc_update_blocks/25 (cpt_ske_cbc_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_update_blocks/71 
+cpt_ske_cbc_init/24 (cpt_ske_cbc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_init/70 
+cpt_ske_dma_crypto/23 (cpt_ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_crypto/69 sysreg_ahb_dma_cfg/68 
+cpt_ske_crypto/22 (cpt_ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_crypto/67 
+cpt_err_code_to_ehsm_code_sec/21 (cpt_err_code_to_ehsm_code_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: fid_delay/90 fid_delay/90 
+cpt_err_code_to_ehsm_code/20 (cpt_err_code_to_ehsm_code)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_sm2_getE/56 cpt_sm2_getZ/55 cpt_get_rand_fast/53 cpt_get_rand/52 cpt_sm2_exchangekey/51 cpt_sm2_decrypt/50 cpt_sm2_encrypt/49 cpt_sm2_getkey/48 cpt_sm2_sign/47 cpt_sm2_verify/46 cpt_rsa_crt_modexp_with_pub/44 cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 cpt_ecdsa_verify/41 cpt_ecdsa_sign/40 cpt_hmac/39 cpt_hash_dma_final/38 cpt_hash/37 cpt_hash_final/36 cpt_hash_update/35 cpt_hash_init/34 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_cmac/30 cpt_ske_cmac_final/29 cpt_ske_cmac_update/28 cpt_ske_cmac_init/27 cpt_ske_cbc_final/26 cpt_ske_cbc_update_blocks/25 cpt_ske_cbc_init/24 cpt_ske_dma_crypto/23 cpt_ske_crypto/22 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_cmac_ctx_cpu_2_dma/32 
+  Calls: memcpy_/78 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+kmu_config/111 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_hash_secure_port_config/66 lib_ske_secure_port_config/65 
+  Calls: 
+ske_set_secure_port/110 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: lib_ske_secure_port_config/65 
+  Calls: 
+trng_get_driver_version/109 (trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_driver_version/64 
+  Calls: 
+trng_get_version/108 (trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_get_version/63 
+  Calls: 
+hash_get_driver_version/107 (hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_driver_version/62 
+  Calls: 
+hash_get_version/106 (hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_get_version/61 
+  Calls: 
+ske_get_driver_version/105 (ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_driver_version/60 
+  Calls: 
+ske_get_version/104 (ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_get_version/59 
+  Calls: 
+pke_get_driver_version/103 (pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_driver_version/58 
+  Calls: 
+pke_get_version/102 (pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_pke_get_version/57 
+  Calls: 
+sm2_getE/101 (sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getE/56 
+  Calls: 
+sm2_getZ/100 (sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getZ/55 
+  Calls: 
+trng_reseed/99 (trng_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_trng_reseed/54 
+  Calls: 
+get_rand_fast/98 (get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand_fast/53 
+  Calls: 
+get_rand/97 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_get_rand/52 
+  Calls: 
+sm2_exchangekey/96 (sm2_exchangekey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_exchangekey/51 
+  Calls: 
+sm2_decrypt/95 (sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_decrypt/50 
+  Calls: 
+sm2_encrypt/94 (sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_encrypt/49 
+  Calls: 
+sm2_getkey/93 (sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_getkey/48 
+  Calls: 
+sm2_sign/92 (sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_sign/47 
+  Calls: 
+sm2_verify/91 (sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_sm2_verify/46 
+  Calls: 
+fid_delay/90 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_err_code_to_ehsm_code_sec/21 cpt_err_code_to_ehsm_code_sec/21 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/89 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: 
+RSA_CRTModExp/88 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_crt_modexp_with_pub/44 
+  Calls: 
+RSA_ModExp/87 (RSA_ModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 
+  Calls: 
+ecdsa_verify/86 (ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_verify/41 
+  Calls: 
+ecdsa_sign/85 (ecdsa_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_sign/40 
+  Calls: 
+hmac/84 (hmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hmac/39 
+  Calls: 
+hash_dma_final/83 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 
+  Calls: 
+hash/82 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash/37 
+  Calls: 
+hash_final/81 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_final/36 
+  Calls: 
+hash_update/80 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_update/35 
+  Calls: 
+hash_init/79 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_init/34 
+  Calls: 
+memcpy_/78 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+ske_dma_cmac_update_including_last_block/77 (ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_cmac_update_including_last_block/31 
+  Calls: 
+ske_cmac/76 (ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac/30 
+  Calls: 
+ske_cmac_final/75 (ske_cmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_final/29 
+  Calls: 
+ske_cmac_update/74 (ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_update/28 
+  Calls: 
+ske_cmac_init/73 (ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_init/27 
+  Calls: 
+ske_cbc_final/72 (ske_cbc_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_final/26 
+  Calls: 
+ske_cbc_update_blocks/71 (ske_cbc_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_update_blocks/25 
+  Calls: 
+ske_cbc_init/70 (ske_cbc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_init/24 
+  Calls: 
+ske_dma_crypto/69 (ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_crypto/23 
+  Calls: 
+sysreg_ahb_dma_cfg/68 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_dma_crypto/23 
+  Calls: 
+ske_crypto/67 (ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpt_ske_crypto/22 
+  Calls: 
+lib_hash_secure_port_config/66 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 
+lib_ske_secure_port_config/65 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: kmu_config/111 ske_set_secure_port/110 
+cpt_trng_get_driver_version/64 (cpt_trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_driver_version/109 
+cpt_trng_get_version/63 (cpt_trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_get_version/108 
+cpt_hash_get_driver_version/62 (cpt_hash_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_driver_version/107 
+cpt_hash_get_version/61 (cpt_hash_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: hash_get_version/106 
+cpt_ske_get_driver_version/60 (cpt_ske_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_driver_version/105 
+cpt_ske_get_version/59 (cpt_ske_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ske_get_version/104 
+cpt_pke_get_driver_version/58 (cpt_pke_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_driver_version/103 
+cpt_pke_get_version/57 (cpt_pke_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_get_version/102 
+cpt_sm2_getE/56 (cpt_sm2_getE)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getE/101 
+cpt_sm2_getZ/55 (cpt_sm2_getZ)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getZ/100 
+cpt_trng_reseed/54 (cpt_trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: trng_reseed/99 
+cpt_get_rand_fast/53 (cpt_get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand_fast/98 
+cpt_get_rand/52 (cpt_get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 get_rand/97 
+cpt_sm2_exchangekey/51 (cpt_sm2_exchangekey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_exchangekey/96 
+cpt_sm2_decrypt/50 (cpt_sm2_decrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_decrypt/95 
+cpt_sm2_encrypt/49 (cpt_sm2_encrypt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_encrypt/94 
+cpt_sm2_getkey/48 (cpt_sm2_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_getkey/93 
+cpt_sm2_sign/47 (cpt_sm2_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_sign/92 
+cpt_sm2_verify/46 (cpt_sm2_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 sm2_verify/91 
+cpt_rsa_ssa_pss_verify_by_msg_digest/45 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code_sec/21 rsa_ssa_pss_verify_by_msg_digest/89 
+cpt_rsa_crt_modexp_with_pub/44 (cpt_rsa_crt_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_CRTModExp/88 
+cpt_rsa_modexp_with_pub/43 (cpt_rsa_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_rsa_modexp/42 (cpt_rsa_modexp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 RSA_ModExp/87 
+cpt_ecdsa_verify/41 (cpt_ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_verify/86 
+cpt_ecdsa_sign/40 (cpt_ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ecdsa_sign/85 
+cpt_hmac/39 (cpt_hmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hmac/84 
+cpt_hash_dma_final/38 (cpt_hash_dma_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_dma_final/83 sysreg_ahb_dma_cfg/68 
+cpt_hash/37 (cpt_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash/82 
+cpt_hash_final/36 (cpt_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_final/81 
+cpt_hash_update/35 (cpt_hash_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_update/80 
+cpt_hash_init/34 (cpt_hash_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 hash_init/79 
+cpt_hash_ctx_switch/33 (cpt_hash_ctx_switch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+cpt_cmac_ctx_cpu_2_dma/32 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 
+cpt_ske_dma_cmac_update_including_last_block/31 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_cmac_update_including_last_block/77 sysreg_ahb_dma_cfg/68 
+cpt_ske_cmac/30 (cpt_ske_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac/76 
+cpt_ske_cmac_final/29 (cpt_ske_cmac_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_final/75 
+cpt_ske_cmac_update/28 (cpt_ske_cmac_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_update/74 
+cpt_ske_cmac_init/27 (cpt_ske_cmac_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cmac_init/73 
+cpt_ske_cbc_final/26 (cpt_ske_cbc_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_final/72 
+cpt_ske_cbc_update_blocks/25 (cpt_ske_cbc_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_update_blocks/71 
+cpt_ske_cbc_init/24 (cpt_ske_cbc_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_cbc_init/70 
+cpt_ske_dma_crypto/23 (cpt_ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_dma_crypto/69 sysreg_ahb_dma_cfg/68 
+cpt_ske_crypto/22 (cpt_ske_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code/20 ske_crypto/67 
+cpt_err_code_to_ehsm_code_sec/21 (cpt_err_code_to_ehsm_code_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 
+  Calls: fid_delay/90 fid_delay/90 
+cpt_err_code_to_ehsm_code/20 (cpt_err_code_to_ehsm_code)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_sm2_getE/56 cpt_sm2_getZ/55 cpt_get_rand_fast/53 cpt_get_rand/52 cpt_sm2_exchangekey/51 cpt_sm2_decrypt/50 cpt_sm2_encrypt/49 cpt_sm2_getkey/48 cpt_sm2_sign/47 cpt_sm2_verify/46 cpt_rsa_crt_modexp_with_pub/44 cpt_rsa_modexp_with_pub/43 cpt_rsa_modexp/42 cpt_ecdsa_verify/41 cpt_ecdsa_sign/40 cpt_hmac/39 cpt_hash_dma_final/38 cpt_hash/37 cpt_hash_final/36 cpt_hash_update/35 cpt_hash_init/34 cpt_ske_dma_cmac_update_including_last_block/31 cpt_ske_cmac/30 cpt_ske_cmac_final/29 cpt_ske_cmac_update/28 cpt_ske_cmac_init/27 cpt_ske_cbc_final/26 cpt_ske_cbc_update_blocks/25 cpt_ske_cbc_init/24 cpt_ske_dma_crypto/23 cpt_ske_crypto/22 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_hash_ctx_switch/33 cpt_cmac_ctx_cpu_2_dma/32 
+  Calls: memcpy_/78 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cpt_err_code_to_ehsm_code_sec.constprop.0/146 (cpt_err_code_to_ehsm_code_sec.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function cpt_err_code_to_ehsm_code_sec.constprop/146 is inline copy in cpt_rsa_ssa_pss_verify_by_msg_digest/45
+  Clone of cpt_err_code_to_ehsm_code_sec/21
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: fid_delay/90 (1073741824 (estimated locally),1.00 per call) fid_delay/90 (108662672 (estimated locally),0.10 per call) 
+kmu_config/111 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: lib_hash_secure_port_config/66 (1073741824 (estimated locally),1.00 per call) lib_ske_secure_port_config/65 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_secure_port/110 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: lib_ske_secure_port_config/65 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+trng_get_driver_version/109 (trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_trng_get_driver_version/64 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+trng_get_version/108 (trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_trng_get_version/63 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_get_driver_version/107 (hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_get_driver_version/62 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_get_version/106 (hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_get_version/61 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_get_driver_version/105 (ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_get_driver_version/60 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_get_version/104 (ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_get_version/59 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_get_driver_version/103 (pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_pke_get_driver_version/58 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_get_version/102 (pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_pke_get_version/57 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_getE/101 (sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_getE/56 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_getZ/100 (sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_getZ/55 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+trng_reseed/99 (trng_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_trng_reseed/54 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_rand_fast/98 (get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_get_rand_fast/53 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_rand/97 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_get_rand/52 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_exchangekey/96 (sm2_exchangekey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_exchangekey/51 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_decrypt/95 (sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_decrypt/50 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_encrypt/94 (sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_encrypt/49 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_getkey/93 (sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_getkey/48 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_sign/92 (sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_sign/47 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sm2_verify/91 (sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_sm2_verify/46 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+fid_delay/90 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_err_code_to_ehsm_code_sec.constprop.0/146 (1073741824 (estimated locally),1.00 per call) cpt_err_code_to_ehsm_code_sec.constprop.0/146 (108662672 (estimated locally),0.10 per call) 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/89 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_rsa_ssa_pss_verify_by_msg_digest/45 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+RSA_CRTModExp/88 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_rsa_crt_modexp_with_pub/44 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+RSA_ModExp/87 (RSA_ModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_rsa_modexp_with_pub/43 (1073741824 (estimated locally),1.00 per call) cpt_rsa_modexp/42 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ecdsa_verify/86 (ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_verify/41 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ecdsa_sign/85 (ecdsa_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ecdsa_sign/40 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hmac/84 (hmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hmac/39 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_dma_final/83 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash/82 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash/37 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_final/81 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_final/36 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_update/80 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_update/35 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_init/79 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_init/34 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/78 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_ctx_switch/33 (536870912 (estimated locally),0.50 per call) cpt_hash_ctx_switch/33 (536870912 (estimated locally),0.50 per call) cpt_hash_ctx_switch/33 (536870912 (estimated locally),0.50 per call) cpt_hash_ctx_switch/33 (536870912 (estimated locally),0.50 per call) cpt_cmac_ctx_cpu_2_dma/32 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_dma_cmac_update_including_last_block/77 (ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_cmac_update_including_last_block/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cmac/76 (ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac/30 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cmac_final/75 (ske_cmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_final/29 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cmac_update/74 (ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_update/28 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cmac_init/73 (ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cmac_init/27 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cbc_final/72 (ske_cbc_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_final/26 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cbc_update_blocks/71 (ske_cbc_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_update_blocks/25 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_cbc_init/70 (ske_cbc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_cbc_init/24 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_dma_crypto/69 (ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_dma_crypto/23 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sysreg_ahb_dma_cfg/68 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_hash_dma_final/38 (1073741824 (estimated locally),1.00 per call) cpt_ske_dma_cmac_update_including_last_block/31 (1073741824 (estimated locally),1.00 per call) cpt_ske_dma_crypto/23 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_crypto/67 (ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpt_ske_crypto/22 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+lib_hash_secure_port_config/66 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: kmu_config/111 (1073741824 (estimated locally),1.00 per call) 
+lib_ske_secure_port_config/65 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: kmu_config/111 (1073741824 (estimated locally),1.00 per call) ske_set_secure_port/110 (1073741824 (estimated locally),1.00 per call) 
+cpt_trng_get_driver_version/64 (cpt_trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: trng_get_driver_version/109 (1073741824 (estimated locally),1.00 per call) 
+cpt_trng_get_version/63 (cpt_trng_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: trng_get_version/108 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_get_driver_version/62 (cpt_hash_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_get_driver_version/107 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_get_version/61 (cpt_hash_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_get_version/106 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_get_driver_version/60 (cpt_ske_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_get_driver_version/105 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_get_version/59 (cpt_ske_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_get_version/104 (1073741824 (estimated locally),1.00 per call) 
+cpt_pke_get_driver_version/58 (cpt_pke_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: pke_get_driver_version/103 (1073741824 (estimated locally),1.00 per call) 
+cpt_pke_get_version/57 (cpt_pke_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: pke_get_version/102 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_getE/56 (cpt_sm2_getE)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_getE/101 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_getZ/55 (cpt_sm2_getZ)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_getZ/100 (1073741824 (estimated locally),1.00 per call) 
+cpt_trng_reseed/54 (cpt_trng_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: trng_reseed/99 (1073741824 (estimated locally),1.00 per call) 
+cpt_get_rand_fast/53 (cpt_get_rand_fast)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: get_rand_fast/98 (1073741824 (estimated locally),1.00 per call) 
+cpt_get_rand/52 (cpt_get_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: get_rand/97 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_exchangekey/51 (cpt_sm2_exchangekey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_exchangekey/96 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_decrypt/50 (cpt_sm2_decrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_decrypt/95 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_encrypt/49 (cpt_sm2_encrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_encrypt/94 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_getkey/48 (cpt_sm2_getkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_getkey/93 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_sign/47 (cpt_sm2_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_sign/92 (1073741824 (estimated locally),1.00 per call) 
+cpt_sm2_verify/46 (cpt_sm2_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sm2_verify/91 (1073741824 (estimated locally),1.00 per call) 
+cpt_rsa_ssa_pss_verify_by_msg_digest/45 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpt_err_code_to_ehsm_code_sec.constprop.0/146 (inlined) (1073741824 (estimated locally),1.00 per call) rsa_ssa_pss_verify_by_msg_digest/89 (1073741824 (estimated locally),1.00 per call) 
+cpt_rsa_crt_modexp_with_pub/44 (cpt_rsa_crt_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: RSA_CRTModExp/88 (1073741824 (estimated locally),1.00 per call) 
+cpt_rsa_modexp_with_pub/43 (cpt_rsa_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: RSA_ModExp/87 (1073741824 (estimated locally),1.00 per call) 
+cpt_rsa_modexp/42 (cpt_rsa_modexp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: RSA_ModExp/87 (1073741824 (estimated locally),1.00 per call) 
+cpt_ecdsa_verify/41 (cpt_ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ecdsa_verify/86 (1073741824 (estimated locally),1.00 per call) 
+cpt_ecdsa_sign/40 (cpt_ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ecdsa_sign/85 (1073741824 (estimated locally),1.00 per call) 
+cpt_hmac/39 (cpt_hmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hmac/84 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_dma_final/38 (cpt_hash_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_dma_final/83 (1073741824 (estimated locally),1.00 per call) sysreg_ahb_dma_cfg/68 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash/37 (cpt_hash)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash/82 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_final/36 (cpt_hash_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_final/81 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_update/35 (cpt_hash_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_update/80 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_init/34 (cpt_hash_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: hash_init/79 (1073741824 (estimated locally),1.00 per call) 
+cpt_hash_ctx_switch/33 (cpt_hash_ctx_switch)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memcpy_/78 (536870912 (estimated locally),0.50 per call) memcpy_/78 (536870912 (estimated locally),0.50 per call) memcpy_/78 (536870912 (estimated locally),0.50 per call) memcpy_/78 (536870912 (estimated locally),0.50 per call) 
+cpt_cmac_ctx_cpu_2_dma/32 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memcpy_/78 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_dma_cmac_update_including_last_block/31 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_dma_cmac_update_including_last_block/77 (1073741824 (estimated locally),1.00 per call) sysreg_ahb_dma_cfg/68 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cmac/30 (cpt_ske_cmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cmac/76 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cmac_final/29 (cpt_ske_cmac_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cmac_final/75 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cmac_update/28 (cpt_ske_cmac_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cmac_update/74 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cmac_init/27 (cpt_ske_cmac_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cmac_init/73 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cbc_final/26 (cpt_ske_cbc_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cbc_final/72 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cbc_update_blocks/25 (cpt_ske_cbc_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cbc_update_blocks/71 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_cbc_init/24 (cpt_ske_cbc_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_cbc_init/70 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_dma_crypto/23 (cpt_ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_dma_crypto/69 (1073741824 (estimated locally),1.00 per call) sysreg_ahb_dma_cfg/68 (1073741824 (estimated locally),1.00 per call) 
+cpt_ske_crypto/22 (cpt_ske_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ske_crypto/67 (1073741824 (estimated locally),1.00 per call) 
+cpt_err_code_to_ehsm_code_sec/21 (cpt_err_code_to_ehsm_code_sec)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+cloning cpt_err_code_to_ehsm_code_sec/21 to cpt_err_code_to_ehsm_code_sec.constprop/146
+    replace map: 1 -> 0
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+uint32_t cpt_err_code_to_ehsm_code_sec (uint32_t cpt_err_code, uint32_t success_code)
+{
+  uint32_t ret;
+  long unsigned int _1;
+  long unsigned int _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fid_delay ();
+  if (_1 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  if (cpt_err_code_8(D) == success_code_9(D))
+    goto <bb 5>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 4> [local count: 1035709889]:
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 108662672]:
+  _2 = fid_delay ();
+  if (_2 != 0)
+    goto <bb 6>; [35.00%]
+  else
+    goto <bb 4>; [65.00%]
+
+  <bb 6> [local count: 1073741824]:
+  # ret_3 = PHI <2774162085(5), cpt_err_code_8(D)(4)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t cpt_err_code_to_ehsm_code_sec.constprop (uint32_t cpt_err_code)
+{
+  uint32_t ret;
+  uint32_t success_code;
+  long unsigned int _1;
+  long unsigned int _3;
+
+  <bb 7> [local count: 1073741824]:
+  # DEBUG success_code => 0
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fid_delay ();
+  if (_1 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  if (cpt_err_code_2(D) == 0)
+    goto <bb 5>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 4> [local count: 1035709889]:
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 108662672]:
+  _3 = fid_delay ();
+  if (_3 != 0)
+    goto <bb 6>; [35.00%]
+  else
+    goto <bb 4>; [65.00%]
+
+  <bb 6> [local count: 1073741824]:
+  # ret_4 = PHI <cpt_err_code_2(D)(4), 2774162085(5)>
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  return ret_4;
+
+}
+
+
+updating call of cpt_rsa_ssa_pss_verify_by_msg_digest/45 -> cpt_err_code_to_ehsm_code_sec.constprop/146: _14 = cpt_err_code_to_ehsm_code_sec (rsa_ret_12, 0);
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+  updated to:_14 = cpt_err_code_to_ehsm_code_sec.constprop (rsa_ret_12);
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+kmu_config/111 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_set_secure_port/110 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+trng_get_driver_version/109 (trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+trng_get_version/108 (trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_get_driver_version/107 (hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_get_version/106 (hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_get_driver_version/105 (ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_get_version/104 (ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_get_driver_version/103 (pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_get_version/102 (pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_getE/101 (sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_getZ/100 (sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+trng_reseed/99 (trng_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_rand_fast/98 (get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_rand/97 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_exchangekey/96 (sm2_exchangekey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_decrypt/95 (sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_encrypt/94 (sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_getkey/93 (sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_sign/92 (sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sm2_verify/91 (sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_delay/90 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rsa_ssa_pss_verify_by_msg_digest/89 (rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+RSA_CRTModExp/88 (RSA_CRTModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+RSA_ModExp/87 (RSA_ModExp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ecdsa_verify/86 (ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ecdsa_sign/85 (ecdsa_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hmac/84 (hmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_dma_final/83 (hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash/82 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_final/81 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_update/80 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_init/79 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/78 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_dma_cmac_update_including_last_block/77 (ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cmac/76 (ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cmac_final/75 (ske_cmac_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cmac_update/74 (ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cmac_init/73 (ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cbc_final/72 (ske_cbc_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cbc_update_blocks/71 (ske_cbc_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_cbc_init/70 (ske_cbc_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_dma_crypto/69 (ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/68 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ske_crypto/67 (ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_hash_secure_port_config/66 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.lib_hash_secure_port_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+lib_ske_secure_port_config/65 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.lib_ske_secure_port_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_trng_get_driver_version/64 (cpt_trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_trng_get_driver_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_trng_get_version/63 (cpt_trng_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_trng_get_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_get_driver_version/62 (cpt_hash_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_get_driver_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_get_version/61 (cpt_hash_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_get_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_get_driver_version/60 (cpt_ske_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_get_driver_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_get_version/59 (cpt_ske_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_get_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_pke_get_driver_version/58 (cpt_pke_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_pke_get_driver_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_pke_get_version/57 (cpt_pke_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_pke_get_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getE/56 (cpt_sm2_getE)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_getE (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getZ/55 (cpt_sm2_getZ)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_getZ (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_trng_reseed/54 (cpt_trng_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_trng_reseed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_get_rand_fast/53 (cpt_get_rand_fast)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_get_rand_fast (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_get_rand/52 (cpt_get_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_get_rand (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_exchangekey/51 (cpt_sm2_exchangekey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_exchangekey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_decrypt/50 (cpt_sm2_decrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_decrypt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_encrypt/49 (cpt_sm2_encrypt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_encrypt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getkey/48 (cpt_sm2_getkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_getkey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_sign/47 (cpt_sm2_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_verify/46 (cpt_sm2_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_sm2_verify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/45 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_rsa_ssa_pss_verify_by_msg_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_rsa_crt_modexp_with_pub/44 (cpt_rsa_crt_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_rsa_crt_modexp_with_pub (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_rsa_modexp_with_pub/43 (cpt_rsa_modexp_with_pub)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_rsa_modexp_with_pub (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_rsa_modexp/42 (cpt_rsa_modexp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_rsa_modexp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ecdsa_verify/41 (cpt_ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ecdsa_verify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ecdsa_sign/40 (cpt_ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ecdsa_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hmac/39 (cpt_hmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hmac (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_dma_final/38 (cpt_hash_dma_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_dma_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash/37 (cpt_hash)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_final/36 (cpt_hash_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_update/35 (cpt_hash_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_init/34 (cpt_hash_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_ctx_switch/33 (cpt_hash_ctx_switch)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_hash_ctx_switch (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/32 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_cmac_ctx_cpu_2_dma (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/31 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_dma_cmac_update_including_last_block (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac/30 (cpt_ske_cmac)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cmac (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac_final/29 (cpt_ske_cmac_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cmac_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac_update/28 (cpt_ske_cmac_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cmac_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac_init/27 (cpt_ske_cmac_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cmac_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cbc_final/26 (cpt_ske_cbc_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cbc_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cbc_update_blocks/25 (cpt_ske_cbc_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cbc_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cbc_init/24 (cpt_ske_cbc_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_cbc_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_dma_crypto/23 (cpt_ske_dma_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_dma_crypto (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_crypto/22 (cpt_ske_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpt_ske_crypto (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpt_err_code_to_ehsm_code_sec/21 (cpt_err_code_to_ehsm_code_sec)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

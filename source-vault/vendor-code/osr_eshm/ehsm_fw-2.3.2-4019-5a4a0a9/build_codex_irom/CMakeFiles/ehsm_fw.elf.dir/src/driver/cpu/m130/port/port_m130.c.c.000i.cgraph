@@ -1,0 +1,1056 @@
+Trivially needed symbols: cpu_platform_init/11 cpu_exit_critical/10 cpu_enter_critical/9 cpu_disable_global_int/8 cpu_enable_global_int/7 cpu_disable_int/6 cpu_enable_int/5 cpu_register_int/4
+
+
+Initial Symbol table:
+
+emu_exception_handler/21 (emu_exception_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: cpu_exception_init/3 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+clic_init/20 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_platform_init/11 
+  Calls: 
+clic_int_disable/19 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_disable_int/6 
+  Calls: 
+clic_int_enable/18 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_get_irq_handler/17 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_int_handler_regist/16 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_clear_int_pending/15 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_vector_mode/14 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_priority/13 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_trig_type/12 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+cpu_platform_init/11 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_global_int/7 clic_init/20 cpu_exception_init/3 
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04def2f110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04def2f000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_disable_global_int/8 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04deddcee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enable_global_int/7 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04deddcdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_disable_int/6 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04deddccc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_disable/19 cpu_get_irq_number/2 
+cpu_enable_int/5 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04deddcbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_enable/18 clic_get_irq_handler/17 cpu_get_irq_number/2 
+cpu_register_int/4 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f04deddcaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_handler_regist/16 clic_clear_int_pending/15 clic_set_vector_mode/14 clic_set_priority/13 clic_set_trig_type/12 cpu_get_irq_number/2 
+cpu_exception_init/3 (cpu_exception_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: emu_exception_handler/21 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_get_irq_number/2 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f04deddcaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_disable_int/6 cpu_enable_int/5 cpu_register_int/4 
+  Calls: 
+CLIC_INT_X_REG/1 (CLIC_INT_X_REG)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CLIC_REG_PTR/0 (CLIC_REG_PTR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: CLIC_INT_X_REG/1 CLIC_REG_PTR/0
+
+Reclaimed Symbol table:
+
+emu_exception_handler/21 (emu_exception_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: cpu_exception_init/3 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+clic_init/20 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_platform_init/11 
+  Calls: 
+clic_int_disable/19 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_disable_int/6 
+  Calls: 
+clic_int_enable/18 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_get_irq_handler/17 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_int_handler_regist/16 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_clear_int_pending/15 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_vector_mode/14 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_priority/13 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_trig_type/12 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+cpu_platform_init/11 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_global_int/7 clic_init/20 cpu_exception_init/3 
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_disable_global_int/8 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enable_global_int/7 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_disable_int/6 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_disable/19 cpu_get_irq_number/2 
+cpu_enable_int/5 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_enable/18 clic_get_irq_handler/17 cpu_get_irq_number/2 
+cpu_register_int/4 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_handler_regist/16 clic_clear_int_pending/15 clic_set_vector_mode/14 clic_set_priority/13 clic_set_trig_type/12 cpu_get_irq_number/2 
+cpu_exception_init/3 (cpu_exception_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: emu_exception_handler/21 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_get_irq_number/2 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_disable_int/6 cpu_enable_int/5 cpu_register_int/4 
+  Calls: 
+
+
+Initial Symbol table:
+
+emu_exception_handler/21 (emu_exception_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: cpu_exception_init/3 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+clic_init/20 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_platform_init/11 
+  Calls: 
+clic_int_disable/19 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_disable_int/6 
+  Calls: 
+clic_int_enable/18 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_get_irq_handler/17 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_int_handler_regist/16 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_clear_int_pending/15 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_vector_mode/14 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_priority/13 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_trig_type/12 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+cpu_platform_init/11 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_global_int/7 clic_init/20 cpu_exception_init/3 
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_disable_global_int/8 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enable_global_int/7 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_disable_int/6 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_disable/19 cpu_get_irq_number/2 
+cpu_enable_int/5 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_enable/18 clic_get_irq_handler/17 cpu_get_irq_number/2 
+cpu_register_int/4 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_handler_regist/16 clic_clear_int_pending/15 clic_set_vector_mode/14 clic_set_priority/13 clic_set_trig_type/12 cpu_get_irq_number/2 
+cpu_exception_init/3 (cpu_exception_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: emu_exception_handler/21 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_get_irq_number/2 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_disable_int/6 cpu_enable_int/5 cpu_register_int/4 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+emu_exception_handler/21 (emu_exception_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: cpu_exception_init/3 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+clic_init/20 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_platform_init/11 
+  Calls: 
+clic_int_disable/19 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_disable_int/6 
+  Calls: 
+clic_int_enable/18 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_get_irq_handler/17 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_enable_int/5 
+  Calls: 
+clic_int_handler_regist/16 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_clear_int_pending/15 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_vector_mode/14 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_priority/13 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+clic_set_trig_type/12 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cpu_register_int/4 
+  Calls: 
+cpu_platform_init/11 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpu_enable_global_int/7 clic_init/20 cpu_exception_init/3 
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_disable_global_int/8 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+cpu_enable_global_int/7 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_disable_int/6 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_disable/19 cpu_get_irq_number/2 
+cpu_enable_int/5 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_enable/18 clic_get_irq_handler/17 cpu_get_irq_number/2 
+cpu_register_int/4 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: clic_int_handler_regist/16 clic_clear_int_pending/15 clic_set_vector_mode/14 clic_set_priority/13 clic_set_trig_type/12 cpu_get_irq_number/2 
+cpu_exception_init/3 (cpu_exception_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: emu_exception_handler/21 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: cpu_platform_init/11 
+  Calls: 
+cpu_get_irq_number/2 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cpu_disable_int/6 cpu_enable_int/5 cpu_register_int/4 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+CSWTCH.4/24 (CSWTCH.4)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: cpu_register_int/4 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+CSWTCH.1/22 (CSWTCH.1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: cpu_enable_int/5 (read) cpu_register_int/4 (read) cpu_disable_int/6 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+emu_exception_handler/21 (emu_exception_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: cpu_platform_init/11 (addr) 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_init/20 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_platform_init/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+clic_int_disable/19 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_disable_int/6 (341149249 (estimated locally),0.32 per call) 
+  Calls: 
+clic_int_enable/18 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_enable_int/5 (182412503 (estimated locally),0.17 per call) 
+  Calls: 
+clic_get_irq_handler/17 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_enable_int/5 (341149249 (estimated locally),0.32 per call) 
+  Calls: 
+clic_int_handler_regist/16 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_register_int/4 (61230176 (estimated locally),0.06 per call) 
+  Calls: 
+clic_clear_int_pending/15 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_register_int/4 (114513139 (estimated locally),0.11 per call) 
+  Calls: 
+clic_set_vector_mode/14 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_register_int/4 (114513139 (estimated locally),0.11 per call) 
+  Calls: 
+clic_set_priority/13 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_register_int/4 (114513139 (estimated locally),0.11 per call) 
+  Calls: 
+clic_set_trig_type/12 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cpu_register_int/4 (114513139 (estimated locally),0.11 per call) 
+  Calls: 
+cpu_platform_init/11 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: emu_exception_handler/21 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: clic_init/20 (1073741824 (estimated locally),1.00 per call) 
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cpu_disable_global_int/8 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cpu_enable_global_int/7 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cpu_disable_int/6 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.1/22 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: clic_int_disable/19 (341149249 (estimated locally),0.32 per call) 
+cpu_enable_int/5 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.1/22 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: clic_int_enable/18 (182412503 (estimated locally),0.17 per call) clic_get_irq_handler/17 (341149249 (estimated locally),0.32 per call) 
+cpu_register_int/4 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.1/22 (read) CSWTCH.4/24 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: clic_int_handler_regist/16 (61230176 (estimated locally),0.06 per call) clic_clear_int_pending/15 (114513139 (estimated locally),0.11 per call) clic_set_vector_mode/14 (114513139 (estimated locally),0.11 per call) clic_set_priority/13 (114513139 (estimated locally),0.11 per call) clic_set_trig_type/12 (114513139 (estimated locally),0.11 per call) 
+Trivially needed variables: CSWTCH.4/24 CSWTCH.1/22
+Removing variables:
+
+Final Symbol table:
+
+CSWTCH.4/24 (CSWTCH.4)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.4 (implicit_section) artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+CSWTCH.1/22 (CSWTCH.1)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.1 (implicit_section) artificial
+  Aux: @0x7f04def4e880
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+emu_exception_handler/21 (emu_exception_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_init/20 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_int_disable/19 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_int_enable/18 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_get_irq_handler/17 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_int_handler_regist/16 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_clear_int_pending/15 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_set_vector_mode/14 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_set_priority/13 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+clic_set_trig_type/12 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_platform_init/11 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_platform_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_exit_critical (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_enter_critical (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_disable_global_int/8 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_disable_global_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_enable_global_int/7 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_enable_global_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_disable_int/6 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_disable_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_enable_int/5 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_enable_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cpu_register_int/4 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_register_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 

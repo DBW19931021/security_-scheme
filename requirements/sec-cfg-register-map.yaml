@@ -1,0 +1,276 @@
+schema_version: 1
+feature_id: SOC-SEC-CFG-001
+source_ids:
+  - SRC-0026
+  - SRC-0022
+  - SRC-0027
+status: DOCUMENTED_WITH_OPEN_BINDINGS
+address_binding:
+  screenshot_candidate:
+    base: 0x101007B00000
+    size: 0x1000
+    state: CONFLICTING
+  rtl_synchronized_generated_header:
+    symbol: SECURITY_NOC_S6_SEC_CFG_BASE
+    base: 0x101008200000
+    size_symbol: SECURITY_NOC_S6_SEC_CFG_SIZE
+    size: 0x4000
+    state: DOCUMENTED
+  implementation:
+    map_valid_symbol: SECURITY_EHSM_HSM_STATUS0_MAP_VALID
+    map_valid: 0
+    address_symbol: SECURITY_EHSM_HSM_STATUS0_ADDR
+    address: 0x0
+    state: BLOCKED
+  blocker: OPEN-CONFLICT-015
+bus:
+  data_width_bits: 32
+  screenshot_apb_address_width_bits: 12
+  screenshot_clock: pclk
+  screenshot_reset: porstn_async
+  set_offset_candidate: 0x800
+  clear_offset_candidate: 0x1000
+  set_clear_alias_usable: false
+registers:
+  - offset: 0x000
+    name: hsm_status0
+    access: RO
+    reset: 0x00000000
+    maps_to: o_hsm_status[31:0]
+  - offset: 0x004
+    name: hsm_status1
+    access: RO
+    reset: 0x00000000
+    maps_to: o_hsm_status[63:32]
+  - offset: 0x008
+    name: hsm_err_hw0
+    access: RO
+    reset: 0x00000000
+    maps_to: o_hsm_err_hw[31:0]
+  - offset: 0x00C
+    name: hsm_err_hw1
+    access: RO
+    reset: 0x00000000
+    maps_to: o_hsm_err_hw[63:32]
+  - offset: 0x010
+    name: hsm_err_fw0
+    access: RO
+    reset: 0x00000000
+    maps_to: o_hsm_err_fw[31:0]
+    decoding: RAW_ONLY_UNTIL_FW_SPEC
+  - offset: 0x014
+    name: hsm_err_fw1
+    access: RO
+    reset: 0x00000000
+    maps_to: o_hsm_err_fw[63:32]
+    decoding: RAW_ONLY_UNTIL_FW_SPEC
+  - offset: 0x018
+    name: lcs
+    access: RO
+    reset: 0x00000000
+    encoding: OPEN_CONFLICT_015
+  - offset: 0x01C
+    name: uid0
+    access: RO
+    reset: 0x00000000
+    maps_to: UID[31:0]
+  - offset: 0x020
+    name: uid1
+    access: RO
+    reset: 0x00000000
+    maps_to: UID[63:32]
+  - offset: 0x024
+    name: uid2
+    access: RO
+    reset: 0x00000000
+    maps_to: UID[95:64]
+  - offset: 0x028
+    name: uid3
+    access: RO
+    reset: 0x00000000
+    maps_to: UID[127:96]
+  - offset: 0x02C
+    name: uid4
+    access: RO
+    reset: 0x00000000
+    maps_to: UID[159:128]
+  - offset: 0x030
+    name: dbg_en_cfg
+    access: MIXED
+    reset: 0x00000000
+    fields:
+      - bits: 1:0
+        name: dbg_en_cfg
+        access: RW
+        semantics: OPEN_CONFLICT_015
+      - bits: 31:2
+        name: reserved
+        access: RO
+  - offset: 0x034
+    name: soc_dbg_en_out0
+    access: RO
+    reset: 0x00000000
+    maps_to: o_soc_dbg_en_128b[31:0]
+  - offset: 0x038
+    name: soc_dbg_en_out1
+    access: RO
+    reset: 0x00000000
+    maps_to: o_soc_dbg_en_128b[63:32]
+  - offset: 0x03C
+    name: soc_dbg_en_out2
+    access: RO
+    reset: 0x00000000
+    maps_to: o_soc_dbg_en_128b[95:64]
+  - offset: 0x040
+    name: soc_dbg_en_out3
+    access: RO
+    reset: 0x00000000
+    maps_to: o_soc_dbg_en_128b[127:96]
+status_bits:
+  - bits: 63:48
+    name: hsm_fw_sta3
+  - bits: 47:32
+    name: hsm_fw_sta2
+  - bits: 31:28
+    name: reserved
+  - bits: 27
+    name: cpu_hart_halted
+  - bits: 26
+    name: reserved
+  - bits: 25
+    name: cpu_wfi
+  - bits: 24:21
+    name: hsm_fw_sta1
+  - bits: 20
+    name: soc_cpu_release
+  - bits: 19
+    name: soc_cpu_reset
+  - bits: 18
+    name: soc_reset
+  - bits: 17
+    name: soc_dbg_en
+  - bits: 16
+    name: hsm_dbg_en
+  - bits: 15
+    name: hsm_fw_sta0
+  - bits: 14
+    name: hsm_lc_undef
+  - bits: 13
+    name: hsm_lc_destroy
+  - bits: 12
+    name: hsm_lc_debug
+  - bits: 11
+    name: hsm_lc_user
+  - bits: 10
+    name: hsm_lc_manu
+  - bits: 9
+    name: hsm_lc_dev
+  - bits: 8
+    name: hsm_lc_test
+  - bits: 7
+    name: soc_verify_err
+  - bits: 6
+    name: soc_verify_done
+  - bits: 5
+    name: firmware_err
+  - bits: 4
+    name: firmware_done
+  - bits: 3
+    name: bootloader_err
+  - bits: 2
+    name: bootloader_done
+  - bits: 1
+    name: hw_boot_err
+  - bits: 0
+    name: hw_boot_done
+hardware_error_bits:
+  - bits: 40
+    name: wdt_timeout
+  - bits: 35
+    name: otp_key_crc_err
+  - bits: 34
+    name: hw_trng_retry_warning
+  - bits: 33
+    name: hw_trng_retry_fail
+  - bits: 32
+    name: hw_trng_ht_fail
+  - bits: 29
+    name: soc_err_ahb_cfg
+  - bits: 28
+    name: soc_err_ahb_nvm
+  - bits: 27
+    name: soc_err_ahb_otp
+  - bits: 26
+    name: soc_err_ahb_mem
+  - bits: 25
+    name: soc_err_axi_dma_rd
+  - bits: 24
+    name: soc_err_axi_dma_wr
+  - bits: 19:16
+    name: mem_ecc_mb_pke3_to_pke0
+  - bits: 15
+    name: mem_ecc_mb_kmu
+  - bits: 14
+    name: mem_ecc_mb_dram
+  - bits: 13
+    name: mem_ecc_mb_iram
+  - bits: 12
+    name: mem_ecc_mb_irom
+  - bits: 7:4
+    name: mem_ecc_1b_pke3_to_pke0
+  - bits: 3
+    name: mem_ecc_1b_kmu
+  - bits: 2
+    name: mem_ecc_1b_dram
+  - bits: 1
+    name: mem_ecc_1b_iram
+  - bits: 0
+    name: mem_ecc_1b_irom
+reserved_hardware_error_bits:
+  - 63:41
+  - 39:36
+  - 31:30
+  - 23:20
+  - 11:8
+debug_test_roles:
+  dbg_en_cfg:
+    purpose: main_die_controls_sub_die_debug_channel
+    default_expected: closed
+    pass_requires_actual_debug_path_check: true
+    top_level_case: SOC-SECCFG-DBG-001
+  soc_dbg_en_out:
+    purpose: mailbox_debug_auth_output_observation
+    pass_requires_actual_debug_path_check: true
+    mailbox_cases:
+      - MB-BL-011-BASIC
+      - MB-BL-012-BASIC
+      - MB-FW-031-BASIC
+      - MB-FW-032-BASIC
+      - EHSM-NEG-AUTH-001
+      - EHSM-NEG-AUTH-002
+hardware_error_interrupt_groups:
+  critical_combined_irq:
+    source_bits:
+      - 40
+      - 35
+      - 34
+      - 33
+      - 32
+      - 19:16
+      - 15
+      - 14
+      - 13
+      - 12
+    verification: EDA-ERR-CRITICAL-IRQ-001
+    stimulus: RTL_DV_EDA_REQUIRED
+  ecc_1bit_independent_irq:
+    source_bits:
+      - 7:4
+      - 3
+      - 2
+      - 1
+      - 0
+    raw_signal: pulse
+    soc_integration: pulse_to_queryable_clearable_state_and_external_counter
+    verification: EDA-ERR-ECC1B-IRQ-001
+    stimulus: RTL_DV_EDA_REQUIRED

@@ -1,0 +1,2164 @@
+Trivially needed symbols: ske_dma_aes_xcbc_mac_96/20 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96/16 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11
+
+
+Initial Symbol table:
+
+uint8_XOR/49 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 
+  Calls: 
+lib_addr_arch32_unlock_remap/48 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+lib_addr_arch32_lock_remap/47 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_dma_operate/46 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_set_last_block_len/45 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+memcmp_/44 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+uint32_XOR/42 (uint32_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+ske_simple_get_output_block/41 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+ske_update_blocks_no_output/40 (ske_update_blocks_no_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+uint32_clear/38 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+ske_update_blocks_internal/37 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+uint32_set/36 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_init_internal/35 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_expand_key/34 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+lib_ske_secure_port_config/33 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_key/32 (ske_set_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_secure_port/31 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_iv/30 (ske_set_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_last_block/29 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_crypto/28 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_alg/27 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_endian_uint32/26 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_dma_linked_list/25 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_cpu_mode/24 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_mode/23 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_recover_cfg/11 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_dma_mode/22 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_clear_cfg/21 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_dma_aes_xcbc_mac_96/20 (ske_dma_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_init/17 
+ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (ske_dma_aes_xcbc_mac_96_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65baa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memset_/43 lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_update_blocks_internal/37 ske_set_mode/23 ske_set_cpu_mode/24 lib_addr_arch32_unlock_remap/48 uint32_XOR/42 memset_/43 CAST2UINT32/6 memset_/43 memcpy_/39 ske_dma_operate/46 uint8_XOR/49 ske_dma_operate/46 lib_addr_arch32_lock_remap/47 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_dma_operate/46 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 CAST2UINT32/6 
+ske_dma_aes_xcbc_mac_96_init/17 (ske_dma_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memcpy_/39 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96/16 (ske_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+ske_aes_xcbc_mac_96_final/15 (ske_aes_xcbc_mac_96_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: uint32_clear/38 memset_/43 memcmp_/44 memcpy_/39 ske_update_blocks_internal/37 uint32_XOR/42 memset_/43 CAST2UINT32/6 CAST2UINT32/6 ske_update_blocks_internal/37 uint32_XOR/42 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_update/14 (ske_aes_xcbc_mac_96_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_simple_get_output_block/41 memcpy_/39 ske_update_blocks_no_output/40 memcpy_/39 ske_update_blocks_no_output/40 CAST2UINT32/6 ske_update_blocks_no_output/40 memcpy_/39 memcpy_/39 ske_update_blocks_no_output/40 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_init/13 (ske_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_init_internal/35 memcpy_/39 uint32_clear/38 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (ske_aes_xcbc_mac_96_get_k1_k2_k3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_init/13 
+  Calls: ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_init_internal/35 ske_set_cpu_mode/24 ske_clear_cfg/21 
+ske_aes_xcbc_mac_96_recover_cfg/11 (ske_aes_xcbc_mac_96_recover_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f8a2a65b220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: ske_expand_key/34 lib_ske_secure_port_config/33 ske_set_key/32 ske_disable_secure_port/31 ske_set_iv/30 ske_set_last_block/29 ske_set_crypto/28 ske_set_alg/27 ske_set_endian_uint32/26 ske_disable_dma_linked_list/25 ske_set_mode/23 ske_set_cpu_mode/24 ske_set_mode/23 ske_set_dma_mode/22 ske_clear_cfg/21 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f8a2a65b550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint8_XOR/49 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 
+  Calls: 
+lib_addr_arch32_unlock_remap/48 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+lib_addr_arch32_lock_remap/47 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_dma_operate/46 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_set_last_block_len/45 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+memcmp_/44 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+uint32_XOR/42 (uint32_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+ske_simple_get_output_block/41 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+ske_update_blocks_no_output/40 (ske_update_blocks_no_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+uint32_clear/38 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+ske_update_blocks_internal/37 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+uint32_set/36 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_init_internal/35 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_expand_key/34 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+lib_ske_secure_port_config/33 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_key/32 (ske_set_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_secure_port/31 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_iv/30 (ske_set_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_last_block/29 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_crypto/28 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_alg/27 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_endian_uint32/26 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_dma_linked_list/25 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_cpu_mode/24 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_mode/23 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_recover_cfg/11 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_dma_mode/22 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_clear_cfg/21 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_dma_aes_xcbc_mac_96/20 (ske_dma_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_init/17 
+ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (ske_dma_aes_xcbc_mac_96_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memset_/43 lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_update_blocks_internal/37 ske_set_mode/23 ske_set_cpu_mode/24 lib_addr_arch32_unlock_remap/48 uint32_XOR/42 memset_/43 CAST2UINT32/6 memset_/43 memcpy_/39 ske_dma_operate/46 uint8_XOR/49 ske_dma_operate/46 lib_addr_arch32_lock_remap/47 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_dma_operate/46 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 CAST2UINT32/6 
+ske_dma_aes_xcbc_mac_96_init/17 (ske_dma_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memcpy_/39 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96/16 (ske_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+ske_aes_xcbc_mac_96_final/15 (ske_aes_xcbc_mac_96_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: uint32_clear/38 memset_/43 memcmp_/44 memcpy_/39 ske_update_blocks_internal/37 uint32_XOR/42 memset_/43 CAST2UINT32/6 CAST2UINT32/6 ske_update_blocks_internal/37 uint32_XOR/42 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_update/14 (ske_aes_xcbc_mac_96_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_simple_get_output_block/41 memcpy_/39 ske_update_blocks_no_output/40 memcpy_/39 ske_update_blocks_no_output/40 CAST2UINT32/6 ske_update_blocks_no_output/40 memcpy_/39 memcpy_/39 ske_update_blocks_no_output/40 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_init/13 (ske_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_init_internal/35 memcpy_/39 uint32_clear/38 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (ske_aes_xcbc_mac_96_get_k1_k2_k3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_init/13 
+  Calls: ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_init_internal/35 ske_set_cpu_mode/24 ske_clear_cfg/21 
+ske_aes_xcbc_mac_96_recover_cfg/11 (ske_aes_xcbc_mac_96_recover_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: ske_expand_key/34 lib_ske_secure_port_config/33 ske_set_key/32 ske_disable_secure_port/31 ske_set_iv/30 ske_set_last_block/29 ske_set_crypto/28 ske_set_alg/27 ske_set_endian_uint32/26 ske_disable_dma_linked_list/25 ske_set_mode/23 ske_set_cpu_mode/24 ske_set_mode/23 ske_set_dma_mode/22 ske_clear_cfg/21 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+
+
+Initial Symbol table:
+
+uint8_XOR/49 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 
+  Calls: 
+lib_addr_arch32_unlock_remap/48 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+lib_addr_arch32_lock_remap/47 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_dma_operate/46 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_set_last_block_len/45 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+memcmp_/44 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+uint32_XOR/42 (uint32_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+ske_simple_get_output_block/41 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+ske_update_blocks_no_output/40 (ske_update_blocks_no_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+uint32_clear/38 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+ske_update_blocks_internal/37 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+uint32_set/36 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_init_internal/35 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_expand_key/34 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+lib_ske_secure_port_config/33 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_key/32 (ske_set_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_secure_port/31 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_iv/30 (ske_set_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_last_block/29 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_crypto/28 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_alg/27 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_endian_uint32/26 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_dma_linked_list/25 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_cpu_mode/24 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_mode/23 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_recover_cfg/11 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_dma_mode/22 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_clear_cfg/21 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_dma_aes_xcbc_mac_96/20 (ske_dma_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_init/17 
+ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (ske_dma_aes_xcbc_mac_96_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memset_/43 lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_update_blocks_internal/37 ske_set_mode/23 ske_set_cpu_mode/24 lib_addr_arch32_unlock_remap/48 uint32_XOR/42 memset_/43 CAST2UINT32/6 memset_/43 memcpy_/39 ske_dma_operate/46 uint8_XOR/49 ske_dma_operate/46 lib_addr_arch32_lock_remap/47 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_dma_operate/46 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 CAST2UINT32/6 
+ske_dma_aes_xcbc_mac_96_init/17 (ske_dma_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memcpy_/39 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96/16 (ske_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+ske_aes_xcbc_mac_96_final/15 (ske_aes_xcbc_mac_96_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: uint32_clear/38 memset_/43 memcmp_/44 memcpy_/39 ske_update_blocks_internal/37 uint32_XOR/42 memset_/43 CAST2UINT32/6 CAST2UINT32/6 ske_update_blocks_internal/37 uint32_XOR/42 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_update/14 (ske_aes_xcbc_mac_96_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_simple_get_output_block/41 memcpy_/39 ske_update_blocks_no_output/40 memcpy_/39 ske_update_blocks_no_output/40 CAST2UINT32/6 ske_update_blocks_no_output/40 memcpy_/39 memcpy_/39 ske_update_blocks_no_output/40 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_init/13 (ske_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_init_internal/35 memcpy_/39 uint32_clear/38 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (ske_aes_xcbc_mac_96_get_k1_k2_k3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_init/13 
+  Calls: ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_init_internal/35 ske_set_cpu_mode/24 ske_clear_cfg/21 
+ske_aes_xcbc_mac_96_recover_cfg/11 (ske_aes_xcbc_mac_96_recover_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: ske_expand_key/34 lib_ske_secure_port_config/33 ske_set_key/32 ske_disable_secure_port/31 ske_set_iv/30 ske_set_last_block/29 ske_set_crypto/28 ske_set_alg/27 ske_set_endian_uint32/26 ske_disable_dma_linked_list/25 ske_set_mode/23 ske_set_cpu_mode/24 ske_set_mode/23 ske_set_dma_mode/22 ske_clear_cfg/21 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint8_XOR/49 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 
+  Calls: 
+lib_addr_arch32_unlock_remap/48 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+lib_addr_arch32_lock_remap/47 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_dma_operate/46 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+ske_set_last_block_len/45 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 
+  Calls: 
+memcmp_/44 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+uint32_XOR/42 (uint32_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 
+  Calls: 
+ske_simple_get_output_block/41 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+ske_update_blocks_no_output/40 (ske_update_blocks_no_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+uint32_clear/38 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_init/13 
+  Calls: 
+ske_update_blocks_internal/37 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+uint32_set/36 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_init_internal/35 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_init/13 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+  Calls: 
+ske_expand_key/34 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+lib_ske_secure_port_config/33 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_key/32 (ske_set_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_secure_port/31 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_iv/30 (ske_set_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_last_block/29 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_crypto/28 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_alg/27 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_endian_uint32/26 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_disable_dma_linked_list/25 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_cpu_mode/24 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_mode/23 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_aes_xcbc_mac_96_recover_cfg/11 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_set_dma_mode/22 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_clear_cfg/21 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 ske_aes_xcbc_mac_96_recover_cfg/11 
+  Calls: 
+ske_dma_aes_xcbc_mac_96/20 (ske_dma_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_init/17 
+ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (ske_dma_aes_xcbc_mac_96_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memset_/43 lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_update_blocks_internal/37 ske_set_mode/23 ske_set_cpu_mode/24 lib_addr_arch32_unlock_remap/48 uint32_XOR/42 memset_/43 CAST2UINT32/6 memset_/43 memcpy_/39 ske_dma_operate/46 uint8_XOR/49 ske_dma_operate/46 lib_addr_arch32_lock_remap/47 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_addr_arch32_unlock_remap/48 memcpy_/39 lib_addr_arch32_lock_remap/47 ske_dma_operate/46 ske_set_last_block_len/45 ske_set_last_block/29 ske_aes_xcbc_mac_96_recover_cfg/11 CAST2UINT32/6 
+ske_dma_aes_xcbc_mac_96_init/17 (ske_dma_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96/20 
+  Calls: memcpy_/39 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96/16 (ske_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 ske_aes_xcbc_mac_96_init/13 
+ske_aes_xcbc_mac_96_final/15 (ske_aes_xcbc_mac_96_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: uint32_clear/38 memset_/43 memcmp_/44 memcpy_/39 ske_update_blocks_internal/37 uint32_XOR/42 memset_/43 CAST2UINT32/6 CAST2UINT32/6 ske_update_blocks_internal/37 uint32_XOR/42 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_update/14 (ske_aes_xcbc_mac_96_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_simple_get_output_block/41 memcpy_/39 ske_update_blocks_no_output/40 memcpy_/39 ske_update_blocks_no_output/40 CAST2UINT32/6 ske_update_blocks_no_output/40 memcpy_/39 memcpy_/39 ske_update_blocks_no_output/40 ske_aes_xcbc_mac_96_recover_cfg/11 
+ske_aes_xcbc_mac_96_init/13 (ske_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_aes_xcbc_mac_96/16 
+  Calls: ske_init_internal/35 memcpy_/39 uint32_clear/38 uint32_clear/38 ske_aes_xcbc_mac_96_get_k1_k2_k3/12 
+ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (ske_aes_xcbc_mac_96_get_k1_k2_k3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 ske_aes_xcbc_mac_96_init/13 
+  Calls: ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_update_blocks_internal/37 uint32_set/36 ske_init_internal/35 ske_set_cpu_mode/24 ske_clear_cfg/21 
+ske_aes_xcbc_mac_96_recover_cfg/11 (ske_aes_xcbc_mac_96_recover_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: ske_expand_key/34 lib_ske_secure_port_config/33 ske_set_key/32 ske_disable_secure_port/31 ske_set_iv/30 ske_set_last_block/29 ske_set_crypto/28 ske_set_alg/27 ske_set_endian_uint32/26 ske_disable_dma_linked_list/25 ske_set_mode/23 ske_set_cpu_mode/24 ske_set_mode/23 ske_set_dma_mode/22 ske_clear_cfg/21 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_final/15 ske_aes_xcbc_mac_96_update/14 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+ske_dma_aes_xcbc_mac_96_init.part.0/60 (ske_dma_aes_xcbc_mac_96_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 56
+  References: 
+  Referring: 
+  Function ske_dma_aes_xcbc_mac_96_init.part.0/60 is inline copy in ske_dma_aes_xcbc_mac_96/20
+  Clone of ske_dma_aes_xcbc_mac_96_init.part.0/56
+  Availability: local
+  Function flags: count:512926472 (estimated locally) body local split_part
+  Called by: ske_dma_aes_xcbc_mac_96/20 (inlined) (512926472 (estimated locally),0.48 per call) 
+  Calls: memcpy_/39 (169265734 (estimated locally),0.16 per call) uint32_clear/38 (169265734 (estimated locally),0.16 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (512926472 (estimated locally),0.48 per call) 
+ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 is inline copy in ske_dma_aes_xcbc_mac_96_update_including_last_block/19
+  Availability: local
+  Function flags: count:270889292 (estimated locally) body local split_part
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (inlined) (270889292 (estimated locally),0.25 per call) 
+  Calls: ske_aes_xcbc_mac_96_recover_cfg/11 (270889292 (estimated locally),0.25 per call) ske_set_last_block/29 (89393466 (estimated locally),0.08 per call) ske_set_last_block_len/45 (89393466 (estimated locally),0.08 per call) lib_addr_arch32_lock_remap/47 (89393466 (estimated locally),0.08 per call) ske_dma_operate/46 (10923881 (estimated locally),0.01 per call) lib_addr_arch32_unlock_remap/48 (11174183 (estimated locally),0.01 per call) uint8_XOR/49 (11174183 (estimated locally),0.01 per call) ske_dma_operate/46 (14749922 (estimated locally),0.01 per call) lib_addr_arch32_unlock_remap/48 (33522550 (estimated locally),0.03 per call) memcpy_/39 (33522550 (estimated locally),0.03 per call) memset_/43 (33522550 (estimated locally),0.03 per call) memset_/43 (33522550 (estimated locally),0.03 per call) uint32_XOR/42 (33522550 (estimated locally),0.03 per call) lib_addr_arch32_unlock_remap/48 (44696733 (estimated locally),0.04 per call) ske_set_cpu_mode/24 (44696733 (estimated locally),0.04 per call) ske_set_mode/23 (44696733 (estimated locally),0.04 per call) ske_update_blocks_internal/37 (44696733 (estimated locally),0.04 per call) lib_addr_arch32_lock_remap/47 (14749922 (estimated locally),0.01 per call) memcpy_/39 (14749922 (estimated locally),0.01 per call) lib_addr_arch32_unlock_remap/48 (14749922 (estimated locally),0.01 per call) memset_/43 (270889292 (estimated locally),0.25 per call) 
+ske_dma_aes_xcbc_mac_96_init.part.0/56 (ske_dma_aes_xcbc_mac_96_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 60
+  References: 
+  Referring: 
+  Function ske_dma_aes_xcbc_mac_96_init.part.0/56 is inline copy in ske_dma_aes_xcbc_mac_96_init/17
+  Availability: local
+  Function flags: count:416752758 (estimated locally) body local split_part
+  Called by: ske_dma_aes_xcbc_mac_96_init/17 (inlined) (416752758 (estimated locally),0.39 per call) 
+  Calls: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (416752758 (estimated locally),0.39 per call) uint32_clear/38 (137528409 (estimated locally),0.13 per call) memcpy_/39 (137528409 (estimated locally),0.13 per call) 
+ske_aes_xcbc_mac_96_init.part.0/51 (ske_aes_xcbc_mac_96_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:339020558 (estimated locally) body local split_part
+  Called by: ske_aes_xcbc_mac_96/16 (417256071 (estimated locally),0.39 per call) ske_aes_xcbc_mac_96_init/13 (339020558 (estimated locally),0.32 per call) 
+  Calls: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (339020558 (estimated locally),1.00 per call) uint32_clear/38 (111876784 (estimated locally),0.33 per call) uint32_clear/38 (111876784 (estimated locally),0.33 per call) memcpy_/39 (111876784 (estimated locally),0.33 per call) ske_init_internal/35 (111876784 (estimated locally),0.33 per call) 
+ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 is inline copy in ske_aes_xcbc_mac_96_get_k1_k2_k3/12
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local split_part
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: uint32_set/36 (354334800 (estimated locally),0.33 per call) ske_update_blocks_internal/37 (354334800 (estimated locally),0.33 per call) uint32_set/36 (354334800 (estimated locally),0.33 per call) ske_update_blocks_internal/37 (354334800 (estimated locally),0.33 per call) uint32_set/36 (354334800 (estimated locally),0.33 per call) ske_update_blocks_internal/37 (354334800 (estimated locally),0.33 per call) 
+uint8_XOR/49 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (11174183 (estimated locally),0.01 per call) 
+  Calls: 
+lib_addr_arch32_unlock_remap/48 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (11174183 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (33522550 (estimated locally),0.03 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (44696733 (estimated locally),0.04 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (14749922 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (14749922 (estimated locally),0.01 per call) 
+  Calls: 
+lib_addr_arch32_lock_remap/47 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (89393466 (estimated locally),0.08 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (14749922 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (14749922 (estimated locally),0.01 per call) 
+  Calls: 
+ske_dma_operate/46 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (10923881 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (14749922 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (44696733 (estimated locally),0.04 per call) 
+  Calls: 
+ske_set_last_block_len/45 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (89393466 (estimated locally),0.08 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (44696733 (estimated locally),0.04 per call) 
+  Calls: 
+memcmp_/44 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_final/15 (74253441 (estimated locally),0.07 per call) 
+  Calls: 
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (33522550 (estimated locally),0.03 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (33522550 (estimated locally),0.03 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (270889292 (estimated locally),0.25 per call) ske_aes_xcbc_mac_96_final/15 (594027532 (estimated locally),0.55 per call) ske_aes_xcbc_mac_96_final/15 (196029084 (estimated locally),0.18 per call) 
+  Calls: 
+uint32_XOR/42 (uint32_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (33522550 (estimated locally),0.03 per call) ske_aes_xcbc_mac_96_final/15 (196029084 (estimated locally),0.18 per call) ske_aes_xcbc_mac_96_final/15 (100984681 (estimated locally),0.09 per call) 
+  Calls: 
+ske_simple_get_output_block/41 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 (12303826 (estimated locally),0.01 per call) 
+  Calls: 
+ske_update_blocks_no_output/40 (ske_update_blocks_no_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_update/14 (37284321 (estimated locally),0.03 per call) ske_aes_xcbc_mac_96_update/14 (37284321 (estimated locally),0.03 per call) ske_aes_xcbc_mac_96_update/14 (43223459 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_update/14 (38933814 (estimated locally),0.04 per call) 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_init.part.0/60 (169265734 (estimated locally),0.16 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (33522550 (estimated locally),0.03 per call) ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (14749922 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (14749922 (estimated locally),0.01 per call) ske_dma_aes_xcbc_mac_96_init.part.0/56 (137528409 (estimated locally),0.13 per call) ske_aes_xcbc_mac_96_final/15 (74253441 (estimated locally),0.07 per call) ske_aes_xcbc_mac_96_update/14 (12303826 (estimated locally),0.01 per call) ske_aes_xcbc_mac_96_update/14 (12303826 (estimated locally),0.01 per call) ske_aes_xcbc_mac_96_update/14 (43223459 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_update/14 (43223459 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_init.part.0/51 (111876784 (estimated locally),0.33 per call) 
+  Calls: 
+uint32_clear/38 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_init.part.0/60 (169265734 (estimated locally),0.16 per call) ske_dma_aes_xcbc_mac_96_init.part.0/56 (137528409 (estimated locally),0.13 per call) ske_aes_xcbc_mac_96_final/15 (1073741824 (estimated locally),1.00 per call) ske_aes_xcbc_mac_96_init.part.0/51 (111876784 (estimated locally),0.33 per call) ske_aes_xcbc_mac_96_init.part.0/51 (111876784 (estimated locally),0.33 per call) 
+  Calls: 
+ske_update_blocks_internal/37 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (44696733 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_final/15 (196029084 (estimated locally),0.18 per call) ske_aes_xcbc_mac_96_final/15 (100984681 (estimated locally),0.09 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (354334800 (estimated locally),0.33 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (354334800 (estimated locally),0.33 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+uint32_set/36 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (354334800 (estimated locally),0.33 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (354334800 (estimated locally),0.33 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+ske_init_internal/35 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_init.part.0/51 (111876784 (estimated locally),0.33 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_expand_key/34 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (912680552 (estimated locally),0.85 per call) 
+  Calls: 
+lib_ske_secure_port_config/33 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (322122544 (estimated locally),0.30 per call) 
+  Calls: 
+ske_set_key/32 (ske_set_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (751619280 (estimated locally),0.70 per call) 
+  Calls: 
+ske_disable_secure_port/31 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (751619280 (estimated locally),0.70 per call) 
+  Calls: 
+ske_set_iv/30 (ske_set_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_last_block/29 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (89393466 (estimated locally),0.08 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (44696733 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_crypto/28 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_alg/27 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_endian_uint32/26 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_disable_dma_linked_list/25 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_cpu_mode/24 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (44696733 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (1073741824 (estimated locally),1.00 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+ske_set_mode/23 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (44696733 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (536870912 (estimated locally),0.50 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+ske_set_dma_mode/22 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_recover_cfg/11 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+ske_clear_cfg/21 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (1073741824 (estimated locally),1.00 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_dma_aes_xcbc_mac_96/20 (ske_dma_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (169265735 (estimated locally),0.16 per call) ske_dma_aes_xcbc_mac_96_init.part.0/60 (inlined) (512926472 (estimated locally),0.48 per call) 
+ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (ske_dma_aes_xcbc_mac_96_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: ske_dma_aes_xcbc_mac_96/20 (169265735 (estimated locally),0.16 per call) 
+  Calls: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (inlined) (270889292 (estimated locally),0.25 per call) 
+ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: lib_addr_arch32_unlock_remap/48 (14749922 (estimated locally),0.01 per call) memcpy_/39 (14749922 (estimated locally),0.01 per call) lib_addr_arch32_lock_remap/47 (14749922 (estimated locally),0.01 per call) ske_dma_operate/46 (44696733 (estimated locally),0.04 per call) ske_set_last_block_len/45 (44696733 (estimated locally),0.04 per call) ske_set_last_block/29 (44696733 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (135444646 (estimated locally),0.13 per call) 
+ske_dma_aes_xcbc_mac_96_init/17 (ske_dma_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: ske_dma_aes_xcbc_mac_96_init.part.0/56 (inlined) (416752758 (estimated locally),0.39 per call) 
+ske_aes_xcbc_mac_96/16 (ske_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: ske_aes_xcbc_mac_96_final/15 (45439186 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_update/14 (137694503 (estimated locally),0.13 per call) ske_aes_xcbc_mac_96_init.part.0/51 (417256071 (estimated locally),0.39 per call) 
+ske_aes_xcbc_mac_96_final/15 (ske_aes_xcbc_mac_96_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: ske_aes_xcbc_mac_96/16 (45439186 (estimated locally),0.04 per call) 
+  Calls: uint32_clear/38 (1073741824 (estimated locally),1.00 per call) memset_/43 (594027532 (estimated locally),0.55 per call) memcmp_/44 (74253441 (estimated locally),0.07 per call) memcpy_/39 (74253441 (estimated locally),0.07 per call) ske_update_blocks_internal/37 (196029084 (estimated locally),0.18 per call) uint32_XOR/42 (196029084 (estimated locally),0.18 per call) memset_/43 (196029084 (estimated locally),0.18 per call) ske_update_blocks_internal/37 (100984681 (estimated locally),0.09 per call) uint32_XOR/42 (100984681 (estimated locally),0.09 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (594027531 (estimated locally),0.55 per call) 
+ske_aes_xcbc_mac_96_update/14 (ske_aes_xcbc_mac_96_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: ske_aes_xcbc_mac_96/16 (137694503 (estimated locally),0.13 per call) 
+  Calls: ske_simple_get_output_block/41 (12303826 (estimated locally),0.01 per call) memcpy_/39 (12303826 (estimated locally),0.01 per call) ske_update_blocks_no_output/40 (37284321 (estimated locally),0.03 per call) memcpy_/39 (12303826 (estimated locally),0.01 per call) ske_update_blocks_no_output/40 (37284321 (estimated locally),0.03 per call) ske_update_blocks_no_output/40 (43223459 (estimated locally),0.04 per call) memcpy_/39 (43223459 (estimated locally),0.04 per call) memcpy_/39 (43223459 (estimated locally),0.04 per call) ske_update_blocks_no_output/40 (38933814 (estimated locally),0.04 per call) ske_aes_xcbc_mac_96_recover_cfg/11 (76022808 (estimated locally),0.07 per call) 
+ske_aes_xcbc_mac_96_init/13 (ske_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: ske_aes_xcbc_mac_96_init.part.0/51 (339020558 (estimated locally),0.32 per call) 
+ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (ske_aes_xcbc_mac_96_get_k1_k2_k3)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: ske_dma_aes_xcbc_mac_96_init.part.0/60 (512926472 (estimated locally),0.48 per call) ske_dma_aes_xcbc_mac_96_init.part.0/56 (416752758 (estimated locally),0.39 per call) ske_aes_xcbc_mac_96_init.part.0/51 (339020558 (estimated locally),1.00 per call) 
+  Calls: ske_aes_xcbc_mac_96_get_k1_k2_k3.part.0/50 (inlined) (354334800 (estimated locally),0.33 per call) ske_init_internal/35 (1073741824 (estimated locally),1.00 per call) ske_set_cpu_mode/24 (1073741824 (estimated locally),1.00 per call) ske_clear_cfg/21 (1073741824 (estimated locally),1.00 per call) 
+ske_aes_xcbc_mac_96_recover_cfg/11 (ske_aes_xcbc_mac_96_recover_cfg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: ske_dma_aes_xcbc_mac_96_update_including_last_block.part.0/58 (270889292 (estimated locally),0.25 per call) ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (135444646 (estimated locally),0.13 per call) ske_aes_xcbc_mac_96_final/15 (594027531 (estimated locally),0.55 per call) ske_aes_xcbc_mac_96_update/14 (76022808 (estimated locally),0.07 per call) 
+  Calls: ske_expand_key/34 (912680552 (estimated locally),0.85 per call) lib_ske_secure_port_config/33 (322122544 (estimated locally),0.30 per call) ske_set_key/32 (751619280 (estimated locally),0.70 per call) ske_disable_secure_port/31 (751619280 (estimated locally),0.70 per call) ske_set_iv/30 (1073741824 (estimated locally),1.00 per call) ske_set_last_block/29 (1073741824 (estimated locally),1.00 per call) ske_set_crypto/28 (1073741824 (estimated locally),1.00 per call) ske_set_alg/27 (1073741824 (estimated locally),1.00 per call) ske_set_endian_uint32/26 (1073741824 (estimated locally),1.00 per call) ske_disable_dma_linked_list/25 (1073741824 (estimated locally),1.00 per call) ske_set_mode/23 (536870912 (estimated locally),0.50 per call) ske_set_cpu_mode/24 (536870912 (estimated locally),0.50 per call) ske_set_mode/23 (536870912 (estimated locally),0.50 per call) ske_set_dma_mode/22 (536870912 (estimated locally),0.50 per call) ske_clear_cfg/21 (1073741824 (estimated locally),1.00 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+ske_aes_xcbc_mac_96_init.part.0/51 (ske_aes_xcbc_mac_96_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ske_aes_xcbc_mac_96_init.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:339020558 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+uint8_XOR/49 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+lib_addr_arch32_unlock_remap/48 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+lib_addr_arch32_lock_remap/47 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_dma_operate/46 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_last_block_len/45 (ske_set_last_block_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcmp_/44 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_XOR/42 (uint32_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_simple_get_output_block/41 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_update_blocks_no_output/40 (ske_update_blocks_no_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/39 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_clear/38 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_update_blocks_internal/37 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_set/36 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_init_internal/35 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_expand_key/34 (ske_expand_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+lib_ske_secure_port_config/33 (lib_ske_secure_port_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_key/32 (ske_set_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_disable_secure_port/31 (ske_disable_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_iv/30 (ske_set_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_last_block/29 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_crypto/28 (ske_set_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_alg/27 (ske_set_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_endian_uint32/26 (ske_set_endian_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_disable_dma_linked_list/25 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_cpu_mode/24 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_mode/23 (ske_set_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_dma_mode/22 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_clear_cfg/21 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_dma_aes_xcbc_mac_96/20 (ske_dma_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_aes_xcbc_mac_96 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_aes_xcbc_mac_96_update_including_last_block/19 (ske_dma_aes_xcbc_mac_96_update_including_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_aes_xcbc_mac_96_update_including_last_block (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block/18 (ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_aes_xcbc_mac_96_update_blocks_excluding_last_block (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_aes_xcbc_mac_96_init/17 (ske_dma_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_aes_xcbc_mac_96_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_aes_xcbc_mac_96/16 (ske_aes_xcbc_mac_96)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_aes_xcbc_mac_96 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_aes_xcbc_mac_96_final/15 (ske_aes_xcbc_mac_96_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_aes_xcbc_mac_96_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_aes_xcbc_mac_96_update/14 (ske_aes_xcbc_mac_96_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_aes_xcbc_mac_96_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_aes_xcbc_mac_96_init/13 (ske_aes_xcbc_mac_96_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_aes_xcbc_mac_96_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_aes_xcbc_mac_96_get_k1_k2_k3/12 (ske_aes_xcbc_mac_96_get_k1_k2_k3)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_aes_xcbc_mac_96_get_k1_k2_k3 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_aes_xcbc_mac_96_recover_cfg/11 (ske_aes_xcbc_mac_96_recover_cfg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_aes_xcbc_mac_96_recover_cfg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

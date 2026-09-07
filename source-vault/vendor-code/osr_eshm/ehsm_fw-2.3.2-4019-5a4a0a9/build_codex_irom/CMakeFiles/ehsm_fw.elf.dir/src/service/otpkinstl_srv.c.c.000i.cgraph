@@ -1,0 +1,3294 @@
+Trivially needed symbols: otpkinstl_srv_handler/31
+
+
+Initial Symbol table:
+
+mmap_read_remote_data/47 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: 
+memset_/46 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/45 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+misc_write_otp_data/44 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+otp_verify/43 (otp_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+cpt_ske_crypto/42 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 encrypt_otp_key/22 
+  Calls: 
+otpkey_get_phyid/41 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: encrypt_otp_key/22 
+  Calls: 
+secp256r1/40 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: gen_random_otp_key/23 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_eccp_getkey/39 (cpt_eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_sm2_getkey/38 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_get_rand/37 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+sysreg_get_otpkey_dec_alg/36 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 gen_random_otp_key/23 
+  Calls: 
+fid_panic/35 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 
+  Calls: 
+fid_delay/34 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+sysreg_get_life_cycle/33 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+otpkey_check_usage/32 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fw_encrypt_key/27 fw_encrypt_key/27 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_srv_handler/31 (otpkinstl_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkinstl_fw_install_encrypt_key/29 otpkinstl_fw_install_random_key/28 
+crc32_mpeg2/30 (crc32_mpeg2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_fw_install_encrypt_key/29 (otpkinstl_fw_install_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: util_memset/10 fw_encrypt_key/27 mmap_read_remote_data/47 
+otpkinstl_fw_install_random_key/28 (otpkinstl_fw_install_random_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed55a6440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: fw_gen_random_otp_key/26 
+fw_encrypt_key/27 (fw_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 encrypt_otp_key/22 sysreg_get_otpkey_dec_alg/36 util_memcpy/9 decrypt_cipher_key/25 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+fw_gen_random_otp_key/26 (fw_gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed55a6440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_random_key/28 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 gen_random_otp_key/23 util_memset/10 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+decrypt_cipher_key/25 (decrypt_cipher_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 
+  Calls: util_memset/10 util_memcpy/9 crc32_mpeg2/30 util_memcpy/9 cpt_ske_crypto/42 sysreg_get_otpkey_dec_alg/36 util_memset/10 
+gen_otp_key_attr/24 (gen_otp_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed55a6550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+gen_random_otp_key/23 (gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848ee0
+  References: secp256r1/40 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: fw_gen_random_otp_key/26 
+  Calls: util_memset/10 encrypt_otp_key/22 cpt_eccp_getkey/39 encrypt_otp_key/22 cpt_sm2_getkey/38 cpt_get_rand/37 sysreg_get_otpkey_dec_alg/36 
+encrypt_otp_key/22 (encrypt_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 gen_random_otp_key/23 gen_random_otp_key/23 
+  Calls: cpt_ske_crypto/42 otpkey_get_phyid/41 
+otpkinstl_check_life_cycle/21 (otpkinstl_check_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: fid_panic/35 fid_delay/34 fid_delay/34 sysreg_get_life_cycle/33 fid_delay/34 sysreg_get_life_cycle/33 
+write_otp_key/20 (write_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: misc_write_otp_data/44 otp_verify/43 otpmap_convert_keyid_to_addr/17 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memset/10 
+rPKE_B/19 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/18 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+otpmap_convert_keyid_to_addr/17 (otpmap_convert_keyid_to_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: write_otp_key/20 
+  Calls: 
+lib_register_unlock/16 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/15 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed55a6440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 otpkinstl_fw_install_encrypt_key/29 write_otp_key/20 gen_random_otp_key/23 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: memset_/46 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6ed5848770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 write_otp_key/20 write_otp_key/20 write_otp_key/20 
+  Calls: memcpy_/45 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: rPKE_B/19 rPKE_A/18 lib_register_unlock/16 lib_register_lock/15 util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+mmap_read_remote_data/47 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: 
+memset_/46 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/45 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+misc_write_otp_data/44 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+otp_verify/43 (otp_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+cpt_ske_crypto/42 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 encrypt_otp_key/22 
+  Calls: 
+otpkey_get_phyid/41 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: encrypt_otp_key/22 
+  Calls: 
+secp256r1/40 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: gen_random_otp_key/23 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_eccp_getkey/39 (cpt_eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_sm2_getkey/38 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_get_rand/37 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+sysreg_get_otpkey_dec_alg/36 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 gen_random_otp_key/23 
+  Calls: 
+fid_panic/35 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 
+  Calls: 
+fid_delay/34 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+sysreg_get_life_cycle/33 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+otpkey_check_usage/32 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fw_encrypt_key/27 fw_encrypt_key/27 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_srv_handler/31 (otpkinstl_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkinstl_fw_install_encrypt_key/29 otpkinstl_fw_install_random_key/28 
+crc32_mpeg2/30 (crc32_mpeg2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_fw_install_encrypt_key/29 (otpkinstl_fw_install_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: util_memset/10 fw_encrypt_key/27 mmap_read_remote_data/47 
+otpkinstl_fw_install_random_key/28 (otpkinstl_fw_install_random_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: fw_gen_random_otp_key/26 
+fw_encrypt_key/27 (fw_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 encrypt_otp_key/22 sysreg_get_otpkey_dec_alg/36 util_memcpy/9 decrypt_cipher_key/25 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+fw_gen_random_otp_key/26 (fw_gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_random_key/28 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 gen_random_otp_key/23 util_memset/10 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+decrypt_cipher_key/25 (decrypt_cipher_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 
+  Calls: util_memset/10 util_memcpy/9 crc32_mpeg2/30 util_memcpy/9 cpt_ske_crypto/42 sysreg_get_otpkey_dec_alg/36 util_memset/10 
+gen_otp_key_attr/24 (gen_otp_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+gen_random_otp_key/23 (gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secp256r1/40 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: fw_gen_random_otp_key/26 
+  Calls: util_memset/10 encrypt_otp_key/22 cpt_eccp_getkey/39 encrypt_otp_key/22 cpt_sm2_getkey/38 cpt_get_rand/37 sysreg_get_otpkey_dec_alg/36 
+encrypt_otp_key/22 (encrypt_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 gen_random_otp_key/23 gen_random_otp_key/23 
+  Calls: cpt_ske_crypto/42 otpkey_get_phyid/41 
+otpkinstl_check_life_cycle/21 (otpkinstl_check_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: fid_panic/35 fid_delay/34 fid_delay/34 sysreg_get_life_cycle/33 fid_delay/34 sysreg_get_life_cycle/33 
+write_otp_key/20 (write_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: misc_write_otp_data/44 otp_verify/43 otpmap_convert_keyid_to_addr/17 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memset/10 
+otpmap_convert_keyid_to_addr/17 (otpmap_convert_keyid_to_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: write_otp_key/20 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 otpkinstl_fw_install_encrypt_key/29 write_otp_key/20 gen_random_otp_key/23 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: memset_/46 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 write_otp_key/20 write_otp_key/20 write_otp_key/20 
+  Calls: memcpy_/45 
+
+
+Initial Symbol table:
+
+mmap_read_remote_data/47 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: 
+memset_/46 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/45 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+misc_write_otp_data/44 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+otp_verify/43 (otp_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+cpt_ske_crypto/42 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 encrypt_otp_key/22 
+  Calls: 
+otpkey_get_phyid/41 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: encrypt_otp_key/22 
+  Calls: 
+secp256r1/40 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: gen_random_otp_key/23 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_eccp_getkey/39 (cpt_eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_sm2_getkey/38 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_get_rand/37 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+sysreg_get_otpkey_dec_alg/36 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 gen_random_otp_key/23 
+  Calls: 
+fid_panic/35 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 
+  Calls: 
+fid_delay/34 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+sysreg_get_life_cycle/33 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+otpkey_check_usage/32 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fw_encrypt_key/27 fw_encrypt_key/27 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_srv_handler/31 (otpkinstl_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkinstl_fw_install_encrypt_key/29 otpkinstl_fw_install_random_key/28 
+crc32_mpeg2/30 (crc32_mpeg2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_fw_install_encrypt_key/29 (otpkinstl_fw_install_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: util_memset/10 fw_encrypt_key/27 mmap_read_remote_data/47 
+otpkinstl_fw_install_random_key/28 (otpkinstl_fw_install_random_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: fw_gen_random_otp_key/26 
+fw_encrypt_key/27 (fw_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 encrypt_otp_key/22 sysreg_get_otpkey_dec_alg/36 util_memcpy/9 decrypt_cipher_key/25 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+fw_gen_random_otp_key/26 (fw_gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_random_key/28 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 gen_random_otp_key/23 util_memset/10 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+decrypt_cipher_key/25 (decrypt_cipher_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 
+  Calls: util_memset/10 util_memcpy/9 crc32_mpeg2/30 util_memcpy/9 cpt_ske_crypto/42 sysreg_get_otpkey_dec_alg/36 util_memset/10 
+gen_otp_key_attr/24 (gen_otp_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+gen_random_otp_key/23 (gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secp256r1/40 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: fw_gen_random_otp_key/26 
+  Calls: util_memset/10 encrypt_otp_key/22 cpt_eccp_getkey/39 encrypt_otp_key/22 cpt_sm2_getkey/38 cpt_get_rand/37 sysreg_get_otpkey_dec_alg/36 
+encrypt_otp_key/22 (encrypt_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 gen_random_otp_key/23 gen_random_otp_key/23 
+  Calls: cpt_ske_crypto/42 otpkey_get_phyid/41 
+otpkinstl_check_life_cycle/21 (otpkinstl_check_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: fid_panic/35 fid_delay/34 fid_delay/34 sysreg_get_life_cycle/33 fid_delay/34 sysreg_get_life_cycle/33 
+write_otp_key/20 (write_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: misc_write_otp_data/44 otp_verify/43 otpmap_convert_keyid_to_addr/17 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memset/10 
+otpmap_convert_keyid_to_addr/17 (otpmap_convert_keyid_to_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: write_otp_key/20 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 otpkinstl_fw_install_encrypt_key/29 write_otp_key/20 gen_random_otp_key/23 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: memset_/46 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 write_otp_key/20 write_otp_key/20 write_otp_key/20 
+  Calls: memcpy_/45 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+mmap_read_remote_data/47 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: 
+memset_/46 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/45 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+misc_write_otp_data/44 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+otp_verify/43 (otp_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: write_otp_key/20 
+  Calls: 
+cpt_ske_crypto/42 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 encrypt_otp_key/22 
+  Calls: 
+otpkey_get_phyid/41 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: encrypt_otp_key/22 
+  Calls: 
+secp256r1/40 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: gen_random_otp_key/23 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_eccp_getkey/39 (cpt_eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_sm2_getkey/38 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+cpt_get_rand/37 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gen_random_otp_key/23 
+  Calls: 
+sysreg_get_otpkey_dec_alg/36 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 gen_random_otp_key/23 
+  Calls: 
+fid_panic/35 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 
+  Calls: 
+fid_delay/34 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+sysreg_get_life_cycle/33 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkinstl_check_life_cycle/21 otpkinstl_check_life_cycle/21 
+  Calls: 
+otpkey_check_usage/32 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fw_encrypt_key/27 fw_encrypt_key/27 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_srv_handler/31 (otpkinstl_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkinstl_fw_install_encrypt_key/29 otpkinstl_fw_install_random_key/28 
+crc32_mpeg2/30 (crc32_mpeg2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+otpkinstl_fw_install_encrypt_key/29 (otpkinstl_fw_install_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: util_memset/10 fw_encrypt_key/27 mmap_read_remote_data/47 
+otpkinstl_fw_install_random_key/28 (otpkinstl_fw_install_random_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_srv_handler/31 
+  Calls: fw_gen_random_otp_key/26 
+fw_encrypt_key/27 (fw_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_encrypt_key/29 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 encrypt_otp_key/22 sysreg_get_otpkey_dec_alg/36 util_memcpy/9 decrypt_cipher_key/25 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+fw_gen_random_otp_key/26 (fw_gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkinstl_fw_install_random_key/28 
+  Calls: util_memset/10 write_otp_key/20 crc32_mpeg2/30 gen_otp_key_attr/24 gen_random_otp_key/23 util_memset/10 otpkey_check_usage/32 otpkey_check_usage/32 otpkinstl_check_life_cycle/21 
+decrypt_cipher_key/25 (decrypt_cipher_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 
+  Calls: util_memset/10 util_memcpy/9 crc32_mpeg2/30 util_memcpy/9 cpt_ske_crypto/42 sysreg_get_otpkey_dec_alg/36 util_memset/10 
+gen_otp_key_attr/24 (gen_otp_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: 
+gen_random_otp_key/23 (gen_random_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secp256r1/40 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: fw_gen_random_otp_key/26 
+  Calls: util_memset/10 encrypt_otp_key/22 cpt_eccp_getkey/39 encrypt_otp_key/22 cpt_sm2_getkey/38 cpt_get_rand/37 sysreg_get_otpkey_dec_alg/36 
+encrypt_otp_key/22 (encrypt_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 gen_random_otp_key/23 gen_random_otp_key/23 
+  Calls: cpt_ske_crypto/42 otpkey_get_phyid/41 
+otpkinstl_check_life_cycle/21 (otpkinstl_check_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: fid_panic/35 fid_delay/34 fid_delay/34 sysreg_get_life_cycle/33 fid_delay/34 sysreg_get_life_cycle/33 
+write_otp_key/20 (write_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: fw_encrypt_key/27 fw_gen_random_otp_key/26 
+  Calls: misc_write_otp_data/44 otp_verify/43 otpmap_convert_keyid_to_addr/17 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memset/10 
+otpmap_convert_keyid_to_addr/17 (otpmap_convert_keyid_to_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: write_otp_key/20 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 otpkinstl_fw_install_encrypt_key/29 write_otp_key/20 gen_random_otp_key/23 fw_gen_random_otp_key/26 fw_gen_random_otp_key/26 
+  Calls: memset_/46 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: decrypt_cipher_key/25 decrypt_cipher_key/25 fw_encrypt_key/27 write_otp_key/20 write_otp_key/20 write_otp_key/20 
+  Calls: memcpy_/45 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+otpkinstl_check_life_cycle.isra.0/66 (otpkinstl_check_life_cycle.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of otpkinstl_check_life_cycle/21
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: fw_encrypt_key.constprop.0/61 (329590 (estimated locally),0.00 per call) fw_gen_random_otp_key.constprop.0/62 (6605151 (estimated locally),0.01 per call) 
+  Calls: sysreg_get_life_cycle/33 (1073741824 (estimated locally),1.00 per call) fid_delay/34 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/33 (1073741824 (estimated locally),1.00 per call) fid_delay/34 (1073741824 (estimated locally),1.00 per call) fid_delay/34 (145607981 (estimated locally),0.14 per call) fid_panic/35 (1000937833 (estimated locally),0.93 per call) 
+encrypt_otp_key.constprop.0/65 (encrypt_otp_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of encrypt_otp_key/22
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: fw_encrypt_key.constprop.0/61 (19152 (estimated locally),0.00 per call) gen_random_otp_key.constprop.0/64 (74550 (estimated locally),0.00 per call) gen_random_otp_key.constprop.0/64 (74550 (estimated locally),0.00 per call) 
+  Calls: otpkey_get_phyid/41 (1073741824 (estimated locally),1.00 per call) cpt_ske_crypto/42 (217325344 (estimated locally),0.20 per call) 
+gen_random_otp_key.constprop.0/64 (gen_random_otp_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: secp256r1/40 (addr) 
+  Referring: 
+  Function gen_random_otp_key.constprop/64 is inline copy in otpkinstl_srv_handler/31
+  Clone of gen_random_otp_key/23
+  Availability: local
+  Function flags: count:1473324 (estimated locally) local
+  Called by: fw_gen_random_otp_key.constprop.0/62 (inlined) (1473324 (estimated locally),0.00 per call) 
+  Calls: sysreg_get_otpkey_dec_alg/36 (1473324 (estimated locally),0.00 per call) cpt_get_rand/37 (368331 (estimated locally),0.00 per call) cpt_sm2_getkey/38 (368331 (estimated locally),0.00 per call) encrypt_otp_key.constprop.0/65 (74550 (estimated locally),0.00 per call) cpt_eccp_getkey/39 (368331 (estimated locally),0.00 per call) encrypt_otp_key.constprop.0/65 (74550 (estimated locally),0.00 per call) memset_/46 (1473324 (estimated locally),0.00 per call) 
+crc32_mpeg2.constprop.0/63 (crc32_mpeg2.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of crc32_mpeg2/30
+  Availability: local
+  Function flags: count:14744044 (estimated locally) local nonfreeing_fn
+  Called by: decrypt_cipher_key/25 (4750 (estimated locally),0.00 per call) fw_encrypt_key.constprop.0/61 (3876 (estimated locally),0.00 per call) fw_gen_random_otp_key.constprop.0/62 (298201 (estimated locally),0.00 per call) 
+  Calls: 
+fw_gen_random_otp_key.constprop.0/62 (fw_gen_random_otp_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function fw_gen_random_otp_key.constprop/62 is inline copy in otpkinstl_srv_handler/31
+  Clone of fw_gen_random_otp_key/26
+  Availability: local
+  Function flags: count:12353004 (estimated locally) local
+  Called by: otpkinstl_fw_install_random_key/28 (inlined) (12353004 (estimated locally),0.01 per call) 
+  Calls: otpkinstl_check_life_cycle.isra.0/66 (6605151 (estimated locally),0.01 per call) otpkey_check_usage/32 (227270 (estimated locally),0.00 per call) otpkey_check_usage/32 (181271 (estimated locally),0.00 per call) memset_/46 (1473324 (estimated locally),0.00 per call) gen_random_otp_key.constprop.0/64 (inlined) (1473324 (estimated locally),0.00 per call) crc32_mpeg2.constprop.0/63 (298201 (estimated locally),0.00 per call) write_otp_key/20 (298201 (estimated locally),0.00 per call) memset_/46 (12353004 (estimated locally),0.01 per call) 
+fw_encrypt_key.constprop.0/61 (fw_encrypt_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function fw_encrypt_key.constprop/61 is inline copy in otpkinstl_srv_handler/31
+  Clone of fw_encrypt_key/27
+  Availability: local
+  Function flags: count:2100011 (estimated locally) local
+  Called by: otpkinstl_fw_install_encrypt_key/29 (inlined) (2100011 (estimated locally),0.00 per call) 
+  Calls: otpkinstl_check_life_cycle.isra.0/66 (329590 (estimated locally),0.00 per call) otpkey_check_usage/32 (14743 (estimated locally),0.00 per call) otpkey_check_usage/32 (11759 (estimated locally),0.00 per call) decrypt_cipher_key/25 (inlined) (94623 (estimated locally),0.00 per call) memcpy_/45 (94623 (estimated locally),0.00 per call) sysreg_get_otpkey_dec_alg/36 (19152 (estimated locally),0.00 per call) encrypt_otp_key.constprop.0/65 (19152 (estimated locally),0.00 per call) crc32_mpeg2.constprop.0/63 (3876 (estimated locally),0.00 per call) write_otp_key/20 (3876 (estimated locally),0.00 per call) memset_/46 (2100011 (estimated locally),0.00 per call) 
+mmap_read_remote_data/47 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkinstl_fw_install_encrypt_key/29 (42967570 (estimated locally),0.04 per call) 
+  Calls: 
+memset_/46 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gen_random_otp_key.constprop.0/64 (1473324 (estimated locally),0.00 per call) fw_gen_random_otp_key.constprop.0/62 (1473324 (estimated locally),0.00 per call) fw_gen_random_otp_key.constprop.0/62 (12353004 (estimated locally),0.01 per call) fw_encrypt_key.constprop.0/61 (2100011 (estimated locally),0.00 per call) otpkinstl_fw_install_encrypt_key/29 (175377833 (estimated locally),0.16 per call) decrypt_cipher_key/25 (94623 (estimated locally),0.00 per call) decrypt_cipher_key/25 (35416 (estimated locally),0.00 per call) write_otp_key/20 (574129752 (estimated locally),0.53 per call) 
+  Calls: 
+memcpy_/45 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: fw_encrypt_key.constprop.0/61 (94623 (estimated locally),0.00 per call) decrypt_cipher_key/25 (961 (estimated locally),0.00 per call) decrypt_cipher_key/25 (4750 (estimated locally),0.00 per call) write_otp_key/20 (574129752 (estimated locally),0.53 per call) write_otp_key/20 (574129752 (estimated locally),0.53 per call) write_otp_key/20 (574129752 (estimated locally),0.53 per call) 
+  Calls: 
+misc_write_otp_data/44 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: write_otp_key/20 (116203861 (estimated locally),0.11 per call) 
+  Calls: 
+otp_verify/43 (otp_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: write_otp_key/20 (574129752 (estimated locally),0.53 per call) 
+  Calls: 
+cpt_ske_crypto/42 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: encrypt_otp_key.constprop.0/65 (217325344 (estimated locally),0.20 per call) decrypt_cipher_key/25 (23469 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_get_phyid/41 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: encrypt_otp_key.constprop.0/65 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+secp256r1/40 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: gen_random_otp_key.constprop.0/64 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_eccp_getkey/39 (cpt_eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gen_random_otp_key.constprop.0/64 (368331 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_getkey/38 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gen_random_otp_key.constprop.0/64 (368331 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_get_rand/37 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gen_random_otp_key.constprop.0/64 (368331 (estimated locally),0.00 per call) 
+  Calls: 
+sysreg_get_otpkey_dec_alg/36 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gen_random_otp_key.constprop.0/64 (1473324 (estimated locally),0.00 per call) fw_encrypt_key.constprop.0/61 (19152 (estimated locally),0.00 per call) decrypt_cipher_key/25 (35416 (estimated locally),0.00 per call) 
+  Calls: 
+fid_panic/35 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkinstl_check_life_cycle.isra.0/66 (1000937833 (estimated locally),0.93 per call) 
+  Calls: 
+fid_delay/34 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkinstl_check_life_cycle.isra.0/66 (1073741824 (estimated locally),1.00 per call) otpkinstl_check_life_cycle.isra.0/66 (1073741824 (estimated locally),1.00 per call) otpkinstl_check_life_cycle.isra.0/66 (145607981 (estimated locally),0.14 per call) 
+  Calls: 
+sysreg_get_life_cycle/33 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkinstl_check_life_cycle.isra.0/66 (1073741824 (estimated locally),1.00 per call) otpkinstl_check_life_cycle.isra.0/66 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+otpkey_check_usage/32 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: fw_gen_random_otp_key.constprop.0/62 (227270 (estimated locally),0.00 per call) fw_gen_random_otp_key.constprop.0/62 (181271 (estimated locally),0.00 per call) fw_encrypt_key.constprop.0/61 (14743 (estimated locally),0.00 per call) fw_encrypt_key.constprop.0/61 (11759 (estimated locally),0.00 per call) 
+  Calls: 
+otpkinstl_srv_handler/31 (otpkinstl_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally) body
+  Called by: 
+  Calls: otpkinstl_fw_install_encrypt_key/29 (inlined) (175377833 (estimated locally),0.16 per call) otpkinstl_fw_install_random_key/28 (inlined) (175377833 (estimated locally),0.16 per call) 
+crc32_mpeg2/30 (crc32_mpeg2)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:14744044 (estimated locally) body
+  Called by: 
+  Calls: 
+otpkinstl_fw_install_encrypt_key/29 (otpkinstl_fw_install_encrypt_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function otpkinstl_fw_install_encrypt_key/29 is inline copy in otpkinstl_srv_handler/31
+  Availability: local
+  Function flags: count:175377833 (estimated locally) body local
+  Called by: otpkinstl_srv_handler/31 (inlined) (175377833 (estimated locally),0.16 per call) 
+  Calls: memset_/46 (175377833 (estimated locally),0.16 per call) fw_encrypt_key.constprop.0/61 (inlined) (2100011 (estimated locally),0.00 per call) mmap_read_remote_data/47 (42967570 (estimated locally),0.04 per call) 
+otpkinstl_fw_install_random_key/28 (otpkinstl_fw_install_random_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function otpkinstl_fw_install_random_key/28 is inline copy in otpkinstl_srv_handler/31
+  Availability: local
+  Function flags: count:175377833 (estimated locally) body local
+  Called by: otpkinstl_srv_handler/31 (inlined) (175377833 (estimated locally),0.16 per call) 
+  Calls: fw_gen_random_otp_key.constprop.0/62 (inlined) (12353004 (estimated locally),0.01 per call) 
+fw_encrypt_key/27 (fw_encrypt_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+fw_gen_random_otp_key/26 (fw_gen_random_otp_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+decrypt_cipher_key/25 (decrypt_cipher_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function decrypt_cipher_key/25 is inline copy in otpkinstl_srv_handler/31
+  Availability: local
+  Function flags: count:94623 (estimated locally) body local
+  Called by: fw_encrypt_key.constprop.0/61 (inlined) (94623 (estimated locally),0.00 per call) 
+  Calls: memset_/46 (94623 (estimated locally),0.00 per call) memcpy_/45 (961 (estimated locally),0.00 per call) crc32_mpeg2.constprop.0/63 (4750 (estimated locally),0.00 per call) memcpy_/45 (4750 (estimated locally),0.00 per call) cpt_ske_crypto/42 (23469 (estimated locally),0.00 per call) sysreg_get_otpkey_dec_alg/36 (35416 (estimated locally),0.00 per call) memset_/46 (35416 (estimated locally),0.00 per call) 
+gen_random_otp_key/23 (gen_random_otp_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+encrypt_otp_key/22 (encrypt_otp_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+otpkinstl_check_life_cycle/21 (otpkinstl_check_life_cycle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+write_otp_key/20 (write_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: fw_gen_random_otp_key.constprop.0/62 (298201 (estimated locally),0.00 per call) fw_encrypt_key.constprop.0/61 (3876 (estimated locally),0.00 per call) 
+  Calls: misc_write_otp_data/44 (116203861 (estimated locally),0.11 per call) otp_verify/43 (574129752 (estimated locally),0.53 per call) memcpy_/45 (574129752 (estimated locally),0.53 per call) memcpy_/45 (574129752 (estimated locally),0.53 per call) memcpy_/45 (574129752 (estimated locally),0.53 per call) memset_/46 (574129752 (estimated locally),0.53 per call) 
+cloning crc32_mpeg2/30 to crc32_mpeg2.constprop/63
+    replace map: 1 -> 32, 2 -> 4294967295
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+uint32_t crc32_mpeg2 (const uint8_t * in, uint32_t num, uint32_t crc)
+{
+  uint32_t loop;
+  uint32_t crc_v;
+  const uint8_t * in_p;
+  uint32_t i;
+  unsigned char _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  signed int crc_v.4_4;
+  long unsigned int _5;
+
+  <bb 2> [local count: 14744044]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG in_p => in_12(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG crc_v => crc_13(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG loop => num_14(D)
+  # DEBUG BEGIN_STMT
+  goto <bb 10>; [100.00%]
+
+  <bb 3> [local count: 119292720]:
+  # DEBUG BEGIN_STMT
+  _1 = *in_p_7;
+  _2 = (long unsigned int) _1;
+  _3 = _2 << 24;
+  crc_v_16 = _3 ^ crc_v_10;
+  # DEBUG crc_v => crc_v_16
+  # DEBUG BEGIN_STMT
+  in_p_17 = in_p_7 + 1;
+  # DEBUG in_p => in_p_17
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 8>; [100.00%]
+
+  <bb 4> [local count: 954449104]:
+  # DEBUG BEGIN_STMT
+  crc_v.4_4 = (signed int) crc_v_9;
+  if (crc_v.4_4 < 0)
+    goto <bb 5>; [41.00%]
+  else
+    goto <bb 6>; [59.00%]
+
+  <bb 5> [local count: 391324129]:
+  # DEBUG BEGIN_STMT
+  _5 = crc_v_9 << 1;
+  crc_v_20 = _5 ^ 79764919;
+  # DEBUG crc_v => crc_v_20
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 563124975]:
+  # DEBUG BEGIN_STMT
+  crc_v_19 = crc_v_9 << 1;
+  # DEBUG crc_v => crc_v_19
+
+  <bb 7> [local count: 954449104]:
+  # crc_v_8 = PHI <crc_v_20(5), crc_v_19(6)>
+  # DEBUG crc_v => crc_v_8
+  # DEBUG BEGIN_STMT
+  i_21 = i_6 + 1;
+  # DEBUG i => i_21
+
+  <bb 8> [local count: 1073741824]:
+  # i_6 = PHI <0(3), i_21(7)>
+  # crc_v_9 = PHI <crc_v_16(3), crc_v_8(7)>
+  # DEBUG crc_v => crc_v_9
+  # DEBUG i => i_6
+  # DEBUG BEGIN_STMT
+  if (i_6 != 8)
+    goto <bb 4>; [88.89%]
+  else
+    goto <bb 9>; [11.11%]
+
+  <bb 9> [local count: 119292720]:
+  # DEBUG BEGIN_STMT
+  loop_18 = loop_11 + 4294967295;
+  # DEBUG loop => loop_18
+
+  <bb 10> [local count: 134036764]:
+  # in_p_7 = PHI <in_12(D)(2), in_p_17(9)>
+  # crc_v_10 = PHI <crc_13(D)(2), crc_v_9(9)>
+  # loop_11 = PHI <num_14(D)(2), loop_18(9)>
+  # DEBUG loop => loop_11
+  # DEBUG crc_v => crc_v_10
+  # DEBUG in_p => in_p_7
+  # DEBUG BEGIN_STMT
+  if (loop_11 != 0)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 11>; [11.00%]
+
+  <bb 11> [local count: 14744044]:
+  # DEBUG BEGIN_STMT
+  return crc_v_10;
+
+}
+
+
+uint32_t crc32_mpeg2.constprop (const uint8_t * in)
+{
+  uint32_t i;
+  const uint8_t * in_p;
+  uint32_t crc_v;
+  uint32_t loop;
+  uint32_t num;
+  uint32_t crc;
+  unsigned char _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  signed int crc_v.4_9;
+  long unsigned int _10;
+
+  <bb 12> [local count: 14744044]:
+  # DEBUG crc => 4294967295
+  # DEBUG num => 32
+
+  <bb 2> [local count: 14744044]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG in_p => in_18(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG crc_v => 4294967295
+  # DEBUG BEGIN_STMT
+  # DEBUG loop => 32
+  # DEBUG BEGIN_STMT
+  goto <bb 10>; [100.00%]
+
+  <bb 3> [local count: 119292720]:
+  # DEBUG BEGIN_STMT
+  _2 = *in_p_1;
+  _3 = (long unsigned int) _2;
+  _4 = _3 << 24;
+  crc_v_6 = _4 ^ crc_v_5;
+  # DEBUG crc_v => crc_v_6
+  # DEBUG BEGIN_STMT
+  in_p_7 = in_p_1 + 1;
+  # DEBUG in_p => in_p_7
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  goto <bb 8>; [100.00%]
+
+  <bb 4> [local count: 954449104]:
+  # DEBUG BEGIN_STMT
+  crc_v.4_9 = (signed int) crc_v_8;
+  if (crc_v.4_9 < 0)
+    goto <bb 5>; [41.00%]
+  else
+    goto <bb 6>; [59.00%]
+
+  <bb 5> [local count: 391324129]:
+  # DEBUG BEGIN_STMT
+  _10 = crc_v_8 << 1;
+  crc_v_11 = _10 ^ 79764919;
+  # DEBUG crc_v => crc_v_11
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 563124975]:
+  # DEBUG BEGIN_STMT
+  crc_v_12 = crc_v_8 << 1;
+  # DEBUG crc_v => crc_v_12
+
+  <bb 7> [local count: 954449104]:
+  # crc_v_17 = PHI <crc_v_11(5), crc_v_12(6)>
+  # DEBUG crc_v => crc_v_17
+  # DEBUG BEGIN_STMT
+  i_14 = i_13 + 1;
+  # DEBUG i => i_14
+
+  <bb 8> [local count: 1073741824]:
+  # i_13 = PHI <0(3), i_14(7)>
+  # crc_v_8 = PHI <crc_v_6(3), crc_v_17(7)>
+  # DEBUG crc_v => crc_v_8
+  # DEBUG i => i_13
+  # DEBUG BEGIN_STMT
+  if (i_13 != 8)
+    goto <bb 4>; [88.89%]
+  else
+    goto <bb 9>; [11.11%]
+
+  <bb 9> [local count: 119292720]:
+  # DEBUG BEGIN_STMT
+  loop_16 = loop_15 + 4294967295;
+  # DEBUG loop => loop_16
+
+  <bb 10> [local count: 134036764]:
+  # in_p_1 = PHI <in_18(D)(2), in_p_7(9)>
+  # crc_v_5 = PHI <4294967295(2), crc_v_8(9)>
+  # loop_15 = PHI <32(2), loop_16(9)>
+  # DEBUG loop => loop_15
+  # DEBUG crc_v => crc_v_5
+  # DEBUG in_p => in_p_1
+  # DEBUG BEGIN_STMT
+  if (loop_15 != 0)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 11>; [11.00%]
+
+  <bb 11> [local count: 14744044]:
+  # DEBUG BEGIN_STMT
+  return crc_v_5;
+
+}
+
+
+cloning encrypt_otp_key/22 to encrypt_otp_key.constprop/65
+    replace map: 1 -> 0
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+uint32_t encrypt_otp_key (cpt_ske_alg_e alg, cpt_ske_crypto_e crypto, uint32_t encrypt_logic_keyid, const uint8_t * in, uint8_t * out, uint32_t in_bytes, uint32_t * out_bytes)
+{
+  uint32_t ret;
+  uint16_t encrypt_keyid;
+  short unsigned int encrypt_keyid.3_1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  ret_7 = otpkey_get_phyid (encrypt_logic_keyid_5(D), &encrypt_keyid);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 == 2774162085)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+  # DEBUG BEGIN_STMT
+  encrypt_keyid.3_1 = encrypt_keyid;
+  ret_15 = cpt_ske_crypto (alg_8(D), 1, crypto_9(D), 0B, encrypt_keyid.3_1, 0B, 0, in_10(D), out_11(D), in_bytes_12(D), out_bytes_13(D));
+  # DEBUG ret => ret_15
+
+  <bb 4> [local count: 1073741824]:
+  # ret_2 = PHI <ret_7(2), ret_15(3)>
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  encrypt_keyid ={v} {CLOBBER(eos)};
+  return ret_2;
+
+}
+
+
+uint32_t encrypt_otp_key.constprop (cpt_ske_alg_e alg, uint32_t encrypt_logic_keyid, const uint8_t * in, uint8_t * out, uint32_t in_bytes, uint32_t * out_bytes)
+{
+  uint16_t encrypt_keyid;
+  uint32_t ret;
+  cpt_ske_crypto_e crypto;
+  short unsigned int encrypt_keyid.3_3;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG crypto => 0
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  ret_2 = otpkey_get_phyid (encrypt_logic_keyid_1(D), &encrypt_keyid);
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  if (ret_2 == 2774162085)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+  # DEBUG BEGIN_STMT
+  encrypt_keyid.3_3 = encrypt_keyid;
+  ret_9 = cpt_ske_crypto (alg_4(D), 1, 0, 0B, encrypt_keyid.3_3, 0B, 0, in_5(D), out_6(D), in_bytes_7(D), out_bytes_8(D));
+  # DEBUG ret => ret_9
+
+  <bb 4> [local count: 1073741824]:
+  # ret_10 = PHI <ret_2(2), ret_9(3)>
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  encrypt_keyid ={v} {CLOBBER(eos)};
+  return ret_10;
+
+}
+
+
+cloning otpkinstl_check_life_cycle/21 to otpkinstl_check_life_cycle.isra/66
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t otpkinstl_check_life_cycle (uint32_t key_id, uint32_t key_level)
+{
+  uint32_t life_cycle2;
+  uint32_t life_cycle;
+  uint32_t ret;
+  long unsigned int _1;
+  long unsigned int _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  life_cycle_8 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle => life_cycle_8
+  # DEBUG BEGIN_STMT
+  fid_delay ();
+  # DEBUG BEGIN_STMT
+  life_cycle2_11 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle2 => life_cycle2_11
+  # DEBUG BEGIN_STMT
+  _1 = fid_delay ();
+  if (_1 == 0)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 3>; [67.00%]
+
+  <bb 3> [local count: 719407024]:
+  if (life_cycle_8 != life_cycle2_11)
+    goto <bb 5>; [79.76%]
+  else
+    goto <bb 4>; [20.24%]
+
+  <bb 4> [local count: 145607981]:
+  _2 = fid_delay ();
+  if (_2 == 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 1000937833]:
+  # DEBUG BEGIN_STMT
+  fid_panic ();
+
+  <bb 6> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (life_cycle_8 == 134217728)
+    goto <bb 11>; [34.00%]
+  else
+    goto <bb 7>; [66.00%]
+
+  <bb 7> [local count: 708669599]:
+  if (life_cycle_8 == 268435456)
+    goto <bb 11>; [34.00%]
+  else
+    goto <bb 8>; [66.00%]
+
+  <bb 8> [local count: 467721933]:
+  # DEBUG BEGIN_STMT
+  if (life_cycle_8 == 67108864)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 9>; [66.00%]
+
+  <bb 9> [local count: 362765131]:
+  goto <bb 11>; [100.00%]
+
+  <bb 10> [local count: 159025459]:
+  # DEBUG BEGIN_STMT
+  if (key_level_15(D) == 5)
+    goto <bb 9>; [34.00%]
+  else
+    goto <bb 11>; [66.00%]
+
+  <bb 11> [local count: 1073741822]:
+  # ret_3 = PHI <81(6), 2774162085(9), 10(10), 81(7)>
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t otpkinstl_check_life_cycle.isra (uint32_t key_level)
+{
+  uint32_t ret;
+  uint32_t life_cycle;
+  uint32_t life_cycle2;
+  uint32_t key_id;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 12> [local count: 1073741824]:
+  # DEBUG D#2 s=> key_id
+  # DEBUG key_id => D#2
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  life_cycle_1 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle => life_cycle_1
+  # DEBUG BEGIN_STMT
+  fid_delay ();
+  # DEBUG BEGIN_STMT
+  life_cycle2_2 = sysreg_get_life_cycle ();
+  # DEBUG life_cycle2 => life_cycle2_2
+  # DEBUG BEGIN_STMT
+  _3 = fid_delay ();
+  if (_3 == 0)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 3>; [67.00%]
+
+  <bb 3> [local count: 719407024]:
+  if (life_cycle_1 != life_cycle2_2)
+    goto <bb 5>; [79.76%]
+  else
+    goto <bb 4>; [20.24%]
+
+  <bb 4> [local count: 145607981]:
+  _4 = fid_delay ();
+  if (_4 == 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 5> [local count: 1000937833]:
+  # DEBUG BEGIN_STMT
+  fid_panic ();
+
+  <bb 6> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (life_cycle_1 == 134217728)
+    goto <bb 11>; [34.00%]
+  else
+    goto <bb 7>; [66.00%]
+
+  <bb 7> [local count: 708669599]:
+  if (life_cycle_1 == 268435456)
+    goto <bb 11>; [34.00%]
+  else
+    goto <bb 8>; [66.00%]
+
+  <bb 8> [local count: 467721933]:
+  # DEBUG BEGIN_STMT
+  if (life_cycle_1 == 67108864)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 9>; [66.00%]
+
+  <bb 9> [local count: 362765131]:
+  goto <bb 11>; [100.00%]
+
+  <bb 10> [local count: 159025459]:
+  # DEBUG BEGIN_STMT
+  if (key_level_5(D) == 5)
+    goto <bb 9>; [34.00%]
+  else
+    goto <bb 11>; [66.00%]
+
+  <bb 11> [local count: 1073741822]:
+  # ret_6 = PHI <81(6), 81(7), 2774162085(9), 10(10)>
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return ret_6;
+
+}
+
+
+cloning gen_random_otp_key/23 to gen_random_otp_key.constprop/64
+    replace map: 2 -> 32
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+uint32_t gen_random_otp_key (uint8_t random_key_type, uint8_t * cipher_key, uint32_t key_len, uint32_t encrypt_logic_keyid)
+{
+  cpt_ske_alg_e encrypt_alg;
+  uint32_t otpkey_encrypt_alg_value;
+  uint32_t ret;
+  uint32_t key_length;
+  uint8_t key_buf[128];
+  long unsigned int key_length.1_1;
+  long unsigned int key_length.2_2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  key_length = key_len_7(D);
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_alg => 5
+  # DEBUG BEGIN_STMT
+  otpkey_encrypt_alg_value_10 = sysreg_get_otpkey_dec_alg ();
+  # DEBUG otpkey_encrypt_alg_value => otpkey_encrypt_alg_value_10
+  # DEBUG BEGIN_STMT
+  if (otpkey_encrypt_alg_value_10 != 4096)
+    goto <bb 3>; [66.00%]
+  else
+    goto <bb 4>; [34.00%]
+
+  <bb 3> [local count: 708669600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_alg => 8
+
+  <bb 4> [local count: 1073741824]:
+  # encrypt_alg_4 = PHI <5(2), 8(3)>
+  # DEBUG encrypt_alg => encrypt_alg_4
+  # DEBUG BEGIN_STMT
+  switch (random_key_type_11(D)) <default: <L13>, case 1: <L2>, case 2: <L3>, case 4: <L6>>
+
+  <bb 5> [local count: 268435456]:
+<L2>:
+  # DEBUG BEGIN_STMT
+  ret_23 = cpt_get_rand (cipher_key_15(D), key_len_7(D));
+  # DEBUG ret => ret_23
+  # DEBUG BEGIN_STMT
+  goto <bb 10>; [100.00%]
+
+  <bb 6> [local count: 268435456]:
+<L3>:
+  # DEBUG BEGIN_STMT
+  ret_19 = cpt_sm2_getkey (&key_buf, &key_buf[32]);
+  # DEBUG ret => ret_19
+  # DEBUG BEGIN_STMT
+  if (ret_19 == 2774162085)
+    goto <bb 7>; [20.24%]
+  else
+    goto <bb 10>; [79.76%]
+
+  <bb 7> [local count: 54331336]:
+  # DEBUG BEGIN_STMT
+  key_length.1_1 = key_length;
+  ret_21 = encrypt_otp_key (encrypt_alg_4, 0, encrypt_logic_keyid_14(D), &key_buf, cipher_key_15(D), key_length.1_1, &key_length);
+  # DEBUG ret => ret_21
+  goto <bb 10>; [100.00%]
+
+  <bb 8> [local count: 268435456]:
+<L6>:
+  # DEBUG BEGIN_STMT
+  ret_13 = cpt_eccp_getkey (&secp256r1, &key_buf, &key_buf[32]);
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  if (ret_13 == 2774162085)
+    goto <bb 9>; [20.24%]
+  else
+    goto <bb 10>; [79.76%]
+
+  <bb 9> [local count: 54331336]:
+  # DEBUG BEGIN_STMT
+  key_length.2_2 = key_length;
+  ret_17 = encrypt_otp_key (encrypt_alg_4, 0, encrypt_logic_keyid_14(D), &key_buf, cipher_key_15(D), key_length.2_2, &key_length);
+  # DEBUG ret => ret_17
+
+  <bb 10> [local count: 1073741824]:
+  # ret_3 = PHI <ret_23(5), ret_21(7), ret_17(9), 1(4), ret_19(6), ret_13(8)>
+<L13>:
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_buf
+  # DEBUG val => 0
+  # DEBUG size => 128
+  # DEBUG BEGIN_STMT
+  memset_ (&key_buf, 0, 128);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  key_buf ={v} {CLOBBER(eos)};
+  key_length ={v} {CLOBBER(eos)};
+  return ret_3;
+
+}
+
+
+uint32_t gen_random_otp_key.constprop (uint8_t random_key_type, uint8_t * cipher_key, uint32_t encrypt_logic_keyid)
+{
+  uint8_t key_buf[128];
+  uint32_t key_length;
+  uint32_t ret;
+  uint32_t otpkey_encrypt_alg_value;
+  cpt_ske_alg_e encrypt_alg;
+  uint32_t key_len;
+  long unsigned int key_length.1_6;
+  long unsigned int key_length.2_11;
+
+  <bb 11> [local count: 1073741824]:
+  # DEBUG key_len => 32
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  key_length = 32;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_alg => 5
+  # DEBUG BEGIN_STMT
+  otpkey_encrypt_alg_value_1 = sysreg_get_otpkey_dec_alg ();
+  # DEBUG otpkey_encrypt_alg_value => otpkey_encrypt_alg_value_1
+  # DEBUG BEGIN_STMT
+  if (otpkey_encrypt_alg_value_1 != 4096)
+    goto <bb 3>; [66.00%]
+  else
+    goto <bb 4>; [34.00%]
+
+  <bb 3> [local count: 708669600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_alg => 8
+
+  <bb 4> [local count: 1073741824]:
+  # encrypt_alg_7 = PHI <5(2), 8(3)>
+  # DEBUG encrypt_alg => encrypt_alg_7
+  # DEBUG BEGIN_STMT
+  switch (random_key_type_2(D)) <default: <L3>, case 1: <L0>, case 2: <L1>, case 4: <L2>>
+
+  <bb 5> [local count: 268435456]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  ret_4 = cpt_get_rand (cipher_key_3(D), 32);
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  goto <bb 10>; [100.00%]
+
+  <bb 6> [local count: 268435456]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  ret_5 = cpt_sm2_getkey (&key_buf, &key_buf[32]);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 2774162085)
+    goto <bb 7>; [20.24%]
+  else
+    goto <bb 10>; [79.76%]
+
+  <bb 7> [local count: 54331336]:
+  # DEBUG BEGIN_STMT
+  key_length.1_6 = key_length;
+  ret_9 = encrypt_otp_key (encrypt_alg_7, 0, encrypt_logic_keyid_8(D), &key_buf, cipher_key_3(D), key_length.1_6, &key_length);
+  # DEBUG ret => ret_9
+  goto <bb 10>; [100.00%]
+
+  <bb 8> [local count: 268435456]:
+<L2>:
+  # DEBUG BEGIN_STMT
+  ret_10 = cpt_eccp_getkey (&secp256r1, &key_buf, &key_buf[32]);
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  if (ret_10 == 2774162085)
+    goto <bb 9>; [20.24%]
+  else
+    goto <bb 10>; [79.76%]
+
+  <bb 9> [local count: 54331336]:
+  # DEBUG BEGIN_STMT
+  key_length.2_11 = key_length;
+  ret_12 = encrypt_otp_key (encrypt_alg_7, 0, encrypt_logic_keyid_8(D), &key_buf, cipher_key_3(D), key_length.2_11, &key_length);
+  # DEBUG ret => ret_12
+
+  <bb 10> [local count: 1073741824]:
+  # ret_13 = PHI <1(4), ret_4(5), ret_5(6), ret_9(7), ret_10(8), ret_12(9)>
+<L3>:
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_buf
+  # DEBUG val => 0
+  # DEBUG size => 128
+  # DEBUG BEGIN_STMT
+  memset_ (&key_buf, 0, 128);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  key_buf ={v} {CLOBBER(eos)};
+  key_length ={v} {CLOBBER(eos)};
+  return ret_13;
+
+}
+
+
+cloning fw_gen_random_otp_key/26 to fw_gen_random_otp_key.constprop/62
+    replace map: 2 -> 32
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t fw_gen_random_otp_key (uint8_t random_key_type, const struct ehsm_otp_key_attr_st * key_attr, uint32_t key_len)
+{
+  const long unsigned int key_attr$key_last_flag;
+  const long unsigned int key_attr$key_cycle;
+  const long unsigned int key_attr$key_usage;
+  const long unsigned int key_attr$key_level;
+  uint32_t otp_key_attr;
+  uint32_t encrypt_logic_keyid;
+  uint8_t key_data[32];
+  uint32_t rsp;
+  uint32_t crc;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _27;
+  long unsigned int _33;
+  long unsigned int _34;
+  long unsigned int _36;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG rsp => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 0
+  # DEBUG BEGIN_STMT
+  if (key_attr_14(D) == 0B)
+    goto <bb 9>; [46.53%]
+  else
+    goto <bb 3>; [53.47%]
+
+  <bb 3> [local count: 574129751]:
+  # DEBUG BEGIN_STMT
+  _1 = key_attr_14(D)->key_id;
+  _2 = key_attr_14(D)->key_level;
+  rsp_17 = otpkinstl_check_life_cycle (_1, _2);
+  # DEBUG rsp => rsp_17
+  # DEBUG BEGIN_STMT
+  if (rsp_17 == 2774162085)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 12>; [66.00%]
+
+  <bb 4> [local count: 195204118]:
+  # DEBUG BEGIN_STMT
+  _3 = key_attr_14(D)->key_id;
+  if (_3 != 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 5> [local count: 97602059]:
+  # DEBUG BEGIN_STMT
+  _4 = key_attr_14(D)->key_level;
+  if (_4 == 10)
+    goto <bb 6>; [20.24%]
+  else
+    goto <bb 7>; [79.76%]
+
+  <bb 6> [local count: 19754657]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097153
+  # DEBUG BEGIN_STMT
+  rsp_21 = otpkey_check_usage (2097153, 14, 255, 0);
+  # DEBUG rsp => rsp_21
+  goto <bb 9>; [100.00%]
+
+  <bb 7> [local count: 77847402]:
+  # DEBUG BEGIN_STMT
+  if (_4 == 5)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 12>; [79.76%]
+
+  <bb 8> [local count: 15756314]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097154
+  # DEBUG BEGIN_STMT
+  rsp_19 = otpkey_check_usage (2097154, 14, 255, 0);
+  # DEBUG rsp => rsp_19
+
+  <bb 9> [local count: 632725101]:
+  # rsp_7 = PHI <1(2), 2774162085(4), rsp_21(6), rsp_19(8)>
+  # encrypt_logic_keyid_9 = PHI <0(2), 0(4), 2097153(6), 2097154(8)>
+  # DEBUG encrypt_logic_keyid => encrypt_logic_keyid_9
+  # DEBUG rsp => rsp_7
+  # DEBUG BEGIN_STMT
+  if (rsp_7 == 2774162085)
+    goto <bb 10>; [20.24%]
+  else
+    goto <bb 12>; [79.76%]
+
+  <bb 10> [local count: 128063560]:
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_data
+  # DEBUG val => 0
+  # DEBUG size => 32
+  # DEBUG BEGIN_STMT
+  memset_ (&key_data, 0, 32);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  rsp_26 = gen_random_otp_key (random_key_type_23(D), &key_data, key_len_24(D), encrypt_logic_keyid_9);
+  # DEBUG rsp => rsp_26
+  # DEBUG BEGIN_STMT
+  if (rsp_26 == 2774162085)
+    goto <bb 11>; [20.24%]
+  else
+    goto <bb 12>; [79.76%]
+
+  <bb 11> [local count: 25920064]:
+  # DEBUG BEGIN_STMT
+  key_attr$key_level_10 = key_attr_14(D)->key_level;
+  # DEBUG key_attr$key_level => key_attr$key_level_10
+  key_attr$key_usage_6 = key_attr_14(D)->key_usage;
+  # DEBUG key_attr$key_usage => key_attr$key_usage_6
+  key_attr$key_cycle_13 = key_attr_14(D)->key_cycle;
+  # DEBUG key_attr$key_cycle => key_attr$key_cycle_13
+  key_attr$key_last_flag_31 = key_attr_14(D)->key_last_flag;
+  # DEBUG key_attr$key_last_flag => key_attr$key_last_flag_31
+  # DEBUG BEGIN_STMT
+  _27 = key_attr$key_usage_6 << 8;
+  _33 = key_attr$key_level_10 << 4;
+  _34 = _27 | _33;
+  otp_key_attr_35 = key_attr$key_cycle_13 | _34;
+  # DEBUG otp_key_attr => otp_key_attr_35
+  # DEBUG BEGIN_STMT
+  _36 = key_attr$key_last_flag_31 << 28;
+  otp_key_attr_37 = otp_key_attr_35 | _36;
+  # DEBUG otp_key_attr => otp_key_attr_37
+  # DEBUG BEGIN_STMT
+  otp_key_attr_38 = ~otp_key_attr_37;
+  # DEBUG otp_key_attr => otp_key_attr_38
+  # DEBUG BEGIN_STMT
+  # DEBUG otp_key_attr => NULL
+  # DEBUG key_attr$key_level => NULL
+  # DEBUG key_attr$key_usage => NULL
+  # DEBUG key_attr$key_cycle => NULL
+  # DEBUG key_attr$key_last_flag => NULL
+  # DEBUG word_attr => otp_key_attr_38
+  # DEBUG BEGIN_STMT
+  crc_28 = crc32_mpeg2 (&key_data, 32, 4294967295);
+  # DEBUG crc => crc_28
+  # DEBUG BEGIN_STMT
+  _5 = key_attr_14(D)->key_id;
+  rsp_30 = write_otp_key (_5, otp_key_attr_38, &key_data, crc_28);
+  # DEBUG rsp => rsp_30
+
+  <bb 12> [local count: 1073741824]:
+  # rsp_8 = PHI <rsp_7(9), rsp_26(10), rsp_30(11), 1(7), rsp_17(3)>
+  # DEBUG encrypt_logic_keyid => NULL
+  # DEBUG rsp => rsp_8
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_data
+  # DEBUG val => 0
+  # DEBUG size => 32
+  # DEBUG BEGIN_STMT
+  memset_ (&key_data, 0, 32);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  key_data ={v} {CLOBBER(eos)};
+  return rsp_8;
+
+}
+
+
+uint32_t fw_gen_random_otp_key.constprop (uint8_t random_key_type, const struct ehsm_otp_key_attr_st * key_attr)
+{
+  uint32_t crc;
+  uint32_t rsp;
+  uint8_t key_data[32];
+  uint32_t encrypt_logic_keyid;
+  uint32_t otp_key_attr;
+  const long unsigned int key_attr$key_level;
+  const long unsigned int key_attr$key_usage;
+  const long unsigned int key_attr$key_cycle;
+  const long unsigned int key_attr$key_last_flag;
+  uint32_t key_len;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _5;
+  long unsigned int _6;
+  long unsigned int _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  long unsigned int _21;
+  long unsigned int _25;
+
+  <bb 13> [local count: 1073741822]:
+  # DEBUG key_len => 32
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG rsp => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 0
+  # DEBUG BEGIN_STMT
+  if (key_attr_1(D) == 0B)
+    goto <bb 9>; [46.53%]
+  else
+    goto <bb 3>; [53.47%]
+
+  <bb 3> [local count: 574129751]:
+  # DEBUG BEGIN_STMT
+  _2 = key_attr_1(D)->key_id;
+  _3 = key_attr_1(D)->key_level;
+  rsp_4 = otpkinstl_check_life_cycle (_2, _3);
+  # DEBUG rsp => rsp_4
+  # DEBUG BEGIN_STMT
+  if (rsp_4 == 2774162085)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 12>; [66.00%]
+
+  <bb 4> [local count: 195204118]:
+  # DEBUG BEGIN_STMT
+  _5 = key_attr_1(D)->key_id;
+  if (_5 != 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 5> [local count: 97602059]:
+  # DEBUG BEGIN_STMT
+  _6 = key_attr_1(D)->key_level;
+  if (_6 == 10)
+    goto <bb 6>; [20.24%]
+  else
+    goto <bb 7>; [79.76%]
+
+  <bb 6> [local count: 19754657]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097153
+  # DEBUG BEGIN_STMT
+  rsp_7 = otpkey_check_usage (2097153, 14, 255, 0);
+  # DEBUG rsp => rsp_7
+  goto <bb 9>; [100.00%]
+
+  <bb 7> [local count: 77847402]:
+  # DEBUG BEGIN_STMT
+  if (_6 == 5)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 12>; [79.76%]
+
+  <bb 8> [local count: 15756314]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097154
+  # DEBUG BEGIN_STMT
+  rsp_8 = otpkey_check_usage (2097154, 14, 255, 0);
+  # DEBUG rsp => rsp_8
+
+  <bb 9> [local count: 632725101]:
+  # rsp_9 = PHI <1(2), 2774162085(4), rsp_7(6), rsp_8(8)>
+  # encrypt_logic_keyid_11 = PHI <0(2), 0(4), 2097153(6), 2097154(8)>
+  # DEBUG encrypt_logic_keyid => encrypt_logic_keyid_11
+  # DEBUG rsp => rsp_9
+  # DEBUG BEGIN_STMT
+  if (rsp_9 == 2774162085)
+    goto <bb 10>; [20.24%]
+  else
+    goto <bb 12>; [79.76%]
+
+  <bb 10> [local count: 128063560]:
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_data
+  # DEBUG val => 0
+  # DEBUG size => 32
+  # DEBUG BEGIN_STMT
+  memset_ (&key_data, 0, 32);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  rsp_12 = gen_random_otp_key (random_key_type_10(D), &key_data, 32, encrypt_logic_keyid_11);
+  # DEBUG rsp => rsp_12
+  # DEBUG BEGIN_STMT
+  if (rsp_12 == 2774162085)
+    goto <bb 11>; [20.24%]
+  else
+    goto <bb 12>; [79.76%]
+
+  <bb 11> [local count: 25920064]:
+  # DEBUG BEGIN_STMT
+  key_attr$key_level_13 = key_attr_1(D)->key_level;
+  # DEBUG key_attr$key_level => key_attr$key_level_13
+  key_attr$key_usage_14 = key_attr_1(D)->key_usage;
+  # DEBUG key_attr$key_usage => key_attr$key_usage_14
+  key_attr$key_cycle_15 = key_attr_1(D)->key_cycle;
+  # DEBUG key_attr$key_cycle => key_attr$key_cycle_15
+  key_attr$key_last_flag_16 = key_attr_1(D)->key_last_flag;
+  # DEBUG key_attr$key_last_flag => key_attr$key_last_flag_16
+  # DEBUG BEGIN_STMT
+  _17 = key_attr$key_usage_14 << 8;
+  _18 = key_attr$key_level_13 << 4;
+  _19 = _17 | _18;
+  otp_key_attr_20 = key_attr$key_cycle_15 | _19;
+  # DEBUG otp_key_attr => otp_key_attr_20
+  # DEBUG BEGIN_STMT
+  _21 = key_attr$key_last_flag_16 << 28;
+  otp_key_attr_22 = otp_key_attr_20 | _21;
+  # DEBUG otp_key_attr => otp_key_attr_22
+  # DEBUG BEGIN_STMT
+  otp_key_attr_23 = ~otp_key_attr_22;
+  # DEBUG otp_key_attr => otp_key_attr_23
+  # DEBUG BEGIN_STMT
+  # DEBUG otp_key_attr => NULL
+  # DEBUG key_attr$key_level => NULL
+  # DEBUG key_attr$key_usage => NULL
+  # DEBUG key_attr$key_cycle => NULL
+  # DEBUG key_attr$key_last_flag => NULL
+  # DEBUG word_attr => otp_key_attr_23
+  # DEBUG BEGIN_STMT
+  crc_24 = crc32_mpeg2 (&key_data, 32, 4294967295);
+  # DEBUG crc => crc_24
+  # DEBUG BEGIN_STMT
+  _25 = key_attr_1(D)->key_id;
+  rsp_26 = write_otp_key (_25, otp_key_attr_23, &key_data, crc_24);
+  # DEBUG rsp => rsp_26
+
+  <bb 12> [local count: 1073741824]:
+  # rsp_27 = PHI <rsp_4(3), 1(7), rsp_9(9), rsp_12(10), rsp_26(11)>
+  # DEBUG encrypt_logic_keyid => NULL
+  # DEBUG rsp => rsp_27
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_data
+  # DEBUG val => 0
+  # DEBUG size => 32
+  # DEBUG BEGIN_STMT
+  memset_ (&key_data, 0, 32);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  key_data ={v} {CLOBBER(eos)};
+  return rsp_27;
+
+}
+
+
+updating call of otpkinstl_srv_handler/31 -> fw_gen_random_otp_key.constprop/62: ret_19 = fw_gen_random_otp_key (_11, &key_attr, 32);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_19 = fw_gen_random_otp_key.constprop (_11, &key_attr);
+updating call of otpkinstl_srv_handler/31 -> otpkinstl_check_life_cycle.isra/66: rsp_23 = otpkinstl_check_life_cycle (_21, _22);
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:rsp_23 = otpkinstl_check_life_cycle.isra (_22);
+updating call of otpkinstl_srv_handler/31 -> gen_random_otp_key.constprop/64: rsp_30 = gen_random_otp_key (_11, &key_data, 32, encrypt_logic_keyid_29);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+  updated to:rsp_30 = gen_random_otp_key.constprop (_11, &key_data, encrypt_logic_keyid_29);
+updating call of otpkinstl_srv_handler/31 -> crc32_mpeg2.constprop/63: crc_42 = crc32_mpeg2 (&key_data, 32, 4294967295);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+  updated to:crc_42 = crc32_mpeg2.constprop (&key_data);
+updating call of otpkinstl_srv_handler/31 -> encrypt_otp_key.constprop/65: ret_51 = encrypt_otp_key (encrypt_alg_50, 0, encrypt_logic_keyid_29, &key_buf, &key_data, key_length.1_49, &key_length);
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+  updated to:ret_51 = encrypt_otp_key.constprop (encrypt_alg_50, encrypt_logic_keyid_29, &key_buf, &key_data, key_length.1_49, &key_length);
+updating call of otpkinstl_srv_handler/31 -> encrypt_otp_key.constprop/65: ret_54 = encrypt_otp_key (encrypt_alg_50, 0, encrypt_logic_keyid_29, &key_buf, &key_data, key_length.2_53, &key_length);
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+  updated to:ret_54 = encrypt_otp_key.constprop (encrypt_alg_50, encrypt_logic_keyid_29, &key_buf, &key_data, key_length.2_53, &key_length);
+updating call of otpkinstl_srv_handler/31 -> fw_encrypt_key.constprop/61: ret_68 = fw_encrypt_key (&key_attr, &key_buf, _67);
+  updated to:ret_68 = fw_encrypt_key.constprop (&key_attr, &key_buf, _67);
+cloning fw_encrypt_key/27 to fw_encrypt_key.constprop/61
+uint32_t fw_encrypt_key (const struct ehsm_otp_key_attr_st * key_attr, uint8_t * key, uint32_t in_key_size)
+{
+  const long unsigned int key_attr$key_last_flag;
+  const long unsigned int key_attr$key_cycle;
+  const long unsigned int key_attr$key_usage;
+  const long unsigned int key_attr$key_level;
+  uint32_t otp_key_attr;
+  uint32_t rsp;
+  uint32_t encrypt_logic_keyid;
+  uint8_t key_data[64];
+  uint32_t key_length;
+  uint32_t crc;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  cpt_ske_alg_e iftmp.6_15;
+  long unsigned int _38;
+  long unsigned int _44;
+  long unsigned int _45;
+  long unsigned int _47;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  key_length = 0;
+  # DEBUG BEGIN_STMT
+  key_data = "\x00";
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG key_size => in_key_size_23(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG rsp => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_alg => 5
+  # DEBUG BEGIN_STMT
+  if (key_attr_24(D) == 0B)
+    goto <bb 10>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (key_25(D) == 0B)
+    goto <bb 12>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  # DEBUG BEGIN_STMT
+  if (in_key_size_23(D) != 48)
+    goto <bb 18>; [67.97%]
+  else
+    goto <bb 5>; [32.03%]
+
+  <bb 5> [local count: 168520558]:
+  # DEBUG BEGIN_STMT
+  _1 = key_attr_24(D)->key_id;
+  _2 = key_attr_24(D)->key_level;
+  rsp_27 = otpkinstl_check_life_cycle (_1, _2);
+  # DEBUG rsp => rsp_27
+  # DEBUG BEGIN_STMT
+  if (rsp_27 == 2774162085)
+    goto <bb 6>; [34.00%]
+  else
+    goto <bb 18>; [66.00%]
+
+  <bb 6> [local count: 57296990]:
+  # DEBUG BEGIN_STMT
+  _3 = key_attr_24(D)->key_id;
+  if (_3 != 0)
+    goto <bb 7>; [65.00%]
+  else
+    goto <bb 18>; [35.00%]
+
+  <bb 7> [local count: 37243044]:
+  # DEBUG BEGIN_STMT
+  _4 = key_attr_24(D)->key_level;
+  if (_4 == 10)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 9>; [79.76%]
+
+  <bb 8> [local count: 7537992]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097153
+  # DEBUG BEGIN_STMT
+  rsp_31 = otpkey_check_usage (2097153, 14, 255, 0);
+  # DEBUG rsp => rsp_31
+  goto <bb 12>; [100.00%]
+
+  <bb 9> [local count: 29705052]:
+  # DEBUG BEGIN_STMT
+  if (_4 == 5)
+    goto <bb 11>; [20.24%]
+  else
+    goto <bb 10>; [79.76%]
+
+  <bb 10> [local count: 345815293]:
+  goto <bb 18>; [100.00%]
+
+  <bb 11> [local count: 6012302]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097154
+  # DEBUG BEGIN_STMT
+  rsp_29 = otpkey_check_usage (2097154, 14, 255, 0);
+  # DEBUG rsp => rsp_29
+
+  <bb 12> [local count: 239036076]:
+  # encrypt_logic_keyid_9 = PHI <2097153(8), 2097154(11), 0(3)>
+  # rsp_12 = PHI <rsp_31(8), rsp_29(11), 1(3)>
+  # DEBUG rsp => rsp_12
+  # DEBUG encrypt_logic_keyid => encrypt_logic_keyid_9
+  # DEBUG BEGIN_STMT
+  if (rsp_12 == 2774162085)
+    goto <bb 13>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 13> [local count: 48380902]:
+  # DEBUG BEGIN_STMT
+  _5 = key_attr_24(D)->key_id;
+  _6 = key_attr_24(D)->key_level;
+  rsp_33 = decrypt_cipher_key (_5, key_25(D), in_key_size_23(D), _6, &key_data);
+  # DEBUG rsp => rsp_33
+  # DEBUG BEGIN_STMT
+  # DEBUG key_size => 32
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => key_25(D)
+  # DEBUG src => &key_data
+  # DEBUG size => 32
+  # DEBUG BEGIN_STMT
+  memcpy_ (key_25(D), &key_data, 32);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG rsp => rsp_33
+  # DEBUG key_size => 32
+  # DEBUG BEGIN_STMT
+  if (rsp_33 == 2774162085)
+    goto <bb 14>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 14> [local count: 9792294]:
+  # DEBUG BEGIN_STMT
+  _7 = sysreg_get_otpkey_dec_alg ();
+  if (_7 == 4096)
+    goto <bb 16>; [34.00%]
+  else
+    goto <bb 15>; [66.00%]
+
+  <bb 15> [local count: 6462914]:
+
+  <bb 16> [local count: 9792294]:
+  # iftmp.6_15 = PHI <5(14), 8(15)>
+  # DEBUG encrypt_alg => iftmp.6_15
+  # DEBUG BEGIN_STMT
+  rsp_37 = encrypt_otp_key (iftmp.6_15, 0, encrypt_logic_keyid_9, key_25(D), &key_data, 32, &key_length);
+  # DEBUG rsp => rsp_37
+  # DEBUG BEGIN_STMT
+  if (rsp_37 == 2774162085)
+    goto <bb 17>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 17> [local count: 1981960]:
+  # DEBUG BEGIN_STMT
+  key_attr$key_level_18 = key_attr_24(D)->key_level;
+  # DEBUG key_attr$key_level => key_attr$key_level_18
+  key_attr$key_usage_13 = key_attr_24(D)->key_usage;
+  # DEBUG key_attr$key_usage => key_attr$key_usage_13
+  key_attr$key_cycle_10 = key_attr_24(D)->key_cycle;
+  # DEBUG key_attr$key_cycle => key_attr$key_cycle_10
+  key_attr$key_last_flag_16 = key_attr_24(D)->key_last_flag;
+  # DEBUG key_attr$key_last_flag => key_attr$key_last_flag_16
+  # DEBUG BEGIN_STMT
+  _38 = key_attr$key_usage_13 << 8;
+  _44 = key_attr$key_level_18 << 4;
+  _45 = _38 | _44;
+  otp_key_attr_46 = key_attr$key_cycle_10 | _45;
+  # DEBUG otp_key_attr => otp_key_attr_46
+  # DEBUG BEGIN_STMT
+  _47 = key_attr$key_last_flag_16 << 28;
+  otp_key_attr_48 = otp_key_attr_46 | _47;
+  # DEBUG otp_key_attr => otp_key_attr_48
+  # DEBUG BEGIN_STMT
+  otp_key_attr_49 = ~otp_key_attr_48;
+  # DEBUG otp_key_attr => otp_key_attr_49
+  # DEBUG BEGIN_STMT
+  # DEBUG otp_key_attr => NULL
+  # DEBUG key_attr$key_level => NULL
+  # DEBUG key_attr$key_usage => NULL
+  # DEBUG key_attr$key_cycle => NULL
+  # DEBUG key_attr$key_last_flag => NULL
+  # DEBUG word_attr => otp_key_attr_49
+  # DEBUG BEGIN_STMT
+  crc_39 = crc32_mpeg2 (&key_data, 32, 4294967295);
+  # DEBUG crc => crc_39
+  # DEBUG BEGIN_STMT
+  _8 = key_attr_24(D)->key_id;
+  rsp_41 = write_otp_key (_8, otp_key_attr_49, &key_data, crc_39);
+  # DEBUG rsp => rsp_41
+
+  <bb 18> [local count: 1073741824]:
+  # rsp_14 = PHI <rsp_33(13), rsp_37(16), rsp_41(17), 1(10), rsp_12(12), 83(4), 10(6), rsp_27(5)>
+  # DEBUG encrypt_logic_keyid => NULL
+  # DEBUG key_size => NULL
+  # DEBUG rsp => rsp_14
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_data
+  # DEBUG val => 0
+  # DEBUG size => 64
+  # DEBUG BEGIN_STMT
+  memset_ (&key_data, 0, 64);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  key_length ={v} {CLOBBER(eos)};
+  key_data ={v} {CLOBBER(eos)};
+  return rsp_14;
+
+}
+
+
+uint32_t fw_encrypt_key.constprop (const struct ehsm_otp_key_attr_st * key_attr, uint8_t * key, uint32_t in_key_size)
+{
+  uint32_t crc;
+  uint32_t key_length;
+  uint8_t key_data[64];
+  uint32_t encrypt_logic_keyid;
+  uint32_t rsp;
+  uint32_t otp_key_attr;
+  const long unsigned int key_attr$key_level;
+  const long unsigned int key_attr$key_usage;
+  const long unsigned int key_attr$key_cycle;
+  const long unsigned int key_attr$key_last_flag;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _12;
+  long unsigned int _13;
+  long unsigned int _15;
+  <unnamed type> iftmp.6_16;
+  long unsigned int _23;
+  long unsigned int _24;
+  long unsigned int _25;
+  long unsigned int _27;
+  long unsigned int _31;
+
+  <bb 19> [local count: 1073741822]:
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  key_length = 0;
+  # DEBUG BEGIN_STMT
+  key_data = "\x00";
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG key_size => in_key_size_3(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG rsp => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_alg => 5
+  # DEBUG BEGIN_STMT
+  if (key_attr_1(D) == 0B)
+    goto <bb 10>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (key_2(D) == 0B)
+    goto <bb 12>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  # DEBUG BEGIN_STMT
+  if (in_key_size_3(D) != 48)
+    goto <bb 18>; [67.97%]
+  else
+    goto <bb 5>; [32.03%]
+
+  <bb 5> [local count: 168520558]:
+  # DEBUG BEGIN_STMT
+  _4 = key_attr_1(D)->key_id;
+  _5 = key_attr_1(D)->key_level;
+  rsp_6 = otpkinstl_check_life_cycle (_4, _5);
+  # DEBUG rsp => rsp_6
+  # DEBUG BEGIN_STMT
+  if (rsp_6 == 2774162085)
+    goto <bb 6>; [34.00%]
+  else
+    goto <bb 18>; [66.00%]
+
+  <bb 6> [local count: 57296990]:
+  # DEBUG BEGIN_STMT
+  _7 = key_attr_1(D)->key_id;
+  if (_7 != 0)
+    goto <bb 7>; [65.00%]
+  else
+    goto <bb 18>; [35.00%]
+
+  <bb 7> [local count: 37243044]:
+  # DEBUG BEGIN_STMT
+  _8 = key_attr_1(D)->key_level;
+  if (_8 == 10)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 9>; [79.76%]
+
+  <bb 8> [local count: 7537992]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097153
+  # DEBUG BEGIN_STMT
+  rsp_9 = otpkey_check_usage (2097153, 14, 255, 0);
+  # DEBUG rsp => rsp_9
+  goto <bb 12>; [100.00%]
+
+  <bb 9> [local count: 29705052]:
+  # DEBUG BEGIN_STMT
+  if (_8 == 5)
+    goto <bb 11>; [20.24%]
+  else
+    goto <bb 10>; [79.76%]
+
+  <bb 10> [local count: 345815293]:
+  goto <bb 18>; [100.00%]
+
+  <bb 11> [local count: 6012302]:
+  # DEBUG BEGIN_STMT
+  # DEBUG encrypt_logic_keyid => 2097154
+  # DEBUG BEGIN_STMT
+  rsp_10 = otpkey_check_usage (2097154, 14, 255, 0);
+  # DEBUG rsp => rsp_10
+
+  <bb 12> [local count: 239036076]:
+  # encrypt_logic_keyid_17 = PHI <0(3), 2097153(8), 2097154(11)>
+  # rsp_11 = PHI <1(3), rsp_9(8), rsp_10(11)>
+  # DEBUG rsp => rsp_11
+  # DEBUG encrypt_logic_keyid => encrypt_logic_keyid_17
+  # DEBUG BEGIN_STMT
+  if (rsp_11 == 2774162085)
+    goto <bb 13>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 13> [local count: 48380902]:
+  # DEBUG BEGIN_STMT
+  _12 = key_attr_1(D)->key_id;
+  _13 = key_attr_1(D)->key_level;
+  rsp_14 = decrypt_cipher_key (_12, key_2(D), in_key_size_3(D), _13, &key_data);
+  # DEBUG rsp => rsp_14
+  # DEBUG BEGIN_STMT
+  # DEBUG key_size => 32
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => key_2(D)
+  # DEBUG src => &key_data
+  # DEBUG size => 32
+  # DEBUG BEGIN_STMT
+  memcpy_ (key_2(D), &key_data, 32);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG rsp => rsp_14
+  # DEBUG key_size => 32
+  # DEBUG BEGIN_STMT
+  if (rsp_14 == 2774162085)
+    goto <bb 14>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 14> [local count: 9792294]:
+  # DEBUG BEGIN_STMT
+  _15 = sysreg_get_otpkey_dec_alg ();
+  if (_15 == 4096)
+    goto <bb 16>; [34.00%]
+  else
+    goto <bb 15>; [66.00%]
+
+  <bb 15> [local count: 6462914]:
+
+  <bb 16> [local count: 9792294]:
+  # iftmp.6_16 = PHI <5(14), 8(15)>
+  # DEBUG encrypt_alg => iftmp.6_16
+  # DEBUG BEGIN_STMT
+  rsp_18 = encrypt_otp_key (iftmp.6_16, 0, encrypt_logic_keyid_17, key_2(D), &key_data, 32, &key_length);
+  # DEBUG rsp => rsp_18
+  # DEBUG BEGIN_STMT
+  if (rsp_18 == 2774162085)
+    goto <bb 17>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 17> [local count: 1981960]:
+  # DEBUG BEGIN_STMT
+  key_attr$key_level_19 = key_attr_1(D)->key_level;
+  # DEBUG key_attr$key_level => key_attr$key_level_19
+  key_attr$key_usage_20 = key_attr_1(D)->key_usage;
+  # DEBUG key_attr$key_usage => key_attr$key_usage_20
+  key_attr$key_cycle_21 = key_attr_1(D)->key_cycle;
+  # DEBUG key_attr$key_cycle => key_attr$key_cycle_21
+  key_attr$key_last_flag_22 = key_attr_1(D)->key_last_flag;
+  # DEBUG key_attr$key_last_flag => key_attr$key_last_flag_22
+  # DEBUG BEGIN_STMT
+  _23 = key_attr$key_usage_20 << 8;
+  _24 = key_attr$key_level_19 << 4;
+  _25 = _23 | _24;
+  otp_key_attr_26 = key_attr$key_cycle_21 | _25;
+  # DEBUG otp_key_attr => otp_key_attr_26
+  # DEBUG BEGIN_STMT
+  _27 = key_attr$key_last_flag_22 << 28;
+  otp_key_attr_28 = otp_key_attr_26 | _27;
+  # DEBUG otp_key_attr => otp_key_attr_28
+  # DEBUG BEGIN_STMT
+  otp_key_attr_29 = ~otp_key_attr_28;
+  # DEBUG otp_key_attr => otp_key_attr_29
+  # DEBUG BEGIN_STMT
+  # DEBUG otp_key_attr => NULL
+  # DEBUG key_attr$key_level => NULL
+  # DEBUG key_attr$key_usage => NULL
+  # DEBUG key_attr$key_cycle => NULL
+  # DEBUG key_attr$key_last_flag => NULL
+  # DEBUG word_attr => otp_key_attr_29
+  # DEBUG BEGIN_STMT
+  crc_30 = crc32_mpeg2 (&key_data, 32, 4294967295);
+  # DEBUG crc => crc_30
+  # DEBUG BEGIN_STMT
+  _31 = key_attr_1(D)->key_id;
+  rsp_32 = write_otp_key (_31, otp_key_attr_29, &key_data, crc_30);
+  # DEBUG rsp => rsp_32
+
+  <bb 18> [local count: 1073741824]:
+  # rsp_33 = PHI <83(4), rsp_6(5), 10(6), 1(10), rsp_11(12), rsp_14(13), rsp_18(16), rsp_32(17)>
+  # DEBUG encrypt_logic_keyid => NULL
+  # DEBUG key_size => NULL
+  # DEBUG rsp => rsp_33
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &key_data
+  # DEBUG val => 0
+  # DEBUG size => 64
+  # DEBUG BEGIN_STMT
+  memset_ (&key_data, 0, 64);
+  # DEBUG dest => NULL
+  # DEBUG val => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  key_length ={v} {CLOBBER(eos)};
+  key_data ={v} {CLOBBER(eos)};
+  return rsp_33;
+
+}
+
+
+updating call of otpkinstl_srv_handler/31 -> otpkinstl_check_life_cycle.isra/66: rsp_72 = otpkinstl_check_life_cycle (_70, _71);
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:rsp_72 = otpkinstl_check_life_cycle.isra (_71);
+updating call of otpkinstl_srv_handler/31 -> encrypt_otp_key.constprop/65: rsp_84 = encrypt_otp_key (iftmp.6_82, 0, encrypt_logic_keyid_83, &key_buf, &key_data, 32, &key_length);
+    m_always_copy_start: 7
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+  updated to:rsp_84 = encrypt_otp_key.constprop (iftmp.6_82, encrypt_logic_keyid_83, &key_buf, &key_data, 32, &key_length);
+updating call of otpkinstl_srv_handler/31 -> crc32_mpeg2.constprop/63: crc_96 = crc32_mpeg2 (&key_data, 32, 4294967295);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+  updated to:crc_96 = crc32_mpeg2.constprop (&key_data);
+updating call of otpkinstl_srv_handler/31 -> crc32_mpeg2.constprop/63: tmp_104 = crc32_mpeg2 (&key, 32, 4294967295);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+  updated to:tmp_104 = crc32_mpeg2.constprop (&key);
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+otpkinstl_check_life_cycle.isra.0/66 (otpkinstl_check_life_cycle.isra)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.otpkinstl_check_life_cycle.isra.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+encrypt_otp_key.constprop.0/65 (encrypt_otp_key.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.encrypt_otp_key.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+crc32_mpeg2.constprop.0/63 (crc32_mpeg2.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.crc32_mpeg2.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:14744044 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 
+mmap_read_remote_data/47 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/46 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/45 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+misc_write_otp_data/44 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otp_verify/43 (otp_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_crypto/42 (cpt_ske_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_get_phyid/41 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+secp256r1/40 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_eccp_getkey/39 (cpt_eccp_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_getkey/38 (cpt_sm2_getkey)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_get_rand/37 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/36 (sysreg_get_otpkey_dec_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_panic/35 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_delay/34 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/33 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_check_usage/32 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkinstl_srv_handler/31 (otpkinstl_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.otpkinstl_srv_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally)
+  Called by: 
+  Calls: 
+crc32_mpeg2/30 (crc32_mpeg2)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:14744044 (estimated locally)
+  Called by: 
+  Calls: 
+fw_encrypt_key/27 (fw_encrypt_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+fw_gen_random_otp_key/26 (fw_gen_random_otp_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+gen_random_otp_key/23 (gen_random_otp_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+encrypt_otp_key/22 (encrypt_otp_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+otpkinstl_check_life_cycle/21 (otpkinstl_check_life_cycle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+write_otp_key/20 (write_otp_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.write_otp_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 

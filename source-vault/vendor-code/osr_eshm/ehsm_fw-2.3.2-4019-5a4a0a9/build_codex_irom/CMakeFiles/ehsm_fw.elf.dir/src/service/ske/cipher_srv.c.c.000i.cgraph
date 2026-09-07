@@ -1,0 +1,3655 @@
+Trivially needed symbols: ske_srv_cipher_handler/65 ske_srv_cipher_init/64
+
+
+Initial Symbol table:
+
+cpt_get_ske_xts_ske_ctx/82 (cpt_get_ske_xts_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 get_xts_cipher_ctx/49 
+  Calls: 
+cpt_ske_xts_final/81 (cpt_ske_xts_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_xts_update_including_last_2_blocks/80 (cpt_ske_xts_update_including_last_2_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_dma_xts_update_blocks/79 (cpt_ske_dma_xts_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_update/59 xts_dma_final_update_blocks/56 
+  Calls: 
+cpt_ske_dma_xts_init/78 (cpt_ske_dma_xts_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 
+  Calls: 
+cpt_ske_dma_init/77 (cpt_ske_dma_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_init/52 
+  Calls: 
+mmap_write_remote_data/76 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 xts_cpu_final/57 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_clear_ske_ctx_key/75 (cpt_clear_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_ske_dma_update_blocks/74 (cpt_ske_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_update/53 
+  Calls: 
+cpt_set_ske_ctx_key/73 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 get_non_xts_cipher_ctx/47 
+  Calls: 
+cpt_ske_dma_final/72 (cpt_ske_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+cpt_ske_dma_update_including_last_block/71 (cpt_ske_dma_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+memset_/70 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+kms_read_key/69 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_get_key_from_key_handle/43 
+  Calls: 
+mmap_read_remote_data/68 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 xts_cpu_final/57 get_non_xts_cipher_ctx/47 cipher_get_iv/45 cipher_get_key/44 
+  Calls: 
+cpt_ske_get_block_byte_len/67 (cpt_ske_get_block_byte_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_check_param/40 non_xts_cipher_check_output_buffer_sz/41 
+  Calls: 
+cpt_ske_dma_crypto/66 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_onepass/55 
+  Calls: 
+ske_srv_cipher_handler/65 (ske_srv_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 cipher_get_hdl/39 cmd_check_process_mode/22 
+ske_srv_cipher_init/64 (ske_srv_cipher_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fd7a9049880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: xts_hdl_init/63 non_xts_hdl_init/62 
+xts_hdl_init/63 (xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049880
+  References: xts_hdl/38 (write) cipher_xts_init/58 (addr) xts_hdl/38 (write) cipher_xts_update/59 (addr) xts_hdl/38 (write) cipher_xts_final/60 (addr) xts_hdl/38 (write) cipher_xts_onepass/61 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+non_xts_hdl_init/62 (non_xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049660
+  References: non_xts_hdl/37 (write) cipher_non_xts_init/52 (addr) non_xts_hdl/37 (write) cipher_non_xts_update/53 (addr) non_xts_hdl/37 (write) cipher_non_xts_final/54 (addr) non_xts_hdl/37 (write) cipher_non_xts_onepass/55 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+cipher_xts_onepass/61 (cipher_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9049330
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 xts_cpu_final/57 xts_dma_final_update_blocks/56 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 xts_cipher_check_output_buffer_sz/42 get_kms_ske_alg/30 get_ske_alg/27 
+cipher_xts_final/60 (cipher_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9049220
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: xts_cpu_final/57 xts_dma_final_update_blocks/56 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_update/59 (cipher_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9049110
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_xts_cipher_ctx/48 cpt_ske_dma_xts_update_blocks/79 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_init/58 (cipher_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9017280
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_xts_cipher_ctx/48 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_alg/27 
+xts_cpu_final/57 (xts_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_xts_final/81 mmap_write_remote_data/76 cpt_ske_xts_update_including_last_2_blocks/80 mmap_read_remote_data/68 
+xts_dma_final_update_blocks/56 (xts_dma_final_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_dma_xts_update_blocks/79 
+cipher_non_xts_onepass/55 (cipher_non_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9026cc0
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 cpt_ske_dma_crypto/66 cipher_get_iv/45 cipher_get_key/44 non_xts_cipher_check_output_buffer_sz/41 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_non_xts_final/54 (cipher_non_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9026bb0
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: cpt_ske_dma_final/72 cpt_ske_dma_update_including_last_block/71 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_update/53 (cipher_non_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9026aa0
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_non_xts_cipher_ctx/46 cpt_ske_dma_update_blocks/74 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_init/52 (cipher_non_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fd7a9017200
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_non_xts_cipher_ctx/46 cpt_ske_dma_init/77 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_srv_stepwise_handler/51 (cipher_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+cipher_srv_onepass/50 (cipher_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+get_xts_cipher_ctx/49 (get_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cpt_get_ske_xts_ske_ctx/82 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_xts_cipher_ctx/48 (push_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_update/59 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 cpt_get_ske_xts_ske_ctx/82 
+get_non_xts_cipher_ctx/47 (get_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_non_xts_cipher_ctx/46 (push_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_update/53 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 
+cipher_get_iv/45 (cipher_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9004770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: mmap_read_remote_data/68 
+cipher_get_key/44 (cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: cipher_get_key_from_key_handle/43 mmap_read_remote_data/68 
+cipher_get_key_from_key_handle/43 (cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_get_key/44 
+  Calls: kms_read_key/69 
+xts_cipher_check_output_buffer_sz/42 (xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: 
+non_xts_cipher_check_output_buffer_sz/41 (non_xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 cipher_non_xts_onepass/55 
+  Calls: cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_check_param/40 (cipher_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_srv_stepwise_handler/51 cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 
+  Calls: cmd_check_direction/24 cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_get_hdl/39 (cipher_get_hdl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026880
+  References: non_xts_hdl/37 (addr) xts_hdl/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+xts_hdl/38 (xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049880
+  References: 
+  Referring: xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+non_xts_hdl/37 (non_xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9049660
+  References: 
+  Referring: non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_write_volatile_u32/36 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/35 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/34 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/33 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: memset_/70 
+util_memcpy/31 (util_memcpy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9004ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9004550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9004440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9004330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 non_xts_cipher_check_output_buffer_sz/41 cipher_non_xts_onepass/55 
+  Calls: 
+get_curve_param_type/26 (get_curve_param_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_lib_hash_alg/25 (get_lib_hash_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9026990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fd7a9004cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+crypto_release_ahb_dma/21 (crypto_release_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_using_ahb_dma/20 (crypto_using_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_get_ahb_dma_cfg_reg/19 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/18 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/17 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/16 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/15 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/14 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_lock_reg/13 (sysreg_lock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_unlock_reg/12 (sysreg_unlock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_config_sm_en/11 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/10 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/9 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/8 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/36 util_read_volatile_u32/35 util_u32_copy/34 util_memcmp/33 util_memcpy/31 get_curve_param_type/26 get_lib_hash_alg/25 cmd_check_process_mode_and_msg_type/23 crypto_release_ahb_dma/21 crypto_using_ahb_dma/20 crypto_get_ahb_dma_cfg_reg/19 check_addr_not_word_align/18 GET_BYTE_LEN/17 GET_WORD_LEN/16 GET_MAX_LEN/15 CAST2UINT32/14 sysreg_lock_reg/13 sysreg_unlock_reg/12 sysreg_config_sm_en/11 sysreg_umask_sm_lock/10 sysreg_enable_sm_lock/9 sysreg_enable_fun_lock/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+cpt_get_ske_xts_ske_ctx/82 (cpt_get_ske_xts_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 get_xts_cipher_ctx/49 
+  Calls: 
+cpt_ske_xts_final/81 (cpt_ske_xts_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_xts_update_including_last_2_blocks/80 (cpt_ske_xts_update_including_last_2_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_dma_xts_update_blocks/79 (cpt_ske_dma_xts_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_update/59 xts_dma_final_update_blocks/56 
+  Calls: 
+cpt_ske_dma_xts_init/78 (cpt_ske_dma_xts_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 
+  Calls: 
+cpt_ske_dma_init/77 (cpt_ske_dma_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_init/52 
+  Calls: 
+mmap_write_remote_data/76 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 xts_cpu_final/57 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_clear_ske_ctx_key/75 (cpt_clear_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_ske_dma_update_blocks/74 (cpt_ske_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_update/53 
+  Calls: 
+cpt_set_ske_ctx_key/73 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 get_non_xts_cipher_ctx/47 
+  Calls: 
+cpt_ske_dma_final/72 (cpt_ske_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+cpt_ske_dma_update_including_last_block/71 (cpt_ske_dma_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+memset_/70 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+kms_read_key/69 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_get_key_from_key_handle/43 
+  Calls: 
+mmap_read_remote_data/68 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 xts_cpu_final/57 get_non_xts_cipher_ctx/47 cipher_get_iv/45 cipher_get_key/44 
+  Calls: 
+cpt_ske_get_block_byte_len/67 (cpt_ske_get_block_byte_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_check_param/40 non_xts_cipher_check_output_buffer_sz/41 
+  Calls: 
+cpt_ske_dma_crypto/66 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_onepass/55 
+  Calls: 
+ske_srv_cipher_handler/65 (ske_srv_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 cipher_get_hdl/39 cmd_check_process_mode/22 
+ske_srv_cipher_init/64 (ske_srv_cipher_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: xts_hdl_init/63 non_xts_hdl_init/62 
+xts_hdl_init/63 (xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: xts_hdl/38 (write) cipher_xts_init/58 (addr) xts_hdl/38 (write) cipher_xts_update/59 (addr) xts_hdl/38 (write) cipher_xts_final/60 (addr) xts_hdl/38 (write) cipher_xts_onepass/61 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+non_xts_hdl_init/62 (non_xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: non_xts_hdl/37 (write) cipher_non_xts_init/52 (addr) non_xts_hdl/37 (write) cipher_non_xts_update/53 (addr) non_xts_hdl/37 (write) cipher_non_xts_final/54 (addr) non_xts_hdl/37 (write) cipher_non_xts_onepass/55 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+cipher_xts_onepass/61 (cipher_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 xts_cpu_final/57 xts_dma_final_update_blocks/56 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 xts_cipher_check_output_buffer_sz/42 get_kms_ske_alg/30 get_ske_alg/27 
+cipher_xts_final/60 (cipher_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: xts_cpu_final/57 xts_dma_final_update_blocks/56 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_update/59 (cipher_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_xts_cipher_ctx/48 cpt_ske_dma_xts_update_blocks/79 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_init/58 (cipher_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_xts_cipher_ctx/48 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_alg/27 
+xts_cpu_final/57 (xts_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_xts_final/81 mmap_write_remote_data/76 cpt_ske_xts_update_including_last_2_blocks/80 mmap_read_remote_data/68 
+xts_dma_final_update_blocks/56 (xts_dma_final_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_dma_xts_update_blocks/79 
+cipher_non_xts_onepass/55 (cipher_non_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 cpt_ske_dma_crypto/66 cipher_get_iv/45 cipher_get_key/44 non_xts_cipher_check_output_buffer_sz/41 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_non_xts_final/54 (cipher_non_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: cpt_ske_dma_final/72 cpt_ske_dma_update_including_last_block/71 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_update/53 (cipher_non_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_non_xts_cipher_ctx/46 cpt_ske_dma_update_blocks/74 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_init/52 (cipher_non_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_non_xts_cipher_ctx/46 cpt_ske_dma_init/77 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_srv_stepwise_handler/51 (cipher_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+cipher_srv_onepass/50 (cipher_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+get_xts_cipher_ctx/49 (get_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cpt_get_ske_xts_ske_ctx/82 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_xts_cipher_ctx/48 (push_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_update/59 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 cpt_get_ske_xts_ske_ctx/82 
+get_non_xts_cipher_ctx/47 (get_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_non_xts_cipher_ctx/46 (push_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_update/53 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 
+cipher_get_iv/45 (cipher_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: mmap_read_remote_data/68 
+cipher_get_key/44 (cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: cipher_get_key_from_key_handle/43 mmap_read_remote_data/68 
+cipher_get_key_from_key_handle/43 (cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_get_key/44 
+  Calls: kms_read_key/69 
+xts_cipher_check_output_buffer_sz/42 (xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: 
+non_xts_cipher_check_output_buffer_sz/41 (non_xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 cipher_non_xts_onepass/55 
+  Calls: cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_check_param/40 (cipher_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_srv_stepwise_handler/51 cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 
+  Calls: cmd_check_direction/24 cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_get_hdl/39 (cipher_get_hdl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: non_xts_hdl/37 (addr) xts_hdl/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+xts_hdl/38 (xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+non_xts_hdl/37 (non_xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: memset_/70 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 non_xts_cipher_check_output_buffer_sz/41 cipher_non_xts_onepass/55 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+
+
+Initial Symbol table:
+
+cpt_get_ske_xts_ske_ctx/82 (cpt_get_ske_xts_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 get_xts_cipher_ctx/49 
+  Calls: 
+cpt_ske_xts_final/81 (cpt_ske_xts_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_xts_update_including_last_2_blocks/80 (cpt_ske_xts_update_including_last_2_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_dma_xts_update_blocks/79 (cpt_ske_dma_xts_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_update/59 xts_dma_final_update_blocks/56 
+  Calls: 
+cpt_ske_dma_xts_init/78 (cpt_ske_dma_xts_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 
+  Calls: 
+cpt_ske_dma_init/77 (cpt_ske_dma_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_init/52 
+  Calls: 
+mmap_write_remote_data/76 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 xts_cpu_final/57 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_clear_ske_ctx_key/75 (cpt_clear_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_ske_dma_update_blocks/74 (cpt_ske_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_update/53 
+  Calls: 
+cpt_set_ske_ctx_key/73 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 get_non_xts_cipher_ctx/47 
+  Calls: 
+cpt_ske_dma_final/72 (cpt_ske_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+cpt_ske_dma_update_including_last_block/71 (cpt_ske_dma_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+memset_/70 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+kms_read_key/69 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_get_key_from_key_handle/43 
+  Calls: 
+mmap_read_remote_data/68 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 xts_cpu_final/57 get_non_xts_cipher_ctx/47 cipher_get_iv/45 cipher_get_key/44 
+  Calls: 
+cpt_ske_get_block_byte_len/67 (cpt_ske_get_block_byte_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_check_param/40 non_xts_cipher_check_output_buffer_sz/41 
+  Calls: 
+cpt_ske_dma_crypto/66 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_onepass/55 
+  Calls: 
+ske_srv_cipher_handler/65 (ske_srv_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 cipher_get_hdl/39 cmd_check_process_mode/22 
+ske_srv_cipher_init/64 (ske_srv_cipher_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: xts_hdl_init/63 non_xts_hdl_init/62 
+xts_hdl_init/63 (xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: xts_hdl/38 (write) cipher_xts_init/58 (addr) xts_hdl/38 (write) cipher_xts_update/59 (addr) xts_hdl/38 (write) cipher_xts_final/60 (addr) xts_hdl/38 (write) cipher_xts_onepass/61 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+non_xts_hdl_init/62 (non_xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: non_xts_hdl/37 (write) cipher_non_xts_init/52 (addr) non_xts_hdl/37 (write) cipher_non_xts_update/53 (addr) non_xts_hdl/37 (write) cipher_non_xts_final/54 (addr) non_xts_hdl/37 (write) cipher_non_xts_onepass/55 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+cipher_xts_onepass/61 (cipher_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 xts_cpu_final/57 xts_dma_final_update_blocks/56 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 xts_cipher_check_output_buffer_sz/42 get_kms_ske_alg/30 get_ske_alg/27 
+cipher_xts_final/60 (cipher_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: xts_cpu_final/57 xts_dma_final_update_blocks/56 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_update/59 (cipher_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_xts_cipher_ctx/48 cpt_ske_dma_xts_update_blocks/79 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_init/58 (cipher_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_xts_cipher_ctx/48 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_alg/27 
+xts_cpu_final/57 (xts_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_xts_final/81 mmap_write_remote_data/76 cpt_ske_xts_update_including_last_2_blocks/80 mmap_read_remote_data/68 
+xts_dma_final_update_blocks/56 (xts_dma_final_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_dma_xts_update_blocks/79 
+cipher_non_xts_onepass/55 (cipher_non_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 cpt_ske_dma_crypto/66 cipher_get_iv/45 cipher_get_key/44 non_xts_cipher_check_output_buffer_sz/41 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_non_xts_final/54 (cipher_non_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: cpt_ske_dma_final/72 cpt_ske_dma_update_including_last_block/71 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_update/53 (cipher_non_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_non_xts_cipher_ctx/46 cpt_ske_dma_update_blocks/74 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_init/52 (cipher_non_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_non_xts_cipher_ctx/46 cpt_ske_dma_init/77 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_srv_stepwise_handler/51 (cipher_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+cipher_srv_onepass/50 (cipher_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+get_xts_cipher_ctx/49 (get_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cpt_get_ske_xts_ske_ctx/82 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_xts_cipher_ctx/48 (push_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_update/59 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 cpt_get_ske_xts_ske_ctx/82 
+get_non_xts_cipher_ctx/47 (get_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_non_xts_cipher_ctx/46 (push_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_update/53 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 
+cipher_get_iv/45 (cipher_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: mmap_read_remote_data/68 
+cipher_get_key/44 (cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: cipher_get_key_from_key_handle/43 mmap_read_remote_data/68 
+cipher_get_key_from_key_handle/43 (cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_get_key/44 
+  Calls: kms_read_key/69 
+xts_cipher_check_output_buffer_sz/42 (xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: 
+non_xts_cipher_check_output_buffer_sz/41 (non_xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 cipher_non_xts_onepass/55 
+  Calls: cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_check_param/40 (cipher_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_srv_stepwise_handler/51 cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 
+  Calls: cmd_check_direction/24 cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_get_hdl/39 (cipher_get_hdl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: non_xts_hdl/37 (addr) xts_hdl/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+xts_hdl/38 (xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+non_xts_hdl/37 (non_xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: memset_/70 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 non_xts_cipher_check_output_buffer_sz/41 cipher_non_xts_onepass/55 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpt_get_ske_xts_ske_ctx/82 (cpt_get_ske_xts_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 get_xts_cipher_ctx/49 
+  Calls: 
+cpt_ske_xts_final/81 (cpt_ske_xts_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_xts_update_including_last_2_blocks/80 (cpt_ske_xts_update_including_last_2_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: xts_cpu_final/57 
+  Calls: 
+cpt_ske_dma_xts_update_blocks/79 (cpt_ske_dma_xts_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_update/59 xts_dma_final_update_blocks/56 
+  Calls: 
+cpt_ske_dma_xts_init/78 (cpt_ske_dma_xts_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 
+  Calls: 
+cpt_ske_dma_init/77 (cpt_ske_dma_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_init/52 
+  Calls: 
+mmap_write_remote_data/76 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 xts_cpu_final/57 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_clear_ske_ctx_key/75 (cpt_clear_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 push_non_xts_cipher_ctx/46 
+  Calls: 
+cpt_ske_dma_update_blocks/74 (cpt_ske_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_update/53 
+  Calls: 
+cpt_set_ske_ctx_key/73 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 get_non_xts_cipher_ctx/47 
+  Calls: 
+cpt_ske_dma_final/72 (cpt_ske_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+cpt_ske_dma_update_including_last_block/71 (cpt_ske_dma_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_final/54 
+  Calls: 
+memset_/70 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+kms_read_key/69 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_get_key_from_key_handle/43 
+  Calls: 
+mmap_read_remote_data/68 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 xts_cpu_final/57 get_non_xts_cipher_ctx/47 cipher_get_iv/45 cipher_get_key/44 
+  Calls: 
+cpt_ske_get_block_byte_len/67 (cpt_ske_get_block_byte_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_check_param/40 non_xts_cipher_check_output_buffer_sz/41 
+  Calls: 
+cpt_ske_dma_crypto/66 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: cipher_non_xts_onepass/55 
+  Calls: 
+ske_srv_cipher_handler/65 (ske_srv_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 cipher_get_hdl/39 cmd_check_process_mode/22 
+ske_srv_cipher_init/64 (ske_srv_cipher_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: xts_hdl_init/63 non_xts_hdl_init/62 
+xts_hdl_init/63 (xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: xts_hdl/38 (write) cipher_xts_init/58 (addr) xts_hdl/38 (write) cipher_xts_update/59 (addr) xts_hdl/38 (write) cipher_xts_final/60 (addr) xts_hdl/38 (write) cipher_xts_onepass/61 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+non_xts_hdl_init/62 (non_xts_hdl_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: non_xts_hdl/37 (write) cipher_non_xts_init/52 (addr) non_xts_hdl/37 (write) cipher_non_xts_update/53 (addr) non_xts_hdl/37 (write) cipher_non_xts_final/54 (addr) non_xts_hdl/37 (write) cipher_non_xts_onepass/55 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_init/64 
+  Calls: 
+cipher_xts_onepass/61 (cipher_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 xts_cpu_final/57 xts_dma_final_update_blocks/56 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 xts_cipher_check_output_buffer_sz/42 get_kms_ske_alg/30 get_ske_alg/27 
+cipher_xts_final/60 (cipher_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: xts_cpu_final/57 xts_dma_final_update_blocks/56 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_update/59 (cipher_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_xts_cipher_ctx/48 cpt_ske_dma_xts_update_blocks/79 get_xts_cipher_ctx/49 xts_cipher_check_output_buffer_sz/42 
+cipher_xts_init/58 (cipher_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: xts_hdl_init/63 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_xts_cipher_ctx/48 cpt_ske_dma_xts_init/78 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_alg/27 
+xts_cpu_final/57 (xts_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_xts_final/81 mmap_write_remote_data/76 cpt_ske_xts_update_including_last_2_blocks/80 mmap_read_remote_data/68 
+xts_dma_final_update_blocks/56 (xts_dma_final_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: cpt_ske_dma_xts_update_blocks/79 
+cipher_non_xts_onepass/55 (cipher_non_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 cpt_ske_dma_crypto/66 cipher_get_iv/45 cipher_get_key/44 non_xts_cipher_check_output_buffer_sz/41 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_non_xts_final/54 (cipher_non_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: cpt_ske_dma_final/72 cpt_ske_dma_update_including_last_block/71 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_update/53 (cipher_non_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: push_non_xts_cipher_ctx/46 cpt_ske_dma_update_blocks/74 get_non_xts_cipher_ctx/47 non_xts_cipher_check_output_buffer_sz/41 
+cipher_non_xts_init/52 (cipher_non_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: non_xts_hdl_init/62 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/32 push_non_xts_cipher_ctx/46 cpt_ske_dma_init/77 cipher_get_iv/45 cipher_get_key/44 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 
+cipher_srv_stepwise_handler/51 (cipher_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+cipher_srv_onepass/50 (cipher_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: cipher_check_param/40 
+   Indirect callnum speculative call targets: 0
+get_xts_cipher_ctx/49 (get_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cpt_get_ske_xts_ske_ctx/82 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_xts_cipher_ctx/48 (push_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_update/59 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 cpt_get_ske_xts_ske_ctx/82 
+get_non_xts_cipher_ctx/47 (get_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 
+  Calls: util_memset/32 cpt_set_ske_ctx_key/73 cipher_get_key/44 mmap_read_remote_data/68 get_kms_ske_alg/30 
+push_non_xts_cipher_ctx/46 (push_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_update/53 
+  Calls: mmap_write_remote_data/76 cpt_clear_ske_ctx_key/75 
+cipher_get_iv/45 (cipher_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: mmap_read_remote_data/68 
+cipher_get_key/44 (cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: cipher_get_key_from_key_handle/43 mmap_read_remote_data/68 
+cipher_get_key_from_key_handle/43 (cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_get_key/44 
+  Calls: kms_read_key/69 
+xts_cipher_check_output_buffer_sz/42 (xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_update/59 cipher_xts_final/60 cipher_xts_onepass/61 
+  Calls: 
+non_xts_cipher_check_output_buffer_sz/41 (non_xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_update/53 cipher_non_xts_final/54 cipher_non_xts_onepass/55 
+  Calls: cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_check_param/40 (cipher_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_srv_stepwise_handler/51 cipher_srv_stepwise_handler/51 cipher_srv_onepass/50 
+  Calls: cmd_check_direction/24 cpt_ske_get_block_byte_len/67 get_ske_alg/27 
+cipher_get_hdl/39 (cipher_get_hdl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: non_xts_hdl/37 (addr) xts_hdl/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+xts_hdl/38 (xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) xts_hdl_init/63 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+non_xts_hdl/37 (non_xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) non_xts_hdl_init/62 (write) cipher_get_hdl/39 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: memset_/70 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_xts_init/58 get_xts_cipher_ctx/49 cipher_xts_onepass/61 cipher_non_xts_init/52 get_non_xts_cipher_ctx/47 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_non_xts_init/52 cipher_non_xts_onepass/55 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 cipher_xts_init/58 cipher_xts_onepass/61 cipher_non_xts_init/52 non_xts_cipher_check_output_buffer_sz/41 cipher_non_xts_onepass/55 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: cipher_check_param/40 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_srv_cipher_handler/65 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+xts_dma_final_update_blocks/112 (xts_dma_final_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 56
+  References: 
+  Referring: 
+  Function xts_dma_final_update_blocks/112 is inline copy in cipher_xts_final/60
+  Clone of xts_dma_final_update_blocks/56
+  Availability: local
+  Function flags: count:108662672 (estimated locally) body local
+  Called by: cipher_xts_final/60 (inlined) (108662672 (estimated locally),0.10 per call) 
+  Calls: cpt_ske_dma_xts_update_blocks/79 (80893926 (estimated locally),0.08 per call) 
+cipher_get_iv.constprop.0/111 (cipher_get_iv.constprop)
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 110
+  References: 
+  Referring: 
+  Function cipher_get_iv.constprop/111 is inline copy in cipher_xts_onepass/61
+  Clone of cipher_get_iv.constprop.0/101
+  Availability: local
+  Function flags: count:108662672 (estimated locally) local
+  Called by: cipher_xts_onepass/61 (inlined) (108662672 (estimated locally),0.10 per call) 
+  Calls: mmap_read_remote_data/68 (26411909 (estimated locally),0.02 per call) 
+cipher_get_iv.constprop.0/110 (cipher_get_iv.constprop)
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 109
+  previous sharing asm name: 111
+  References: 
+  Referring: 
+  Function cipher_get_iv.constprop/110 is inline copy in cipher_non_xts_init/52
+  Clone of cipher_get_iv.constprop.0/101
+  Availability: local
+  Function flags: count:217325344 (estimated locally) local
+  Called by: cipher_non_xts_init/52 (inlined) (217325344 (estimated locally),0.20 per call) 
+  Calls: mmap_read_remote_data/68 (52823818 (estimated locally),0.05 per call) 
+cipher_get_iv.constprop.0/109 (cipher_get_iv.constprop)
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 101
+  previous sharing asm name: 110
+  References: 
+  Referring: 
+  Function cipher_get_iv.constprop/109 is inline copy in cipher_non_xts_onepass/55
+  Clone of cipher_get_iv.constprop.0/101
+  Availability: local
+  Function flags: count:43986649 (estimated locally) local
+  Called by: cipher_non_xts_onepass/55 (inlined) (43986649 (estimated locally),0.04 per call) 
+  Calls: mmap_read_remote_data/68 (10691541 (estimated locally),0.01 per call) 
+get_kms_ske_alg/108 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 107
+  References: 
+  Referring: 
+  Function get_kms_ske_alg/108 is inline copy in cipher_xts_onepass/61
+  Clone of get_kms_ske_alg/30
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: cipher_xts_onepass/61 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_kms_ske_alg/107 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 106
+  previous sharing asm name: 108
+  References: 
+  Referring: 
+  Function get_kms_ske_alg/107 is inline copy in cipher_non_xts_init/52
+  Clone of get_kms_ske_alg/30
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: cipher_non_xts_init/52 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_kms_ske_alg/106 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 105
+  previous sharing asm name: 107
+  References: 
+  Referring: 
+  Function get_kms_ske_alg/106 is inline copy in cipher_xts_init/58
+  Clone of get_kms_ske_alg/30
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: cipher_xts_init/58 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_kms_ske_alg/105 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 104
+  previous sharing asm name: 106
+  References: 
+  Referring: 
+  Function get_kms_ske_alg/105 is inline copy in get_xts_cipher_ctx/49
+  Clone of get_kms_ske_alg/30
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: get_xts_cipher_ctx/49 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_kms_ske_alg/104 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 30
+  previous sharing asm name: 105
+  References: 
+  Referring: 
+  Function get_kms_ske_alg/104 is inline copy in get_non_xts_cipher_ctx/47
+  Clone of get_kms_ske_alg/30
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: get_non_xts_cipher_ctx/47 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cipher_get_key_from_key_handle.constprop.0/103 (cipher_get_key_from_key_handle.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function cipher_get_key_from_key_handle.constprop/103 is inline copy in cipher_get_key.constprop/102
+  Clone of cipher_get_key_from_key_handle/43
+  Availability: local
+  Function flags: count:357913941 (estimated locally) local
+  Called by: cipher_get_key.constprop.0/102 (inlined) (357913941 (estimated locally),0.33 per call) 
+  Calls: kms_read_key/69 (357913941 (estimated locally),0.33 per call) 
+cipher_get_key.constprop.0/102 (cipher_get_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of cipher_get_key/44
+  Availability: local
+  Function flags: count:1073741814 (estimated locally) local
+  Called by: cipher_non_xts_onepass/55 (217325344 (estimated locally),0.20 per call) get_non_xts_cipher_ctx/47 (71717363 (estimated locally),0.07 per call) cipher_non_xts_init/52 (1073741824 (estimated locally),1.00 per call) cipher_xts_onepass/61 (536870912 (estimated locally),0.50 per call) get_xts_cipher_ctx/49 (71717363 (estimated locally),0.07 per call) cipher_xts_init/58 (1073741824 (estimated locally),1.00 per call) 
+  Calls: mmap_read_remote_data/68 (170975491 (estimated locally),0.16 per call) cipher_get_key_from_key_handle.constprop.0/103 (inlined) (357913941 (estimated locally),0.33 per call) 
+cipher_get_iv.constprop.0/101 (cipher_get_iv.constprop)
+  Type: function definition analyzed
+  Visibility:
+  previous sharing asm name: 109
+  References: 
+  Referring: 
+  Function cipher_get_iv.constprop/101 is inline copy in cipher_xts_init/58
+  Clone of cipher_get_iv/45
+  Availability: local
+  Function flags: count:217325344 (estimated locally) local
+  Called by: cipher_xts_init/58 (inlined) (217325344 (estimated locally),0.20 per call) 
+  Calls: mmap_read_remote_data/68 (52823818 (estimated locally),0.05 per call) 
+push_xts_cipher_ctx.part.0/100 (push_xts_cipher_ctx.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function push_xts_cipher_ctx.part.0/100 is inline copy in push_xts_cipher_ctx/48
+  Availability: local
+  Function flags: count:512926472 (estimated locally) body local split_part
+  Called by: push_xts_cipher_ctx/48 (inlined) (512926472 (estimated locally),0.48 per call) 
+  Calls: mmap_write_remote_data/76 (512926472 (estimated locally),0.48 per call) 
+push_non_xts_cipher_ctx.part.0/92 (push_non_xts_cipher_ctx.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function push_non_xts_cipher_ctx.part.0/92 is inline copy in push_non_xts_cipher_ctx/46
+  Availability: local
+  Function flags: count:512926472 (estimated locally) body local split_part
+  Called by: push_non_xts_cipher_ctx/46 (inlined) (512926472 (estimated locally),0.48 per call) 
+  Calls: mmap_write_remote_data/76 (512926472 (estimated locally),0.48 per call) 
+CSWTCH.41/84 (CSWTCH.41)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: cipher_non_xts_onepass/55 (read) cipher_non_xts_init/52 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.38/83 (CSWTCH.38)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: cipher_xts_onepass/61 (read) non_xts_cipher_check_output_buffer_sz/41 (read) cipher_check_param/40 (read) cipher_non_xts_onepass/55 (read) cipher_non_xts_init/52 (read) cipher_xts_init/58 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+cpt_get_ske_xts_ske_ctx/82 (cpt_get_ske_xts_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 (1073741824 (estimated locally),1.00 per call) get_xts_cipher_ctx/49 (160123575 (estimated locally),0.15 per call) 
+  Calls: 
+cpt_ske_xts_final/81 (cpt_ske_xts_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: xts_cpu_final/57 (32409011 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_ske_xts_update_including_last_2_blocks/80 (cpt_ske_xts_update_including_last_2_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: xts_cpu_final/57 (71717363 (estimated locally),0.07 per call) 
+  Calls: 
+cpt_ske_dma_xts_update_blocks/79 (cpt_ske_dma_xts_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: xts_dma_final_update_blocks/112 (80893926 (estimated locally),0.08 per call) cipher_xts_update/59 (108662672 (estimated locally),0.10 per call) xts_dma_final_update_blocks/56 (3313881 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_ske_dma_xts_init/78 (cpt_ske_dma_xts_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_xts_init/58 (43986649 (estimated locally),0.04 per call) cipher_xts_onepass/61 (21993325 (estimated locally),0.02 per call) 
+  Calls: 
+cpt_ske_dma_init/77 (cpt_ske_dma_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_non_xts_init/52 (43986649 (estimated locally),0.04 per call) 
+  Calls: 
+mmap_write_remote_data/76 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: push_xts_cipher_ctx.part.0/100 (512926472 (estimated locally),0.48 per call) xts_cpu_final/57 (160123575 (estimated locally),0.15 per call) push_non_xts_cipher_ctx.part.0/92 (512926472 (estimated locally),0.48 per call) 
+  Calls: 
+cpt_clear_ske_ctx_key/75 (cpt_clear_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: push_xts_cipher_ctx/48 (1073741824 (estimated locally),1.00 per call) push_non_xts_cipher_ctx/46 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_ske_dma_update_blocks/74 (cpt_ske_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_non_xts_update/53 (43986649 (estimated locally),0.04 per call) 
+  Calls: 
+cpt_set_ske_ctx_key/73 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_xts_cipher_ctx/49 (160123575 (estimated locally),0.15 per call) get_non_xts_cipher_ctx/47 (160123575 (estimated locally),0.15 per call) 
+  Calls: 
+cpt_ske_dma_final/72 (cpt_ske_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_non_xts_final/54 (182241592 (estimated locally),0.17 per call) 
+  Calls: 
+cpt_ske_dma_update_including_last_block/71 (cpt_ske_dma_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_non_xts_final/54 (43986649 (estimated locally),0.04 per call) 
+  Calls: 
+memset_/70 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_xts_init/58 (1073741824 (estimated locally),1.00 per call) get_xts_cipher_ctx/49 (1073741824 (estimated locally),1.00 per call) cipher_xts_onepass/61 (1073741824 (estimated locally),1.00 per call) cipher_non_xts_init/52 (1073741824 (estimated locally),1.00 per call) get_non_xts_cipher_ctx/47 (1073741824 (estimated locally),1.00 per call) cipher_non_xts_onepass/55 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+kms_read_key/69 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_get_key_from_key_handle.constprop.0/103 (357913941 (estimated locally),0.33 per call) 
+  Calls: 
+mmap_read_remote_data/68 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_get_iv.constprop.0/111 (26411909 (estimated locally),0.02 per call) cipher_get_iv.constprop.0/110 (52823818 (estimated locally),0.05 per call) cipher_get_iv.constprop.0/109 (10691541 (estimated locally),0.01 per call) cipher_get_key.constprop.0/102 (170975491 (estimated locally),0.16 per call) cipher_get_iv.constprop.0/101 (52823818 (estimated locally),0.05 per call) get_xts_cipher_ctx/49 (354334800 (estimated locally),0.33 per call) xts_cpu_final/57 (354334800 (estimated locally),0.33 per call) get_non_xts_cipher_ctx/47 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+cpt_ske_get_block_byte_len/67 (cpt_ske_get_block_byte_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_check_param/40 (354334800 (estimated locally),0.33 per call) non_xts_cipher_check_output_buffer_sz/41 (138536992 (estimated locally),0.13 per call) 
+  Calls: 
+cpt_ske_dma_crypto/66 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: cipher_non_xts_onepass/55 (182241592 (estimated locally),0.17 per call) 
+  Calls: 
+ske_srv_cipher_handler/65 (ske_srv_cipher_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: non_xts_hdl/37 (addr) xts_hdl/38 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally) body
+  Called by: 
+  Calls: cipher_srv_stepwise_handler/51 (inlined) (113707551 (estimated locally),0.11 per call) cipher_srv_onepass/50 (inlined) (58576618 (estimated locally),0.05 per call) 
+ske_srv_cipher_init/64 (ske_srv_cipher_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: non_xts_hdl/37 (write) cipher_non_xts_init/52 (addr) non_xts_hdl/37 (write) cipher_non_xts_update/53 (addr) non_xts_hdl/37 (write) cipher_non_xts_final/54 (addr) non_xts_hdl/37 (write) cipher_non_xts_onepass/55 (addr) xts_hdl/38 (write) cipher_xts_init/58 (addr) xts_hdl/38 (write) cipher_xts_update/59 (addr) xts_hdl/38 (write) cipher_xts_final/60 (addr) xts_hdl/38 (write) cipher_xts_onepass/61 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+cipher_xts_onepass/61 (cipher_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: CSWTCH.38/83 (read) 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/70 (1073741824 (estimated locally),1.00 per call) xts_cpu_final/57 (499453 (estimated locally),0.00 per call) xts_dma_final_update_blocks/56 (inlined) (4451449 (estimated locally),0.00 per call) cpt_ske_dma_xts_init/78 (21993325 (estimated locally),0.02 per call) cipher_get_iv.constprop.0/111 (inlined) (108662672 (estimated locally),0.10 per call) cipher_get_key.constprop.0/102 (536870912 (estimated locally),0.50 per call) get_kms_ske_alg/108 (inlined) (1073741824 (estimated locally),1.00 per call) 
+cipher_xts_final/60 (cipher_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: xts_cpu_final/57 (12191952 (estimated locally),0.01 per call) xts_dma_final_update_blocks/112 (inlined) (108662672 (estimated locally),0.10 per call) get_xts_cipher_ctx/49 (536870912 (estimated locally),0.50 per call) 
+cipher_xts_update/59 (cipher_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: push_xts_cipher_ctx/48 (21993325 (estimated locally),0.02 per call) cpt_ske_dma_xts_update_blocks/79 (108662672 (estimated locally),0.10 per call) get_xts_cipher_ctx/49 (536870912 (estimated locally),0.50 per call) 
+cipher_xts_init/58 (cipher_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: CSWTCH.38/83 (read) 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/70 (1073741824 (estimated locally),1.00 per call) push_xts_cipher_ctx/48 (182241592 (estimated locally),0.17 per call) cpt_ske_dma_xts_init/78 (43986649 (estimated locally),0.04 per call) cipher_get_iv.constprop.0/101 (inlined) (217325344 (estimated locally),0.20 per call) cipher_get_key.constprop.0/102 (1073741824 (estimated locally),1.00 per call) get_kms_ske_alg/106 (inlined) (1073741824 (estimated locally),1.00 per call) 
+xts_cpu_final/57 (xts_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: cipher_xts_final/60 (12191952 (estimated locally),0.01 per call) cipher_xts_onepass/61 (499453 (estimated locally),0.00 per call) 
+  Calls: cpt_ske_xts_final/81 (32409011 (estimated locally),0.03 per call) mmap_write_remote_data/76 (160123575 (estimated locally),0.15 per call) cpt_ske_xts_update_including_last_2_blocks/80 (71717363 (estimated locally),0.07 per call) mmap_read_remote_data/68 (354334800 (estimated locally),0.33 per call) 
+xts_dma_final_update_blocks/56 (xts_dma_final_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 112
+  References: 
+  Referring: 
+  Function xts_dma_final_update_blocks/56 is inline copy in cipher_xts_onepass/61
+  Availability: local
+  Function flags: count:4451449 (estimated locally) body local
+  Called by: cipher_xts_onepass/61 (inlined) (4451449 (estimated locally),0.00 per call) 
+  Calls: cpt_ske_dma_xts_update_blocks/79 (3313881 (estimated locally),0.00 per call) 
+cipher_non_xts_onepass/55 (cipher_non_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: CSWTCH.38/83 (read) CSWTCH.41/84 (read) 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/70 (1073741824 (estimated locally),1.00 per call) cpt_ske_dma_crypto/66 (182241592 (estimated locally),0.17 per call) cipher_get_iv.constprop.0/109 (inlined) (43986649 (estimated locally),0.04 per call) cipher_get_key.constprop.0/102 (217325344 (estimated locally),0.20 per call) non_xts_cipher_check_output_buffer_sz/41 (1073741824 (estimated locally),1.00 per call) get_kms_ske_alg/30 (inlined) (1073741824 (estimated locally),1.00 per call) 
+cipher_non_xts_final/54 (cipher_non_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: cpt_ske_dma_final/72 (182241592 (estimated locally),0.17 per call) cpt_ske_dma_update_including_last_block/71 (43986649 (estimated locally),0.04 per call) get_non_xts_cipher_ctx/47 (217325344 (estimated locally),0.20 per call) non_xts_cipher_check_output_buffer_sz/41 (1073741824 (estimated locally),1.00 per call) 
+cipher_non_xts_update/53 (cipher_non_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: push_non_xts_cipher_ctx/46 (182241592 (estimated locally),0.17 per call) cpt_ske_dma_update_blocks/74 (43986649 (estimated locally),0.04 per call) get_non_xts_cipher_ctx/47 (217325344 (estimated locally),0.20 per call) non_xts_cipher_check_output_buffer_sz/41 (1073741824 (estimated locally),1.00 per call) 
+cipher_non_xts_init/52 (cipher_non_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: CSWTCH.38/83 (read) CSWTCH.41/84 (read) 
+  Referring: ske_srv_cipher_init/64 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/70 (1073741824 (estimated locally),1.00 per call) push_non_xts_cipher_ctx/46 (182241592 (estimated locally),0.17 per call) cpt_ske_dma_init/77 (43986649 (estimated locally),0.04 per call) cipher_get_iv.constprop.0/110 (inlined) (217325344 (estimated locally),0.20 per call) cipher_get_key.constprop.0/102 (1073741824 (estimated locally),1.00 per call) get_kms_ske_alg/107 (inlined) (1073741824 (estimated locally),1.00 per call) 
+cipher_srv_stepwise_handler/51 (cipher_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function cipher_srv_stepwise_handler/51 is inline copy in ske_srv_cipher_handler/65
+  Availability: local
+  Function flags: count:113707551 (estimated locally) body local
+  Called by: ske_srv_cipher_handler/65 (inlined) (113707551 (estimated locally),0.11 per call) 
+  Calls: cipher_check_param/40 (22741511 (estimated locally),0.02 per call) cipher_check_param/40 (22741511 (estimated locally),0.02 per call) 
+   Indirect call(22741511 (estimated locally),0.02 per call) num speculative call targets: 0
+   Indirect call(2628919 (estimated locally),0.00 per call) num speculative call targets: 0
+   Indirect call(7732114 (estimated locally),0.01 per call) num speculative call targets: 0
+   Indirect call(22741511 (estimated locally),0.02 per call) num speculative call targets: 0
+   Indirect call(7732114 (estimated locally),0.01 per call) num speculative call targets: 0
+cipher_srv_onepass/50 (cipher_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function cipher_srv_onepass/50 is inline copy in ske_srv_cipher_handler/65
+  Availability: local
+  Function flags: count:58576618 (estimated locally) body local
+  Called by: ske_srv_cipher_handler/65 (inlined) (58576618 (estimated locally),0.05 per call) 
+  Calls: cipher_check_param/40 (58576618 (estimated locally),0.05 per call) 
+   Indirect call(19916050 (estimated locally),0.02 per call) num speculative call targets: 0
+get_xts_cipher_ctx/49 (get_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: cipher_xts_update/59 (536870912 (estimated locally),0.50 per call) cipher_xts_final/60 (536870912 (estimated locally),0.50 per call) 
+  Calls: memset_/70 (1073741824 (estimated locally),1.00 per call) cpt_set_ske_ctx_key/73 (160123575 (estimated locally),0.15 per call) cpt_get_ske_xts_ske_ctx/82 (160123575 (estimated locally),0.15 per call) cipher_get_key.constprop.0/102 (71717363 (estimated locally),0.07 per call) mmap_read_remote_data/68 (354334800 (estimated locally),0.33 per call) get_kms_ske_alg/105 (inlined) (1073741824 (estimated locally),1.00 per call) 
+push_xts_cipher_ctx/48 (push_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: cipher_xts_init/58 (182241592 (estimated locally),0.17 per call) cipher_xts_update/59 (21993325 (estimated locally),0.02 per call) 
+  Calls: push_xts_cipher_ctx.part.0/100 (inlined) (512926472 (estimated locally),0.48 per call) cpt_clear_ske_ctx_key/75 (1073741824 (estimated locally),1.00 per call) cpt_get_ske_xts_ske_ctx/82 (1073741824 (estimated locally),1.00 per call) 
+get_non_xts_cipher_ctx/47 (get_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: cipher_non_xts_update/53 (217325344 (estimated locally),0.20 per call) cipher_non_xts_final/54 (217325344 (estimated locally),0.20 per call) 
+  Calls: memset_/70 (1073741824 (estimated locally),1.00 per call) cpt_set_ske_ctx_key/73 (160123575 (estimated locally),0.15 per call) cipher_get_key.constprop.0/102 (71717363 (estimated locally),0.07 per call) mmap_read_remote_data/68 (354334800 (estimated locally),0.33 per call) get_kms_ske_alg/104 (inlined) (1073741824 (estimated locally),1.00 per call) 
+push_non_xts_cipher_ctx/46 (push_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: cipher_non_xts_init/52 (182241592 (estimated locally),0.17 per call) cipher_non_xts_update/53 (182241592 (estimated locally),0.17 per call) 
+  Calls: push_non_xts_cipher_ctx.part.0/92 (inlined) (512926472 (estimated locally),0.48 per call) cpt_clear_ske_ctx_key/75 (1073741824 (estimated locally),1.00 per call) 
+cipher_get_iv/45 (cipher_get_iv)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+cipher_get_key/44 (cipher_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741814 (estimated locally) body
+  Called by: 
+  Calls: 
+cipher_get_key_from_key_handle/43 (cipher_get_key_from_key_handle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+non_xts_cipher_check_output_buffer_sz/41 (non_xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: CSWTCH.38/83 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: cipher_non_xts_update/53 (1073741824 (estimated locally),1.00 per call) cipher_non_xts_final/54 (1073741824 (estimated locally),1.00 per call) cipher_non_xts_onepass/55 (1073741824 (estimated locally),1.00 per call) 
+  Calls: cpt_ske_get_block_byte_len/67 (138536992 (estimated locally),0.13 per call) 
+cipher_check_param/40 (cipher_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: CSWTCH.38/83 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: cipher_srv_stepwise_handler/51 (22741511 (estimated locally),0.02 per call) cipher_srv_stepwise_handler/51 (22741511 (estimated locally),0.02 per call) cipher_srv_onepass/50 (58576618 (estimated locally),0.05 per call) 
+  Calls: cpt_ske_get_block_byte_len/67 (354334800 (estimated locally),0.33 per call) 
+xts_hdl/38 (xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: ske_srv_cipher_init/64 (write) ske_srv_cipher_init/64 (write) ske_srv_cipher_init/64 (write) ske_srv_cipher_init/64 (write) ske_srv_cipher_handler/65 (addr) 
+  Availability: available
+  Varpool flags:
+non_xts_hdl/37 (non_xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: ske_srv_cipher_init/64 (write) ske_srv_cipher_init/64 (write) ske_srv_cipher_init/64 (write) ske_srv_cipher_init/64 (write) ske_srv_cipher_handler/65 (addr) 
+  Availability: available
+  Varpool flags:
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 104
+  References: 
+  Referring: 
+  Function get_kms_ske_alg/30 is inline copy in cipher_non_xts_onepass/55
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: cipher_non_xts_onepass/55 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cloning cipher_get_key/44 to cipher_get_key.constprop/102
+    replace map: 4 -> 64
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+uint32_t cipher_get_key (const struct mb_cmd_symm_cipher_st * cipher_cmd_data, uint32_t kms_alg, uint8_t dir, uint8_t * key_buf, uint32_t key_buf_sz, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  long long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+
+  <bb 2> [local count: 1073741814]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = cipher_cmd_data_9(D)->key_type;
+  switch (_1) <default: <L10>, case 0: <L6>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *sp_key_id_10(D) = 0;
+  # DEBUG BEGIN_STMT
+  *spk_sel_12(D) = 0;
+  # DEBUG BEGIN_STMT
+  _2 = cipher_cmd_data_9(D)->plain_key_size;
+  if (_2 > key_buf_sz_14(D))
+    goto <bb 7>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG BEGIN_STMT
+  _3 = cipher_cmd_data_9(D)->plain_key_addr;
+  ret_17 = mmap_read_remote_data (key_buf_15(D), _3, _2);
+  # DEBUG ret => ret_17
+  # DEBUG BEGIN_STMT
+  if (ret_17 == 2774162085)
+    goto <bb 5>; [21.72%]
+  else
+    goto <bb 7>; [78.28%]
+
+  <bb 5> [local count: 37135877]:
+  # DEBUG BEGIN_STMT
+  *key_18(D) = key_buf_15(D);
+  # DEBUG BEGIN_STMT
+  _4 = cipher_cmd_data_9(D)->plain_key_size;
+  *key_sz_20(D) = _4;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 357913941]:
+<L6>:
+  # DEBUG BEGIN_STMT
+  _5 = cipher_cmd_data_9(D)->key_handle;
+  ret_25 = cipher_get_key_from_key_handle (_5, kms_alg_22(D), dir_23(D), key_buf_15(D), key_buf_sz_14(D), key_18(D), key_sz_20(D), sp_key_id_10(D), spk_sel_12(D));
+  # DEBUG ret => ret_25
+  # DEBUG BEGIN_STMT
+
+  <bb 7> [local count: 1073741824]:
+  # ret_6 = PHI <ret_17(4), ret_25(6), 85(2), 10(3), 2774162085(5)>
+<L10>:
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return ret_6;
+
+}
+
+
+uint32_t cipher_get_key.constprop (const struct mb_cmd_symm_cipher_st * cipher_cmd_data, uint32_t kms_alg, uint8_t dir, uint8_t * key_buf, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  uint32_t key_buf_sz;
+  unsigned char _2;
+  long unsigned int _5;
+  long long unsigned int _6;
+  long unsigned int _10;
+  long unsigned int _12;
+
+  <bb 8> [local count: 1073741814]:
+  # DEBUG key_buf_sz => 64
+
+  <bb 2> [local count: 1073741814]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = cipher_cmd_data_1(D)->key_type;
+  switch (_2) <default: <L2>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *sp_key_id_3(D) = 0;
+  # DEBUG BEGIN_STMT
+  *spk_sel_4(D) = 0;
+  # DEBUG BEGIN_STMT
+  _5 = cipher_cmd_data_1(D)->plain_key_size;
+  if (_5 > 64)
+    goto <bb 7>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG BEGIN_STMT
+  _6 = cipher_cmd_data_1(D)->plain_key_addr;
+  ret_8 = mmap_read_remote_data (key_buf_7(D), _6, _5);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 5>; [21.72%]
+  else
+    goto <bb 7>; [78.28%]
+
+  <bb 5> [local count: 37135877]:
+  # DEBUG BEGIN_STMT
+  *key_9(D) = key_buf_7(D);
+  # DEBUG BEGIN_STMT
+  _10 = cipher_cmd_data_1(D)->plain_key_size;
+  *key_sz_11(D) = _10;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 357913941]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  _12 = cipher_cmd_data_1(D)->key_handle;
+  ret_15 = cipher_get_key_from_key_handle (_12, kms_alg_13(D), dir_14(D), key_buf_7(D), 64, key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+
+  <bb 7> [local count: 1073741824]:
+  # ret_16 = PHI <85(2), 10(3), ret_8(4), 2774162085(5), ret_15(6)>
+<L2>:
+  # DEBUG ret => ret_16
+  # DEBUG BEGIN_STMT
+  return ret_16;
+
+}
+
+
+cloning cipher_get_key_from_key_handle/43 to cipher_get_key_from_key_handle.constprop/103
+    replace map: 4 -> 64
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+uint32_t cipher_get_key_from_key_handle (uint32_t key_handle, uint32_t kms_alg, uint8_t dir, uint8_t * key_buf, uint32_t key_buf_sz, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  struct kms_keydata_st keydata;
+  uint32_t check_usage_bits;
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  <unnamed type> _3;
+  uint8_t * _4;
+  short unsigned int _5;
+  long unsigned int _6;
+  short unsigned int _7;
+  short unsigned int _8;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (dir_12(D) == 1)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 3>; [66.00%]
+
+  <bb 3> [local count: 708669600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 4
+
+  <bb 4> [local count: 1073741824]:
+  # check_usage_bits_10 = PHI <8(2), 4(3)>
+  # DEBUG check_usage_bits => check_usage_bits_10
+  # DEBUG BEGIN_STMT
+  # DEBUG req_kpart => 2
+  # DEBUG BEGIN_STMT
+  ret_18 = kms_read_key (key_handle_14(D), key_buf_15(D), key_buf_sz_16(D), &keydata, 2, check_usage_bits_10);
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  if (ret_18 == 2774162085)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 11>; [66.00%]
+
+  <bb 5> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 = keydata.algo_id;
+  _2 = (long unsigned int) _1;
+  if (_2 == kms_alg_19(D))
+    goto <bb 6>; [48.89%]
+  else
+    goto <bb 11>; [51.11%]
+
+  <bb 6> [local count: 178483810]:
+  # DEBUG BEGIN_STMT
+  _3 = keydata.src_type;
+  if (_3 == 1)
+    goto <bb 7>; [21.72%]
+  else
+    goto <bb 8>; [78.28%]
+
+  <bb 7> [local count: 38766684]:
+  # DEBUG BEGIN_STMT
+  _4 = keydata.keypair.symm.key;
+  *key_20(D) = _4;
+  # DEBUG BEGIN_STMT
+  _5 = keydata.keypair.symm.size;
+  _6 = (long unsigned int) _5;
+  *key_sz_27(D) = _6;
+  # DEBUG BEGIN_STMT
+  *spk_sel_24(D) = 0;
+  goto <bb 10>; [100.00%]
+
+  <bb 8> [local count: 139717126]:
+  # DEBUG BEGIN_STMT
+  _7 = keydata.keypair.symm.size;
+  if (_7 <= 32)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 11>; [50.00%]
+
+  <bb 9> [local count: 69858563]:
+  # DEBUG BEGIN_STMT
+  *key_20(D) = 0B;
+  # DEBUG BEGIN_STMT
+  _8 = keydata.sp_key_id;
+  *sp_key_id_22(D) = _8;
+  # DEBUG BEGIN_STMT
+  *spk_sel_24(D) = 1;
+
+  <bb 10> [local count: 108625247]:
+
+  <bb 11> [local count: 1073741824]:
+  # ret_9 = PHI <ret_18(4), 2774162085(10), 11(5), 10(8)>
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_9;
+
+}
+
+
+uint32_t cipher_get_key_from_key_handle.constprop (uint32_t key_handle, uint32_t kms_alg, uint8_t dir, uint8_t * key_buf, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  uint32_t check_usage_bits;
+  struct kms_keydata_st keydata;
+  uint32_t key_buf_sz;
+  unsigned char _6;
+  long unsigned int _7;
+  <unnamed type> _9;
+  uint8_t * _10;
+  short unsigned int _12;
+  long unsigned int _13;
+  short unsigned int _16;
+  short unsigned int _17;
+
+  <bb 12> [local count: 1073741824]:
+  # DEBUG key_buf_sz => 64
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (dir_1(D) == 1)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 3>; [66.00%]
+
+  <bb 3> [local count: 708669600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 4
+
+  <bb 4> [local count: 1073741824]:
+  # check_usage_bits_4 = PHI <8(2), 4(3)>
+  # DEBUG check_usage_bits => check_usage_bits_4
+  # DEBUG BEGIN_STMT
+  # DEBUG req_kpart => 2
+  # DEBUG BEGIN_STMT
+  ret_5 = kms_read_key (key_handle_2(D), key_buf_3(D), 64, &keydata, 2, check_usage_bits_4);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 2774162085)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 11>; [66.00%]
+
+  <bb 5> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _6 = keydata.algo_id;
+  _7 = (long unsigned int) _6;
+  if (_7 == kms_alg_8(D))
+    goto <bb 6>; [48.89%]
+  else
+    goto <bb 11>; [51.11%]
+
+  <bb 6> [local count: 178483810]:
+  # DEBUG BEGIN_STMT
+  _9 = keydata.src_type;
+  if (_9 == 1)
+    goto <bb 7>; [21.72%]
+  else
+    goto <bb 8>; [78.28%]
+
+  <bb 7> [local count: 38766684]:
+  # DEBUG BEGIN_STMT
+  _10 = keydata.keypair.symm.key;
+  *key_11(D) = _10;
+  # DEBUG BEGIN_STMT
+  _12 = keydata.keypair.symm.size;
+  _13 = (long unsigned int) _12;
+  *key_sz_14(D) = _13;
+  # DEBUG BEGIN_STMT
+  *spk_sel_15(D) = 0;
+  goto <bb 10>; [100.00%]
+
+  <bb 8> [local count: 139717126]:
+  # DEBUG BEGIN_STMT
+  _16 = keydata.keypair.symm.size;
+  if (_16 <= 32)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 11>; [50.00%]
+
+  <bb 9> [local count: 69858563]:
+  # DEBUG BEGIN_STMT
+  *key_11(D) = 0B;
+  # DEBUG BEGIN_STMT
+  _17 = keydata.sp_key_id;
+  *sp_key_id_18(D) = _17;
+  # DEBUG BEGIN_STMT
+  *spk_sel_15(D) = 1;
+
+  <bb 10> [local count: 108625247]:
+
+  <bb 11> [local count: 1073741824]:
+  # ret_19 = PHI <ret_5(4), 11(5), 10(8), 2774162085(10)>
+  # DEBUG ret => ret_19
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_19;
+
+}
+
+
+updating call of cipher_get_key.constprop/102 -> cipher_get_key_from_key_handle.constprop/103: ret_15 = cipher_get_key_from_key_handle (_12, kms_alg_13(D), dir_14(D), key_buf_7(D), 64, key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_15 = cipher_get_key_from_key_handle.constprop (_12, kms_alg_13(D), dir_14(D), key_buf_7(D), key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+updating call of get_non_xts_cipher_ctx/47 -> cipher_get_key.constprop/102: ret_23 = cipher_get_key (cipher_cmd_data_16(D), kms_alg_18, _5, &key_buf, 64, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_23 = cipher_get_key.constprop (cipher_cmd_data_16(D), kms_alg_18, _5, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of get_xts_cipher_ctx/49 -> cipher_get_key.constprop/102: ret_24 = cipher_get_key (cipher_cmd_data_17(D), kms_alg_19, _5, &key_buf, 64, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_24 = cipher_get_key.constprop (cipher_cmd_data_17(D), kms_alg_19, _5, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+cloning cipher_get_iv/45 to cipher_get_iv.constprop/101
+    replace map: 5 -> 0B
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t cipher_get_iv (cpt_ske_mode_e mode, raddr_t r_iv, uint32_t r_iv_sz, uint8_t * iv_buf, uint8_t * * iv_ptr, uint32_t * iv_sz)
+{
+  uint32_t ret;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_4(D) == 1)
+    goto <bb 4>; [21.72%]
+  else
+    goto <bb 3>; [78.28%]
+
+  <bb 3> [local count: 840525094]:
+  if (r_iv_5(D) == 0)
+    goto <bb 4>; [35.00%]
+  else
+    goto <bb 7>; [65.00%]
+
+  <bb 4> [local count: 527400512]:
+  # DEBUG BEGIN_STMT
+  *iv_ptr_11(D) = 0B;
+  # DEBUG BEGIN_STMT
+  if (iv_sz_13(D) != 0B)
+    goto <bb 5>; [70.00%]
+  else
+    goto <bb 6>; [30.00%]
+
+  <bb 5> [local count: 369180360]:
+  # DEBUG BEGIN_STMT
+  *iv_sz_13(D) = 0;
+
+  <bb 6> [local count: 584086943]:
+  goto <bb 11>; [100.00%]
+
+  <bb 7> [local count: 546341310]:
+  # DEBUG BEGIN_STMT
+  if (r_iv_sz_6(D) <= 16)
+    goto <bb 8>; [47.77%]
+  else
+    goto <bb 11>; [52.23%]
+
+  <bb 8> [local count: 260987245]:
+  # DEBUG BEGIN_STMT
+  ret_10 = mmap_read_remote_data (iv_buf_8(D), r_iv_5(D), r_iv_sz_6(D));
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  if (ret_10 == 2774162085)
+    goto <bb 9>; [21.72%]
+  else
+    goto <bb 11>; [78.28%]
+
+  <bb 9> [local count: 56686431]:
+  # DEBUG BEGIN_STMT
+  *iv_ptr_11(D) = iv_buf_8(D);
+  # DEBUG BEGIN_STMT
+  if (iv_sz_13(D) != 0B)
+    goto <bb 10>; [70.00%]
+  else
+    goto <bb 6>; [30.00%]
+
+  <bb 10> [local count: 39680502]:
+  # DEBUG BEGIN_STMT
+  *iv_sz_13(D) = r_iv_sz_6(D);
+  goto <bb 6>; [100.00%]
+
+  <bb 11> [local count: 1073741824]:
+  # ret_1 = PHI <2774162085(6), ret_10(8), 53(7)>
+  # DEBUG ret => ret_1
+  # DEBUG BEGIN_STMT
+  return ret_1;
+
+}
+
+
+uint32_t cipher_get_iv.constprop (cpt_ske_mode_e mode, raddr_t r_iv, uint32_t r_iv_sz, uint8_t * iv_buf, uint8_t * * iv_ptr)
+{
+  uint32_t ret;
+  uint32_t * iv_sz;
+
+  <bb 12> [local count: 1073741822]:
+  # DEBUG iv_sz => 0B
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_1(D) == 1)
+    goto <bb 4>; [21.72%]
+  else
+    goto <bb 3>; [78.28%]
+
+  <bb 3> [local count: 840525094]:
+  if (r_iv_2(D) == 0)
+    goto <bb 4>; [35.00%]
+  else
+    goto <bb 7>; [65.00%]
+
+  <bb 4> [local count: 527400512]:
+  # DEBUG BEGIN_STMT
+  *iv_ptr_3(D) = 0B;
+  # DEBUG BEGIN_STMT
+  if (0 != 0)
+    goto <bb 5>; [70.00%]
+  else
+    goto <bb 6>; [30.00%]
+
+  <bb 5> [local count: 369180360]:
+  # DEBUG BEGIN_STMT
+  MEM[(uint32_t *)0B] = 0;
+
+  <bb 6> [local count: 584086943]:
+  goto <bb 11>; [100.00%]
+
+  <bb 7> [local count: 546341310]:
+  # DEBUG BEGIN_STMT
+  if (r_iv_sz_4(D) <= 16)
+    goto <bb 8>; [47.77%]
+  else
+    goto <bb 11>; [52.23%]
+
+  <bb 8> [local count: 260987245]:
+  # DEBUG BEGIN_STMT
+  ret_6 = mmap_read_remote_data (iv_buf_5(D), r_iv_2(D), r_iv_sz_4(D));
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  if (ret_6 == 2774162085)
+    goto <bb 9>; [21.72%]
+  else
+    goto <bb 11>; [78.28%]
+
+  <bb 9> [local count: 56686431]:
+  # DEBUG BEGIN_STMT
+  *iv_ptr_3(D) = iv_buf_5(D);
+  # DEBUG BEGIN_STMT
+  if (0 != 0)
+    goto <bb 10>; [70.00%]
+  else
+    goto <bb 6>; [30.00%]
+
+  <bb 10> [local count: 39680502]:
+  # DEBUG BEGIN_STMT
+  MEM[(uint32_t *)0B] = r_iv_sz_4(D);
+  goto <bb 6>; [100.00%]
+
+  <bb 11> [local count: 1073741824]:
+  # ret_7 = PHI <2774162085(6), 53(7), ret_6(8)>
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  return ret_7;
+
+}
+
+
+updating call of cipher_xts_init/58 -> cipher_get_iv.constprop/101: ret_23 = cipher_get_iv (2, _5, _6, &iv, &iv_ptr, 0B);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_23 = cipher_get_iv.constprop (2, _5, _6, &iv, &iv_ptr);
+updating call of cipher_xts_init/58 -> cipher_get_key.constprop/102: ret_21 = cipher_get_key (cipher_cmd_data_15(D), kms_alg_19, _2, &key_buf, 64, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_21 = cipher_get_key.constprop (cipher_cmd_data_15(D), kms_alg_19, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of cipher_non_xts_onepass/55 -> cipher_get_iv.constprop/109: ret_44 = cipher_get_iv (mode_57, _13, _14, &iv, &iv_ptr, 0B);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_44 = cipher_get_iv.constprop (mode_57, _13, _14, &iv, &iv_ptr);
+updating call of cipher_non_xts_onepass/55 -> cipher_get_key.constprop/102: ret_42 = cipher_get_key (cipher_cmd_data_23(D), kms_alg_36, _12, &key_buf, 64, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_42 = cipher_get_key.constprop (cipher_cmd_data_23(D), kms_alg_36, _12, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of cipher_non_xts_init/52 -> cipher_get_iv.constprop/110: ret_26 = cipher_get_iv (mode_41, _6, _7, &iv, &iv_ptr, 0B);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_26 = cipher_get_iv.constprop (mode_41, _6, _7, &iv, &iv_ptr);
+updating call of cipher_non_xts_init/52 -> cipher_get_key.constprop/102: ret_24 = cipher_get_key (cipher_cmd_data_16(D), kms_alg_22, _3, &key_buf, 64, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_24 = cipher_get_key.constprop (cipher_cmd_data_16(D), kms_alg_22, _3, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of cipher_xts_onepass/61 -> cipher_get_iv.constprop/101: ret_31 = cipher_get_iv (2, _6, _7, &iv, &iv_ptr, 0B);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_31 = cipher_get_iv.constprop (2, _6, _7, &iv, &iv_ptr);
+updating call of cipher_xts_onepass/61 -> cipher_get_key.constprop/102: ret_29 = cipher_get_key (cipher_cmd_data_18(D), kms_alg_22, _2, &key_buf, 64, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_29 = cipher_get_key.constprop (cipher_cmd_data_18(D), kms_alg_22, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+Trivially needed variables: CSWTCH.41/84 CSWTCH.38/83 xts_hdl/38 non_xts_hdl/37
+Removing variables:
+
+Final Symbol table:
+
+cipher_get_key.constprop.0/102 (cipher_get_key.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.cipher_get_key.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741814 (estimated locally) local
+  Called by: 
+  Calls: 
+CSWTCH.41/84 (CSWTCH.41)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.41 (implicit_section) artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+CSWTCH.38/83 (CSWTCH.38)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.38 (implicit_section) artificial
+  Aux: @0x7fd7a90bd700
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+cpt_get_ske_xts_ske_ctx/82 (cpt_get_ske_xts_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_xts_final/81 (cpt_ske_xts_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_xts_update_including_last_2_blocks/80 (cpt_ske_xts_update_including_last_2_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_xts_update_blocks/79 (cpt_ske_dma_xts_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_xts_init/78 (cpt_ske_dma_xts_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_init/77 (cpt_ske_dma_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_write_remote_data/76 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_clear_ske_ctx_key/75 (cpt_clear_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_update_blocks/74 (cpt_ske_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_set_ske_ctx_key/73 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_final/72 (cpt_ske_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_update_including_last_block/71 (cpt_ske_dma_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/70 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kms_read_key/69 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/68 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_get_block_byte_len/67 (cpt_ske_get_block_byte_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_crypto/66 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_srv_cipher_handler/65 (ske_srv_cipher_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_srv_cipher_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally)
+  Called by: 
+  Calls: 
+ske_srv_cipher_init/64 (ske_srv_cipher_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_srv_cipher_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+cipher_xts_onepass/61 (cipher_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_xts_onepass (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_xts_final/60 (cipher_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_xts_final (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_xts_update/59 (cipher_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_xts_update (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_xts_init/58 (cipher_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_xts_init (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+xts_cpu_final/57 (xts_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.xts_cpu_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+cipher_non_xts_onepass/55 (cipher_non_xts_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_non_xts_onepass (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_non_xts_final/54 (cipher_non_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_non_xts_final (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_non_xts_update/53 (cipher_non_xts_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_non_xts_update (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_non_xts_init/52 (cipher_non_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_non_xts_init (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_xts_cipher_ctx/49 (get_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_xts_cipher_ctx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+push_xts_cipher_ctx/48 (push_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.push_xts_cipher_ctx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+get_non_xts_cipher_ctx/47 (get_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_non_xts_cipher_ctx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+push_non_xts_cipher_ctx/46 (push_non_xts_cipher_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.push_non_xts_cipher_ctx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+cipher_get_iv/45 (cipher_get_iv)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_get_key/44 (cipher_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741814 (estimated locally)
+  Called by: 
+  Calls: 
+cipher_get_key_from_key_handle/43 (cipher_get_key_from_key_handle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+non_xts_cipher_check_output_buffer_sz/41 (non_xts_cipher_check_output_buffer_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.non_xts_cipher_check_output_buffer_sz (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+cipher_check_param/40 (cipher_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.cipher_check_param (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+xts_hdl/38 (xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.xts_hdl (implicit_section)
+  Aux: @0x7fd7a90bd200
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+non_xts_hdl/37 (non_xts_hdl)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.non_xts_hdl (implicit_section)
+  Aux: @0x7fd7a9017280
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

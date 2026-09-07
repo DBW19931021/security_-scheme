@@ -1,0 +1,3224 @@
+Trivially needed symbols: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_rand_uint32_with_reseed/58 get_rand_uint32_without_reseed/57 get_latest_gm_rand/56 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_get_hw_drbg_alg_ability/36 trng_set_freq/35 trng_reseed/34 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_if_self_test_ready/30 trng_get_drbg_mode/29 trng_get_mode/28 trng_get_drbg_alg/27 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 trng_get_driver_version/18 trng_get_version/17
+
+
+Initial Symbol table:
+
+memset_/65 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer/60 
+  Calls: 
+memcpy_/64 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_internal/55 
+  Calls: 
+uint32_sleep/63 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_disable/26 
+  Calls: 
+get_rand_without_post_processing/62 (get_rand_without_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_with_post_processing/61 (get_rand_with_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb96110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_buffer/60 (get_rand_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb96000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 
+  Calls: memset_/65 get_rand_buffer_internal/59 lib_register_lock/9 lib_register_unlock/10 
+get_rand_buffer_internal/59 (get_rand_buffer_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb96000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_buffer/60 
+  Calls: memcpy_/64 memcpy_/64 memcpy_/64 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+get_rand_uint32_with_reseed/58 (get_rand_uint32_with_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb72ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_reseed/34 get_rand_uint32_without_reseed/57 
+get_rand_uint32_without_reseed/57 (get_rand_uint32_without_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb72cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+get_latest_gm_rand/56 (get_latest_gm_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb72bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_latest_gm_rand_internal/55 lib_register_lock/9 lib_register_unlock/10 
+get_latest_gm_rand_internal/55 (get_latest_gm_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand/56 
+  Calls: memcpy_/64 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+get_latest_gm_rand_by_word_internal/54 (get_latest_gm_rand_by_word_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72bb0
+  References: g_buffer_total_words/13 (read) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_buffer_regen_words/14 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (write) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_internal/55 get_latest_gm_rand_internal/55 
+  Calls: get_latest_gm_rand_buffer_regen_case_4_remainder/53 memcpy_/64 get_latest_gm_rand_buffer_full/49 memcpy_/64 get_latest_gm_rand_buffer_regen_case_3_greater/52 memcpy_/64 get_latest_gm_rand_buffer_regen_case_2_equal/51 memcpy_/64 get_latest_gm_rand_buffer_regen_case_1_less/50 memcpy_/64 get_latest_gm_rand_buffer_full/49 
+get_latest_gm_rand_buffer_regen_case_4_remainder/53 (get_latest_gm_rand_buffer_regen_case_4_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72bb0
+  References: g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_3_greater/52 (get_latest_gm_rand_buffer_regen_case_3_greater)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72330
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_2_equal/51 (get_latest_gm_rand_buffer_regen_case_2_equal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72660
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_1_less/50 (get_latest_gm_rand_buffer_regen_case_1_less)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72550
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_full/49 (get_latest_gm_rand_buffer_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72770
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_gen/48 (get_latest_gm_rand_buffer_gen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72550
+  References: g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_regen_case_4_remainder/53 get_latest_gm_rand_buffer_full/49 get_latest_gm_rand_buffer_regen_case_3_greater/52 get_latest_gm_rand_buffer_regen_case_2_equal/51 get_latest_gm_rand_buffer_regen_case_1_less/50 
+  Calls: wait_till_DT_ready/47 wait_till_DT_ready/47 
+wait_till_DT_ready/47 (wait_till_DT_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_gen/48 get_latest_gm_rand_buffer_gen/48 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+trng_set_latest_gm_global_init_config/46 (trng_set_latest_gm_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb72aa0
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_runs_test_threshold/44 trng_set_apt_test_threshold/41 trng_set_poker_test_threshold/43 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_nist_global_init_config/45 (trng_set_nist_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb72000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_runs_test_threshold/44 (trng_set_runs_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_test_threshold/43 (trng_set_poker_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_non_binary_test_threshold/42 (trng_set_apt_non_binary_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_test_threshold/41 (trng_set_apt_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_runs_test_win_size/40 (trng_set_apt_runs_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_aptnb_test_win_size/39 (trng_set_poker_aptnb_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ht_config/38 (trng_ht_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_drbg_alg_mode_config/37 (trng_drbg_alg_mode_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_hw_drbg_alg_ability/36 (trng_get_hw_drbg_alg_ability)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_set_freq/35 (trng_set_freq)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_reseed/34 (trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: 
+trng_set_mode/33 (trng_set_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_sub_entropy_config/32 (trng_ro_sub_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_entropy_config/31 (trng_ro_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_if_self_test_ready/30 (trng_if_self_test_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb61000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_mode/29 (trng_get_drbg_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_mode/28 (trng_get_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_alg/27 (trng_get_drbg_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_disable/26 (trng_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: uint32_sleep/63 lib_register_lock/9 lib_register_unlock/10 
+trng_enable/25 (trng_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_disable/24 (trng_data_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_enable/23 (trng_data_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_disable/22 (trng_empty_read_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_enable/21 (trng_empty_read_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_disable/20 (trng_global_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_enable/19 (trng_global_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_driver_version/18 (trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_version/17 (trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb7cfb43220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+g_trng_reg/16 (g_trng_reg)
+  Type: variable definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_buffer_regen_status/15 (g_buffer_regen_status)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb40600
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_regen_words/14 (g_buffer_regen_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb40580
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_total_words/13 (g_buffer_total_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb40500
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_used_words/12 (g_buffer_used_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72aa0
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_rand_buffer/11 (g_rand_buffer)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb72440
+  References: 
+  Referring: get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) 
+  Availability: not-ready
+  Varpool flags:
+lib_register_unlock/10 (lib_register_unlock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfe65ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+lib_register_lock/9 (lib_register_lock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fb7cfb43440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: g_trng_reg/16 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memset_/65 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer/60 
+  Calls: 
+memcpy_/64 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_internal/55 
+  Calls: 
+uint32_sleep/63 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_disable/26 
+  Calls: 
+get_rand_without_post_processing/62 (get_rand_without_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_with_post_processing/61 (get_rand_with_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_buffer/60 (get_rand_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 
+  Calls: memset_/65 get_rand_buffer_internal/59 lib_register_lock/9 lib_register_unlock/10 
+get_rand_buffer_internal/59 (get_rand_buffer_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_buffer/60 
+  Calls: memcpy_/64 memcpy_/64 memcpy_/64 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+get_rand_uint32_with_reseed/58 (get_rand_uint32_with_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_reseed/34 get_rand_uint32_without_reseed/57 
+get_rand_uint32_without_reseed/57 (get_rand_uint32_without_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+get_latest_gm_rand/56 (get_latest_gm_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_latest_gm_rand_internal/55 lib_register_lock/9 lib_register_unlock/10 
+get_latest_gm_rand_internal/55 (get_latest_gm_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand/56 
+  Calls: memcpy_/64 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+get_latest_gm_rand_by_word_internal/54 (get_latest_gm_rand_by_word_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_total_words/13 (read) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_buffer_regen_words/14 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (write) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_internal/55 get_latest_gm_rand_internal/55 
+  Calls: get_latest_gm_rand_buffer_regen_case_4_remainder/53 memcpy_/64 get_latest_gm_rand_buffer_full/49 memcpy_/64 get_latest_gm_rand_buffer_regen_case_3_greater/52 memcpy_/64 get_latest_gm_rand_buffer_regen_case_2_equal/51 memcpy_/64 get_latest_gm_rand_buffer_regen_case_1_less/50 memcpy_/64 get_latest_gm_rand_buffer_full/49 
+get_latest_gm_rand_buffer_regen_case_4_remainder/53 (get_latest_gm_rand_buffer_regen_case_4_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_3_greater/52 (get_latest_gm_rand_buffer_regen_case_3_greater)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_2_equal/51 (get_latest_gm_rand_buffer_regen_case_2_equal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_1_less/50 (get_latest_gm_rand_buffer_regen_case_1_less)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_full/49 (get_latest_gm_rand_buffer_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_gen/48 (get_latest_gm_rand_buffer_gen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_regen_case_4_remainder/53 get_latest_gm_rand_buffer_full/49 get_latest_gm_rand_buffer_regen_case_3_greater/52 get_latest_gm_rand_buffer_regen_case_2_equal/51 get_latest_gm_rand_buffer_regen_case_1_less/50 
+  Calls: wait_till_DT_ready/47 wait_till_DT_ready/47 
+wait_till_DT_ready/47 (wait_till_DT_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_gen/48 get_latest_gm_rand_buffer_gen/48 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+trng_set_latest_gm_global_init_config/46 (trng_set_latest_gm_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_runs_test_threshold/44 trng_set_apt_test_threshold/41 trng_set_poker_test_threshold/43 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_nist_global_init_config/45 (trng_set_nist_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_runs_test_threshold/44 (trng_set_runs_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_test_threshold/43 (trng_set_poker_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_non_binary_test_threshold/42 (trng_set_apt_non_binary_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_test_threshold/41 (trng_set_apt_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_runs_test_win_size/40 (trng_set_apt_runs_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_aptnb_test_win_size/39 (trng_set_poker_aptnb_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ht_config/38 (trng_ht_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_drbg_alg_mode_config/37 (trng_drbg_alg_mode_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_hw_drbg_alg_ability/36 (trng_get_hw_drbg_alg_ability)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_set_freq/35 (trng_set_freq)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_reseed/34 (trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: 
+trng_set_mode/33 (trng_set_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_sub_entropy_config/32 (trng_ro_sub_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_entropy_config/31 (trng_ro_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_if_self_test_ready/30 (trng_if_self_test_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_mode/29 (trng_get_drbg_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_mode/28 (trng_get_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_alg/27 (trng_get_drbg_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_disable/26 (trng_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: uint32_sleep/63 lib_register_lock/9 lib_register_unlock/10 
+trng_enable/25 (trng_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_disable/24 (trng_data_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_enable/23 (trng_data_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_disable/22 (trng_empty_read_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_enable/21 (trng_empty_read_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_disable/20 (trng_global_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_enable/19 (trng_global_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_driver_version/18 (trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_version/17 (trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+g_buffer_regen_status/15 (g_buffer_regen_status)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_regen_words/14 (g_buffer_regen_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_total_words/13 (g_buffer_total_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_used_words/12 (g_buffer_used_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_rand_buffer/11 (g_rand_buffer)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) 
+  Availability: not-ready
+  Varpool flags:
+lib_register_unlock/10 (lib_register_unlock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+lib_register_lock/9 (lib_register_lock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+
+
+Initial Symbol table:
+
+memset_/65 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer/60 
+  Calls: 
+memcpy_/64 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_internal/55 
+  Calls: 
+uint32_sleep/63 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_disable/26 
+  Calls: 
+get_rand_without_post_processing/62 (get_rand_without_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_with_post_processing/61 (get_rand_with_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_buffer/60 (get_rand_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 
+  Calls: memset_/65 get_rand_buffer_internal/59 lib_register_lock/9 lib_register_unlock/10 
+get_rand_buffer_internal/59 (get_rand_buffer_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_buffer/60 
+  Calls: memcpy_/64 memcpy_/64 memcpy_/64 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+get_rand_uint32_with_reseed/58 (get_rand_uint32_with_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_reseed/34 get_rand_uint32_without_reseed/57 
+get_rand_uint32_without_reseed/57 (get_rand_uint32_without_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+get_latest_gm_rand/56 (get_latest_gm_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_latest_gm_rand_internal/55 lib_register_lock/9 lib_register_unlock/10 
+get_latest_gm_rand_internal/55 (get_latest_gm_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand/56 
+  Calls: memcpy_/64 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+get_latest_gm_rand_by_word_internal/54 (get_latest_gm_rand_by_word_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_total_words/13 (read) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_buffer_regen_words/14 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (write) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_internal/55 get_latest_gm_rand_internal/55 
+  Calls: get_latest_gm_rand_buffer_regen_case_4_remainder/53 memcpy_/64 get_latest_gm_rand_buffer_full/49 memcpy_/64 get_latest_gm_rand_buffer_regen_case_3_greater/52 memcpy_/64 get_latest_gm_rand_buffer_regen_case_2_equal/51 memcpy_/64 get_latest_gm_rand_buffer_regen_case_1_less/50 memcpy_/64 get_latest_gm_rand_buffer_full/49 
+get_latest_gm_rand_buffer_regen_case_4_remainder/53 (get_latest_gm_rand_buffer_regen_case_4_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_3_greater/52 (get_latest_gm_rand_buffer_regen_case_3_greater)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_2_equal/51 (get_latest_gm_rand_buffer_regen_case_2_equal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_1_less/50 (get_latest_gm_rand_buffer_regen_case_1_less)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_full/49 (get_latest_gm_rand_buffer_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_gen/48 (get_latest_gm_rand_buffer_gen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_regen_case_4_remainder/53 get_latest_gm_rand_buffer_full/49 get_latest_gm_rand_buffer_regen_case_3_greater/52 get_latest_gm_rand_buffer_regen_case_2_equal/51 get_latest_gm_rand_buffer_regen_case_1_less/50 
+  Calls: wait_till_DT_ready/47 wait_till_DT_ready/47 
+wait_till_DT_ready/47 (wait_till_DT_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_gen/48 get_latest_gm_rand_buffer_gen/48 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+trng_set_latest_gm_global_init_config/46 (trng_set_latest_gm_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_runs_test_threshold/44 trng_set_apt_test_threshold/41 trng_set_poker_test_threshold/43 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_nist_global_init_config/45 (trng_set_nist_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_runs_test_threshold/44 (trng_set_runs_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_test_threshold/43 (trng_set_poker_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_non_binary_test_threshold/42 (trng_set_apt_non_binary_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_test_threshold/41 (trng_set_apt_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_runs_test_win_size/40 (trng_set_apt_runs_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_aptnb_test_win_size/39 (trng_set_poker_aptnb_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ht_config/38 (trng_ht_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_drbg_alg_mode_config/37 (trng_drbg_alg_mode_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_hw_drbg_alg_ability/36 (trng_get_hw_drbg_alg_ability)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_set_freq/35 (trng_set_freq)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_reseed/34 (trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: 
+trng_set_mode/33 (trng_set_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_sub_entropy_config/32 (trng_ro_sub_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_entropy_config/31 (trng_ro_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_if_self_test_ready/30 (trng_if_self_test_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_mode/29 (trng_get_drbg_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_mode/28 (trng_get_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_alg/27 (trng_get_drbg_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_disable/26 (trng_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: uint32_sleep/63 lib_register_lock/9 lib_register_unlock/10 
+trng_enable/25 (trng_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_disable/24 (trng_data_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_enable/23 (trng_data_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_disable/22 (trng_empty_read_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_enable/21 (trng_empty_read_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_disable/20 (trng_global_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_enable/19 (trng_global_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_driver_version/18 (trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_version/17 (trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+g_buffer_regen_status/15 (g_buffer_regen_status)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_regen_words/14 (g_buffer_regen_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_total_words/13 (g_buffer_total_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_used_words/12 (g_buffer_used_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_rand_buffer/11 (g_rand_buffer)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) 
+  Availability: not-ready
+  Varpool flags:
+lib_register_unlock/10 (lib_register_unlock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+lib_register_lock/9 (lib_register_lock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memset_/65 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer/60 
+  Calls: 
+memcpy_/64 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_rand_buffer_internal/59 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_internal/55 
+  Calls: 
+uint32_sleep/63 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_disable/26 
+  Calls: 
+get_rand_without_post_processing/62 (get_rand_without_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_with_post_processing/61 (get_rand_with_post_processing)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/60 lib_register_lock/9 trng_enable/25 trng_set_mode/33 trng_disable/26 lib_register_unlock/10 
+get_rand_buffer/60 (get_rand_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 
+  Calls: memset_/65 get_rand_buffer_internal/59 lib_register_lock/9 lib_register_unlock/10 
+get_rand_buffer_internal/59 (get_rand_buffer_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_buffer/60 
+  Calls: memcpy_/64 memcpy_/64 memcpy_/64 
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+   Indirect callnum speculative call targets: 0
+get_rand_uint32_with_reseed/58 (get_rand_uint32_with_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_reseed/34 get_rand_uint32_without_reseed/57 
+get_rand_uint32_without_reseed/57 (get_rand_uint32_without_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+get_latest_gm_rand/56 (get_latest_gm_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_latest_gm_rand_internal/55 lib_register_lock/9 lib_register_unlock/10 
+get_latest_gm_rand_internal/55 (get_latest_gm_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand/56 
+  Calls: memcpy_/64 get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+get_latest_gm_rand_by_word_internal/54 (get_latest_gm_rand_by_word_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_total_words/13 (read) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_buffer_regen_words/14 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (write) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_internal/55 get_latest_gm_rand_internal/55 
+  Calls: get_latest_gm_rand_buffer_regen_case_4_remainder/53 memcpy_/64 get_latest_gm_rand_buffer_full/49 memcpy_/64 get_latest_gm_rand_buffer_regen_case_3_greater/52 memcpy_/64 get_latest_gm_rand_buffer_regen_case_2_equal/51 memcpy_/64 get_latest_gm_rand_buffer_regen_case_1_less/50 memcpy_/64 get_latest_gm_rand_buffer_full/49 
+get_latest_gm_rand_buffer_regen_case_4_remainder/53 (get_latest_gm_rand_buffer_regen_case_4_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_3_greater/52 (get_latest_gm_rand_buffer_regen_case_3_greater)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_2_equal/51 (get_latest_gm_rand_buffer_regen_case_2_equal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_regen_case_1_less/50 (get_latest_gm_rand_buffer_regen_case_1_less)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_full/49 (get_latest_gm_rand_buffer_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_by_word_internal/54 get_latest_gm_rand_by_word_internal/54 
+  Calls: get_latest_gm_rand_buffer_gen/48 
+get_latest_gm_rand_buffer_gen/48 (get_latest_gm_rand_buffer_gen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_regen_case_4_remainder/53 get_latest_gm_rand_buffer_full/49 get_latest_gm_rand_buffer_regen_case_3_greater/52 get_latest_gm_rand_buffer_regen_case_2_equal/51 get_latest_gm_rand_buffer_regen_case_1_less/50 
+  Calls: wait_till_DT_ready/47 wait_till_DT_ready/47 
+wait_till_DT_ready/47 (wait_till_DT_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_latest_gm_rand_buffer_gen/48 get_latest_gm_rand_buffer_gen/48 
+  Calls: trng_enable/25 trng_disable/26 trng_enable/25 trng_disable/26 
+trng_set_latest_gm_global_init_config/46 (trng_set_latest_gm_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_runs_test_threshold/44 trng_set_apt_test_threshold/41 trng_set_poker_test_threshold/43 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_nist_global_init_config/45 (trng_set_nist_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_enable/25 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_mode/33 trng_disable/26 
+trng_set_runs_test_threshold/44 (trng_set_runs_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_test_threshold/43 (trng_set_poker_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_non_binary_test_threshold/42 (trng_set_apt_non_binary_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_test_threshold/41 (trng_set_apt_test_threshold)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_apt_runs_test_win_size/40 (trng_set_apt_runs_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_set_poker_aptnb_test_win_size/39 (trng_set_poker_aptnb_test_win_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ht_config/38 (trng_ht_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_drbg_alg_mode_config/37 (trng_drbg_alg_mode_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_hw_drbg_alg_ability/36 (trng_get_hw_drbg_alg_ability)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_set_freq/35 (trng_set_freq)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_reseed/34 (trng_reseed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_uint32_with_reseed/58 
+  Calls: 
+trng_set_mode/33 (trng_set_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_sub_entropy_config/32 (trng_ro_sub_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_ro_entropy_config/31 (trng_ro_entropy_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_if_self_test_ready/30 (trng_if_self_test_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_mode/29 (trng_get_drbg_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_mode/28 (trng_get_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_drbg_alg/27 (trng_get_drbg_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_disable/26 (trng_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: uint32_sleep/63 lib_register_lock/9 lib_register_unlock/10 
+trng_enable/25 (trng_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 get_rand_uint32_without_reseed/57 wait_till_DT_ready/47 wait_till_DT_ready/47 trng_set_latest_gm_global_init_config/46 trng_set_nist_global_init_config/45 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_disable/24 (trng_data_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_data_int_enable/23 (trng_data_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_disable/22 (trng_empty_read_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_empty_read_int_enable/21 (trng_empty_read_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_disable/20 (trng_global_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_global_int_enable/19 (trng_global_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: lib_register_lock/9 lib_register_unlock/10 
+trng_get_driver_version/18 (trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+trng_get_version/17 (trng_get_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+g_buffer_regen_status/15 (g_buffer_regen_status)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_regen_words/14 (g_buffer_regen_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (read) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_1_less/50 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (read) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) get_latest_gm_rand_buffer_regen_case_4_remainder/53 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_total_words/13 (g_buffer_total_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_buffer_used_words/12 (g_buffer_used_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_2_equal/51 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_full/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_rand_buffer/11 (g_rand_buffer)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) 
+  Availability: not-ready
+  Varpool flags:
+lib_register_unlock/10 (lib_register_unlock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+lib_register_lock/9 (lib_register_lock)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: get_rand_without_post_processing/62 get_rand_with_post_processing/61 get_rand_buffer/60 get_latest_gm_rand/56 trng_set_runs_test_threshold/44 trng_set_poker_test_threshold/43 trng_set_apt_non_binary_test_threshold/42 trng_set_apt_test_threshold/41 trng_set_apt_runs_test_win_size/40 trng_set_poker_aptnb_test_win_size/39 trng_ht_config/38 trng_drbg_alg_mode_config/37 trng_set_freq/35 trng_set_mode/33 trng_ro_sub_entropy_config/32 trng_ro_entropy_config/31 trng_disable/26 trng_enable/25 trng_data_int_disable/24 trng_data_int_enable/23 trng_empty_read_int_disable/22 trng_empty_read_int_enable/21 trng_global_int_disable/20 trng_global_int_enable/19 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+get_latest_gm_rand_buffer_full/142 (get_latest_gm_rand_buffer_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 49
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function get_latest_gm_rand_buffer_full/142 is inline copy in get_latest_gm_rand_by_word_internal/54
+  Clone of get_latest_gm_rand_buffer_full/49
+  Availability: local
+  Function flags: count:1014686023 (estimated locally) body local
+  Called by: get_latest_gm_rand_by_word_internal/54 (inlined) (1014686023 (estimated locally),2.98 per call) 
+  Calls: get_latest_gm_rand_buffer_gen/48 (1014686023 (estimated locally),2.98 per call) 
+get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (get_latest_gm_rand_buffer_regen_case_1_less.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (read) g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function get_latest_gm_rand_buffer_regen_case_1_less.isra/141 is inline copy in get_latest_gm_rand_by_word_internal/54
+  Clone of get_latest_gm_rand_buffer_regen_case_1_less/50
+  Availability: local
+  Function flags: count:65413263 (estimated locally) local
+  Called by: get_latest_gm_rand_by_word_internal/54 (inlined) (65413263 (estimated locally),0.19 per call) 
+  Calls: get_latest_gm_rand_buffer_gen/48 (21586377 (estimated locally),0.06 per call) 
+get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (get_latest_gm_rand_buffer_regen_case_2_equal.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function get_latest_gm_rand_buffer_regen_case_2_equal.isra/140 is inline copy in get_latest_gm_rand_by_word_internal/54
+  Clone of get_latest_gm_rand_buffer_regen_case_2_equal/51
+  Availability: local
+  Function flags: count:45154975 (estimated locally) local
+  Called by: get_latest_gm_rand_by_word_internal/54 (inlined) (45154975 (estimated locally),0.13 per call) 
+  Calls: get_latest_gm_rand_buffer_gen/48 (14901142 (estimated locally),0.04 per call) 
+get_latest_gm_rand_buffer_regen_case_4_remainder.isra.0/139 (get_latest_gm_rand_buffer_regen_case_4_remainder.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: g_buffer_regen_words/14 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Function get_latest_gm_rand_buffer_regen_case_4_remainder.isra/139 is inline copy in get_latest_gm_rand_by_word_internal/54
+  Clone of get_latest_gm_rand_buffer_regen_case_4_remainder/53
+  Availability: local
+  Function flags: count:18952483 (estimated locally) local
+  Called by: get_latest_gm_rand_by_word_internal/54 (inlined) (18952483 (estimated locally),0.06 per call) 
+  Calls: get_latest_gm_rand_buffer_gen/48 (18952483 (estimated locally),0.06 per call) 
+memset_/65 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_rand_buffer/60 (996165319 (estimated locally),0.93 per call) 
+  Calls: 
+memcpy_/64 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_latest_gm_rand_internal/55 (92266922 (estimated locally),0.33 per call) get_latest_gm_rand_by_word_internal/54 (18952483 (estimated locally),0.06 per call) get_latest_gm_rand_by_word_internal/54 (1014686023 (estimated locally),2.98 per call) get_latest_gm_rand_by_word_internal/54 (87653773 (estimated locally),0.26 per call) get_latest_gm_rand_by_word_internal/54 (45154975 (estimated locally),0.13 per call) get_latest_gm_rand_by_word_internal/54 (65413263 (estimated locally),0.19 per call) get_rand_buffer_internal/59 (2640025 (estimated locally),0.00 per call) get_rand_buffer_internal/59 (6400062 (estimated locally),0.01 per call) get_rand_buffer_internal/59 (6400062 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_sleep/63 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: trng_disable/26 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_rand_without_post_processing/62 (get_rand_without_post_processing)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:814996886 (estimated locally) body
+  Called by: 
+  Calls: get_rand_buffer/60 (1014686024 (estimated locally),1.25 per call) trng_disable/26 (268948971 (estimated locally),0.33 per call) 
+get_rand_with_post_processing/61 (get_rand_with_post_processing)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:814996886 (estimated locally) body
+  Called by: 
+  Calls: get_rand_buffer/60 (1014686024 (estimated locally),1.25 per call) trng_disable/26 (268948971 (estimated locally),0.33 per call) 
+get_rand_buffer/60 (get_rand_buffer)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: get_rand_without_post_processing/62 (1014686024 (estimated locally),1.25 per call) get_rand_with_post_processing/61 (1014686024 (estimated locally),1.25 per call) 
+  Calls: memset_/65 (996165319 (estimated locally),0.93 per call) get_rand_buffer_internal/59 (inlined) (51200493 (estimated locally),0.05 per call) 
+get_rand_buffer_internal/59 (get_rand_buffer_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function get_rand_buffer_internal/59 is inline copy in get_rand_buffer/60
+  Availability: local
+  Function flags: count:51200493 (estimated locally) body local
+  Called by: get_rand_buffer/60 (inlined) (51200493 (estimated locally),0.05 per call) 
+  Calls: memcpy_/64 (2640025 (estimated locally),0.00 per call) memcpy_/64 (6400062 (estimated locally),0.01 per call) memcpy_/64 (6400062 (estimated locally),0.01 per call) 
+   Indirect call(8000077 (estimated locally),0.01 per call) of param:2 (vptr maybe changed) num speculative call targets: 0
+   Indirect call(282685596 (estimated locally),0.26 per call) of param:2 (vptr maybe changed) num speculative call targets: 0
+   Indirect call(25600247 (estimated locally),0.02 per call) of param:2 (vptr maybe changed) num speculative call targets: 0
+get_rand_uint32_with_reseed/58 (get_rand_uint32_with_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: get_rand_uint32_without_reseed/57 (1073741824 (estimated locally),1.00 per call) 
+get_rand_uint32_without_reseed/57 (get_rand_uint32_without_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:114863530 (estimated locally) body
+  Called by: get_rand_uint32_with_reseed/58 (1073741824 (estimated locally),1.00 per call) 
+  Calls: trng_disable/26 (12037698 (estimated locally),0.10 per call) trng_disable/26 (224347080 (estimated locally),1.95 per call) trng_disable/26 (334846387 (estimated locally),2.92 per call) 
+get_latest_gm_rand/56 (get_latest_gm_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:282740997 (estimated locally) body
+  Called by: 
+  Calls: get_latest_gm_rand_internal/55 (inlined) (1014686024 (estimated locally),3.59 per call) 
+get_latest_gm_rand_internal/55 (get_latest_gm_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function get_latest_gm_rand_internal/55 is inline copy in get_latest_gm_rand/56
+  Availability: local
+  Function flags: count:1014686024 (estimated locally) body local
+  Called by: get_latest_gm_rand/56 (inlined) (1014686024 (estimated locally),3.59 per call) 
+  Calls: memcpy_/64 (92266922 (estimated locally),0.33 per call) get_latest_gm_rand_by_word_internal/54 (279596733 (estimated locally),0.99 per call) get_latest_gm_rand_by_word_internal/54 (334846387 (estimated locally),1.18 per call) 
+get_latest_gm_rand_by_word_internal/54 (get_latest_gm_rand_by_word_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_buffer_total_words/13 (read) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (read) g_buffer_regen_status/15 (write) g_buffer_total_words/13 (read) g_buffer_used_words/12 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (read) g_buffer_regen_words/14 (read) g_buffer_used_words/12 (read) g_buffer_used_words/12 (write) g_rand_buffer/11 (addr) g_rand_buffer/11 (addr) g_rand_buffer/11 (addr) g_buffer_total_words/13 (read) g_buffer_total_words/13 (read) g_rand_buffer/11 (addr) g_buffer_used_words/12 (write) 
+  Referring: 
+  Availability: local
+  Function flags: count:340295298 (estimated locally) body local
+  Called by: get_latest_gm_rand_internal/55 (279596733 (estimated locally),0.99 per call) get_latest_gm_rand_internal/55 (334846387 (estimated locally),1.18 per call) 
+  Calls: get_latest_gm_rand_buffer_regen_case_4_remainder.isra.0/139 (inlined) (18952483 (estimated locally),0.06 per call) memcpy_/64 (18952483 (estimated locally),0.06 per call) get_latest_gm_rand_buffer_full/142 (inlined) (1014686023 (estimated locally),2.98 per call) memcpy_/64 (1014686023 (estimated locally),2.98 per call) get_latest_gm_rand_buffer_regen_case_3_greater/52 (inlined) (87653773 (estimated locally),0.26 per call) memcpy_/64 (87653773 (estimated locally),0.26 per call) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (inlined) (45154975 (estimated locally),0.13 per call) memcpy_/64 (45154975 (estimated locally),0.13 per call) get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (inlined) (65413263 (estimated locally),0.19 per call) memcpy_/64 (65413263 (estimated locally),0.19 per call) get_latest_gm_rand_buffer_full/49 (inlined) (56148724 (estimated locally),0.16 per call) 
+get_latest_gm_rand_buffer_regen_case_4_remainder/53 (get_latest_gm_rand_buffer_regen_case_4_remainder)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_regen_case_3_greater/52 (get_latest_gm_rand_buffer_regen_case_3_greater)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_buffer_regen_status/15 (read) g_buffer_regen_words/14 (read) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) g_buffer_regen_status/15 (write) g_buffer_used_words/12 (write) g_buffer_regen_words/14 (write) 
+  Referring: 
+  Function get_latest_gm_rand_buffer_regen_case_3_greater/52 is inline copy in get_latest_gm_rand_by_word_internal/54
+  Availability: local
+  Function flags: count:87653773 (estimated locally) body local
+  Called by: get_latest_gm_rand_by_word_internal/54 (inlined) (87653773 (estimated locally),0.26 per call) 
+  Calls: get_latest_gm_rand_buffer_gen/48 (28925745 (estimated locally),0.09 per call) 
+get_latest_gm_rand_buffer_regen_case_2_equal/51 (get_latest_gm_rand_buffer_regen_case_2_equal)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_regen_case_1_less/50 (get_latest_gm_rand_buffer_regen_case_1_less)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_full/49 (get_latest_gm_rand_buffer_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 142
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Function get_latest_gm_rand_buffer_full/49 is inline copy in get_latest_gm_rand_by_word_internal/54
+  Availability: local
+  Function flags: count:56148724 (estimated locally) body local
+  Called by: get_latest_gm_rand_by_word_internal/54 (inlined) (56148724 (estimated locally),0.16 per call) 
+  Calls: get_latest_gm_rand_buffer_gen/48 (56148724 (estimated locally),0.16 per call) 
+get_latest_gm_rand_buffer_gen/48 (get_latest_gm_rand_buffer_gen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_rand_buffer/11 (write) g_buffer_total_words/13 (write) g_buffer_total_words/13 (write) 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) body local
+  Called by: get_latest_gm_rand_buffer_full/142 (1014686023 (estimated locally),2.98 per call) get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (21586377 (estimated locally),0.06 per call) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (14901142 (estimated locally),0.04 per call) get_latest_gm_rand_buffer_regen_case_4_remainder.isra.0/139 (18952483 (estimated locally),0.06 per call) get_latest_gm_rand_buffer_full/49 (56148724 (estimated locally),0.16 per call) get_latest_gm_rand_buffer_regen_case_3_greater/52 (28925745 (estimated locally),0.09 per call) 
+  Calls: wait_till_DT_ready/47 (11624189 (estimated locally),0.10 per call) wait_till_DT_ready/47 (1014686025 (estimated locally),8.83 per call) 
+wait_till_DT_ready/47 (wait_till_DT_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) body local
+  Called by: get_latest_gm_rand_buffer_gen/48 (11624189 (estimated locally),0.10 per call) get_latest_gm_rand_buffer_gen/48 (1014686025 (estimated locally),8.83 per call) 
+  Calls: trng_disable/26 (224347080 (estimated locally),1.95 per call) trng_disable/26 (334846387 (estimated locally),2.92 per call) 
+trng_set_latest_gm_global_init_config/46 (trng_set_latest_gm_global_init_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_buffer_used_words/12 (write) g_buffer_total_words/13 (write) g_buffer_regen_words/14 (write) g_buffer_regen_status/15 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: trng_disable/26 (1073741824 (estimated locally),1.00 per call) 
+trng_set_nist_global_init_config/45 (trng_set_nist_global_init_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: trng_disable/26 (1073741824 (estimated locally),1.00 per call) 
+trng_set_runs_test_threshold/44 (trng_set_runs_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_poker_test_threshold/43 (trng_set_poker_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_apt_non_binary_test_threshold/42 (trng_set_apt_non_binary_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_apt_test_threshold/41 (trng_set_apt_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_apt_runs_test_win_size/40 (trng_set_apt_runs_test_win_size)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_poker_aptnb_test_win_size/39 (trng_set_poker_aptnb_test_win_size)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_ht_config/38 (trng_ht_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_drbg_alg_mode_config/37 (trng_drbg_alg_mode_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_hw_drbg_alg_ability/36 (trng_get_hw_drbg_alg_ability)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_freq/35 (trng_set_freq)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_reseed/34 (trng_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_mode/33 (trng_set_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_ro_sub_entropy_config/32 (trng_ro_sub_entropy_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741808 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_ro_entropy_config/31 (trng_ro_entropy_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_if_self_test_ready/30 (trng_if_self_test_ready)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_drbg_mode/29 (trng_get_drbg_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_mode/28 (trng_get_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_drbg_alg/27 (trng_get_drbg_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_disable/26 (trng_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: get_rand_without_post_processing/62 (268948971 (estimated locally),0.33 per call) get_rand_with_post_processing/61 (268948971 (estimated locally),0.33 per call) get_rand_uint32_without_reseed/57 (12037698 (estimated locally),0.10 per call) get_rand_uint32_without_reseed/57 (224347080 (estimated locally),1.95 per call) get_rand_uint32_without_reseed/57 (334846387 (estimated locally),2.92 per call) trng_set_latest_gm_global_init_config/46 (1073741824 (estimated locally),1.00 per call) trng_set_nist_global_init_config/45 (1073741824 (estimated locally),1.00 per call) wait_till_DT_ready/47 (224347080 (estimated locally),1.95 per call) wait_till_DT_ready/47 (334846387 (estimated locally),2.92 per call) 
+  Calls: uint32_sleep/63 (1073741824 (estimated locally),1.00 per call) 
+trng_enable/25 (trng_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_data_int_disable/24 (trng_data_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_data_int_enable/23 (trng_data_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_empty_read_int_disable/22 (trng_empty_read_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_empty_read_int_enable/21 (trng_empty_read_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_global_int_disable/20 (trng_global_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_global_int_enable/19 (trng_global_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_driver_version/18 (trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_version/17 (trng_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+g_buffer_regen_status/15 (g_buffer_regen_status)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (write) get_latest_gm_rand_buffer_regen_case_4_remainder.isra.0/139 (write) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (read) get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) trng_set_latest_gm_global_init_config/46 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_buffer_regen_words/14 (g_buffer_regen_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (read) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (read) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (write) get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (read) get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (read) get_latest_gm_rand_buffer_regen_case_1_less.isra.0/141 (write) get_latest_gm_rand_buffer_regen_case_4_remainder.isra.0/139 (write) get_latest_gm_rand_buffer_regen_case_4_remainder.isra.0/139 (write) get_latest_gm_rand_by_word_internal/54 (write) trng_set_latest_gm_global_init_config/46 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_buffer_total_words/13 (g_buffer_total_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: get_latest_gm_rand_buffer_full/49 (write) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_buffer_full/142 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_buffer_used_words/12 (g_buffer_used_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: get_latest_gm_rand_buffer_full/49 (write) get_latest_gm_rand_buffer_regen_case_2_equal.isra.0/140 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_buffer_regen_case_3_greater/52 (write) get_latest_gm_rand_by_word_internal/54 (write) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (read) get_latest_gm_rand_by_word_internal/54 (write) trng_set_latest_gm_global_init_config/46 (write) get_latest_gm_rand_buffer_full/142 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_rand_buffer/11 (g_rand_buffer)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_buffer_gen/48 (write) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) get_latest_gm_rand_by_word_internal/54 (addr) 
+  Availability: available
+  Varpool flags:
+cloning get_latest_gm_rand_buffer_regen_case_4_remainder/53 to get_latest_gm_rand_buffer_regen_case_4_remainder.isra/139
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+uint32_t get_latest_gm_rand_buffer_regen_case_4_remainder (uint32_t regen_words)
+{
+  uint32_t ret;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  ret_5 = get_latest_gm_rand_buffer_gen (0, regen_words_3(D), 0);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = regen_words_3(D);
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status = ret_5;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return ret_5;
+
+}
+
+
+void get_latest_gm_rand_buffer_regen_case_4_remainder.isra (uint32_t regen_words)
+{
+  uint32_t D.3395;
+  uint32_t ret;
+
+  <bb 6> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  ret_2 = get_latest_gm_rand_buffer_gen (0, regen_words_1(D), 0);
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  if (ret_2 == 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = regen_words_1(D);
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status = ret_2;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+cloning get_latest_gm_rand_buffer_regen_case_2_equal/51 to get_latest_gm_rand_buffer_regen_case_2_equal.isra/140
+    m_always_copy_start: 0
+    Will SKIP return.
+uint32_t get_latest_gm_rand_buffer_regen_case_2_equal ()
+{
+  uint32_t ret;
+  long unsigned int g_buffer_regen_status.22_1;
+  long unsigned int g_buffer_regen_words.23_2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status.22_1 = g_buffer_regen_status;
+  if (g_buffer_regen_status.22_1 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words.23_2 = g_buffer_regen_words;
+  ret_7 = get_latest_gm_rand_buffer_gen (g_buffer_regen_words.23_2, 624, 1);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 4> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  g_buffer_total_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status = ret_7;
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 719407024]:
+  # DEBUG BEGIN_STMT
+  g_buffer_total_words = 0;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  g_buffer_used_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = 0;
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+void get_latest_gm_rand_buffer_regen_case_2_equal.isra ()
+{
+  uint32_t D.3399;
+  uint32_t ret;
+  long unsigned int g_buffer_regen_status.22_1;
+  long unsigned int g_buffer_regen_words.23_2;
+
+  <bb 7> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status.22_1 = g_buffer_regen_status;
+  if (g_buffer_regen_status.22_1 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words.23_2 = g_buffer_regen_words;
+  ret_3 = get_latest_gm_rand_buffer_gen (g_buffer_regen_words.23_2, 624, 1);
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 4> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  g_buffer_total_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status = ret_3;
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 719407024]:
+  # DEBUG BEGIN_STMT
+  g_buffer_total_words = 0;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  g_buffer_used_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = 0;
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+cloning get_latest_gm_rand_buffer_regen_case_1_less/50 to get_latest_gm_rand_buffer_regen_case_1_less.isra/141
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+uint32_t get_latest_gm_rand_buffer_regen_case_1_less (uint32_t regen_words)
+{
+  uint32_t ret;
+  long unsigned int g_buffer_regen_status.16_1;
+  long unsigned int g_buffer_regen_words.17_2;
+  long unsigned int _3;
+  long unsigned int g_buffer_regen_words.19_4;
+  long unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status.16_1 = g_buffer_regen_status;
+  if (g_buffer_regen_status.16_1 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 6>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words.17_2 = g_buffer_regen_words;
+  _3 = g_buffer_regen_words.17_2 + regen_words_8(D);
+  ret_10 = get_latest_gm_rand_buffer_gen (g_buffer_regen_words.17_2, _3, 0);
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  if (ret_10 == 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 4> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words.19_4 = g_buffer_regen_words;
+  _5 = g_buffer_regen_words.19_4 + regen_words_8(D);
+  g_buffer_regen_words = _5;
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status = ret_10;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+void get_latest_gm_rand_buffer_regen_case_1_less.isra (uint32_t regen_words)
+{
+  uint32_t D.3404;
+  uint32_t ret;
+  long unsigned int g_buffer_regen_status.16_1;
+  long unsigned int g_buffer_regen_words.17_2;
+  long unsigned int _4;
+  long unsigned int g_buffer_regen_words.19_6;
+  long unsigned int _7;
+
+  <bb 7> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status.16_1 = g_buffer_regen_status;
+  if (g_buffer_regen_status.16_1 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 6>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words.17_2 = g_buffer_regen_words;
+  _4 = g_buffer_regen_words.17_2 + regen_words_3(D);
+  ret_5 = get_latest_gm_rand_buffer_gen (g_buffer_regen_words.17_2, _4, 0);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 4> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words.19_6 = g_buffer_regen_words;
+  _7 = regen_words_3(D) + g_buffer_regen_words.19_6;
+  g_buffer_regen_words = _7;
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_words = 0;
+  # DEBUG BEGIN_STMT
+  g_buffer_regen_status = ret_5;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+updating call of get_latest_gm_rand_by_word_internal/54 -> get_latest_gm_rand_buffer_regen_case_4_remainder.isra/139: get_latest_gm_rand_buffer_regen_case_4_remainder (_23);
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+  updated to:get_latest_gm_rand_buffer_regen_case_4_remainder.isra (_23);
+updating call of get_latest_gm_rand_by_word_internal/54 -> get_latest_gm_rand_buffer_regen_case_2_equal.isra/140: get_latest_gm_rand_buffer_regen_case_2_equal ();
+    m_always_copy_start: 0
+    Will SKIP return.
+  updated to:get_latest_gm_rand_buffer_regen_case_2_equal.isra ();
+updating call of get_latest_gm_rand_by_word_internal/54 -> get_latest_gm_rand_buffer_regen_case_1_less.isra/141: get_latest_gm_rand_buffer_regen_case_1_less (regen_words_55);
+    m_always_copy_start: 1
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+    Will SKIP return.
+  updated to:get_latest_gm_rand_buffer_regen_case_1_less.isra (regen_words_55);
+Trivially needed variables: g_buffer_regen_status/15 g_buffer_regen_words/14 g_buffer_total_words/13 g_buffer_used_words/12 g_rand_buffer/11
+Removing variables:
+
+Final Symbol table:
+
+memset_/65 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/64 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_sleep/63 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_without_post_processing/62 (get_rand_without_post_processing)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_without_post_processing (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:814996886 (estimated locally)
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/61 (get_rand_with_post_processing)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_with_post_processing (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:814996886 (estimated locally)
+  Called by: 
+  Calls: 
+get_rand_buffer/60 (get_rand_buffer)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_buffer (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_rand_uint32_with_reseed/58 (get_rand_uint32_with_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_uint32_with_reseed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_rand_uint32_without_reseed/57 (get_rand_uint32_without_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_uint32_without_reseed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:114863530 (estimated locally)
+  Called by: 
+  Calls: 
+get_latest_gm_rand/56 (get_latest_gm_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_latest_gm_rand (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:282740997 (estimated locally)
+  Called by: 
+  Calls: 
+get_latest_gm_rand_by_word_internal/54 (get_latest_gm_rand_by_word_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_latest_gm_rand_by_word_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:340295298 (estimated locally) local
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_regen_case_4_remainder/53 (get_latest_gm_rand_buffer_regen_case_4_remainder)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_regen_case_2_equal/51 (get_latest_gm_rand_buffer_regen_case_2_equal)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_regen_case_1_less/50 (get_latest_gm_rand_buffer_regen_case_1_less)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_latest_gm_rand_buffer_gen/48 (get_latest_gm_rand_buffer_gen)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_latest_gm_rand_buffer_gen (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) local
+  Called by: 
+  Calls: 
+wait_till_DT_ready/47 (wait_till_DT_ready)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.wait_till_DT_ready (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) local
+  Called by: 
+  Calls: 
+trng_set_latest_gm_global_init_config/46 (trng_set_latest_gm_global_init_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_latest_gm_global_init_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+trng_set_nist_global_init_config/45 (trng_set_nist_global_init_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_nist_global_init_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+trng_set_runs_test_threshold/44 (trng_set_runs_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_runs_test_threshold (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_poker_test_threshold/43 (trng_set_poker_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_poker_test_threshold (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_apt_non_binary_test_threshold/42 (trng_set_apt_non_binary_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_apt_non_binary_test_threshold (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_apt_test_threshold/41 (trng_set_apt_test_threshold)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_apt_test_threshold (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_apt_runs_test_win_size/40 (trng_set_apt_runs_test_win_size)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_apt_runs_test_win_size (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_poker_aptnb_test_win_size/39 (trng_set_poker_aptnb_test_win_size)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_poker_aptnb_test_win_size (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_ht_config/38 (trng_ht_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_ht_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_drbg_alg_mode_config/37 (trng_drbg_alg_mode_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_drbg_alg_mode_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_hw_drbg_alg_ability/36 (trng_get_hw_drbg_alg_ability)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_get_hw_drbg_alg_ability (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_freq/35 (trng_set_freq)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_freq (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_reseed/34 (trng_reseed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_reseed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_set_mode/33 (trng_set_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_ro_sub_entropy_config/32 (trng_ro_sub_entropy_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_ro_sub_entropy_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741808 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_ro_entropy_config/31 (trng_ro_entropy_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_ro_entropy_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_if_self_test_ready/30 (trng_if_self_test_ready)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_if_self_test_ready (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_drbg_mode/29 (trng_get_drbg_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_get_drbg_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_mode/28 (trng_get_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_get_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_drbg_alg/27 (trng_get_drbg_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_get_drbg_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_disable/26 (trng_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_disable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+trng_enable/25 (trng_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_enable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_data_int_disable/24 (trng_data_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_data_int_disable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_data_int_enable/23 (trng_data_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_data_int_enable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_empty_read_int_disable/22 (trng_empty_read_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_empty_read_int_disable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_empty_read_int_enable/21 (trng_empty_read_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_empty_read_int_enable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_global_int_disable/20 (trng_global_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_global_int_disable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_global_int_enable/19 (trng_global_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_global_int_enable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_driver_version/18 (trng_get_driver_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_get_driver_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+trng_get_version/17 (trng_get_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_get_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+g_buffer_regen_status/15 (g_buffer_regen_status)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_buffer_regen_status (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_buffer_regen_words/14 (g_buffer_regen_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_buffer_regen_words (implicit_section)
+  Aux: @0x7fb7cfb40680
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_buffer_total_words/13 (g_buffer_total_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_buffer_total_words (implicit_section)
+  Aux: @0x7fb7cfb40600
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_buffer_used_words/12 (g_buffer_used_words)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_buffer_used_words (implicit_section)
+  Aux: @0x7fb7cfb40580
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_rand_buffer/11 (g_rand_buffer)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_rand_buffer (implicit_section)
+  Aux: @0x7fb7cfb40500
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

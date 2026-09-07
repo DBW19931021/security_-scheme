@@ -1,0 +1,897 @@
+Trivially needed symbols: ansi_x9_63_kdf/17 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13
+
+
+Initial Symbol table:
+
+uint8_big_num_big_endian_add_little/24 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+hash_node_steps/23 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+uint8_BigNum_Check_Zero/22 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: 
+memset_/21 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+uint8_XOR/19 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+hash_get_digest_word_len/18 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+ansi_x9_63_kdf/17 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/16 
+ansi_x9_63_kdf_node/16 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f5a278a5770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf/17 
+  Calls: ansi_x9_63_kdf_digest_remainder/15 memcpy_/20 memcpy_/20 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_digest_remainder/15 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f5a278a5770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 
+  Calls: memcpy_/20 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_internal/14 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal/14 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f5a278a5660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: uint8_big_num_big_endian_add_little/24 hash_node_steps/23 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_node_with_xor_in/13 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f5a278a5440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/21 uint8_XOR/19 memcpy_/20 ansi_x9_63_kdf_internal_check_zero/12 uint8_XOR/19 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal_check_zero/12 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f5a278a5440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: uint8_BigNum_Check_Zero/22 ansi_x9_63_kdf_internal/14 
+ansi_x9_63_kdf_parameter_check/11 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f5a278a5220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint8_big_num_big_endian_add_little/24 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+hash_node_steps/23 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+uint8_BigNum_Check_Zero/22 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: 
+memset_/21 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+uint8_XOR/19 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+hash_get_digest_word_len/18 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+ansi_x9_63_kdf/17 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/16 
+ansi_x9_63_kdf_node/16 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf/17 
+  Calls: ansi_x9_63_kdf_digest_remainder/15 memcpy_/20 memcpy_/20 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_digest_remainder/15 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 
+  Calls: memcpy_/20 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_internal/14 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal/14 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: uint8_big_num_big_endian_add_little/24 hash_node_steps/23 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_node_with_xor_in/13 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/21 uint8_XOR/19 memcpy_/20 ansi_x9_63_kdf_internal_check_zero/12 uint8_XOR/19 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal_check_zero/12 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: uint8_BigNum_Check_Zero/22 ansi_x9_63_kdf_internal/14 
+ansi_x9_63_kdf_parameter_check/11 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+
+
+Initial Symbol table:
+
+uint8_big_num_big_endian_add_little/24 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+hash_node_steps/23 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+uint8_BigNum_Check_Zero/22 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: 
+memset_/21 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+uint8_XOR/19 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+hash_get_digest_word_len/18 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+ansi_x9_63_kdf/17 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/16 
+ansi_x9_63_kdf_node/16 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf/17 
+  Calls: ansi_x9_63_kdf_digest_remainder/15 memcpy_/20 memcpy_/20 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_digest_remainder/15 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 
+  Calls: memcpy_/20 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_internal/14 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal/14 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: uint8_big_num_big_endian_add_little/24 hash_node_steps/23 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_node_with_xor_in/13 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/21 uint8_XOR/19 memcpy_/20 ansi_x9_63_kdf_internal_check_zero/12 uint8_XOR/19 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal_check_zero/12 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: uint8_BigNum_Check_Zero/22 ansi_x9_63_kdf_internal/14 
+ansi_x9_63_kdf_parameter_check/11 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint8_big_num_big_endian_add_little/24 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+hash_node_steps/23 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 
+  Calls: 
+uint8_BigNum_Check_Zero/22 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: 
+memset_/21 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+uint8_XOR/19 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+hash_get_digest_word_len/18 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+ansi_x9_63_kdf/17 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/16 
+ansi_x9_63_kdf_node/16 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf/17 
+  Calls: ansi_x9_63_kdf_digest_remainder/15 memcpy_/20 memcpy_/20 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_digest_remainder/15 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_node/16 
+  Calls: memcpy_/20 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_internal/14 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal/14 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_digest_remainder/15 ansi_x9_63_kdf_internal_check_zero/12 
+  Calls: uint8_big_num_big_endian_add_little/24 hash_node_steps/23 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_node_with_xor_in/13 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: memset_/21 uint8_XOR/19 memcpy_/20 ansi_x9_63_kdf_internal_check_zero/12 uint8_XOR/19 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_internal_check_zero/12 ansi_x9_63_kdf_parameter_check/11 hash_get_digest_word_len/18 
+ansi_x9_63_kdf_internal_check_zero/12 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: uint8_BigNum_Check_Zero/22 ansi_x9_63_kdf_internal/14 
+ansi_x9_63_kdf_parameter_check/11 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: ansi_x9_63_kdf_node/16 ansi_x9_63_kdf_internal/14 ansi_x9_63_kdf_node_with_xor_in/13 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+ansi_x9_63_kdf_parameter_check/31 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 30
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_parameter_check/31 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Clone of ansi_x9_63_kdf_parameter_check/11
+  Availability: local
+  Function flags: count:315975386 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 (inlined) (315975386 (estimated locally),1.00 per call) 
+  Calls: 
+ansi_x9_63_kdf_parameter_check/30 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 11
+  previous sharing asm name: 31
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_parameter_check/30 is inline copy in ansi_x9_63_kdf_node/16
+  Clone of ansi_x9_63_kdf_parameter_check/11
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: ansi_x9_63_kdf_node/16 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ansi_x9_63_kdf_internal_check_zero.part.0/29 (ansi_x9_63_kdf_internal_check_zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 27
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero.part.0/29 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Clone of ansi_x9_63_kdf_internal_check_zero.part.0/25
+  Availability: local
+  Function flags: count:238956303 (estimated locally) body local split_part optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/28 (inlined) (238956303 (estimated locally),0.76 per call) 
+  Calls: uint8_BigNum_Check_Zero/22 (238956303 (estimated locally),0.76 per call) 
+ansi_x9_63_kdf_internal_check_zero/28 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 26
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero/28 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Clone of ansi_x9_63_kdf_internal_check_zero/12
+  Availability: local
+  Function flags: count:724110014 (estimated locally) body local optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 (inlined) (724110014 (estimated locally),2.29 per call) 
+  Calls: ansi_x9_63_kdf_internal/14 (724110014 (estimated locally),2.29 per call) ansi_x9_63_kdf_internal_check_zero.part.0/29 (inlined) (238956303 (estimated locally),0.76 per call) 
+ansi_x9_63_kdf_internal_check_zero.part.0/27 (ansi_x9_63_kdf_internal_check_zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 25
+  previous sharing asm name: 29
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero.part.0/27 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Clone of ansi_x9_63_kdf_internal_check_zero.part.0/25
+  Availability: local
+  Function flags: count:5591579 (estimated locally) body local split_part optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/26 (inlined) (5591579 (estimated locally),0.02 per call) 
+  Calls: uint8_BigNum_Check_Zero/22 (5591579 (estimated locally),0.02 per call) 
+ansi_x9_63_kdf_internal_check_zero/26 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 12
+  previous sharing asm name: 28
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero/26 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Clone of ansi_x9_63_kdf_internal_check_zero/12
+  Availability: local
+  Function flags: count:16944180 (estimated locally) body local optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 (inlined) (16944180 (estimated locally),0.05 per call) 
+  Calls: ansi_x9_63_kdf_internal/14 (16944180 (estimated locally),0.05 per call) ansi_x9_63_kdf_internal_check_zero.part.0/27 (inlined) (5591579 (estimated locally),0.02 per call) 
+ansi_x9_63_kdf_internal_check_zero.part.0/25 (ansi_x9_63_kdf_internal_check_zero.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 27
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero.part.0/25 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Availability: local
+  Function flags: count:102409843 (estimated locally) body local split_part optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/12 (inlined) (102409843 (estimated locally),0.32 per call) 
+  Calls: uint8_BigNum_Check_Zero/22 (102409843 (estimated locally),0.32 per call) 
+uint8_big_num_big_endian_add_little/24 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 (315357972 (estimated locally),1.74 per call) 
+  Calls: 
+hash_node_steps/23 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 (955630224 (estimated locally),5.26 per call) 
+  Calls: 
+uint8_BigNum_Check_Zero/22 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero.part.0/29 (238956303 (estimated locally),0.76 per call) ansi_x9_63_kdf_internal_check_zero.part.0/27 (5591579 (estimated locally),0.02 per call) ansi_x9_63_kdf_internal_check_zero.part.0/25 (102409843 (estimated locally),0.32 per call) 
+  Calls: 
+memset_/21 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 (4493186 (estimated locally),0.01 per call) 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node/16 (89762133 (estimated locally),0.08 per call) ansi_x9_63_kdf_node/16 (89762133 (estimated locally),0.08 per call) ansi_x9_63_kdf_digest_remainder/15 (58465242 (estimated locally),0.05 per call) ansi_x9_63_kdf_node_with_xor_in/13 (2541627 (estimated locally),0.01 per call) 
+  Calls: 
+uint8_XOR/19 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 (5930463 (estimated locally),0.02 per call) ansi_x9_63_kdf_node_with_xor_in/13 (697607587 (estimated locally),2.21 per call) 
+  Calls: 
+hash_get_digest_word_len/18 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: ansi_x9_63_kdf_node/16 (1073741824 (estimated locally),1.00 per call) ansi_x9_63_kdf_digest_remainder/15 (1073741824 (estimated locally),1.00 per call) ansi_x9_63_kdf_node_with_xor_in/13 (315975386 (estimated locally),1.00 per call) ansi_x9_63_kdf_internal/14 (181710154 (estimated locally),1.00 per call) 
+  Calls: 
+ansi_x9_63_kdf/17 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: ansi_x9_63_kdf_node/16 (1073741824 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_node/16 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: ansi_x9_63_kdf/17 (1073741824 (estimated locally),1.00 per call) 
+  Calls: ansi_x9_63_kdf_digest_remainder/15 (89762133 (estimated locally),0.08 per call) memcpy_/20 (89762133 (estimated locally),0.08 per call) memcpy_/20 (89762133 (estimated locally),0.08 per call) ansi_x9_63_kdf_digest_remainder/15 (512926472 (estimated locally),0.48 per call) ansi_x9_63_kdf_parameter_check/30 (inlined) (1073741824 (estimated locally),1.00 per call) hash_get_digest_word_len/18 (1073741824 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_digest_remainder/15 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: ansi_x9_63_kdf_node/16 (89762133 (estimated locally),0.08 per call) ansi_x9_63_kdf_node/16 (512926472 (estimated locally),0.48 per call) 
+  Calls: memcpy_/20 (58465242 (estimated locally),0.05 per call) ansi_x9_63_kdf_internal/14 (177167400 (estimated locally),0.16 per call) ansi_x9_63_kdf_internal/14 (1073741824 (estimated locally),1.00 per call) hash_get_digest_word_len/18 (1073741824 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_internal/14 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:181710154 (estimated locally) body optimize_size
+  Called by: ansi_x9_63_kdf_internal_check_zero/28 (724110014 (estimated locally),2.29 per call) ansi_x9_63_kdf_internal_check_zero/26 (16944180 (estimated locally),0.05 per call) ansi_x9_63_kdf_digest_remainder/15 (177167400 (estimated locally),0.16 per call) ansi_x9_63_kdf_digest_remainder/15 (1073741824 (estimated locally),1.00 per call) ansi_x9_63_kdf_internal_check_zero/12 (310332859 (estimated locally),0.98 per call) 
+  Calls: uint8_big_num_big_endian_add_little/24 (315357972 (estimated locally),1.74 per call) hash_node_steps/23 (955630224 (estimated locally),5.26 per call) ansi_x9_63_kdf_parameter_check/11 (inlined) (181710154 (estimated locally),1.00 per call) hash_get_digest_word_len/18 (181710154 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_node_with_xor_in/13 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:315975386 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memset_/21 (4493186 (estimated locally),0.01 per call) uint8_XOR/19 (5930463 (estimated locally),0.02 per call) memcpy_/20 (2541627 (estimated locally),0.01 per call) ansi_x9_63_kdf_internal_check_zero/26 (inlined) (16944180 (estimated locally),0.05 per call) uint8_XOR/19 (697607587 (estimated locally),2.21 per call) ansi_x9_63_kdf_internal_check_zero/28 (inlined) (724110014 (estimated locally),2.29 per call) ansi_x9_63_kdf_internal_check_zero/12 (inlined) (310332859 (estimated locally),0.98 per call) ansi_x9_63_kdf_parameter_check/31 (inlined) (315975386 (estimated locally),1.00 per call) hash_get_digest_word_len/18 (315975386 (estimated locally),1.00 per call) 
+ansi_x9_63_kdf_internal_check_zero/12 (ansi_x9_63_kdf_internal_check_zero)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 26
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_internal_check_zero/12 is inline copy in ansi_x9_63_kdf_node_with_xor_in/13
+  Availability: local
+  Function flags: count:310332859 (estimated locally) body local optimize_size
+  Called by: ansi_x9_63_kdf_node_with_xor_in/13 (inlined) (310332859 (estimated locally),0.98 per call) 
+  Calls: ansi_x9_63_kdf_internal_check_zero.part.0/25 (inlined) (102409843 (estimated locally),0.32 per call) ansi_x9_63_kdf_internal/14 (310332859 (estimated locally),0.98 per call) 
+ansi_x9_63_kdf_parameter_check/11 (ansi_x9_63_kdf_parameter_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 30
+  References: 
+  Referring: 
+  Function ansi_x9_63_kdf_parameter_check/11 is inline copy in ansi_x9_63_kdf_internal/14
+  Availability: local
+  Function flags: count:181710154 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: ansi_x9_63_kdf_internal/14 (inlined) (181710154 (estimated locally),1.00 per call) 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+uint8_big_num_big_endian_add_little/24 (uint8_big_num_big_endian_add_little)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_node_steps/23 (hash_node_steps)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint8_BigNum_Check_Zero/22 (uint8_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/21 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/20 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint8_XOR/19 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/18 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf/17 (ansi_x9_63_kdf)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_node/16 (ansi_x9_63_kdf_node)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf_node (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_digest_remainder/15 (ansi_x9_63_kdf_digest_remainder)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ansi_x9_63_kdf_digest_remainder (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_internal/14 (ansi_x9_63_kdf_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:181710154 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+ansi_x9_63_kdf_node_with_xor_in/13 (ansi_x9_63_kdf_node_with_xor_in)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ansi_x9_63_kdf_node_with_xor_in (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:315975386 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

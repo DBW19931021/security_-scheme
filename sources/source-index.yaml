@@ -1,0 +1,761 @@
+schema_version: 1
+inventory_date: 2026-08-26
+intake_guide: sources/README.md
+source_vault_root: source-vault
+governance:
+  decision: decisions/ADR-0001-solution-authority-and-vendor-boundary.md
+  baseline_hierarchy: "SRC-0017 system/architecture baseline -> SRC-0016 software engineering baseline -> implementation/tests/evidence"
+  vendor_scope: "OSR eHSM and its internal Core only; excludes NGU800P SoC"
+  vendor_adoption_rule: "Vendor recommendations become project software方案 only after being adopted into the current effective chip security software plan"
+  key_rotation_status: "strategy approved; final engineering details governed by the chip security software plan"
+  otp_key_registry_authority: "SRC-0024 Table 34 and 16-slot Key table target security_-scheme; baremetal manifests are derived implementation/test records, not a second baseline"
+  vendor_document_confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+  vendor_code_management: "one Source ID per delivery snapshot; no per-file Source Card; new delivery note creates a new superseding Source ID"
+  vendor_code_working_reference: "TASK-SEC-BAREMETAL-EHSM-001 uses ../fsp as the current living eHSM code/demo reference; every task records remote/branch/commit/dirty state. SRC-0018 osr_eshm remains an immutable historical snapshot and is not the default current reference."
+  ehsm_internal_rtl_authority: "ADR-0032 / SRC-0035: source-vault/vendor_rtl is the first query source and current implementation baseline for eHSM-internal RTL details. Conclusions are VENDOR_IMPLEMENTATION and require top/filelist/defines/parameters/elaboration proof; it does not define NGU800P SoC integration or product policy."
+  baseline_control: docs/09-plans/BASELINE-CONTROL.md
+  conflict_escalation: "mark affected conclusion CONFLICTING, stop affected scope, create conflict report, present evidence/options/recommendation for owner decision"
+  security_ram_design: "ADR-0006/0008/0028: product System Address 0x1010_0500_0000 + 2 MiB; fixed GSP static 880 KiB, FMC reuse 128 KiB, Measurement 16 KiB, PMP/RMP 256 KiB each and Host ingress 512 KiB; no independent plaintext Region; MMP resides mainly in protected DDR; PMA/Firewall/MMP DDR/release link-map evidence remains open"
+  dice_dynamic_attestation: "ADR-0029/SRC-0032: BootROM contributes FMC final-readback hash, FMC contributes GSP hash, GSP derives one DICE-style Alias Key from slot13 UDS and TCB, builds a dynamic Firmware Alias Leaf signed by slot14 Device Issuer, and uses Alias Key for Report/SPDM; no raw UDS/CDI/private export; exact eHSM/Profile bindings remain OPEN-DESIGN-023"
+  native_header_load_address: "ADR-0030/0033, SRC-0033/0036 and CE-SEC-016: NGU Manifest removed; NGU800P type 1 package uses LE64 load_addr at Native Header offset 1008, LE32 header CRC32 at 1016 and zero reserved[4] at 1020; Code_Size is the single loaded/measured length; typed stage context replaces Manifest policy; legacy Manifest and zero-reserved-v1 packages are rejected"
+  mailbox_reset_boundary: "ADR-0006: NGU800P Mailbox follows Vendor mechanism; security reports/blocks only, RAS decides and performs reset actions"
+  soc_map_register_authority: "ADR-0009 / SRC-0022: current RTL-synchronized baremetal generated headers are authoritative for NGU800P SoC address/register/IRQ constants; this does not make baremetal tests/stubs or inferred interface semantics authoritative"
+  vendor_direct_mailbox_mode_and_early_ras: "ADR-0010: keep Vendor direct 16x4KiB Mailbox/common sources unchanged; BootROM/FMC/GSP first release poll; interrupt only a later post-FW-ready optimization; early RAS-unready failure records then bounded report wait, disable ordinary interrupts, and enter an infinite WFI fail-stop loop exited only by approved Reset/NMI"
+  ehsm_single_flight_cache_timeout: "ADR-0011: one aligned 256-byte Vendor context slot and one in-flight transaction per stage; GSP serialized service; active cache/timeout scope; first-release auto-retry zero; timeout acceptance unknown and service/slot quarantined"
+  bootrom_lcs_counter_gsp_fw_redelivery: "ADR-0012: BootROM reads SoC LCS directly and compares but does not update counter; GSP package anchors the global security epoch and FMC is the sole updater; eHSM FW/PMP/RMP/MMP must match the committed epoch; failed images isolate for Host redelivery; atomic bundle activation is optional"
+  vendor_version_counter_implementation: "ADR-0019 closes OPEN-CONFLICT-009: FMC is the sole updater and must call a new eHSM BL dedicated 16-byte rollback-counter update/readback API after full GSP verification and load; exact command/packing/LCS/status/readback/delivery binding remains a Vendor implementation DoR"
+  gsp_operation_image_service_isolation: "ADR-0013: GSP image set is eHSM FW/PMP/RMP/MMP; signing/RNG/hash and security-plan-required eHSM services are mandatory; internal generic crypto is lower priority; eHSM is final LCS authorization point; completed single-runtime failure is locally isolated"
+  product_secure_package_algorithm_profiles: "ADR-0017: Profile 1 SHA-256+RSA-2048-PSS+AES-128-CBC; Profile 2 SHA-256+ECDSA-P256+AES-128-CBC; Profile 3 SM3+SM2+SM4-CBC. Other Vendor algorithms are baremetal capability/regression inputs only; product package/policy/release rejects them. Device/image/key/board/LCS binding remains OPEN-DESIGN-011."
+  measurement_fmc_epoch_contract: "ADR-0012/0019/0022 + measurement-table.md: BootROM commits the unique verified FMC entry before release; FMC reads that valid committed entry from the current-start stable table, requires FMC/GSP rollback-counter equality, then performs update/readback when needed, commits GSP measurement, and releases"
+sources:
+  - id: SRC-0001
+    name: "Wing-M130 Integration Manual"
+    type: vendor_integration_manual
+    owner: "Wing-M130 vendor (owner pending confirmation)"
+    version: "r1p0"
+    date: "2024-07-15"
+    local_path: "source-vault/vendor-docs/doc/CPU/Wing-M130_Integration_Manual.pdf"
+    sha256: bda10d05bc9de1edaf7004a834f9ab98be4a8527e493e5ce854b6e1bf9d9bd7e
+    size_bytes: 2282144
+    pages: 50
+    applicability:
+      - "Wing-M130"
+      - "NGU800P eHSM internal Wing-M130 Core integration only; excludes SoC-wide behavior; Core revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0001.md
+    status: active
+    notes: "Wing-M130 处理器集成手册；尚未确认其全部内容是否适用于当前 NGU800P 修订。"
+  - id: SRC-0002
+    name: "Wing-M130 Processor Technical Reference Manual"
+    type: vendor_trm
+    owner: "Wing-M130 vendor (owner pending confirmation)"
+    version: "r1p0"
+    date: "2024-05-31"
+    local_path: "source-vault/vendor-docs/doc/CPU/Wing-M130_Technical_Reference_Manual_v1p0.pdf"
+    sha256: c333d42629bdd04bd0bd3e269e7690785270f3854dc55b5612e6a67cce44e0d8
+    size_bytes: 2643489
+    pages: 392
+    applicability:
+      - "Wing-M130"
+      - "NGU800P eHSM internal Wing-M130 Core reference only; excludes SoC-wide behavior; Core revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0002.md
+    status: active
+    notes: "Wing-M130 处理器 TRM；不能据此自动推断当前 NGU800P RTL 行为。"
+  - id: SRC-0003
+    name: "OSR eHSM 仿真环境说明"
+    type: vendor_simulation_guide
+    owner: "OSR IP"
+    version: "UNKNOWN"
+    date: "2026-06-09"
+    local_path: "source-vault/vendor-docs/doc/eHSM仿真环境说明.pdf"
+    sha256: 67a199f360bc6e096678d9ed3e27b4460e73272b49313c66e0c932e8c83a41a8
+    size_bytes: 2039010
+    pages: 25
+    applicability:
+      - "OSR eHSM"
+      - "NGU800P eHSM integration only; excludes SoC-wide behavior; eHSM revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0003.md
+    status: active
+    notes: "OSR eHSM 仿真环境说明；仿真行为不自动等同于芯片实测行为。"
+  - id: SRC-0004
+    name: "OSR eHSM HP Custom Design Technical Manual"
+    type: vendor_custom_design_manual
+    owner: "OSR IP"
+    version: "UNKNOWN"
+    date: "2026-06-23"
+    local_path: "source-vault/vendor-docs/doc/TRM/OSR_eHSM_HP_Custom_Design_Technical_Manual.pdf"
+    sha256: b7c4801a6c6800a5ad4f268c08078937dacbdc4b7cf8074626c9627efd390dcb
+    size_bytes: 425757
+    pages: 16
+    applicability:
+      - "OSR eHSM HP custom design"
+      - "NGU800P eHSM integration only; excludes SoC-wide behavior; eHSM revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0004.md
+    status: active
+    notes: "OSR eHSM HP 定制设计技术手册；需与标准 TRM 和 NGU800P 定制范围核对。"
+  - id: SRC-0005
+    name: "OSR Standard eHSM 技术参考手册"
+    type: vendor_trm
+    owner: "OSR IP"
+    version: "UNKNOWN"
+    date: "2026-06-23"
+    local_path: "source-vault/vendor-docs/doc/TRM/OSR_eHSM_HP_Technical_Reference_Manual_CN.pdf"
+    sha256: ad596ed277d7d3b0374a7e3972572eb9ebbd2ffdc9f49112e6f5b2a5dfdf2444
+    size_bytes: 1854463
+    pages: 144
+    applicability:
+      - "OSR Standard eHSM"
+      - "NGU800P eHSM integration only; excludes SoC-wide behavior; eHSM revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0005.md
+    status: active
+    notes: "OSR Standard eHSM 中文技术参考手册；标准功能与 NGU800P 定制差异待分析。"
+  - id: SRC-0006
+    name: "OSR TRNG FPGA Implementation Guide"
+    type: vendor_implementation_guide
+    owner: "OSR"
+    version: "v1.0"
+    date: "UNKNOWN"
+    local_path: "source-vault/vendor-docs/doc/TRM/OSR_TRNG_FPGA_Implementation_Guide.pdf"
+    sha256: d660e75476a9efba3ee1bda5f354425afd2e5e620547b466ab2cc197e5ee359d
+    size_bytes: 2126524
+    pages: 17
+    applicability:
+      - "OSR TRNG FPGA implementation"
+      - "NGU800P eHSM/TRNG integration only; excludes SoC-wide behavior; revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0006.md
+    status: active
+    notes: "OSR TRNG FPGA 实现指导；不能替代最终 TRNG RTL/芯片验证结论。"
+  - id: SRC-0007
+    name: "OSR TRNG RO 电路实现指导"
+    type: vendor_implementation_guide
+    owner: "OSR"
+    version: "v1.2"
+    date: "UNKNOWN"
+    local_path: "source-vault/vendor-docs/doc/TRM/OSR_TRNG_RO_Implementation_Guide.pdf"
+    sha256: 066cd2563a609ba73727484070074b4125359abfce68e29ef2fa80f7910a0ff2
+    size_bytes: 2410630
+    pages: 23
+    applicability:
+      - "OSR TRNG RO implementation"
+      - "NGU800P eHSM/TRNG integration only; excludes SoC-wide behavior; revision pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0007.md
+    status: active
+    notes: "OSR TRNG RO 电路实现指导；适用工艺、PVT 和签核条件待确认。"
+  - id: SRC-0008
+    name: "OSR eHSM TC"
+    type: vendor_verification_artifact
+    owner: "OSR"
+    version: "UNKNOWN"
+    date: "2026-06-30"
+    local_path: "source-vault/vendor-docs/doc/VR/OSR_eHSM_TC.pdf"
+    sha256: 5c282d77861a1f7b0925085d9693ad487270a21c1392bd29209aeec1d9591091
+    size_bytes: 471301
+    pages: 75
+    applicability:
+      - "OSR eHSM verification"
+      - "NGU800P eHSM verification reference only; excludes SoC-wide behavior; version pending"
+    authority_level: vendor_verification_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0008.md
+    status: active
+    notes: "Vendor eHSM TC 材料；测试环境、覆盖范围和 NGU800P 可复用性待深度提取。"
+  - id: SRC-0009
+    name: "OSR eHSM TP"
+    type: vendor_verification_artifact
+    owner: "OSR"
+    version: "UNKNOWN"
+    date: "2026-06-30"
+    local_path: "source-vault/vendor-docs/doc/VR/OSR_eHSM_TP.pdf"
+    sha256: 081165dc9bc73858dfc60699a85391a7a6a9abfc662619f2f9f45f1094bae4d0
+    size_bytes: 279952
+    pages: 15
+    applicability:
+      - "OSR eHSM verification"
+      - "NGU800P eHSM verification reference only; excludes SoC-wide behavior; version pending"
+    authority_level: vendor_verification_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0009.md
+    status: active
+    notes: "Vendor eHSM TP 材料；计划范围、环境和验收条件待深度提取。"
+  - id: SRC-0010
+    name: "OSR eHSM VR"
+    type: vendor_verification_artifact
+    owner: "OSR"
+    version: "UNKNOWN"
+    date: "2026-06-30"
+    local_path: "source-vault/vendor-docs/doc/VR/OSR_eHSM_VR.pdf"
+    sha256: eb775bea1aa3758fddeb219aff4ad3691ab7cf3c4e00cb43a89f116a8745a748
+    size_bytes: 344370
+    pages: 12
+    applicability:
+      - "OSR eHSM verification"
+      - "NGU800P eHSM verification reference only; excludes SoC-wide behavior; version pending"
+    authority_level: vendor_verification_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0010.md
+    status: active
+    notes: "Vendor eHSM VR 材料；报告结论及与交付版本的对应关系待深度提取。"
+  - id: SRC-0011
+    name: "eHSM BL 硬件 OTP ROM Patch 测试说明"
+    type: vendor_test_guide
+    owner: "OSR IP"
+    version: "1.0 / 4019"
+    date: "2026-06-26"
+    local_path: "source-vault/vendor-docs/OSR_eHSM_Bootloader_Patch_Test_Guide_4019_1.0.pdf"
+    sha256: f829e43319dc778c30616ffc3aea3d5c4937a3b1e5d35c67b41c55e7d3b05551
+    size_bytes: 306380
+    pages: 16
+    applicability:
+      - "OSR eHSM 4019 bootloader"
+      - "NGU800P eHSM Bootloader integration only; excludes SoC-wide behavior; software version pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0011.md
+    status: active
+    notes: "eHSM Bootloader 硬件 OTP ROM Patch 测试说明；预期行为需与芯片实现和批准方案核对。"
+  - id: SRC-0012
+    name: "OSR eHSM Bootloader 技术参考手册"
+    type: vendor_trm
+    owner: "OSR IP"
+    version: "1.1 / 4019"
+    date: "2026-06-26"
+    local_path: "source-vault/vendor-docs/OSR_eHSM_Bootloader_TRM_4019_1.1.pdf"
+    sha256: 73dc40dc26e348f9853fd53d3d866e1d74cb10e0095aaa86caaf2006983cba79
+    size_bytes: 858237
+    pages: 57
+    applicability:
+      - "OSR eHSM 4019 bootloader"
+      - "NGU800P eHSM Bootloader integration only; excludes SoC-wide behavior; software version pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0012.md
+    status: active
+    notes: "OSR eHSM Bootloader TRM；2026-07-22自检位图裁决采用其定义，bit18/0x40000=TRNG；完整版本映射仍待登记。"
+  - id: SRC-0013
+    name: "OSR eHSM Firmware 技术参考手册"
+    type: vendor_trm
+    owner: "OSR IP"
+    version: "1.1 / 4019"
+    date: "2026-06-25"
+    local_path: "source-vault/vendor-docs/OSR_eHSM_Firmware_TRM_4019_1.1.pdf"
+    sha256: a5642c2b02449e637bcb47070aad8e8b758b07ce898b5ee1aeedb0782a1023e6
+    size_bytes: 937892
+    pages: 90
+    applicability:
+      - "OSR eHSM 4019 firmware"
+      - "NGU800P eHSM Firmware integration only; excludes SoC-wide behavior; software version pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0013.md
+    status: active
+    notes: "OSR eHSM Firmware TRM；与 vendor-code 中具体 firmware 版本的映射待登记。"
+  - id: SRC-0014
+    name: "OSR eHSM Host API 驱动库参考手册"
+    type: vendor_api_reference
+    owner: "OSR IP 固件开发组"
+    version: "1.0 / 4019"
+    date: "2026-06-26"
+    local_path: "source-vault/vendor-docs/OSR_eHSM_Host_API_TRM_4019_v1.0.pdf"
+    sha256: cb79f691c39852a41b3359f449ab292c5e067faf4e8bf2efb343daf1f9efef4e
+    size_bytes: 2087327
+    pages: 257
+    applicability:
+      - "OSR eHSM 4019 host API"
+      - "NGU800P eHSM Host API integration only; excludes SoC-wide behavior; software version pending"
+    authority_level: vendor_formal_document
+    evidence_state: DOCUMENTED
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0014.md
+    status: active
+    notes: "OSR eHSM Host API 参考手册；自检位图中SHA256=0x40000/TRNG=0x80000对当前4019配套版本错误，项目按ADR-0003采用Bootloader定义。"
+  - id: SRC-0015
+    name: "云天励飞 26Q2 定制需求方案"
+    type: vendor_customization_proposal
+    owner: "Owner pending confirmation"
+    version: "26Q2"
+    date: "UNKNOWN"
+    local_path: "source-vault/vendor-docs/osr_定制需求/云天励飞26Q2 定制需求方案.pdf"
+    sha256: c0c92feaf8de90148698587393fca01dc7ffa287e65e5546404102b335072d88
+    size_bytes: 438980
+    pages: 6
+    applicability:
+      - "OSR eHSM customization"
+      - "Input to NGU800P software方案; not authoritative for SoC architecture"
+    authority_level: vendor_or_joint_proposal
+    evidence_state: CONFIRMED
+    accepted_topics:
+      - "key_rotation_strategy"
+      - "soc_key_rotation_vendor_mechanism_via_ADR-0021"
+    adoption_rule: "Approved strategy and any adopted details must be represented in SRC-0016 or its effective successor"
+    confidentiality: NOT_CONFIDENTIAL_FOR_THIS_PROJECT
+    source_card: sources/source-cards/SRC-0015.md
+    status: active
+    notes: "2026-07-27完成全文/逐页复核；ADR-0021吸收三类SoC Key、每类一次、1字节HSM管理Bitmap、48字节双层封装、USER鉴权、写新Key→Bitmap→destroy旧Key→reset机制。ADR-0026关闭软件设计裁决；wire ABI、Bitmap/掉电、KMS recipe和匹配Vendor交付作为实施绑定管理。"
+  - id: SRC-0016
+    name: "芯片安全软件方案 v1.2"
+    type: internal_software_solution_baseline
+    owner: "NGU800P security project team (owner pending confirmation)"
+    version: "v1.2"
+    date: "2026-07-21"
+    local_path: "docs/09-plans/芯片安全软件方案v1.2 (1).pdf"
+    sha256: d8258a99d358a0ac89b1fac2dab3e31aa684c5fe21ad66484b1ce5df93fcc63e
+    size_bytes: 3437050
+    pages: 33
+    applicability:
+      - "NGU800P"
+    depends_on:
+      - SRC-0017
+    baseline_role: "downstream software engineering and implementation baseline"
+    authority_level: internal_downstream_software_implementation_baseline
+    evidence_state: PROPOSED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0016.md
+    status: active
+    notes: "基于SRC-0017的软件工程落地方案；密钥轮换机制未修改v1.2原PDF，已由ADR-0021和主详设第10章作为受控增量补齐并关闭OPEN-BASELINE-004。第1～15、33页深度复核已登记并关闭/管理相关冲突。"
+  - id: SRC-0017
+    name: "NGU800P 芯片系统安全方案"
+    type: internal_system_architecture_baseline
+    owner: "NGU800P security project team (owner pending confirmation)"
+    version: "UNKNOWN"
+    date: "2026-07-03"
+    local_path: "docs/09-plans/芯片系统安全方案.pdf"
+    sha256: 3ca4092d842a99144a96676743f2d702bfbd1cdcd54edcdf01c05d6dc114cb7e
+    size_bytes: 7271071
+    pages: 56
+    applicability:
+      - "NGU800P"
+    baseline_role: "upstream system architecture, hardware foundation and security principles baseline"
+    authority_level: internal_upstream_system_architecture_baseline
+    evidence_state: PROPOSED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0017.md
+    status: active
+    notes: "系统/架构上位方案，粒度较粗；为 SRC-0016 提供硬件基础、架构边界和安全原则，不被 Vendor eHSM 局部建议直接替代。第5～6、13～16页深度复核用于任务二B0-R1，并触发OPEN-CONFLICT-005。"
+  - id: SRC-0018
+    name: "OSR eHSM 4019 软件交付快照"
+    type: vendor_code_snapshot
+    owner: "OSR IP（交付责任人待确认）"
+    version: "BL 2.3.5 / FW 2.3.2 / Host 2.3.1 / Python tests 1.1.2 / 4019"
+    date: "2026-06-26"
+    local_path: "source-vault/vendor-code/osr_eshm"
+    sha256: 7fa5dfae174d67bea825f9bda621d87c73d1ae58d2632d67de10ff0e3281801c
+    hash_method: "sha256(sorted(relative_path NUL file_sha256 NUL))"
+    size_bytes: 383998843
+    file_count: 2747
+    applicability:
+      - "OSR eHSM 4019"
+      - "eHSM integration input for NGU800P; excludes SoC-wide behavior"
+    code_management: "delivery snapshot level; no per-file Source Card"
+    update_rule: "new delivery/release note creates a new Source ID linked with Supersedes"
+    authority_level: vendor_implementation_snapshot
+    evidence_state: VENDOR_IMPLEMENTATION
+    confidentiality: RESTRICTED_PENDING_CONFIRMATION
+    source_card: sources/source-cards/SRC-0018.md
+    status: active
+    notes: "混合快照包含 Vendor 源码、测试、工具、PDF、构建产物和本地分析材料；不能视为纯净源码基线。BL/Host自检位图差异已裁决为Host错误，快照保持原样。"
+  - id: SRC-0019
+    name: "OSR eHSM 历史代码 Review 文档集"
+    type: historical_internal_code_review
+    owner: "项目组历史分析（作者和批准人待确认）"
+    version: "2026-07-10～2026-07-20 snapshot"
+    date: "2026-07-20"
+    local_path: "source-vault/vendor-code/osr_eshm/docs/review"
+    sha256: b8bbd29d4f38f152a4f4bdb436e1016461f06d2f470d93ccfa4dba3432874e05
+    hash_method: "sha256(sorted(relative_path NUL file_sha256 NUL))"
+    size_bytes: 276380
+    file_count: 11
+    applicability:
+      - "SRC-0018 code snapshot"
+      - "eHSM/Core analysis input only; SoC applicability requires internal方案 revalidation"
+    authority_level: unapproved_historical_internal_analysis
+    evidence_state: PROPOSED
+    confidentiality: RESTRICTED_PENDING_CONFIRMATION
+    source_card: sources/source-cards/SRC-0019.md
+    status: active
+    notes: "包含 17 条带编号候选发现和其他专题观察；在重新核对代码、Vendor 文档和测试 Evidence 前不得作为正式缺陷或已确认结论。"
+  - id: SRC-0020
+    name: "NGU800P 安全测试用例初版"
+    type: internal_initial_test_case_draft
+    owner: "项目测试用例提供方（Owner/批准人待确认）"
+    version: "v0.1（入库标签；原文件未内嵌版本号）"
+    date: "2026-07-21"
+    local_path: "source-vault/internal-specs/test-inputs/SRC-0020/test_case-v0.1.xlsx"
+    sha256: 153d55f6797e4b97230d4358d84bf388b0b8ecee146e84d358c0b52ecf4d428a
+    size_bytes: 24991
+    applicability:
+      - "NGU800P D0 security test planning; exact RTL/software versions pending per case"
+    authority_level: internal_initial_test_input
+    evidence_state: PROPOSED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0020.md
+    status: active
+    notes: "统一模板初版；76条数据行、75个编号和1个ROM Patch占位。审视版v0.2位于tests/cases，共100条用例；未执行测试。"
+  - id: SRC-0021
+    name: "Work × Codex 轻量协作工作流"
+    type: internal_workflow_input
+    owner: "用户提供（Owner/批准人待确认）"
+    version: "v1（入库标签；原文件未内嵌版本号）"
+    date: "2026-07-21"
+    local_path: "source-vault/internal-specs/workflow-inputs/SRC-0021/work_codex_lightweight_workflow.md"
+    sha256: 33202e862ecfec7fa7391eca6c2797ac03c7a79c6b83b8f5fdb5e9f1a3ac9125
+    size_bytes: 16973
+    applicability:
+      - "security_-scheme detailed-design code investigation and evidence workflow"
+    authority_level: user_provided_process_input
+    evidence_state: DOCUMENTED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0021.md
+    status: active
+    notes: "用户授权结合当前工程布局自行决定目录、使用方式和文档名称；项目适配流程为docs/09-plans/CODE-INVESTIGATION-WORKFLOW.md，不定义芯片行为。"
+  - id: SRC-0022
+    name: "NGU800P RTL同步SoC地址与寄存器生成头"
+    type: internal_rtl_synchronized_generated_headers
+    owner: "SoC/RTL团队（项目负责人确认其权威性）"
+    version: "NGU800P D0; auto-generated 2026-07-15; register version 0.85r_0708"
+    date: "2026-07-15"
+    local_path: "../baremetal/components/chip_riscv_c908_common/include/ngu800p"
+    sha256: 2969fdcf644b381f53c6279f8886f9f541e6c70bafb98997b35e3f582423daa6
+    hash_method: "SHA-256 over LF-joined sorted relative_path<TAB>size<TAB>file_sha256 manifest"
+    size_bytes: 2162612
+    file_count: 51
+    applicability:
+      - "NGU800P D0 SoC address map, register base/offset/bitfield and IRQ constants synchronized with RTL"
+    authority_level: internal_rtl_synchronized_soc_hardware_source
+    evidence_state: DOCUMENTED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0022.md
+    status: active_living_reference
+    notes: "项目负责人确认后续地址问题以baremetal代码为准。权威范围不包括test/stub/demo/Expected，也不允许从地址名推断接口语义；数值行为需EMU/硬件Evidence确认。"
+  - id: SRC-0023
+    name: "BootROM Secure Boot重点Checklist与Strap截图"
+    type: internal_user_provided_design_checklist
+    owner: "项目负责人（截图提供者；正式文档Owner待确认）"
+    version: "2026-07-24对话截图转录版"
+    date: "2026-07-24"
+    local_path: "source-vault/internal-specs/bootrom-checklist/SRC-0023/bootrom_secure_boot_checklist.md"
+    sha256: bcf424793c56dfa52e8167030cb2e43df71b55b26cf68c66e8074a45c0473485
+    size_bytes: 3895
+    original_image_sha256:
+      - ac262c0a6644064ef5b17b89f8a2489a4ed2c0ebdc72cc8c9a6d6067fa2077a5
+      - f18ef7c16fe6e0d51fc2eaa1c2e0530e7868a2f00c8608c3cbf797c665901d2a
+    applicability:
+      - "NGU800P D0 BootROM secure mode、eHSM ready、FMC verify/rollback/Manifest/Measurement/load/release和失败闭锁"
+    authority_level: user_provided_design_checklist
+    evidence_state: PROPOSED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0023.md
+    status: active_authoritative_with_rtl_sync_conflict
+    notes: "secureboot.001～007作为第6章重点Checklist；2026-07-29负责人指定截图为Strap权威：boot_pin.secure_boot[3]、default 0、0非安全/1安全。SRC-0034/ADR-0031规定只有non_sec_boot=0时消费该矩阵；值1覆盖USER强制现有受限非安全。当前SRC-0022生成头的bit0 SEC_BOOT/bit3 DIE_ID与之冲突，OPEN-CONFLICT-010保持BLOCKED_BY_RTL_SYNC；真实寄存器绑定必须等待RTL/生成头或权威映射同步。值0时ADR-0024规定LCS异常进入受限非安全；eHSM自检由eFuse驱动自主执行，BootROM不发起。"
+  - id: SRC-0024
+    name: "NGU800P OTP内存映射与16-slot Key表"
+    type: internal_user_provided_soc_security_design_input
+    owner: "项目负责人（截图提供者；正式文档Owner待确认）"
+    version: "2026-08-04对话截图转录与裁决版"
+    date: "2026-08-04"
+    local_path: "source-vault/internal-specs/otp-map/SRC-0024/ngu800p_otp_map_and_key_registry.md"
+    sha256: 9a603c12ae949d001ffd3389c67f187bb374e66a85c2b1673b33a0e03cea9b19
+    size_bytes: 4222
+    applicability:
+      - "NGU800P SoC安全方案的eHSM内部OTP Table 34布局"
+      - "OTP-KMU物理Key ID 0～15对象表及baremetal派生测试清单"
+    authority_level: internal_user_confirmed_soc_security_design_input
+    evidence_state: CONFIRMED
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0024.md
+    status: active_authoritative_design_input
+    notes: "负责人明确所提供Key表和全部SoC信息以security_-scheme为目标；baremetal只派生实现和验证同一基线。该来源修正ADR-0025/0026早期槽序、等级和语义转录错误；属性位编码、CRC、backend和材料仍待实施输入。"
+  - id: SRC-0025
+    name: "NGU800P Firewall 逻辑需求与寄存器截图"
+    type: internal_user_provided_soc_firewall_design_input
+    owner: "项目负责人提供；正式规格 Owner 待确认"
+    version: "2026-08-12 对话截图转录版"
+    date: "2026-08-12"
+    local_path: "source-vault/internal-specs/firewall/SRC-0025/ngu800p_firewall_logic_register_transcription.md"
+    sha256: bcf92be6fed216c46e1722ba57da8ba99227421ab143d76dbf14d0e4aa722904
+    size_bytes: 8391
+    original_image_sha256:
+      - 8d8f3f3e3f3c3744a4f3f4fe629f6fb267ef664a89f04cc6288b71bb6ed23b85
+      - 34db30c6e8e7170ff37cbcb6ead1dd3773a20f759643effd7eba7962e40be000
+      - 176056c66bcbf3a2fc3ed4bca91ab5f69a2bc652b1cdddcfbf986f751ef3af81
+      - dce259754b5c49fdd8966cb4b770fc1b627a0052ba1458b644c455cee4895d26
+      - b2968a284162c18bcd4f5808b5bfda2c5163caae9820c898b5c5ab57b2956b29
+      - 7db7532623e4f55a2f027d114b02658fb268b16922f9d5b9655cce9f4bdb101b
+      - 68f471a239f37bf028bb62465e8a979af1316929e96cb16783fe3a5cf30df735
+    applicability:
+      - "NGU800P D0 候选 SRAM、sec_cfg、spifc Firewall 逻辑、UserId、authority 与寄存器设计输入"
+      - "security_-scheme Firewall 架构、软件详细设计和测试规划"
+    authority_level: internal_user_provided_soc_firewall_design_input
+    evidence_state: CONFLICTING
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0025.md
+    status: active_with_conflicts
+    notes: "UserId/authority 与逻辑规则可按 DOCUMENTED 使用；base、reset、重叠 Region、R4 名称、bit27、高地址/安全属性/lock/burst 等受 OPEN-CONFLICT-014 阻断。当前 SRC-0022 未包含该 CSR 组，不得生成产品 MMIO 常量。"
+  - id: SRC-0026
+    name: "NGU800P D0 SEC_CFG 内网整理稿截图"
+    type: internal_secondary_sec_cfg_design_summary
+    owner: "项目负责人提供；SEC_CFG/RTL/eHSM/Security Owner 待确认"
+    version: "2026-08-12 对话截图转录版"
+    date: "2026-08-12"
+    local_path: "source-vault/internal-specs/sec-cfg/SRC-0026/ngu800p_sec_cfg_transcription.md"
+    sha256: a7a5b74a66c613f148d8605e9b9137270ca1a89a61a2d9d67535ad885859af62
+    size_bytes: 11671
+    original_image_sha256:
+      - 6884d156f31c5c02aef8f86a7110904d475e34bc3765b63aea1d46245743eb5f
+      - 175a8ba9bfe2c258bb8db9786a5d84bdba5f1d7309064b6c24fac7af2fc79fc0
+      - aee79cd1ab21d658a0bd7749e5fcfa6e5add0d9ddd773729b0adbcf6e31fc609
+      - d630ae93d4c3479c42afefd372c7376bcb27001be400d1568ddbf9cdb0704fdb
+      - de5c6b55d03c7629d16be4924bb95134d6f925c4d7d502f33d9194b3ef52ddd4
+      - 4e811f62079cedd3b3515bbc64dc629880c6e6bfa5d8aa89c3ccff8baf320152
+      - a49d32eda1c1703c03d8632b38bdf3bd2572ffdac72417847c428bb92c10601a
+      - 477cdf0c504bc4c44c77ea4b2e3514f89e297962f6dd4b78f565e199d35ce55a
+      - 2d7fd33c87deb3e39994b1c0bcb6ee46caa19e2942a89d0722d47a49553c3693
+      - 2d7fd33c87deb3e39994b1c0bcb6ee46caa19e2942a89d0722d47a49553c3693
+      - 2c74b770193a9cdd20a14e2bc2011e116cee2d122b3514ee94050ffac2faac5b
+      - 595541605253ea5d60ac99ae070a41fcb78a89ec3738ea915d071fae8e3057c4
+    applicability:
+      - "NGU800P D0 SEC_CFG 候选寄存器、状态、错误、LCS、UID、Debug 与软件/DV建议"
+      - "安全方案主详设、软件接口和验证用例输入"
+    authority_level: internal_secondary_summary_pending_primary_source
+    evidence_state: CONFLICTING
+    confidentiality: UNKNOWN
+    source_card: sources/source-cards/SRC-0026.md
+    status: active_with_conflicts
+    notes: "截图可作为17个offset、可见bit和推荐流程的DOCUMENTED/PROPOSED输入；其0x1010_07B0_0000/4 KiB与SRC-0022的0x1010_0820_0000/16 KiB冲突，且FW error、LCS、Debug、UID-valid和64-bit一致性未冻结，统一由OPEN-CONFLICT-015阻断产品编码。第9、10张截图重复但均按原始输入保留。"
+  - id: SRC-0027
+    name: "NGU800P SoC安全测试范围与错误中断补充输入"
+    type: internal_user_confirmed_soc_security_test_scope
+    owner: "项目负责人提供；RTL/DV、SEC_CFG、Firewall、Debug和中断Owner待绑定"
+    version: "2026-08-13范围裁决与截图转录版"
+    date: "2026-08-13"
+    local_path: "source-vault/internal-specs/security-test/SRC-0027/ngu800p_soc_security_test_scope.md"
+    sha256: c9b7998cc1a9120b08824a3a39549ef3763a209baf47cd09a004a0317fd243ad
+    size_bytes: 3694
+    original_image_sha256:
+      - 2167e964190a250e8fc1dfc428327e191818f7b0de88dacbf3130ad48ee1acf3
+      - 580abf91d967eb825810f919af97e52c1f60aa56a3a9788c104cf8b2bc3a1fcb
+    applicability:
+      - "NGU800P D0 SEC_CFG、Debug、Firewall、eHSM Mailbox IRQ和eHSM错误上报测试设计"
+      - "统一测试工作簿、Codex移植指导和EDA验证需求"
+    authority_level: internal_user_confirmed_test_scope
+    evidence_state: DOCUMENTED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0027.md
+    status: active_with_open_bindings_partially_superseded_by_SRC-0029
+    notes: "可定义方案级测试范围、用例合并原则和软件/EDA分工；地址、Master ID、IRQ、清除与ECC计数器字段仍待SRC-0022/RTL/CSR Evidence冻结。"
+  - id: SRC-0028
+    name: "Mailbox／Spinlock 测试用例编写与最终表格参考基线"
+    type: internal_local_test_case_format_and_authoring_reference
+    owner: "项目负责人指定；参考工程由IP测试团队维护"
+    version: "2026-08-12最终输出"
+    date: "2026-08-13"
+    local_path: "source-vault/internal-specs/security-test/SRC-0028/reference-case-authoring-baseline.md"
+    sha256: 647e13ba5b983c215c1a10e6a950b8c1cb93d879681bc36cf6b202b8a7bebaae
+    size_bytes: 4200
+    original_image_sha256:
+      - e3a4ba44e920acb7038531d439c4901c2ef0f8a7c18ef04e4c69b1789dc0b9b8
+    applicability:
+      - "NGU800P安全测试最终13列表格式、编号和说明粒度"
+      - "架构/功能说明、冻结Case和最终表格的形成过程"
+    authority_level: format_and_authoring_reference_only
+    evidence_state: CODE_FACT
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0028.md
+    status: active_reference
+    notes: "只定义表格格式与编写粒度，不定义安全硬件行为或PASS Expected；安全功能仍按正式方案、Vendor eHSM、RTL同步头和项目范围裁决派生。"
+  - id: SRC-0029
+    name: "NGU800P SEC_CFG/SPIFC Firewall默认权限修正"
+    type: internal_user_confirmed_firewall_permission_correction
+    owner: "项目负责人"
+    version: "2026-08-14权限修正版"
+    date: "2026-08-14"
+    local_path: "source-vault/internal-specs/security-test/SRC-0029/ngu800p_sec_cfg_spifc_firewall_default_permission_correction.md"
+    sha256: 095a5afe009012199b587dd9dfa40ec985889668600f397ea6d0e031e3976712
+    size_bytes: 1306
+    applicability:
+      - "NGU800P D0 SEC_CFG、SPIFC和SRAM Firewall默认权限测试"
+      - "SOC-FW-SECCFG-001、SOC-FW-SPIFC-001和EDA-FW-EHSM-MASTER-001"
+    authority_level: internal_user_confirmed_test_scope_correction
+    evidence_state: DOCUMENTED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0029.md
+    status: active_correction
+    notes: "只替代SRC-0027中SEC_CFG/SPIFC默认允许eHSM访问的表述；SRAM权限和其余测试范围保持不变。"
+  - id: SRC-0030
+    name: "NGU800P Firewall配置权限修正"
+    type: internal_user_confirmed_firewall_configuration_owner_correction
+    owner: "项目负责人"
+    version: "2026-08-14配置Owner修正版"
+    date: "2026-08-14"
+    local_path: "source-vault/internal-specs/security-test/SRC-0030/ngu800p_firewall_configuration_owner_correction.md"
+    sha256: dfcb4e2ae5dd75141afa0323323523d3171e65de07ed481d7575422a4ebc504c
+    size_bytes: 1573
+    applicability:
+      - "NGU800P D0 SEC_CFG、SPIFC和SRAM Firewall配置权限"
+      - "SOC-FW-SRAM-RECFG-001和EDA-FW-EHSM-MASTER-001"
+    authority_level: internal_user_confirmed_test_scope_correction
+    evidence_state: DOCUMENTED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0030.md
+    status: active_correction
+    notes: "只有启动核有权配置三个Firewall；eHSM和其他核均无配置权限。数据访问权限继续按SRC-0029执行。"
+  - id: SRC-0031
+    name: "NGU800P 2 MiB安全SRAM精确布局裁决"
+    type: internal_user_confirmed_security_ram_layout_decision
+    owner: "项目负责人"
+    version: "2026-08-19"
+    date: "2026-08-19"
+    local_path: "source-vault/internal-specs/security-ram/SRC-0031/ngu800p-security-sram-layout-decision.md"
+    sha256: 5ed4fd3cd844bc305dbd4fdbcc9748d25f55d18a0b655213f654411d74940773
+    size_bytes: 2160
+    applicability:
+      - "NGU800P D0 2 MiB安全SRAM精确Region布局和生命周期"
+      - "BootROM/FMC/GSP/PMP/RMP、Measurement、Host ingress及MMP DDR边界"
+    authority_level: internal_user_confirmed_design_decision
+    evidence_state: CONFIRMED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0031.md
+    status: active
+    notes: "冻结GSP/FMC/Measurement/PMP/RMP/Host ingress的精确容量；MMP主要使用DDR；取消独立plaintext Region并采用受控原地加载。"
+  - id: SRC-0032
+    name: "NGU800P DICE风格一级动态证书输入"
+    type: internal_user_confirmed_dice_dynamic_attestation_input
+    owner: "项目负责人"
+    version: "2026-08-19"
+    date: "2026-08-19"
+    local_path: "source-vault/internal-specs/dice/SRC-0032/ngu800p-dice-single-dynamic-layer-input.md"
+    sha256: 139062bd0d8956bf6f1326542e8bc8b6e2f3049ee6e1f7ebb4fb22bb7a24205a
+    size_bytes: 1870
+    applicability:
+      - "NGU800P D0 BootROM/FMC/GSP DICE测量与证明职责"
+      - "GSP一级动态Firmware Alias X.509、Report、SPDM和SRAM预算"
+    authority_level: internal_user_confirmed_design_decision
+    evidence_state: CONFIRMED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0032.md
+    status: active
+    notes: "冻结BootROM只贡献FMC Hash、FMC只贡献GSP Hash、GSP生成一级动态证书；截图只作功能关系输入。"
+  - id: SRC-0033
+    name: "NGU800P取消Manifest并复用Native Header尾部输入"
+    type: internal_user_confirmed_native_header_overlay_input
+    owner: "项目负责人"
+    version: "2026-08-21"
+    date: "2026-08-21"
+    local_path: "source-vault/internal-specs/package/SRC-0033/ngu800p-native-header-load-address-input.md"
+    sha256: 468f4cbb198af154e05b85262594fee956dc6f5ce3208aea6ca0a00dda7c895a
+    size_bytes: 1563
+    applicability:
+      - "NGU800P D0 Vendor type 1 SoC安全固件包"
+      - "BootROM/FMC/GSP verify、loader、Measurement、release与制包"
+    authority_level: internal_user_confirmed_design_decision
+    evidence_state: CONFIRMED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0033.md
+    status: active_superseded_in_part
+    notes: "删除NGU Manifest及offset1008 LE64 load_addr结论继续有效；offset1016后8字节全零定义已被SRC-0036/ADR-0033替代为LE32 Header CRC32加4字节零reserved。"
+  - id: SRC-0034
+    name: "NGU800P non_sec_boot eFuse强制非安全启动输入"
+    type: internal_user_confirmed_boot_policy_efuse_input
+    owner: "项目负责人"
+    version: "2026-08-25"
+    date: "2026-08-25"
+    local_path: "source-vault/internal-specs/bootrom-policy/SRC-0034/ngu800p-non-sec-boot-efuse-input.md"
+    sha256: 46f86711f41301f843253585bfc2bca3a13d4b0110235132368abb7e84b392d5
+    size_bytes: 1631
+    applicability:
+      - "NGU800P D0 SoC eFuse启动策略与BootROM模式选择"
+      - "受限非安全启动、RTL只读镜像与制造烧写"
+    authority_level: internal_user_confirmed_design_decision
+    evidence_state: CONFIRMED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0034.md
+    status: active_with_open_rtl_binding
+    notes: "non_sec_boot为1 bit、默认0不覆盖、烧写1后最高优先级强制现有受限非安全启动；准确word/bit、编码、ECC/valid、只读镜像和烧写Owner由OPEN-DESIGN-024绑定。"
+  - id: SRC-0035
+    name: "OSR eHSM 4019 Vendor RTL硬件实现快照"
+    type: vendor_rtl_implementation_snapshot
+    owner: "OSR IP（交付责任人待确认）"
+    version: "v1.1.0-a / 4019 4_1_0_dev_Intellifusion; Wing-M130 V1.0"
+    date: "2026-08-12 file timestamp; formal delivery date unknown"
+    registered_date: "2026-08-26"
+    local_path: "source-vault/vendor_rtl"
+    sha256: ab0b2030a50e4ea0cf832dcb01c9eaa00df56816c8bc081b90549cca5027e95b
+    hash_method: "SHA-256 over LF-joined sorted relative_path<TAB>size<TAB>file_sha256 manifest"
+    size_bytes: 5733091
+    file_count: 121
+    applicability:
+      - "OSR eHSM 4019内部RTL模块、端口、总线、寄存器、状态机、reset/default和内部连接"
+      - "NGU800P eHSM集成调查输入；不覆盖SoC顶层连接、产品策略或硅片确认"
+    authority_level: primary_vendor_rtl_implementation_snapshot_for_ehsm_internal_hardware
+    evidence_state: VENDOR_IMPLEMENTATION
+    confidentiality: RESTRICTED_PENDING_CONFIRMATION
+    source_card: sources/source-cards/SRC-0035.md
+    status: active_primary_reference_with_elaboration_inputs_missing
+    notes: "后续eHSM内部硬件细节、实现基线和问题查询先查本Source；顶层候选osr_ehsm_top。当前缺delivery note、正式filelist、外部defines/parameters、构建/仿真环境；RTL含Key/KEK字面量，禁止复制或作为量产Key。"
+  - id: SRC-0036
+    name: "NGU800P Native Header CRC字段输入"
+    type: internal_user_confirmed_native_header_crc_input
+    owner: "项目负责人"
+    version: "2026-09-01"
+    date: "2026-09-01"
+    local_path: "source-vault/internal-specs/package/SRC-0036/ngu800p-native-header-crc-input.md"
+    sha256: af1493a1e665c82b3d582cd8acad43bd5be29cc4b2855b071ac1b22946550025
+    size_bytes: 1220
+    applicability:
+      - "NGU800P D0 Vendor type 1 SoC安全固件包"
+      - "BootROM/FMC/GSP Header预检、认证后复验与制包工具"
+    authority_level: internal_user_confirmed_design_decision
+    evidence_state: CONFIRMED
+    confidentiality: INTERNAL
+    source_card: sources/source-cards/SRC-0036.md
+    status: active
+    notes: "Native Header offset1016保存LE32 CRC-32/ISO-HDLC，覆盖offset256到1015；offset1020保留4字节且固定为0。Preflight和Vendor PASS后均校验；CRC不替代密码认证。"
+notes:
+  - 首批登记 15 份 Vendor PDF 和 2 份 NGU800P 初步方案基线。
+  - 后续登记 1 份 Vendor 代码混合快照和其中 1 套历史 Review 文档集。
+  - Vendor 文档默认为 DOCUMENTED 或 PROPOSED，不能自动视为已确认硬件行为。
+  - Vendor 仅覆盖 eHSM 及其内部 Core，不覆盖 SoC；本工程 Vendor 文档统一不保密。
+  - SRC-0017 是系统/架构上位方案，SRC-0016 是软件工程落地下位方案；密钥轮换策略已批准，SRC-0015机制已由ADR-0021纳入软件方案增量，ADR-0026关闭OPEN-DESIGN-014的软件设计裁决，剩余Vendor/RTL/Flash/KMS/CA/MES事项按实施绑定管理。
+  - Vendor 代码保持 VENDOR_IMPLEMENTATION；历史 Review 保持 PROPOSED，候选发现需重新验证后才能进入 issue、需求、设计或 OpenSpec change。
+  - 已关闭冲突：eHSM BL/Host自检位图采用Bootloader定义，bit18/0x40000=TRNG，Host定义错误；见ADR-0003。
+  - 已关闭冲突：SRC-0016 Die1 measurement采用内部独立实例记录，fw_type=NGU_FW_TYPE_DIE1_FW、die_id=1；SPDM可按profile聚合但不得丢失实例/release语义，见ADR-0004。
+  - 已关闭冲突并由2026-07-28最终裁决替代旧方案：C908、Manifest、loader、linker和eHSM共享descriptor统一使用baremetal MANAGEMENT_NOC_S9_SRAM_BASE/SIZE System Address，不建立Local/System转换；旧080x和local/remap输入直接拒绝。
+  - 已关闭冲突并由ADR-0022/0024更新：Measurement load_addr/entry_addr均为uint64_t System Address且不携带domain，只作loader结果快照；Manifest地址也不携带domain并使用同一baremetal System Address，loader保持执行地址Owner。
+  - 已关闭冲突：ADR-0019确认Vendor手册/Header/代码中的SoC Version_Counter均为16字节，旧差异是SRC-0016的32位/4字节示例而非32字节；产品统一使用rollback_counter[16]，Manifest另设Host可读uint32_t version且不得参与防回滚。
+  - 已关闭冲突：ADR-0019要求BootROM以check_version=0验证type 1 FMC并由BL暂存认证candidate；FMC初始化调用BL专用16字节staged-candidate exact-match commit/readback API，proof后才接收同值GSP。准确command/packing/LCS/status/readback/交付版本、candidate生命周期、初值/寿命和掉电语义属于实现/EMU前DoR，不得以Vendor FW启动副作用、raw OTP、GSP值或Host通用64位Counter替代。
+  - 部分裁决冲突已由SRC-0031/ADR-0028更新：新2 MiB精确Region offset/size已冻结，PMP/RMP各256 KiB，MMP主要驻留DDR，FMC退出后128 KiB受控回收给GSP，独立plaintext Region取消；剩余PMA、Firewall、MMP DDR和release link map峰值Evidence等待OPEN-CONFLICT-006/OPEN-DESIGN-010。
+  - 证书拓扑已由SRC-0032/ADR-0029更新：BootROM/FMC只贡献FMC/GSP Hash，Cert0/1保存Root→Intermediate→Device Issuer静态前缀，GSP以UDS/TCB派生一级Alias Key并追加动态Firmware Alias Leaf；eHSM/Profile准确绑定等待OPEN-DESIGN-023。
+  - 固件包已由SRC-0033/0036及ADR-0030/0033更新：删除NGU Manifest；type 1 SoC包以Native Header offset1008的LE64 load_addr、offset1016的LE32 header CRC32和offset1020的4字节零reserved作为唯一项目overlay，Code_Size是加载/Measurement长度；旧Manifest和旧8字节零reserved包不兼容。
+  - BootROM模式已由SRC-0034/ADR-0031增加最高优先级eFuse覆盖：non_sec_boot可靠读为1时包括USER在内均进入现有受限非安全路径，值0保持原矩阵；读取/ECC/镜像异常阻断两条FMC release，准确硬件绑定等待OPEN-DESIGN-024。
+  - SRC-0035/ADR-0032把`source-vault/vendor_rtl`登记为eHSM内部硬件实现细节、当前RTL实现基线和问题查询第一入口；结论保持VENDOR_IMPLEMENTATION并要求证明实际elaboration，不覆盖SRC-0022 SoC数值源或方案/策略权威。目录只读且Key字面量不得复制或用于量产。
+  - SRC-0020 为内部初版测试输入；审视版和实际 Evidence 分开管理，不能把用例存在等同于已通过。
+  - SRC-0021 为项目协作流程输入；已适配为INV-SEC调查任务、CE-SEC代码证据和现有详设/追溯目录闭环。
+  - SRC-0022 为NGU800P SoC地址/寄存器/IRQ数值第一权威源；2026-07-29负责人指定的SRC-0023 `boot_pin.secure_boot[3]`字段/极性是唯一窄范围例外，当前生成头须同步而不能反向覆盖产品合同。GSP同名头仅为实现镜像，Vendor示例地址不得覆盖。ADR-0010已确认4 KiB通用Mailbox不用于eHSM；Vendor direct aperture/status准确宏仍需同步。ADR-0011已冻结单在途/cache/timeout/quarantine软件合同，但最终PMA属性仍需该硬件源补充或项目集成确认。
+  - 已关闭冲突：ADR-0014保持Vendor原生Image_Type=0/1/2/3及公共代码不变，FMC/GSP/PMP/RMP/MMP只进入NGU Manifest；release工具/adapter在提交前和eHSM PASS后强制Code_Size等于package_size减1024。SRC-0016下一受控版本/amendment需修正文档简化说明。
+  - SRC-0023为负责人提供的BootROM重点Checklist和Strap截图转录；`secureboot.001～007`进入第6章逐项覆盖。2026-07-29负责人指定截图中的`boot_pin.secure_boot[3]`、default 0、0非安全/1安全为本项产品权威；当前SRC-0022生成头冲突，真实寄存器绑定等待RTL/生成头同步。ADR-0024继续定义LCS异常、非安全无审计和eHSM自主自检规则。
+  - SRC-0024为负责人提供的OTP Table 34和16-slot Key表转录；其目标仓是security_-scheme，baremetal只实现和验证同一基线。ADR-0025/0026及派生文档中早期错误槽序、等级和Key语义必须向SRC-0024同步。

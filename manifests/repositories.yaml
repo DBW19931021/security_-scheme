@@ -1,0 +1,54 @@
+repositories:
+  - id: REPO-SECURITY-SCHEME
+    name: security_-scheme
+    local_path: .
+    remote: git@github.com:DBW19931021/security_-scheme.git
+    default_branch: master
+    current_branch: master
+    current_commit_before_bootstrap: acaf0527e735caf795f831e8341148b3c78bc11d
+    role: security_governance_design_planning_traceability_source_of_truth
+    write_policy: reviewed_changes
+    status: active
+    dirty_before_bootstrap: false
+    notes: 初始化前提交树为空；本仓库统一保存正式详设、全部项目任务规划、测试计划/工作簿、开发追溯和 Evidence 索引。仓内source-vault/vendor_rtl已由SRC-0035登记为eHSM内部硬件实现第一查询源和只读快照，不是独立RTL开发仓。本次只创建未提交工作区文件，不自动提交或推送。
+
+  - id: REPO-GSP-FIRMWARE
+    name: gsp-pmp-rmp-omp
+    local_path: ../gsp-pmp-rmp-omp
+    remote: http://192.168.70.8/gpnpu_system/firmware/gsp-pmp-rmp-omp.git
+    default_branch: master
+    current_branch: master
+    current_commit: 08b29c7b7a29ee9478c0c01d4d708beb0b77b5d9
+    role: security_software_implementation
+    write_policy: direct_worktree_no_git_writes
+    status: active
+    dirty_at_inventory: true
+    notes: 盘点时检测到大量既有已跟踪文件修改，包括 components/security；允许在默认分支工作区按批准范围修改正式软件代码和必要实现侧测试，但不在此新增项目任务规划或正式详设。不得覆盖无关改动或执行任何 Git 提交。
+
+  - id: REPO-BAREMETAL-SECURITY-TEST
+    name: baremetal
+    local_path: ../baremetal
+    remote: UNKNOWN
+    default_branch: UNKNOWN
+    current_branch: UNKNOWN
+    current_commit: UNKNOWN
+    role: security_executable_test_and_emu_implementation_with_rtl_synchronized_soc_map_register_reference
+    owner: GSP
+    write_policy: direct_worktree_no_git_writes
+    status: active
+    dirty_at_inventory: UNKNOWN
+    notes: 用户口头称 baremental，实际目录为 baremetal。GSP 负责可执行测试代码、EMU runner、测试工具和必要测试数据；项目测试策略、计划、工作簿和 case 规划保存在 security_-scheme。项目负责人于2026-07-23进一步确认components/chip_riscv_c908_common/include/ngu800p内SoC map/寄存器生成头准确且已同步RTL，按SRC-0022/ADR-0009作为地址、寄存器和IRQ硬件常量第一权威源；该权威不扩展到test/stub/demo/Expected或产品策略。本次只读登记，未执行 Git 命令、未修改该仓库。
+
+  - id: REPO-FSP-EHSM-VENDOR-REFERENCE
+    name: fsp
+    local_path: ../fsp
+    remote: http://192.168.70.8/gpnpu_system/firmware/fsp.git
+    default_branch: master
+    observed_branch_at_dependency_switch: master
+    observed_commit_at_dependency_switch: a5193e31dfb93238595b822d2d94e07143ee903d
+    observed_date: 2026-08-20
+    role: living_ehsm_vendor_code_and_demo_reference
+    write_policy: read_only_unless_explicitly_authorized
+    status: active_living_reference
+    dirty_at_inventory: true
+    notes: TASK-SEC-BAREMETAL-EHSM-001 的新用例梳理/开发从当前 test_demo/ehsm_demo_test() 及 BL/FW/Host 调用链取得 Vendor 代码参考；该仓库会持续更新，每个任务必须单独记录 remote/branch/commit/工作区状态。SRC-0018 osr_eshm 继续作为历史不可变快照，不再是默认当前参考。本次盘点时只有未跟踪 .codegraph/，未修改该仓库。

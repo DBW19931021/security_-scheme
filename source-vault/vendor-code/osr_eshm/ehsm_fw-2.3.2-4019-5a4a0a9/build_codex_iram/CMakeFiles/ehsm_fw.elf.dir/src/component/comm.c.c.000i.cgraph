@@ -1,0 +1,2617 @@
+Trivially needed symbols: comm_poll/32 comm_send_rsp/31 comm_init/30 g_recv_mb_ch/18 g_mb_int/17 g_dbg_channel/16
+
+
+Initial Symbol table:
+
+dbgcmdpars_trans_to_packet/59 (dbgcmdpars_trans_to_packet)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+dbgcmdpars_recv_complete/58 (dbgcmdpars_recv_complete)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+mailbox_clear_recv_notify/57 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 
+  Calls: 
+sch_add_cmd/56 (sch_add_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 
+  Calls: 
+cmdpool_alloc/55 (cmdpool_alloc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_handle_gen_mbox_data/27 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 
+  Calls: 
+sch_is_cache_full/53 (sch_is_cache_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: 
+mailbox_read/52 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_read_mbox_data/19 
+  Calls: 
+expt_det_reset_error/51 (expt_det_reset_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_poll_mb_chl/29 
+  Calls: 
+mailbox_read_recv_notify/50 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_poll_mb_chl/29 
+  Calls: 
+memset_/49 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+uart_putc/48 (uart_putc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_dbg_rsp/23 
+  Calls: 
+mailbox_set_send_notify/47 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_write/46 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_read_send_notify/45 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+memcpy_/44 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+mmap_remap_addr_u64/42 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+cmdpool_free/40 (cmdpool_free)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_init_packet/26 comm_init_packet/26 comm_send_rsp/31 
+  Calls: 
+expt_det_add_error/39 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 comm_poll_mb_chl/29 comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_append_data/38 (dbgcmdpars_append_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+uart_getc/37 (uart_getc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_init_parser/36 (dbgcmdpars_init_parser)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_send_dbg_rsp/23 comm_uart_recv_cb/21 comm_init/30 
+  Calls: 
+mailbox_init/35 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+uart_init/34 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+cmdpool_init/33 (cmdpool_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+comm_poll/32 (comm_poll)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: g_mb_int/17 (read) g_mb_int/17 (write) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) g_recv_mb_ch/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_process_dbg_data/25 comm_poll_mb_chl/29 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_rsp/31 (comm_send_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f0cb278c330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cmdpool_free/40 util_memset/10 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 comm_is_mb_channel/24 comm_send_dbg_rsp/23 
+comm_init/30 (comm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f0cb278c220
+  References: comm_uart_recv_cb/21 (addr) comm_mbox_recv_cb/20 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 mailbox_init/35 uart_init/34 cmdpool_init/33 
+comm_poll_mb_chl/29 (comm_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cfbb0
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: expt_det_add_error/39 comm_read_mbox_data/19 expt_det_reset_error/51 mailbox_read_recv_notify/50 
+comm_send_gen_mbox_rsp/28 (comm_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cf990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: comm_send_mbox_rsp/22 util_memcpy/9 cpu_exit_critical/43 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/42 cpu_enter_critical/41 
+comm_handle_gen_mbox_data/27 (comm_handle_gen_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cfbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_read_mbox_data/19 
+  Calls: mailbox_set_send_notify/47 comm_init_packet/26 cmdpool_alloc/55 mmap_read_remote_data/54 util_memcpy/9 sch_is_cache_full/53 
+comm_init_packet/26 (comm_init_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cfbb0
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: cmdpool_free/40 mailbox_set_send_notify/47 cmdpool_free/40 expt_det_add_error/39 util_memcpy/9 mailbox_read/52 mailbox_read_recv_notify/50 mailbox_clear_recv_notify/57 sch_add_cmd/56 mmap_read_remote_data/54 
+comm_process_dbg_data/25 (comm_process_dbg_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: cmdpool_free/40 dbgcmdpars_init_parser/36 cpu_exit_critical/43 cpu_enter_critical/41 sch_add_cmd/56 cmdpool_free/40 cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_trans_to_packet/59 cpu_exit_critical/43 cpu_enter_critical/41 expt_det_add_error/39 cmdpool_alloc/55 dbgcmdpars_recv_complete/58 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_is_mb_channel/24 (comm_is_mb_channel)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cfee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: 
+comm_send_dbg_rsp/23 (comm_send_dbg_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cf000
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 comm_send_rsp/31 
+  Calls: cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_init_parser/36 uart_putc/48 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_mbox_rsp/22 (comm_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cf990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: mailbox_set_send_notify/47 mailbox_set_send_notify/47 mailbox_write/46 mailbox_read_send_notify/45 mailbox_read_send_notify/45 
+comm_uart_recv_cb/21 (comm_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7f0cb278c220
+  References: g_dbg_channel/16 (read) g_dbg_channel/16 (read) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 expt_det_add_error/39 dbgcmdpars_append_data/38 uart_getc/37 
+comm_mbox_recv_cb/20 (comm_mbox_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7f0cb26cf770
+  References: g_mb_int/17 (read) g_mb_int/17 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+comm_read_mbox_data/19 (comm_read_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cfbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll_mb_chl/29 
+  Calls: comm_handle_gen_mbox_data/27 mailbox_read/52 
+g_recv_mb_ch/18 (g_recv_mb_ch)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7f0cb278c110
+  References: 
+  Referring: comm_poll/32 (read) comm_poll/32 (write) comm_poll/32 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (write) comm_init_packet/26 (read) comm_init_packet/26 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_mb_int/17 (g_mb_int)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7f0cb26d5680
+  References: 
+  Referring: comm_mbox_recv_cb/20 (read) comm_mbox_recv_cb/20 (write) comm_poll/32 (read) comm_poll/32 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_dbg_channel/16 (g_dbg_channel)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7f0cb26d5600
+  References: 
+  Referring: comm_init/30 (write) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (write) comm_uart_recv_cb/21 (write) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (write) comm_process_dbg_data/25 (read) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) 
+  Availability: not-ready
+  Varpool flags:
+g_dbg_cmd_parser/15 (g_dbg_cmd_parser)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cf660
+  References: 
+  Referring: comm_init/30 (addr) comm_uart_recv_cb/21 (addr) comm_uart_recv_cb/21 (addr) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb278c330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: memset_/49 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f0cb26cf880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 
+  Calls: memcpy_/44 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+dbgcmdpars_trans_to_packet/59 (dbgcmdpars_trans_to_packet)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+dbgcmdpars_recv_complete/58 (dbgcmdpars_recv_complete)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+mailbox_clear_recv_notify/57 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 
+  Calls: 
+sch_add_cmd/56 (sch_add_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 
+  Calls: 
+cmdpool_alloc/55 (cmdpool_alloc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_handle_gen_mbox_data/27 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 
+  Calls: 
+sch_is_cache_full/53 (sch_is_cache_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: 
+mailbox_read/52 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_read_mbox_data/19 
+  Calls: 
+expt_det_reset_error/51 (expt_det_reset_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_poll_mb_chl/29 
+  Calls: 
+mailbox_read_recv_notify/50 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_poll_mb_chl/29 
+  Calls: 
+memset_/49 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+uart_putc/48 (uart_putc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_dbg_rsp/23 
+  Calls: 
+mailbox_set_send_notify/47 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_write/46 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_read_send_notify/45 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+memcpy_/44 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+mmap_remap_addr_u64/42 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+cmdpool_free/40 (cmdpool_free)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_init_packet/26 comm_init_packet/26 comm_send_rsp/31 
+  Calls: 
+expt_det_add_error/39 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 comm_poll_mb_chl/29 comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_append_data/38 (dbgcmdpars_append_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+uart_getc/37 (uart_getc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_init_parser/36 (dbgcmdpars_init_parser)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_send_dbg_rsp/23 comm_uart_recv_cb/21 comm_init/30 
+  Calls: 
+mailbox_init/35 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+uart_init/34 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+cmdpool_init/33 (cmdpool_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+comm_poll/32 (comm_poll)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_mb_int/17 (read) g_mb_int/17 (write) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) g_recv_mb_ch/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_process_dbg_data/25 comm_poll_mb_chl/29 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_rsp/31 (comm_send_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cmdpool_free/40 util_memset/10 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 comm_is_mb_channel/24 comm_send_dbg_rsp/23 
+comm_init/30 (comm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: comm_uart_recv_cb/21 (addr) comm_mbox_recv_cb/20 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 mailbox_init/35 uart_init/34 cmdpool_init/33 
+comm_poll_mb_chl/29 (comm_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: expt_det_add_error/39 comm_read_mbox_data/19 expt_det_reset_error/51 mailbox_read_recv_notify/50 
+comm_send_gen_mbox_rsp/28 (comm_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: comm_send_mbox_rsp/22 util_memcpy/9 cpu_exit_critical/43 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/42 cpu_enter_critical/41 
+comm_handle_gen_mbox_data/27 (comm_handle_gen_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_read_mbox_data/19 
+  Calls: mailbox_set_send_notify/47 comm_init_packet/26 cmdpool_alloc/55 mmap_read_remote_data/54 util_memcpy/9 sch_is_cache_full/53 
+comm_init_packet/26 (comm_init_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: cmdpool_free/40 mailbox_set_send_notify/47 cmdpool_free/40 expt_det_add_error/39 util_memcpy/9 mailbox_read/52 mailbox_read_recv_notify/50 mailbox_clear_recv_notify/57 sch_add_cmd/56 mmap_read_remote_data/54 
+comm_process_dbg_data/25 (comm_process_dbg_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: cmdpool_free/40 dbgcmdpars_init_parser/36 cpu_exit_critical/43 cpu_enter_critical/41 sch_add_cmd/56 cmdpool_free/40 cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_trans_to_packet/59 cpu_exit_critical/43 cpu_enter_critical/41 expt_det_add_error/39 cmdpool_alloc/55 dbgcmdpars_recv_complete/58 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_is_mb_channel/24 (comm_is_mb_channel)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: 
+comm_send_dbg_rsp/23 (comm_send_dbg_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 comm_send_rsp/31 
+  Calls: cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_init_parser/36 uart_putc/48 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_mbox_rsp/22 (comm_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: mailbox_set_send_notify/47 mailbox_set_send_notify/47 mailbox_write/46 mailbox_read_send_notify/45 mailbox_read_send_notify/45 
+comm_uart_recv_cb/21 (comm_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_dbg_channel/16 (read) g_dbg_channel/16 (read) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 expt_det_add_error/39 dbgcmdpars_append_data/38 uart_getc/37 
+comm_mbox_recv_cb/20 (comm_mbox_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_mb_int/17 (read) g_mb_int/17 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+comm_read_mbox_data/19 (comm_read_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll_mb_chl/29 
+  Calls: comm_handle_gen_mbox_data/27 mailbox_read/52 
+g_recv_mb_ch/18 (g_recv_mb_ch)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_poll/32 (read) comm_poll/32 (write) comm_poll/32 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (write) comm_init_packet/26 (read) comm_init_packet/26 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_mb_int/17 (g_mb_int)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_mbox_recv_cb/20 (read) comm_mbox_recv_cb/20 (write) comm_poll/32 (read) comm_poll/32 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_dbg_channel/16 (g_dbg_channel)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_init/30 (write) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (write) comm_uart_recv_cb/21 (write) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (write) comm_process_dbg_data/25 (read) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) 
+  Availability: not-ready
+  Varpool flags:
+g_dbg_cmd_parser/15 (g_dbg_cmd_parser)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: comm_init/30 (addr) comm_uart_recv_cb/21 (addr) comm_uart_recv_cb/21 (addr) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: memset_/49 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 
+  Calls: memcpy_/44 
+
+
+Initial Symbol table:
+
+dbgcmdpars_trans_to_packet/59 (dbgcmdpars_trans_to_packet)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+dbgcmdpars_recv_complete/58 (dbgcmdpars_recv_complete)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+mailbox_clear_recv_notify/57 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 
+  Calls: 
+sch_add_cmd/56 (sch_add_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 
+  Calls: 
+cmdpool_alloc/55 (cmdpool_alloc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_handle_gen_mbox_data/27 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 
+  Calls: 
+sch_is_cache_full/53 (sch_is_cache_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: 
+mailbox_read/52 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_read_mbox_data/19 
+  Calls: 
+expt_det_reset_error/51 (expt_det_reset_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_poll_mb_chl/29 
+  Calls: 
+mailbox_read_recv_notify/50 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_poll_mb_chl/29 
+  Calls: 
+memset_/49 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+uart_putc/48 (uart_putc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_dbg_rsp/23 
+  Calls: 
+mailbox_set_send_notify/47 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_write/46 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_read_send_notify/45 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+memcpy_/44 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+mmap_remap_addr_u64/42 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+cmdpool_free/40 (cmdpool_free)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_init_packet/26 comm_init_packet/26 comm_send_rsp/31 
+  Calls: 
+expt_det_add_error/39 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 comm_poll_mb_chl/29 comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_append_data/38 (dbgcmdpars_append_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+uart_getc/37 (uart_getc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_init_parser/36 (dbgcmdpars_init_parser)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_send_dbg_rsp/23 comm_uart_recv_cb/21 comm_init/30 
+  Calls: 
+mailbox_init/35 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+uart_init/34 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+cmdpool_init/33 (cmdpool_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+comm_poll/32 (comm_poll)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_mb_int/17 (read) g_mb_int/17 (write) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) g_recv_mb_ch/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_process_dbg_data/25 comm_poll_mb_chl/29 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_rsp/31 (comm_send_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cmdpool_free/40 util_memset/10 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 comm_is_mb_channel/24 comm_send_dbg_rsp/23 
+comm_init/30 (comm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: comm_uart_recv_cb/21 (addr) comm_mbox_recv_cb/20 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 mailbox_init/35 uart_init/34 cmdpool_init/33 
+comm_poll_mb_chl/29 (comm_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: expt_det_add_error/39 comm_read_mbox_data/19 expt_det_reset_error/51 mailbox_read_recv_notify/50 
+comm_send_gen_mbox_rsp/28 (comm_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: comm_send_mbox_rsp/22 util_memcpy/9 cpu_exit_critical/43 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/42 cpu_enter_critical/41 
+comm_handle_gen_mbox_data/27 (comm_handle_gen_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_read_mbox_data/19 
+  Calls: mailbox_set_send_notify/47 comm_init_packet/26 cmdpool_alloc/55 mmap_read_remote_data/54 util_memcpy/9 sch_is_cache_full/53 
+comm_init_packet/26 (comm_init_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: cmdpool_free/40 mailbox_set_send_notify/47 cmdpool_free/40 expt_det_add_error/39 util_memcpy/9 mailbox_read/52 mailbox_read_recv_notify/50 mailbox_clear_recv_notify/57 sch_add_cmd/56 mmap_read_remote_data/54 
+comm_process_dbg_data/25 (comm_process_dbg_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: cmdpool_free/40 dbgcmdpars_init_parser/36 cpu_exit_critical/43 cpu_enter_critical/41 sch_add_cmd/56 cmdpool_free/40 cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_trans_to_packet/59 cpu_exit_critical/43 cpu_enter_critical/41 expt_det_add_error/39 cmdpool_alloc/55 dbgcmdpars_recv_complete/58 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_is_mb_channel/24 (comm_is_mb_channel)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: 
+comm_send_dbg_rsp/23 (comm_send_dbg_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 comm_send_rsp/31 
+  Calls: cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_init_parser/36 uart_putc/48 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_mbox_rsp/22 (comm_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: mailbox_set_send_notify/47 mailbox_set_send_notify/47 mailbox_write/46 mailbox_read_send_notify/45 mailbox_read_send_notify/45 
+comm_uart_recv_cb/21 (comm_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_dbg_channel/16 (read) g_dbg_channel/16 (read) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 expt_det_add_error/39 dbgcmdpars_append_data/38 uart_getc/37 
+comm_mbox_recv_cb/20 (comm_mbox_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_mb_int/17 (read) g_mb_int/17 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+comm_read_mbox_data/19 (comm_read_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll_mb_chl/29 
+  Calls: comm_handle_gen_mbox_data/27 mailbox_read/52 
+g_recv_mb_ch/18 (g_recv_mb_ch)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_poll/32 (read) comm_poll/32 (write) comm_poll/32 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (write) comm_init_packet/26 (read) comm_init_packet/26 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_mb_int/17 (g_mb_int)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_mbox_recv_cb/20 (read) comm_mbox_recv_cb/20 (write) comm_poll/32 (read) comm_poll/32 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_dbg_channel/16 (g_dbg_channel)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_init/30 (write) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (write) comm_uart_recv_cb/21 (write) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (write) comm_process_dbg_data/25 (read) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) 
+  Availability: not-ready
+  Varpool flags:
+g_dbg_cmd_parser/15 (g_dbg_cmd_parser)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: comm_init/30 (addr) comm_uart_recv_cb/21 (addr) comm_uart_recv_cb/21 (addr) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: memset_/49 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 
+  Calls: memcpy_/44 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+dbgcmdpars_trans_to_packet/59 (dbgcmdpars_trans_to_packet)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+dbgcmdpars_recv_complete/58 (dbgcmdpars_recv_complete)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 
+  Calls: 
+mailbox_clear_recv_notify/57 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 
+  Calls: 
+sch_add_cmd/56 (sch_add_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 
+  Calls: 
+cmdpool_alloc/55 (cmdpool_alloc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_handle_gen_mbox_data/27 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 
+  Calls: 
+sch_is_cache_full/53 (sch_is_cache_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: 
+mailbox_read/52 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_read_mbox_data/19 
+  Calls: 
+expt_det_reset_error/51 (expt_det_reset_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_poll_mb_chl/29 
+  Calls: 
+mailbox_read_recv_notify/50 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_poll_mb_chl/29 
+  Calls: 
+memset_/49 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+uart_putc/48 (uart_putc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_dbg_rsp/23 
+  Calls: 
+mailbox_set_send_notify/47 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_write/46 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 
+  Calls: 
+mailbox_read_send_notify/45 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_mbox_rsp/22 comm_send_mbox_rsp/22 
+  Calls: 
+memcpy_/44 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+mmap_remap_addr_u64/42 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_process_dbg_data/25 comm_poll/32 comm_send_dbg_rsp/23 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 
+  Calls: 
+cmdpool_free/40 (cmdpool_free)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_process_dbg_data/25 comm_init_packet/26 comm_init_packet/26 comm_send_rsp/31 
+  Calls: 
+expt_det_add_error/39 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_init_packet/26 comm_poll_mb_chl/29 comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_append_data/38 (dbgcmdpars_append_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+uart_getc/37 (uart_getc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_uart_recv_cb/21 
+  Calls: 
+dbgcmdpars_init_parser/36 (dbgcmdpars_init_parser)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_process_dbg_data/25 comm_send_dbg_rsp/23 comm_uart_recv_cb/21 comm_init/30 
+  Calls: 
+mailbox_init/35 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+uart_init/34 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+cmdpool_init/33 (cmdpool_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: comm_init/30 
+  Calls: 
+comm_poll/32 (comm_poll)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_mb_int/17 (read) g_mb_int/17 (write) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) g_recv_mb_ch/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_process_dbg_data/25 comm_poll_mb_chl/29 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_rsp/31 (comm_send_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cmdpool_free/40 util_memset/10 comm_send_dbg_rsp/23 comm_send_gen_mbox_rsp/28 comm_is_mb_channel/24 comm_send_dbg_rsp/23 
+comm_init/30 (comm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: comm_uart_recv_cb/21 (addr) comm_mbox_recv_cb/20 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 mailbox_init/35 uart_init/34 cmdpool_init/33 
+comm_poll_mb_chl/29 (comm_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: expt_det_add_error/39 comm_read_mbox_data/19 expt_det_reset_error/51 mailbox_read_recv_notify/50 
+comm_send_gen_mbox_rsp/28 (comm_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: comm_send_mbox_rsp/22 util_memcpy/9 cpu_exit_critical/43 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/42 cpu_enter_critical/41 
+comm_handle_gen_mbox_data/27 (comm_handle_gen_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_read_mbox_data/19 
+  Calls: mailbox_set_send_notify/47 comm_init_packet/26 cmdpool_alloc/55 mmap_read_remote_data/54 util_memcpy/9 sch_is_cache_full/53 
+comm_init_packet/26 (comm_init_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_handle_gen_mbox_data/27 
+  Calls: cmdpool_free/40 mailbox_set_send_notify/47 cmdpool_free/40 expt_det_add_error/39 util_memcpy/9 mailbox_read/52 mailbox_read_recv_notify/50 mailbox_clear_recv_notify/57 sch_add_cmd/56 mmap_read_remote_data/54 
+comm_process_dbg_data/25 (comm_process_dbg_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll/32 
+  Calls: cmdpool_free/40 dbgcmdpars_init_parser/36 cpu_exit_critical/43 cpu_enter_critical/41 sch_add_cmd/56 cmdpool_free/40 cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_trans_to_packet/59 cpu_exit_critical/43 cpu_enter_critical/41 expt_det_add_error/39 cmdpool_alloc/55 dbgcmdpars_recv_complete/58 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_is_mb_channel/24 (comm_is_mb_channel)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: 
+comm_send_dbg_rsp/23 (comm_send_dbg_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 comm_send_rsp/31 
+  Calls: cpu_exit_critical/43 cpu_enter_critical/41 dbgcmdpars_init_parser/36 uart_putc/48 cpu_exit_critical/43 cpu_enter_critical/41 
+comm_send_mbox_rsp/22 (comm_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_gen_mbox_rsp/28 
+  Calls: mailbox_set_send_notify/47 mailbox_set_send_notify/47 mailbox_write/46 mailbox_read_send_notify/45 mailbox_read_send_notify/45 
+comm_uart_recv_cb/21 (comm_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_dbg_channel/16 (read) g_dbg_channel/16 (read) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 expt_det_add_error/39 dbgcmdpars_append_data/38 uart_getc/37 
+comm_mbox_recv_cb/20 (comm_mbox_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_mb_int/17 (read) g_mb_int/17 (write) 
+  Referring: comm_init/30 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+comm_read_mbox_data/19 (comm_read_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_poll_mb_chl/29 
+  Calls: comm_handle_gen_mbox_data/27 mailbox_read/52 
+g_recv_mb_ch/18 (g_recv_mb_ch)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_poll/32 (read) comm_poll/32 (write) comm_poll/32 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (read) comm_poll_mb_chl/29 (write) comm_init_packet/26 (read) comm_init_packet/26 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_mb_int/17 (g_mb_int)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_mbox_recv_cb/20 (read) comm_mbox_recv_cb/20 (write) comm_poll/32 (read) comm_poll/32 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_dbg_channel/16 (g_dbg_channel)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: comm_init/30 (write) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (write) comm_uart_recv_cb/21 (write) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (write) comm_process_dbg_data/25 (read) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) 
+  Availability: not-ready
+  Varpool flags:
+g_dbg_cmd_parser/15 (g_dbg_cmd_parser)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: comm_init/30 (addr) comm_uart_recv_cb/21 (addr) comm_uart_recv_cb/21 (addr) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_send_rsp/31 
+  Calls: memset_/49 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: comm_init_packet/26 comm_handle_gen_mbox_data/27 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 comm_send_gen_mbox_rsp/28 
+  Calls: memcpy_/44 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+comm_send_mbox_rsp.constprop.0/65 (comm_send_mbox_rsp.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function comm_send_mbox_rsp.constprop/65 is inline copy in comm_send_rsp/31
+  Clone of comm_send_mbox_rsp/22
+  Availability: local
+  Function flags: count:7540513 (estimated locally) local
+  Called by: comm_send_gen_mbox_rsp/28 (inlined) (7540513 (estimated locally),0.01 per call) 
+  Calls: mailbox_read_send_notify/45 (870929 (estimated locally),0.00 per call) mailbox_read_send_notify/45 (7270499 (estimated locally),0.01 per call) mailbox_write/46 (296116 (estimated locally),0.00 per call) mailbox_set_send_notify/47 (35593 (estimated locally),0.00 per call) mailbox_set_send_notify/47 (835336 (estimated locally),0.00 per call) 
+comm_uart_recv_cb.part.0/60 (comm_uart_recv_cb.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Function comm_uart_recv_cb.part.0/60 is inline copy in comm_uart_recv_cb/21
+  Availability: local
+  Function flags: count:86232957 (estimated locally) body local split_part
+  Called by: comm_uart_recv_cb/21 (inlined) (86232957 (estimated locally),0.08 per call) 
+  Calls: expt_det_add_error/39 (86232957 (estimated locally),0.08 per call) dbgcmdpars_init_parser/36 (86232957 (estimated locally),0.08 per call) 
+dbgcmdpars_trans_to_packet/59 (dbgcmdpars_trans_to_packet)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_process_dbg_data/25 (26051835 (estimated locally),0.02 per call) 
+  Calls: 
+dbgcmdpars_recv_complete/58 (dbgcmdpars_recv_complete)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_process_dbg_data/25 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+mailbox_clear_recv_notify/57 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_init_packet/26 (10361 (estimated locally),0.00 per call) 
+  Calls: 
+sch_add_cmd/56 (sch_add_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_process_dbg_data/25 (8857624 (estimated locally),0.01 per call) comm_init_packet/26 (30473 (estimated locally),0.00 per call) 
+  Calls: 
+cmdpool_alloc/55 (cmdpool_alloc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_process_dbg_data/25 (43986649 (estimated locally),0.04 per call) comm_handle_gen_mbox_data/27 (1183108 (estimated locally),0.00 per call) 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 (14026512 (estimated locally),0.01 per call) comm_init_packet/26 (89628 (estimated locally),0.00 per call) 
+  Calls: 
+sch_is_cache_full/53 (sch_is_cache_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 (42504581 (estimated locally),0.04 per call) 
+  Calls: 
+mailbox_read/52 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_read_mbox_data/19 (210002874 (estimated locally),0.20 per call) comm_init_packet/26 (1163 (estimated locally),0.00 per call) 
+  Calls: 
+expt_det_reset_error/51 (expt_det_reset_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_poll_mb_chl/29 (210002874 (estimated locally),0.20 per call) 
+  Calls: 
+mailbox_read_recv_notify/50 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_poll_mb_chl/29 (1871683342 (estimated locally),1.74 per call) comm_init_packet/26 (10361 (estimated locally),0.00 per call) 
+  Calls: 
+memset_/49 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_rsp/31 (751619280 (estimated locally),0.70 per call) 
+  Calls: 
+uart_putc/48 (uart_putc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_dbg_rsp/23 (955630224 (estimated locally),1.38 per call) 
+  Calls: 
+mailbox_set_send_notify/47 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_mbox_rsp.constprop.0/65 (35593 (estimated locally),0.00 per call) comm_send_mbox_rsp.constprop.0/65 (835336 (estimated locally),0.00 per call) comm_handle_gen_mbox_data/27 (12843403 (estimated locally),0.01 per call) comm_init_packet/26 (59154 (estimated locally),0.00 per call) 
+  Calls: 
+mailbox_write/46 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_mbox_rsp.constprop.0/65 (296116 (estimated locally),0.00 per call) 
+  Calls: 
+mailbox_read_send_notify/45 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_mbox_rsp.constprop.0/65 (870929 (estimated locally),0.00 per call) comm_send_mbox_rsp.constprop.0/65 (7270499 (estimated locally),0.01 per call) 
+  Calls: 
+memcpy_/44 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_handle_gen_mbox_data/27 (14026512 (estimated locally),0.01 per call) comm_init_packet/26 (1163 (estimated locally),0.00 per call) comm_send_gen_mbox_rsp/28 (7540513 (estimated locally),0.01 per call) comm_send_gen_mbox_rsp/28 (12587925 (estimated locally),0.01 per call) comm_send_gen_mbox_rsp/28 (12587925 (estimated locally),0.01 per call) 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_poll/32 (1073741824 (estimated locally),1.00 per call) comm_process_dbg_data/25 (4329607 (estimated locally),0.00 per call) comm_process_dbg_data/25 (17194211 (estimated locally),0.02 per call) comm_process_dbg_data/25 (84727953 (estimated locally),0.08 per call) comm_process_dbg_data/25 (1073741824 (estimated locally),1.00 per call) comm_send_dbg_rsp/23 (694774111 (estimated locally),1.00 per call) comm_send_dbg_rsp/23 (694774111 (estimated locally),1.00 per call) comm_send_gen_mbox_rsp/28 (23542033 (estimated locally),0.02 per call) 
+  Calls: 
+mmap_remap_addr_u64/42 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_gen_mbox_rsp/28 (23542033 (estimated locally),0.02 per call) 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_poll/32 (1073741824 (estimated locally),1.00 per call) comm_process_dbg_data/25 (4329607 (estimated locally),0.00 per call) comm_process_dbg_data/25 (17194211 (estimated locally),0.02 per call) comm_process_dbg_data/25 (84727953 (estimated locally),0.08 per call) comm_process_dbg_data/25 (1073741824 (estimated locally),1.00 per call) comm_send_dbg_rsp/23 (694774111 (estimated locally),1.00 per call) comm_send_dbg_rsp/23 (694774111 (estimated locally),1.00 per call) comm_send_gen_mbox_rsp/28 (23542033 (estimated locally),0.02 per call) 
+  Calls: 
+cmdpool_free/40 (cmdpool_free)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_send_rsp/31 (751619280 (estimated locally),0.70 per call) comm_process_dbg_data/25 (4329607 (estimated locally),0.00 per call) comm_process_dbg_data/25 (17194211 (estimated locally),0.02 per call) comm_init_packet/26 (59154 (estimated locally),0.00 per call) comm_init_packet/26 (20112 (estimated locally),0.00 per call) 
+  Calls: 
+expt_det_add_error/39 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_process_dbg_data/25 (84727953 (estimated locally),0.08 per call) comm_poll_mb_chl/29 (336324128 (estimated locally),0.31 per call) comm_init_packet/26 (242 (estimated locally),0.00 per call) comm_uart_recv_cb.part.0/60 (86232957 (estimated locally),0.08 per call) 
+  Calls: 
+dbgcmdpars_append_data/38 (dbgcmdpars_append_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_uart_recv_cb/21 (645533584 (estimated locally),0.60 per call) 
+  Calls: 
+uart_getc/37 (uart_getc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_uart_recv_cb/21 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+dbgcmdpars_init_parser/36 (dbgcmdpars_init_parser)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_init/30 (182241592 (estimated locally),0.17 per call) comm_process_dbg_data/25 (4329607 (estimated locally),0.00 per call) comm_send_dbg_rsp/23 (694774111 (estimated locally),1.00 per call) comm_uart_recv_cb.part.0/60 (86232957 (estimated locally),0.08 per call) 
+  Calls: 
+mailbox_init/35 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_init/30 (43986649 (estimated locally),0.04 per call) 
+  Calls: 
+uart_init/34 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_init/30 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cmdpool_init/33 (cmdpool_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: comm_init/30 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+comm_poll/32 (comm_poll)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_mb_int/17 (read) g_mb_int/17 (write) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) g_recv_mb_ch/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: comm_process_dbg_data/25 (inlined) (1073741824 (estimated locally),1.00 per call) comm_poll_mb_chl/29 (inlined) (354334800 (estimated locally),0.33 per call) cpu_exit_critical/43 (1073741824 (estimated locally),1.00 per call) cpu_enter_critical/41 (1073741824 (estimated locally),1.00 per call) 
+comm_send_rsp/31 (comm_send_rsp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: cmdpool_free/40 (751619280 (estimated locally),0.70 per call) memset_/49 (751619280 (estimated locally),0.70 per call) comm_send_dbg_rsp/23 (197832207 (estimated locally),0.18 per call) comm_send_gen_mbox_rsp/28 (inlined) (101913563 (estimated locally),0.09 per call) comm_send_dbg_rsp/23 (152127741 (estimated locally),0.14 per call) 
+comm_init/30 (comm_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: comm_uart_recv_cb/21 (addr) comm_mbox_recv_cb/20 (addr) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/36 (182241592 (estimated locally),0.17 per call) mailbox_init/35 (43986649 (estimated locally),0.04 per call) uart_init/34 (217325344 (estimated locally),0.20 per call) cmdpool_init/33 (1073741824 (estimated locally),1.00 per call) 
+comm_poll_mb_chl/29 (comm_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function comm_poll_mb_chl/29 is inline copy in comm_poll/32
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local
+  Called by: comm_poll/32 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: expt_det_add_error/39 (336324128 (estimated locally),0.31 per call) comm_read_mbox_data/19 (inlined) (210002874 (estimated locally),0.20 per call) expt_det_reset_error/51 (210002874 (estimated locally),0.20 per call) mailbox_read_recv_notify/50 (1871683342 (estimated locally),1.74 per call) 
+comm_send_gen_mbox_rsp/28 (comm_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function comm_send_gen_mbox_rsp/28 is inline copy in comm_send_rsp/31
+  Availability: local
+  Function flags: count:101913563 (estimated locally) body local
+  Called by: comm_send_rsp/31 (inlined) (101913563 (estimated locally),0.09 per call) 
+  Calls: comm_send_mbox_rsp.constprop.0/65 (inlined) (7540513 (estimated locally),0.01 per call) memcpy_/44 (7540513 (estimated locally),0.01 per call) cpu_exit_critical/43 (23542033 (estimated locally),0.02 per call) memcpy_/44 (12587925 (estimated locally),0.01 per call) memcpy_/44 (12587925 (estimated locally),0.01 per call) mmap_remap_addr_u64/42 (23542033 (estimated locally),0.02 per call) cpu_enter_critical/41 (23542033 (estimated locally),0.02 per call) 
+comm_handle_gen_mbox_data/27 (comm_handle_gen_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function comm_handle_gen_mbox_data/27 is inline copy in comm_poll/32
+  Availability: local
+  Function flags: count:42504581 (estimated locally) body local
+  Called by: comm_read_mbox_data/19 (inlined) (42504581 (estimated locally),0.04 per call) 
+  Calls: mailbox_set_send_notify/47 (12843403 (estimated locally),0.01 per call) comm_init_packet/26 (inlined) (239461 (estimated locally),0.00 per call) cmdpool_alloc/55 (1183108 (estimated locally),0.00 per call) mmap_read_remote_data/54 (14026512 (estimated locally),0.01 per call) memcpy_/44 (14026512 (estimated locally),0.01 per call) sch_is_cache_full/53 (42504581 (estimated locally),0.04 per call) 
+comm_init_packet/26 (comm_init_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_recv_mb_ch/18 (read) g_recv_mb_ch/18 (write) 
+  Referring: 
+  Function comm_init_packet/26 is inline copy in comm_poll/32
+  Availability: local
+  Function flags: count:239461 (estimated locally) body local
+  Called by: comm_handle_gen_mbox_data/27 (inlined) (239461 (estimated locally),0.00 per call) 
+  Calls: cmdpool_free/40 (59154 (estimated locally),0.00 per call) mailbox_set_send_notify/47 (59154 (estimated locally),0.00 per call) cmdpool_free/40 (20112 (estimated locally),0.00 per call) expt_det_add_error/39 (242 (estimated locally),0.00 per call) memcpy_/44 (1163 (estimated locally),0.00 per call) mailbox_read/52 (1163 (estimated locally),0.00 per call) mailbox_read_recv_notify/50 (10361 (estimated locally),0.00 per call) mailbox_clear_recv_notify/57 (10361 (estimated locally),0.00 per call) sch_add_cmd/56 (30473 (estimated locally),0.00 per call) mmap_read_remote_data/54 (89628 (estimated locally),0.00 per call) 
+comm_process_dbg_data/25 (comm_process_dbg_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) 
+  Referring: 
+  Function comm_process_dbg_data/25 is inline copy in comm_poll/32
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: comm_poll/32 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: cmdpool_free/40 (4329607 (estimated locally),0.00 per call) dbgcmdpars_init_parser/36 (4329607 (estimated locally),0.00 per call) cpu_exit_critical/43 (4329607 (estimated locally),0.00 per call) cpu_enter_critical/41 (4329607 (estimated locally),0.00 per call) cmdpool_free/40 (17194211 (estimated locally),0.02 per call) cpu_exit_critical/43 (17194211 (estimated locally),0.02 per call) cpu_enter_critical/41 (17194211 (estimated locally),0.02 per call) sch_add_cmd/56 (8857624 (estimated locally),0.01 per call) dbgcmdpars_trans_to_packet/59 (26051835 (estimated locally),0.02 per call) cpu_exit_critical/43 (84727953 (estimated locally),0.08 per call) cpu_enter_critical/41 (84727953 (estimated locally),0.08 per call) expt_det_add_error/39 (84727953 (estimated locally),0.08 per call) cmdpool_alloc/55 (43986649 (estimated locally),0.04 per call) dbgcmdpars_recv_complete/58 (217325344 (estimated locally),0.20 per call) cpu_exit_critical/43 (1073741824 (estimated locally),1.00 per call) cpu_enter_critical/41 (1073741824 (estimated locally),1.00 per call) 
+comm_send_dbg_rsp/23 (comm_send_dbg_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_dbg_channel/16 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (read) g_dbg_cmd_parser/15 (addr) g_dbg_channel/16 (write) 
+  Referring: 
+  Availability: local
+  Function flags: count:694774111 (estimated locally) body local
+  Called by: comm_send_rsp/31 (197832207 (estimated locally),0.18 per call) comm_send_rsp/31 (152127741 (estimated locally),0.14 per call) 
+  Calls: cpu_exit_critical/43 (694774111 (estimated locally),1.00 per call) cpu_enter_critical/41 (694774111 (estimated locally),1.00 per call) dbgcmdpars_init_parser/36 (694774111 (estimated locally),1.00 per call) uart_putc/48 (955630224 (estimated locally),1.38 per call) cpu_exit_critical/43 (694774111 (estimated locally),1.00 per call) cpu_enter_critical/41 (694774111 (estimated locally),1.00 per call) 
+comm_send_mbox_rsp/22 (comm_send_mbox_rsp)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:994489438 (estimated locally) body
+  Called by: 
+  Calls: 
+comm_uart_recv_cb/21 (comm_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_dbg_channel/16 (read) g_dbg_channel/16 (read) g_dbg_channel/16 (write) g_dbg_cmd_parser/15 (addr) 
+  Referring: comm_init/30 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: comm_uart_recv_cb.part.0/60 (inlined) (86232957 (estimated locally),0.08 per call) dbgcmdpars_append_data/38 (645533584 (estimated locally),0.60 per call) uart_getc/37 (1073741824 (estimated locally),1.00 per call) 
+comm_mbox_recv_cb/20 (comm_mbox_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_mb_int/17 (read) g_mb_int/17 (write) 
+  Referring: comm_init/30 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+comm_read_mbox_data/19 (comm_read_mbox_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function comm_read_mbox_data/19 is inline copy in comm_poll/32
+  Availability: local
+  Function flags: count:210002874 (estimated locally) body local
+  Called by: comm_poll_mb_chl/29 (inlined) (210002874 (estimated locally),0.20 per call) 
+  Calls: comm_handle_gen_mbox_data/27 (inlined) (42504581 (estimated locally),0.04 per call) mailbox_read/52 (210002874 (estimated locally),0.20 per call) 
+g_recv_mb_ch/18 (g_recv_mb_ch)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: comm_poll_mb_chl/29 (read) comm_init_packet/26 (read) comm_init_packet/26 (write) comm_poll_mb_chl/29 (write) comm_poll_mb_chl/29 (read) comm_poll/32 (read) comm_poll/32 (write) comm_poll/32 (read) 
+  Availability: available
+  Varpool flags: initialized
+g_mb_int/17 (g_mb_int)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: comm_mbox_recv_cb/20 (read) comm_mbox_recv_cb/20 (write) comm_poll/32 (read) comm_poll/32 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_dbg_channel/16 (g_dbg_channel)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: comm_send_dbg_rsp/23 (write) comm_uart_recv_cb.part.0/60 (write) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (read) comm_uart_recv_cb/21 (write) comm_send_dbg_rsp/23 (read) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (read) comm_process_dbg_data/25 (write) comm_process_dbg_data/25 (write) comm_init/30 (write) 
+  Availability: available
+  Varpool flags:
+g_dbg_cmd_parser/15 (g_dbg_cmd_parser)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: comm_send_dbg_rsp/23 (addr) comm_uart_recv_cb.part.0/60 (addr) comm_uart_recv_cb/21 (addr) comm_process_dbg_data/25 (addr) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_send_dbg_rsp/23 (read) comm_process_dbg_data/25 (addr) comm_process_dbg_data/25 (addr) comm_init/30 (addr) 
+  Availability: available
+  Varpool flags:
+cloning comm_send_mbox_rsp/22 to comm_send_mbox_rsp.constprop/65
+    replace map: 2 -> 2
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t comm_send_mbox_rsp (uint32_t mbox_chl, const uint32_t * data, uint32_t size)
+{
+  uint32_t notify;
+  uint32_t ret;
+  long unsigned int notify.3_1;
+  long unsigned int _2;
+
+  <bb 2> [local count: 994489438]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  notify = 0;
+  # DEBUG BEGIN_STMT
+  if (mbox_chl_9(D) > 15)
+    goto <bb 13>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 497244719]:
+  if (data_10(D) == 0B)
+    goto <bb 13>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 348071305]:
+  if (size_11(D) == 0)
+    goto <bb 13>; [67.00%]
+  else
+    goto <bb 5>; [33.00%]
+
+  <bb 5> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  ret_13 = mailbox_read_send_notify (mbox_chl_9(D), &notify);
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 958878292]:
+  # DEBUG BEGIN_STMT
+  ret_15 = mailbox_read_send_notify (mbox_chl_9(D), &notify);
+  # DEBUG ret => ret_15
+
+  <bb 7> [local count: 1073741824]:
+  # ret_3 = PHI <ret_13(5), ret_15(6)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 == 2774162085)
+    goto <bb 8>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 8> [local count: 1014686023]:
+  notify.3_1 = notify;
+  _2 = notify.3_1 & 1;
+  if (_2 != 0)
+    goto <bb 6>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 9> [local count: 114863531]:
+  # ret_20 = PHI <ret_3(7), 2774162085(8)>
+  # DEBUG BEGIN_STMT
+  if (ret_20 == 2774162085)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 12>; [66.00%]
+
+  <bb 10> [local count: 39053601]:
+  # DEBUG BEGIN_STMT
+  ret_17 = mailbox_write (mbox_chl_9(D), data_10(D), size_11(D));
+  # DEBUG ret => ret_17
+  # DEBUG BEGIN_STMT
+  if (ret_17 == 2774162085)
+    goto <bb 11>; [12.02%]
+  else
+    goto <bb 12>; [87.98%]
+
+  <bb 11> [local count: 4694243]:
+  # DEBUG BEGIN_STMT
+  mailbox_set_send_notify (mbox_chl_9(D), 1);
+  goto <bb 13>; [100.00%]
+
+  <bb 12> [local count: 110169288]:
+  # ret_22 = PHI <ret_17(10), ret_20(9)>
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  mailbox_set_send_notify (mbox_chl_9(D), 5);
+
+  <bb 13> [local count: 994489440]:
+  # ret_4 = PHI <1(2), 2774162085(11), ret_22(12), 1(3), 1(4)>
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  notify ={v} {CLOBBER(eos)};
+  return ret_4;
+
+}
+
+
+uint32_t comm_send_mbox_rsp.constprop (uint32_t mbox_chl, const uint32_t * data)
+{
+  uint32_t ret;
+  uint32_t notify;
+  uint32_t size;
+  long unsigned int notify.3_6;
+  long unsigned int _7;
+
+  <bb 14> [local count: 994489438]:
+  # DEBUG size => 2
+
+  <bb 2> [local count: 994489438]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  notify = 0;
+  # DEBUG BEGIN_STMT
+  if (mbox_chl_1(D) > 15)
+    goto <bb 13>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 497244719]:
+  if (data_2(D) == 0B)
+    goto <bb 13>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 348071305]:
+  if (0 != 0)
+    goto <bb 13>; [67.00%]
+  else
+    goto <bb 5>; [33.00%]
+
+  <bb 5> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  ret_3 = mailbox_read_send_notify (mbox_chl_1(D), &notify);
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 958878292]:
+  # DEBUG BEGIN_STMT
+  ret_4 = mailbox_read_send_notify (mbox_chl_1(D), &notify);
+  # DEBUG ret => ret_4
+
+  <bb 7> [local count: 1073741824]:
+  # ret_5 = PHI <ret_3(5), ret_4(6)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 2774162085)
+    goto <bb 8>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 8> [local count: 1014686023]:
+  notify.3_6 = notify;
+  _7 = notify.3_6 & 1;
+  if (_7 != 0)
+    goto <bb 6>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 9> [local count: 114863531]:
+  # ret_8 = PHI <ret_5(7), 2774162085(8)>
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 12>; [66.00%]
+
+  <bb 10> [local count: 39053601]:
+  # DEBUG BEGIN_STMT
+  ret_9 = mailbox_write (mbox_chl_1(D), data_2(D), 2);
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  if (ret_9 == 2774162085)
+    goto <bb 11>; [12.02%]
+  else
+    goto <bb 12>; [87.98%]
+
+  <bb 11> [local count: 4694243]:
+  # DEBUG BEGIN_STMT
+  mailbox_set_send_notify (mbox_chl_1(D), 1);
+  goto <bb 13>; [100.00%]
+
+  <bb 12> [local count: 110169288]:
+  # ret_11 = PHI <ret_8(9), ret_9(10)>
+  # DEBUG ret => NULL
+  # DEBUG BEGIN_STMT
+  mailbox_set_send_notify (mbox_chl_1(D), 5);
+
+  <bb 13> [local count: 994489440]:
+  # ret_10 = PHI <1(2), 1(3), 1(4), 2774162085(11), ret_11(12)>
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  notify ={v} {CLOBBER(eos)};
+  return ret_10;
+
+}
+
+
+updating call of comm_send_rsp/31 -> comm_send_mbox_rsp.constprop/65: ret_30 = comm_send_mbox_rsp (mbox_chl_27, &tag, 2);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_30 = comm_send_mbox_rsp.constprop (mbox_chl_27, &tag);
+Trivially needed variables: g_recv_mb_ch/18 g_mb_int/17 g_dbg_channel/16 g_dbg_cmd_parser/15
+Removing variables:
+
+Final Symbol table:
+
+dbgcmdpars_trans_to_packet/59 (dbgcmdpars_trans_to_packet)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgcmdpars_recv_complete/58 (dbgcmdpars_recv_complete)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_clear_recv_notify/57 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sch_add_cmd/56 (sch_add_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cmdpool_alloc/55 (cmdpool_alloc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sch_is_cache_full/53 (sch_is_cache_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_read/52 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_reset_error/51 (expt_det_reset_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_read_recv_notify/50 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/49 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uart_putc/48 (uart_putc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_set_send_notify/47 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_write/46 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_read_send_notify/45 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/44 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_exit_critical/43 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_remap_addr_u64/42 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_enter_critical/41 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cmdpool_free/40 (cmdpool_free)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_add_error/39 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/38 (dbgcmdpars_append_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uart_getc/37 (uart_getc)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgcmdpars_init_parser/36 (dbgcmdpars_init_parser)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mailbox_init/35 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uart_init/34 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cmdpool_init/33 (cmdpool_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+comm_poll/32 (comm_poll)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.comm_poll (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+comm_send_rsp/31 (comm_send_rsp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.comm_send_rsp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+comm_init/30 (comm_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.comm_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+comm_send_dbg_rsp/23 (comm_send_dbg_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.comm_send_dbg_rsp (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:694774111 (estimated locally) local
+  Called by: 
+  Calls: 
+comm_send_mbox_rsp/22 (comm_send_mbox_rsp)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:994489438 (estimated locally)
+  Called by: 
+  Calls: 
+comm_uart_recv_cb/21 (comm_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.comm_uart_recv_cb (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+comm_mbox_recv_cb/20 (comm_mbox_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.comm_mbox_recv_cb (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+g_recv_mb_ch/18 (g_recv_mb_ch)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_recv_mb_ch (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_mb_int/17 (g_mb_int)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_mb_int (implicit_section)
+  Aux: @0x7f0cb26d5680
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_dbg_channel/16 (g_dbg_channel)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_dbg_channel (implicit_section)
+  Aux: @0x7f0cb26d5600
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_dbg_cmd_parser/15 (g_dbg_cmd_parser)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_dbg_cmd_parser (implicit_section)
+  Aux: @0x7f0cb26d5580
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

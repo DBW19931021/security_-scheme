@@ -1,0 +1,3414 @@
+Trivially needed symbols: fwverify_check_ver_cnt/49 fwverify_get_and_verify_pubkey/48 fwverify_verify_image/47 fwverify_vry_soc_fw/46 fwverify_vry_hsm_fw/45 fwverify_check_fw_header/25 fwverify_header_is_valid/22
+
+
+Initial Symbol table:
+
+uint32_BigNumCmp/83 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 
+  Calls: 
+otpkey_read_data/82 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 
+  Calls: 
+memset_/81 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/14 
+  Calls: 
+cpt_hash/80 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: 
+fid_get_u32/79 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fid_set_u32/78 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+otpdata_get_soc_ver_cnt/77 (otpdata_get_soc_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: 
+util_data_sec_double_check/76 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/75 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/74 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_update/73 (cpt_ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_init/72 (cpt_ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+hash_get_digest_word_len/71 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 
+  Calls: 
+cpt_sm2_verify/70 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_sm2_signature/30 
+  Calls: 
+secp256r1/69 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: fwverify_check_ecc_p256r1_signature/29 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/68 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ecc_p256r1_signature/29 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/67 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_rsa_signature/28 
+  Calls: 
+cpt_hash_dma_final/66 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_ctx_switch/65 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_final/64 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_update/63 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_init/62 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_sm2_getZ/61 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sm2_check_code_sign/38 
+  Calls: 
+otpkey_get_phyid/60 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_get_otpkey_phyid/23 
+  Calls: 
+otpkey_check_usage/59 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 fwverify_get_otpkey_phyid/23 
+  Calls: 
+cpt_ske_dma_crypto/58 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_ske_decrypt_dma/34 fwverify_copy_data_dma/33 
+  Calls: 
+secboot_enable_boot_fw/57 (secboot_enable_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+otpdata_get_hsm_ver_cnt/56 (otpdata_get_hsm_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_inc_u32/55 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_copy_data/37 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_panic/53 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_delay/52 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_verify_image/47 fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+sysreg_get_life_cycle/51 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/13 
+  Calls: 
+fwverify_check_ver_cnt/49 (fwverify_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_fw_header/25 
+  Calls: uint32_BigNumCmp/83 fid_delay/52 uint32_BigNumCmp/83 util_memcpy/13 util_memcpy/13 
+fwverify_get_and_verify_pubkey/48 (fwverify_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9ed54ffcc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_verify_pubkey/27 util_memcpy/13 util_memcpy/13 util_memcpy/13 
+fwverify_verify_image/47 (fwverify_verify_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9ed54ffbb0
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: fid_panic/53 fid_get_u32/79 fid_delay/52 fid_delay/52 fwverify_vry_soc_fw/46 fwverify_vry_hsm_fw/45 mmap_read_remote_data/54 fwverify_check_param/44 util_memcpy/13 fid_set_u32/78 
+fwverify_vry_soc_fw/46 (fwverify_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9ed54ff660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_soc_fw_in_soc_ram/35 
+fwverify_vry_hsm_fw/45 (fwverify_vry_hsm_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9ed54ff550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_hsm_fw_in_soc_ram/43 
+fwverify_check_param/44 (fwverify_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ffbb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fwverify_vry_hsm_fw_in_soc_ram/43 (fwverify_vry_hsm_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff550
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw/45 
+  Calls: secboot_enable_boot_fw/57 fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_save_hsm_version_counter/42 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_hsm_ver_cnt/56 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_save_hsm_version_counter/42 (fwverify_save_hsm_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: util_memcpy/13 
+fwverify_check_code_sign/41 (fwverify_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+fwverify_sym_check_code_sign/40 (fwverify_sym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff110
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fid_inc_u32/55 util_data_sec_double_check/76 fid_inc_u32/55 util_memcpy/13 cpt_ske_dma_cmac_update_including_last_block/75 fid_inc_u32/55 cpt_cmac_ctx_cpu_2_dma/74 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_init/72 fid_inc_u32/55 fwverify_get_otpkey_phyid/23 fid_inc_u32/55 get_signature_by_alg/36 
+fwverify_asym_check_code_sign/39 (fwverify_asym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 hash_get_digest_word_len/71 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_init/62 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_sm2_check_code_sign/38 (fwverify_sm2_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_update/63 cpt_hash_init/62 cpt_sm2_getZ/61 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_copy_data/37 (fwverify_copy_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 mmap_read_remote_data/54 
+get_signature_by_alg/36 (get_signature_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 
+fwverify_vry_soc_fw_in_soc_ram/35 (fwverify_vry_soc_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff660
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw/46 
+  Calls: fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_copy_data_dma/33 fwverify_save_soc_version_counter/32 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_soc_ver_cnt/77 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_ske_decrypt_dma/34 (fwverify_ske_decrypt_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_copy_data_dma/33 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed5496cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_save_soc_version_counter/32 (fwverify_save_soc_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ff660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: util_memcpy/13 
+fwverify_check_signature/31 (fwverify_check_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 
+fwverify_check_sm2_signature/30 (fwverify_check_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3dd0
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_sm2_verify/70 fid_inc_u32/55 
+fwverify_check_ecc_p256r1_signature/29 (fwverify_check_ecc_p256r1_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3440
+  References: g_fw_verify_cfi/21 (addr) secp256r1/69 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_ecdsa_verify/68 fid_inc_u32/55 
+fwverify_check_rsa_signature/28 (fwverify_check_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3330
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_rsa_ssa_pss_verify_by_msg_digest/67 fid_inc_u32/55 
+fwverify_verify_pubkey/27 (fwverify_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ffcc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_get_and_verify_pubkey/48 
+  Calls: util_data_sec_double_check/76 fwverify_read_otpkey_data/24 util_memset/14 cpt_hash/80 
+fwverify_get_dec_alg/26 (fwverify_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fwverify_check_fw_header/25 (fwverify_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9ed54ff440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_check_ver_cnt/49 fwverify_header_is_valid/22 
+fwverify_read_otpkey_data/24 (fwverify_read_otpkey_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54ffcc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: otpkey_read_data/82 otpkey_check_usage/59 
+fwverify_get_otpkey_phyid/23 (fwverify_get_otpkey_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: otpkey_get_phyid/60 otpkey_check_usage/59 
+fwverify_header_is_valid/22 (fwverify_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f9ed5496ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_check_fw_header/25 
+  Calls: util_memcpy/13 
+g_fw_verify_cfi/21 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed5496990
+  References: 
+  Referring: fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_verify_image/47 (addr) fwverify_verify_image/47 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+filename/20 (filename)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_read_fw_ctrl_bits/19 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed54d3000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+util_write_volatile_u32/18 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/17 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/16 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/15 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/14 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed5496dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: memset_/81 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f9ed5496ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_verify_image/47 fwverify_save_soc_version_counter/32 fwverify_save_hsm_version_counter/42 fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_copy_data/37 get_signature_by_alg/36 fwverify_sm2_check_code_sign/38 fwverify_header_is_valid/22 
+  Calls: memcpy_/50 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: filename/20 util_write_volatile_u32/18 util_read_volatile_u32/17 util_u32_copy/16 util_memcmp/15 check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint32_BigNumCmp/83 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 
+  Calls: 
+otpkey_read_data/82 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 
+  Calls: 
+memset_/81 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/14 
+  Calls: 
+cpt_hash/80 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: 
+fid_get_u32/79 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fid_set_u32/78 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+otpdata_get_soc_ver_cnt/77 (otpdata_get_soc_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: 
+util_data_sec_double_check/76 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/75 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/74 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_update/73 (cpt_ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_init/72 (cpt_ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+hash_get_digest_word_len/71 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 
+  Calls: 
+cpt_sm2_verify/70 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_sm2_signature/30 
+  Calls: 
+secp256r1/69 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: fwverify_check_ecc_p256r1_signature/29 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/68 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ecc_p256r1_signature/29 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/67 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_rsa_signature/28 
+  Calls: 
+cpt_hash_dma_final/66 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_ctx_switch/65 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_final/64 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_update/63 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_init/62 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_sm2_getZ/61 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sm2_check_code_sign/38 
+  Calls: 
+otpkey_get_phyid/60 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_get_otpkey_phyid/23 
+  Calls: 
+otpkey_check_usage/59 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 fwverify_get_otpkey_phyid/23 
+  Calls: 
+cpt_ske_dma_crypto/58 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_ske_decrypt_dma/34 fwverify_copy_data_dma/33 
+  Calls: 
+secboot_enable_boot_fw/57 (secboot_enable_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+otpdata_get_hsm_ver_cnt/56 (otpdata_get_hsm_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_inc_u32/55 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_copy_data/37 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_panic/53 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_delay/52 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_verify_image/47 fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+sysreg_get_life_cycle/51 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/13 
+  Calls: 
+fwverify_check_ver_cnt/49 (fwverify_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_fw_header/25 
+  Calls: uint32_BigNumCmp/83 fid_delay/52 uint32_BigNumCmp/83 util_memcpy/13 util_memcpy/13 
+fwverify_get_and_verify_pubkey/48 (fwverify_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_verify_pubkey/27 util_memcpy/13 util_memcpy/13 util_memcpy/13 
+fwverify_verify_image/47 (fwverify_verify_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: fid_panic/53 fid_get_u32/79 fid_delay/52 fid_delay/52 fwverify_vry_soc_fw/46 fwverify_vry_hsm_fw/45 mmap_read_remote_data/54 fwverify_check_param/44 util_memcpy/13 fid_set_u32/78 
+fwverify_vry_soc_fw/46 (fwverify_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_soc_fw_in_soc_ram/35 
+fwverify_vry_hsm_fw/45 (fwverify_vry_hsm_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_hsm_fw_in_soc_ram/43 
+fwverify_check_param/44 (fwverify_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fwverify_vry_hsm_fw_in_soc_ram/43 (fwverify_vry_hsm_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw/45 
+  Calls: secboot_enable_boot_fw/57 fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_save_hsm_version_counter/42 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_hsm_ver_cnt/56 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_save_hsm_version_counter/42 (fwverify_save_hsm_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: util_memcpy/13 
+fwverify_check_code_sign/41 (fwverify_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+fwverify_sym_check_code_sign/40 (fwverify_sym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fid_inc_u32/55 util_data_sec_double_check/76 fid_inc_u32/55 util_memcpy/13 cpt_ske_dma_cmac_update_including_last_block/75 fid_inc_u32/55 cpt_cmac_ctx_cpu_2_dma/74 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_init/72 fid_inc_u32/55 fwverify_get_otpkey_phyid/23 fid_inc_u32/55 get_signature_by_alg/36 
+fwverify_asym_check_code_sign/39 (fwverify_asym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 hash_get_digest_word_len/71 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_init/62 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_sm2_check_code_sign/38 (fwverify_sm2_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_update/63 cpt_hash_init/62 cpt_sm2_getZ/61 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_copy_data/37 (fwverify_copy_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 mmap_read_remote_data/54 
+get_signature_by_alg/36 (get_signature_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 
+fwverify_vry_soc_fw_in_soc_ram/35 (fwverify_vry_soc_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw/46 
+  Calls: fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_copy_data_dma/33 fwverify_save_soc_version_counter/32 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_soc_ver_cnt/77 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_ske_decrypt_dma/34 (fwverify_ske_decrypt_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_copy_data_dma/33 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_save_soc_version_counter/32 (fwverify_save_soc_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: util_memcpy/13 
+fwverify_check_signature/31 (fwverify_check_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 
+fwverify_check_sm2_signature/30 (fwverify_check_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_sm2_verify/70 fid_inc_u32/55 
+fwverify_check_ecc_p256r1_signature/29 (fwverify_check_ecc_p256r1_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) secp256r1/69 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_ecdsa_verify/68 fid_inc_u32/55 
+fwverify_check_rsa_signature/28 (fwverify_check_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_rsa_ssa_pss_verify_by_msg_digest/67 fid_inc_u32/55 
+fwverify_verify_pubkey/27 (fwverify_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_get_and_verify_pubkey/48 
+  Calls: util_data_sec_double_check/76 fwverify_read_otpkey_data/24 util_memset/14 cpt_hash/80 
+fwverify_get_dec_alg/26 (fwverify_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fwverify_check_fw_header/25 (fwverify_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_check_ver_cnt/49 fwverify_header_is_valid/22 
+fwverify_read_otpkey_data/24 (fwverify_read_otpkey_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: otpkey_read_data/82 otpkey_check_usage/59 
+fwverify_get_otpkey_phyid/23 (fwverify_get_otpkey_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: otpkey_get_phyid/60 otpkey_check_usage/59 
+fwverify_header_is_valid/22 (fwverify_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_check_fw_header/25 
+  Calls: util_memcpy/13 
+g_fw_verify_cfi/21 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_verify_image/47 (addr) fwverify_verify_image/47 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_read_fw_ctrl_bits/19 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+util_memset/14 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: memset_/81 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_verify_image/47 fwverify_save_soc_version_counter/32 fwverify_save_hsm_version_counter/42 fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_copy_data/37 get_signature_by_alg/36 fwverify_sm2_check_code_sign/38 fwverify_header_is_valid/22 
+  Calls: memcpy_/50 
+
+
+Initial Symbol table:
+
+uint32_BigNumCmp/83 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 
+  Calls: 
+otpkey_read_data/82 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 
+  Calls: 
+memset_/81 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/14 
+  Calls: 
+cpt_hash/80 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: 
+fid_get_u32/79 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fid_set_u32/78 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+otpdata_get_soc_ver_cnt/77 (otpdata_get_soc_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: 
+util_data_sec_double_check/76 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/75 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/74 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_update/73 (cpt_ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_init/72 (cpt_ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+hash_get_digest_word_len/71 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 
+  Calls: 
+cpt_sm2_verify/70 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_sm2_signature/30 
+  Calls: 
+secp256r1/69 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: fwverify_check_ecc_p256r1_signature/29 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/68 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ecc_p256r1_signature/29 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/67 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_rsa_signature/28 
+  Calls: 
+cpt_hash_dma_final/66 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_ctx_switch/65 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_final/64 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_update/63 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_init/62 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_sm2_getZ/61 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sm2_check_code_sign/38 
+  Calls: 
+otpkey_get_phyid/60 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_get_otpkey_phyid/23 
+  Calls: 
+otpkey_check_usage/59 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 fwverify_get_otpkey_phyid/23 
+  Calls: 
+cpt_ske_dma_crypto/58 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_ske_decrypt_dma/34 fwverify_copy_data_dma/33 
+  Calls: 
+secboot_enable_boot_fw/57 (secboot_enable_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+otpdata_get_hsm_ver_cnt/56 (otpdata_get_hsm_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_inc_u32/55 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_copy_data/37 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_panic/53 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_delay/52 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_verify_image/47 fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+sysreg_get_life_cycle/51 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/13 
+  Calls: 
+fwverify_check_ver_cnt/49 (fwverify_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_fw_header/25 
+  Calls: uint32_BigNumCmp/83 fid_delay/52 uint32_BigNumCmp/83 util_memcpy/13 util_memcpy/13 
+fwverify_get_and_verify_pubkey/48 (fwverify_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_verify_pubkey/27 util_memcpy/13 util_memcpy/13 util_memcpy/13 
+fwverify_verify_image/47 (fwverify_verify_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: fid_panic/53 fid_get_u32/79 fid_delay/52 fid_delay/52 fwverify_vry_soc_fw/46 fwverify_vry_hsm_fw/45 mmap_read_remote_data/54 fwverify_check_param/44 util_memcpy/13 fid_set_u32/78 
+fwverify_vry_soc_fw/46 (fwverify_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_soc_fw_in_soc_ram/35 
+fwverify_vry_hsm_fw/45 (fwverify_vry_hsm_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_hsm_fw_in_soc_ram/43 
+fwverify_check_param/44 (fwverify_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fwverify_vry_hsm_fw_in_soc_ram/43 (fwverify_vry_hsm_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw/45 
+  Calls: secboot_enable_boot_fw/57 fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_save_hsm_version_counter/42 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_hsm_ver_cnt/56 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_save_hsm_version_counter/42 (fwverify_save_hsm_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: util_memcpy/13 
+fwverify_check_code_sign/41 (fwverify_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+fwverify_sym_check_code_sign/40 (fwverify_sym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fid_inc_u32/55 util_data_sec_double_check/76 fid_inc_u32/55 util_memcpy/13 cpt_ske_dma_cmac_update_including_last_block/75 fid_inc_u32/55 cpt_cmac_ctx_cpu_2_dma/74 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_init/72 fid_inc_u32/55 fwverify_get_otpkey_phyid/23 fid_inc_u32/55 get_signature_by_alg/36 
+fwverify_asym_check_code_sign/39 (fwverify_asym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 hash_get_digest_word_len/71 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_init/62 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_sm2_check_code_sign/38 (fwverify_sm2_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_update/63 cpt_hash_init/62 cpt_sm2_getZ/61 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_copy_data/37 (fwverify_copy_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 mmap_read_remote_data/54 
+get_signature_by_alg/36 (get_signature_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 
+fwverify_vry_soc_fw_in_soc_ram/35 (fwverify_vry_soc_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw/46 
+  Calls: fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_copy_data_dma/33 fwverify_save_soc_version_counter/32 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_soc_ver_cnt/77 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_ske_decrypt_dma/34 (fwverify_ske_decrypt_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_copy_data_dma/33 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_save_soc_version_counter/32 (fwverify_save_soc_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: util_memcpy/13 
+fwverify_check_signature/31 (fwverify_check_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 
+fwverify_check_sm2_signature/30 (fwverify_check_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_sm2_verify/70 fid_inc_u32/55 
+fwverify_check_ecc_p256r1_signature/29 (fwverify_check_ecc_p256r1_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) secp256r1/69 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_ecdsa_verify/68 fid_inc_u32/55 
+fwverify_check_rsa_signature/28 (fwverify_check_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_rsa_ssa_pss_verify_by_msg_digest/67 fid_inc_u32/55 
+fwverify_verify_pubkey/27 (fwverify_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_get_and_verify_pubkey/48 
+  Calls: util_data_sec_double_check/76 fwverify_read_otpkey_data/24 util_memset/14 cpt_hash/80 
+fwverify_get_dec_alg/26 (fwverify_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fwverify_check_fw_header/25 (fwverify_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_check_ver_cnt/49 fwverify_header_is_valid/22 
+fwverify_read_otpkey_data/24 (fwverify_read_otpkey_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: otpkey_read_data/82 otpkey_check_usage/59 
+fwverify_get_otpkey_phyid/23 (fwverify_get_otpkey_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: otpkey_get_phyid/60 otpkey_check_usage/59 
+fwverify_header_is_valid/22 (fwverify_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_check_fw_header/25 
+  Calls: util_memcpy/13 
+g_fw_verify_cfi/21 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_verify_image/47 (addr) fwverify_verify_image/47 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_read_fw_ctrl_bits/19 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+util_memset/14 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: memset_/81 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_verify_image/47 fwverify_save_soc_version_counter/32 fwverify_save_hsm_version_counter/42 fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_copy_data/37 get_signature_by_alg/36 fwverify_sm2_check_code_sign/38 fwverify_header_is_valid/22 
+  Calls: memcpy_/50 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint32_BigNumCmp/83 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 
+  Calls: 
+otpkey_read_data/82 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 
+  Calls: 
+memset_/81 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/14 
+  Calls: 
+cpt_hash/80 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: 
+fid_get_u32/79 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fid_set_u32/78 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+otpdata_get_soc_ver_cnt/77 (otpdata_get_soc_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: 
+util_data_sec_double_check/76 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/75 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/74 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_update/73 (cpt_ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 
+  Calls: 
+cpt_ske_cmac_init/72 (cpt_ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 
+  Calls: 
+hash_get_digest_word_len/71 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 
+  Calls: 
+cpt_sm2_verify/70 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_sm2_signature/30 
+  Calls: 
+secp256r1/69 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: fwverify_check_ecc_p256r1_signature/29 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/68 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ecc_p256r1_signature/29 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/67 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_rsa_signature/28 
+  Calls: 
+cpt_hash_dma_final/66 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_ctx_switch/65 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_final/64 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_update/63 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_hash_init/62 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: 
+cpt_sm2_getZ/61 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_sm2_check_code_sign/38 
+  Calls: 
+otpkey_get_phyid/60 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_get_otpkey_phyid/23 
+  Calls: 
+otpkey_check_usage/59 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 fwverify_get_otpkey_phyid/23 
+  Calls: 
+cpt_ske_dma_crypto/58 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_ske_decrypt_dma/34 fwverify_copy_data_dma/33 
+  Calls: 
+secboot_enable_boot_fw/57 (secboot_enable_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+otpdata_get_hsm_ver_cnt/56 (otpdata_get_hsm_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_inc_u32/55 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_sym_check_code_sign/40 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_copy_data/37 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_panic/53 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fid_delay/52 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_verify_image/47 fwverify_verify_image/47 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_check_sm2_signature/30 fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+sysreg_get_life_cycle/51 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/13 
+  Calls: 
+fwverify_check_ver_cnt/49 (fwverify_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_fw_header/25 
+  Calls: uint32_BigNumCmp/83 fid_delay/52 uint32_BigNumCmp/83 util_memcpy/13 util_memcpy/13 
+fwverify_get_and_verify_pubkey/48 (fwverify_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_verify_pubkey/27 util_memcpy/13 util_memcpy/13 util_memcpy/13 
+fwverify_verify_image/47 (fwverify_verify_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: fid_panic/53 fid_get_u32/79 fid_delay/52 fid_delay/52 fwverify_vry_soc_fw/46 fwverify_vry_hsm_fw/45 mmap_read_remote_data/54 fwverify_check_param/44 util_memcpy/13 fid_set_u32/78 
+fwverify_vry_soc_fw/46 (fwverify_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_soc_fw_in_soc_ram/35 
+fwverify_vry_hsm_fw/45 (fwverify_vry_hsm_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: fwverify_vry_hsm_fw_in_soc_ram/43 
+fwverify_check_param/44 (fwverify_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_image/47 
+  Calls: 
+fwverify_vry_hsm_fw_in_soc_ram/43 (fwverify_vry_hsm_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw/45 
+  Calls: secboot_enable_boot_fw/57 fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_save_hsm_version_counter/42 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_hsm_ver_cnt/56 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_save_hsm_version_counter/42 (fwverify_save_hsm_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: util_memcpy/13 
+fwverify_check_code_sign/41 (fwverify_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+fwverify_sym_check_code_sign/40 (fwverify_sym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fid_inc_u32/55 util_data_sec_double_check/76 fid_inc_u32/55 util_memcpy/13 cpt_ske_dma_cmac_update_including_last_block/75 fid_inc_u32/55 cpt_cmac_ctx_cpu_2_dma/74 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_update/73 fid_inc_u32/55 cpt_ske_cmac_init/72 fid_inc_u32/55 fwverify_get_otpkey_phyid/23 fid_inc_u32/55 get_signature_by_alg/36 
+fwverify_asym_check_code_sign/39 (fwverify_asym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 hash_get_digest_word_len/71 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_init/62 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_sm2_check_code_sign/38 (fwverify_sm2_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_code_sign/41 
+  Calls: fwverify_check_signature/31 util_memcpy/13 cpt_hash_dma_final/66 cpt_hash_ctx_switch/65 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_final/64 cpt_hash_update/63 fwverify_copy_data/37 cpt_hash_update/63 cpt_hash_update/63 cpt_hash_init/62 cpt_sm2_getZ/61 fwverify_get_and_verify_pubkey/48 get_signature_by_alg/36 
+fwverify_copy_data/37 (fwverify_copy_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 mmap_read_remote_data/54 
+get_signature_by_alg/36 (get_signature_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: util_memcpy/13 
+fwverify_vry_soc_fw_in_soc_ram/35 (fwverify_vry_soc_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw/46 
+  Calls: fid_panic/53 fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_copy_data_dma/33 fwverify_save_soc_version_counter/32 fwverify_check_code_sign/41 fwverify_ske_decrypt_dma/34 fwverify_get_otpkey_phyid/23 fwverify_copy_data_dma/33 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fwverify_get_dec_alg/26 sysreg_read_fw_ctrl_bits/19 fid_inc_u32/55 fwverify_header_is_valid/22 fid_delay/52 fid_delay/52 fid_delay/52 fid_delay/52 fwverify_check_fw_header/25 otpdata_get_soc_ver_cnt/77 fid_inc_u32/55 mmap_read_remote_data/54 fid_panic/53 fid_delay/52 fid_delay/52 sysreg_get_life_cycle/51 fid_delay/52 sysreg_get_life_cycle/51 
+fwverify_ske_decrypt_dma/34 (fwverify_ske_decrypt_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_copy_data_dma/33 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: cpt_ske_dma_crypto/58 
+fwverify_save_soc_version_counter/32 (fwverify_save_soc_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 
+  Calls: util_memcpy/13 
+fwverify_check_signature/31 (fwverify_check_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 fwverify_sm2_check_code_sign/38 
+  Calls: fwverify_check_sm2_signature/30 fwverify_check_ecc_p256r1_signature/29 fwverify_check_rsa_signature/28 fwverify_check_rsa_signature/28 
+fwverify_check_sm2_signature/30 (fwverify_check_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_sm2_verify/70 fid_inc_u32/55 
+fwverify_check_ecc_p256r1_signature/29 (fwverify_check_ecc_p256r1_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) secp256r1/69 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_ecdsa_verify/68 fid_inc_u32/55 
+fwverify_check_rsa_signature/28 (fwverify_check_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_signature/31 fwverify_check_signature/31 
+  Calls: fid_inc_u32/55 fid_delay/52 fid_delay/52 fid_inc_u32/55 cpt_rsa_ssa_pss_verify_by_msg_digest/67 fid_inc_u32/55 
+fwverify_verify_pubkey/27 (fwverify_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_get_and_verify_pubkey/48 
+  Calls: util_data_sec_double_check/76 fwverify_read_otpkey_data/24 util_memset/14 cpt_hash/80 
+fwverify_get_dec_alg/26 (fwverify_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+fwverify_check_fw_header/25 (fwverify_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: fwverify_check_ver_cnt/49 fwverify_header_is_valid/22 
+fwverify_read_otpkey_data/24 (fwverify_read_otpkey_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: otpkey_read_data/82 otpkey_check_usage/59 
+fwverify_get_otpkey_phyid/23 (fwverify_get_otpkey_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_sym_check_code_sign/40 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: otpkey_get_phyid/60 otpkey_check_usage/59 
+fwverify_header_is_valid/22 (fwverify_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 fwverify_check_fw_header/25 
+  Calls: util_memcpy/13 
+g_fw_verify_cfi/21 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_verify_image/47 (addr) fwverify_verify_image/47 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+sysreg_read_fw_ctrl_bits/19 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_soc_fw_in_soc_ram/35 fwverify_vry_hsm_fw_in_soc_ram/43 
+  Calls: 
+util_memset/14 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_verify_pubkey/27 
+  Calls: memset_/81 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: fwverify_check_ver_cnt/49 fwverify_check_ver_cnt/49 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_get_and_verify_pubkey/48 fwverify_verify_image/47 fwverify_save_soc_version_counter/32 fwverify_save_hsm_version_counter/42 fwverify_sym_check_code_sign/40 fwverify_asym_check_code_sign/39 fwverify_copy_data/37 get_signature_by_alg/36 fwverify_sm2_check_code_sign/38 fwverify_header_is_valid/22 
+  Calls: memcpy_/50 
+updating call of fwverify_sm2_check_code_sign/38 -> __builtin_unreachable/95: ret_74 = fwverify_check_rsa_signature (&signature, &signature_orig, &pubkey, 2048);
+  updated to:__builtin_unreachable ();
+updating call of fwverify_sm2_check_code_sign/38 -> __builtin_unreachable/95: ret_75 = fwverify_check_rsa_signature (&signature, &signature_orig, &pubkey, 3072);
+  updated to:__builtin_unreachable ();
+updating call of fwverify_sm2_check_code_sign/38 -> __builtin_unreachable/95: ret_76 = fwverify_check_ecc_p256r1_signature (&signature, &signature_orig, &pubkey);
+  updated to:__builtin_unreachable ();
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+fwverify_ske_decrypt_dma/106 (fwverify_ske_decrypt_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 34
+  References: 
+  Referring: 
+  Function fwverify_ske_decrypt_dma/106 is inline copy in fwverify_vry_soc_fw_in_soc_ram/35
+  Clone of fwverify_ske_decrypt_dma/34
+  Availability: local
+  Function flags: count:15294445 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (inlined) (15294445 (estimated locally),0.01 per call) 
+  Calls: cpt_ske_dma_crypto/58 (15294445 (estimated locally),0.01 per call) 
+fwverify_check_fw_header.part.0/101 (fwverify_check_fw_header.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function fwverify_check_fw_header.part.0/101 is inline copy in fwverify_check_fw_header/25
+  Availability: local
+  Function flags: count:365072223 (estimated locally) body local split_part optimize_size
+  Called by: fwverify_check_fw_header/25 (inlined) (365072223 (estimated locally),0.34 per call) 
+  Calls: fwverify_check_ver_cnt/49 (73890618 (estimated locally),0.07 per call) 
+fwverify_copy_data.part.0/88 (fwverify_copy_data.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function fwverify_copy_data.part.0/88 is inline copy in fwverify_copy_data/37
+  Availability: local
+  Function flags: count:187904820 (estimated locally) body local split_part optimize_size
+  Called by: fwverify_copy_data/37 (inlined) (187904820 (estimated locally),0.18 per call) 
+  Calls: mmap_read_remote_data/54 (63887639 (estimated locally),0.06 per call) memcpy_/50 (124017180 (estimated locally),0.12 per call) 
+uint32_BigNumCmp/83 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_check_ver_cnt/49 (445388112 (estimated locally),0.41 per call) fwverify_check_ver_cnt/49 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+otpkey_read_data/82 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 (85000288 (estimated locally),0.08 per call) 
+  Calls: 
+memset_/81 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 (439031558 (estimated locally),0.41 per call) 
+  Calls: 
+cpt_hash/80 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 (858993459 (estimated locally),0.80 per call) 
+  Calls: 
+fid_get_u32/79 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 (35858682 (estimated locally),0.03 per call) 
+  Calls: 
+fid_set_u32/78 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+otpdata_get_soc_ver_cnt/77 (otpdata_get_soc_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (87893334 (estimated locally),0.08 per call) 
+  Calls: 
+util_data_sec_double_check/76 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_pubkey/27 (85000288 (estimated locally),0.08 per call) fwverify_sym_check_code_sign/40 (32300993 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/75 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 (100846061 (estimated locally),0.09 per call) 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/74 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 (100846061 (estimated locally),0.09 per call) 
+  Calls: 
+cpt_ske_cmac_update/73 (cpt_ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 (23667165 (estimated locally),0.02 per call) fwverify_sym_check_code_sign/40 (73890618 (estimated locally),0.07 per call) 
+  Calls: 
+cpt_ske_cmac_init/72 (cpt_ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_sym_check_code_sign/40 (365072224 (estimated locally),0.34 per call) 
+  Calls: 
+hash_get_digest_word_len/71 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (1103125 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_verify/70 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_check_sm2_signature/30 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+secp256r1/69 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: fwverify_check_ecc_p256r1_signature/29 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_ecdsa_verify/68 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_check_ecc_p256r1_signature/29 (11395368 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/67 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_check_rsa_signature/28 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_hash_dma_final/66 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (3444037 (estimated locally),0.00 per call) fwverify_sm2_check_code_sign/38 (4700429 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_ctx_switch/65 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (3444037 (estimated locally),0.00 per call) fwverify_sm2_check_code_sign/38 (4700429 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_final/64 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (3444037 (estimated locally),0.00 per call) fwverify_sm2_check_code_sign/38 (4700429 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_update/63 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (10752536 (estimated locally),0.01 per call) fwverify_asym_check_code_sign/39 (10752536 (estimated locally),0.01 per call) fwverify_asym_check_code_sign/39 (43986649 (estimated locally),0.04 per call) fwverify_sm2_check_code_sign/38 (14675083 (estimated locally),0.01 per call) fwverify_sm2_check_code_sign/38 (14675083 (estimated locally),0.01 per call) fwverify_sm2_check_code_sign/38 (60033066 (estimated locally),0.06 per call) fwverify_sm2_check_code_sign/38 (14088924 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_hash_init/62 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (217325344 (estimated locally),0.20 per call) fwverify_sm2_check_code_sign/38 (43986649 (estimated locally),0.04 per call) 
+  Calls: 
+cpt_sm2_getZ/61 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_sm2_check_code_sign/38 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+otpkey_get_phyid/60 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_get_otpkey_phyid/23 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+otpkey_check_usage/59 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_read_otpkey_data/24 (419961901 (estimated locally),0.39 per call) fwverify_get_otpkey_phyid/23 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_ske_dma_crypto/58 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_ske_decrypt_dma/106 (15294445 (estimated locally),0.01 per call) fwverify_ske_decrypt_dma/34 (24156987 (estimated locally),0.02 per call) fwverify_copy_data_dma/33 (524845000 (estimated locally),0.49 per call) 
+  Calls: 
+secboot_enable_boot_fw/57 (secboot_enable_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 (7257797 (estimated locally),0.01 per call) 
+  Calls: 
+otpdata_get_hsm_ver_cnt/56 (otpdata_get_hsm_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 (29031188 (estimated locally),0.03 per call) 
+  Calls: 
+fid_inc_u32/55 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (124750 (estimated locally),0.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (133171719 (estimated locally),0.12 per call) fwverify_vry_soc_fw_in_soc_ram/35 (133171719 (estimated locally),0.12 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (203581 (estimated locally),0.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (43986649 (estimated locally),0.04 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (43986649 (estimated locally),0.04 per call) fwverify_sym_check_code_sign/40 (32300993 (estimated locally),0.03 per call) fwverify_sym_check_code_sign/40 (32300993 (estimated locally),0.03 per call) fwverify_sym_check_code_sign/40 (100846061 (estimated locally),0.09 per call) fwverify_sym_check_code_sign/40 (23667165 (estimated locally),0.02 per call) fwverify_sym_check_code_sign/40 (73890618 (estimated locally),0.07 per call) fwverify_sym_check_code_sign/40 (365072224 (estimated locally),0.34 per call) fwverify_sym_check_code_sign/40 (1073741822 (estimated locally),1.00 per call) fwverify_check_sm2_signature/30 (1073741824 (estimated locally),1.00 per call) fwverify_check_sm2_signature/30 (1073741824 (estimated locally),1.00 per call) fwverify_check_sm2_signature/30 (1073741824 (estimated locally),1.00 per call) fwverify_check_ecc_p256r1_signature/29 (11395368 (estimated locally),0.01 per call) fwverify_check_ecc_p256r1_signature/29 (11395368 (estimated locally),0.01 per call) fwverify_check_ecc_p256r1_signature/29 (11395368 (estimated locally),0.01 per call) fwverify_check_rsa_signature/28 (1073741824 (estimated locally),1.00 per call) fwverify_check_rsa_signature/28 (1073741824 (estimated locally),1.00 per call) fwverify_check_rsa_signature/28 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 (128834717 (estimated locally),0.12 per call) fwverify_vry_soc_fw_in_soc_ram/35 (657963041 (estimated locally),0.61 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (217325344 (estimated locally),0.20 per call) fwverify_copy_data.part.0/88 (63887639 (estimated locally),0.06 per call) 
+  Calls: 
+fid_panic/53 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 (17527723 (estimated locally),0.02 per call) fwverify_vry_soc_fw_in_soc_ram/35 (5592101 (estimated locally),0.01 per call) fwverify_vry_soc_fw_in_soc_ram/35 (1000937833 (estimated locally),0.93 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (9125852 (estimated locally),0.01 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1000937833 (estimated locally),0.93 per call) 
+  Calls: 
+fid_delay/52 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 (108662672 (estimated locally),0.10 per call) fwverify_verify_image/47 (1073741824 (estimated locally),1.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (2223701 (estimated locally),0.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (21973334 (estimated locally),0.02 per call) fwverify_vry_soc_fw_in_soc_ram/35 (66585860 (estimated locally),0.06 per call) fwverify_vry_soc_fw_in_soc_ram/35 (657963042 (estimated locally),0.61 per call) fwverify_vry_soc_fw_in_soc_ram/35 (4271483 (estimated locally),0.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (42208329 (estimated locally),0.04 per call) fwverify_vry_soc_fw_in_soc_ram/35 (6140111 (estimated locally),0.01 per call) fwverify_vry_soc_fw_in_soc_ram/35 (45278385 (estimated locally),0.04 per call) fwverify_vry_soc_fw_in_soc_ram/35 (145607981 (estimated locally),0.14 per call) fwverify_vry_soc_fw_in_soc_ram/35 (1073741824 (estimated locally),1.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (1073741824 (estimated locally),1.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (3628899 (estimated locally),0.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (35858682 (estimated locally),0.03 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (108662672 (estimated locally),0.10 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1073741823 (estimated locally),1.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1410872 (estimated locally),0.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (13941421 (estimated locally),0.01 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (2028080 (estimated locally),0.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (14955461 (estimated locally),0.01 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (145607981 (estimated locally),0.14 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1073741824 (estimated locally),1.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1073741824 (estimated locally),1.00 per call) fwverify_check_ver_cnt/49 (445388112 (estimated locally),0.41 per call) fwverify_check_sm2_signature/30 (108662672 (estimated locally),0.10 per call) fwverify_check_sm2_signature/30 (1073741824 (estimated locally),1.00 per call) fwverify_check_ecc_p256r1_signature/29 (1153211 (estimated locally),0.00 per call) fwverify_check_ecc_p256r1_signature/29 (11395368 (estimated locally),0.01 per call) fwverify_check_rsa_signature/28 (108662672 (estimated locally),0.10 per call) fwverify_check_rsa_signature/28 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sysreg_get_life_cycle/51 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (1073741824 (estimated locally),1.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (1073741824 (estimated locally),1.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1073741824 (estimated locally),1.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fwverify_verify_image/47 (574129751 (estimated locally),0.53 per call) fwverify_check_ver_cnt/49 (1073741824 (estimated locally),1.00 per call) fwverify_check_ver_cnt/49 (1073741824 (estimated locally),1.00 per call) fwverify_asym_check_code_sign/39 (1103125 (estimated locally),0.00 per call) fwverify_sm2_check_code_sign/38 (1505547 (estimated locally),0.00 per call) fwverify_sm2_check_code_sign/38 (1073741824 (estimated locally),1.00 per call) fwverify_get_and_verify_pubkey/48 (566935680 (estimated locally),0.53 per call) fwverify_get_and_verify_pubkey/48 (292057779 (estimated locally),0.27 per call) fwverify_get_and_verify_pubkey/48 (292057779 (estimated locally),0.27 per call) fwverify_header_is_valid/22 (1073741824 (estimated locally),1.00 per call) fwverify_sym_check_code_sign/40 (32300993 (estimated locally),0.03 per call) fwverify_copy_data.part.0/88 (124017180 (estimated locally),0.12 per call) fwverify_save_soc_version_counter/32 (4492347 (estimated locally),0.00 per call) fwverify_save_hsm_version_counter/42 (7929806 (estimated locally),0.01 per call) get_signature_by_alg/36 (858993459 (estimated locally),0.80 per call) 
+  Calls: 
+fwverify_check_ver_cnt/49 (fwverify_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: fwverify_check_fw_header.part.0/101 (73890618 (estimated locally),0.07 per call) 
+  Calls: uint32_BigNumCmp/83 (445388112 (estimated locally),0.41 per call) fid_delay/52 (445388112 (estimated locally),0.41 per call) uint32_BigNumCmp/83 (1073741824 (estimated locally),1.00 per call) memcpy_/50 (1073741824 (estimated locally),1.00 per call) memcpy_/50 (1073741824 (estimated locally),1.00 per call) 
+fwverify_get_and_verify_pubkey/48 (fwverify_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741808 (estimated locally) body optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (1073741824 (estimated locally),1.00 per call) fwverify_sm2_check_code_sign/38 (1073741824 (estimated locally),1.00 per call) 
+  Calls: fwverify_verify_pubkey/27 (inlined) (858993459 (estimated locally),0.80 per call) memcpy_/50 (566935680 (estimated locally),0.53 per call) memcpy_/50 (292057779 (estimated locally),0.27 per call) memcpy_/50 (292057779 (estimated locally),0.27 per call) 
+fwverify_verify_image/47 (fwverify_verify_image)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: fid_panic/53 (17527723 (estimated locally),0.02 per call) fid_get_u32/79 (35858682 (estimated locally),0.03 per call) fid_delay/52 (108662672 (estimated locally),0.10 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) fwverify_vry_soc_fw_in_soc_ram/35 (33543665 (estimated locally),0.03 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (42515456 (estimated locally),0.04 per call) mmap_read_remote_data/54 (128834717 (estimated locally),0.12 per call) fwverify_check_param/44 (inlined) (574129751 (estimated locally),0.53 per call) memcpy_/50 (574129751 (estimated locally),0.53 per call) fid_set_u32/78 (1073741822 (estimated locally),1.00 per call) 
+fwverify_vry_soc_fw/46 (fwverify_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: fwverify_vry_soc_fw_in_soc_ram/35 (1073741824 (estimated locally),1.00 per call) 
+fwverify_vry_hsm_fw/45 (fwverify_vry_hsm_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: fwverify_vry_hsm_fw_in_soc_ram/43 (1073741824 (estimated locally),1.00 per call) 
+fwverify_check_param/44 (fwverify_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function fwverify_check_param/44 is inline copy in fwverify_verify_image/47
+  Availability: local
+  Function flags: count:574129751 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: fwverify_verify_image/47 (inlined) (574129751 (estimated locally),0.53 per call) 
+  Calls: 
+fwverify_vry_hsm_fw_in_soc_ram/43 (fwverify_vry_hsm_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_verify_image/47 (42515456 (estimated locally),0.04 per call) fwverify_vry_hsm_fw/45 (1073741824 (estimated locally),1.00 per call) 
+  Calls: secboot_enable_boot_fw/57 (7257797 (estimated locally),0.01 per call) fid_panic/53 (9125852 (estimated locally),0.01 per call) fid_inc_u32/55 (203581 (estimated locally),0.00 per call) fid_delay/52 (3628899 (estimated locally),0.00 per call) fid_delay/52 (35858682 (estimated locally),0.03 per call) fid_delay/52 (108662672 (estimated locally),0.10 per call) fid_delay/52 (1073741823 (estimated locally),1.00 per call) fwverify_save_hsm_version_counter/42 (inlined) (7929806 (estimated locally),0.01 per call) fwverify_check_code_sign/41 (65971766 (estimated locally),0.06 per call) fwverify_ske_decrypt_dma/34 (inlined) (24156987 (estimated locally),0.02 per call) fwverify_get_otpkey_phyid/23 (119352702 (estimated locally),0.11 per call) fwverify_copy_data_dma/33 (186784364 (estimated locally),0.17 per call) fwverify_get_dec_alg/26 (306137067 (estimated locally),0.29 per call) fid_inc_u32/55 (43986649 (estimated locally),0.04 per call) fwverify_header_is_valid/22 (1719476 (estimated locally),0.00 per call) fid_delay/52 (1410872 (estimated locally),0.00 per call) fid_delay/52 (13941421 (estimated locally),0.01 per call) fid_delay/52 (2028080 (estimated locally),0.00 per call) fid_delay/52 (14955461 (estimated locally),0.01 per call) fwverify_check_fw_header/25 (5875912 (estimated locally),0.01 per call) otpdata_get_hsm_ver_cnt/56 (29031188 (estimated locally),0.03 per call) fid_inc_u32/55 (43986649 (estimated locally),0.04 per call) mmap_read_remote_data/54 (217325344 (estimated locally),0.20 per call) fid_panic/53 (1000937833 (estimated locally),0.93 per call) fid_delay/52 (145607981 (estimated locally),0.14 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/51 (1073741824 (estimated locally),1.00 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/51 (1073741824 (estimated locally),1.00 per call) 
+fwverify_save_hsm_version_counter/42 (fwverify_save_hsm_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function fwverify_save_hsm_version_counter/42 is inline copy in fwverify_vry_hsm_fw_in_soc_ram/43
+  Availability: local
+  Function flags: count:7929806 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 (inlined) (7929806 (estimated locally),0.01 per call) 
+  Calls: memcpy_/50 (7929806 (estimated locally),0.01 per call) 
+fwverify_check_code_sign/41 (fwverify_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741808 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (22195391 (estimated locally),0.02 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (65971766 (estimated locally),0.06 per call) 
+  Calls: fwverify_sym_check_code_sign/40 (214748365 (estimated locally),0.20 per call) fwverify_asym_check_code_sign/39 (214748365 (estimated locally),0.20 per call) fwverify_asym_check_code_sign/39 (214748365 (estimated locally),0.20 per call) fwverify_sm2_check_code_sign/38 (214748365 (estimated locally),0.20 per call) 
+fwverify_sym_check_code_sign/40 (fwverify_sym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local optimize_size
+  Called by: fwverify_check_code_sign/41 (214748365 (estimated locally),0.20 per call) 
+  Calls: fid_inc_u32/55 (32300993 (estimated locally),0.03 per call) util_data_sec_double_check/76 (32300993 (estimated locally),0.03 per call) fid_inc_u32/55 (32300993 (estimated locally),0.03 per call) memcpy_/50 (32300993 (estimated locally),0.03 per call) cpt_ske_dma_cmac_update_including_last_block/75 (100846061 (estimated locally),0.09 per call) fid_inc_u32/55 (100846061 (estimated locally),0.09 per call) cpt_cmac_ctx_cpu_2_dma/74 (100846061 (estimated locally),0.09 per call) cpt_ske_cmac_update/73 (23667165 (estimated locally),0.02 per call) fid_inc_u32/55 (23667165 (estimated locally),0.02 per call) cpt_ske_cmac_update/73 (73890618 (estimated locally),0.07 per call) fid_inc_u32/55 (73890618 (estimated locally),0.07 per call) cpt_ske_cmac_init/72 (365072224 (estimated locally),0.34 per call) fid_inc_u32/55 (365072224 (estimated locally),0.34 per call) fwverify_get_otpkey_phyid/23 (1073741822 (estimated locally),1.00 per call) fid_inc_u32/55 (1073741822 (estimated locally),1.00 per call) get_signature_by_alg/36 (1073741822 (estimated locally),1.00 per call) 
+fwverify_asym_check_code_sign/39 (fwverify_asym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_check_code_sign/41 (214748365 (estimated locally),0.20 per call) fwverify_check_code_sign/41 (214748365 (estimated locally),0.20 per call) 
+  Calls: fwverify_check_signature/31 (inlined) (56976840 (estimated locally),0.05 per call) memcpy_/50 (1103125 (estimated locally),0.00 per call) hash_get_digest_word_len/71 (1103125 (estimated locally),0.00 per call) cpt_hash_dma_final/66 (3444037 (estimated locally),0.00 per call) cpt_hash_ctx_switch/65 (3444037 (estimated locally),0.00 per call) cpt_hash_update/63 (10752536 (estimated locally),0.01 per call) fwverify_copy_data/37 (10752536 (estimated locally),0.01 per call) cpt_hash_final/64 (3444037 (estimated locally),0.00 per call) cpt_hash_update/63 (10752536 (estimated locally),0.01 per call) fwverify_copy_data/37 (10752536 (estimated locally),0.01 per call) cpt_hash_update/63 (43986649 (estimated locally),0.04 per call) cpt_hash_init/62 (217325344 (estimated locally),0.20 per call) fwverify_get_and_verify_pubkey/48 (1073741824 (estimated locally),1.00 per call) get_signature_by_alg/36 (1073741824 (estimated locally),1.00 per call) 
+fwverify_sm2_check_code_sign/38 (fwverify_sm2_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_check_code_sign/41 (214748365 (estimated locally),0.20 per call) 
+  Calls: fwverify_check_sm2_signature/30 (1987774 (estimated locally),0.00 per call) memcpy_/50 (1505547 (estimated locally),0.00 per call) cpt_hash_dma_final/66 (4700429 (estimated locally),0.00 per call) cpt_hash_ctx_switch/65 (4700429 (estimated locally),0.00 per call) cpt_hash_update/63 (14675083 (estimated locally),0.01 per call) fwverify_copy_data/37 (14675083 (estimated locally),0.01 per call) cpt_hash_final/64 (4700429 (estimated locally),0.00 per call) cpt_hash_update/63 (14675083 (estimated locally),0.01 per call) fwverify_copy_data/37 (14675083 (estimated locally),0.01 per call) cpt_hash_update/63 (60033066 (estimated locally),0.06 per call) cpt_hash_update/63 (14088924 (estimated locally),0.01 per call) cpt_hash_init/62 (43986649 (estimated locally),0.04 per call) cpt_sm2_getZ/61 (217325344 (estimated locally),0.20 per call) fwverify_get_and_verify_pubkey/48 (1073741824 (estimated locally),1.00 per call) memcpy_/50 (1073741824 (estimated locally),1.00 per call) 
+fwverify_copy_data/37 (fwverify_copy_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (10752536 (estimated locally),0.01 per call) fwverify_asym_check_code_sign/39 (10752536 (estimated locally),0.01 per call) fwverify_sm2_check_code_sign/38 (14675083 (estimated locally),0.01 per call) fwverify_sm2_check_code_sign/38 (14675083 (estimated locally),0.01 per call) 
+  Calls: fwverify_copy_data.part.0/88 (inlined) (187904820 (estimated locally),0.18 per call) 
+get_signature_by_alg/36 (get_signature_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741808 (estimated locally) body local optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (1073741824 (estimated locally),1.00 per call) fwverify_sym_check_code_sign/40 (1073741822 (estimated locally),1.00 per call) 
+  Calls: memcpy_/50 (858993459 (estimated locally),0.80 per call) 
+fwverify_vry_soc_fw_in_soc_ram/35 (fwverify_vry_soc_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_verify_image/47 (33543665 (estimated locally),0.03 per call) fwverify_vry_soc_fw/46 (1073741824 (estimated locally),1.00 per call) 
+  Calls: fid_panic/53 (5592101 (estimated locally),0.01 per call) fid_inc_u32/55 (124750 (estimated locally),0.00 per call) fid_delay/52 (2223701 (estimated locally),0.00 per call) fid_delay/52 (21973334 (estimated locally),0.02 per call) fid_delay/52 (66585860 (estimated locally),0.06 per call) fid_delay/52 (657963042 (estimated locally),0.61 per call) fwverify_copy_data_dma/33 (13542143 (estimated locally),0.01 per call) fwverify_save_soc_version_counter/32 (inlined) (4492347 (estimated locally),0.00 per call) fwverify_check_code_sign/41 (22195391 (estimated locally),0.02 per call) fwverify_ske_decrypt_dma/106 (inlined) (15294445 (estimated locally),0.01 per call) fwverify_get_otpkey_phyid/23 (75565442 (estimated locally),0.07 per call) fwverify_copy_data_dma/33 (118258261 (estimated locally),0.11 per call) fwverify_get_dec_alg/26 (29883734 (estimated locally),0.03 per call) fwverify_get_dec_alg/26 (15394651 (estimated locally),0.01 per call) fid_inc_u32/55 (133171719 (estimated locally),0.12 per call) fwverify_header_is_valid/22 (5205797 (estimated locally),0.00 per call) fid_delay/52 (4271483 (estimated locally),0.00 per call) fid_delay/52 (42208329 (estimated locally),0.04 per call) fid_delay/52 (6140111 (estimated locally),0.01 per call) fid_delay/52 (45278385 (estimated locally),0.04 per call) fwverify_check_fw_header/25 (17789611 (estimated locally),0.02 per call) otpdata_get_soc_ver_cnt/77 (87893334 (estimated locally),0.08 per call) fid_inc_u32/55 (133171719 (estimated locally),0.12 per call) mmap_read_remote_data/54 (657963041 (estimated locally),0.61 per call) fid_panic/53 (1000937833 (estimated locally),0.93 per call) fid_delay/52 (145607981 (estimated locally),0.14 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/51 (1073741824 (estimated locally),1.00 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/51 (1073741824 (estimated locally),1.00 per call) 
+fwverify_ske_decrypt_dma/34 (fwverify_ske_decrypt_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 106
+  References: 
+  Referring: 
+  Function fwverify_ske_decrypt_dma/34 is inline copy in fwverify_vry_hsm_fw_in_soc_ram/43
+  Availability: local
+  Function flags: count:24156987 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_hsm_fw_in_soc_ram/43 (inlined) (24156987 (estimated locally),0.02 per call) 
+  Calls: cpt_ske_dma_crypto/58 (24156987 (estimated locally),0.02 per call) 
+fwverify_copy_data_dma/33 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (13542143 (estimated locally),0.01 per call) fwverify_vry_soc_fw_in_soc_ram/35 (118258261 (estimated locally),0.11 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (186784364 (estimated locally),0.17 per call) 
+  Calls: cpt_ske_dma_crypto/58 (524845000 (estimated locally),0.49 per call) 
+fwverify_save_soc_version_counter/32 (fwverify_save_soc_version_counter)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function fwverify_save_soc_version_counter/32 is inline copy in fwverify_vry_soc_fw_in_soc_ram/35
+  Availability: local
+  Function flags: count:4492347 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (inlined) (4492347 (estimated locally),0.00 per call) 
+  Calls: memcpy_/50 (4492347 (estimated locally),0.00 per call) 
+fwverify_check_signature/31 (fwverify_check_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function fwverify_check_signature/31 is inline copy in fwverify_asym_check_code_sign/39
+  Availability: local
+  Function flags: count:56976840 (estimated locally) body local optimize_size
+  Called by: fwverify_asym_check_code_sign/39 (inlined) (56976840 (estimated locally),0.05 per call) 
+  Calls: fwverify_check_sm2_signature/30 (11395368 (estimated locally),0.01 per call) fwverify_check_ecc_p256r1_signature/29 (inlined) (11395368 (estimated locally),0.01 per call) fwverify_check_rsa_signature/28 (11395368 (estimated locally),0.01 per call) fwverify_check_rsa_signature/28 (11395368 (estimated locally),0.01 per call) 
+fwverify_check_sm2_signature/30 (fwverify_check_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_sm2_check_code_sign/38 (1987774 (estimated locally),0.00 per call) fwverify_check_signature/31 (11395368 (estimated locally),0.01 per call) 
+  Calls: fid_inc_u32/55 (1073741824 (estimated locally),1.00 per call) fid_delay/52 (108662672 (estimated locally),0.10 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/55 (1073741824 (estimated locally),1.00 per call) cpt_sm2_verify/70 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/55 (1073741824 (estimated locally),1.00 per call) 
+fwverify_check_ecc_p256r1_signature/29 (fwverify_check_ecc_p256r1_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/21 (addr) secp256r1/69 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Function fwverify_check_ecc_p256r1_signature/29 is inline copy in fwverify_asym_check_code_sign/39
+  Availability: local
+  Function flags: count:11395368 (estimated locally) body local optimize_size
+  Called by: fwverify_check_signature/31 (inlined) (11395368 (estimated locally),0.01 per call) 
+  Calls: fid_inc_u32/55 (11395368 (estimated locally),0.01 per call) fid_delay/52 (1153211 (estimated locally),0.00 per call) fid_delay/52 (11395368 (estimated locally),0.01 per call) fid_inc_u32/55 (11395368 (estimated locally),0.01 per call) cpt_ecdsa_verify/68 (11395368 (estimated locally),0.01 per call) fid_inc_u32/55 (11395368 (estimated locally),0.01 per call) 
+fwverify_check_rsa_signature/28 (fwverify_check_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) g_fw_verify_cfi/21 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_check_signature/31 (11395368 (estimated locally),0.01 per call) fwverify_check_signature/31 (11395368 (estimated locally),0.01 per call) 
+  Calls: fid_inc_u32/55 (1073741824 (estimated locally),1.00 per call) fid_delay/52 (108662672 (estimated locally),0.10 per call) fid_delay/52 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/55 (1073741824 (estimated locally),1.00 per call) cpt_rsa_ssa_pss_verify_by_msg_digest/67 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/55 (1073741824 (estimated locally),1.00 per call) 
+fwverify_verify_pubkey/27 (fwverify_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function fwverify_verify_pubkey/27 is inline copy in fwverify_get_and_verify_pubkey/48
+  Availability: local
+  Function flags: count:858993459 (estimated locally) body local optimize_size
+  Called by: fwverify_get_and_verify_pubkey/48 (inlined) (858993459 (estimated locally),0.80 per call) 
+  Calls: util_data_sec_double_check/76 (85000288 (estimated locally),0.08 per call) fwverify_read_otpkey_data/24 (inlined) (419961901 (estimated locally),0.39 per call) memset_/81 (439031558 (estimated locally),0.41 per call) cpt_hash/80 (858993459 (estimated locally),0.80 per call) 
+fwverify_get_dec_alg/26 (fwverify_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (29883734 (estimated locally),0.03 per call) fwverify_vry_soc_fw_in_soc_ram/35 (15394651 (estimated locally),0.01 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (306137067 (estimated locally),0.29 per call) 
+  Calls: 
+fwverify_check_fw_header/25 (fwverify_check_fw_header)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (17789611 (estimated locally),0.02 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (5875912 (estimated locally),0.01 per call) 
+  Calls: fwverify_check_fw_header.part.0/101 (inlined) (365072223 (estimated locally),0.34 per call) fwverify_header_is_valid/22 (1073741822 (estimated locally),1.00 per call) 
+fwverify_read_otpkey_data/24 (fwverify_read_otpkey_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function fwverify_read_otpkey_data/24 is inline copy in fwverify_get_and_verify_pubkey/48
+  Availability: local
+  Function flags: count:419961901 (estimated locally) body local optimize_size
+  Called by: fwverify_verify_pubkey/27 (inlined) (419961901 (estimated locally),0.39 per call) 
+  Calls: otpkey_read_data/82 (85000288 (estimated locally),0.08 per call) otpkey_check_usage/59 (419961901 (estimated locally),0.39 per call) 
+fwverify_get_otpkey_phyid/23 (fwverify_get_otpkey_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (75565442 (estimated locally),0.07 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (119352702 (estimated locally),0.11 per call) fwverify_sym_check_code_sign/40 (1073741822 (estimated locally),1.00 per call) 
+  Calls: otpkey_get_phyid/60 (217325344 (estimated locally),0.20 per call) otpkey_check_usage/59 (1073741824 (estimated locally),1.00 per call) 
+fwverify_header_is_valid/22 (fwverify_header_is_valid)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: fwverify_vry_soc_fw_in_soc_ram/35 (5205797 (estimated locally),0.00 per call) fwverify_vry_hsm_fw_in_soc_ram/43 (1719476 (estimated locally),0.00 per call) fwverify_check_fw_header/25 (1073741822 (estimated locally),1.00 per call) 
+  Calls: memcpy_/50 (1073741824 (estimated locally),1.00 per call) 
+g_fw_verify_cfi/21 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_check_sm2_signature/30 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_hsm_fw_in_soc_ram/43 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_rsa_signature/28 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_check_ecc_p256r1_signature/29 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_sym_check_code_sign/40 (addr) fwverify_vry_soc_fw_in_soc_ram/35 (addr) fwverify_verify_image/47 (addr) fwverify_verify_image/47 (addr) 
+  Availability: available
+  Varpool flags: initialized
+Trivially needed variables: g_fw_verify_cfi/21
+Removing variables:
+
+Final Symbol table:
+
+uint32_BigNumCmp/83 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_read_data/82 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/81 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash/80 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_get_u32/79 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_set_u32/78 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpdata_get_soc_ver_cnt/77 (otpdata_get_soc_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_data_sec_double_check/76 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_dma_cmac_update_including_last_block/75 (cpt_ske_dma_cmac_update_including_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_cmac_ctx_cpu_2_dma/74 (cpt_cmac_ctx_cpu_2_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac_update/73 (cpt_ske_cmac_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac_init/72 (cpt_ske_cmac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/71 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_verify/70 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secp256r1/69 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_ecdsa_verify/68 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/67 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_dma_final/66 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_ctx_switch/65 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_final/64 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_update/63 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash_init/62 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getZ/61 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_get_phyid/60 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_check_usage/59 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_dma_crypto/58 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secboot_enable_boot_fw/57 (secboot_enable_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpdata_get_hsm_ver_cnt/56 (otpdata_get_hsm_ver_cnt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_inc_u32/55 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_read_remote_data/54 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_panic/53 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_delay/52 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/51 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/50 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fwverify_check_ver_cnt/49 (fwverify_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_check_ver_cnt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fwverify_get_and_verify_pubkey/48 (fwverify_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_get_and_verify_pubkey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741808 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fwverify_verify_image/47 (fwverify_verify_image)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_verify_image (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fwverify_vry_soc_fw/46 (fwverify_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_vry_soc_fw (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fwverify_vry_hsm_fw/45 (fwverify_vry_hsm_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_vry_hsm_fw (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fwverify_vry_hsm_fw_in_soc_ram/43 (fwverify_vry_hsm_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_vry_hsm_fw_in_soc_ram (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_check_code_sign/41 (fwverify_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_check_code_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741808 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_sym_check_code_sign/40 (fwverify_sym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_sym_check_code_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_asym_check_code_sign/39 (fwverify_asym_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_asym_check_code_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_sm2_check_code_sign/38 (fwverify_sm2_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_sm2_check_code_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_copy_data/37 (fwverify_copy_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_copy_data (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+get_signature_by_alg/36 (get_signature_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_signature_by_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741808 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_vry_soc_fw_in_soc_ram/35 (fwverify_vry_soc_fw_in_soc_ram)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_vry_soc_fw_in_soc_ram (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_copy_data_dma/33 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_copy_data_dma (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_check_sm2_signature/30 (fwverify_check_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_check_sm2_signature (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_check_rsa_signature/28 (fwverify_check_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_check_rsa_signature (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_get_dec_alg/26 (fwverify_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_get_dec_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+fwverify_check_fw_header/25 (fwverify_check_fw_header)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_check_fw_header (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fwverify_get_otpkey_phyid/23 (fwverify_get_otpkey_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.fwverify_get_otpkey_phyid (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+fwverify_header_is_valid/22 (fwverify_header_is_valid)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fwverify_header_is_valid (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+g_fw_verify_cfi/21 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sdata.g_fw_verify_cfi (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

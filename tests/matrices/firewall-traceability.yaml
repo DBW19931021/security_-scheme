@@ -1,0 +1,37 @@
+schema_version: 1
+feature: SEC-FW-001
+source_ids: [SRC-0025, SRC-0027, SRC-0029, SRC-0030, SRC-0022, SRC-0017, SRC-0016]
+requirements: requirements/firewall-requirements.yaml
+userid_map: requirements/firewall-userid-authority-map.yaml
+case_source: tests/cases/firewall/NGU800P-firewall-detailed-cases-v0.1.csv
+review_workbook: tests/cases/NGU800P-security-test-cases-v0.3.6-firewall-review.xlsx
+status: PROPOSED_NOT_EXECUTED
+counts:
+  total: 49
+  ready: 40
+  blocked: 9
+parent_soc_cases:
+  SOC-FW-SECCFG-001:
+    purpose: SEC_CFG默认仅启动核允许、eHSM和其他核拒绝，不修改配置
+    detailed_groups: [seccfg_spifc]
+  SOC-FW-SPIFC-001:
+    purpose: SPIFC默认仅启动核允许、eHSM和其他核拒绝，不修改配置
+    detailed_groups: [seccfg_spifc]
+  SOC-FW-SRAM-001:
+    purpose: SRAM五Region默认权限，单Case内遍历
+    detailed_groups: [region, permission, userid]
+  SOC-FW-SRAM-RECFG-001:
+    purpose: 非启动发起方对三个Firewall配置写拒绝，并由启动核完成SRAM五Region地址范围与Master ID重新配置
+    detailed_groups: [region, address, permission, userid]
+blocked_by:
+  OPEN-CONFLICT-014:
+    - FW-TC-017
+    - FW-TC-029
+    - FW-TC-060
+    - FW-TC-061
+    - FW-TC-062
+    - FW-TC-063
+    - FW-TC-080
+    - FW-TC-081
+    - FW-TC-082
+note: "49条CSV为Firewall模型/RTL-DV专项参考，不计入顶层SoC Case或Codex移植数量；同一case可受多个缺口影响。"

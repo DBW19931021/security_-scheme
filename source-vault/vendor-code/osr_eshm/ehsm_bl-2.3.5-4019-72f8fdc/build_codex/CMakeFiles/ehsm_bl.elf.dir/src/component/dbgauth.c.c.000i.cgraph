@@ -1,0 +1,3398 @@
+Trivially needed symbols: dbgauth_read_challenge/50 dbgauth_ehsm_debug_auth/49 dbgauth_close_debug/48 dbgauth_get_challenge/47 dbgauth_srv_handler/46 dbgauth_srv_acquire_user_auth_result/45 g_user_auth_result/27
+
+
+Initial Symbol table:
+
+cpt_rsa_ssa_pss_verify_by_msg_digest/80 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 
+  Calls: 
+cpt_ske_cmac/79 (cpt_ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_cmac/39 
+  Calls: 
+secp256r1/78 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: debug_auth_ecdsa/37 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/77 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_ecdsa/37 
+  Calls: 
+cpt_sm2_verify/76 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getE/75 (cpt_sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getZ/74 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+util_data_sec_double_check/73 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+cpt_hash/72 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+otpkey_read_data/71 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_get_phyid/70 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_check_usage/69 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+sysreg_enable_soc_dbg/68 (sysreg_enable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_soc_dbg_ext/67 (sysreg_enable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_hsm_dbg/66 (sysreg_enable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_get_u32/65 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_set_u32/64 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_inc_u32/63 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 
+  Calls: 
+sysreg_disable_soc_dbg/62 (sysreg_disable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_soc_dbg_ext/61 (sysreg_disable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_hsm_dbg/60 (sysreg_disable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 
+  Calls: 
+memset_/58 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+fid_panic/56 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 
+  Calls: 
+fid_delay/55 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 check_verify_data/35 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+sysreg_get_life_cycle/54 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+mmap_write_remote_data/53 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge_handle/42 
+  Calls: 
+otp_read/52 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+dbgauth_read_challenge/50 (dbgauth_read_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: g_ehsm_challenge/21 (read) g_ehsm_challenge/21 (read) g_soc_challenge/22 (read) g_soc_challenge/22 (read) g_user_auth_challenge/23 (read) g_user_auth_challenge/23 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbgauth_ehsm_debug_auth/49 (dbgauth_ehsm_debug_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f34e5301220
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 
+  Calls: clear_challenge_st/30 sysreg_enable_soc_dbg/68 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 fid_delay/55 fid_delay/55 sysreg_enable_hsm_dbg/66 fid_delay/55 fid_delay/55 fid_delay/55 fid_panic/56 fid_get_u32/65 fid_delay/55 fid_delay/55 check_and_verify/41 check_auth_data/33 debug_auth_check_lifecycle_by_type/40 fid_set_u32/64 
+dbgauth_close_debug/48 (dbgauth_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f34e5301110
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 
+dbgauth_get_challenge/47 (dbgauth_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f34e5301000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+dbgauth_srv_handler/46 (dbgauth_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f34e52d5ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+dbgauth_srv_acquire_user_auth_result/45 (dbgauth_srv_acquire_user_auth_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f34e52d5dd0
+  References: g_user_auth_result/27 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+dbgauth_close_debug_handle/44 (dbgauth_close_debug_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5ee0
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 mmap_read_remote_data/59 
+dbgauth_debug_authentication_handle/43 (dbgauth_debug_authentication_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: clear_challenge_st/30 dbgauth_ehsm_debug_auth/49 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 
+dbgauth_get_challenge_handle/42 (dbgauth_get_challenge_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5aa0
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: util_memset/10 clear_challenge_st/30 mmap_write_remote_data/53 util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+check_and_verify/41 (check_and_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e5301220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 check_verify_data/35 
+debug_auth_check_lifecycle_by_type/40 (debug_auth_check_lifecycle_by_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5ee0
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: fid_inc_u32/63 fid_inc_u32/63 fid_panic/56 fid_delay/55 fid_delay/55 fid_inc_u32/63 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+debug_auth_cmac/39 (debug_auth_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5550
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_ske_cmac/79 fid_inc_u32/63 
+debug_auth_rsa/38 (debug_auth_rsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e5301220
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_rsa_ssa_pss_verify_by_msg_digest/80 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_ecdsa/37 (debug_auth_ecdsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5660
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) secp256r1/78 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_ecdsa_verify/77 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_sm2/36 (debug_auth_sm2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5440
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 cpt_sm2_verify/76 fid_inc_u32/63 fid_inc_u32/63 cpt_sm2_getE/75 cpt_sm2_getZ/74 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+check_verify_data/35 (check_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: otpkey_read_data/71 otpkey_get_phyid/70 otpkey_check_usage/69 check_challenge_data/34 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+check_challenge_data/34 (check_challenge_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+check_auth_data/33 (check_auth_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: acquire_challenge_buffer/32 
+acquire_challenge_buffer/32 (acquire_challenge_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5880
+  References: g_ehsm_challenge/21 (addr) g_soc_challenge/22 (addr) g_user_auth_challenge/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_auth_data/33 
+  Calls: 
+set_challenge_st/31 (set_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e51adcc0
+  References: g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+clear_challenge_st/30 (clear_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e51ad000
+  References: g_ehsm_challenge_buf/24 (addr) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge_buf/25 (addr) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge_buf/26 (addr) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+  Calls: util_memset/10 util_memset/10 util_memset/10 
+check_lifecycle_type/29 (check_lifecycle_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e5483ee0
+  References: g_ehsm_challenge_buf/24 (addr) g_soc_challenge_buf/25 (addr) g_user_auth_challenge_buf/26 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: fid_delay/55 fid_delay/55 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+g_debug_auth_cfi/28 (g_debug_auth_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5ee0
+  References: 
+  Referring: debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) dbgauth_ehsm_debug_auth/49 (addr) dbgauth_ehsm_debug_auth/49 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_result/27 (g_user_auth_result)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7f34e52d5cc0
+  References: 
+  Referring: dbgauth_srv_acquire_user_auth_result/45 (read) dbgauth_get_challenge_handle/42 (write) dbgauth_close_debug_handle/44 (write) dbgauth_close_debug/48 (write) dbgauth_ehsm_debug_auth/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_challenge_buf/26 (g_user_auth_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52c1480
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge_buf/25 (g_soc_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52c1400
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge_buf/24 (g_ehsm_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e5483ee0
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_user_auth_challenge/23 (g_user_auth_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52c1300
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge/22 (g_soc_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52c1280
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge/21 (g_ehsm_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e51adcc0
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+filename/20 (filename)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_read_fw_ctrl_bits/19 (sysreg_read_fw_ctrl_bits)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/18 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/17 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/16 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/15 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e52d5aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_ecdsa/37 dbgauth_get_challenge/47 clear_challenge_st/30 clear_challenge_st/30 clear_challenge_st/30 dbgauth_get_challenge_handle/42 dbgauth_get_challenge_handle/42 
+  Calls: memset_/58 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f34e51addd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: memcpy_/57 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: filename/20 sysreg_read_fw_ctrl_bits/19 rPKE_B/18 rPKE_A/17 lib_register_unlock/16 lib_register_lock/15 util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+cpt_rsa_ssa_pss_verify_by_msg_digest/80 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 
+  Calls: 
+cpt_ske_cmac/79 (cpt_ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_cmac/39 
+  Calls: 
+secp256r1/78 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: debug_auth_ecdsa/37 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/77 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_ecdsa/37 
+  Calls: 
+cpt_sm2_verify/76 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getE/75 (cpt_sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getZ/74 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+util_data_sec_double_check/73 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+cpt_hash/72 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+otpkey_read_data/71 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_get_phyid/70 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_check_usage/69 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+sysreg_enable_soc_dbg/68 (sysreg_enable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_soc_dbg_ext/67 (sysreg_enable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_hsm_dbg/66 (sysreg_enable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_get_u32/65 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_set_u32/64 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_inc_u32/63 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 
+  Calls: 
+sysreg_disable_soc_dbg/62 (sysreg_disable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_soc_dbg_ext/61 (sysreg_disable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_hsm_dbg/60 (sysreg_disable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 
+  Calls: 
+memset_/58 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+fid_panic/56 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 
+  Calls: 
+fid_delay/55 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 check_verify_data/35 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+sysreg_get_life_cycle/54 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+mmap_write_remote_data/53 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge_handle/42 
+  Calls: 
+otp_read/52 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+dbgauth_read_challenge/50 (dbgauth_read_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_ehsm_challenge/21 (read) g_ehsm_challenge/21 (read) g_soc_challenge/22 (read) g_soc_challenge/22 (read) g_user_auth_challenge/23 (read) g_user_auth_challenge/23 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbgauth_ehsm_debug_auth/49 (dbgauth_ehsm_debug_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 
+  Calls: clear_challenge_st/30 sysreg_enable_soc_dbg/68 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 fid_delay/55 fid_delay/55 sysreg_enable_hsm_dbg/66 fid_delay/55 fid_delay/55 fid_delay/55 fid_panic/56 fid_get_u32/65 fid_delay/55 fid_delay/55 check_and_verify/41 check_auth_data/33 debug_auth_check_lifecycle_by_type/40 fid_set_u32/64 
+dbgauth_close_debug/48 (dbgauth_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 
+dbgauth_get_challenge/47 (dbgauth_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+dbgauth_srv_handler/46 (dbgauth_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+dbgauth_srv_acquire_user_auth_result/45 (dbgauth_srv_acquire_user_auth_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_user_auth_result/27 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+dbgauth_close_debug_handle/44 (dbgauth_close_debug_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 mmap_read_remote_data/59 
+dbgauth_debug_authentication_handle/43 (dbgauth_debug_authentication_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: clear_challenge_st/30 dbgauth_ehsm_debug_auth/49 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 
+dbgauth_get_challenge_handle/42 (dbgauth_get_challenge_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: util_memset/10 clear_challenge_st/30 mmap_write_remote_data/53 util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+check_and_verify/41 (check_and_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 check_verify_data/35 
+debug_auth_check_lifecycle_by_type/40 (debug_auth_check_lifecycle_by_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: fid_inc_u32/63 fid_inc_u32/63 fid_panic/56 fid_delay/55 fid_delay/55 fid_inc_u32/63 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+debug_auth_cmac/39 (debug_auth_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_ske_cmac/79 fid_inc_u32/63 
+debug_auth_rsa/38 (debug_auth_rsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_rsa_ssa_pss_verify_by_msg_digest/80 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_ecdsa/37 (debug_auth_ecdsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) secp256r1/78 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_ecdsa_verify/77 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_sm2/36 (debug_auth_sm2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 cpt_sm2_verify/76 fid_inc_u32/63 fid_inc_u32/63 cpt_sm2_getE/75 cpt_sm2_getZ/74 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+check_verify_data/35 (check_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: otpkey_read_data/71 otpkey_get_phyid/70 otpkey_check_usage/69 check_challenge_data/34 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+check_challenge_data/34 (check_challenge_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+check_auth_data/33 (check_auth_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: acquire_challenge_buffer/32 
+acquire_challenge_buffer/32 (acquire_challenge_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge/21 (addr) g_soc_challenge/22 (addr) g_user_auth_challenge/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_auth_data/33 
+  Calls: 
+set_challenge_st/31 (set_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+clear_challenge_st/30 (clear_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge_buf/24 (addr) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge_buf/25 (addr) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge_buf/26 (addr) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+  Calls: util_memset/10 util_memset/10 util_memset/10 
+check_lifecycle_type/29 (check_lifecycle_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge_buf/24 (addr) g_soc_challenge_buf/25 (addr) g_user_auth_challenge_buf/26 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: fid_delay/55 fid_delay/55 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+g_debug_auth_cfi/28 (g_debug_auth_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) dbgauth_ehsm_debug_auth/49 (addr) dbgauth_ehsm_debug_auth/49 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_result/27 (g_user_auth_result)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: dbgauth_srv_acquire_user_auth_result/45 (read) dbgauth_get_challenge_handle/42 (write) dbgauth_close_debug_handle/44 (write) dbgauth_close_debug/48 (write) dbgauth_ehsm_debug_auth/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_challenge_buf/26 (g_user_auth_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge_buf/25 (g_soc_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge_buf/24 (g_ehsm_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_user_auth_challenge/23 (g_user_auth_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge/22 (g_soc_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge/21 (g_ehsm_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_ecdsa/37 dbgauth_get_challenge/47 clear_challenge_st/30 clear_challenge_st/30 clear_challenge_st/30 dbgauth_get_challenge_handle/42 dbgauth_get_challenge_handle/42 
+  Calls: memset_/58 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: memcpy_/57 
+
+
+Initial Symbol table:
+
+cpt_rsa_ssa_pss_verify_by_msg_digest/80 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 
+  Calls: 
+cpt_ske_cmac/79 (cpt_ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_cmac/39 
+  Calls: 
+secp256r1/78 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: debug_auth_ecdsa/37 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/77 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_ecdsa/37 
+  Calls: 
+cpt_sm2_verify/76 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getE/75 (cpt_sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getZ/74 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+util_data_sec_double_check/73 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+cpt_hash/72 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+otpkey_read_data/71 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_get_phyid/70 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_check_usage/69 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+sysreg_enable_soc_dbg/68 (sysreg_enable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_soc_dbg_ext/67 (sysreg_enable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_hsm_dbg/66 (sysreg_enable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_get_u32/65 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_set_u32/64 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_inc_u32/63 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 
+  Calls: 
+sysreg_disable_soc_dbg/62 (sysreg_disable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_soc_dbg_ext/61 (sysreg_disable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_hsm_dbg/60 (sysreg_disable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 
+  Calls: 
+memset_/58 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+fid_panic/56 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 
+  Calls: 
+fid_delay/55 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 check_verify_data/35 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+sysreg_get_life_cycle/54 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+mmap_write_remote_data/53 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge_handle/42 
+  Calls: 
+otp_read/52 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+dbgauth_read_challenge/50 (dbgauth_read_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_ehsm_challenge/21 (read) g_ehsm_challenge/21 (read) g_soc_challenge/22 (read) g_soc_challenge/22 (read) g_user_auth_challenge/23 (read) g_user_auth_challenge/23 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbgauth_ehsm_debug_auth/49 (dbgauth_ehsm_debug_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 
+  Calls: clear_challenge_st/30 sysreg_enable_soc_dbg/68 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 fid_delay/55 fid_delay/55 sysreg_enable_hsm_dbg/66 fid_delay/55 fid_delay/55 fid_delay/55 fid_panic/56 fid_get_u32/65 fid_delay/55 fid_delay/55 check_and_verify/41 check_auth_data/33 debug_auth_check_lifecycle_by_type/40 fid_set_u32/64 
+dbgauth_close_debug/48 (dbgauth_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 
+dbgauth_get_challenge/47 (dbgauth_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+dbgauth_srv_handler/46 (dbgauth_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+dbgauth_srv_acquire_user_auth_result/45 (dbgauth_srv_acquire_user_auth_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_user_auth_result/27 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+dbgauth_close_debug_handle/44 (dbgauth_close_debug_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 mmap_read_remote_data/59 
+dbgauth_debug_authentication_handle/43 (dbgauth_debug_authentication_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: clear_challenge_st/30 dbgauth_ehsm_debug_auth/49 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 
+dbgauth_get_challenge_handle/42 (dbgauth_get_challenge_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: util_memset/10 clear_challenge_st/30 mmap_write_remote_data/53 util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+check_and_verify/41 (check_and_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 check_verify_data/35 
+debug_auth_check_lifecycle_by_type/40 (debug_auth_check_lifecycle_by_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: fid_inc_u32/63 fid_inc_u32/63 fid_panic/56 fid_delay/55 fid_delay/55 fid_inc_u32/63 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+debug_auth_cmac/39 (debug_auth_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_ske_cmac/79 fid_inc_u32/63 
+debug_auth_rsa/38 (debug_auth_rsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_rsa_ssa_pss_verify_by_msg_digest/80 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_ecdsa/37 (debug_auth_ecdsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) secp256r1/78 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_ecdsa_verify/77 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_sm2/36 (debug_auth_sm2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 cpt_sm2_verify/76 fid_inc_u32/63 fid_inc_u32/63 cpt_sm2_getE/75 cpt_sm2_getZ/74 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+check_verify_data/35 (check_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: otpkey_read_data/71 otpkey_get_phyid/70 otpkey_check_usage/69 check_challenge_data/34 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+check_challenge_data/34 (check_challenge_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+check_auth_data/33 (check_auth_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: acquire_challenge_buffer/32 
+acquire_challenge_buffer/32 (acquire_challenge_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge/21 (addr) g_soc_challenge/22 (addr) g_user_auth_challenge/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_auth_data/33 
+  Calls: 
+set_challenge_st/31 (set_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+clear_challenge_st/30 (clear_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge_buf/24 (addr) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge_buf/25 (addr) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge_buf/26 (addr) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+  Calls: util_memset/10 util_memset/10 util_memset/10 
+check_lifecycle_type/29 (check_lifecycle_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge_buf/24 (addr) g_soc_challenge_buf/25 (addr) g_user_auth_challenge_buf/26 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: fid_delay/55 fid_delay/55 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+g_debug_auth_cfi/28 (g_debug_auth_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) dbgauth_ehsm_debug_auth/49 (addr) dbgauth_ehsm_debug_auth/49 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_result/27 (g_user_auth_result)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: dbgauth_srv_acquire_user_auth_result/45 (read) dbgauth_get_challenge_handle/42 (write) dbgauth_close_debug_handle/44 (write) dbgauth_close_debug/48 (write) dbgauth_ehsm_debug_auth/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_challenge_buf/26 (g_user_auth_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge_buf/25 (g_soc_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge_buf/24 (g_ehsm_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_user_auth_challenge/23 (g_user_auth_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge/22 (g_soc_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge/21 (g_ehsm_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_ecdsa/37 dbgauth_get_challenge/47 clear_challenge_st/30 clear_challenge_st/30 clear_challenge_st/30 dbgauth_get_challenge_handle/42 dbgauth_get_challenge_handle/42 
+  Calls: memset_/58 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: memcpy_/57 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpt_rsa_ssa_pss_verify_by_msg_digest/80 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 
+  Calls: 
+cpt_ske_cmac/79 (cpt_ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_cmac/39 
+  Calls: 
+secp256r1/78 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: debug_auth_ecdsa/37 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/77 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_ecdsa/37 
+  Calls: 
+cpt_sm2_verify/76 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getE/75 (cpt_sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+cpt_sm2_getZ/74 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 
+  Calls: 
+util_data_sec_double_check/73 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+cpt_hash/72 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 
+  Calls: 
+otpkey_read_data/71 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_get_phyid/70 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+otpkey_check_usage/69 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+sysreg_enable_soc_dbg/68 (sysreg_enable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_soc_dbg_ext/67 (sysreg_enable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 
+  Calls: 
+sysreg_enable_hsm_dbg/66 (sysreg_enable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_get_u32/65 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_set_u32/64 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: 
+fid_inc_u32/63 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_ecdsa/37 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_sm2/36 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 
+  Calls: 
+sysreg_disable_soc_dbg/62 (sysreg_disable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_soc_dbg_ext/61 (sysreg_disable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 dbgauth_close_debug_handle/44 
+  Calls: 
+sysreg_disable_hsm_dbg/60 (sysreg_disable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 dbgauth_debug_authentication_handle/43 
+  Calls: 
+memset_/58 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+fid_panic/56 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 
+  Calls: 
+fid_delay/55 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 check_verify_data/35 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 dbgauth_ehsm_debug_auth/49 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+sysreg_get_life_cycle/54 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: check_verify_data/35 check_verify_data/35 debug_auth_check_lifecycle_by_type/40 debug_auth_check_lifecycle_by_type/40 check_lifecycle_type/29 check_lifecycle_type/29 
+  Calls: 
+mmap_write_remote_data/53 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge_handle/42 
+  Calls: 
+otp_read/52 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+dbgauth_read_challenge/50 (dbgauth_read_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_ehsm_challenge/21 (read) g_ehsm_challenge/21 (read) g_soc_challenge/22 (read) g_soc_challenge/22 (read) g_user_auth_challenge/23 (read) g_user_auth_challenge/23 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbgauth_ehsm_debug_auth/49 (dbgauth_ehsm_debug_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 
+  Calls: clear_challenge_st/30 sysreg_enable_soc_dbg/68 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 sysreg_enable_soc_dbg_ext/67 fid_delay/55 fid_delay/55 sysreg_enable_hsm_dbg/66 fid_delay/55 fid_delay/55 fid_delay/55 fid_panic/56 fid_get_u32/65 fid_delay/55 fid_delay/55 check_and_verify/41 check_auth_data/33 debug_auth_check_lifecycle_by_type/40 fid_set_u32/64 
+dbgauth_close_debug/48 (dbgauth_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 
+dbgauth_get_challenge/47 (dbgauth_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+dbgauth_srv_handler/46 (dbgauth_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: dbgauth_close_debug_handle/44 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+dbgauth_srv_acquire_user_auth_result/45 (dbgauth_srv_acquire_user_auth_result)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_user_auth_result/27 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+dbgauth_close_debug_handle/44 (dbgauth_close_debug_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: sysreg_disable_soc_dbg/62 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_soc_dbg_ext/61 sysreg_disable_hsm_dbg/60 debug_auth_check_lifecycle_by_type/40 mmap_read_remote_data/59 
+dbgauth_debug_authentication_handle/43 (dbgauth_debug_authentication_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: clear_challenge_st/30 dbgauth_ehsm_debug_auth/49 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 mmap_read_remote_data/59 
+dbgauth_get_challenge_handle/42 (dbgauth_get_challenge_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_srv_handler/46 
+  Calls: util_memset/10 clear_challenge_st/30 mmap_write_remote_data/53 util_memset/10 set_challenge_st/31 util_memcpy/9 otp_read/52 cpt_get_rand/51 check_lifecycle_type/29 
+check_and_verify/41 (check_and_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: debug_auth_rsa/38 debug_auth_cmac/39 debug_auth_ecdsa/37 debug_auth_sm2/36 check_verify_data/35 
+debug_auth_check_lifecycle_by_type/40 (debug_auth_check_lifecycle_by_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_close_debug/48 dbgauth_close_debug_handle/44 
+  Calls: fid_inc_u32/63 fid_inc_u32/63 fid_panic/56 fid_delay/55 fid_delay/55 fid_inc_u32/63 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+debug_auth_cmac/39 (debug_auth_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_ske_cmac/79 fid_inc_u32/63 
+debug_auth_rsa/38 (debug_auth_rsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_rsa_ssa_pss_verify_by_msg_digest/80 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_ecdsa/37 (debug_auth_ecdsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) secp256r1/78 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: util_memset/10 fid_inc_u32/63 cpt_ecdsa_verify/77 fid_inc_u32/63 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+debug_auth_sm2/36 (debug_auth_sm2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: fid_inc_u32/63 cpt_sm2_verify/76 fid_inc_u32/63 fid_inc_u32/63 cpt_sm2_getE/75 cpt_sm2_getZ/74 fid_inc_u32/63 util_data_sec_double_check/73 fid_inc_u32/63 cpt_hash/72 fid_inc_u32/63 
+check_verify_data/35 (check_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_and_verify/41 
+  Calls: otpkey_read_data/71 otpkey_get_phyid/70 otpkey_check_usage/69 check_challenge_data/34 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+check_challenge_data/34 (check_challenge_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_verify_data/35 
+  Calls: 
+check_auth_data/33 (check_auth_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 
+  Calls: acquire_challenge_buffer/32 
+acquire_challenge_buffer/32 (acquire_challenge_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge/21 (addr) g_soc_challenge/22 (addr) g_user_auth_challenge/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: check_auth_data/33 
+  Calls: 
+set_challenge_st/31 (set_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: 
+clear_challenge_st/30 (clear_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge_buf/24 (addr) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge_buf/25 (addr) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge_buf/26 (addr) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 dbgauth_debug_authentication_handle/43 dbgauth_get_challenge_handle/42 
+  Calls: util_memset/10 util_memset/10 util_memset/10 
+check_lifecycle_type/29 (check_lifecycle_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_ehsm_challenge_buf/24 (addr) g_soc_challenge_buf/25 (addr) g_user_auth_challenge_buf/26 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: fid_delay/55 fid_delay/55 fid_panic/56 fid_delay/55 fid_delay/55 sysreg_get_life_cycle/54 fid_delay/55 sysreg_get_life_cycle/54 
+g_debug_auth_cfi/28 (g_debug_auth_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) dbgauth_ehsm_debug_auth/49 (addr) dbgauth_ehsm_debug_auth/49 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_result/27 (g_user_auth_result)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: dbgauth_srv_acquire_user_auth_result/45 (read) dbgauth_get_challenge_handle/42 (write) dbgauth_close_debug_handle/44 (write) dbgauth_close_debug/48 (write) dbgauth_ehsm_debug_auth/49 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_user_auth_challenge_buf/26 (g_user_auth_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge_buf/25 (g_soc_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge_buf/24 (g_ehsm_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: not-ready
+  Varpool flags:
+g_user_auth_challenge/23 (g_user_auth_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_soc_challenge/22 (g_soc_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ehsm_challenge/21 (g_ehsm_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: set_challenge_st/31 (write) set_challenge_st/31 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) clear_challenge_st/30 (write) acquire_challenge_buffer/32 (addr) dbgauth_read_challenge/50 (read) dbgauth_read_challenge/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: debug_auth_rsa/38 debug_auth_ecdsa/37 dbgauth_get_challenge/47 clear_challenge_st/30 clear_challenge_st/30 clear_challenge_st/30 dbgauth_get_challenge_handle/42 dbgauth_get_challenge_handle/42 
+  Calls: memset_/58 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_read_challenge/50 dbgauth_get_challenge/47 dbgauth_get_challenge_handle/42 
+  Calls: memcpy_/57 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+check_challenge_data.constprop.0/93 (check_challenge_data.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function check_challenge_data.constprop/93 is inline copy in dbgauth_ehsm_debug_auth/49
+  Clone of check_challenge_data/34
+  Availability: local
+  Function flags: count:1986870 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: check_verify_data/35 (inlined) (1986870 (estimated locally),0.00 per call) 
+  Calls: 
+clear_challenge_st.part.0/84 (clear_challenge_st.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: g_user_auth_challenge_buf/26 (addr) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Function clear_challenge_st.part.0/84 is inline copy in clear_challenge_st/30
+  Availability: local
+  Function flags: count:138254943 (estimated locally) body local split_part optimize_size
+  Called by: clear_challenge_st/30 (inlined) (138254943 (estimated locally),0.13 per call) 
+  Calls: memset_/58 (138254943 (estimated locally),0.13 per call) 
+cpt_rsa_ssa_pss_verify_by_msg_digest/80 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 (2058 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_ske_cmac/79 (cpt_ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_cmac/39 (219830 (estimated locally),0.00 per call) 
+  Calls: 
+secp256r1/78 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: debug_auth_ecdsa/37 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_ecdsa_verify/77 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_ecdsa/37 (2058 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_verify/76 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 (2058 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_getE/75 (cpt_sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 (2058 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_getZ/74 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_sm2/36 (10168 (estimated locally),0.00 per call) 
+  Calls: 
+util_data_sec_double_check/73 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 (50236 (estimated locally),0.00 per call) debug_auth_cmac/39 (44494 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (50236 (estimated locally),0.00 per call) debug_auth_sm2/36 (50236 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash/72 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 (10168 (estimated locally),0.00 per call) debug_auth_rsa/38 (248199 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (10168 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (248199 (estimated locally),0.00 per call) debug_auth_sm2/36 (248199 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_read_data/71 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: check_verify_data/35 (194859 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_get_phyid/70 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: check_verify_data/35 (135410 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_check_usage/69 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: check_verify_data/35 (675536 (estimated locally),0.00 per call) 
+  Calls: 
+sysreg_enable_soc_dbg/68 (sysreg_enable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (10537370 (estimated locally),0.01 per call) 
+  Calls: 
+sysreg_enable_soc_dbg_ext/67 (sysreg_enable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (31931426 (estimated locally),0.03 per call) dbgauth_ehsm_debug_auth/49 (31931426 (estimated locally),0.03 per call) dbgauth_ehsm_debug_auth/49 (31931426 (estimated locally),0.03 per call) dbgauth_ehsm_debug_auth/49 (31931426 (estimated locally),0.03 per call) 
+  Calls: 
+sysreg_enable_hsm_dbg/66 (sysreg_enable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (1604699 (estimated locally),0.00 per call) 
+  Calls: 
+fid_get_u32/65 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (35858682 (estimated locally),0.03 per call) 
+  Calls: 
+fid_set_u32/64 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+fid_inc_u32/63 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: debug_auth_rsa/38 (2058 (estimated locally),0.00 per call) debug_auth_rsa/38 (2058 (estimated locally),0.00 per call) debug_auth_rsa/38 (10168 (estimated locally),0.00 per call) debug_auth_rsa/38 (10168 (estimated locally),0.00 per call) debug_auth_rsa/38 (248199 (estimated locally),0.00 per call) debug_auth_rsa/38 (248199 (estimated locally),0.00 per call) debug_auth_cmac/39 (219830 (estimated locally),0.00 per call) debug_auth_cmac/39 (219830 (estimated locally),0.00 per call) debug_auth_cmac/39 (219830 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (2058 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (2058 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (10168 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (10168 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (248199 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (248199 (estimated locally),0.00 per call) debug_auth_sm2/36 (2058 (estimated locally),0.00 per call) debug_auth_sm2/36 (2058 (estimated locally),0.00 per call) debug_auth_sm2/36 (10168 (estimated locally),0.00 per call) debug_auth_sm2/36 (10168 (estimated locally),0.00 per call) debug_auth_sm2/36 (248199 (estimated locally),0.00 per call) debug_auth_sm2/36 (248199 (estimated locally),0.00 per call) debug_auth_check_lifecycle_by_type/40 (1073741823 (estimated locally),1.00 per call) debug_auth_check_lifecycle_by_type/40 (1073741823 (estimated locally),1.00 per call) debug_auth_check_lifecycle_by_type/40 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sysreg_disable_soc_dbg/62 (sysreg_disable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 (55514743 (estimated locally),0.05 per call) dbgauth_close_debug_handle/44 (257599 (estimated locally),0.00 per call) 
+  Calls: 
+sysreg_disable_soc_dbg_ext/61 (sysreg_disable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug_handle/44 (780602 (estimated locally),0.00 per call) dbgauth_close_debug_handle/44 (780602 (estimated locally),0.00 per call) dbgauth_close_debug_handle/44 (780602 (estimated locally),0.00 per call) dbgauth_close_debug_handle/44 (780602 (estimated locally),0.00 per call) 
+  Calls: 
+sysreg_disable_hsm_dbg/60 (sysreg_disable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_close_debug/48 (63099276 (estimated locally),0.06 per call) dbgauth_close_debug_handle/44 (887250 (estimated locally),0.00 per call) 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 (1246018 (estimated locally),0.00 per call) dbgauth_debug_authentication_handle/43 (45610201 (estimated locally),0.04 per call) dbgauth_debug_authentication_handle/43 (7644243 (estimated locally),0.01 per call) dbgauth_debug_authentication_handle/43 (37768002 (estimated locally),0.04 per call) dbgauth_close_debug_handle/44 (4435284 (estimated locally),0.00 per call) 
+  Calls: 
+memset_/58 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 (15522976 (estimated locally),0.01 per call) debug_auth_rsa/38 (947315 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (947315 (estimated locally),0.00 per call) dbgauth_get_challenge_handle/42 (131533374 (estimated locally),0.12 per call) dbgauth_get_challenge_handle/42 (1331095 (estimated locally),0.00 per call) clear_challenge_st/30 (173338695 (estimated locally),0.16 per call) clear_challenge_st/30 (217325344 (estimated locally),0.20 per call) clear_challenge_st.part.0/84 (138254943 (estimated locally),0.13 per call) 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_read_challenge/50 (87397389 (estimated locally),0.08 per call) dbgauth_read_challenge/50 (92090199 (estimated locally),0.09 per call) dbgauth_read_challenge/50 (139530605 (estimated locally),0.13 per call) dbgauth_get_challenge/47 (7996685 (estimated locally),0.01 per call) dbgauth_get_challenge_handle/42 (685716 (estimated locally),0.00 per call) 
+  Calls: 
+fid_panic/56 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (17527723 (estimated locally),0.02 per call) check_verify_data/35 (12986525 (estimated locally),0.01 per call) debug_auth_check_lifecycle_by_type/40 (1000937833 (estimated locally),0.93 per call) check_lifecycle_type/29 (1000937833 (estimated locally),0.93 per call) 
+  Calls: 
+fid_delay/55 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (4645114 (estimated locally),0.00 per call) dbgauth_ehsm_debug_auth/49 (34253983 (estimated locally),0.03 per call) dbgauth_ehsm_debug_auth/49 (4862724 (estimated locally),0.00 per call) dbgauth_ehsm_debug_auth/49 (35858682 (estimated locally),0.03 per call) dbgauth_ehsm_debug_auth/49 (35858682 (estimated locally),0.03 per call) dbgauth_ehsm_debug_auth/49 (108662672 (estimated locally),0.10 per call) dbgauth_ehsm_debug_auth/49 (1073741824 (estimated locally),1.00 per call) check_verify_data/35 (1889170 (estimated locally),0.00 per call) check_verify_data/35 (13931110 (estimated locally),0.01 per call) check_verify_data/35 (13931110 (estimated locally),0.01 per call) debug_auth_check_lifecycle_by_type/40 (145607981 (estimated locally),0.14 per call) debug_auth_check_lifecycle_by_type/40 (1073741824 (estimated locally),1.00 per call) debug_auth_check_lifecycle_by_type/40 (1073741824 (estimated locally),1.00 per call) check_lifecycle_type/29 (36335711 (estimated locally),0.03 per call) check_lifecycle_type/29 (359048532 (estimated locally),0.33 per call) check_lifecycle_type/29 (145607981 (estimated locally),0.14 per call) check_lifecycle_type/29 (1073741824 (estimated locally),1.00 per call) check_lifecycle_type/29 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sysreg_get_life_cycle/54 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: check_verify_data/35 (13931110 (estimated locally),0.01 per call) check_verify_data/35 (13931110 (estimated locally),0.01 per call) debug_auth_check_lifecycle_by_type/40 (1073741824 (estimated locally),1.00 per call) debug_auth_check_lifecycle_by_type/40 (1073741824 (estimated locally),1.00 per call) check_lifecycle_type/29 (1073741824 (estimated locally),1.00 per call) check_lifecycle_type/29 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+mmap_write_remote_data/53 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge_handle/42 (9079370 (estimated locally),0.01 per call) 
+  Calls: 
+otp_read/52 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 (23519661 (estimated locally),0.02 per call) dbgauth_get_challenge_handle/42 (2016811 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: dbgauth_get_challenge/47 (116203861 (estimated locally),0.11 per call) dbgauth_get_challenge_handle/42 (9964481 (estimated locally),0.01 per call) 
+  Calls: 
+dbgauth_read_challenge/50 (dbgauth_read_challenge)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_ehsm_challenge/21 (read) g_soc_challenge/22 (read) g_user_auth_challenge/23 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memcpy_/57 (87397389 (estimated locally),0.08 per call) memcpy_/57 (92090199 (estimated locally),0.09 per call) memcpy_/57 (139530605 (estimated locally),0.13 per call) 
+dbgauth_ehsm_debug_auth/49 (dbgauth_ehsm_debug_auth)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_user_auth_result/27 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 (48309256 (estimated locally),0.04 per call) 
+  Calls: clear_challenge_st/30 (1073741823 (estimated locally),1.00 per call) sysreg_enable_soc_dbg/68 (10537370 (estimated locally),0.01 per call) sysreg_enable_soc_dbg_ext/67 (31931426 (estimated locally),0.03 per call) sysreg_enable_soc_dbg_ext/67 (31931426 (estimated locally),0.03 per call) sysreg_enable_soc_dbg_ext/67 (31931426 (estimated locally),0.03 per call) sysreg_enable_soc_dbg_ext/67 (31931426 (estimated locally),0.03 per call) fid_delay/55 (4645114 (estimated locally),0.00 per call) fid_delay/55 (34253983 (estimated locally),0.03 per call) sysreg_enable_hsm_dbg/66 (1604699 (estimated locally),0.00 per call) fid_delay/55 (4862724 (estimated locally),0.00 per call) fid_delay/55 (35858682 (estimated locally),0.03 per call) fid_delay/55 (35858682 (estimated locally),0.03 per call) fid_panic/56 (17527723 (estimated locally),0.02 per call) fid_get_u32/65 (35858682 (estimated locally),0.03 per call) fid_delay/55 (108662672 (estimated locally),0.10 per call) fid_delay/55 (1073741824 (estimated locally),1.00 per call) check_and_verify/41 (inlined) (37220096 (estimated locally),0.03 per call) check_auth_data/33 (inlined) (183893758 (estimated locally),0.17 per call) debug_auth_check_lifecycle_by_type/40 (574129752 (estimated locally),0.53 per call) fid_set_u32/64 (1073741824 (estimated locally),1.00 per call) 
+dbgauth_close_debug/48 (dbgauth_close_debug)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sysreg_disable_soc_dbg/62 (55514743 (estimated locally),0.05 per call) sysreg_disable_hsm_dbg/60 (63099276 (estimated locally),0.06 per call) debug_auth_check_lifecycle_by_type/40 (1073741822 (estimated locally),1.00 per call) 
+dbgauth_get_challenge/47 (dbgauth_get_challenge)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memset_/58 (15522976 (estimated locally),0.01 per call) set_challenge_st/31 (7996685 (estimated locally),0.01 per call) memcpy_/57 (7996685 (estimated locally),0.01 per call) otp_read/52 (23519661 (estimated locally),0.02 per call) cpt_get_rand/51 (116203861 (estimated locally),0.11 per call) check_lifecycle_type/29 (574129752 (estimated locally),0.53 per call) 
+dbgauth_srv_handler/46 (dbgauth_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: dbgauth_close_debug_handle/44 (inlined) (131533374 (estimated locally),0.12 per call) dbgauth_debug_authentication_handle/43 (131533374 (estimated locally),0.12 per call) dbgauth_get_challenge_handle/42 (inlined) (131533374 (estimated locally),0.12 per call) 
+dbgauth_srv_acquire_user_auth_result/45 (dbgauth_srv_acquire_user_auth_result)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_user_auth_result/27 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+dbgauth_close_debug_handle/44 (dbgauth_close_debug_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function dbgauth_close_debug_handle/44 is inline copy in dbgauth_srv_handler/46
+  Availability: local
+  Function flags: count:131533374 (estimated locally) body local optimize_size
+  Called by: dbgauth_srv_handler/46 (inlined) (131533374 (estimated locally),0.12 per call) 
+  Calls: sysreg_disable_soc_dbg/62 (257599 (estimated locally),0.00 per call) sysreg_disable_soc_dbg_ext/61 (780602 (estimated locally),0.00 per call) sysreg_disable_soc_dbg_ext/61 (780602 (estimated locally),0.00 per call) sysreg_disable_soc_dbg_ext/61 (780602 (estimated locally),0.00 per call) sysreg_disable_soc_dbg_ext/61 (780602 (estimated locally),0.00 per call) sysreg_disable_hsm_dbg/60 (887250 (estimated locally),0.00 per call) debug_auth_check_lifecycle_by_type/40 (15098066 (estimated locally),0.01 per call) mmap_read_remote_data/59 (4435284 (estimated locally),0.00 per call) 
+dbgauth_debug_authentication_handle/43 (dbgauth_debug_authentication_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local optimize_size
+  Called by: dbgauth_srv_handler/46 (131533374 (estimated locally),0.12 per call) 
+  Calls: clear_challenge_st/30 (548298792 (estimated locally),0.51 per call) dbgauth_ehsm_debug_auth/49 (48309256 (estimated locally),0.04 per call) mmap_read_remote_data/59 (1246018 (estimated locally),0.00 per call) mmap_read_remote_data/59 (45610201 (estimated locally),0.04 per call) mmap_read_remote_data/59 (7644243 (estimated locally),0.01 per call) mmap_read_remote_data/59 (37768002 (estimated locally),0.04 per call) 
+dbgauth_get_challenge_handle/42 (dbgauth_get_challenge_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_user_auth_result/27 (write) 
+  Referring: 
+  Function dbgauth_get_challenge_handle/42 is inline copy in dbgauth_srv_handler/46
+  Availability: local
+  Function flags: count:131533374 (estimated locally) body local optimize_size
+  Called by: dbgauth_srv_handler/46 (inlined) (131533374 (estimated locally),0.12 per call) 
+  Calls: memset_/58 (131533374 (estimated locally),0.12 per call) clear_challenge_st/30 (65476156 (estimated locally),0.06 per call) mmap_write_remote_data/53 (9079370 (estimated locally),0.01 per call) memset_/58 (1331095 (estimated locally),0.00 per call) set_challenge_st/31 (685716 (estimated locally),0.00 per call) memcpy_/57 (685716 (estimated locally),0.00 per call) otp_read/52 (2016811 (estimated locally),0.00 per call) cpt_get_rand/51 (9964481 (estimated locally),0.01 per call) check_lifecycle_type/29 (49231627 (estimated locally),0.05 per call) 
+check_and_verify/41 (check_and_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function check_and_verify/41 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:37220096 (estimated locally) body local optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (inlined) (37220096 (estimated locally),0.03 per call) 
+  Calls: debug_auth_rsa/38 (inlined) (947315 (estimated locally),0.00 per call) debug_auth_cmac/39 (inlined) (947315 (estimated locally),0.00 per call) debug_auth_ecdsa/37 (inlined) (947315 (estimated locally),0.00 per call) debug_auth_sm2/36 (inlined) (947315 (estimated locally),0.00 per call) check_verify_data/35 (inlined) (13931110 (estimated locally),0.01 per call) 
+debug_auth_check_lifecycle_by_type/40 (debug_auth_check_lifecycle_by_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (574129752 (estimated locally),0.53 per call) dbgauth_close_debug/48 (1073741822 (estimated locally),1.00 per call) dbgauth_close_debug_handle/44 (15098066 (estimated locally),0.01 per call) 
+  Calls: fid_inc_u32/63 (1073741823 (estimated locally),1.00 per call) fid_inc_u32/63 (1073741823 (estimated locally),1.00 per call) fid_panic/56 (1000937833 (estimated locally),0.93 per call) fid_delay/55 (145607981 (estimated locally),0.14 per call) fid_delay/55 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/63 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/54 (1073741824 (estimated locally),1.00 per call) fid_delay/55 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/54 (1073741824 (estimated locally),1.00 per call) 
+debug_auth_cmac/39 (debug_auth_cmac)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function debug_auth_cmac/39 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:947315 (estimated locally) body local optimize_size
+  Called by: check_and_verify/41 (inlined) (947315 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/63 (219830 (estimated locally),0.00 per call) util_data_sec_double_check/73 (44494 (estimated locally),0.00 per call) fid_inc_u32/63 (219830 (estimated locally),0.00 per call) cpt_ske_cmac/79 (219830 (estimated locally),0.00 per call) fid_inc_u32/63 (219830 (estimated locally),0.00 per call) 
+debug_auth_rsa/38 (debug_auth_rsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function debug_auth_rsa/38 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:947315 (estimated locally) body local optimize_size
+  Called by: check_and_verify/41 (inlined) (947315 (estimated locally),0.00 per call) 
+  Calls: memset_/58 (947315 (estimated locally),0.00 per call) fid_inc_u32/63 (2058 (estimated locally),0.00 per call) cpt_rsa_ssa_pss_verify_by_msg_digest/80 (2058 (estimated locally),0.00 per call) fid_inc_u32/63 (2058 (estimated locally),0.00 per call) fid_inc_u32/63 (10168 (estimated locally),0.00 per call) cpt_hash/72 (10168 (estimated locally),0.00 per call) fid_inc_u32/63 (10168 (estimated locally),0.00 per call) util_data_sec_double_check/73 (50236 (estimated locally),0.00 per call) fid_inc_u32/63 (248199 (estimated locally),0.00 per call) cpt_hash/72 (248199 (estimated locally),0.00 per call) fid_inc_u32/63 (248199 (estimated locally),0.00 per call) 
+debug_auth_ecdsa/37 (debug_auth_ecdsa)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) secp256r1/78 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function debug_auth_ecdsa/37 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:947315 (estimated locally) body local optimize_size
+  Called by: check_and_verify/41 (inlined) (947315 (estimated locally),0.00 per call) 
+  Calls: memset_/58 (947315 (estimated locally),0.00 per call) fid_inc_u32/63 (2058 (estimated locally),0.00 per call) cpt_ecdsa_verify/77 (2058 (estimated locally),0.00 per call) fid_inc_u32/63 (2058 (estimated locally),0.00 per call) fid_inc_u32/63 (10168 (estimated locally),0.00 per call) cpt_hash/72 (10168 (estimated locally),0.00 per call) fid_inc_u32/63 (10168 (estimated locally),0.00 per call) util_data_sec_double_check/73 (50236 (estimated locally),0.00 per call) fid_inc_u32/63 (248199 (estimated locally),0.00 per call) cpt_hash/72 (248199 (estimated locally),0.00 per call) fid_inc_u32/63 (248199 (estimated locally),0.00 per call) 
+debug_auth_sm2/36 (debug_auth_sm2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) g_debug_auth_cfi/28 (addr) 
+  Referring: 
+  Function debug_auth_sm2/36 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:947315 (estimated locally) body local optimize_size
+  Called by: check_and_verify/41 (inlined) (947315 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/63 (2058 (estimated locally),0.00 per call) cpt_sm2_verify/76 (2058 (estimated locally),0.00 per call) fid_inc_u32/63 (2058 (estimated locally),0.00 per call) fid_inc_u32/63 (10168 (estimated locally),0.00 per call) cpt_sm2_getE/75 (2058 (estimated locally),0.00 per call) cpt_sm2_getZ/74 (10168 (estimated locally),0.00 per call) fid_inc_u32/63 (10168 (estimated locally),0.00 per call) util_data_sec_double_check/73 (50236 (estimated locally),0.00 per call) fid_inc_u32/63 (248199 (estimated locally),0.00 per call) cpt_hash/72 (248199 (estimated locally),0.00 per call) fid_inc_u32/63 (248199 (estimated locally),0.00 per call) 
+check_verify_data/35 (check_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function check_verify_data/35 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:13931110 (estimated locally) body local optimize_size
+  Called by: check_and_verify/41 (inlined) (13931110 (estimated locally),0.01 per call) 
+  Calls: otpkey_read_data/71 (194859 (estimated locally),0.00 per call) otpkey_get_phyid/70 (135410 (estimated locally),0.00 per call) otpkey_check_usage/69 (675536 (estimated locally),0.00 per call) check_challenge_data.constprop.0/93 (inlined) (1986870 (estimated locally),0.00 per call) fid_panic/56 (12986525 (estimated locally),0.01 per call) fid_delay/55 (1889170 (estimated locally),0.00 per call) fid_delay/55 (13931110 (estimated locally),0.01 per call) sysreg_get_life_cycle/54 (13931110 (estimated locally),0.01 per call) fid_delay/55 (13931110 (estimated locally),0.01 per call) sysreg_get_life_cycle/54 (13931110 (estimated locally),0.01 per call) 
+check_challenge_data/34 (check_challenge_data)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+check_auth_data/33 (check_auth_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function check_auth_data/33 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:183893758 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: dbgauth_ehsm_debug_auth/49 (inlined) (183893758 (estimated locally),0.17 per call) 
+  Calls: acquire_challenge_buffer/32 (inlined) (23785136 (estimated locally),0.02 per call) 
+acquire_challenge_buffer/32 (acquire_challenge_buffer)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_ehsm_challenge/21 (addr) g_soc_challenge/22 (addr) g_user_auth_challenge/23 (addr) 
+  Referring: 
+  Function acquire_challenge_buffer/32 is inline copy in dbgauth_ehsm_debug_auth/49
+  Availability: local
+  Function flags: count:23785136 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: check_auth_data/33 (inlined) (23785136 (estimated locally),0.02 per call) 
+  Calls: 
+set_challenge_st/31 (set_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) g_user_auth_challenge/23 (write) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: dbgauth_get_challenge/47 (7996685 (estimated locally),0.01 per call) dbgauth_get_challenge_handle/42 (685716 (estimated locally),0.00 per call) 
+  Calls: 
+clear_challenge_st/30 (clear_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_ehsm_challenge_buf/24 (addr) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_ehsm_challenge/21 (write) g_soc_challenge_buf/25 (addr) g_soc_challenge/22 (write) g_soc_challenge/22 (write) g_soc_challenge/22 (write) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: dbgauth_debug_authentication_handle/43 (548298792 (estimated locally),0.51 per call) dbgauth_ehsm_debug_auth/49 (1073741823 (estimated locally),1.00 per call) dbgauth_get_challenge_handle/42 (65476156 (estimated locally),0.06 per call) 
+  Calls: clear_challenge_st.part.0/84 (inlined) (138254943 (estimated locally),0.13 per call) memset_/58 (173338695 (estimated locally),0.16 per call) memset_/58 (217325344 (estimated locally),0.20 per call) 
+check_lifecycle_type/29 (check_lifecycle_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_ehsm_challenge_buf/24 (addr) g_soc_challenge_buf/25 (addr) g_user_auth_challenge_buf/26 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: dbgauth_get_challenge/47 (574129752 (estimated locally),0.53 per call) dbgauth_get_challenge_handle/42 (49231627 (estimated locally),0.05 per call) 
+  Calls: fid_delay/55 (36335711 (estimated locally),0.03 per call) fid_delay/55 (359048532 (estimated locally),0.33 per call) fid_panic/56 (1000937833 (estimated locally),0.93 per call) fid_delay/55 (145607981 (estimated locally),0.14 per call) fid_delay/55 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/54 (1073741824 (estimated locally),1.00 per call) fid_delay/55 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/54 (1073741824 (estimated locally),1.00 per call) 
+g_debug_auth_cfi/28 (g_debug_auth_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_cmac/39 (addr) debug_auth_cmac/39 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_cmac/39 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_ecdsa/37 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_check_lifecycle_by_type/40 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_sm2/36 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) debug_auth_rsa/38 (addr) dbgauth_ehsm_debug_auth/49 (addr) dbgauth_ehsm_debug_auth/49 (addr) 
+  Availability: available
+  Varpool flags: initialized
+g_user_auth_result/27 (g_user_auth_result)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbgauth_get_challenge_handle/42 (write) dbgauth_srv_acquire_user_auth_result/45 (read) dbgauth_close_debug/48 (write) dbgauth_close_debug_handle/44 (write) dbgauth_ehsm_debug_auth/49 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_user_auth_challenge_buf/26 (g_user_auth_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st.part.0/84 (addr) 
+  Availability: available
+  Varpool flags:
+g_soc_challenge_buf/25 (g_soc_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: available
+  Varpool flags:
+g_ehsm_challenge_buf/24 (g_ehsm_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: check_lifecycle_type/29 (addr) clear_challenge_st/30 (addr) 
+  Availability: available
+  Varpool flags:
+g_user_auth_challenge/23 (g_user_auth_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: clear_challenge_st.part.0/84 (write) set_challenge_st/31 (write) acquire_challenge_buffer/32 (addr) set_challenge_st/31 (write) clear_challenge_st.part.0/84 (write) set_challenge_st/31 (write) clear_challenge_st.part.0/84 (write) dbgauth_read_challenge/50 (read) 
+  Availability: available
+  Varpool flags:
+g_soc_challenge/22 (g_soc_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: clear_challenge_st/30 (write) set_challenge_st/31 (write) acquire_challenge_buffer/32 (addr) set_challenge_st/31 (write) clear_challenge_st/30 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) dbgauth_read_challenge/50 (read) 
+  Availability: available
+  Varpool flags:
+g_ehsm_challenge/21 (g_ehsm_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: clear_challenge_st/30 (write) set_challenge_st/31 (write) acquire_challenge_buffer/32 (addr) set_challenge_st/31 (write) clear_challenge_st/30 (write) set_challenge_st/31 (write) clear_challenge_st/30 (write) dbgauth_read_challenge/50 (read) 
+  Availability: available
+  Varpool flags:
+updating call of dbgauth_ehsm_debug_auth/49 -> check_challenge_data.constprop/93: ret_84 = check_challenge_data (challenge_type_24(D), challenge.10_1, &otp_key_logic_id);
+  updated to:ret_84 = check_challenge_data.constprop (challenge_type_24(D), challenge.10_1, &otp_key_logic_id);
+cloning check_challenge_data/34 to check_challenge_data.constprop/93
+uint32_t check_challenge_data (uint8_t type, const struct ehsm_get_challenge_st * challenge, uint32_t * otp_key_logic_id)
+{
+  uint32_t check_rsp;
+  long unsigned int _1;
+  unsigned char _2;
+  long unsigned int _3;
+  unsigned char _4;
+  long unsigned int _5;
+  unsigned char _6;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG check_rsp => 2774162085
+  # DEBUG BEGIN_STMT
+  if (challenge_9(D) == 0B)
+    goto <bb 17>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (otp_key_logic_id_10(D) == 0B)
+    goto <bb 17>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  # DEBUG BEGIN_STMT
+  if (type_11(D) == 1)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 9>; [66.00%]
+
+  <bb 5> [local count: 178885391]:
+  # DEBUG BEGIN_STMT
+  _1 = challenge_9(D)->size;
+  if (_1 != 48)
+    goto <bb 17>; [51.11%]
+  else
+    goto <bb 6>; [48.89%]
+
+  <bb 6> [local count: 87457067]:
+  _2 = challenge_9(D)->type;
+  if (_2 != 1)
+    goto <bb 17>; [66.00%]
+  else
+    goto <bb 7>; [34.00%]
+
+  <bb 7> [local count: 29735403]:
+  # DEBUG BEGIN_STMT
+  *otp_key_logic_id_10(D) = 2097156;
+
+  <bb 8> [local count: 67986049]:
+  goto <bb 17>; [100.00%]
+
+  <bb 9> [local count: 347248107]:
+  # DEBUG BEGIN_STMT
+  if (type_11(D) == 3)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 13>; [66.00%]
+
+  <bb 10> [local count: 118064357]:
+  # DEBUG BEGIN_STMT
+  _3 = challenge_9(D)->size;
+  if (_3 != 48)
+    goto <bb 17>; [51.11%]
+  else
+    goto <bb 11>; [48.89%]
+
+  <bb 11> [local count: 57721664]:
+  _4 = challenge_9(D)->type;
+  if (_4 != 3)
+    goto <bb 17>; [66.00%]
+  else
+    goto <bb 12>; [34.00%]
+
+  <bb 12> [local count: 19625366]:
+  # DEBUG BEGIN_STMT
+  *otp_key_logic_id_10(D) = 2097162;
+  goto <bb 8>; [100.00%]
+
+  <bb 13> [local count: 229183749]:
+  # DEBUG BEGIN_STMT
+  if (type_11(D) == 4)
+    goto <bb 14>; [48.89%]
+  else
+    goto <bb 17>; [51.11%]
+
+  <bb 14> [local count: 112047935]:
+  # DEBUG BEGIN_STMT
+  _5 = challenge_9(D)->size;
+  if (_5 != 48)
+    goto <bb 17>; [51.11%]
+  else
+    goto <bb 15>; [48.89%]
+
+  <bb 15> [local count: 54780235]:
+  _6 = challenge_9(D)->type;
+  if (_6 != 4)
+    goto <bb 17>; [66.00%]
+  else
+    goto <bb 16>; [34.00%]
+
+  <bb 16> [local count: 18625280]:
+  # DEBUG BEGIN_STMT
+  *otp_key_logic_id_10(D) = 2097169;
+  goto <bb 8>; [100.00%]
+
+  <bb 17> [local count: 1073741824]:
+  # check_rsp_7 = PHI <1(2), 2774162085(8), 83(6), 83(13), 83(14), 83(10), 83(5), 83(15), 83(11), 1(3)>
+  # DEBUG check_rsp => check_rsp_7
+  # DEBUG BEGIN_STMT
+  return check_rsp_7;
+
+}
+
+
+uint32_t check_challenge_data.constprop (uint8_t type, const struct ehsm_get_challenge_st * challenge, uint32_t * otp_key_logic_id)
+{
+  uint32_t check_rsp;
+  long unsigned int _4;
+  unsigned char _5;
+  long unsigned int _6;
+  unsigned char _7;
+  long unsigned int _8;
+  unsigned char _9;
+
+  <bb 18> [local count: 1073741822]:
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG check_rsp => 2774162085
+  # DEBUG BEGIN_STMT
+  if (challenge_1(D) == 0B)
+    goto <bb 17>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (otp_key_logic_id_2(D) == 0B)
+    goto <bb 17>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  # DEBUG BEGIN_STMT
+  if (type_3(D) == 1)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 9>; [66.00%]
+
+  <bb 5> [local count: 178885391]:
+  # DEBUG BEGIN_STMT
+  _4 = challenge_1(D)->size;
+  if (_4 != 48)
+    goto <bb 17>; [51.11%]
+  else
+    goto <bb 6>; [48.89%]
+
+  <bb 6> [local count: 87457067]:
+  _5 = challenge_1(D)->type;
+  if (_5 != 1)
+    goto <bb 17>; [66.00%]
+  else
+    goto <bb 7>; [34.00%]
+
+  <bb 7> [local count: 29735403]:
+  # DEBUG BEGIN_STMT
+  *otp_key_logic_id_2(D) = 2097156;
+
+  <bb 8> [local count: 67986049]:
+  goto <bb 17>; [100.00%]
+
+  <bb 9> [local count: 347248107]:
+  # DEBUG BEGIN_STMT
+  if (type_3(D) == 3)
+    goto <bb 10>; [34.00%]
+  else
+    goto <bb 13>; [66.00%]
+
+  <bb 10> [local count: 118064357]:
+  # DEBUG BEGIN_STMT
+  _6 = challenge_1(D)->size;
+  if (_6 != 48)
+    goto <bb 17>; [51.11%]
+  else
+    goto <bb 11>; [48.89%]
+
+  <bb 11> [local count: 57721664]:
+  _7 = challenge_1(D)->type;
+  if (_7 != 3)
+    goto <bb 17>; [66.00%]
+  else
+    goto <bb 12>; [34.00%]
+
+  <bb 12> [local count: 19625366]:
+  # DEBUG BEGIN_STMT
+  *otp_key_logic_id_2(D) = 2097162;
+  goto <bb 8>; [100.00%]
+
+  <bb 13> [local count: 229183749]:
+  # DEBUG BEGIN_STMT
+  if (type_3(D) == 4)
+    goto <bb 14>; [48.89%]
+  else
+    goto <bb 17>; [51.11%]
+
+  <bb 14> [local count: 112047935]:
+  # DEBUG BEGIN_STMT
+  _8 = challenge_1(D)->size;
+  if (_8 != 48)
+    goto <bb 17>; [51.11%]
+  else
+    goto <bb 15>; [48.89%]
+
+  <bb 15> [local count: 54780235]:
+  _9 = challenge_1(D)->type;
+  if (_9 != 4)
+    goto <bb 17>; [66.00%]
+  else
+    goto <bb 16>; [34.00%]
+
+  <bb 16> [local count: 18625280]:
+  # DEBUG BEGIN_STMT
+  *otp_key_logic_id_2(D) = 2097169;
+  goto <bb 8>; [100.00%]
+
+  <bb 17> [local count: 1073741824]:
+  # check_rsp_10 = PHI <1(2), 1(3), 83(5), 83(6), 2774162085(8), 83(10), 83(11), 83(13), 83(14), 83(15)>
+  # DEBUG check_rsp => check_rsp_10
+  # DEBUG BEGIN_STMT
+  return check_rsp_10;
+
+}
+
+
+Trivially needed variables: g_debug_auth_cfi/28 g_user_auth_result/27 g_user_auth_challenge_buf/26 g_soc_challenge_buf/25 g_ehsm_challenge_buf/24 g_user_auth_challenge/23 g_soc_challenge/22 g_ehsm_challenge/21
+Removing variables:
+
+Final Symbol table:
+
+cpt_rsa_ssa_pss_verify_by_msg_digest/80 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_ske_cmac/79 (cpt_ske_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secp256r1/78 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_ecdsa_verify/77 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_verify/76 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getE/75 (cpt_sm2_getE)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_sm2_getZ/74 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_data_sec_double_check/73 (util_data_sec_double_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_hash/72 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_read_data/71 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_get_phyid/70 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_check_usage/69 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/68 (sysreg_enable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg_ext/67 (sysreg_enable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/66 (sysreg_enable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_get_u32/65 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_set_u32/64 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_inc_u32/63 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg/62 (sysreg_disable_soc_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/61 (sysreg_disable_soc_dbg_ext)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/60 (sysreg_disable_hsm_dbg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/58 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_panic/56 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_delay/55 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/54 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_write_remote_data/53 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otp_read/52 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+dbgauth_read_challenge/50 (dbgauth_read_challenge)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgauth_read_challenge (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+dbgauth_ehsm_debug_auth/49 (dbgauth_ehsm_debug_auth)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgauth_ehsm_debug_auth (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+dbgauth_close_debug/48 (dbgauth_close_debug)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgauth_close_debug (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+dbgauth_get_challenge/47 (dbgauth_get_challenge)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgauth_get_challenge (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+dbgauth_srv_handler/46 (dbgauth_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgauth_srv_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/45 (dbgauth_srv_acquire_user_auth_result)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgauth_srv_acquire_user_auth_result (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+dbgauth_debug_authentication_handle/43 (dbgauth_debug_authentication_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbgauth_debug_authentication_handle (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+debug_auth_check_lifecycle_by_type/40 (debug_auth_check_lifecycle_by_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.debug_auth_check_lifecycle_by_type (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+check_challenge_data/34 (check_challenge_data)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+set_challenge_st/31 (set_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_challenge_st (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+clear_challenge_st/30 (clear_challenge_st)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.clear_challenge_st (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+check_lifecycle_type/29 (check_lifecycle_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.check_lifecycle_type (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+g_debug_auth_cfi/28 (g_debug_auth_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sdata.g_debug_auth_cfi (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_user_auth_result/27 (g_user_auth_result)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_user_auth_result (implicit_section)
+  Aux: @0x7f34e52c1600
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_user_auth_challenge_buf/26 (g_user_auth_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_user_auth_challenge_buf (implicit_section)
+  Aux: @0x7f34e52c1580
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_soc_challenge_buf/25 (g_soc_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_soc_challenge_buf (implicit_section)
+  Aux: @0x7f34e52c1500
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_ehsm_challenge_buf/24 (g_ehsm_challenge_buf)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_ehsm_challenge_buf (implicit_section)
+  Aux: @0x7f34e52c1480
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_user_auth_challenge/23 (g_user_auth_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_user_auth_challenge (implicit_section)
+  Aux: @0x7f34e52c1400
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_soc_challenge/22 (g_soc_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_soc_challenge (implicit_section)
+  Aux: @0x7f34e52c1380
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_ehsm_challenge/21 (g_ehsm_challenge)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_ehsm_challenge (implicit_section)
+  Aux: @0x7f34e52c1300
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

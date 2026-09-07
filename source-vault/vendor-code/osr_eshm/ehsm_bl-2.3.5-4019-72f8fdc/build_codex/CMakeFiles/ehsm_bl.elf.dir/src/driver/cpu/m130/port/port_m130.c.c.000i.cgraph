@@ -1,0 +1,1412 @@
+Trivially needed symbols: cpu_platform_init/20 cpu_get_pmp_count/19 cpu_config_pmp/18 cpu_exit_critical/17 cpu_enter_critical/16 cpu_disable_global_int/15 cpu_enable_global_int/14 cpu_disable_int/13 cpu_enable_int/12 cpu_register_int/11 default_trap_handler/9
+
+
+Initial Symbol table:
+
+clic_init/33 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+pmp_config_set/32 (pmp_config_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 cpu_config_pmp/18 
+  Calls: 
+pmp_addr_set/30 (pmp_addr_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+clic_int_disable/29 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_disable_int/13 
+  Calls: 
+clic_int_enable/28 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_get_irq_handler/27 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_int_handler_regist/26 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_clear_int_pending/25 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_vector_mode/24 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_priority/23 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_trig_type/22 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+secboot_cpu_excpt_handler/21 (secboot_cpu_excpt_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: default_trap_handler/9 
+  Calls: 
+cpu_platform_init/20 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_global_int/14 clic_init/33 
+cpu_get_pmp_count/19 (cpu_get_pmp_count)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+cpu_config_pmp/18 (cpu_config_pmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: debug_printf/31 pmp_config_set/32 debug_printf/31 pmp_addr_set/30 cpu_get_pmp_count/19 
+cpu_exit_critical/17 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/16 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/15 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_global_int/14 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+cpu_disable_int/13 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d0327000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_disable/29 cpu_get_irq_number/10 
+cpu_enable_int/12 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d02f1dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_enable/28 clic_get_irq_handler/27 cpu_get_irq_number/10 
+cpu_register_int/11 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d02f1cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_handler_regist/26 clic_clear_int_pending/25 clic_set_vector_mode/24 clic_set_priority/23 clic_set_trig_type/22 cpu_get_irq_number/10 
+cpu_get_irq_number/10 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50d02f1cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_disable_int/13 cpu_enable_int/12 cpu_register_int/11 
+  Calls: 
+default_trap_handler/9 (default_trap_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50d02f1bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_cpu_excpt_handler/21 
+__PMPADDR_INDX_SET/8 (__PMPADDR_INDX_SET)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__PMPADDR_INDX_GET/7 (__PMPADDR_INDX_GET)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__PMPCFG_INDX_SET/6 (__PMPCFG_INDX_SET)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__PMPCFG_INDX_GET/5 (__PMPCFG_INDX_GET)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+filename/4 (filename)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/3 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/2 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/1 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/0 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: __PMPADDR_INDX_SET/8 __PMPADDR_INDX_GET/7 __PMPCFG_INDX_SET/6 __PMPCFG_INDX_GET/5 filename/4 __libc_detect_null/3 _putchar_unlocked/2 _getchar_unlocked/1 __sputc_r/0
+
+Reclaimed Symbol table:
+
+clic_init/33 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+pmp_config_set/32 (pmp_config_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 cpu_config_pmp/18 
+  Calls: 
+pmp_addr_set/30 (pmp_addr_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+clic_int_disable/29 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_disable_int/13 
+  Calls: 
+clic_int_enable/28 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_get_irq_handler/27 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_int_handler_regist/26 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_clear_int_pending/25 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_vector_mode/24 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_priority/23 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_trig_type/22 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+secboot_cpu_excpt_handler/21 (secboot_cpu_excpt_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: default_trap_handler/9 
+  Calls: 
+cpu_platform_init/20 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_global_int/14 clic_init/33 
+cpu_get_pmp_count/19 (cpu_get_pmp_count)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+cpu_config_pmp/18 (cpu_config_pmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: debug_printf/31 pmp_config_set/32 debug_printf/31 pmp_addr_set/30 cpu_get_pmp_count/19 
+cpu_exit_critical/17 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/16 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/15 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_global_int/14 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+cpu_disable_int/13 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_disable/29 cpu_get_irq_number/10 
+cpu_enable_int/12 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_enable/28 clic_get_irq_handler/27 cpu_get_irq_number/10 
+cpu_register_int/11 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_handler_regist/26 clic_clear_int_pending/25 clic_set_vector_mode/24 clic_set_priority/23 clic_set_trig_type/22 cpu_get_irq_number/10 
+cpu_get_irq_number/10 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_disable_int/13 cpu_enable_int/12 cpu_register_int/11 
+  Calls: 
+default_trap_handler/9 (default_trap_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_cpu_excpt_handler/21 
+
+
+Initial Symbol table:
+
+clic_init/33 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+pmp_config_set/32 (pmp_config_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 cpu_config_pmp/18 
+  Calls: 
+pmp_addr_set/30 (pmp_addr_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+clic_int_disable/29 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_disable_int/13 
+  Calls: 
+clic_int_enable/28 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_get_irq_handler/27 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_int_handler_regist/26 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_clear_int_pending/25 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_vector_mode/24 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_priority/23 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_trig_type/22 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+secboot_cpu_excpt_handler/21 (secboot_cpu_excpt_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: default_trap_handler/9 
+  Calls: 
+cpu_platform_init/20 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_global_int/14 clic_init/33 
+cpu_get_pmp_count/19 (cpu_get_pmp_count)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+cpu_config_pmp/18 (cpu_config_pmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: debug_printf/31 pmp_config_set/32 debug_printf/31 pmp_addr_set/30 cpu_get_pmp_count/19 
+cpu_exit_critical/17 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/16 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/15 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_global_int/14 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+cpu_disable_int/13 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_disable/29 cpu_get_irq_number/10 
+cpu_enable_int/12 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_enable/28 clic_get_irq_handler/27 cpu_get_irq_number/10 
+cpu_register_int/11 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_handler_regist/26 clic_clear_int_pending/25 clic_set_vector_mode/24 clic_set_priority/23 clic_set_trig_type/22 cpu_get_irq_number/10 
+cpu_get_irq_number/10 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_disable_int/13 cpu_enable_int/12 cpu_register_int/11 
+  Calls: 
+default_trap_handler/9 (default_trap_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_cpu_excpt_handler/21 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+clic_init/33 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+pmp_config_set/32 (pmp_config_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 cpu_config_pmp/18 
+  Calls: 
+pmp_addr_set/30 (pmp_addr_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+clic_int_disable/29 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_disable_int/13 
+  Calls: 
+clic_int_enable/28 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_get_irq_handler/27 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 
+  Calls: 
+clic_int_handler_regist/26 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_clear_int_pending/25 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_vector_mode/24 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_priority/23 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+clic_set_trig_type/22 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 
+  Calls: 
+secboot_cpu_excpt_handler/21 (secboot_cpu_excpt_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: default_trap_handler/9 
+  Calls: 
+cpu_platform_init/20 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_global_int/14 clic_init/33 
+cpu_get_pmp_count/19 (cpu_get_pmp_count)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_config_pmp/18 
+  Calls: 
+cpu_config_pmp/18 (cpu_config_pmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: debug_printf/31 pmp_config_set/32 debug_printf/31 pmp_addr_set/30 cpu_get_pmp_count/19 
+cpu_exit_critical/17 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/16 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/15 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_global_int/14 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_platform_init/20 
+  Calls: 
+cpu_disable_int/13 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_disable/29 cpu_get_irq_number/10 
+cpu_enable_int/12 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_enable/28 clic_get_irq_handler/27 cpu_get_irq_number/10 
+cpu_register_int/11 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: clic_int_handler_regist/26 clic_clear_int_pending/25 clic_set_vector_mode/24 clic_set_priority/23 clic_set_trig_type/22 cpu_get_irq_number/10 
+cpu_get_irq_number/10 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: cpu_disable_int/13 cpu_enable_int/12 cpu_register_int/11 
+  Calls: 
+default_trap_handler/9 (default_trap_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_cpu_excpt_handler/21 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cpu_get_irq_number/38 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 37
+  References: CSWTCH.2/34 (read) 
+  Referring: 
+  Function cpu_get_irq_number/38 is inline copy in cpu_enable_int/12
+  Clone of cpu_get_irq_number/10
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: cpu_enable_int/12 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_get_irq_number/37 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 10
+  previous sharing asm name: 38
+  References: CSWTCH.2/34 (read) 
+  Referring: 
+  Function cpu_get_irq_number/37 is inline copy in cpu_disable_int/13
+  Clone of cpu_get_irq_number/10
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: cpu_disable_int/13 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+CSWTCH.5/35 (CSWTCH.5)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: cpu_register_int/11 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+CSWTCH.2/34 (CSWTCH.2)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: cpu_get_irq_number/10 (read) cpu_get_irq_number/37 (read) cpu_get_irq_number/38 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+clic_init/33 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_platform_init/20 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pmp_config_set/32 (pmp_config_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 (228622479 (estimated locally),0.21 per call) 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 (46273190 (estimated locally),0.04 per call) cpu_config_pmp/18 (117775218 (estimated locally),0.11 per call) 
+  Calls: 
+pmp_addr_set/30 (pmp_addr_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_config_pmp/18 (346397698 (estimated locally),0.32 per call) 
+  Calls: 
+clic_int_disable/29 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_disable_int/13 (524845000 (estimated locally),0.49 per call) 
+  Calls: 
+clic_int_enable/28 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 (280634621 (estimated locally),0.26 per call) 
+  Calls: 
+clic_get_irq_handler/27 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_enable_int/12 (524845000 (estimated locally),0.49 per call) 
+  Calls: 
+clic_int_handler_regist/26 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 (8524654 (estimated locally),0.01 per call) 
+  Calls: 
+clic_clear_int_pending/25 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 (17845204 (estimated locally),0.02 per call) 
+  Calls: 
+clic_set_vector_mode/24 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 (37356508 (estimated locally),0.03 per call) 
+  Calls: 
+clic_set_priority/23 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 (78200769 (estimated locally),0.07 per call) 
+  Calls: 
+clic_set_trig_type/22 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: cpu_register_int/11 (163702677 (estimated locally),0.15 per call) 
+  Calls: 
+secboot_cpu_excpt_handler/21 (secboot_cpu_excpt_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: default_trap_handler/9 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_platform_init/20 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_enable_global_int/14 (1073741824 (estimated locally),1.00 per call) clic_init/33 (1073741824 (estimated locally),1.00 per call) 
+cpu_get_pmp_count/19 (cpu_get_pmp_count)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+cpu_config_pmp/18 (cpu_config_pmp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: debug_printf/31 (46273190 (estimated locally),0.04 per call) pmp_config_set/32 (228622479 (estimated locally),0.21 per call) debug_printf/31 (117775218 (estimated locally),0.11 per call) pmp_addr_set/30 (346397698 (estimated locally),0.32 per call) 
+cpu_exit_critical/17 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/16 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/15 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_global_int/14 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: cpu_platform_init/20 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_disable_int/13 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: clic_int_disable/29 (524845000 (estimated locally),0.49 per call) cpu_get_irq_number/37 (inlined) (1073741824 (estimated locally),1.00 per call) 
+cpu_enable_int/12 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: clic_int_enable/28 (280634621 (estimated locally),0.26 per call) clic_get_irq_handler/27 (524845000 (estimated locally),0.49 per call) cpu_get_irq_number/38 (inlined) (1073741824 (estimated locally),1.00 per call) 
+cpu_register_int/11 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.5/35 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: clic_int_handler_regist/26 (8524654 (estimated locally),0.01 per call) clic_clear_int_pending/25 (17845204 (estimated locally),0.02 per call) clic_set_vector_mode/24 (37356508 (estimated locally),0.03 per call) clic_set_priority/23 (78200769 (estimated locally),0.07 per call) clic_set_trig_type/22 (163702677 (estimated locally),0.15 per call) cpu_get_irq_number/10 (inlined) (1073741822 (estimated locally),1.00 per call) 
+cpu_get_irq_number/10 (cpu_get_irq_number)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 37
+  References: CSWTCH.2/34 (read) 
+  Referring: 
+  Function cpu_get_irq_number/10 is inline copy in cpu_register_int/11
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: cpu_register_int/11 (inlined) (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+default_trap_handler/9 (default_trap_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: secboot_cpu_excpt_handler/21 (1073741824 (estimated locally),1.00 per call) 
+Trivially needed variables: CSWTCH.5/35 CSWTCH.2/34
+Removing variables:
+
+Final Symbol table:
+
+CSWTCH.5/35 (CSWTCH.5)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.CSWTCH.5 (implicit_section) artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+CSWTCH.2/34 (CSWTCH.2)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.CSWTCH.2 (implicit_section) artificial
+  Aux: @0x7f50d033cd00
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+clic_init/33 (clic_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pmp_config_set/32 (pmp_config_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pmp_addr_set/30 (pmp_addr_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_int_disable/29 (clic_int_disable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_int_enable/28 (clic_int_enable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_get_irq_handler/27 (clic_get_irq_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_int_handler_regist/26 (clic_int_handler_regist)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_clear_int_pending/25 (clic_clear_int_pending)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_set_vector_mode/24 (clic_set_vector_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_set_priority/23 (clic_set_priority)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+clic_set_trig_type/22 (clic_set_trig_type)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secboot_cpu_excpt_handler/21 (secboot_cpu_excpt_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_platform_init/20 (cpu_platform_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_platform_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_get_pmp_count/19 (cpu_get_pmp_count)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_get_pmp_count (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+cpu_config_pmp/18 (cpu_config_pmp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_config_pmp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_exit_critical/17 (cpu_exit_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_exit_critical (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/16 (cpu_enter_critical)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_enter_critical (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/15 (cpu_disable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_disable_global_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_global_int/14 (cpu_enable_global_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_enable_global_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_int/13 (cpu_disable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_disable_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_int/12 (cpu_enable_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_enable_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+cpu_register_int/11 (cpu_register_int)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.cpu_register_int (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+default_trap_handler/9 (default_trap_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.default_trap_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

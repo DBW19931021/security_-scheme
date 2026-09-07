@@ -1,0 +1,3019 @@
+Trivially needed symbols: secboot_enable_boot_fw/42 secboot_boot_fw/41 secboot_entry/40 secboot_check_uid/39 secboot_load_patch/38 secboot_init_sensor/37 secboot_get_uart_baudrate_div/36 secboot_check_hw_version/35 secboot_cpu_excpt_handler/34 fid_delay_get_random/33 fid_panic_callback/32 secboot_uart_recv_cb/31 secboot_sensor_rsp/30 secboot_start_randclk/29 wdg_timeout_cb/28 secboot_do_self_test/27 secboot_set_self_test_emu_err/26 secboot_report_error/25 secboot_get_self_test_type/24 g_otp_default_keyid_map/23 g_ehsm_fw_entry/22 g_boot_fw_enable/21
+
+
+Initial Symbol table:
+
+sysreg_ahb_dma_cfg/74 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+uart_deinit/73 (uart_deinit)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+cpu_disable_global_int/72 (cpu_disable_global_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+watchdog_stop/71 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+fid_delay/70 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 secboot_boot_fw/41 
+  Calls: 
+memset_/69 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/16 
+  Calls: 
+sch_start/68 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_feed/67 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+mailbox_init/66 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+emu_init/65 (emu_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otpkey_register_keyid_map/64 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+uart_init/63 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_start/62 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_init/61 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otp_init/60 (otp_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+cpu_platform_init/59 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+get_uint32/58 (get_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+util_crc32/57 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+otp_read/56 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+sysreg_soc_reset/55 (sysreg_soc_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+sysreg_hsm_reset/54 (sysreg_hsm_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+otpdata_delete_all_keys/53 (otpdata_delete_all_keys)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+randclk_start/52 (randclk_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_start_randclk/29 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fid_delay_get_random/33 secboot_start_randclk/29 
+  Calls: 
+selftest_test_alg/50 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+debug_printf/49 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: 
+selftest_get_test_result/48 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_set_self_test_emu_err/26 
+  Calls: 
+sysreg_get_life_cycle/47 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_report_error/25 
+  Calls: 
+debug_flush/46 (debug_flush)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+emu_trigger_fw_error/45 (emu_trigger_fw_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_check_hw_version/35 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_report_error/25 
+  Calls: 
+sysreg_set_status/44 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 secboot_report_error/25 secboot_report_error/25 
+  Calls: 
+sysreg_get_status/43 (sysreg_get_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+secboot_enable_boot_fw/42 (secboot_enable_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: g_boot_fw_enable/21 (write) g_ehsm_fw_entry/22 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/41 (secboot_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7ee0
+  References: g_boot_fw_enable/21 (read) g_boot_fw_enable/21 (read) g_ehsm_fw_entry/22 (read) g_ehsm_fw_entry/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_ahb_dma_cfg/74 uart_deinit/73 cpu_disable_global_int/72 watchdog_stop/71 fid_delay/70 fid_delay/70 
+   Indirect callnum speculative call targets: 0
+secboot_entry/40 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7dd0
+  References: wdg_timeout_cb/28 (addr) secboot_uart_recv_cb/31 (addr) g_otp_default_keyid_map/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sch_start/68 sysreg_set_status/44 watchdog_feed/67 secboot_do_self_test/27 secboot_check_uid/39 secboot_start_randclk/29 sysreg_read_fw_ctrl_bits/8 mailbox_init/66 emu_init/65 secboot_init_sensor/37 secboot_load_patch/38 otpkey_register_keyid_map/64 secboot_check_hw_version/35 uart_init/63 secboot_get_uart_baudrate_div/36 sysreg_read_fw_ctrl_bits/8 watchdog_start/62 watchdog_init/61 sysreg_read_fw_ctrl_bits/8 secboot_report_error/25 otp_init/60 util_memset/16 cpu_platform_init/59 
+secboot_check_uid/39 (secboot_check_uid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 get_uint32/58 util_crc32/57 otp_read/56 sysreg_get_life_cycle/47 
+secboot_load_patch/38 (secboot_load_patch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_init_sensor/37 (secboot_init_sensor)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_get_uart_baudrate_div/36 (secboot_get_uart_baudrate_div)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_check_hw_version/35 (secboot_check_hw_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 
+secboot_cpu_excpt_handler/34 (secboot_cpu_excpt_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+fid_delay_get_random/33 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_get_rand/51 
+fid_panic_callback/32 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+secboot_uart_recv_cb/31 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  Aux: @0x7f49141d7440
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_sensor_rsp/30 (secboot_sensor_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_soc_reset/55 sysreg_hsm_reset/54 otpdata_delete_all_keys/53 debug_printf/49 
+secboot_start_randclk/29 (secboot_start_randclk)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: randclk_start/52 cpt_get_rand/51 
+wdg_timeout_cb/28 (wdg_timeout_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  Aux: @0x7f49141d7110
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 debug_printf/49 
+secboot_do_self_test/27 (secboot_do_self_test)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141d7000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: secboot_set_self_test_emu_err/26 selftest_test_alg/50 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 selftest_test_alg/50 sysreg_read_fw_ctrl_bits/8 
+secboot_set_self_test_emu_err/26 (secboot_set_self_test_emu_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141aabb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 
+  Calls: secboot_report_error/25 debug_printf/49 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 selftest_get_test_result/48 
+secboot_report_error/25 (secboot_report_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141aaee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_cpu_excpt_handler/34 fid_panic_callback/32 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: sysreg_get_life_cycle/47 debug_flush/46 sysreg_set_status/44 emu_trigger_fw_error/45 sysreg_set_status/44 sysreg_get_status/43 
+secboot_get_self_test_type/24 (secboot_get_self_test_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141aadd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+g_otp_default_keyid_map/23 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f49141aacc0
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_ehsm_fw_entry/22 (g_ehsm_fw_entry)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7f49141c7300
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_boot_fw_enable/21 (g_boot_fw_enable)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7f49141c7280
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_write_volatile_u32/20 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/19 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/18 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/17 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/16 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f49141d7dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: memset_/69 
+util_memcpy/15 (util_memcpy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+check_addr_not_word_align/14 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/13 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/12 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/11 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/10 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+filename/9 (filename)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_read_fw_ctrl_bits/8 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f49141d7000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_entry/40 secboot_entry/40 secboot_do_self_test/27 secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/20 util_read_volatile_u32/19 util_u32_copy/18 util_memcmp/17 util_memcpy/15 check_addr_not_word_align/14 GET_BYTE_LEN/13 GET_WORD_LEN/12 GET_MAX_LEN/11 CAST2UINT32/10 filename/9 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+sysreg_ahb_dma_cfg/74 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+uart_deinit/73 (uart_deinit)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+cpu_disable_global_int/72 (cpu_disable_global_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+watchdog_stop/71 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+fid_delay/70 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 secboot_boot_fw/41 
+  Calls: 
+memset_/69 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/16 
+  Calls: 
+sch_start/68 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_feed/67 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+mailbox_init/66 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+emu_init/65 (emu_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otpkey_register_keyid_map/64 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+uart_init/63 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_start/62 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_init/61 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otp_init/60 (otp_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+cpu_platform_init/59 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+get_uint32/58 (get_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+util_crc32/57 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+otp_read/56 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+sysreg_soc_reset/55 (sysreg_soc_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+sysreg_hsm_reset/54 (sysreg_hsm_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+otpdata_delete_all_keys/53 (otpdata_delete_all_keys)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+randclk_start/52 (randclk_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_start_randclk/29 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fid_delay_get_random/33 secboot_start_randclk/29 
+  Calls: 
+selftest_test_alg/50 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+debug_printf/49 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: 
+selftest_get_test_result/48 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_set_self_test_emu_err/26 
+  Calls: 
+sysreg_get_life_cycle/47 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_report_error/25 
+  Calls: 
+debug_flush/46 (debug_flush)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+emu_trigger_fw_error/45 (emu_trigger_fw_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_check_hw_version/35 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_report_error/25 
+  Calls: 
+sysreg_set_status/44 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 secboot_report_error/25 secboot_report_error/25 
+  Calls: 
+sysreg_get_status/43 (sysreg_get_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+secboot_enable_boot_fw/42 (secboot_enable_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_boot_fw_enable/21 (write) g_ehsm_fw_entry/22 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/41 (secboot_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_boot_fw_enable/21 (read) g_boot_fw_enable/21 (read) g_ehsm_fw_entry/22 (read) g_ehsm_fw_entry/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_ahb_dma_cfg/74 uart_deinit/73 cpu_disable_global_int/72 watchdog_stop/71 fid_delay/70 fid_delay/70 
+   Indirect callnum speculative call targets: 0
+secboot_entry/40 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: wdg_timeout_cb/28 (addr) secboot_uart_recv_cb/31 (addr) g_otp_default_keyid_map/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sch_start/68 sysreg_set_status/44 watchdog_feed/67 secboot_do_self_test/27 secboot_check_uid/39 secboot_start_randclk/29 sysreg_read_fw_ctrl_bits/8 mailbox_init/66 emu_init/65 secboot_init_sensor/37 secboot_load_patch/38 otpkey_register_keyid_map/64 secboot_check_hw_version/35 uart_init/63 secboot_get_uart_baudrate_div/36 sysreg_read_fw_ctrl_bits/8 watchdog_start/62 watchdog_init/61 sysreg_read_fw_ctrl_bits/8 secboot_report_error/25 otp_init/60 util_memset/16 cpu_platform_init/59 
+secboot_check_uid/39 (secboot_check_uid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 get_uint32/58 util_crc32/57 otp_read/56 sysreg_get_life_cycle/47 
+secboot_load_patch/38 (secboot_load_patch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_init_sensor/37 (secboot_init_sensor)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_get_uart_baudrate_div/36 (secboot_get_uart_baudrate_div)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_check_hw_version/35 (secboot_check_hw_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 
+secboot_cpu_excpt_handler/34 (secboot_cpu_excpt_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+fid_delay_get_random/33 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_get_rand/51 
+fid_panic_callback/32 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+secboot_uart_recv_cb/31 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_sensor_rsp/30 (secboot_sensor_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_soc_reset/55 sysreg_hsm_reset/54 otpdata_delete_all_keys/53 debug_printf/49 
+secboot_start_randclk/29 (secboot_start_randclk)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: randclk_start/52 cpt_get_rand/51 
+wdg_timeout_cb/28 (wdg_timeout_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 debug_printf/49 
+secboot_do_self_test/27 (secboot_do_self_test)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: secboot_set_self_test_emu_err/26 selftest_test_alg/50 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 selftest_test_alg/50 sysreg_read_fw_ctrl_bits/8 
+secboot_set_self_test_emu_err/26 (secboot_set_self_test_emu_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 
+  Calls: secboot_report_error/25 debug_printf/49 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 selftest_get_test_result/48 
+secboot_report_error/25 (secboot_report_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_cpu_excpt_handler/34 fid_panic_callback/32 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: sysreg_get_life_cycle/47 debug_flush/46 sysreg_set_status/44 emu_trigger_fw_error/45 sysreg_set_status/44 sysreg_get_status/43 
+secboot_get_self_test_type/24 (secboot_get_self_test_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+g_otp_default_keyid_map/23 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_ehsm_fw_entry/22 (g_ehsm_fw_entry)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_boot_fw_enable/21 (g_boot_fw_enable)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/16 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: memset_/69 
+sysreg_read_fw_ctrl_bits/8 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_entry/40 secboot_entry/40 secboot_do_self_test/27 secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+
+
+Initial Symbol table:
+
+sysreg_ahb_dma_cfg/74 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+uart_deinit/73 (uart_deinit)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+cpu_disable_global_int/72 (cpu_disable_global_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+watchdog_stop/71 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+fid_delay/70 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 secboot_boot_fw/41 
+  Calls: 
+memset_/69 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/16 
+  Calls: 
+sch_start/68 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_feed/67 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+mailbox_init/66 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+emu_init/65 (emu_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otpkey_register_keyid_map/64 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+uart_init/63 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_start/62 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_init/61 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otp_init/60 (otp_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+cpu_platform_init/59 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+get_uint32/58 (get_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+util_crc32/57 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+otp_read/56 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+sysreg_soc_reset/55 (sysreg_soc_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+sysreg_hsm_reset/54 (sysreg_hsm_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+otpdata_delete_all_keys/53 (otpdata_delete_all_keys)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+randclk_start/52 (randclk_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_start_randclk/29 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fid_delay_get_random/33 secboot_start_randclk/29 
+  Calls: 
+selftest_test_alg/50 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+debug_printf/49 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: 
+selftest_get_test_result/48 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_set_self_test_emu_err/26 
+  Calls: 
+sysreg_get_life_cycle/47 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_report_error/25 
+  Calls: 
+debug_flush/46 (debug_flush)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+emu_trigger_fw_error/45 (emu_trigger_fw_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_check_hw_version/35 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_report_error/25 
+  Calls: 
+sysreg_set_status/44 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 secboot_report_error/25 secboot_report_error/25 
+  Calls: 
+sysreg_get_status/43 (sysreg_get_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+secboot_enable_boot_fw/42 (secboot_enable_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_boot_fw_enable/21 (write) g_ehsm_fw_entry/22 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/41 (secboot_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_boot_fw_enable/21 (read) g_boot_fw_enable/21 (read) g_ehsm_fw_entry/22 (read) g_ehsm_fw_entry/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_ahb_dma_cfg/74 uart_deinit/73 cpu_disable_global_int/72 watchdog_stop/71 fid_delay/70 fid_delay/70 
+   Indirect callnum speculative call targets: 0
+secboot_entry/40 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: wdg_timeout_cb/28 (addr) secboot_uart_recv_cb/31 (addr) g_otp_default_keyid_map/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sch_start/68 sysreg_set_status/44 watchdog_feed/67 secboot_do_self_test/27 secboot_check_uid/39 secboot_start_randclk/29 sysreg_read_fw_ctrl_bits/8 mailbox_init/66 emu_init/65 secboot_init_sensor/37 secboot_load_patch/38 otpkey_register_keyid_map/64 secboot_check_hw_version/35 uart_init/63 secboot_get_uart_baudrate_div/36 sysreg_read_fw_ctrl_bits/8 watchdog_start/62 watchdog_init/61 sysreg_read_fw_ctrl_bits/8 secboot_report_error/25 otp_init/60 util_memset/16 cpu_platform_init/59 
+secboot_check_uid/39 (secboot_check_uid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 get_uint32/58 util_crc32/57 otp_read/56 sysreg_get_life_cycle/47 
+secboot_load_patch/38 (secboot_load_patch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_init_sensor/37 (secboot_init_sensor)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_get_uart_baudrate_div/36 (secboot_get_uart_baudrate_div)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_check_hw_version/35 (secboot_check_hw_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 
+secboot_cpu_excpt_handler/34 (secboot_cpu_excpt_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+fid_delay_get_random/33 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_get_rand/51 
+fid_panic_callback/32 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+secboot_uart_recv_cb/31 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_sensor_rsp/30 (secboot_sensor_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_soc_reset/55 sysreg_hsm_reset/54 otpdata_delete_all_keys/53 debug_printf/49 
+secboot_start_randclk/29 (secboot_start_randclk)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: randclk_start/52 cpt_get_rand/51 
+wdg_timeout_cb/28 (wdg_timeout_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 debug_printf/49 
+secboot_do_self_test/27 (secboot_do_self_test)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: secboot_set_self_test_emu_err/26 selftest_test_alg/50 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 selftest_test_alg/50 sysreg_read_fw_ctrl_bits/8 
+secboot_set_self_test_emu_err/26 (secboot_set_self_test_emu_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 
+  Calls: secboot_report_error/25 debug_printf/49 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 selftest_get_test_result/48 
+secboot_report_error/25 (secboot_report_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_cpu_excpt_handler/34 fid_panic_callback/32 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: sysreg_get_life_cycle/47 debug_flush/46 sysreg_set_status/44 emu_trigger_fw_error/45 sysreg_set_status/44 sysreg_get_status/43 
+secboot_get_self_test_type/24 (secboot_get_self_test_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+g_otp_default_keyid_map/23 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_ehsm_fw_entry/22 (g_ehsm_fw_entry)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_boot_fw_enable/21 (g_boot_fw_enable)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/16 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: memset_/69 
+sysreg_read_fw_ctrl_bits/8 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_entry/40 secboot_entry/40 secboot_do_self_test/27 secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+sysreg_ahb_dma_cfg/74 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+uart_deinit/73 (uart_deinit)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+cpu_disable_global_int/72 (cpu_disable_global_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+watchdog_stop/71 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 
+  Calls: 
+fid_delay/70 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 secboot_boot_fw/41 
+  Calls: 
+memset_/69 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/16 
+  Calls: 
+sch_start/68 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_feed/67 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+mailbox_init/66 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+emu_init/65 (emu_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otpkey_register_keyid_map/64 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+uart_init/63 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_start/62 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+watchdog_init/61 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+otp_init/60 (otp_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+cpu_platform_init/59 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+get_uint32/58 (get_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+util_crc32/57 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+otp_read/56 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 
+  Calls: 
+sysreg_soc_reset/55 (sysreg_soc_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+sysreg_hsm_reset/54 (sysreg_hsm_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+otpdata_delete_all_keys/53 (otpdata_delete_all_keys)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 
+  Calls: 
+randclk_start/52 (randclk_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_start_randclk/29 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: fid_delay_get_random/33 secboot_start_randclk/29 
+  Calls: 
+selftest_test_alg/50 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+debug_printf/49 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: 
+selftest_get_test_result/48 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_set_self_test_emu_err/26 
+  Calls: 
+sysreg_get_life_cycle/47 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_report_error/25 
+  Calls: 
+debug_flush/46 (debug_flush)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+emu_trigger_fw_error/45 (emu_trigger_fw_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 secboot_check_hw_version/35 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_set_self_test_emu_err/26 secboot_report_error/25 
+  Calls: 
+sysreg_set_status/44 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_entry/40 secboot_report_error/25 secboot_report_error/25 
+  Calls: 
+sysreg_get_status/43 (sysreg_get_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 
+  Calls: 
+secboot_enable_boot_fw/42 (secboot_enable_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_boot_fw_enable/21 (write) g_ehsm_fw_entry/22 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/41 (secboot_boot_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_boot_fw_enable/21 (read) g_boot_fw_enable/21 (read) g_ehsm_fw_entry/22 (read) g_ehsm_fw_entry/22 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_ahb_dma_cfg/74 uart_deinit/73 cpu_disable_global_int/72 watchdog_stop/71 fid_delay/70 fid_delay/70 
+   Indirect callnum speculative call targets: 0
+secboot_entry/40 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: wdg_timeout_cb/28 (addr) secboot_uart_recv_cb/31 (addr) g_otp_default_keyid_map/23 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sch_start/68 sysreg_set_status/44 watchdog_feed/67 secboot_do_self_test/27 secboot_check_uid/39 secboot_start_randclk/29 sysreg_read_fw_ctrl_bits/8 mailbox_init/66 emu_init/65 secboot_init_sensor/37 secboot_load_patch/38 otpkey_register_keyid_map/64 secboot_check_hw_version/35 uart_init/63 secboot_get_uart_baudrate_div/36 sysreg_read_fw_ctrl_bits/8 watchdog_start/62 watchdog_init/61 sysreg_read_fw_ctrl_bits/8 secboot_report_error/25 otp_init/60 util_memset/16 cpu_platform_init/59 
+secboot_check_uid/39 (secboot_check_uid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 get_uint32/58 util_crc32/57 otp_read/56 sysreg_get_life_cycle/47 
+secboot_load_patch/38 (secboot_load_patch)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_init_sensor/37 (secboot_init_sensor)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_get_uart_baudrate_div/36 (secboot_get_uart_baudrate_div)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: 
+secboot_check_hw_version/35 (secboot_check_hw_version)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: emu_trigger_fw_error/45 
+secboot_cpu_excpt_handler/34 (secboot_cpu_excpt_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+fid_delay_get_random/33 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpt_get_rand/51 
+fid_panic_callback/32 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 
+secboot_uart_recv_cb/31 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+secboot_sensor_rsp/30 (secboot_sensor_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: sysreg_soc_reset/55 sysreg_hsm_reset/54 otpdata_delete_all_keys/53 debug_printf/49 
+secboot_start_randclk/29 (secboot_start_randclk)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: randclk_start/52 cpt_get_rand/51 
+wdg_timeout_cb/28 (wdg_timeout_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 debug_printf/49 
+secboot_do_self_test/27 (secboot_do_self_test)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: secboot_set_self_test_emu_err/26 selftest_test_alg/50 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 secboot_get_self_test_type/24 sysreg_read_fw_ctrl_bits/8 selftest_test_alg/50 sysreg_read_fw_ctrl_bits/8 
+secboot_set_self_test_emu_err/26 (secboot_set_self_test_emu_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 
+  Calls: secboot_report_error/25 debug_printf/49 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 emu_trigger_fw_error/45 selftest_get_test_result/48 
+secboot_report_error/25 (secboot_report_error)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_cpu_excpt_handler/34 fid_panic_callback/32 wdg_timeout_cb/28 secboot_set_self_test_emu_err/26 
+  Calls: sysreg_get_life_cycle/47 debug_flush/46 sysreg_set_status/44 emu_trigger_fw_error/45 sysreg_set_status/44 sysreg_get_status/43 
+secboot_get_self_test_type/24 (secboot_get_self_test_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+g_otp_default_keyid_map/23 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_ehsm_fw_entry/22 (g_ehsm_fw_entry)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_boot_fw_enable/21 (g_boot_fw_enable)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/16 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 
+  Calls: memset_/69 
+sysreg_read_fw_ctrl_bits/8 (sysreg_read_fw_ctrl_bits)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: secboot_entry/40 secboot_entry/40 secboot_entry/40 secboot_do_self_test/27 secboot_do_self_test/27 secboot_do_self_test/27 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+secboot_uart_recv_cb/85 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 84
+  References: 
+  Referring: 
+  Function secboot_uart_recv_cb/85 is inline copy in secboot_load_patch/38
+  Clone of secboot_uart_recv_cb/31
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local icf_merged nonfreeing_fn optimize_size
+  Called by: secboot_load_patch/38 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+secboot_uart_recv_cb/84 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 31
+  previous sharing asm name: 85
+  References: 
+  Referring: 
+  Function secboot_uart_recv_cb/84 is inline copy in secboot_init_sensor/37
+  Clone of secboot_uart_recv_cb/31
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local icf_merged nonfreeing_fn optimize_size
+  Called by: secboot_init_sensor/37 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+secboot_check_uid.part.0/79 (secboot_check_uid.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function secboot_check_uid.part.0/79 is inline copy in secboot_check_uid/39
+  Availability: local
+  Function flags: count:524845000 (estimated locally) body local split_part optimize_size
+  Called by: secboot_check_uid/39 (inlined) (524845000 (estimated locally),0.49 per call) 
+  Calls: otp_read/56 (524845000 (estimated locally),0.49 per call) util_crc32/57 (173198849 (estimated locally),0.16 per call) get_uint32/58 (173198849 (estimated locally),0.16 per call) emu_trigger_fw_error/45 (84659597 (estimated locally),0.08 per call) 
+CSWTCH.12/75 (CSWTCH.12)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: secboot_get_self_test_type/24 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+sysreg_ahb_dma_cfg/74 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 (10996662 (estimated locally),0.01 per call) 
+  Calls: 
+uart_deinit/73 (uart_deinit)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 (10996662 (estimated locally),0.01 per call) 
+  Calls: 
+cpu_disable_global_int/72 (cpu_disable_global_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 (10996662 (estimated locally),0.01 per call) 
+  Calls: 
+watchdog_stop/71 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 (10996662 (estimated locally),0.01 per call) 
+  Calls: 
+fid_delay/70 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_boot_fw/41 (108662672 (estimated locally),0.10 per call) secboot_boot_fw/41 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+memset_/69 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+sch_start/68 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+watchdog_feed/67 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+mailbox_init/66 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+emu_init/65 (emu_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+otpkey_register_keyid_map/64 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+uart_init/63 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (3508266 (estimated locally),0.33 per call) 
+  Calls: 
+watchdog_start/62 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (3508266 (estimated locally),0.33 per call) 
+  Calls: 
+watchdog_init/61 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (3508266 (estimated locally),0.33 per call) 
+  Calls: 
+otp_init/60 (otp_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_platform_init/59 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+get_uint32/58 (get_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_check_uid.part.0/79 (173198849 (estimated locally),0.16 per call) 
+  Calls: 
+util_crc32/57 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_check_uid.part.0/79 (173198849 (estimated locally),0.16 per call) 
+  Calls: 
+otp_read/56 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_check_uid.part.0/79 (524845000 (estimated locally),0.49 per call) 
+  Calls: 
+sysreg_soc_reset/55 (sysreg_soc_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+sysreg_hsm_reset/54 (sysreg_hsm_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+otpdata_delete_all_keys/53 (otpdata_delete_all_keys)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+randclk_start/52 (randclk_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_start_randclk/29 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: fid_delay_get_random/33 (1073741824 (estimated locally),1.00 per call) secboot_start_randclk/29 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+selftest_test_alg/50 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_do_self_test/27 (332803443 (estimated locally),0.31 per call) secboot_do_self_test/27 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+debug_printf/49 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_sensor_rsp/30 (1073741824 (estimated locally),1.00 per call) secboot_set_self_test_emu_err/26 (1073741824 (estimated locally),1.00 per call) wdg_timeout_cb/28 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+selftest_get_test_result/48 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_set_self_test_emu_err/26 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sysreg_get_life_cycle/47 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_check_uid/39 (1073741824 (estimated locally),1.00 per call) secboot_report_error/25 (16107739 (estimated locally),1.00 per call) 
+  Calls: 
+debug_flush/46 (debug_flush)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 (16107739 (estimated locally),1.00 per call) 
+  Calls: 
+emu_trigger_fw_error/45 (emu_trigger_fw_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_check_uid.part.0/79 (84659597 (estimated locally),0.08 per call) secboot_check_hw_version/35 (1003757478 (estimated locally),0.93 per call) secboot_set_self_test_emu_err/26 (354334800 (estimated locally),0.33 per call) secboot_set_self_test_emu_err/26 (354334800 (estimated locally),0.33 per call) secboot_set_self_test_emu_err/26 (354334800 (estimated locally),0.33 per call) secboot_set_self_test_emu_err/26 (354334800 (estimated locally),0.33 per call) secboot_report_error/25 (7873463 (estimated locally),0.49 per call) 
+  Calls: 
+sysreg_set_status/44 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) secboot_report_error/25 (16107739 (estimated locally),1.00 per call) secboot_report_error/25 (5315554 (estimated locally),0.33 per call) 
+  Calls: 
+sysreg_get_status/43 (sysreg_get_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: secboot_report_error/25 (16107739 (estimated locally),1.00 per call) 
+  Calls: 
+secboot_enable_boot_fw/42 (secboot_enable_boot_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_boot_fw_enable/21 (write) g_ehsm_fw_entry/22 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/41 (secboot_boot_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_boot_fw_enable/21 (read) g_boot_fw_enable/21 (read) g_ehsm_fw_entry/22 (read) g_ehsm_fw_entry/22 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sysreg_ahb_dma_cfg/74 (10996662 (estimated locally),0.01 per call) uart_deinit/73 (10996662 (estimated locally),0.01 per call) cpu_disable_global_int/72 (10996662 (estimated locally),0.01 per call) watchdog_stop/71 (10996662 (estimated locally),0.01 per call) fid_delay/70 (108662672 (estimated locally),0.10 per call) fid_delay/70 (1073741822 (estimated locally),1.00 per call) 
+   Indirect call(7697664 (estimated locally),0.01 per call) num speculative call targets: 0
+secboot_entry/40 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: wdg_timeout_cb/28 (addr) secboot_uart_recv_cb/31 (addr) g_otp_default_keyid_map/23 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) body executed_once optimize_size
+  Called by: 
+  Calls: sch_start/68 (10631108 (estimated locally),1.00 per call) sysreg_set_status/44 (10631108 (estimated locally),1.00 per call) watchdog_feed/67 (10631108 (estimated locally),1.00 per call) secboot_do_self_test/27 (10631108 (estimated locally),1.00 per call) secboot_check_uid/39 (10631108 (estimated locally),1.00 per call) secboot_start_randclk/29 (10631108 (estimated locally),1.00 per call) mailbox_init/66 (10631108 (estimated locally),1.00 per call) emu_init/65 (10631108 (estimated locally),1.00 per call) otpkey_register_keyid_map/64 (10631108 (estimated locally),1.00 per call) secboot_check_hw_version/35 (10631108 (estimated locally),1.00 per call) uart_init/63 (3508266 (estimated locally),0.33 per call) secboot_get_uart_baudrate_div/36 (3508266 (estimated locally),0.33 per call) watchdog_start/62 (3508266 (estimated locally),0.33 per call) watchdog_init/61 (3508266 (estimated locally),0.33 per call) secboot_report_error/25 (5196486 (estimated locally),0.49 per call) otp_init/60 (10631108 (estimated locally),1.00 per call) memset_/69 (10631108 (estimated locally),1.00 per call) cpu_platform_init/59 (10631108 (estimated locally),1.00 per call) 
+secboot_check_uid/39 (secboot_check_uid)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: secboot_check_uid.part.0/79 (inlined) (524845000 (estimated locally),0.49 per call) sysreg_get_life_cycle/47 (1073741824 (estimated locally),1.00 per call) 
+secboot_load_patch/38 (secboot_load_patch)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.secboot_load_patch (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged nonfreeing_fn optimize_size
+  Called by: 
+  Calls: secboot_uart_recv_cb/85 (inlined) (1073741824 (estimated locally),1.00 per call) 
+secboot_init_sensor/37 (secboot_init_sensor)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.secboot_init_sensor (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged nonfreeing_fn optimize_size
+  Called by: 
+  Calls: secboot_uart_recv_cb/84 (inlined) (1073741824 (estimated locally),1.00 per call) 
+secboot_get_uart_baudrate_div/36 (secboot_get_uart_baudrate_div)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: secboot_entry/40 (3508266 (estimated locally),0.33 per call) 
+  Calls: 
+secboot_check_hw_version/35 (secboot_check_hw_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: emu_trigger_fw_error/45 (1003757478 (estimated locally),0.93 per call) 
+secboot_cpu_excpt_handler/34 (secboot_cpu_excpt_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 (1073741824 (estimated locally),1.00 per call) 
+fid_delay_get_random/33 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpt_get_rand/51 (1073741824 (estimated locally),1.00 per call) 
+fid_panic_callback/32 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 (1073741824 (estimated locally),1.00 per call) 
+secboot_uart_recv_cb/31 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  previous sharing asm name: 84
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_sensor_rsp/30 (secboot_sensor_rsp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: sysreg_soc_reset/55 (354334800 (estimated locally),0.33 per call) sysreg_hsm_reset/54 (354334800 (estimated locally),0.33 per call) otpdata_delete_all_keys/53 (354334800 (estimated locally),0.33 per call) debug_printf/49 (1073741824 (estimated locally),1.00 per call) 
+secboot_start_randclk/29 (secboot_start_randclk)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: randclk_start/52 (354334800 (estimated locally),0.33 per call) cpt_get_rand/51 (354334800 (estimated locally),0.33 per call) 
+wdg_timeout_cb/28 (wdg_timeout_cb)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  Address is taken.
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: secboot_report_error/25 (1073741824 (estimated locally),1.00 per call) debug_printf/49 (1073741824 (estimated locally),1.00 per call) 
+secboot_do_self_test/27 (secboot_do_self_test)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: secboot_entry/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: secboot_set_self_test_emu_err/26 (351917387 (estimated locally),0.33 per call) selftest_test_alg/50 (332803443 (estimated locally),0.31 per call) secboot_get_self_test_type/24 (332803443 (estimated locally),0.31 per call) secboot_get_self_test_type/24 (332803443 (estimated locally),0.31 per call) selftest_test_alg/50 (217325344 (estimated locally),0.20 per call) 
+secboot_set_self_test_emu_err/26 (secboot_set_self_test_emu_err)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: secboot_do_self_test/27 (351917387 (estimated locally),0.33 per call) 
+  Calls: secboot_report_error/25 (1073741824 (estimated locally),1.00 per call) debug_printf/49 (1073741824 (estimated locally),1.00 per call) emu_trigger_fw_error/45 (354334800 (estimated locally),0.33 per call) emu_trigger_fw_error/45 (354334800 (estimated locally),0.33 per call) emu_trigger_fw_error/45 (354334800 (estimated locally),0.33 per call) emu_trigger_fw_error/45 (354334800 (estimated locally),0.33 per call) selftest_get_test_result/48 (1073741824 (estimated locally),1.00 per call) 
+secboot_report_error/25 (secboot_report_error)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:16107739 (estimated locally) body optimize_size
+  Called by: secboot_entry/40 (5196486 (estimated locally),0.49 per call) secboot_cpu_excpt_handler/34 (1073741824 (estimated locally),1.00 per call) fid_panic_callback/32 (1073741824 (estimated locally),1.00 per call) secboot_set_self_test_emu_err/26 (1073741824 (estimated locally),1.00 per call) wdg_timeout_cb/28 (1073741824 (estimated locally),1.00 per call) 
+  Calls: sysreg_get_life_cycle/47 (16107739 (estimated locally),1.00 per call) debug_flush/46 (16107739 (estimated locally),1.00 per call) sysreg_set_status/44 (16107739 (estimated locally),1.00 per call) emu_trigger_fw_error/45 (7873463 (estimated locally),0.49 per call) sysreg_set_status/44 (5315554 (estimated locally),0.33 per call) sysreg_get_status/43 (16107739 (estimated locally),1.00 per call) 
+secboot_get_self_test_type/24 (secboot_get_self_test_type)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: CSWTCH.12/75 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: secboot_do_self_test/27 (332803443 (estimated locally),0.31 per call) secboot_do_self_test/27 (332803443 (estimated locally),0.31 per call) 
+  Calls: 
+g_otp_default_keyid_map/23 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: secboot_entry/40 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+g_ehsm_fw_entry/22 (g_ehsm_fw_entry)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_boot_fw_enable/21 (g_boot_fw_enable)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: secboot_boot_fw/41 (read) secboot_boot_fw/41 (read) secboot_enable_boot_fw/42 (write) 
+  Availability: available
+  Varpool flags: initialized
+updating call of secboot_init_sensor/37 -> secboot_uart_recv_cb/84: secboot_uart_recv_cb (); [tail call]
+  updated to:secboot_uart_recv_cb (); [tail call]
+Trivially needed variables: CSWTCH.12/75 g_otp_default_keyid_map/23 g_ehsm_fw_entry/22 g_boot_fw_enable/21
+Removing variables:
+
+Final Symbol table:
+
+CSWTCH.12/75 (CSWTCH.12)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.12 (implicit_section) artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+sysreg_ahb_dma_cfg/74 (sysreg_ahb_dma_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uart_deinit/73 (uart_deinit)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_disable_global_int/72 (cpu_disable_global_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+watchdog_stop/71 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_delay/70 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/69 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sch_start/68 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+watchdog_feed/67 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mailbox_init/66 (mailbox_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+emu_init/65 (emu_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpkey_register_keyid_map/64 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uart_init/63 (uart_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+watchdog_start/62 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+watchdog_init/61 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otp_init/60 (otp_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_platform_init/59 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_uint32/58 (get_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_crc32/57 (util_crc32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otp_read/56 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_soc_reset/55 (sysreg_soc_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/54 (sysreg_hsm_reset)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+otpdata_delete_all_keys/53 (otpdata_delete_all_keys)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+randclk_start/52 (randclk_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpt_get_rand/51 (cpt_get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+selftest_test_alg/50 (selftest_test_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+debug_printf/49 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+selftest_get_test_result/48 (selftest_get_test_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/47 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+debug_flush/46 (debug_flush)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+emu_trigger_fw_error/45 (emu_trigger_fw_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/44 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/43 (sysreg_get_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secboot_enable_boot_fw/42 (secboot_enable_boot_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_enable_boot_fw (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/41 (secboot_boot_fw)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_boot_fw (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_entry/40 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_entry (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) executed_once optimize_size
+  Called by: 
+  Calls: 
+secboot_check_uid/39 (secboot_check_uid)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_check_uid (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_load_patch/38 (secboot_load_patch)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_load_patch (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_init_sensor/37 (secboot_init_sensor)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_init_sensor (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_get_uart_baudrate_div/36 (secboot_get_uart_baudrate_div)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_get_uart_baudrate_div (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_check_hw_version/35 (secboot_check_hw_version)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_check_hw_version (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_cpu_excpt_handler/34 (secboot_cpu_excpt_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_cpu_excpt_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fid_delay_get_random/33 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fid_delay_get_random (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+fid_panic_callback/32 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fid_panic_callback (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_uart_recv_cb/31 (secboot_uart_recv_cb)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_uart_recv_cb (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+secboot_sensor_rsp/30 (secboot_sensor_rsp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_sensor_rsp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_start_randclk/29 (secboot_start_randclk)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_start_randclk (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+wdg_timeout_cb/28 (wdg_timeout_cb)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.wdg_timeout_cb (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_do_self_test/27 (secboot_do_self_test)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_do_self_test (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_set_self_test_emu_err/26 (secboot_set_self_test_emu_err)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_set_self_test_emu_err (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_report_error/25 (secboot_report_error)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_report_error (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:16107739 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+secboot_get_self_test_type/24 (secboot_get_self_test_type)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_get_self_test_type (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+g_otp_default_keyid_map/23 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.g_otp_default_keyid_map (implicit_section)
+  Aux: @0x7f4914210a80
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+g_ehsm_fw_entry/22 (g_ehsm_fw_entry)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_ehsm_fw_entry (implicit_section)
+  Aux: @0x7f49141c7300
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_boot_fw_enable/21 (g_boot_fw_enable)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_boot_fw_enable (implicit_section)
+  Aux: @0x7f49141c7280
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

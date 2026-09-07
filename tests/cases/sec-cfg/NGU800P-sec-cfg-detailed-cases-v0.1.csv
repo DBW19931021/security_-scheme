@@ -1,0 +1,14 @@
+Test_ID,Scenario,Layer,Precondition,Stimulus,Expected,Current_State,Blocker,Evidence_State
+SECCFG-REG-001,地址与基本读,RTL_DV,"目标D0 RTL/CSR已冻结且Firewall授权",读取0x000至0x040,"17个32-bit寄存器无offset错位且窗口一致",BLOCKED,OPEN-CONFLICT-015,NOT_EXECUTED
+SECCFG-STATUS-001,eHSM启动阶段,MODEL_EMU,"状态位可控或可观察",依次驱动hardware/BL/FW/SoC verify done和error,"error优先于done且有界timeout；保存raw状态",READY_FOR_MODEL,,NOT_EXECUTED
+SECCFG-HWERR-001,硬件错误注入,RTL_DV,"支持ECC/TRNG/bus/watchdog注入",逐项注入已定义错误,"对应raw bit/IRQ/源清除/重触发一致；SEC_CFG不清错",READY_FOR_DV,,NOT_EXECUTED
+SECCFG-FWERR-001,固件错误注入,EMU_DV,"匹配build的BL/FW error表可用",注入BL/FW错误,"raw 64-bit与build关联；未知bit为INCONCLUSIVE",BLOCKED,OPEN-CONFLICT-015,NOT_EXECUTED
+SECCFG-LCS-001,生命周期编码,EMU_SILICON,"合法编码与切换策略冻结",覆盖TEST/DEV/MANU/USER/DEBUG/DESTROY和非法值,"lcs与status lifecycle一致；非法值fail-close",BLOCKED,OPEN-CONFLICT-015,NOT_EXECUTED
+SECCFG-UID-001,160-bit UID读取,EMU_SILICON,"UID-valid时刻冻结",连续读取uid0至uid4并与量产记录比较,"word/byte order明确且有效期内稳定一致",BLOCKED,OPEN-CONFLICT-015,NOT_EXECUTED
+SECCFG-DBG-001,Debug配置与输出,RTL_EMU,"scope/lock/LCS/认证和128-bit矩阵冻结",各LCS写cfg并观察输出和实际gate,"cfg/readback/output/consumer gate均符合策略",BLOCKED,OPEN-CONFLICT-015,NOT_EXECUTED
+SECCFG-FW-001,Firewall未授权访问,RTL_DV,"Firewall CSR和UserId绑定冻结",有效/保留UserId在hide开关下读写,"Slave无副作用且Firewall错误快照正确",BLOCKED,OPEN-CONFLICT-014,NOT_EXECUTED
+SECCFG-RO-001,RO写行为,RTL_DV,"受控DV环境",向所有RO offset写0/1/随机值,"状态不变且APB响应符合集成规格",READY_FOR_DV,,NOT_EXECUTED
+SECCFG-RESET-001,reset动态镜像,RTL_DV,"可控制porstn_async和外部状态",assert/release reset并变化状态源,"reset值与释放后动态重新采样时序符合RTL",READY_FOR_DV,,NOT_EXECUTED
+SECCFG-ATOMIC-001,跨32-bit一致性,RTL_DV,"可同时翻转高低word",在high-low-high读取中变化64-bit源,"结果与snapshot/CDC合同一致；无合同时只标BEST_EFFORT",BLOCKED,OPEN-CONFLICT-015,NOT_EXECUTED
+SECCFG-ORDER-001,阶段顺序防误判,MODEL_EMU,"可控制status序列",仅置hw_boot_done或其他非零位,"软件不把后续阶段误判ready",READY_FOR_MODEL,,NOT_EXECUTED
+

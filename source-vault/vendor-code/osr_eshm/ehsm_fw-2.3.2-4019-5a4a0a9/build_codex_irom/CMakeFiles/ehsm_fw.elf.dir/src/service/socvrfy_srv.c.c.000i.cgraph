@@ -1,0 +1,4335 @@
+Trivially needed symbols: socvrfy_check_ver_cnt/48 socvrfy_check_fw_header/47 socvrfy_get_and_verify_pubkey/46 socvrfy_srv_handler/45
+
+
+Initial Symbol table:
+
+memset_/84 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/15 
+  Calls: 
+otpkey_read_data/83 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+cpt_hash/82 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+misc_write_otp_data/81 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_BigNumCmp/80 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_cmp_sec/79 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+uint32_sleep/78 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_get_rand_fast/77 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_ske_dma_cmac/76 (cpt_ske_dma_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: 
+hash_get_digest_word_len/75 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+cpt_hash_dma/74 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+secp256r1/73 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: socvrfy_ecc_p256r1_verify_code_sign/26 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/72 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_ecc_p256r1_verify_code_sign/26 
+  Calls: 
+cpt_sm2_verify/71 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_sm2_signature/25 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/70 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_rsa_signature/24 
+  Calls: 
+cpt_hash_final/69 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_update_blocks/68 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_final/67 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_ctx_switch/66 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_update/65 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_hash_init/64 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_sm2_getZ/63 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_ske_dma_crypto/62 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_dec_image/30 fwverify_copy_data_dma/29 
+  Calls: 
+sysreg_get_fw_verify_alg/61 (sysreg_get_fw_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+sysreg_get_soc_verify_alg/60 (sysreg_get_soc_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_get_phyid/59 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_check_usage/58 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_verify_key/31 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otp_read/57 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_read_and_check_header/28 
+  Calls: 
+mmap_read_remote_data/56 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_get_sign_by_alg/35 socvrfy_read_and_check_header/28 
+  Calls: 
+sysreg_get_life_cycle/55 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 
+  Calls: 
+fid_panic/54 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_get_u32/53 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_inc_u32/52 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_delay/51 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_set_u32/50 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+memcpy_/49 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/14 
+  Calls: 
+socvrfy_check_ver_cnt/48 (socvrfy_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: uint32_BigNumCmp/80 uint32_BigNumCmp/80 util_memcpy/14 util_memcpy/14 
+socvrfy_check_fw_header/47 (socvrfy_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f93cd034770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_read_and_check_header/28 
+  Calls: socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 
+socvrfy_get_and_verify_pubkey/46 (socvrfy_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f93cd034660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_verify_pubkey/23 util_memcpy/14 util_memcpy/14 util_memcpy/14 
+socvrfy_srv_handler/45 (socvrfy_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f93cd034550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: socvrfy_vry_soc_fw/34 util_memcpy/14 
+socvrfy_data_sec_double_check/44 (socvrfy_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 util_memcpy/14 util_memcpy/14 
+socvrfy_check_param/43 (socvrfy_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+socvrfy_check_code_sign/42 (socvrfy_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+socvrfy_sym_verify_code_sign/41 (socvrfy_sym_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006770
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 socvrfy_data_sec_double_check/44 util_memcpy/14 fid_inc_u32/52 cpt_ske_dma_cmac/76 fid_inc_u32/52 fid_inc_u32/52 otpkey_get_phyid/59 socvrfy_get_sign_by_alg/35 util_memcpy/14 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_rsa_verify_code_sign/40 (socvrfy_rsa_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 util_memcpy/14 hash_get_digest_word_len/75 cpt_hash_dma/74 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_sm2_verify_code_sign/39 (socvrfy_sm2_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 socvrfy_calc_sm2_e_value/38 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_calc_sm2_e_value/38 (socvrfy_calc_sm2_e_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 
+socvrfy_calc_sm3_code_hash/37 (socvrfy_calc_sm3_code_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_final/69 cpt_hash_update/65 cpt_hash_ctx_switch/66 mmap_read_remote_data/56 cpt_hash_dma_update_blocks/68 util_memcpy/14 cpt_hash_dma_final/67 cpt_hash_ctx_switch/66 
+socvrfy_calc_sm3_header_hash/36 (socvrfy_calc_sm3_header_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_update/65 mmap_read_remote_data/56 cpt_hash_update/65 cpt_hash_init/64 cpt_sm2_getZ/63 
+socvrfy_get_sign_by_alg/35 (socvrfy_get_sign_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: mmap_read_remote_data/56 
+socvrfy_vry_soc_fw/34 (socvrfy_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034550
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_srv_handler/45 
+  Calls: fid_panic/54 fid_get_u32/53 fid_delay/51 fid_delay/51 fid_inc_u32/52 socvrfy_update_otp_ver_cnt/33 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_code_sign/42 fid_inc_u32/52 fid_delay/51 fid_delay/51 socvrfy_dec_image/30 fwverify_copy_data_dma/29 socvrfy_get_alg_and_key/32 fwverify_copy_data_dma/29 socvrfy_read_and_check_header/28 socvrfy_check_param/43 fid_set_u32/50 
+socvrfy_update_otp_ver_cnt/33 (socvrfy_update_otp_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034550
+  References: g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 misc_write_otp_data/81 uint32_BigNumCmp/80 fid_delay/51 util_memcpy/14 otp_read/57 
+socvrfy_get_alg_and_key/32 (socvrfy_get_alg_and_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_check_verify_key/31 socvrfy_get_dec_alg/22 sysreg_get_fw_verify_alg/61 otpkey_get_phyid/59 otpkey_check_usage/58 socvrfy_get_dec_alg/22 sysreg_get_soc_verify_alg/60 otpkey_get_phyid/59 otpkey_check_usage/58 
+socvrfy_check_verify_key/31 (socvrfy_check_verify_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: otpkey_check_usage/58 
+socvrfy_dec_image/30 (socvrfy_dec_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 fwverify_copy_data_dma/29 
+fwverify_copy_data_dma/29 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_dec_image/30 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 
+socvrfy_read_and_check_header/28 (socvrfy_read_and_check_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006660
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_fw_header/47 otp_read/57 fid_inc_u32/52 mmap_read_remote_data/56 fid_panic/54 fid_delay/51 fid_delay/51 sysreg_get_life_cycle/55 fid_delay/51 sysreg_get_life_cycle/55 
+socvrfy_verify_signature/27 (socvrfy_verify_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 
+socvrfy_ecc_p256r1_verify_code_sign/26 (socvrfy_ecc_p256r1_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006ee0
+  References: g_fw_verify_cfi/20 (addr) secp256r1/73 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_inc_u32/52 cpt_ecdsa_verify/72 fid_inc_u32/52 
+socvrfy_verify_sm2_signature/25 (socvrfy_verify_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006000
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_sm2_verify/71 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_rsa_signature/24 (socvrfy_verify_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd2a3ee0
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_rsa_ssa_pss_verify_by_msg_digest/70 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_pubkey/23 (socvrfy_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_and_verify_pubkey/46 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 otpkey_read_data/83 util_memset/15 cpt_hash/82 
+socvrfy_get_dec_alg/22 (socvrfy_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+socvrfy_header_is_valid/21 (socvrfy_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: util_memcpy/14 
+g_fw_verify_cfi/20 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034220
+  References: 
+  Referring: socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_update_otp_ver_cnt/33 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_write_volatile_u32/19 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/18 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/17 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/16 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd034660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: memset_/84 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f93cd006880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_update_otp_ver_cnt/33 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_rsa_verify_code_sign/40 socvrfy_calc_sm3_code_hash/37 socvrfy_sm2_verify_code_sign/39 socvrfy_srv_handler/45 
+  Calls: memcpy_/49 
+otpmap_convert_keyid_to_addr/13 (otpmap_convert_keyid_to_addr)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/12 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/11 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/10 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/9 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/19 util_read_volatile_u32/18 util_u32_copy/17 util_memcmp/16 otpmap_convert_keyid_to_addr/13 rPKE_B/12 rPKE_A/11 lib_register_unlock/10 lib_register_lock/9 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memset_/84 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/15 
+  Calls: 
+otpkey_read_data/83 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+cpt_hash/82 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+misc_write_otp_data/81 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_BigNumCmp/80 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_cmp_sec/79 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+uint32_sleep/78 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_get_rand_fast/77 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_ske_dma_cmac/76 (cpt_ske_dma_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: 
+hash_get_digest_word_len/75 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+cpt_hash_dma/74 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+secp256r1/73 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: socvrfy_ecc_p256r1_verify_code_sign/26 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/72 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_ecc_p256r1_verify_code_sign/26 
+  Calls: 
+cpt_sm2_verify/71 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_sm2_signature/25 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/70 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_rsa_signature/24 
+  Calls: 
+cpt_hash_final/69 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_update_blocks/68 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_final/67 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_ctx_switch/66 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_update/65 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_hash_init/64 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_sm2_getZ/63 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_ske_dma_crypto/62 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_dec_image/30 fwverify_copy_data_dma/29 
+  Calls: 
+sysreg_get_fw_verify_alg/61 (sysreg_get_fw_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+sysreg_get_soc_verify_alg/60 (sysreg_get_soc_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_get_phyid/59 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_check_usage/58 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_verify_key/31 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otp_read/57 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_read_and_check_header/28 
+  Calls: 
+mmap_read_remote_data/56 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_get_sign_by_alg/35 socvrfy_read_and_check_header/28 
+  Calls: 
+sysreg_get_life_cycle/55 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 
+  Calls: 
+fid_panic/54 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_get_u32/53 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_inc_u32/52 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_delay/51 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_set_u32/50 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+memcpy_/49 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/14 
+  Calls: 
+socvrfy_check_ver_cnt/48 (socvrfy_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: uint32_BigNumCmp/80 uint32_BigNumCmp/80 util_memcpy/14 util_memcpy/14 
+socvrfy_check_fw_header/47 (socvrfy_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_read_and_check_header/28 
+  Calls: socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 
+socvrfy_get_and_verify_pubkey/46 (socvrfy_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_verify_pubkey/23 util_memcpy/14 util_memcpy/14 util_memcpy/14 
+socvrfy_srv_handler/45 (socvrfy_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: socvrfy_vry_soc_fw/34 util_memcpy/14 
+socvrfy_data_sec_double_check/44 (socvrfy_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 util_memcpy/14 util_memcpy/14 
+socvrfy_check_param/43 (socvrfy_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+socvrfy_check_code_sign/42 (socvrfy_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+socvrfy_sym_verify_code_sign/41 (socvrfy_sym_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 socvrfy_data_sec_double_check/44 util_memcpy/14 fid_inc_u32/52 cpt_ske_dma_cmac/76 fid_inc_u32/52 fid_inc_u32/52 otpkey_get_phyid/59 socvrfy_get_sign_by_alg/35 util_memcpy/14 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_rsa_verify_code_sign/40 (socvrfy_rsa_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 util_memcpy/14 hash_get_digest_word_len/75 cpt_hash_dma/74 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_sm2_verify_code_sign/39 (socvrfy_sm2_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 socvrfy_calc_sm2_e_value/38 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_calc_sm2_e_value/38 (socvrfy_calc_sm2_e_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 
+socvrfy_calc_sm3_code_hash/37 (socvrfy_calc_sm3_code_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_final/69 cpt_hash_update/65 cpt_hash_ctx_switch/66 mmap_read_remote_data/56 cpt_hash_dma_update_blocks/68 util_memcpy/14 cpt_hash_dma_final/67 cpt_hash_ctx_switch/66 
+socvrfy_calc_sm3_header_hash/36 (socvrfy_calc_sm3_header_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_update/65 mmap_read_remote_data/56 cpt_hash_update/65 cpt_hash_init/64 cpt_sm2_getZ/63 
+socvrfy_get_sign_by_alg/35 (socvrfy_get_sign_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: mmap_read_remote_data/56 
+socvrfy_vry_soc_fw/34 (socvrfy_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_srv_handler/45 
+  Calls: fid_panic/54 fid_get_u32/53 fid_delay/51 fid_delay/51 fid_inc_u32/52 socvrfy_update_otp_ver_cnt/33 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_code_sign/42 fid_inc_u32/52 fid_delay/51 fid_delay/51 socvrfy_dec_image/30 fwverify_copy_data_dma/29 socvrfy_get_alg_and_key/32 fwverify_copy_data_dma/29 socvrfy_read_and_check_header/28 socvrfy_check_param/43 fid_set_u32/50 
+socvrfy_update_otp_ver_cnt/33 (socvrfy_update_otp_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 misc_write_otp_data/81 uint32_BigNumCmp/80 fid_delay/51 util_memcpy/14 otp_read/57 
+socvrfy_get_alg_and_key/32 (socvrfy_get_alg_and_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_check_verify_key/31 socvrfy_get_dec_alg/22 sysreg_get_fw_verify_alg/61 otpkey_get_phyid/59 otpkey_check_usage/58 socvrfy_get_dec_alg/22 sysreg_get_soc_verify_alg/60 otpkey_get_phyid/59 otpkey_check_usage/58 
+socvrfy_check_verify_key/31 (socvrfy_check_verify_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: otpkey_check_usage/58 
+socvrfy_dec_image/30 (socvrfy_dec_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 fwverify_copy_data_dma/29 
+fwverify_copy_data_dma/29 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_dec_image/30 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 
+socvrfy_read_and_check_header/28 (socvrfy_read_and_check_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_fw_header/47 otp_read/57 fid_inc_u32/52 mmap_read_remote_data/56 fid_panic/54 fid_delay/51 fid_delay/51 sysreg_get_life_cycle/55 fid_delay/51 sysreg_get_life_cycle/55 
+socvrfy_verify_signature/27 (socvrfy_verify_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 
+socvrfy_ecc_p256r1_verify_code_sign/26 (socvrfy_ecc_p256r1_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) secp256r1/73 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_inc_u32/52 cpt_ecdsa_verify/72 fid_inc_u32/52 
+socvrfy_verify_sm2_signature/25 (socvrfy_verify_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_sm2_verify/71 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_rsa_signature/24 (socvrfy_verify_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_rsa_ssa_pss_verify_by_msg_digest/70 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_pubkey/23 (socvrfy_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_and_verify_pubkey/46 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 otpkey_read_data/83 util_memset/15 cpt_hash/82 
+socvrfy_get_dec_alg/22 (socvrfy_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+socvrfy_header_is_valid/21 (socvrfy_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: util_memcpy/14 
+g_fw_verify_cfi/20 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_update_otp_ver_cnt/33 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: memset_/84 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_update_otp_ver_cnt/33 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_rsa_verify_code_sign/40 socvrfy_calc_sm3_code_hash/37 socvrfy_sm2_verify_code_sign/39 socvrfy_srv_handler/45 
+  Calls: memcpy_/49 
+
+
+Initial Symbol table:
+
+memset_/84 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/15 
+  Calls: 
+otpkey_read_data/83 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+cpt_hash/82 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+misc_write_otp_data/81 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_BigNumCmp/80 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_cmp_sec/79 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+uint32_sleep/78 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_get_rand_fast/77 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_ske_dma_cmac/76 (cpt_ske_dma_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: 
+hash_get_digest_word_len/75 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+cpt_hash_dma/74 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+secp256r1/73 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: socvrfy_ecc_p256r1_verify_code_sign/26 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/72 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_ecc_p256r1_verify_code_sign/26 
+  Calls: 
+cpt_sm2_verify/71 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_sm2_signature/25 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/70 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_rsa_signature/24 
+  Calls: 
+cpt_hash_final/69 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_update_blocks/68 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_final/67 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_ctx_switch/66 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_update/65 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_hash_init/64 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_sm2_getZ/63 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_ske_dma_crypto/62 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_dec_image/30 fwverify_copy_data_dma/29 
+  Calls: 
+sysreg_get_fw_verify_alg/61 (sysreg_get_fw_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+sysreg_get_soc_verify_alg/60 (sysreg_get_soc_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_get_phyid/59 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_check_usage/58 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_verify_key/31 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otp_read/57 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_read_and_check_header/28 
+  Calls: 
+mmap_read_remote_data/56 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_get_sign_by_alg/35 socvrfy_read_and_check_header/28 
+  Calls: 
+sysreg_get_life_cycle/55 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 
+  Calls: 
+fid_panic/54 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_get_u32/53 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_inc_u32/52 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_delay/51 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_set_u32/50 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+memcpy_/49 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/14 
+  Calls: 
+socvrfy_check_ver_cnt/48 (socvrfy_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: uint32_BigNumCmp/80 uint32_BigNumCmp/80 util_memcpy/14 util_memcpy/14 
+socvrfy_check_fw_header/47 (socvrfy_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_read_and_check_header/28 
+  Calls: socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 
+socvrfy_get_and_verify_pubkey/46 (socvrfy_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_verify_pubkey/23 util_memcpy/14 util_memcpy/14 util_memcpy/14 
+socvrfy_srv_handler/45 (socvrfy_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: socvrfy_vry_soc_fw/34 util_memcpy/14 
+socvrfy_data_sec_double_check/44 (socvrfy_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 util_memcpy/14 util_memcpy/14 
+socvrfy_check_param/43 (socvrfy_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+socvrfy_check_code_sign/42 (socvrfy_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+socvrfy_sym_verify_code_sign/41 (socvrfy_sym_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 socvrfy_data_sec_double_check/44 util_memcpy/14 fid_inc_u32/52 cpt_ske_dma_cmac/76 fid_inc_u32/52 fid_inc_u32/52 otpkey_get_phyid/59 socvrfy_get_sign_by_alg/35 util_memcpy/14 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_rsa_verify_code_sign/40 (socvrfy_rsa_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 util_memcpy/14 hash_get_digest_word_len/75 cpt_hash_dma/74 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_sm2_verify_code_sign/39 (socvrfy_sm2_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 socvrfy_calc_sm2_e_value/38 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_calc_sm2_e_value/38 (socvrfy_calc_sm2_e_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 
+socvrfy_calc_sm3_code_hash/37 (socvrfy_calc_sm3_code_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_final/69 cpt_hash_update/65 cpt_hash_ctx_switch/66 mmap_read_remote_data/56 cpt_hash_dma_update_blocks/68 util_memcpy/14 cpt_hash_dma_final/67 cpt_hash_ctx_switch/66 
+socvrfy_calc_sm3_header_hash/36 (socvrfy_calc_sm3_header_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_update/65 mmap_read_remote_data/56 cpt_hash_update/65 cpt_hash_init/64 cpt_sm2_getZ/63 
+socvrfy_get_sign_by_alg/35 (socvrfy_get_sign_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: mmap_read_remote_data/56 
+socvrfy_vry_soc_fw/34 (socvrfy_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_srv_handler/45 
+  Calls: fid_panic/54 fid_get_u32/53 fid_delay/51 fid_delay/51 fid_inc_u32/52 socvrfy_update_otp_ver_cnt/33 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_code_sign/42 fid_inc_u32/52 fid_delay/51 fid_delay/51 socvrfy_dec_image/30 fwverify_copy_data_dma/29 socvrfy_get_alg_and_key/32 fwverify_copy_data_dma/29 socvrfy_read_and_check_header/28 socvrfy_check_param/43 fid_set_u32/50 
+socvrfy_update_otp_ver_cnt/33 (socvrfy_update_otp_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 misc_write_otp_data/81 uint32_BigNumCmp/80 fid_delay/51 util_memcpy/14 otp_read/57 
+socvrfy_get_alg_and_key/32 (socvrfy_get_alg_and_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_check_verify_key/31 socvrfy_get_dec_alg/22 sysreg_get_fw_verify_alg/61 otpkey_get_phyid/59 otpkey_check_usage/58 socvrfy_get_dec_alg/22 sysreg_get_soc_verify_alg/60 otpkey_get_phyid/59 otpkey_check_usage/58 
+socvrfy_check_verify_key/31 (socvrfy_check_verify_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: otpkey_check_usage/58 
+socvrfy_dec_image/30 (socvrfy_dec_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 fwverify_copy_data_dma/29 
+fwverify_copy_data_dma/29 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_dec_image/30 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 
+socvrfy_read_and_check_header/28 (socvrfy_read_and_check_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_fw_header/47 otp_read/57 fid_inc_u32/52 mmap_read_remote_data/56 fid_panic/54 fid_delay/51 fid_delay/51 sysreg_get_life_cycle/55 fid_delay/51 sysreg_get_life_cycle/55 
+socvrfy_verify_signature/27 (socvrfy_verify_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 
+socvrfy_ecc_p256r1_verify_code_sign/26 (socvrfy_ecc_p256r1_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) secp256r1/73 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_inc_u32/52 cpt_ecdsa_verify/72 fid_inc_u32/52 
+socvrfy_verify_sm2_signature/25 (socvrfy_verify_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_sm2_verify/71 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_rsa_signature/24 (socvrfy_verify_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_rsa_ssa_pss_verify_by_msg_digest/70 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_pubkey/23 (socvrfy_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_and_verify_pubkey/46 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 otpkey_read_data/83 util_memset/15 cpt_hash/82 
+socvrfy_get_dec_alg/22 (socvrfy_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+socvrfy_header_is_valid/21 (socvrfy_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: util_memcpy/14 
+g_fw_verify_cfi/20 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_update_otp_ver_cnt/33 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: memset_/84 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_update_otp_ver_cnt/33 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_rsa_verify_code_sign/40 socvrfy_calc_sm3_code_hash/37 socvrfy_sm2_verify_code_sign/39 socvrfy_srv_handler/45 
+  Calls: memcpy_/49 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memset_/84 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/15 
+  Calls: 
+otpkey_read_data/83 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+cpt_hash/82 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: 
+misc_write_otp_data/81 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_BigNumCmp/80 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_update_otp_ver_cnt/33 
+  Calls: 
+uint32_cmp_sec/79 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+uint32_sleep/78 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_get_rand_fast/77 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 socvrfy_data_sec_double_check/44 
+  Calls: 
+cpt_ske_dma_cmac/76 (cpt_ske_dma_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: 
+hash_get_digest_word_len/75 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+cpt_hash_dma/74 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 
+  Calls: 
+secp256r1/73 (secp256r1)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: socvrfy_ecc_p256r1_verify_code_sign/26 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+cpt_ecdsa_verify/72 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_ecc_p256r1_verify_code_sign/26 
+  Calls: 
+cpt_sm2_verify/71 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_sm2_signature/25 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/70 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_verify_rsa_signature/24 
+  Calls: 
+cpt_hash_final/69 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_update_blocks/68 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_dma_final/67 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_ctx_switch/66 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_code_hash/37 
+  Calls: 
+cpt_hash_update/65 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_hash_init/64 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_sm2_getZ/63 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash/36 
+  Calls: 
+cpt_ske_dma_crypto/62 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_dec_image/30 fwverify_copy_data_dma/29 
+  Calls: 
+sysreg_get_fw_verify_alg/61 (sysreg_get_fw_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+sysreg_get_soc_verify_alg/60 (sysreg_get_soc_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_get_phyid/59 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otpkey_check_usage/58 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_check_verify_key/31 socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+otp_read/57 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_read_and_check_header/28 
+  Calls: 
+mmap_read_remote_data/56 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 socvrfy_get_sign_by_alg/35 socvrfy_read_and_check_header/28 
+  Calls: 
+sysreg_get_life_cycle/55 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 
+  Calls: 
+fid_panic/54 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_get_u32/53 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_inc_u32/52 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_delay/51 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_read_and_check_header/28 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: 
+fid_set_u32/50 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+memcpy_/49 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/14 
+  Calls: 
+socvrfy_check_ver_cnt/48 (socvrfy_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: uint32_BigNumCmp/80 uint32_BigNumCmp/80 util_memcpy/14 util_memcpy/14 
+socvrfy_check_fw_header/47 (socvrfy_check_fw_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_read_and_check_header/28 
+  Calls: socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 
+socvrfy_get_and_verify_pubkey/46 (socvrfy_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_verify_pubkey/23 util_memcpy/14 util_memcpy/14 util_memcpy/14 
+socvrfy_srv_handler/45 (socvrfy_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: socvrfy_vry_soc_fw/34 util_memcpy/14 
+socvrfy_data_sec_double_check/44 (socvrfy_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 util_memcpy/14 util_memcpy/14 
+socvrfy_check_param/43 (socvrfy_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: 
+socvrfy_check_code_sign/42 (socvrfy_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+socvrfy_sym_verify_code_sign/41 (socvrfy_sym_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 socvrfy_data_sec_double_check/44 util_memcpy/14 fid_inc_u32/52 cpt_ske_dma_cmac/76 fid_inc_u32/52 fid_inc_u32/52 otpkey_get_phyid/59 socvrfy_get_sign_by_alg/35 util_memcpy/14 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_rsa_verify_code_sign/40 (socvrfy_rsa_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 util_memcpy/14 hash_get_digest_word_len/75 cpt_hash_dma/74 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_sm2_verify_code_sign/39 (socvrfy_sm2_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_code_sign/42 
+  Calls: socvrfy_verify_signature/27 socvrfy_calc_sm2_e_value/38 socvrfy_get_and_verify_pubkey/46 socvrfy_get_sign_by_alg/35 util_memcpy/14 
+socvrfy_calc_sm2_e_value/38 (socvrfy_calc_sm2_e_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_calc_sm3_code_hash/37 socvrfy_calc_sm3_header_hash/36 
+socvrfy_calc_sm3_code_hash/37 (socvrfy_calc_sm3_code_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_final/69 cpt_hash_update/65 cpt_hash_ctx_switch/66 mmap_read_remote_data/56 cpt_hash_dma_update_blocks/68 util_memcpy/14 cpt_hash_dma_final/67 cpt_hash_ctx_switch/66 
+socvrfy_calc_sm3_header_hash/36 (socvrfy_calc_sm3_header_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_calc_sm2_e_value/38 
+  Calls: cpt_hash_update/65 mmap_read_remote_data/56 cpt_hash_update/65 cpt_hash_init/64 cpt_sm2_getZ/63 
+socvrfy_get_sign_by_alg/35 (socvrfy_get_sign_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: mmap_read_remote_data/56 
+socvrfy_vry_soc_fw/34 (socvrfy_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_srv_handler/45 
+  Calls: fid_panic/54 fid_get_u32/53 fid_delay/51 fid_delay/51 fid_inc_u32/52 socvrfy_update_otp_ver_cnt/33 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_code_sign/42 fid_inc_u32/52 fid_delay/51 fid_delay/51 socvrfy_dec_image/30 fwverify_copy_data_dma/29 socvrfy_get_alg_and_key/32 fwverify_copy_data_dma/29 socvrfy_read_and_check_header/28 socvrfy_check_param/43 fid_set_u32/50 
+socvrfy_update_otp_ver_cnt/33 (socvrfy_update_otp_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 misc_write_otp_data/81 uint32_BigNumCmp/80 fid_delay/51 util_memcpy/14 otp_read/57 
+socvrfy_get_alg_and_key/32 (socvrfy_get_alg_and_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: socvrfy_check_verify_key/31 socvrfy_get_dec_alg/22 sysreg_get_fw_verify_alg/61 otpkey_get_phyid/59 otpkey_check_usage/58 socvrfy_get_dec_alg/22 sysreg_get_soc_verify_alg/60 otpkey_get_phyid/59 otpkey_check_usage/58 
+socvrfy_check_verify_key/31 (socvrfy_check_verify_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 
+  Calls: otpkey_check_usage/58 
+socvrfy_dec_image/30 (socvrfy_dec_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 fwverify_copy_data_dma/29 
+fwverify_copy_data_dma/29 (fwverify_copy_data_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_dec_image/30 socvrfy_vry_soc_fw/34 socvrfy_vry_soc_fw/34 
+  Calls: cpt_ske_dma_crypto/62 
+socvrfy_read_and_check_header/28 (socvrfy_read_and_check_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_vry_soc_fw/34 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_delay/51 fid_delay/51 socvrfy_check_fw_header/47 otp_read/57 fid_inc_u32/52 mmap_read_remote_data/56 fid_panic/54 fid_delay/51 fid_delay/51 sysreg_get_life_cycle/55 fid_delay/51 sysreg_get_life_cycle/55 
+socvrfy_verify_signature/27 (socvrfy_verify_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_rsa_verify_code_sign/40 socvrfy_sm2_verify_code_sign/39 
+  Calls: socvrfy_ecc_p256r1_verify_code_sign/26 socvrfy_verify_sm2_signature/25 socvrfy_verify_rsa_signature/24 socvrfy_verify_rsa_signature/24 
+socvrfy_ecc_p256r1_verify_code_sign/26 (socvrfy_ecc_p256r1_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) secp256r1/73 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_delay/51 fid_delay/51 fid_inc_u32/52 cpt_ecdsa_verify/72 fid_inc_u32/52 
+socvrfy_verify_sm2_signature/25 (socvrfy_verify_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_sm2_verify/71 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_rsa_signature/24 (socvrfy_verify_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_signature/27 socvrfy_verify_signature/27 
+  Calls: fid_inc_u32/52 fid_inc_u32/52 fid_delay/51 fid_delay/51 cpt_rsa_ssa_pss_verify_by_msg_digest/70 fid_inc_u32/52 fid_inc_u32/52 
+socvrfy_verify_pubkey/23 (socvrfy_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_and_verify_pubkey/46 
+  Calls: uint32_cmp_sec/79 uint32_sleep/78 uint32_cmp_sec/79 uint32_sleep/78 cpt_get_rand_fast/77 otpkey_read_data/83 util_memset/15 cpt_hash/82 
+socvrfy_get_dec_alg/22 (socvrfy_get_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_get_alg_and_key/32 socvrfy_get_alg_and_key/32 
+  Calls: 
+socvrfy_header_is_valid/21 (socvrfy_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_fw_header/47 
+  Calls: util_memcpy/14 
+g_fw_verify_cfi/20 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_update_otp_ver_cnt/33 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/15 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_verify_pubkey/23 
+  Calls: memset_/84 
+util_memcpy/14 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: socvrfy_check_ver_cnt/48 socvrfy_check_ver_cnt/48 socvrfy_header_is_valid/21 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_get_and_verify_pubkey/46 socvrfy_update_otp_ver_cnt/33 socvrfy_data_sec_double_check/44 socvrfy_data_sec_double_check/44 socvrfy_sym_verify_code_sign/41 socvrfy_sym_verify_code_sign/41 socvrfy_rsa_verify_code_sign/40 socvrfy_rsa_verify_code_sign/40 socvrfy_calc_sm3_code_hash/37 socvrfy_sm2_verify_code_sign/39 socvrfy_srv_handler/45 
+  Calls: memcpy_/49 
+updating call of socvrfy_sm2_verify_code_sign/39 -> __builtin_unreachable/98: ret_34 = socvrfy_verify_rsa_signature (&signature, &signature_orig, &pukkey, 2048);
+  updated to:__builtin_unreachable ();
+updating call of socvrfy_sm2_verify_code_sign/39 -> __builtin_unreachable/98: ret_35 = socvrfy_verify_rsa_signature (&signature, &signature_orig, &pukkey, 3072);
+  updated to:__builtin_unreachable ();
+updating call of socvrfy_sm2_verify_code_sign/39 -> __builtin_unreachable/98: ret_37 = socvrfy_ecc_p256r1_verify_code_sign (&signature, &signature_orig, &pukkey);
+  updated to:__builtin_unreachable ();
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+__builtin_unreachable/112 (__builtin_unreachable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_verify_signature/27 (0 (precise),0.00 per call) 
+  Calls: 
+fwverify_copy_data_dma.constprop.0/111 (fwverify_copy_data_dma.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of fwverify_copy_data_dma/29
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: socvrfy_dec_image/30 (4096041 (estimated locally),0.00 per call) socvrfy_vry_soc_fw/34 (25122810 (estimated locally),0.02 per call) socvrfy_vry_soc_fw/34 (5637559 (estimated locally),0.01 per call) 
+  Calls: cpt_ske_dma_crypto/62 (686872648 (estimated locally),0.64 per call) 
+socvrfy_get_alg_and_key.constprop.0/110 (socvrfy_get_alg_and_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function socvrfy_get_alg_and_key.constprop/110 is inline copy in socvrfy_vry_soc_fw/34
+  Clone of socvrfy_get_alg_and_key/32
+  Availability: local
+  Function flags: count:48767807 (estimated locally) local
+  Called by: socvrfy_vry_soc_fw/34 (inlined) (48767807 (estimated locally),0.05 per call) 
+  Calls: otpkey_check_usage/58 (2369932 (estimated locally),0.00 per call) otpkey_get_phyid/59 (479674 (estimated locally),0.00 per call) sysreg_get_soc_verify_alg/60 (479674 (estimated locally),0.00 per call) otpkey_check_usage/58 (2991352 (estimated locally),0.00 per call) otpkey_get_phyid/59 (605450 (estimated locally),0.00 per call) sysreg_get_fw_verify_alg/61 (605450 (estimated locally),0.00 per call) socvrfy_check_verify_key/31 (inlined) (219629 (estimated locally),0.00 per call) 
+socvrfy_data_sec_double_check.constprop.0/109 (socvrfy_data_sec_double_check.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function socvrfy_data_sec_double_check.constprop/109 is inline copy in socvrfy_vry_soc_fw/34
+  Clone of socvrfy_data_sec_double_check/44
+  Availability: local
+  Function flags: count:19695 (estimated locally) local
+  Called by: socvrfy_sym_verify_code_sign/41 (inlined) (19695 (estimated locally),0.00 per call) 
+  Calls: memcpy_/49 (19695 (estimated locally),0.00 per call) memcpy_/49 (19695 (estimated locally),0.00 per call) cpt_get_rand_fast/77 (19695 (estimated locally),0.00 per call) uint32_sleep/78 (19695 (estimated locally),0.00 per call) uint32_cmp_sec/79 (19695 (estimated locally),0.00 per call) uint32_sleep/78 (6499 (estimated locally),0.00 per call) uint32_cmp_sec/79 (6499 (estimated locally),0.00 per call) 
+socvrfy_calc_sm3_header_hash.constprop.0/108 (socvrfy_calc_sm3_header_hash.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function socvrfy_calc_sm3_header_hash.constprop/108 is inline copy in socvrfy_vry_soc_fw/34
+  Clone of socvrfy_calc_sm3_header_hash/36
+  Availability: local
+  Function flags: count:8532 (estimated locally) local
+  Called by: socvrfy_calc_sm2_e_value/38 (inlined) (8532 (estimated locally),0.00 per call) 
+  Calls: cpt_sm2_getZ/63 (1380 (estimated locally),0.00 per call) cpt_hash_init/64 (279 (estimated locally),0.00 per call) cpt_hash_update/65 (57 (estimated locally),0.00 per call) mmap_read_remote_data/56 (234 (estimated locally),0.00 per call) cpt_hash_update/65 (47 (estimated locally),0.00 per call) 
+socvrfy_check_fw_header.part.0/107 (socvrfy_check_fw_header.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function socvrfy_check_fw_header.part.0/107 is inline copy in socvrfy_check_fw_header/47
+  Availability: local
+  Function flags: count:261229038 (estimated locally) body local split_part
+  Called by: socvrfy_check_fw_header/47 (inlined) (261229038 (estimated locally),0.24 per call) 
+  Calls: socvrfy_check_ver_cnt/48 (83671660 (estimated locally),0.08 per call) 
+socvrfy_get_and_verify_pubkey.part.0/96 (socvrfy_get_and_verify_pubkey.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:526133494 (estimated locally) body local split_part
+  Called by: socvrfy_rsa_verify_code_sign/40 (97308 (estimated locally),0.00 per call) socvrfy_sm2_verify_code_sign/39 (112620 (estimated locally),0.00 per call) socvrfy_get_and_verify_pubkey/46 (526133494 (estimated locally),0.49 per call) 
+  Calls: memcpy_/49 (143108314 (estimated locally),0.27 per call) memcpy_/49 (143108314 (estimated locally),0.27 per call) memcpy_/49 (277798488 (estimated locally),0.53 per call) socvrfy_verify_pubkey/23 (420906802 (estimated locally),0.80 per call) 
+memset_/84 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 (708669599 (estimated locally),0.66 per call) 
+  Calls: 
+otpkey_read_data/83 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 (365072224 (estimated locally),0.34 per call) 
+  Calls: 
+cpt_hash/82 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_verify_pubkey/23 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+misc_write_otp_data/81 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_update_otp_ver_cnt/33 (186115 (estimated locally),0.00 per call) 
+  Calls: 
+uint32_BigNumCmp/80 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_check_ver_cnt/48 (166704317 (estimated locally),0.16 per call) socvrfy_check_ver_cnt/48 (401890828 (estimated locally),0.37 per call) socvrfy_update_otp_ver_cnt/33 (448687 (estimated locally),0.00 per call) 
+  Calls: 
+uint32_cmp_sec/79 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_data_sec_double_check.constprop.0/109 (19695 (estimated locally),0.00 per call) socvrfy_data_sec_double_check.constprop.0/109 (6499 (estimated locally),0.00 per call) socvrfy_verify_pubkey/23 (103816317 (estimated locally),0.10 per call) socvrfy_verify_pubkey/23 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+uint32_sleep/78 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_data_sec_double_check.constprop.0/109 (19695 (estimated locally),0.00 per call) socvrfy_data_sec_double_check.constprop.0/109 (6499 (estimated locally),0.00 per call) socvrfy_verify_pubkey/23 (103816317 (estimated locally),0.10 per call) socvrfy_verify_pubkey/23 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpt_get_rand_fast/77 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_data_sec_double_check.constprop.0/109 (19695 (estimated locally),0.00 per call) socvrfy_verify_pubkey/23 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpt_ske_dma_cmac/76 (cpt_ske_dma_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_sym_verify_code_sign/41 (97308 (estimated locally),0.00 per call) 
+  Calls: 
+hash_get_digest_word_len/75 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 (3986 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_dma/74 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_rsa_verify_code_sign/40 (19695 (estimated locally),0.00 per call) 
+  Calls: 
+secp256r1/73 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: socvrfy_ecc_p256r1_verify_code_sign/26 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_ecdsa_verify/72 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_ecc_p256r1_verify_code_sign/26 (797 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_verify/71 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_verify_sm2_signature/25 (1209 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/70 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_verify_rsa_signature/24 (281323581 (estimated locally),0.26 per call) 
+  Calls: 
+cpt_hash_final/69 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 (55 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_dma_update_blocks/68 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 (323 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_dma_final/67 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 (323 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_ctx_switch/66 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_code_hash/37 (13 (estimated locally),0.00 per call) socvrfy_calc_sm3_code_hash/37 (646 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_update/65 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash.constprop.0/108 (57 (estimated locally),0.00 per call) socvrfy_calc_sm3_header_hash.constprop.0/108 (47 (estimated locally),0.00 per call) socvrfy_calc_sm3_code_hash/37 (13 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_init/64 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash.constprop.0/108 (279 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_getZ/63 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash.constprop.0/108 (1380 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_ske_dma_crypto/62 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: fwverify_copy_data_dma.constprop.0/111 (686872648 (estimated locally),0.64 per call) socvrfy_dec_image/30 (829039 (estimated locally),0.00 per call) 
+  Calls: 
+sysreg_get_fw_verify_alg/61 (sysreg_get_fw_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_get_alg_and_key.constprop.0/110 (605450 (estimated locally),0.00 per call) 
+  Calls: 
+sysreg_get_soc_verify_alg/60 (sysreg_get_soc_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_get_alg_and_key.constprop.0/110 (479674 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_get_phyid/59 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_get_alg_and_key.constprop.0/110 (479674 (estimated locally),0.00 per call) socvrfy_get_alg_and_key.constprop.0/110 (605450 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (97308 (estimated locally),0.00 per call) 
+  Calls: 
+otpkey_check_usage/58 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_get_alg_and_key.constprop.0/110 (2369932 (estimated locally),0.00 per call) socvrfy_get_alg_and_key.constprop.0/110 (2991352 (estimated locally),0.00 per call) socvrfy_check_verify_key/31 (97028 (estimated locally),0.00 per call) 
+  Calls: 
+otp_read/57 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 (6706205 (estimated locally),0.01 per call) socvrfy_update_otp_ver_cnt/33 (2216832 (estimated locally),0.00 per call) 
+  Calls: 
+mmap_read_remote_data/56 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_calc_sm3_header_hash.constprop.0/108 (234 (estimated locally),0.00 per call) socvrfy_read_and_check_header/28 (50202154 (estimated locally),0.05 per call) socvrfy_sm2_verify_code_sign/39 (556424 (estimated locally),0.00 per call) socvrfy_calc_sm3_code_hash/37 (65 (estimated locally),0.00 per call) socvrfy_get_sign_by_alg/35 (858993459 (estimated locally),0.80 per call) 
+  Calls: 
+sysreg_get_life_cycle/55 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_read_and_check_header/28 (217325344 (estimated locally),0.20 per call) socvrfy_read_and_check_header/28 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+fid_panic/54 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 (17527723 (estimated locally),0.02 per call) socvrfy_read_and_check_header/28 (202589816 (estimated locally),0.19 per call) 
+  Calls: 
+fid_get_u32/53 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 (35858682 (estimated locally),0.03 per call) 
+  Calls: 
+fid_inc_u32/52 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 (49691327 (estimated locally),0.05 per call) socvrfy_vry_soc_fw/34 (115838 (estimated locally),0.00 per call) socvrfy_read_and_check_header/28 (10160916 (estimated locally),0.01 per call) socvrfy_read_and_check_header/28 (10160916 (estimated locally),0.01 per call) socvrfy_update_otp_ver_cnt/33 (448687 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (2081256 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (480770 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (19695 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (97308 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (480770 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (480770 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (2081256 (estimated locally),0.00 per call) socvrfy_ecc_p256r1_verify_code_sign/26 (797 (estimated locally),0.00 per call) socvrfy_ecc_p256r1_verify_code_sign/26 (797 (estimated locally),0.00 per call) socvrfy_ecc_p256r1_verify_code_sign/26 (797 (estimated locally),0.00 per call) socvrfy_verify_sm2_signature/25 (4614 (estimated locally),0.00 per call) socvrfy_verify_sm2_signature/25 (1209 (estimated locally),0.00 per call) socvrfy_verify_sm2_signature/25 (1209 (estimated locally),0.00 per call) socvrfy_verify_sm2_signature/25 (4614 (estimated locally),0.00 per call) socvrfy_verify_rsa_signature/24 (1073741824 (estimated locally),1.00 per call) socvrfy_verify_rsa_signature/24 (281323581 (estimated locally),0.26 per call) socvrfy_verify_rsa_signature/24 (281323581 (estimated locally),0.26 per call) socvrfy_verify_rsa_signature/24 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+fid_delay/51 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 (108662672 (estimated locally),0.10 per call) socvrfy_vry_soc_fw/34 (1073741824 (estimated locally),1.00 per call) socvrfy_vry_soc_fw/34 (10647864 (estimated locally),0.01 per call) socvrfy_vry_soc_fw/34 (51143706 (estimated locally),0.05 per call) socvrfy_vry_soc_fw/34 (7039162 (estimated locally),0.01 per call) socvrfy_vry_soc_fw/34 (51908159 (estimated locally),0.05 per call) socvrfy_vry_soc_fw/34 (108662672 (estimated locally),0.10 per call) socvrfy_vry_soc_fw/34 (1073741824 (estimated locally),1.00 per call) socvrfy_vry_soc_fw/34 (1144648 (estimated locally),0.00 per call) socvrfy_vry_soc_fw/34 (8440862 (estimated locally),0.01 per call) socvrfy_read_and_check_header/28 (325911 (estimated locally),0.00 per call) socvrfy_read_and_check_header/28 (3220468 (estimated locally),0.00 per call) socvrfy_read_and_check_header/28 (468487 (estimated locally),0.00 per call) socvrfy_read_and_check_header/28 (3454712 (estimated locally),0.00 per call) socvrfy_read_and_check_header/28 (29471055 (estimated locally),0.03 per call) socvrfy_read_and_check_header/28 (217325344 (estimated locally),0.20 per call) socvrfy_read_and_check_header/28 (217325344 (estimated locally),0.20 per call) socvrfy_update_otp_ver_cnt/33 (448687 (estimated locally),0.00 per call) socvrfy_ecc_p256r1_verify_code_sign/26 (81 (estimated locally),0.00 per call) socvrfy_ecc_p256r1_verify_code_sign/26 (797 (estimated locally),0.00 per call) socvrfy_verify_sm2_signature/25 (122 (estimated locally),0.00 per call) socvrfy_verify_sm2_signature/25 (1209 (estimated locally),0.00 per call) socvrfy_verify_rsa_signature/24 (28469946 (estimated locally),0.03 per call) socvrfy_verify_rsa_signature/24 (281323581 (estimated locally),0.26 per call) 
+  Calls: 
+fid_set_u32/50 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_vry_soc_fw/34 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memcpy_/49 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: socvrfy_data_sec_double_check.constprop.0/109 (19695 (estimated locally),0.00 per call) socvrfy_data_sec_double_check.constprop.0/109 (19695 (estimated locally),0.00 per call) socvrfy_srv_handler/45 (401890828 (estimated locally),0.37 per call) socvrfy_check_ver_cnt/48 (401890828 (estimated locally),0.37 per call) socvrfy_check_ver_cnt/48 (401890828 (estimated locally),0.37 per call) socvrfy_rsa_verify_code_sign/40 (3986 (estimated locally),0.00 per call) socvrfy_rsa_verify_code_sign/40 (480770 (estimated locally),0.00 per call) socvrfy_sm2_verify_code_sign/39 (556424 (estimated locally),0.00 per call) socvrfy_get_and_verify_pubkey.part.0/96 (143108314 (estimated locally),0.27 per call) socvrfy_get_and_verify_pubkey.part.0/96 (143108314 (estimated locally),0.27 per call) socvrfy_get_and_verify_pubkey.part.0/96 (277798488 (estimated locally),0.53 per call) socvrfy_update_otp_ver_cnt/33 (448687 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (19695 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (480770 (estimated locally),0.00 per call) socvrfy_calc_sm3_code_hash/37 (39 (estimated locally),0.00 per call) socvrfy_header_is_valid/21 (214891025 (estimated locally),0.20 per call) 
+  Calls: 
+socvrfy_check_ver_cnt/48 (socvrfy_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: socvrfy_check_fw_header.part.0/107 (83671660 (estimated locally),0.08 per call) 
+  Calls: uint32_BigNumCmp/80 (166704317 (estimated locally),0.16 per call) uint32_BigNumCmp/80 (401890828 (estimated locally),0.37 per call) memcpy_/49 (401890828 (estimated locally),0.37 per call) memcpy_/49 (401890828 (estimated locally),0.37 per call) 
+socvrfy_check_fw_header/47 (socvrfy_check_fw_header)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: socvrfy_read_and_check_header/28 (1357336 (estimated locally),0.00 per call) 
+  Calls: socvrfy_check_fw_header.part.0/107 (inlined) (261229038 (estimated locally),0.24 per call) socvrfy_header_is_valid/21 (inlined) (401890828 (estimated locally),0.37 per call) 
+socvrfy_get_and_verify_pubkey/46 (socvrfy_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741816 (estimated locally) body
+  Called by: 
+  Calls: socvrfy_get_and_verify_pubkey.part.0/96 (526133494 (estimated locally),0.49 per call) 
+socvrfy_srv_handler/45 (socvrfy_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: socvrfy_vry_soc_fw/34 (401890828 (estimated locally),0.37 per call) memcpy_/49 (401890828 (estimated locally),0.37 per call) 
+socvrfy_data_sec_double_check/44 (socvrfy_data_sec_double_check)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+socvrfy_check_param/43 (socvrfy_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_check_param/43 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: socvrfy_vry_soc_fw/34 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+socvrfy_check_code_sign/42 (socvrfy_check_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_check_code_sign/42 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:8325024 (estimated locally) body local
+  Called by: socvrfy_vry_soc_fw/34 (inlined) (8325024 (estimated locally),0.01 per call) 
+  Calls: socvrfy_sym_verify_code_sign/41 (inlined) (2081256 (estimated locally),0.00 per call) socvrfy_rsa_verify_code_sign/40 (inlined) (2081256 (estimated locally),0.00 per call) socvrfy_sm2_verify_code_sign/39 (inlined) (2081256 (estimated locally),0.00 per call) 
+socvrfy_sym_verify_code_sign/41 (socvrfy_sym_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function socvrfy_sym_verify_code_sign/41 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:2081256 (estimated locally) body local
+  Called by: socvrfy_check_code_sign/42 (inlined) (2081256 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/52 (2081256 (estimated locally),0.00 per call) fid_inc_u32/52 (480770 (estimated locally),0.00 per call) socvrfy_data_sec_double_check.constprop.0/109 (inlined) (19695 (estimated locally),0.00 per call) memcpy_/49 (19695 (estimated locally),0.00 per call) fid_inc_u32/52 (19695 (estimated locally),0.00 per call) cpt_ske_dma_cmac/76 (97308 (estimated locally),0.00 per call) fid_inc_u32/52 (97308 (estimated locally),0.00 per call) fid_inc_u32/52 (480770 (estimated locally),0.00 per call) otpkey_get_phyid/59 (97308 (estimated locally),0.00 per call) socvrfy_get_sign_by_alg/35 (480770 (estimated locally),0.00 per call) memcpy_/49 (480770 (estimated locally),0.00 per call) fid_inc_u32/52 (480770 (estimated locally),0.00 per call) fid_inc_u32/52 (2081256 (estimated locally),0.00 per call) 
+socvrfy_rsa_verify_code_sign/40 (socvrfy_rsa_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_rsa_verify_code_sign/40 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:2081256 (estimated locally) body local
+  Called by: socvrfy_check_code_sign/42 (inlined) (2081256 (estimated locally),0.00 per call) 
+  Calls: socvrfy_verify_signature/27 (inlined) (3986 (estimated locally),0.00 per call) memcpy_/49 (3986 (estimated locally),0.00 per call) hash_get_digest_word_len/75 (3986 (estimated locally),0.00 per call) cpt_hash_dma/74 (19695 (estimated locally),0.00 per call) socvrfy_get_and_verify_pubkey.part.0/96 (97308 (estimated locally),0.00 per call) socvrfy_get_sign_by_alg/35 (480770 (estimated locally),0.00 per call) memcpy_/49 (480770 (estimated locally),0.00 per call) 
+socvrfy_sm2_verify_code_sign/39 (socvrfy_sm2_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_sm2_verify_code_sign/39 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:2081256 (estimated locally) body local
+  Called by: socvrfy_check_code_sign/42 (inlined) (2081256 (estimated locally),0.00 per call) 
+  Calls: socvrfy_verify_sm2_signature/25 (inlined) (4614 (estimated locally),0.00 per call) socvrfy_calc_sm2_e_value/38 (inlined) (22794 (estimated locally),0.00 per call) socvrfy_get_and_verify_pubkey.part.0/96 (112620 (estimated locally),0.00 per call) mmap_read_remote_data/56 (556424 (estimated locally),0.00 per call) memcpy_/49 (556424 (estimated locally),0.00 per call) 
+socvrfy_calc_sm2_e_value/38 (socvrfy_calc_sm2_e_value)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_calc_sm2_e_value/38 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:22794 (estimated locally) body local
+  Called by: socvrfy_sm2_verify_code_sign/39 (inlined) (22794 (estimated locally),0.00 per call) 
+  Calls: socvrfy_calc_sm3_code_hash/37 (inlined) (1727 (estimated locally),0.00 per call) socvrfy_calc_sm3_header_hash.constprop.0/108 (inlined) (8532 (estimated locally),0.00 per call) 
+socvrfy_calc_sm3_code_hash/37 (socvrfy_calc_sm3_code_hash)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_calc_sm3_code_hash/37 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:1727 (estimated locally) body local
+  Called by: socvrfy_calc_sm2_e_value/38 (inlined) (1727 (estimated locally),0.00 per call) 
+  Calls: cpt_hash_final/69 (55 (estimated locally),0.00 per call) cpt_hash_update/65 (13 (estimated locally),0.00 per call) cpt_hash_ctx_switch/66 (13 (estimated locally),0.00 per call) mmap_read_remote_data/56 (65 (estimated locally),0.00 per call) cpt_hash_dma_update_blocks/68 (323 (estimated locally),0.00 per call) memcpy_/49 (39 (estimated locally),0.00 per call) cpt_hash_dma_final/67 (323 (estimated locally),0.00 per call) cpt_hash_ctx_switch/66 (646 (estimated locally),0.00 per call) 
+socvrfy_calc_sm3_header_hash/36 (socvrfy_calc_sm3_header_hash)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+socvrfy_get_sign_by_alg/35 (socvrfy_get_sign_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741808 (estimated locally) body local
+  Called by: socvrfy_rsa_verify_code_sign/40 (480770 (estimated locally),0.00 per call) socvrfy_sym_verify_code_sign/41 (480770 (estimated locally),0.00 per call) 
+  Calls: mmap_read_remote_data/56 (858993459 (estimated locally),0.80 per call) 
+socvrfy_vry_soc_fw/34 (socvrfy_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: socvrfy_srv_handler/45 (401890828 (estimated locally),0.37 per call) 
+  Calls: fid_panic/54 (17527723 (estimated locally),0.02 per call) fid_get_u32/53 (35858682 (estimated locally),0.03 per call) fid_delay/51 (108662672 (estimated locally),0.10 per call) fid_delay/51 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/52 (49691327 (estimated locally),0.05 per call) socvrfy_update_otp_ver_cnt/33 (inlined) (2216832 (estimated locally),0.00 per call) fid_delay/51 (10647864 (estimated locally),0.01 per call) fid_delay/51 (51143706 (estimated locally),0.05 per call) fid_delay/51 (7039162 (estimated locally),0.01 per call) fid_delay/51 (51908159 (estimated locally),0.05 per call) fid_delay/51 (108662672 (estimated locally),0.10 per call) fid_delay/51 (1073741824 (estimated locally),1.00 per call) socvrfy_check_code_sign/42 (inlined) (8325024 (estimated locally),0.01 per call) fid_inc_u32/52 (115838 (estimated locally),0.00 per call) fid_delay/51 (1144648 (estimated locally),0.00 per call) fid_delay/51 (8440862 (estimated locally),0.01 per call) socvrfy_dec_image/30 (inlined) (10943496 (estimated locally),0.01 per call) fwverify_copy_data_dma.constprop.0/111 (5637559 (estimated locally),0.01 per call) socvrfy_get_alg_and_key.constprop.0/110 (inlined) (48767807 (estimated locally),0.05 per call) fwverify_copy_data_dma.constprop.0/111 (25122810 (estimated locally),0.02 per call) socvrfy_read_and_check_header/28 (inlined) (217325344 (estimated locally),0.20 per call) socvrfy_check_param/43 (inlined) (1073741824 (estimated locally),1.00 per call) fid_set_u32/50 (1073741824 (estimated locally),1.00 per call) 
+socvrfy_update_otp_ver_cnt/33 (socvrfy_update_otp_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function socvrfy_update_otp_ver_cnt/33 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:2216832 (estimated locally) body local
+  Called by: socvrfy_vry_soc_fw/34 (inlined) (2216832 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/52 (448687 (estimated locally),0.00 per call) misc_write_otp_data/81 (186115 (estimated locally),0.00 per call) uint32_BigNumCmp/80 (448687 (estimated locally),0.00 per call) fid_delay/51 (448687 (estimated locally),0.00 per call) memcpy_/49 (448687 (estimated locally),0.00 per call) otp_read/57 (2216832 (estimated locally),0.00 per call) 
+socvrfy_get_alg_and_key/32 (socvrfy_get_alg_and_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+socvrfy_check_verify_key/31 (socvrfy_check_verify_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_check_verify_key/31 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:219629 (estimated locally) body local
+  Called by: socvrfy_get_alg_and_key.constprop.0/110 (inlined) (219629 (estimated locally),0.00 per call) 
+  Calls: otpkey_check_usage/58 (97028 (estimated locally),0.00 per call) 
+socvrfy_dec_image/30 (socvrfy_dec_image)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_dec_image/30 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:10943496 (estimated locally) body local
+  Called by: socvrfy_vry_soc_fw/34 (inlined) (10943496 (estimated locally),0.01 per call) 
+  Calls: cpt_ske_dma_crypto/62 (829039 (estimated locally),0.00 per call) fwverify_copy_data_dma.constprop.0/111 (4096041 (estimated locally),0.00 per call) 
+fwverify_copy_data_dma/29 (fwverify_copy_data_dma)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+socvrfy_read_and_check_header/28 (socvrfy_read_and_check_header)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function socvrfy_read_and_check_header/28 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:217325344 (estimated locally) body local
+  Called by: socvrfy_vry_soc_fw/34 (inlined) (217325344 (estimated locally),0.20 per call) 
+  Calls: fid_inc_u32/52 (10160916 (estimated locally),0.01 per call) fid_delay/51 (325911 (estimated locally),0.00 per call) fid_delay/51 (3220468 (estimated locally),0.00 per call) fid_delay/51 (468487 (estimated locally),0.00 per call) fid_delay/51 (3454712 (estimated locally),0.00 per call) socvrfy_check_fw_header/47 (1357336 (estimated locally),0.00 per call) otp_read/57 (6706205 (estimated locally),0.01 per call) fid_inc_u32/52 (10160916 (estimated locally),0.01 per call) mmap_read_remote_data/56 (50202154 (estimated locally),0.05 per call) fid_panic/54 (202589816 (estimated locally),0.19 per call) fid_delay/51 (29471055 (estimated locally),0.03 per call) fid_delay/51 (217325344 (estimated locally),0.20 per call) sysreg_get_life_cycle/55 (217325344 (estimated locally),0.20 per call) fid_delay/51 (217325344 (estimated locally),0.20 per call) sysreg_get_life_cycle/55 (217325344 (estimated locally),0.20 per call) 
+socvrfy_verify_signature/27 (socvrfy_verify_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_verify_signature/27 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:3986 (estimated locally) body local
+  Called by: socvrfy_rsa_verify_code_sign/40 (inlined) (3986 (estimated locally),0.00 per call) 
+  Calls: socvrfy_ecc_p256r1_verify_code_sign/26 (inlined) (797 (estimated locally),0.00 per call) __builtin_unreachable/112 (0 (precise),0.00 per call) socvrfy_verify_rsa_signature/24 (797 (estimated locally),0.00 per call) socvrfy_verify_rsa_signature/24 (797 (estimated locally),0.00 per call) 
+socvrfy_ecc_p256r1_verify_code_sign/26 (socvrfy_ecc_p256r1_verify_code_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) secp256r1/73 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function socvrfy_ecc_p256r1_verify_code_sign/26 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:797 (estimated locally) body local
+  Called by: socvrfy_verify_signature/27 (inlined) (797 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/52 (797 (estimated locally),0.00 per call) fid_delay/51 (81 (estimated locally),0.00 per call) fid_delay/51 (797 (estimated locally),0.00 per call) fid_inc_u32/52 (797 (estimated locally),0.00 per call) cpt_ecdsa_verify/72 (797 (estimated locally),0.00 per call) fid_inc_u32/52 (797 (estimated locally),0.00 per call) 
+socvrfy_verify_sm2_signature/25 (socvrfy_verify_sm2_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Function socvrfy_verify_sm2_signature/25 is inline copy in socvrfy_vry_soc_fw/34
+  Availability: local
+  Function flags: count:4614 (estimated locally) body local
+  Called by: socvrfy_sm2_verify_code_sign/39 (inlined) (4614 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/52 (4614 (estimated locally),0.00 per call) fid_inc_u32/52 (1209 (estimated locally),0.00 per call) fid_delay/51 (122 (estimated locally),0.00 per call) fid_delay/51 (1209 (estimated locally),0.00 per call) cpt_sm2_verify/71 (1209 (estimated locally),0.00 per call) fid_inc_u32/52 (1209 (estimated locally),0.00 per call) fid_inc_u32/52 (4614 (estimated locally),0.00 per call) 
+socvrfy_verify_rsa_signature/24 (socvrfy_verify_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) g_fw_verify_cfi/20 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: socvrfy_verify_signature/27 (797 (estimated locally),0.00 per call) socvrfy_verify_signature/27 (797 (estimated locally),0.00 per call) 
+  Calls: fid_inc_u32/52 (1073741824 (estimated locally),1.00 per call) fid_inc_u32/52 (281323581 (estimated locally),0.26 per call) fid_delay/51 (28469946 (estimated locally),0.03 per call) fid_delay/51 (281323581 (estimated locally),0.26 per call) cpt_rsa_ssa_pss_verify_by_msg_digest/70 (281323581 (estimated locally),0.26 per call) fid_inc_u32/52 (281323581 (estimated locally),0.26 per call) fid_inc_u32/52 (1073741824 (estimated locally),1.00 per call) 
+socvrfy_verify_pubkey/23 (socvrfy_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: socvrfy_get_and_verify_pubkey.part.0/96 (420906802 (estimated locally),0.80 per call) 
+  Calls: uint32_cmp_sec/79 (103816317 (estimated locally),0.10 per call) uint32_sleep/78 (103816317 (estimated locally),0.10 per call) uint32_cmp_sec/79 (217325344 (estimated locally),0.20 per call) uint32_sleep/78 (217325344 (estimated locally),0.20 per call) cpt_get_rand_fast/77 (217325344 (estimated locally),0.20 per call) otpkey_read_data/83 (365072224 (estimated locally),0.34 per call) memset_/84 (708669599 (estimated locally),0.66 per call) cpt_hash/82 (1073741822 (estimated locally),1.00 per call) 
+socvrfy_header_is_valid/21 (socvrfy_header_is_valid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function socvrfy_header_is_valid/21 is inline copy in socvrfy_check_fw_header/47
+  Availability: local
+  Function flags: count:401890828 (estimated locally) body local
+  Called by: socvrfy_check_fw_header/47 (inlined) (401890828 (estimated locally),0.37 per call) 
+  Calls: memcpy_/49 (214891025 (estimated locally),0.20 per call) 
+g_fw_verify_cfi/20 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: socvrfy_verify_sm2_signature/25 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_update_otp_ver_cnt/33 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_verify_sm2_signature/25 (addr) socvrfy_ecc_p256r1_verify_code_sign/26 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_read_and_check_header/28 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_verify_rsa_signature/24 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_sym_verify_code_sign/41 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) socvrfy_vry_soc_fw/34 (addr) 
+  Availability: available
+  Varpool flags: initialized
+cloning fwverify_copy_data_dma/29 to fwverify_copy_data_dma.constprop/111
+    replace map: 3 -> 6
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+uint32_t fwverify_copy_data_dma (raddr_t src_addr, raddr_t dst_addr, uint32_t size, uint32_t dma_cfg)
+{
+  uint32_t ret;
+  uint32_t out_size;
+  uint32_t out_l;
+  uint32_t out_h;
+  uint32_t in_l;
+  uint32_t in_h;
+  long long unsigned int _1;
+  long long unsigned int _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = src_addr_5(D) >> 32;
+  in_h_6 = (uint32_t) _1;
+  # DEBUG in_h => in_h_6
+  # DEBUG BEGIN_STMT
+  in_l_7 = (uint32_t) src_addr_5(D);
+  # DEBUG in_l => in_l_7
+  # DEBUG BEGIN_STMT
+  _2 = dst_addr_8(D) >> 32;
+  out_h_9 = (uint32_t) _2;
+  # DEBUG out_h => out_h_9
+  # DEBUG BEGIN_STMT
+  out_l_10 = (uint32_t) dst_addr_8(D);
+  # DEBUG out_l => out_l_10
+  # DEBUG BEGIN_STMT
+  out_size = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  if (src_addr_5(D) != dst_addr_8(D))
+    goto <bb 3>; [63.97%]
+  else
+    goto <bb 4>; [36.03%]
+
+  <bb 3> [local count: 686872648]:
+  # DEBUG BEGIN_STMT
+  ret_16 = cpt_ske_dma_crypto (5, 0, 1, 0B, 0, 0B, 0, in_h_6, in_l_7, out_h_9, out_l_10, size_13(D), &out_size, 0B, dma_cfg_14(D));
+  # DEBUG ret => ret_16
+
+  <bb 4> [local count: 1073741824]:
+  # ret_3 = PHI <2774162085(2), ret_16(3)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  out_size ={v} {CLOBBER(eos)};
+  return ret_3;
+
+}
+
+
+uint32_t fwverify_copy_data_dma.constprop (raddr_t src_addr, raddr_t dst_addr, uint32_t size)
+{
+  uint32_t in_h;
+  uint32_t in_l;
+  uint32_t out_h;
+  uint32_t out_l;
+  uint32_t out_size;
+  uint32_t ret;
+  uint32_t dma_cfg;
+  long long unsigned int _2;
+  long long unsigned int _6;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG dma_cfg => 6
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _2 = src_addr_1(D) >> 32;
+  in_h_3 = (uint32_t) _2;
+  # DEBUG in_h => in_h_3
+  # DEBUG BEGIN_STMT
+  in_l_4 = (uint32_t) src_addr_1(D);
+  # DEBUG in_l => in_l_4
+  # DEBUG BEGIN_STMT
+  _6 = dst_addr_5(D) >> 32;
+  out_h_7 = (uint32_t) _6;
+  # DEBUG out_h => out_h_7
+  # DEBUG BEGIN_STMT
+  out_l_8 = (uint32_t) dst_addr_5(D);
+  # DEBUG out_l => out_l_8
+  # DEBUG BEGIN_STMT
+  out_size = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  if (src_addr_1(D) != dst_addr_5(D))
+    goto <bb 3>; [63.97%]
+  else
+    goto <bb 4>; [36.03%]
+
+  <bb 3> [local count: 686872648]:
+  # DEBUG BEGIN_STMT
+  ret_10 = cpt_ske_dma_crypto (5, 0, 1, 0B, 0, 0B, 0, in_h_3, in_l_4, out_h_7, out_l_8, size_9(D), &out_size, 0B, 6);
+  # DEBUG ret => ret_10
+
+  <bb 4> [local count: 1073741824]:
+  # ret_11 = PHI <2774162085(2), ret_10(3)>
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  out_size ={v} {CLOBBER(eos)};
+  return ret_11;
+
+}
+
+
+cloning socvrfy_data_sec_double_check/44 to socvrfy_data_sec_double_check.constprop/109
+    replace map: 2 -> 16, 3 -> 111, 4 -> 2774162085
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t socvrfy_data_sec_double_check (const uint8_t * data, const uint8_t * expect_data, uint32_t byte_len, uint32_t error_sw, uint32_t expect_sw)
+{
+  uint8_t rand_data[16];
+  uint32_t exp_data[64];
+  uint32_t cmp_data[64];
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  unsigned char _4;
+  long unsigned int _5;
+  unsigned char _6;
+  unsigned char _7;
+  long unsigned int _8;
+  unsigned char _9;
+  long unsigned int _10;
+  unsigned char _11;
+  unsigned char _12;
+  unsigned char _13;
+  long unsigned int _14;
+  unsigned char _28;
+  unsigned char _29;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &cmp_data
+  # DEBUG src => data_18(D)
+  # DEBUG size => byte_len_19(D)
+  # DEBUG BEGIN_STMT
+  memcpy_ (&cmp_data, data_18(D), byte_len_19(D));
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &exp_data
+  # DEBUG src => expect_data_20(D)
+  # DEBUG size => byte_len_19(D)
+  # DEBUG BEGIN_STMT
+  memcpy_ (&exp_data, expect_data_20(D), byte_len_19(D));
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  cpt_get_rand_fast (&rand_data, 12);
+  # DEBUG BEGIN_STMT
+  _1 = rand_data[0];
+  _29 = _1 & 31;
+  _2 = (long unsigned int) _29;
+  _4 = _1 >> 4;
+  uint32_sleep (_2, _4);
+  # DEBUG BEGIN_STMT
+  _5 = byte_len_19(D) >> 2;
+  _6 = rand_data[0];
+  _7 = _6 >> 7;
+  _8 = uint32_cmp_sec (&cmp_data, &exp_data, _5, _7);
+  if (_8 != 0)
+    goto <bb 3>; [67.00%]
+  else
+    goto <bb 4>; [33.00%]
+
+  <bb 3> [local count: 896574424]:
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  _9 = rand_data[1];
+  _28 = _9 & 31;
+  _10 = (long unsigned int) _28;
+  _11 = _9 >> 4;
+  uint32_sleep (_10, _11);
+  # DEBUG BEGIN_STMT
+  _12 = rand_data[1];
+  _13 = _12 >> 7;
+  _14 = uint32_cmp_sec (&cmp_data, &exp_data, _5, _13);
+  if (_14 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 1073741824]:
+  # ret_15 = PHI <error_sw_27(D)(3), expect_sw_26(D)(4)>
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+  cmp_data ={v} {CLOBBER(eos)};
+  exp_data ={v} {CLOBBER(eos)};
+  rand_data ={v} {CLOBBER(eos)};
+  return ret_15;
+
+}
+
+
+uint32_t socvrfy_data_sec_double_check.constprop (const uint8_t * data, const uint8_t * expect_data)
+{
+  uint32_t ret;
+  uint32_t cmp_data[64];
+  uint32_t exp_data[64];
+  uint8_t rand_data[16];
+  uint32_t byte_len;
+  uint32_t error_sw;
+  uint32_t expect_sw;
+  unsigned char _3;
+  unsigned char _4;
+  long unsigned int _5;
+  unsigned char _6;
+  long unsigned int _7;
+  unsigned char _8;
+  unsigned char _9;
+  long unsigned int _10;
+  unsigned char _11;
+  unsigned char _12;
+  long unsigned int _13;
+  unsigned char _14;
+  unsigned char _15;
+  unsigned char _16;
+  long unsigned int _17;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG expect_sw => 2774162085
+  # DEBUG error_sw => 111
+  # DEBUG byte_len => 16
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &cmp_data
+  # DEBUG src => data_1(D)
+  # DEBUG size => 16
+  # DEBUG BEGIN_STMT
+  memcpy_ (&cmp_data, data_1(D), 16);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => &exp_data
+  # DEBUG src => expect_data_2(D)
+  # DEBUG size => 16
+  # DEBUG BEGIN_STMT
+  memcpy_ (&exp_data, expect_data_2(D), 16);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  cpt_get_rand_fast (&rand_data, 12);
+  # DEBUG BEGIN_STMT
+  _3 = rand_data[0];
+  _4 = _3 & 31;
+  _5 = (long unsigned int) _4;
+  _6 = _3 >> 4;
+  uint32_sleep (_5, _6);
+  # DEBUG BEGIN_STMT
+  _7 = 4;
+  _8 = rand_data[0];
+  _9 = _8 >> 7;
+  _10 = uint32_cmp_sec (&cmp_data, &exp_data, _7, _9);
+  if (_10 != 0)
+    goto <bb 3>; [67.00%]
+  else
+    goto <bb 4>; [33.00%]
+
+  <bb 3> [local count: 896574424]:
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  _11 = rand_data[1];
+  _12 = _11 & 31;
+  _13 = (long unsigned int) _12;
+  _14 = _11 >> 4;
+  uint32_sleep (_13, _14);
+  # DEBUG BEGIN_STMT
+  _15 = rand_data[1];
+  _16 = _15 >> 7;
+  _17 = uint32_cmp_sec (&cmp_data, &exp_data, _7, _16);
+  if (_17 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 1073741824]:
+  # ret_18 = PHI <111(3), 2774162085(4)>
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  cmp_data ={v} {CLOBBER(eos)};
+  exp_data ={v} {CLOBBER(eos)};
+  rand_data ={v} {CLOBBER(eos)};
+  return ret_18;
+
+}
+
+
+cloning socvrfy_calc_sm3_header_hash/36 to socvrfy_calc_sm3_header_hash.constprop/108
+    replace map: 3 -> 32
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+uint32_t socvrfy_calc_sm3_header_hash (struct cpt_hash_ctx_st * hash_ctx, const uint8_t * pukkey, raddr_t verify_addr, uint32_t verify_size)
+{
+  uint32_t ret;
+  uint8_t padding[64];
+  uint8_t z[32];
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (hash_ctx_5(D) == 0B)
+    goto <bb 11>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (pukkey_6(D) == 0B)
+    goto <bb 11>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  if (verify_addr_7(D) == 0)
+    goto <bb 11>; [67.00%]
+  else
+    goto <bb 5>; [33.00%]
+
+  <bb 5> [local count: 173624053]:
+  # DEBUG BEGIN_STMT
+  ret_10 = cpt_sm2_getZ (0B, 0, pukkey_6(D), &z);
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  if (ret_10 == 2774162085)
+    goto <bb 6>; [20.24%]
+  else
+    goto <bb 8>; [79.76%]
+
+  <bb 6> [local count: 35141508]:
+  # DEBUG BEGIN_STMT
+  ret_12 = cpt_hash_init (hash_ctx_5(D), 0);
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  if (ret_12 == 2774162085)
+    goto <bb 7>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 7> [local count: 7112641]:
+  # DEBUG BEGIN_STMT
+  ret_14 = cpt_hash_update (hash_ctx_5(D), &z, 32);
+  # DEBUG ret => ret_14
+
+  <bb 8> [local count: 145595186]:
+  # ret_1 = PHI <ret_10(5), ret_14(7)>
+  # DEBUG ret => ret_1
+  # DEBUG BEGIN_STMT
+  if (ret_1 == 2774162085)
+    goto <bb 9>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 9> [local count: 29468466]:
+  # DEBUG BEGIN_STMT
+  ret_17 = mmap_read_remote_data (&padding, verify_addr_7(D), verify_size_15(D));
+  # DEBUG ret => ret_17
+  # DEBUG BEGIN_STMT
+  if (ret_17 == 2774162085)
+    goto <bb 10>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 10> [local count: 5964417]:
+  # DEBUG BEGIN_STMT
+  ret_19 = cpt_hash_update (hash_ctx_5(D), &padding, verify_size_15(D));
+  # DEBUG ret => ret_19
+
+  <bb 11> [local count: 1073741824]:
+  # ret_2 = PHI <1(2), ret_17(9), ret_19(10), ret_1(8), ret_12(6), 1(3), 1(4)>
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  z ={v} {CLOBBER(eos)};
+  padding ={v} {CLOBBER(eos)};
+  return ret_2;
+
+}
+
+
+uint32_t socvrfy_calc_sm3_header_hash.constprop (struct cpt_hash_ctx_st * hash_ctx, const uint8_t * pukkey, raddr_t verify_addr)
+{
+  uint8_t z[32];
+  uint8_t padding[64];
+  uint32_t ret;
+  uint32_t verify_size;
+
+  <bb 12> [local count: 1073741822]:
+  # DEBUG verify_size => 32
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (hash_ctx_1(D) == 0B)
+    goto <bb 11>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (pukkey_2(D) == 0B)
+    goto <bb 11>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  if (verify_addr_3(D) == 0)
+    goto <bb 11>; [67.00%]
+  else
+    goto <bb 5>; [33.00%]
+
+  <bb 5> [local count: 173624053]:
+  # DEBUG BEGIN_STMT
+  ret_4 = cpt_sm2_getZ (0B, 0, pukkey_2(D), &z);
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  if (ret_4 == 2774162085)
+    goto <bb 6>; [20.24%]
+  else
+    goto <bb 8>; [79.76%]
+
+  <bb 6> [local count: 35141508]:
+  # DEBUG BEGIN_STMT
+  ret_5 = cpt_hash_init (hash_ctx_1(D), 0);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 2774162085)
+    goto <bb 7>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 7> [local count: 7112641]:
+  # DEBUG BEGIN_STMT
+  ret_6 = cpt_hash_update (hash_ctx_1(D), &z, 32);
+  # DEBUG ret => ret_6
+
+  <bb 8> [local count: 145595186]:
+  # ret_7 = PHI <ret_4(5), ret_6(7)>
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 == 2774162085)
+    goto <bb 9>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 9> [local count: 29468466]:
+  # DEBUG BEGIN_STMT
+  ret_8 = mmap_read_remote_data (&padding, verify_addr_3(D), 32);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 10>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 10> [local count: 5964417]:
+  # DEBUG BEGIN_STMT
+  ret_9 = cpt_hash_update (hash_ctx_1(D), &padding, 32);
+  # DEBUG ret => ret_9
+
+  <bb 11> [local count: 1073741824]:
+  # ret_10 = PHI <1(2), 1(3), 1(4), ret_5(6), ret_7(8), ret_8(9), ret_9(10)>
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  z ={v} {CLOBBER(eos)};
+  padding ={v} {CLOBBER(eos)};
+  return ret_10;
+
+}
+
+
+updating call of socvrfy_vry_soc_fw/34 -> fwverify_copy_data_dma.constprop/111: ret_57 = fwverify_copy_data_dma (_9, _10, _11, 6);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:ret_57 = fwverify_copy_data_dma.constprop (_9, _10, _11);
+updating call of socvrfy_vry_soc_fw/34 -> socvrfy_get_alg_and_key.constprop/110: ret_53 = socvrfy_get_alg_and_key (_7, &verify_key, &verify_alg, &phy_dec_key, &dec_alg);
+  updated to:ret_53 = socvrfy_get_alg_and_key.constprop (_7, &verify_key, &verify_alg, &phy_dec_key, &dec_alg);
+updating call of socvrfy_vry_soc_fw/34 -> fwverify_copy_data_dma.constprop/111: ret_59 = fwverify_copy_data_dma (_4, _5, _6, 6);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:ret_59 = fwverify_copy_data_dma.constprop (_4, _5, _6);
+cloning socvrfy_get_alg_and_key/32 to socvrfy_get_alg_and_key.constprop/110
+uint32_t socvrfy_get_alg_and_key (uint8_t image_type, uint32_t * verify_key, uint32_t * verify_alg, uint16_t * dec_key, cpt_ske_alg_e * dec_alg)
+{
+  cpt_ske_alg_e dec_alg;
+  cpt_ske_alg_e dec_alg;
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  unsigned char _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  if (verify_key_11(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (verify_alg_12(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  if (dec_key_13(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 5>; [70.00%]
+
+  <bb 5> [local count: 368293450]:
+  if (dec_alg_14(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 6>; [70.00%]
+
+  <bb 6> [local count: 257805416]:
+  # DEBUG BEGIN_STMT
+  if (image_type_15(D) == 1)
+    goto <bb 7>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 7> [local count: 52179816]:
+  # DEBUG BEGIN_STMT
+  ret_27 = otpkey_check_usage (2097164, 14, 5, 0);
+  # DEBUG ret => ret_27
+  # DEBUG BEGIN_STMT
+  if (ret_27 == 2774162085)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 8> [local count: 10561195]:
+  # DEBUG BEGIN_STMT
+  ret_29 = otpkey_get_phyid (2097164, dec_key_13(D));
+  # DEBUG ret => ret_29
+  # DEBUG BEGIN_STMT
+  *verify_key_11(D) = 2097163;
+  # DEBUG BEGIN_STMT
+  _1 = sysreg_get_soc_verify_alg ();
+  _2 = (long unsigned int) _1;
+  *verify_alg_12(D) = _2;
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => _2
+  # DEBUG BEGIN_STMT
+  # DEBUG dec_alg => 5
+  # DEBUG BEGIN_STMT
+  switch (_2) <default: <L21>, case 1: <L25>, case 3: <L25>>
+
+  <bb 9> [local count: 7040796]:
+<L25>:
+
+  <bb 10> [local count: 10561195]:
+  # dec_alg_24 = PHI <5(8), 8(9)>
+<L21>:
+  # DEBUG dec_alg => dec_alg_24
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => NULL
+  # DEBUG dec_alg => NULL
+  *dec_alg_14(D) = dec_alg_24;
+  goto <bb 16>; [100.00%]
+
+  <bb 11> [local count: 205625600]:
+  # DEBUG BEGIN_STMT
+  if (image_type_15(D) == 2)
+    goto <bb 12>; [32.03%]
+  else
+    goto <bb 18>; [67.97%]
+
+  <bb 12> [local count: 65861879]:
+  # DEBUG BEGIN_STMT
+  ret_18 = otpkey_check_usage (2097158, 14, 10, 0);
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  if (ret_18 == 2774162085)
+    goto <bb 13>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 13> [local count: 13330444]:
+  # DEBUG BEGIN_STMT
+  ret_20 = otpkey_get_phyid (2097158, dec_key_13(D));
+  # DEBUG ret => ret_20
+  # DEBUG BEGIN_STMT
+  *verify_key_11(D) = 2097157;
+  # DEBUG BEGIN_STMT
+  _3 = sysreg_get_fw_verify_alg ();
+  _4 = (long unsigned int) _3;
+  *verify_alg_12(D) = _4;
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => _4
+  # DEBUG BEGIN_STMT
+  # DEBUG dec_alg => 5
+  # DEBUG BEGIN_STMT
+  switch (_4) <default: <L24>, case 1: <L26>, case 3: <L26>>
+
+  <bb 14> [local count: 8886963]:
+<L26>:
+
+  <bb 15> [local count: 13330444]:
+  # dec_alg_33 = PHI <5(13), 8(14)>
+<L24>:
+  # DEBUG dec_alg => dec_alg_33
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => NULL
+  # DEBUG dec_alg => NULL
+  *dec_alg_14(D) = dec_alg_33;
+
+  <bb 16> [local count: 23891639]:
+  # ret_7 = PHI <ret_20(15), ret_29(10)>
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 == 2774162085)
+    goto <bb 17>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 17> [local count: 4835668]:
+  # DEBUG BEGIN_STMT
+  _5 = *verify_key_11(D);
+  _6 = *verify_alg_12(D);
+  ret_36 = socvrfy_check_verify_key (_5, _6);
+  # DEBUG ret => ret_36
+
+  <bb 18> [local count: 1073741824]:
+  # ret_8 = PHI <ret_7(16), ret_36(17), 1(4), 112(11), ret_27(7), ret_18(12), 1(3), 1(2), 1(5)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+uint32_t socvrfy_get_alg_and_key.constprop (uint8_t image_type, uint32_t * verify_key, uint32_t * verify_alg, uint16_t * dec_key, cpt_ske_alg_e * dec_alg)
+{
+  uint32_t ret;
+  cpt_ske_alg_e dec_alg;
+  cpt_ske_alg_e dec_alg;
+  unsigned char _8;
+  long unsigned int _9;
+  unsigned char _13;
+  long unsigned int _14;
+  long unsigned int _17;
+  long unsigned int _18;
+
+  <bb 19> [local count: 1073741822]:
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  if (verify_key_1(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619279]:
+  if (verify_alg_2(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 526133497]:
+  if (dec_key_3(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 5>; [70.00%]
+
+  <bb 5> [local count: 368293450]:
+  if (dec_alg_4(D) == 0B)
+    goto <bb 18>; [30.00%]
+  else
+    goto <bb 6>; [70.00%]
+
+  <bb 6> [local count: 257805416]:
+  # DEBUG BEGIN_STMT
+  if (image_type_5(D) == 1)
+    goto <bb 7>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 7> [local count: 52179816]:
+  # DEBUG BEGIN_STMT
+  ret_6 = otpkey_check_usage (2097164, 14, 5, 0);
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  if (ret_6 == 2774162085)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 8> [local count: 10561195]:
+  # DEBUG BEGIN_STMT
+  ret_7 = otpkey_get_phyid (2097164, dec_key_3(D));
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  *verify_key_1(D) = 2097163;
+  # DEBUG BEGIN_STMT
+  _8 = sysreg_get_soc_verify_alg ();
+  _9 = (long unsigned int) _8;
+  *verify_alg_2(D) = _9;
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => _9
+  # DEBUG BEGIN_STMT
+  # DEBUG dec_alg => 5
+  # DEBUG BEGIN_STMT
+  switch (_9) <default: <L1>, case 1: <L0>, case 3: <L0>>
+
+  <bb 9> [local count: 7040796]:
+<L0>:
+
+  <bb 10> [local count: 10561195]:
+  # dec_alg_10 = PHI <5(8), 8(9)>
+<L1>:
+  # DEBUG dec_alg => dec_alg_10
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => NULL
+  # DEBUG dec_alg => NULL
+  *dec_alg_4(D) = dec_alg_10;
+  goto <bb 16>; [100.00%]
+
+  <bb 11> [local count: 205625600]:
+  # DEBUG BEGIN_STMT
+  if (image_type_5(D) == 2)
+    goto <bb 12>; [32.03%]
+  else
+    goto <bb 18>; [67.97%]
+
+  <bb 12> [local count: 65861879]:
+  # DEBUG BEGIN_STMT
+  ret_11 = otpkey_check_usage (2097158, 14, 10, 0);
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  if (ret_11 == 2774162085)
+    goto <bb 13>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 13> [local count: 13330444]:
+  # DEBUG BEGIN_STMT
+  ret_12 = otpkey_get_phyid (2097158, dec_key_3(D));
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  *verify_key_1(D) = 2097157;
+  # DEBUG BEGIN_STMT
+  _13 = sysreg_get_fw_verify_alg ();
+  _14 = (long unsigned int) _13;
+  *verify_alg_2(D) = _14;
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => _14
+  # DEBUG BEGIN_STMT
+  # DEBUG dec_alg => 5
+  # DEBUG BEGIN_STMT
+  switch (_14) <default: <L3>, case 1: <L2>, case 3: <L2>>
+
+  <bb 14> [local count: 8886963]:
+<L2>:
+
+  <bb 15> [local count: 13330444]:
+  # dec_alg_15 = PHI <5(13), 8(14)>
+<L3>:
+  # DEBUG dec_alg => dec_alg_15
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG verify_alg => NULL
+  # DEBUG dec_alg => NULL
+  *dec_alg_4(D) = dec_alg_15;
+
+  <bb 16> [local count: 23891639]:
+  # ret_16 = PHI <ret_7(10), ret_12(15)>
+  # DEBUG ret => ret_16
+  # DEBUG BEGIN_STMT
+  if (ret_16 == 2774162085)
+    goto <bb 17>; [20.24%]
+  else
+    goto <bb 18>; [79.76%]
+
+  <bb 17> [local count: 4835668]:
+  # DEBUG BEGIN_STMT
+  _17 = *verify_key_1(D);
+  _18 = *verify_alg_2(D);
+  ret_19 = socvrfy_check_verify_key (_17, _18);
+  # DEBUG ret => ret_19
+
+  <bb 18> [local count: 1073741824]:
+  # ret_20 = PHI <1(2), 1(3), 1(4), 1(5), ret_6(7), 112(11), ret_11(12), ret_16(16), ret_19(17)>
+  # DEBUG ret => ret_20
+  # DEBUG BEGIN_STMT
+  return ret_20;
+
+}
+
+
+updating call of socvrfy_vry_soc_fw/34 -> fwverify_copy_data_dma.constprop/111: ret_124 = fwverify_copy_data_dma (in_addr_122, out_addr_123, 1024, 6);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:ret_124 = fwverify_copy_data_dma.constprop (in_addr_122, out_addr_123, 1024);
+updating call of socvrfy_vry_soc_fw/34 -> socvrfy_calc_sm3_header_hash.constprop/108: ret_152 = socvrfy_calc_sm3_header_hash (&hash_ctx, &pukkey, verify_addr_142, 32);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:ret_152 = socvrfy_calc_sm3_header_hash.constprop (&hash_ctx, &pukkey, verify_addr_142);
+updating call of socvrfy_vry_soc_fw/34 -> __builtin_unreachable/112: ret_202 = socvrfy_verify_sm2_signature (&signature, &signature_orig, &pukkey);
+  updated to:__builtin_unreachable ();
+updating call of socvrfy_vry_soc_fw/34 -> socvrfy_data_sec_double_check.constprop/109: ret_222 = socvrfy_data_sec_double_check (&signature, &signature_orig, 16, 111, 2774162085);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_222 = socvrfy_data_sec_double_check.constprop (&signature, &signature_orig);
+Trivially needed variables: g_fw_verify_cfi/20
+Removing variables:
+
+Final Symbol table:
+
+__builtin_unreachable/112 (__builtin_unreachable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fwverify_copy_data_dma.constprop.0/111 (fwverify_copy_data_dma.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.fwverify_copy_data_dma.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+socvrfy_get_and_verify_pubkey.part.0/96 (socvrfy_get_and_verify_pubkey.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.socvrfy_get_and_verify_pubkey.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:526133494 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+memset_/84 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_read_data/83 (otpkey_read_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash/82 (cpt_hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+misc_write_otp_data/81 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/80 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_cmp_sec/79 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_sleep/78 (uint32_sleep)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_get_rand_fast/77 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_cmac/76 (cpt_ske_dma_cmac)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/75 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_dma/74 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+secp256r1/73 (secp256r1)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+cpt_ecdsa_verify/72 (cpt_ecdsa_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_verify/71 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_rsa_ssa_pss_verify_by_msg_digest/70 (cpt_rsa_ssa_pss_verify_by_msg_digest)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_final/69 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_dma_update_blocks/68 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_dma_final/67 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_ctx_switch/66 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_update/65 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_init/64 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_getZ/63 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_crypto/62 (cpt_ske_dma_crypto)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_fw_verify_alg/61 (sysreg_get_fw_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_soc_verify_alg/60 (sysreg_get_soc_verify_alg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_get_phyid/59 (otpkey_get_phyid)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_check_usage/58 (otpkey_check_usage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otp_read/57 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/56 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/55 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_panic/54 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_get_u32/53 (fid_get_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_inc_u32/52 (fid_inc_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_delay/51 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_set_u32/50 (fid_set_u32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/49 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+socvrfy_check_ver_cnt/48 (socvrfy_check_ver_cnt)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.socvrfy_check_ver_cnt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_check_fw_header/47 (socvrfy_check_fw_header)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.socvrfy_check_fw_header (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_get_and_verify_pubkey/46 (socvrfy_get_and_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.socvrfy_get_and_verify_pubkey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741816 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_srv_handler/45 (socvrfy_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.socvrfy_srv_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_data_sec_double_check/44 (socvrfy_data_sec_double_check)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_calc_sm3_header_hash/36 (socvrfy_calc_sm3_header_hash)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_get_sign_by_alg/35 (socvrfy_get_sign_by_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.socvrfy_get_sign_by_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741808 (estimated locally) local
+  Called by: 
+  Calls: 
+socvrfy_vry_soc_fw/34 (socvrfy_vry_soc_fw)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.socvrfy_vry_soc_fw (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+socvrfy_get_alg_and_key/32 (socvrfy_get_alg_and_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+fwverify_copy_data_dma/29 (fwverify_copy_data_dma)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+socvrfy_verify_rsa_signature/24 (socvrfy_verify_rsa_signature)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.socvrfy_verify_rsa_signature (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+socvrfy_verify_pubkey/23 (socvrfy_verify_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.socvrfy_verify_pubkey (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+g_fw_verify_cfi/20 (g_fw_verify_cfi)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sdata.g_fw_verify_cfi (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

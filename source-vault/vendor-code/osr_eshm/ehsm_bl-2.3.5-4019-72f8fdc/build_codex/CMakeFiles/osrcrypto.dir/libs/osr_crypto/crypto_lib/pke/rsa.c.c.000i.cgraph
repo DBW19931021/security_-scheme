@@ -1,0 +1,2026 @@
+Trivially needed symbols: RSA_GetCRTKey/31 RSA_GetKey/25 RSA_CRTModExp/17 RSA_ModExp/13
+
+
+Initial Symbol table:
+
+uint32_set/49 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+get_rand/48 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_Get_E1/18 
+  Calls: 
+pke_modinv/47 (pke_modinv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_keygen_get_e_d_internal/22 
+  Calls: 
+get_prime/46 (get_prime)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_get_p_q_fai_n/21 rsa_keygen_get_p_q_fai_n/21 
+  Calls: 
+pke_add/45 (pke_add)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+uint32_copy/44 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_set_operand_width/43 (pke_set_operand_width)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_modmul_internal/42 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_mod_add_sub_mul_internal/41 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mod/40 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_get_operand_bytes/39 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mul/38 (pke_mul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_final/24 rsa_keygen_get_p_q_fai_n/21 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_check_input/14 
+  Calls: 
+uint32_clear/37 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNum_Check_Zero/36 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNumCmp/35 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 RSA_Get_E2/19 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp/17 
+  Calls: 
+pke_modexp_internal/34 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_pre_calc_mont/33 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_modexp_check_input/32 (pke_modexp_check_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_ModExp/13 
+  Calls: 
+RSA_GetCRTKey/31 (RSA_GetCRTKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_crt_keygen_final/30 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_crt_keygen_final/30 (rsa_crt_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: CheckValue_0x5a5a5a5a/20 RSA_CRTModExp/17 CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 
+rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (rsa_crt_keygen_get_e_p_q_dp_dq_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (rsa_crt_keygen_get_e_p_q_dp_dq_u_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 
+  Calls: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+  Calls: pke_modinv/47 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 
+rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: pke_mul/38 uint32_BigNumCmp/35 get_prime/46 get_prime/46 
+RSA_GetKey/25 (RSA_GetKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc2e167c660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_keygen_final/24 rsa_keygen_get_e_d/23 rsa_keygen_get_p_q_fai_n/21 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_keygen_final/24 (rsa_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 rPKE_A/4 rPKE_B/5 pke_set_operand_width/43 
+rsa_keygen_get_e_d/23 (rsa_keygen_get_e_d)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164cee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: rsa_keygen_get_e_d_internal/22 rsa_keygen_get_e_d_internal/22 
+rsa_keygen_get_e_d_internal/22 (rsa_keygen_get_e_d_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164cee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_get_e_d/23 rsa_keygen_get_e_d/23 
+  Calls: pke_modinv/47 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_keygen_get_p_q_fai_n/21 (rsa_keygen_get_p_q_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164cdd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: pke_mul/38 get_prime/46 get_prime/46 
+CheckValue_0x5a5a5a5a/20 (CheckValue_0x5a5a5a5a)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+RSA_Get_E2/19 (RSA_Get_E2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164c880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_keygen_get_e_d_internal/22 
+  Calls: uint32_BigNumCmp/35 RSA_Get_E1/18 
+RSA_Get_E1/18 (RSA_Get_E1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164cee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 RSA_Get_E2/19 rsa_keygen_get_e_d_internal/22 
+  Calls: get_rand/48 
+RSA_CRTModExp/17 (RSA_CRTModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc2e167c000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 
+  Calls: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 uint32_clear/37 uint32_BigNum_Check_Zero/36 uint32_BigNumCmp/35 RSA_CRTModExp_check_input/14 
+RSA_CRTModExp_internal_step_2/16 (RSA_CRTModExp_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_add/45 rPKE_B/5 rPKE_A/4 uint32_clear/37 rPKE_B/5 uint32_copy/44 rPKE_B/5 pke_mul/38 rPKE_A/4 pke_set_operand_width/43 pke_modmul_internal/42 
+RSA_CRTModExp_internal_step_1/15 (RSA_CRTModExp_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164c660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 uint32_BigNumCmp/35 rPKE_B/5 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_pre_calc_mont/33 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_get_operand_bytes/39 pke_pre_calc_mont/33 
+RSA_CRTModExp_check_input/14 (RSA_CRTModExp_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164c550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mul/38 GET_WORD_LEN/10 GET_WORD_LEN/10 
+RSA_ModExp/13 (RSA_ModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc2e164c770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_modexp_internal/34 pke_pre_calc_mont/33 pke_modexp_check_input/32 GET_WORD_LEN/10 GET_WORD_LEN/10 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164c770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetKey/25 RSA_GetKey/25 RSA_GetKey/25 RSA_CRTModExp_check_input/14 RSA_CRTModExp_check_input/14 RSA_ModExp/13 RSA_ModExp/13 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e164c660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc2e167c000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uint32_set/49 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+get_rand/48 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_Get_E1/18 
+  Calls: 
+pke_modinv/47 (pke_modinv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_keygen_get_e_d_internal/22 
+  Calls: 
+get_prime/46 (get_prime)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_get_p_q_fai_n/21 rsa_keygen_get_p_q_fai_n/21 
+  Calls: 
+pke_add/45 (pke_add)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+uint32_copy/44 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_set_operand_width/43 (pke_set_operand_width)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_modmul_internal/42 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_mod_add_sub_mul_internal/41 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mod/40 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_get_operand_bytes/39 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mul/38 (pke_mul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_final/24 rsa_keygen_get_p_q_fai_n/21 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_check_input/14 
+  Calls: 
+uint32_clear/37 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNum_Check_Zero/36 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNumCmp/35 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 RSA_Get_E2/19 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp/17 
+  Calls: 
+pke_modexp_internal/34 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_pre_calc_mont/33 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_modexp_check_input/32 (pke_modexp_check_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_ModExp/13 
+  Calls: 
+RSA_GetCRTKey/31 (RSA_GetCRTKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_crt_keygen_final/30 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_crt_keygen_final/30 (rsa_crt_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: CheckValue_0x5a5a5a5a/20 RSA_CRTModExp/17 CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 
+rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (rsa_crt_keygen_get_e_p_q_dp_dq_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (rsa_crt_keygen_get_e_p_q_dp_dq_u_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 
+  Calls: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+  Calls: pke_modinv/47 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 
+rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: pke_mul/38 uint32_BigNumCmp/35 get_prime/46 get_prime/46 
+RSA_GetKey/25 (RSA_GetKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_keygen_final/24 rsa_keygen_get_e_d/23 rsa_keygen_get_p_q_fai_n/21 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_keygen_final/24 (rsa_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 rPKE_A/4 rPKE_B/5 pke_set_operand_width/43 
+rsa_keygen_get_e_d/23 (rsa_keygen_get_e_d)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: rsa_keygen_get_e_d_internal/22 rsa_keygen_get_e_d_internal/22 
+rsa_keygen_get_e_d_internal/22 (rsa_keygen_get_e_d_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_get_e_d/23 rsa_keygen_get_e_d/23 
+  Calls: pke_modinv/47 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_keygen_get_p_q_fai_n/21 (rsa_keygen_get_p_q_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: pke_mul/38 get_prime/46 get_prime/46 
+CheckValue_0x5a5a5a5a/20 (CheckValue_0x5a5a5a5a)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+RSA_Get_E2/19 (RSA_Get_E2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_keygen_get_e_d_internal/22 
+  Calls: uint32_BigNumCmp/35 RSA_Get_E1/18 
+RSA_Get_E1/18 (RSA_Get_E1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 RSA_Get_E2/19 rsa_keygen_get_e_d_internal/22 
+  Calls: get_rand/48 
+RSA_CRTModExp/17 (RSA_CRTModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 
+  Calls: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 uint32_clear/37 uint32_BigNum_Check_Zero/36 uint32_BigNumCmp/35 RSA_CRTModExp_check_input/14 
+RSA_CRTModExp_internal_step_2/16 (RSA_CRTModExp_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_add/45 rPKE_B/5 rPKE_A/4 uint32_clear/37 rPKE_B/5 uint32_copy/44 rPKE_B/5 pke_mul/38 rPKE_A/4 pke_set_operand_width/43 pke_modmul_internal/42 
+RSA_CRTModExp_internal_step_1/15 (RSA_CRTModExp_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 uint32_BigNumCmp/35 rPKE_B/5 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_pre_calc_mont/33 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_get_operand_bytes/39 pke_pre_calc_mont/33 
+RSA_CRTModExp_check_input/14 (RSA_CRTModExp_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mul/38 GET_WORD_LEN/10 GET_WORD_LEN/10 
+RSA_ModExp/13 (RSA_ModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_modexp_internal/34 pke_pre_calc_mont/33 pke_modexp_check_input/32 GET_WORD_LEN/10 GET_WORD_LEN/10 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetKey/25 RSA_GetKey/25 RSA_GetKey/25 RSA_CRTModExp_check_input/14 RSA_CRTModExp_check_input/14 RSA_ModExp/13 RSA_ModExp/13 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+
+
+Initial Symbol table:
+
+uint32_set/49 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+get_rand/48 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_Get_E1/18 
+  Calls: 
+pke_modinv/47 (pke_modinv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_keygen_get_e_d_internal/22 
+  Calls: 
+get_prime/46 (get_prime)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_get_p_q_fai_n/21 rsa_keygen_get_p_q_fai_n/21 
+  Calls: 
+pke_add/45 (pke_add)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+uint32_copy/44 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_set_operand_width/43 (pke_set_operand_width)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_modmul_internal/42 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_mod_add_sub_mul_internal/41 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mod/40 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_get_operand_bytes/39 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mul/38 (pke_mul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_final/24 rsa_keygen_get_p_q_fai_n/21 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_check_input/14 
+  Calls: 
+uint32_clear/37 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNum_Check_Zero/36 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNumCmp/35 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 RSA_Get_E2/19 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp/17 
+  Calls: 
+pke_modexp_internal/34 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_pre_calc_mont/33 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_modexp_check_input/32 (pke_modexp_check_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_ModExp/13 
+  Calls: 
+RSA_GetCRTKey/31 (RSA_GetCRTKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_crt_keygen_final/30 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_crt_keygen_final/30 (rsa_crt_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: CheckValue_0x5a5a5a5a/20 RSA_CRTModExp/17 CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 
+rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (rsa_crt_keygen_get_e_p_q_dp_dq_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (rsa_crt_keygen_get_e_p_q_dp_dq_u_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 
+  Calls: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+  Calls: pke_modinv/47 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 
+rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: pke_mul/38 uint32_BigNumCmp/35 get_prime/46 get_prime/46 
+RSA_GetKey/25 (RSA_GetKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_keygen_final/24 rsa_keygen_get_e_d/23 rsa_keygen_get_p_q_fai_n/21 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_keygen_final/24 (rsa_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 rPKE_A/4 rPKE_B/5 pke_set_operand_width/43 
+rsa_keygen_get_e_d/23 (rsa_keygen_get_e_d)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: rsa_keygen_get_e_d_internal/22 rsa_keygen_get_e_d_internal/22 
+rsa_keygen_get_e_d_internal/22 (rsa_keygen_get_e_d_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_get_e_d/23 rsa_keygen_get_e_d/23 
+  Calls: pke_modinv/47 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_keygen_get_p_q_fai_n/21 (rsa_keygen_get_p_q_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: pke_mul/38 get_prime/46 get_prime/46 
+CheckValue_0x5a5a5a5a/20 (CheckValue_0x5a5a5a5a)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+RSA_Get_E2/19 (RSA_Get_E2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_keygen_get_e_d_internal/22 
+  Calls: uint32_BigNumCmp/35 RSA_Get_E1/18 
+RSA_Get_E1/18 (RSA_Get_E1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 RSA_Get_E2/19 rsa_keygen_get_e_d_internal/22 
+  Calls: get_rand/48 
+RSA_CRTModExp/17 (RSA_CRTModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 
+  Calls: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 uint32_clear/37 uint32_BigNum_Check_Zero/36 uint32_BigNumCmp/35 RSA_CRTModExp_check_input/14 
+RSA_CRTModExp_internal_step_2/16 (RSA_CRTModExp_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_add/45 rPKE_B/5 rPKE_A/4 uint32_clear/37 rPKE_B/5 uint32_copy/44 rPKE_B/5 pke_mul/38 rPKE_A/4 pke_set_operand_width/43 pke_modmul_internal/42 
+RSA_CRTModExp_internal_step_1/15 (RSA_CRTModExp_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 uint32_BigNumCmp/35 rPKE_B/5 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_pre_calc_mont/33 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_get_operand_bytes/39 pke_pre_calc_mont/33 
+RSA_CRTModExp_check_input/14 (RSA_CRTModExp_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mul/38 GET_WORD_LEN/10 GET_WORD_LEN/10 
+RSA_ModExp/13 (RSA_ModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_modexp_internal/34 pke_pre_calc_mont/33 pke_modexp_check_input/32 GET_WORD_LEN/10 GET_WORD_LEN/10 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetKey/25 RSA_GetKey/25 RSA_GetKey/25 RSA_CRTModExp_check_input/14 RSA_CRTModExp_check_input/14 RSA_ModExp/13 RSA_ModExp/13 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uint32_set/49 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+get_rand/48 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_Get_E1/18 
+  Calls: 
+pke_modinv/47 (pke_modinv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_keygen_get_e_d_internal/22 
+  Calls: 
+get_prime/46 (get_prime)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_get_p_q_fai_n/21 rsa_keygen_get_p_q_fai_n/21 
+  Calls: 
+pke_add/45 (pke_add)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+uint32_copy/44 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_set_operand_width/43 (pke_set_operand_width)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_modmul_internal/42 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+pke_mod_add_sub_mul_internal/41 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mod/40 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_get_operand_bytes/39 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+pke_mul/38 (pke_mul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 rsa_keygen_final/24 rsa_keygen_get_p_q_fai_n/21 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_check_input/14 
+  Calls: 
+uint32_clear/37 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNum_Check_Zero/36 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: 
+uint32_BigNumCmp/35 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 RSA_Get_E2/19 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp/17 
+  Calls: 
+pke_modexp_internal/34 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_pre_calc_mont/33 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_keygen_final/24 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_ModExp/13 
+  Calls: 
+pke_modexp_check_input/32 (pke_modexp_check_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: RSA_ModExp/13 
+  Calls: 
+RSA_GetCRTKey/31 (RSA_GetCRTKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_crt_keygen_final/30 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_crt_keygen_final/30 (rsa_crt_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: CheckValue_0x5a5a5a5a/20 RSA_CRTModExp/17 CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 
+rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (rsa_crt_keygen_get_e_p_q_dp_dq_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (rsa_crt_keygen_get_e_p_q_dp_dq_u_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u/29 rsa_crt_keygen_get_e_p_q_dp_dq_u/29 
+  Calls: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 
+  Calls: pke_modinv/47 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 pke_modinv/47 pke_modinv/47 pke_mod/40 uint32_BigNumCmp/35 
+rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 
+  Calls: pke_mul/38 uint32_BigNumCmp/35 get_prime/46 get_prime/46 
+RSA_GetKey/25 (RSA_GetKey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: rsa_keygen_final/24 rsa_keygen_get_e_d/23 rsa_keygen_get_p_q_fai_n/21 GET_WORD_LEN/10 GET_WORD_LEN/10 GET_WORD_LEN/10 
+rsa_keygen_final/24 (rsa_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: CheckValue_0x5a5a5a5a/20 pke_modexp_internal/34 pke_modexp_internal/34 uint32_set/49 pke_pre_calc_mont/33 pke_mul/38 rPKE_A/4 rPKE_B/5 pke_set_operand_width/43 
+rsa_keygen_get_e_d/23 (rsa_keygen_get_e_d)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: rsa_keygen_get_e_d_internal/22 rsa_keygen_get_e_d_internal/22 
+rsa_keygen_get_e_d_internal/22 (rsa_keygen_get_e_d_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_get_e_d/23 rsa_keygen_get_e_d/23 
+  Calls: pke_modinv/47 RSA_Get_E1/18 RSA_Get_E2/19 
+rsa_keygen_get_p_q_fai_n/21 (rsa_keygen_get_p_q_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetKey/25 
+  Calls: pke_mul/38 get_prime/46 get_prime/46 
+CheckValue_0x5a5a5a5a/20 (CheckValue_0x5a5a5a5a)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 rsa_crt_keygen_final/30 rsa_keygen_final/24 
+  Calls: 
+RSA_Get_E2/19 (RSA_Get_E2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 rsa_keygen_get_e_d_internal/22 
+  Calls: uint32_BigNumCmp/35 RSA_Get_E1/18 
+RSA_Get_E1/18 (RSA_Get_E1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 RSA_Get_E2/19 rsa_keygen_get_e_d_internal/22 
+  Calls: get_rand/48 
+RSA_CRTModExp/17 (RSA_CRTModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_crt_keygen_final/30 
+  Calls: RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 uint32_clear/37 uint32_BigNum_Check_Zero/36 uint32_BigNumCmp/35 RSA_CRTModExp_check_input/14 
+RSA_CRTModExp_internal_step_2/16 (RSA_CRTModExp_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_add/45 rPKE_B/5 rPKE_A/4 uint32_clear/37 rPKE_B/5 uint32_copy/44 rPKE_B/5 pke_mul/38 rPKE_A/4 pke_set_operand_width/43 pke_modmul_internal/42 
+RSA_CRTModExp_internal_step_1/15 (RSA_CRTModExp_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 pke_mod_add_sub_mul_internal/41 uint32_BigNumCmp/35 rPKE_B/5 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_pre_calc_mont/33 pke_modexp_internal/34 pke_mod/40 rPKE_B/5 pke_get_operand_bytes/39 pke_pre_calc_mont/33 
+RSA_CRTModExp_check_input/14 (RSA_CRTModExp_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_CRTModExp/17 
+  Calls: pke_mul/38 GET_WORD_LEN/10 GET_WORD_LEN/10 
+RSA_ModExp/13 (RSA_ModExp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: pke_modexp_internal/34 pke_pre_calc_mont/33 pke_modexp_check_input/32 GET_WORD_LEN/10 GET_WORD_LEN/10 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetCRTKey/31 RSA_GetKey/25 RSA_GetKey/25 RSA_GetKey/25 RSA_CRTModExp_check_input/14 RSA_CRTModExp_check_input/14 RSA_ModExp/13 RSA_ModExp/13 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 RSA_CRTModExp_internal_step_1/15 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: rsa_keygen_final/24 RSA_CRTModExp_internal_step_2/16 RSA_CRTModExp_internal_step_2/16 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+RSA_Get_E2.part.0/61 (RSA_Get_E2.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function RSA_Get_E2.part.0/61 is inline copy in RSA_Get_E2/19
+  Availability: local
+  Function flags: count:114863530 (estimated locally) body local split_part optimize_size
+  Called by: RSA_Get_E2/19 (inlined) (114863530 (estimated locally),0.24 per call) 
+  Calls: uint32_BigNumCmp/35 (1014686025 (estimated locally),2.11 per call) 
+RSA_Get_E1.part.0/60 (RSA_Get_E1.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function RSA_Get_E1.part.0/60 is inline copy in RSA_Get_E1/18
+  Availability: local
+  Function flags: count:512926472 (estimated locally) body local split_part optimize_size
+  Called by: RSA_Get_E1/18 (inlined) (512926472 (estimated locally),0.48 per call) 
+  Calls: get_rand/48 (512926472 (estimated locally),0.48 per call) 
+uint32_set/49 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 (177167400 (estimated locally),0.16 per call) rsa_keygen_final/24 (12220667 (estimated locally),0.01 per call) 
+  Calls: 
+get_rand/48 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_Get_E1.part.0/60 (512926472 (estimated locally),0.48 per call) 
+  Calls: 
+pke_modinv/47 (pke_modinv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_keygen_get_e_d_internal/22 (919393586 (estimated locally),0.86 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (156544779 (estimated locally),0.15 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (75221022 (estimated locally),0.07 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (35720812 (estimated locally),0.03 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (376951367 (estimated locally),0.35 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (179005931 (estimated locally),0.17 per call) 
+  Calls: 
+get_prime/46 (get_prime)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (97811635 (estimated locally),0.09 per call) rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (296398896 (estimated locally),0.28 per call) rsa_keygen_get_p_q_fai_n/21 (224438335 (estimated locally),0.21 per call) rsa_keygen_get_p_q_fai_n/21 (680116170 (estimated locally),0.63 per call) 
+  Calls: 
+pke_add/45 (pke_add)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 (15400828 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_copy/44 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 (15400828 (estimated locally),0.01 per call) 
+  Calls: 
+pke_set_operand_width/43 (pke_set_operand_width)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_keygen_final/24 (74064650 (estimated locally),0.07 per call) RSA_CRTModExp_internal_step_2/16 (46669178 (estimated locally),0.04 per call) 
+  Calls: 
+pke_modmul_internal/42 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_2/16 (141421751 (estimated locally),0.13 per call) 
+  Calls: 
+pke_mod_add_sub_mul_internal/41 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 (172089 (estimated locally),0.00 per call) RSA_CRTModExp_internal_step_1/15 (81721 (estimated locally),0.00 per call) RSA_CRTModExp_internal_step_1/15 (247640 (estimated locally),0.00 per call) 
+  Calls: 
+pke_mod/40 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (108244887 (estimated locally),0.10 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (542442219 (estimated locally),0.51 per call) RSA_CRTModExp_internal_step_1/15 (3854252 (estimated locally),0.00 per call) RSA_CRTModExp_internal_step_1/15 (14994931 (estimated locally),0.01 per call) 
+  Calls: 
+pke_get_operand_bytes/39 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp_internal_step_1/15 (14994931 (estimated locally),0.01 per call) 
+  Calls: 
+pke_mul/38 (pke_mul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 (1073741824 (estimated locally),1.00 per call) rsa_keygen_final/24 (74064650 (estimated locally),0.07 per call) rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (5023904 (estimated locally),0.00 per call) rsa_keygen_get_p_q_fai_n/21 (34844613 (estimated locally),0.03 per call) RSA_CRTModExp_internal_step_2/16 (46669178 (estimated locally),0.04 per call) RSA_CRTModExp_check_input/14 (50657693 (estimated locally),0.05 per call) 
+  Calls: 
+uint32_clear/37 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 (82781935 (estimated locally),0.08 per call) RSA_CRTModExp_internal_step_2/16 (15400828 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_BigNum_Check_Zero/36 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 (137694503 (estimated locally),0.13 per call) 
+  Calls: 
+uint32_BigNumCmp/35 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_CRTModExp/17 (354334800 (estimated locally),0.33 per call) RSA_Get_E2.part.0/61 (1014686025 (estimated locally),2.11 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (183465907 (estimated locally),0.17 per call) rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (919393586 (estimated locally),0.86 per call) rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (32277839 (estimated locally),0.03 per call) RSA_CRTModExp_internal_step_1/15 (419728 (estimated locally),0.00 per call) 
+  Calls: 
+pke_modexp_internal/34 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 (177167400 (estimated locally),0.16 per call) RSA_ModExp/13 (13370466 (estimated locally),0.01 per call) rsa_keygen_final/24 (20408514 (estimated locally),0.02 per call) rsa_keygen_final/24 (12220667 (estimated locally),0.01 per call) RSA_CRTModExp_internal_step_1/15 (1271903 (estimated locally),0.00 per call) RSA_CRTModExp_internal_step_1/15 (4948327 (estimated locally),0.00 per call) 
+  Calls: 
+pke_pre_calc_mont/33 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: rsa_crt_keygen_final/30 (354334800 (estimated locally),0.33 per call) RSA_ModExp/13 (13370466 (estimated locally),0.01 per call) rsa_keygen_final/24 (24441334 (estimated locally),0.02 per call) RSA_CRTModExp_internal_step_1/15 (11679552 (estimated locally),0.01 per call) RSA_CRTModExp_internal_step_1/15 (45439186 (estimated locally),0.04 per call) 
+  Calls: 
+pke_modexp_check_input/32 (pke_modexp_check_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: RSA_ModExp/13 (61388731 (estimated locally),0.06 per call) 
+  Calls: 
+RSA_GetCRTKey/31 (RSA_GetCRTKey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: rsa_crt_keygen_final/30 (32277839 (estimated locally),0.03 per call) rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (inlined) (97811635 (estimated locally),0.09 per call) rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (inlined) (296398896 (estimated locally),0.28 per call) 
+rsa_crt_keygen_final/30 (rsa_crt_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: RSA_GetCRTKey/31 (32277839 (estimated locally),0.03 per call) 
+  Calls: CheckValue_0x5a5a5a5a/20 (107073401 (estimated locally),0.10 per call) RSA_CRTModExp/17 (214146802 (estimated locally),0.20 per call) CheckValue_0x5a5a5a5a/20 (448287212 (estimated locally),0.42 per call) pke_modexp_internal/34 (177167400 (estimated locally),0.16 per call) uint32_set/49 (177167400 (estimated locally),0.16 per call) pke_pre_calc_mont/33 (354334800 (estimated locally),0.33 per call) pke_mul/38 (1073741824 (estimated locally),1.00 per call) 
+rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (rsa_crt_keygen_get_e_p_q_dp_dq_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function rsa_crt_keygen_get_e_p_q_dp_dq_u/29 is inline copy in RSA_GetCRTKey/31
+  Availability: local
+  Function flags: count:97811635 (estimated locally) body local optimize_size
+  Called by: RSA_GetCRTKey/31 (inlined) (97811635 (estimated locally),0.09 per call) 
+  Calls: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (331217742 (estimated locally),0.31 per call) rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (32277839 (estimated locally),0.03 per call) 
+rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (rsa_crt_keygen_get_e_p_q_dp_dq_u_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (331217742 (estimated locally),0.31 per call) rsa_crt_keygen_get_e_p_q_dp_dq_u/29 (32277839 (estimated locally),0.03 per call) 
+  Calls: rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (inlined) (919393586 (estimated locally),0.86 per call) RSA_Get_E1/18 (203739672 (estimated locally),0.19 per call) RSA_Get_E2/19 (104956802 (estimated locally),0.10 per call) 
+rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 (rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function rsa_crt_keygen_get_dp_dq_u_from_e_p_minus_1_q_minus_1/27 is inline copy in rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28
+  Availability: local
+  Function flags: count:919393586 (estimated locally) body local optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (inlined) (919393586 (estimated locally),0.86 per call) 
+  Calls: pke_modinv/47 (156544779 (estimated locally),0.15 per call) pke_modinv/47 (75221022 (estimated locally),0.07 per call) pke_modinv/47 (35720812 (estimated locally),0.03 per call) pke_mod/40 (108244887 (estimated locally),0.10 per call) uint32_BigNumCmp/35 (183465907 (estimated locally),0.17 per call) pke_modinv/47 (376951367 (estimated locally),0.35 per call) pke_modinv/47 (179005931 (estimated locally),0.17 per call) pke_mod/40 (542442219 (estimated locally),0.51 per call) uint32_BigNumCmp/35 (919393586 (estimated locally),0.86 per call) 
+rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 (rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function rsa_crt_keygen_get_p_minus_1_q_minus_1_fai_n/26 is inline copy in RSA_GetCRTKey/31
+  Availability: local
+  Function flags: count:296398896 (estimated locally) body local optimize_size
+  Called by: RSA_GetCRTKey/31 (inlined) (296398896 (estimated locally),0.28 per call) 
+  Calls: pke_mul/38 (5023904 (estimated locally),0.00 per call) uint32_BigNumCmp/35 (32277839 (estimated locally),0.03 per call) get_prime/46 (97811635 (estimated locally),0.09 per call) get_prime/46 (296398896 (estimated locally),0.28 per call) 
+RSA_GetKey/25 (RSA_GetKey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally) body optimize_size
+  Called by: 
+  Calls: rsa_keygen_final/24 (inlined) (74064650 (estimated locally),0.07 per call) rsa_keygen_get_e_d/23 (inlined) (224438335 (estimated locally),0.21 per call) rsa_keygen_get_p_q_fai_n/21 (inlined) (680116170 (estimated locally),0.63 per call) 
+rsa_keygen_final/24 (rsa_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function rsa_keygen_final/24 is inline copy in RSA_GetKey/25
+  Availability: local
+  Function flags: count:74064650 (estimated locally) body local optimize_size
+  Called by: RSA_GetKey/25 (inlined) (74064650 (estimated locally),0.07 per call) 
+  Calls: CheckValue_0x5a5a5a5a/20 (10204257 (estimated locally),0.01 per call) pke_modexp_internal/34 (20408514 (estimated locally),0.02 per call) pke_modexp_internal/34 (12220667 (estimated locally),0.01 per call) uint32_set/49 (12220667 (estimated locally),0.01 per call) pke_pre_calc_mont/33 (24441334 (estimated locally),0.02 per call) pke_mul/38 (74064650 (estimated locally),0.07 per call) pke_set_operand_width/43 (74064650 (estimated locally),0.07 per call) 
+rsa_keygen_get_e_d/23 (rsa_keygen_get_e_d)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function rsa_keygen_get_e_d/23 is inline copy in RSA_GetKey/25
+  Availability: local
+  Function flags: count:224438335 (estimated locally) body local optimize_size
+  Called by: RSA_GetKey/25 (inlined) (224438335 (estimated locally),0.21 per call) 
+  Calls: rsa_keygen_get_e_d_internal/22 (760011408 (estimated locally),0.71 per call) rsa_keygen_get_e_d_internal/22 (74064650 (estimated locally),0.07 per call) 
+rsa_keygen_get_e_d_internal/22 (rsa_keygen_get_e_d_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local optimize_size
+  Called by: rsa_keygen_get_e_d/23 (760011408 (estimated locally),0.71 per call) rsa_keygen_get_e_d/23 (74064650 (estimated locally),0.07 per call) 
+  Calls: pke_modinv/47 (919393586 (estimated locally),0.86 per call) RSA_Get_E1/18 (203739672 (estimated locally),0.19 per call) RSA_Get_E2/19 (104956802 (estimated locally),0.10 per call) 
+rsa_keygen_get_p_q_fai_n/21 (rsa_keygen_get_p_q_fai_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function rsa_keygen_get_p_q_fai_n/21 is inline copy in RSA_GetKey/25
+  Availability: local
+  Function flags: count:680116170 (estimated locally) body local optimize_size
+  Called by: RSA_GetKey/25 (inlined) (680116170 (estimated locally),0.63 per call) 
+  Calls: pke_mul/38 (34844613 (estimated locally),0.03 per call) get_prime/46 (224438335 (estimated locally),0.21 per call) get_prime/46 (680116170 (estimated locally),0.63 per call) 
+CheckValue_0x5a5a5a5a/20 (CheckValue_0x5a5a5a5a)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:153151373 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: rsa_crt_keygen_final/30 (107073401 (estimated locally),0.10 per call) rsa_crt_keygen_final/30 (448287212 (estimated locally),0.42 per call) rsa_keygen_final/24 (10204257 (estimated locally),0.01 per call) 
+  Calls: 
+RSA_Get_E2/19 (RSA_Get_E2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:480902364 (estimated locally) body local optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (104956802 (estimated locally),0.10 per call) rsa_keygen_get_e_d_internal/22 (104956802 (estimated locally),0.10 per call) 
+  Calls: RSA_Get_E2.part.0/61 (inlined) (114863530 (estimated locally),0.24 per call) RSA_Get_E1/18 (229727060 (estimated locally),0.48 per call) 
+RSA_Get_E1/18 (RSA_Get_E1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (203739672 (estimated locally),0.19 per call) rsa_keygen_get_e_d_internal/22 (203739672 (estimated locally),0.19 per call) RSA_Get_E2/19 (229727060 (estimated locally),0.48 per call) 
+  Calls: RSA_Get_E1.part.0/60 (inlined) (512926472 (estimated locally),0.48 per call) 
+RSA_CRTModExp/17 (RSA_CRTModExp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: rsa_crt_keygen_final/30 (214146802 (estimated locally),0.20 per call) 
+  Calls: RSA_CRTModExp_internal_step_2/16 (inlined) (141421751 (estimated locally),0.13 per call) RSA_CRTModExp_internal_step_1/15 (inlined) (45439186 (estimated locally),0.04 per call) uint32_clear/37 (82781935 (estimated locally),0.08 per call) uint32_BigNum_Check_Zero/36 (137694503 (estimated locally),0.13 per call) uint32_BigNumCmp/35 (354334800 (estimated locally),0.33 per call) RSA_CRTModExp_check_input/14 (inlined) (1073741822 (estimated locally),1.00 per call) 
+RSA_CRTModExp_internal_step_2/16 (RSA_CRTModExp_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function RSA_CRTModExp_internal_step_2/16 is inline copy in RSA_CRTModExp/17
+  Availability: local
+  Function flags: count:141421751 (estimated locally) body local optimize_size
+  Called by: RSA_CRTModExp/17 (inlined) (141421751 (estimated locally),0.13 per call) 
+  Calls: pke_add/45 (15400828 (estimated locally),0.01 per call) uint32_clear/37 (15400828 (estimated locally),0.01 per call) uint32_copy/44 (15400828 (estimated locally),0.01 per call) pke_mul/38 (46669178 (estimated locally),0.04 per call) pke_set_operand_width/43 (46669178 (estimated locally),0.04 per call) pke_modmul_internal/42 (141421751 (estimated locally),0.13 per call) 
+RSA_CRTModExp_internal_step_1/15 (RSA_CRTModExp_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function RSA_CRTModExp_internal_step_1/15 is inline copy in RSA_CRTModExp/17
+  Availability: local
+  Function flags: count:45439186 (estimated locally) body local optimize_size
+  Called by: RSA_CRTModExp/17 (inlined) (45439186 (estimated locally),0.04 per call) 
+  Calls: pke_mod_add_sub_mul_internal/41 (172089 (estimated locally),0.00 per call) pke_mod_add_sub_mul_internal/41 (81721 (estimated locally),0.00 per call) pke_mod_add_sub_mul_internal/41 (247640 (estimated locally),0.00 per call) uint32_BigNumCmp/35 (419728 (estimated locally),0.00 per call) pke_modexp_internal/34 (1271903 (estimated locally),0.00 per call) pke_mod/40 (3854252 (estimated locally),0.00 per call) pke_pre_calc_mont/33 (11679552 (estimated locally),0.01 per call) pke_modexp_internal/34 (4948327 (estimated locally),0.00 per call) pke_mod/40 (14994931 (estimated locally),0.01 per call) pke_get_operand_bytes/39 (14994931 (estimated locally),0.01 per call) pke_pre_calc_mont/33 (45439186 (estimated locally),0.04 per call) 
+RSA_CRTModExp_check_input/14 (RSA_CRTModExp_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function RSA_CRTModExp_check_input/14 is inline copy in RSA_CRTModExp/17
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local optimize_size
+  Called by: RSA_CRTModExp/17 (inlined) (1073741822 (estimated locally),1.00 per call) 
+  Calls: pke_mul/38 (50657693 (estimated locally),0.05 per call) 
+RSA_ModExp/13 (RSA_ModExp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: pke_modexp_internal/34 (13370466 (estimated locally),0.01 per call) pke_pre_calc_mont/33 (13370466 (estimated locally),0.01 per call) pke_modexp_check_input/32 (61388731 (estimated locally),0.06 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+uint32_set/49 (uint32_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_rand/48 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_modinv/47 (pke_modinv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_prime/46 (get_prime)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_add/45 (pke_add)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint32_copy/44 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_set_operand_width/43 (pke_set_operand_width)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_modmul_internal/42 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_mod_add_sub_mul_internal/41 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_mod/40 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_get_operand_bytes/39 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_mul/38 (pke_mul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint32_clear/37 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/36 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/35 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_modexp_internal/34 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_pre_calc_mont/33 (pke_pre_calc_mont)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+pke_modexp_check_input/32 (pke_modexp_check_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+RSA_GetCRTKey/31 (RSA_GetCRTKey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.RSA_GetCRTKey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_crt_keygen_final/30 (rsa_crt_keygen_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.rsa_crt_keygen_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+rsa_crt_keygen_get_e_p_q_dp_dq_u_internal/28 (rsa_crt_keygen_get_e_p_q_dp_dq_u_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.rsa_crt_keygen_get_e_p_q_dp_dq_u_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+RSA_GetKey/25 (RSA_GetKey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.RSA_GetKey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741820 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+rsa_keygen_get_e_d_internal/22 (rsa_keygen_get_e_d_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.rsa_keygen_get_e_d_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+CheckValue_0x5a5a5a5a/20 (CheckValue_0x5a5a5a5a)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.CheckValue_0x5a5a5a5a (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:153151373 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+RSA_Get_E2/19 (RSA_Get_E2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.RSA_Get_E2 (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:480902364 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+RSA_Get_E1/18 (RSA_Get_E1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.RSA_Get_E1 (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+RSA_CRTModExp/17 (RSA_CRTModExp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.RSA_CRTModExp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+RSA_ModExp/13 (RSA_ModExp)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.RSA_ModExp (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

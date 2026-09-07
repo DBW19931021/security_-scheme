@@ -1,0 +1,228 @@
+schema_version: 1
+updated_at: 2026-08-20
+objective:
+  goal_1: security_solution_and_traceability
+  goal_2: test_case_design_and_codex_porting_guidance
+current_phase: CASE_DESIGN_FINAL_OUTPUT_COMPLETE_TARGET_PENDING
+execution_state: TARGET_NOT_EXECUTED
+source_ids: [SRC-0020, SRC-0027, SRC-0028, SRC-0029, SRC-0030]
+deliverables:
+  final_online_table: https://mx4lbik1jc.feishu.cn/wiki/HsC6wEjSqivStckreWqc6gIVnXG?sheet=o4uhR0
+  final_online_sheet: Security
+  final_online_export_state: BLOCKED_BY_ENTERPRISE_POLICY
+  historical_workbook: tests/cases/outputs/20260813-security-final/NGU800P_Security_Case_Table_Final_v5.xlsx
+  design_source_workbook: tests/cases/NGU800P-security-test-cases-v0.3.8-soc-converged.xlsx
+  case_catalog: tests/cases/security/CASE_TABLE.md
+  security_case_readme: tests/cases/security/README.md
+  architecture_function_case_guide: docs/06-verification/NGU800P安全架构功能与测试用例说明.md
+  firewall_review_workbook: tests/cases/NGU800P-security-test-cases-v0.3.6-firewall-review.xlsx
+  firewall_test_design: docs/06-verification/firewall-test-design.md
+  firewall_traceability: tests/matrices/firewall-traceability.yaml
+  previous_workbooks:
+    - tests/cases/NGU800P-security-test-cases-v0.3.5.xlsx
+    - tests/cases/NGU800P-security-test-cases-v0.3.4.xlsx
+    - tests/cases/NGU800P-security-test-cases-v0.3.3.xlsx
+    - tests/cases/NGU800P-security-test-cases-v0.3.2.xlsx
+    - tests/cases/NGU800P-security-test-cases-v0.3.1.xlsx
+    - tests/cases/NGU800P-security-test-cases-v0.3.xlsx
+  porting_guide: docs/06-verification/NGU800P安全测试用例设计与Codex移植指导.md
+  hardware_verification_guide: docs/06-verification/NGU800P软件不便覆盖的硬件安全验证项.md
+  workflow_record: docs/06-verification/NGU800P-security-test-case-workflow-record.md
+workbook_language:
+  narrative_language: zh-CN
+  final_sheet: Security
+  final_column_count: 13
+  terminology_embedded_in_chinese_columns: true
+  technical_identifiers_preserved: true
+  preserved_identifier_types:
+    - command_name_and_id
+    - register_name
+    - case_id
+    - raw_error_and_status_code
+    - gate_code
+dut_scope:
+  ehsm_firmware: true
+  ehsm_hardware: true
+  ngu800p_soc_security_integration: true
+  host_local_software: false
+  host_role: STIMULUS_SUBMISSION_OBSERVATION
+mailbox_scope:
+  bootloader_target_commands: 15
+  firmware_target_commands: 32
+  target_command_total: 47
+  host_header_only_candidates: 18
+  basic_cases: 47
+  ehsm_negative_cases: 7
+  host_local_negative_cases: 0
+  planned_mailbox_software_cases: 54
+  construction_model: BASIC_PER_COMMAND_PLUS_MINIMAL_EHSM_NEGATIVE_FAMILIES
+  ehsm_negative_families:
+    - EHSM-NEG-VERIFY-001
+    - EHSM-NEG-VERIFY-002
+    - EHSM-NEG-AUTH-001
+    - EHSM-NEG-AUTH-002
+    - EHSM-NEG-KEY-001
+    - EHSM-NEG-OTP-001
+    - EHSM-NEG-STATE-001
+  excluded_host_local_tests:
+    - host_null_and_buffer_validation
+    - host_local_enum_and_address_validation
+    - host_timeout_and_late_response_recovery
+    - host_logging_and_local_object_lifecycle
+soc_software_scope:
+  planned_soc_software_cases: 7
+  cases:
+    - SOC-SECCFG-001
+    - SOC-SECCFG-DBG-001
+    - SOC-FW-SECCFG-001
+    - SOC-FW-SPIFC-001
+    - SOC-FW-SRAM-001
+    - SOC-FW-SRAM-RECFG-001
+    - SOC-MAILBOX-IRQ-001
+  firewall_authentication_dependency: false
+  first_release_transport_profile: POLL_ONLY
+  sec_cfg_register_iteration: ALL_17_REGISTERS_IN_ONE_CASE
+  debug_register_split:
+    dbg_en_cfg: SOC-SECCFG-DBG-001
+    mailbox_debug_auth_oracle: CHALLENGE_TYPE_DEPENDENT
+    soc_debug: SOC_DBG_EN_OUT_AND_REAL_SOC_JTAG
+    ehsm_debug: HSM_DBG_EN_OR_O_HSM_STATUS_BIT16_AND_REAL_EHSM_DAP
+  firewall_scope:
+    sec_cfg: DEFAULT_PERMISSION_ONLY_NO_RECONFIGURATION
+    spifc: DEFAULT_PERMISSION_ONLY_NO_RECONFIGURATION
+    sec_cfg_default_access: STARTUP_CORE_ALLOW_EHSM_AND_OTHER_CORES_DENY
+    spifc_default_access: STARTUP_CORE_ALLOW_EHSM_AND_OTHER_CORES_DENY
+    configuration_owner: STARTUP_CORE_ONLY_EHSM_AND_OTHER_CORES_DENY
+    configuration_owner_negative_coverage: OPEN_NOT_IN_ONLINE_CASE_060
+    sec_cfg_spifc_successful_reconfiguration: FORBIDDEN_IN_SECURITY_CASES
+    sram_default_case: ALL_5_REGIONS_IN_ONE_CASE
+    sram_reconfiguration_case: ALL_5_REGIONS_IN_ONE_CASE
+    sram_default_access: STARTUP_CORE_AND_EHSM_ALLOW_OTHER_CORES_DENY
+firewall_review_scope:
+  source_id: SRC-0025
+  open_conflict: OPEN-CONFLICT-014
+  detailed_cases: 49
+  ready_cases: 40
+  blocked_cases: 9
+  execution_state: NOT_EXECUTED
+  complete_userid_entries: 16
+  valid_userids: 14
+  reserved_userids: ["0x0", "0x8"]
+  coding_boundary: USERID_AUTHORITY_LOGIC_ONLY_UNTIL_CSR_BINDING
+hardware_verification_scope:
+  planned_requirements: 2
+  classification: EDA_REQUIRED
+  counted_as_software_cases: false
+  ported_by_codex_to_baremetal: false
+  every_requirement_has_related_software_observer_or_case: true
+  related_software_cases:
+    EDA-ERR-CRITICAL-IRQ-001: SOC-SECCFG-001_OBSERVER_ONLY
+    EDA-ERR-ECC1B-IRQ-001: SOC-SECCFG-001_OBSERVER_ONLY
+  requirements:
+    - EDA-ERR-CRITICAL-IRQ-001
+    - EDA-ERR-ECC1B-IRQ-001
+  ehsm_firmware_customization_allowed: false
+  software_observer_does_not_create_fault: true
+baremetal_scope:
+  target_repository: ../baremetal
+  implementation_in_current_task: false
+  repository_structure_prescribed: false
+  guide_entries: 61
+  final_table_entries: 63
+  eda_hardware_entries_not_ported: 2
+  implementation_root: TO_BE_PLANNED_BY_FUTURE_CODEX_AFTER_REPOSITORY_INSPECTION
+  service_channel: 1
+  driver_mode: WAIT_AND_POLL
+  mailbox_timeout_ms: 100
+  state: ONLINE_FINAL_RECONCILED_IMPLEMENTATION_NOT_CHANGED
+  implementation_progress:
+    historical_registered_basic_cases: 52
+    historical_real_typed_api_cases: 51
+    final_47_basic_id_reconciliation: REQUIRED
+    final_ehsm_negative_cases: 0
+    final_soc_software_cases: 0
+    current_build_status: NOT_RUN_IN_THIS_TASK
+    hardware_pass_claimed: false
+porting_inputs:
+  - id: INPUT-BASELINE
+    state: SATISFIED_FOR_PHASE0_3
+    reason: baremetal_master_149edc4df84b85b33529c7fa96f9675cf5306513_recorded
+  - id: INPUT-EHSM-NEGATIVE-ORACLE
+    state: REQUIRED_FOR_RELEVANT_CASES
+    reason: verify_image_rollback_debug_auth_key_material_otp_and_state_raw_codes_and_side_effects
+  - id: INPUT-RAW-REQUEST-BUILDER
+    state: REQUIRED_FOR_OTP_NEGATIVE_IF_TYPED_API_REJECTS_LOCALLY
+    reason: must_prove_invalid_otp_request_reaches_ehsm_or_mark_inconclusive
+  - id: INPUT-MAILBOX-HSM-REGISTER-MAP
+    state: PARTIALLY_SATISFIED
+    reason: direct_mailbox_aperture_confirmed_sec_cfg_address_and_expected_snapshot_open
+  - id: INPUT-FIREWALL-MASTER-REGISTER-MAP
+    state: REQUIRED_FOR_RELEVANT_CASES
+    reason: c908_and_non_secure_management_master_ids_and_firewall_registers
+  - id: INPUT-SRAM-REGION-PERMISSION-MAP
+    state: REQUIRED_FOR_RELEVANT_CASES
+    reason: region_granularity_permission_encoding_and_illegal_access_response
+  - id: INPUT-HARDWARE-FAULT-METHOD
+    state: REQUIRED_FOR_HARDWARE_VERIFICATION
+    reason: rtl_dv_eda_injection_required_for_critical_error_and_ecc1b_irq
+  - id: INPUT-RESET-IRQ-CONTRACT
+    state: REQUIRED_FOR_HARDWARE_VERIFICATION
+    reason: authoritative_mailbox_error_ecc_irq_and_clear_map
+  - id: INPUT-DEBUG-PATH
+    state: REQUIRED_FOR_RELEVANT_CASES
+    reason: dbg_en_cfg_sub_die_debug_path_and_soc_dbg_en_out_auth_binding
+  - id: INPUT-ECC1B-COUNTER
+    state: REQUIRED_FOR_HARDWARE_VERIFICATION
+    reason: counter_csr_width_overflow_clear_and_reset_semantics
+history_reconciliation:
+  - id: HISTORY-V02
+    state: PRESENT_RECONCILIATION_PENDING
+    reason: v0_2_exists_but_case_id_owner_content_mapping_not_completed
+  - id: HISTORY-V03
+    state: SUPERSEDED_DESIGN_PRESERVED
+    reason: fixed_three_case_families_per_command
+  - id: HISTORY-V031
+    state: SUPERSEDED_DESIGN_PRESERVED
+    reason: mixed_host_local_negative_tests_and_overly_granular_soc_cases
+  - id: HISTORY-V032
+    state: SUPERSEDED_DESIGN_PRESERVED
+    reason: incorrectly_removed_ehsm_negative_tests_together_with_host_local_tests
+  - id: HISTORY-V033
+    state: SUPERSEDED_DESIGN_PRESERVED
+    reason: treated_software_configurable_soc_functions_as_wholly_hardware_only
+  - id: HISTORY-V034
+    state: SUPERSEDED_DESIGN_PRESERVED
+    reason: scope_and_case_model_preserved_but_narrative_terminology_was_not_yet_fully_chinese
+  - id: HISTORY-V035
+    state: SUPERSEDED_DESIGN_PRESERVED
+    reason: terminology_baseline_preserved_and_superseded_by_v0_3_6_implementation_status_backfill
+rules:
+  - every_online_final_mailbox_command_has_one_basic_case
+  - ehsm_firmware_and_hardware_are_devices_under_test
+  - ehsm_negative_case_must_have_mailbox_submission_command_id_and_raw_response
+  - host_local_rejection_is_not_ehsm_pass
+  - mutate_one_security_property_from_a_passing_golden_vector
+  - pass_requires_expected_rejection_no_forbidden_side_effect_and_service_health
+  - group_vectors_by_service_oracle_fixture_and_recovery
+  - split_cases_when_failure_stage_side_effect_fixture_or_recovery_differs
+  - host_local_software_robustness_cases_are_out_of_scope
+  - c908_can_configure_firewall_and_non_secure_management_core_cannot
+  - firewall_configuration_test_does_not_depend_on_authentication_or_lcs
+  - every_soc_security_function_with_software_configuration_and_observation_has_a_software_or_coordination_case
+  - unresolved_mapping_keeps_software_case_inconclusive_instead_of_deleting_it
+  - critical_error_and_ecc1b_fault_stimulus_are_eda_required
+  - online_final_case_060_only_proves_startup_core_positive_sram_reconfiguration
+  - firewall_configuration_owner_negative_matrix_requires_separate_final_case_or_rtl_dv_integration_evidence
+  - mailbox_debug_auth_must_bind_soc_debug_or_ehsm_debug_before_selecting_status_oracle
+  - sec_cfg_and_spifc_firewall_configuration_is_not_modified
+  - both_sram_firewall_cases_iterate_all_five_regions_without_splitting
+  - no_ehsm_firmware_customization_test_command_or_test_hook
+  - no_pass_without_target_evidence
+  - no_stub_or_simulated_success_for_emu_product
+  - future_codex_must_plan_repository_structure_after_inspection
+  - ehsm_host_common_api_and_transport_are_copied_into_baremetal_not_linked_externally
+  - basic_cases_follow_vendor_typed_api_where_inputs_and_oracles_are_frozen
+  - missing_fixture_image_map_vector_or_recovery_returns_inconclusive_before_target_command
+  - one_stable_basic_case_id_may_contain_all_approved_reference_host_algorithm_mode_direction_and_typed_api_paths
+  - real_api_and_build_evidence_do_not_imply_target_hardware_pass
+  - normal_case_output_is_one_final_success_fail_or_inconclusive_line

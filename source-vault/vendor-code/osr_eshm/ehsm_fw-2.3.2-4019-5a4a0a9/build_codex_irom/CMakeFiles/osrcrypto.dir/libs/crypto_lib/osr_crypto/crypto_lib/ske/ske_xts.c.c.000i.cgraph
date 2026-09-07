@@ -1,0 +1,1919 @@
+Trivially needed symbols: ske_dma_xts_crypto/23 ske_dma_xts_final/22 ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_update_blocks/19 ske_dma_xts_init/18 ske_xts_crypto/17 ske_xts_final/16 ske_xts_update_including_last_2_blocks/15 ske_xts_update_blocks/13 ske_xts_init/11
+
+
+Initial Symbol table:
+
+lib_addr_arch32_unlock_remap/44 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+lib_addr_arch32_lock_remap/43 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+ske_dma_operate/42 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_disable_dma_linked_list/41 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_set_dma_mode/40 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+memset_/39 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_xts_final/16 
+  Calls: 
+ske_simple_get_output_block/38 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_wait_till_done/37 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 
+  Calls: 
+ske_start/36 (ske_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_simple_set_input_block/35 (ske_simple_set_input_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_get_mid_iv/33 (ske_get_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_last_block/32 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_update_blocks_internal/31 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_init_internal/30 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_c_len_uint32/29 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_payload_stage/28 (ske_set_payload_stage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_cpu_mode/27 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_clear_cfg/26 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_mid_iv/25 (ske_set_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_keep_alg_key_iv/24 (ske_keep_alg_key_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_init/18 ske_xts_init/11 
+  Calls: 
+ske_dma_xts_crypto/23 (ske_dma_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_init/18 
+ske_dma_xts_final/22 (ske_dma_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 
+ske_dma_xts_update_including_last_2_blocks/21 (ske_dma_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_dma_xts_update_last_data/20 ske_xts_check_param/12 ske_dma_xts_update_blocks/19 CAST2UINT32/6 
+ske_dma_xts_update_last_data/20 (ske_dma_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fadc6602cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: lib_addr_arch32_unlock_remap/44 memset_/39 lib_addr_arch32_lock_remap/43 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_dma_xts_update_blocks/19 (ske_dma_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_dma_xts_init/18 (ske_dma_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_keep_alg_key_iv/24 
+ske_xts_crypto/17 (ske_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_xts_update_including_last_2_blocks/15 ske_xts_init/11 
+ske_xts_final/16 (ske_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 ske_dma_xts_final/22 ske_xts_crypto/17 
+  Calls: memset_/39 
+ske_xts_update_including_last_2_blocks/15 (ske_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_xts_update_last_data/14 ske_xts_check_param/12 ske_xts_update_blocks/13 CAST2UINT32/6 
+ske_xts_update_last_data/14 (ske_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fadc6602660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: memcpy_/34 ske_simple_get_output_block/38 memcpy_/34 ske_simple_get_output_block/38 ske_wait_till_done/37 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_set_last_block/32 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_xts_update_blocks/13 (ske_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_update_blocks_internal/31 ske_set_last_block/32 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_xts_check_param/12 (ske_xts_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fadc6602550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_update_blocks/19 ske_xts_update_including_last_2_blocks/15 ske_xts_update_blocks/13 
+  Calls: CAST2UINT32/6 
+ske_xts_init/11 (ske_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fadc6602330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_keep_alg_key_iv/24 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fadc6602550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_xts_update_including_last_2_blocks/15 ske_xts_check_param/12 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+lib_addr_arch32_unlock_remap/44 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+lib_addr_arch32_lock_remap/43 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+ske_dma_operate/42 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_disable_dma_linked_list/41 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_set_dma_mode/40 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+memset_/39 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_xts_final/16 
+  Calls: 
+ske_simple_get_output_block/38 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_wait_till_done/37 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 
+  Calls: 
+ske_start/36 (ske_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_simple_set_input_block/35 (ske_simple_set_input_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_get_mid_iv/33 (ske_get_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_last_block/32 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_update_blocks_internal/31 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_init_internal/30 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_c_len_uint32/29 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_payload_stage/28 (ske_set_payload_stage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_cpu_mode/27 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_clear_cfg/26 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_mid_iv/25 (ske_set_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_keep_alg_key_iv/24 (ske_keep_alg_key_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_init/18 ske_xts_init/11 
+  Calls: 
+ske_dma_xts_crypto/23 (ske_dma_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_init/18 
+ske_dma_xts_final/22 (ske_dma_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 
+ske_dma_xts_update_including_last_2_blocks/21 (ske_dma_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_dma_xts_update_last_data/20 ske_xts_check_param/12 ske_dma_xts_update_blocks/19 CAST2UINT32/6 
+ske_dma_xts_update_last_data/20 (ske_dma_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: lib_addr_arch32_unlock_remap/44 memset_/39 lib_addr_arch32_lock_remap/43 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_dma_xts_update_blocks/19 (ske_dma_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_dma_xts_init/18 (ske_dma_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_keep_alg_key_iv/24 
+ske_xts_crypto/17 (ske_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_xts_update_including_last_2_blocks/15 ske_xts_init/11 
+ske_xts_final/16 (ske_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 ske_dma_xts_final/22 ske_xts_crypto/17 
+  Calls: memset_/39 
+ske_xts_update_including_last_2_blocks/15 (ske_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_xts_update_last_data/14 ske_xts_check_param/12 ske_xts_update_blocks/13 CAST2UINT32/6 
+ske_xts_update_last_data/14 (ske_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: memcpy_/34 ske_simple_get_output_block/38 memcpy_/34 ske_simple_get_output_block/38 ske_wait_till_done/37 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_set_last_block/32 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_xts_update_blocks/13 (ske_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_update_blocks_internal/31 ske_set_last_block/32 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_xts_check_param/12 (ske_xts_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_update_blocks/19 ske_xts_update_including_last_2_blocks/15 ske_xts_update_blocks/13 
+  Calls: CAST2UINT32/6 
+ske_xts_init/11 (ske_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_keep_alg_key_iv/24 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_xts_update_including_last_2_blocks/15 ske_xts_check_param/12 
+  Calls: 
+
+
+Initial Symbol table:
+
+lib_addr_arch32_unlock_remap/44 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+lib_addr_arch32_lock_remap/43 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+ske_dma_operate/42 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_disable_dma_linked_list/41 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_set_dma_mode/40 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+memset_/39 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_xts_final/16 
+  Calls: 
+ske_simple_get_output_block/38 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_wait_till_done/37 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 
+  Calls: 
+ske_start/36 (ske_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_simple_set_input_block/35 (ske_simple_set_input_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_get_mid_iv/33 (ske_get_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_last_block/32 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_update_blocks_internal/31 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_init_internal/30 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_c_len_uint32/29 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_payload_stage/28 (ske_set_payload_stage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_cpu_mode/27 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_clear_cfg/26 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_mid_iv/25 (ske_set_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_keep_alg_key_iv/24 (ske_keep_alg_key_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_init/18 ske_xts_init/11 
+  Calls: 
+ske_dma_xts_crypto/23 (ske_dma_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_init/18 
+ske_dma_xts_final/22 (ske_dma_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 
+ske_dma_xts_update_including_last_2_blocks/21 (ske_dma_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_dma_xts_update_last_data/20 ske_xts_check_param/12 ske_dma_xts_update_blocks/19 CAST2UINT32/6 
+ske_dma_xts_update_last_data/20 (ske_dma_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: lib_addr_arch32_unlock_remap/44 memset_/39 lib_addr_arch32_lock_remap/43 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_dma_xts_update_blocks/19 (ske_dma_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_dma_xts_init/18 (ske_dma_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_keep_alg_key_iv/24 
+ske_xts_crypto/17 (ske_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_xts_update_including_last_2_blocks/15 ske_xts_init/11 
+ske_xts_final/16 (ske_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 ske_dma_xts_final/22 ske_xts_crypto/17 
+  Calls: memset_/39 
+ske_xts_update_including_last_2_blocks/15 (ske_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_xts_update_last_data/14 ske_xts_check_param/12 ske_xts_update_blocks/13 CAST2UINT32/6 
+ske_xts_update_last_data/14 (ske_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: memcpy_/34 ske_simple_get_output_block/38 memcpy_/34 ske_simple_get_output_block/38 ske_wait_till_done/37 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_set_last_block/32 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_xts_update_blocks/13 (ske_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_update_blocks_internal/31 ske_set_last_block/32 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_xts_check_param/12 (ske_xts_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_update_blocks/19 ske_xts_update_including_last_2_blocks/15 ske_xts_update_blocks/13 
+  Calls: CAST2UINT32/6 
+ske_xts_init/11 (ske_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_keep_alg_key_iv/24 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_xts_update_including_last_2_blocks/15 ske_xts_check_param/12 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+lib_addr_arch32_unlock_remap/44 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+lib_addr_arch32_lock_remap/43 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 
+  Calls: 
+ske_dma_operate/42 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_disable_dma_linked_list/41 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+ske_set_dma_mode/40 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 
+  Calls: 
+memset_/39 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_xts_final/16 
+  Calls: 
+ske_simple_get_output_block/38 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_wait_till_done/37 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 
+  Calls: 
+ske_start/36 (ske_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_simple_set_input_block/35 (ske_simple_set_input_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 ske_xts_update_last_data/14 
+  Calls: 
+ske_get_mid_iv/33 (ske_get_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_last_block/32 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_update_blocks_internal/31 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 ske_xts_update_blocks/13 
+  Calls: 
+ske_init_internal/30 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_c_len_uint32/29 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_payload_stage/28 (ske_set_payload_stage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_cpu_mode/27 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_clear_cfg/26 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_set_mid_iv/25 (ske_set_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 ske_dma_xts_update_blocks/19 ske_xts_update_last_data/14 ske_xts_update_blocks/13 
+  Calls: 
+ske_keep_alg_key_iv/24 (ske_keep_alg_key_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ske_dma_xts_init/18 ske_xts_init/11 
+  Calls: 
+ske_dma_xts_crypto/23 (ske_dma_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_init/18 
+ske_dma_xts_final/22 (ske_dma_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 
+ske_dma_xts_update_including_last_2_blocks/21 (ske_dma_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_dma_xts_update_last_data/20 ske_xts_check_param/12 ske_dma_xts_update_blocks/19 CAST2UINT32/6 
+ske_dma_xts_update_last_data/20 (ske_dma_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: lib_addr_arch32_unlock_remap/44 memset_/39 lib_addr_arch32_lock_remap/43 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_dma_xts_update_blocks/19 (ske_dma_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_dma_operate/42 ske_set_last_block/32 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_disable_dma_linked_list/41 ske_set_dma_mode/40 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_dma_xts_init/18 (ske_dma_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 
+  Calls: ske_keep_alg_key_iv/24 
+ske_xts_crypto/17 (ske_xts_crypto)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ske_xts_final/16 ske_xts_update_including_last_2_blocks/15 ske_xts_init/11 
+ske_xts_final/16 (ske_xts_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_crypto/23 ske_dma_xts_final/22 ske_xts_crypto/17 
+  Calls: memset_/39 
+ske_xts_update_including_last_2_blocks/15 (ske_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_xts_update_last_data/14 ske_xts_check_param/12 ske_xts_update_blocks/13 CAST2UINT32/6 
+ske_xts_update_last_data/14 (ske_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: memcpy_/34 ske_simple_get_output_block/38 memcpy_/34 ske_simple_get_output_block/38 ske_wait_till_done/37 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_set_last_block/32 ske_start/36 ske_simple_set_input_block/35 memcpy_/34 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 
+ske_xts_update_blocks/13 (ske_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_update_including_last_2_blocks/15 
+  Calls: ske_get_mid_iv/33 ske_set_last_block/32 ske_update_blocks_internal/31 ske_set_last_block/32 ske_update_blocks_internal/31 ske_init_internal/30 ske_set_c_len_uint32/29 ske_set_payload_stage/28 ske_set_cpu_mode/27 ske_clear_cfg/26 ske_set_mid_iv/25 ske_xts_check_param/12 
+ske_xts_check_param/12 (ske_xts_check_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_dma_xts_update_blocks/19 ske_xts_update_including_last_2_blocks/15 ske_xts_update_blocks/13 
+  Calls: CAST2UINT32/6 
+ske_xts_init/11 (ske_xts_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_xts_crypto/17 
+  Calls: ske_keep_alg_key_iv/24 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 ske_xts_update_including_last_2_blocks/15 ske_xts_check_param/12 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+ske_xts_final.part.0/63 (ske_xts_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 62
+  References: 
+  Referring: 
+  Function ske_xts_final.part.0/63 is inline copy in ske_xts_crypto/17
+  Clone of ske_xts_final.part.0/51
+  Availability: local
+  Function flags: count:36307500 (estimated locally) body local split_part
+  Called by: ske_xts_crypto/17 (inlined) (36307500 (estimated locally),0.03 per call) 
+  Calls: memset_/39 (36307500 (estimated locally),0.03 per call) 
+ske_xts_final.part.0/62 (ske_xts_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 61
+  previous sharing asm name: 63
+  References: 
+  Referring: 
+  Function ske_xts_final.part.0/62 is inline copy in ske_dma_xts_final/22
+  Clone of ske_xts_final.part.0/51
+  Availability: local
+  Function flags: count:731110808 (estimated locally) body local split_part
+  Called by: ske_dma_xts_final/22 (inlined) (731110808 (estimated locally),0.68 per call) 
+  Calls: memset_/39 (731110808 (estimated locally),0.68 per call) 
+ske_xts_final.part.0/61 (ske_xts_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 51
+  previous sharing asm name: 62
+  References: 
+  Referring: 
+  Function ske_xts_final.part.0/61 is inline copy in ske_dma_xts_crypto/23
+  Clone of ske_xts_final.part.0/51
+  Availability: local
+  Function flags: count:36307500 (estimated locally) body local split_part
+  Called by: ske_dma_xts_crypto/23 (inlined) (36307500 (estimated locally),0.03 per call) 
+  Calls: memset_/39 (36307500 (estimated locally),0.03 per call) 
+ske_xts_init.part.0/60 (ske_xts_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 59
+  References: 
+  Referring: 
+  Function ske_xts_init.part.0/60 is inline copy in ske_dma_xts_crypto/23
+  Clone of ske_xts_init.part.0/46
+  Availability: local
+  Function flags: count:333402206 (estimated locally) body local icf_merged split_part
+  Called by: ske_dma_xts_crypto/23 (inlined) (333402206 (estimated locally),0.31 per call) 
+  Calls: ske_keep_alg_key_iv/24 (333402206 (estimated locally),0.31 per call) 
+ske_xts_init.part.0/59 (ske_xts_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 46
+  previous sharing asm name: 60
+  References: 
+  Referring: 
+  Function ske_xts_init.part.0/59 is inline copy in ske_xts_crypto/17
+  Clone of ske_xts_init.part.0/46
+  Availability: local
+  Function flags: count:333402206 (estimated locally) body local icf_merged split_part
+  Called by: ske_xts_crypto/17 (inlined) (333402206 (estimated locally),0.31 per call) 
+  Calls: ske_keep_alg_key_iv/24 (333402206 (estimated locally),0.31 per call) 
+ske_xts_final.part.0/51 (ske_xts_final.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 61
+  References: 
+  Referring: 
+  Function ske_xts_final.part.0/51 is inline copy in ske_xts_final/16
+  Availability: local
+  Function flags: count:731110808 (estimated locally) body local split_part
+  Called by: ske_xts_final/16 (inlined) (731110808 (estimated locally),0.68 per call) 
+  Calls: memset_/39 (731110808 (estimated locally),0.68 per call) 
+ske_xts_update_blocks.part.0/48 (ske_xts_update_blocks.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ske_xts_update_blocks.part.0/48 is inline copy in ske_xts_update_blocks/13
+  Availability: local
+  Function flags: count:374354738 (estimated locally) body local split_part
+  Called by: ske_xts_update_blocks/13 (inlined) (374354738 (estimated locally),0.35 per call) 
+  Calls: ske_set_mid_iv/25 (61768531 (estimated locally),0.06 per call) ske_clear_cfg/26 (187177369 (estimated locally),0.17 per call) ske_set_cpu_mode/27 (187177369 (estimated locally),0.17 per call) ske_set_payload_stage/28 (187177369 (estimated locally),0.17 per call) ske_set_c_len_uint32/29 (187177369 (estimated locally),0.17 per call) ske_init_internal/30 (187177369 (estimated locally),0.17 per call) ske_update_blocks_internal/31 (61768531 (estimated locally),0.06 per call) ske_set_last_block/32 (20383615 (estimated locally),0.02 per call) ske_update_blocks_internal/31 (20383615 (estimated locally),0.02 per call) ske_set_last_block/32 (20383615 (estimated locally),0.02 per call) ske_get_mid_iv/33 (6726593 (estimated locally),0.01 per call) 
+ske_xts_init.part.0/46 (ske_xts_init.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 59
+  References: 
+  Referring: 
+  Function ske_xts_init.part.0/46 is inline copy in ske_xts_init/11
+  Availability: local
+  Function flags: count:270889292 (estimated locally) body local icf_merged split_part
+  Called by: ske_xts_init/11 (inlined) (270889292 (estimated locally),0.25 per call) 
+  Calls: ske_keep_alg_key_iv/24 (270889292 (estimated locally),0.25 per call) 
+lib_addr_arch32_unlock_remap/44 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 (10757531 (estimated locally),0.01 per call) 
+  Calls: 
+lib_addr_arch32_lock_remap/43 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_last_data/20 (10757531 (estimated locally),0.01 per call) 
+  Calls: 
+ske_dma_operate/42 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (30409123 (estimated locally),0.03 per call) ske_dma_xts_update_last_data/20 (65197160 (estimated locally),0.06 per call) 
+  Calls: 
+ske_disable_dma_linked_list/41 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (92148858 (estimated locally),0.09 per call) ske_dma_xts_update_last_data/20 (197567153 (estimated locally),0.18 per call) 
+  Calls: 
+ske_set_dma_mode/40 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (92148858 (estimated locally),0.09 per call) ske_dma_xts_update_last_data/20 (197567153 (estimated locally),0.18 per call) 
+  Calls: 
+memset_/39 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_final.part.0/63 (36307500 (estimated locally),0.03 per call) ske_xts_final.part.0/62 (731110808 (estimated locally),0.68 per call) ske_xts_final.part.0/61 (36307500 (estimated locally),0.03 per call) ske_xts_final.part.0/51 (731110808 (estimated locally),0.68 per call) ske_dma_xts_update_last_data/20 (10757531 (estimated locally),0.01 per call) 
+  Calls: 
+ske_simple_get_output_block/38 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_last_data/14 (50935281 (estimated locally),0.05 per call) ske_xts_update_last_data/14 (50935281 (estimated locally),0.05 per call) 
+  Calls: 
+ske_wait_till_done/37 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) 
+  Calls: 
+ske_start/36 (ske_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) 
+  Calls: 
+ske_simple_set_input_block/35 (ske_simple_set_input_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_last_data/14 (50935281 (estimated locally),0.05 per call) ske_xts_update_last_data/14 (50935281 (estimated locally),0.05 per call) ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) 
+  Calls: 
+ske_get_mid_iv/33 (ske_get_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (10035011 (estimated locally),0.01 per call) ske_xts_update_blocks.part.0/48 (6726593 (estimated locally),0.01 per call) 
+  Calls: 
+ske_set_last_block/32 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (30409123 (estimated locally),0.03 per call) ske_dma_xts_update_blocks/19 (30409123 (estimated locally),0.03 per call) ske_xts_update_blocks.part.0/48 (20383615 (estimated locally),0.02 per call) ske_xts_update_blocks.part.0/48 (20383615 (estimated locally),0.02 per call) ske_dma_xts_update_last_data/20 (65197160 (estimated locally),0.06 per call) ske_dma_xts_update_last_data/20 (65197160 (estimated locally),0.06 per call) ske_xts_update_last_data/14 (154349339 (estimated locally),0.14 per call) 
+  Calls: 
+ske_update_blocks_internal/31 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_blocks.part.0/48 (61768531 (estimated locally),0.06 per call) ske_xts_update_blocks.part.0/48 (20383615 (estimated locally),0.02 per call) ske_xts_update_last_data/14 (50935281 (estimated locally),0.05 per call) 
+  Calls: 
+ske_init_internal/30 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (92148858 (estimated locally),0.09 per call) ske_xts_update_blocks.part.0/48 (187177369 (estimated locally),0.17 per call) ske_dma_xts_update_last_data/20 (197567153 (estimated locally),0.18 per call) ske_xts_update_last_data/14 (308698677 (estimated locally),0.29 per call) 
+  Calls: 
+ske_set_c_len_uint32/29 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (92148858 (estimated locally),0.09 per call) ske_xts_update_blocks.part.0/48 (187177369 (estimated locally),0.17 per call) ske_dma_xts_update_last_data/20 (197567153 (estimated locally),0.18 per call) ske_xts_update_last_data/14 (308698677 (estimated locally),0.29 per call) 
+  Calls: 
+ske_set_payload_stage/28 (ske_set_payload_stage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (92148858 (estimated locally),0.09 per call) ske_xts_update_blocks.part.0/48 (187177369 (estimated locally),0.17 per call) ske_dma_xts_update_last_data/20 (197567153 (estimated locally),0.18 per call) ske_xts_update_last_data/14 (308698677 (estimated locally),0.29 per call) 
+  Calls: 
+ske_set_cpu_mode/27 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_update_blocks.part.0/48 (187177369 (estimated locally),0.17 per call) ske_xts_update_last_data/14 (308698677 (estimated locally),0.29 per call) 
+  Calls: 
+ske_clear_cfg/26 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (92148858 (estimated locally),0.09 per call) ske_xts_update_blocks.part.0/48 (187177369 (estimated locally),0.17 per call) ske_dma_xts_update_last_data/20 (197567153 (estimated locally),0.18 per call) ske_xts_update_last_data/14 (308698677 (estimated locally),0.29 per call) 
+  Calls: 
+ske_set_mid_iv/25 (ske_set_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_dma_xts_update_blocks/19 (30409123 (estimated locally),0.03 per call) ske_xts_update_blocks.part.0/48 (61768531 (estimated locally),0.06 per call) ske_dma_xts_update_last_data/20 (65197160 (estimated locally),0.06 per call) ske_xts_update_last_data/14 (101870563 (estimated locally),0.09 per call) 
+  Calls: 
+ske_keep_alg_key_iv/24 (ske_keep_alg_key_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ske_xts_init.part.0/60 (333402206 (estimated locally),0.31 per call) ske_xts_init.part.0/59 (333402206 (estimated locally),0.31 per call) ske_xts_init.part.0/46 (270889292 (estimated locally),0.25 per call) 
+  Calls: 
+ske_dma_xts_crypto/23 (ske_dma_xts_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ske_xts_final.part.0/61 (inlined) (36307500 (estimated locally),0.03 per call) ske_dma_xts_update_including_last_2_blocks/21 (110022727 (estimated locally),0.10 per call) ske_xts_init.part.0/60 (inlined) (333402206 (estimated locally),0.31 per call) 
+ske_dma_xts_final/22 (ske_dma_xts_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ske_xts_final.part.0/62 (inlined) (731110808 (estimated locally),0.68 per call) 
+ske_dma_xts_update_including_last_2_blocks/21 (ske_dma_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: ske_dma_xts_crypto/23 (110022727 (estimated locally),0.10 per call) 
+  Calls: ske_dma_xts_update_last_data/20 (inlined) (197567153 (estimated locally),0.18 per call) ske_dma_xts_update_blocks/19 (354334800 (estimated locally),0.33 per call) 
+ske_dma_xts_update_last_data/20 (ske_dma_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_dma_xts_update_last_data/20 is inline copy in ske_dma_xts_update_including_last_2_blocks/21
+  Availability: local
+  Function flags: count:197567153 (estimated locally) body local
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 (inlined) (197567153 (estimated locally),0.18 per call) 
+  Calls: lib_addr_arch32_unlock_remap/44 (10757531 (estimated locally),0.01 per call) memset_/39 (10757531 (estimated locally),0.01 per call) lib_addr_arch32_lock_remap/43 (10757531 (estimated locally),0.01 per call) ske_set_last_block/32 (65197160 (estimated locally),0.06 per call) ske_dma_operate/42 (65197160 (estimated locally),0.06 per call) ske_set_last_block/32 (65197160 (estimated locally),0.06 per call) ske_init_internal/30 (197567153 (estimated locally),0.18 per call) ske_set_c_len_uint32/29 (197567153 (estimated locally),0.18 per call) ske_set_payload_stage/28 (197567153 (estimated locally),0.18 per call) ske_disable_dma_linked_list/41 (197567153 (estimated locally),0.18 per call) ske_set_dma_mode/40 (197567153 (estimated locally),0.18 per call) ske_clear_cfg/26 (197567153 (estimated locally),0.18 per call) ske_set_mid_iv/25 (65197160 (estimated locally),0.06 per call) 
+ske_dma_xts_update_blocks/19 (ske_dma_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: ske_dma_xts_update_including_last_2_blocks/21 (354334800 (estimated locally),0.33 per call) 
+  Calls: ske_get_mid_iv/33 (10035011 (estimated locally),0.01 per call) ske_set_last_block/32 (30409123 (estimated locally),0.03 per call) ske_dma_operate/42 (30409123 (estimated locally),0.03 per call) ske_set_last_block/32 (30409123 (estimated locally),0.03 per call) ske_init_internal/30 (92148858 (estimated locally),0.09 per call) ske_set_c_len_uint32/29 (92148858 (estimated locally),0.09 per call) ske_set_payload_stage/28 (92148858 (estimated locally),0.09 per call) ske_disable_dma_linked_list/41 (92148858 (estimated locally),0.09 per call) ske_set_dma_mode/40 (92148858 (estimated locally),0.09 per call) ske_clear_cfg/26 (92148858 (estimated locally),0.09 per call) ske_set_mid_iv/25 (30409123 (estimated locally),0.03 per call) 
+ske_dma_xts_init/18 (ske_dma_xts_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.ske_dma_xts_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body icf_merged
+  Called by: 
+  Calls: ske_xts_init/11 (1073741822 (estimated locally),1.00 per call) 
+ske_xts_crypto/17 (ske_xts_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ske_xts_final.part.0/63 (inlined) (36307500 (estimated locally),0.03 per call) ske_xts_update_including_last_2_blocks/15 (110022727 (estimated locally),0.10 per call) ske_xts_init.part.0/59 (inlined) (333402206 (estimated locally),0.31 per call) 
+ske_xts_final/16 (ske_xts_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ske_xts_final.part.0/51 (inlined) (731110808 (estimated locally),0.68 per call) 
+ske_xts_update_including_last_2_blocks/15 (ske_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: ske_xts_crypto/17 (110022727 (estimated locally),0.10 per call) 
+  Calls: ske_xts_update_last_data/14 (inlined) (308698677 (estimated locally),0.29 per call) ske_xts_update_blocks/13 (354334800 (estimated locally),0.33 per call) 
+ske_xts_update_last_data/14 (ske_xts_update_last_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ske_xts_update_last_data/14 is inline copy in ske_xts_update_including_last_2_blocks/15
+  Availability: local
+  Function flags: count:308698677 (estimated locally) body local
+  Called by: ske_xts_update_including_last_2_blocks/15 (inlined) (308698677 (estimated locally),0.29 per call) 
+  Calls: memcpy_/34 (50935281 (estimated locally),0.05 per call) ske_simple_get_output_block/38 (50935281 (estimated locally),0.05 per call) memcpy_/34 (50935281 (estimated locally),0.05 per call) ske_simple_get_output_block/38 (50935281 (estimated locally),0.05 per call) ske_wait_till_done/37 (154349339 (estimated locally),0.14 per call) ske_start/36 (154349339 (estimated locally),0.14 per call) ske_simple_set_input_block/35 (154349339 (estimated locally),0.14 per call) memcpy_/34 (154349339 (estimated locally),0.14 per call) ske_set_last_block/32 (154349339 (estimated locally),0.14 per call) ske_start/36 (154349339 (estimated locally),0.14 per call) ske_simple_set_input_block/35 (154349339 (estimated locally),0.14 per call) memcpy_/34 (154349339 (estimated locally),0.14 per call) ske_update_blocks_internal/31 (50935281 (estimated locally),0.05 per call) ske_init_internal/30 (308698677 (estimated locally),0.29 per call) ske_set_c_len_uint32/29 (308698677 (estimated locally),0.29 per call) ske_set_payload_stage/28 (308698677 (estimated locally),0.29 per call) ske_set_cpu_mode/27 (308698677 (estimated locally),0.29 per call) ske_clear_cfg/26 (308698677 (estimated locally),0.29 per call) ske_set_mid_iv/25 (101870563 (estimated locally),0.09 per call) 
+ske_xts_update_blocks/13 (ske_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: ske_xts_update_including_last_2_blocks/15 (354334800 (estimated locally),0.33 per call) 
+  Calls: ske_xts_update_blocks.part.0/48 (inlined) (374354738 (estimated locally),0.35 per call) 
+ske_xts_init/11 (ske_xts_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body icf_merged
+  Called by: ske_dma_xts_init/18 (1073741822 (estimated locally),1.00 per call) 
+  Calls: ske_xts_init.part.0/46 (inlined) (270889292 (estimated locally),0.25 per call) 
+updating call of ske_dma_xts_crypto/23 -> ske_xts_init.part.0/46: ret_19 = ske_dma_xts_init.part.0 (&ctx, alg_4(D), crypto_5(D), key_7(D), sp_key_idx_8(D), i_9(D), c_bytes_10(D));
+  updated to:ret_19 = ske_xts_init.part.0 (&ctx, alg_4(D), crypto_5(D), key_7(D), sp_key_idx_8(D), i_9(D), c_bytes_10(D));
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+lib_addr_arch32_unlock_remap/44 (lib_addr_arch32_unlock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+lib_addr_arch32_lock_remap/43 (lib_addr_arch32_lock_remap)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_dma_operate/42 (ske_dma_operate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_disable_dma_linked_list/41 (ske_disable_dma_linked_list)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_dma_mode/40 (ske_set_dma_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/39 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_simple_get_output_block/38 (ske_simple_get_output_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_wait_till_done/37 (ske_wait_till_done)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_start/36 (ske_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_simple_set_input_block/35 (ske_simple_set_input_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/34 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_get_mid_iv/33 (ske_get_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_last_block/32 (ske_set_last_block)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_update_blocks_internal/31 (ske_update_blocks_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_init_internal/30 (ske_init_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_c_len_uint32/29 (ske_set_c_len_uint32)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_payload_stage/28 (ske_set_payload_stage)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_cpu_mode/27 (ske_set_cpu_mode)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_clear_cfg/26 (ske_clear_cfg)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_mid_iv/25 (ske_set_mid_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_keep_alg_key_iv/24 (ske_keep_alg_key_iv)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_dma_xts_crypto/23 (ske_dma_xts_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_xts_crypto (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_xts_final/22 (ske_dma_xts_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_xts_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_xts_update_including_last_2_blocks/21 (ske_dma_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_xts_update_including_last_2_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_xts_update_blocks/19 (ske_dma_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_xts_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_dma_xts_init/18 (ske_dma_xts_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_dma_xts_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) icf_merged
+  Called by: 
+  Calls: 
+ske_xts_crypto/17 (ske_xts_crypto)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_xts_crypto (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_xts_final/16 (ske_xts_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_xts_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_xts_update_including_last_2_blocks/15 (ske_xts_update_including_last_2_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_xts_update_including_last_2_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ske_xts_update_blocks/13 (ske_xts_update_blocks)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_xts_update_blocks (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ske_xts_init/11 (ske_xts_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ske_xts_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) icf_merged
+  Called by: 
+  Calls: 

@@ -1,0 +1,573 @@
+Trivially needed symbols: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 watchdog_init/3
+
+
+Initial Symbol table:
+
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enable_int/8 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+cpu_register_int/7 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+watchdog_stop/6 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_feed/5 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa93045aaa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_start/4 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa93045a990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_init/3 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fa93045a880
+  References: watchdog_int_handler/2 (addr) g_watchdog_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_int/8 cpu_register_int/7 watchdog_get_reg_base/1 
+watchdog_int_handler/2 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7fa93045a550
+  References: g_watchdog_cb/0 (read) g_watchdog_cb/0 (read) 
+  Referring: watchdog_init/3 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: watchdog_get_reg_base/1 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/1 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa93045a880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 watchdog_int_handler/2 watchdog_init/3 
+  Calls: 
+g_watchdog_cb/0 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fa93045a660
+  References: 
+  Referring: watchdog_init/3 (write) watchdog_int_handler/2 (read) watchdog_int_handler/2 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enable_int/8 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+cpu_register_int/7 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+watchdog_stop/6 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_feed/5 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_start/4 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_init/3 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: watchdog_int_handler/2 (addr) g_watchdog_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_int/8 cpu_register_int/7 watchdog_get_reg_base/1 
+watchdog_int_handler/2 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_watchdog_cb/0 (read) g_watchdog_cb/0 (read) 
+  Referring: watchdog_init/3 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: watchdog_get_reg_base/1 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/1 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 watchdog_int_handler/2 watchdog_init/3 
+  Calls: 
+g_watchdog_cb/0 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: watchdog_init/3 (write) watchdog_int_handler/2 (read) watchdog_int_handler/2 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+
+Initial Symbol table:
+
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enable_int/8 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+cpu_register_int/7 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+watchdog_stop/6 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_feed/5 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_start/4 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_init/3 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: watchdog_int_handler/2 (addr) g_watchdog_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_int/8 cpu_register_int/7 watchdog_get_reg_base/1 
+watchdog_int_handler/2 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_watchdog_cb/0 (read) g_watchdog_cb/0 (read) 
+  Referring: watchdog_init/3 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: watchdog_get_reg_base/1 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/1 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 watchdog_int_handler/2 watchdog_init/3 
+  Calls: 
+g_watchdog_cb/0 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: watchdog_init/3 (write) watchdog_int_handler/2 (read) watchdog_int_handler/2 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 
+  Calls: 
+cpu_enable_int/8 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+cpu_register_int/7 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: watchdog_init/3 
+  Calls: 
+watchdog_stop/6 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_feed/5 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_start/4 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 cpu_enter_critical/9 watchdog_get_reg_base/1 
+watchdog_init/3 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: watchdog_int_handler/2 (addr) g_watchdog_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_enable_int/8 cpu_register_int/7 watchdog_get_reg_base/1 
+watchdog_int_handler/2 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_watchdog_cb/0 (read) g_watchdog_cb/0 (read) 
+  Referring: watchdog_init/3 (addr) 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: watchdog_get_reg_base/1 
+   Indirect callnum speculative call targets: 0
+watchdog_get_reg_base/1 (watchdog_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: watchdog_stop/6 watchdog_feed/5 watchdog_start/4 watchdog_int_handler/2 watchdog_init/3 
+  Calls: 
+g_watchdog_cb/0 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: watchdog_init/3 (write) watchdog_int_handler/2 (read) watchdog_int_handler/2 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 (1073741824 (estimated locally),1.00 per call) watchdog_feed/5 (1073741824 (estimated locally),1.00 per call) watchdog_start/4 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: watchdog_stop/6 (1073741824 (estimated locally),1.00 per call) watchdog_feed/5 (1073741824 (estimated locally),1.00 per call) watchdog_start/4 (118111600 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_enable_int/8 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: watchdog_init/3 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpu_register_int/7 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: watchdog_init/3 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+watchdog_stop/6 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 (1073741824 (estimated locally),1.00 per call) cpu_enter_critical/9 (1073741824 (estimated locally),1.00 per call) 
+watchdog_feed/5 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 (1073741824 (estimated locally),1.00 per call) cpu_enter_critical/9 (1073741824 (estimated locally),1.00 per call) 
+watchdog_start/4 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/10 (118111600 (estimated locally),1.00 per call) cpu_enter_critical/9 (118111600 (estimated locally),1.00 per call) 
+watchdog_init/3 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: watchdog_int_handler/2 (addr) g_watchdog_cb/0 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_enable_int/8 (217325344 (estimated locally),0.20 per call) cpu_register_int/7 (1073741824 (estimated locally),1.00 per call) 
+watchdog_int_handler/2 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_watchdog_cb/0 (read) 
+  Referring: watchdog_init/3 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+   Indirect call(751619280 (estimated locally),0.70 per call) num speculative call targets: 0
+g_watchdog_cb/0 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: watchdog_int_handler/2 (read) watchdog_init/3 (write) 
+  Availability: available
+  Varpool flags: initialized
+Trivially needed variables: g_watchdog_cb/0
+Removing variables:
+
+Final Symbol table:
+
+cpu_exit_critical/10 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/9 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_enable_int/8 (cpu_enable_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_register_int/7 (cpu_register_int)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+watchdog_stop/6 (watchdog_stop)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_stop (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+watchdog_feed/5 (watchdog_feed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_feed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+watchdog_start/4 (watchdog_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_start (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+watchdog_init/3 (watchdog_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.watchdog_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+watchdog_int_handler/2 (watchdog_int_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.watchdog_int_handler (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+g_watchdog_cb/0 (g_watchdog_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_watchdog_cb (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

@@ -1,0 +1,1011 @@
+Trivially needed symbols: sysreg_soc_reset/23 sysreg_hsm_reset/22 sysreg_get_otp_key_num/21 sysreg_ahb_dma_cfg/20 sysreg_get_otpkey_dec_alg/19 sysreg_get_life_cycle/18 sysreg_enable_bus_err/17 sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 sysreg_disable_soc_dbg/14 sysreg_enable_soc_dbg/13 sysreg_disable_hsm_dbg/12 sysreg_enable_hsm_dbg/11 sysreg_set_status/10 sysreg_get_status/9
+
+
+Initial Symbol table:
+
+cpu_exit_critical/26 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+cpu_enter_critical/25 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+*.LC0/24 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  Aux: @0x7faa77f14110
+  References: 
+  Referring: sysreg_set_status/10 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sysreg_soc_reset/23 (sysreg_soc_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/22 (sysreg_hsm_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14dd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/21 (sysreg_get_otp_key_num)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14cc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/20 (sysreg_ahb_dma_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/19 (sysreg_get_otpkey_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/18 (sysreg_get_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_bus_err/17 (sysreg_enable_bus_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/16 (sysreg_disable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_enable_soc_dbg_ext/15 (sysreg_enable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_disable_soc_dbg/14 (sysreg_disable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14550
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/13 (sysreg_enable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/12 (sysreg_disable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14330
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/11 (sysreg_enable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/10 (sysreg_set_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14110
+  References: *.LC0/24 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/9 (sysreg_get_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faa77f14000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_read_fw_ctrl_bits/8 (sysreg_read_fw_ctrl_bits)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: sysreg_read_fw_ctrl_bits/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+cpu_exit_critical/26 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+cpu_enter_critical/25 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+*.LC0/24 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  References: 
+  Referring: sysreg_set_status/10 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sysreg_soc_reset/23 (sysreg_soc_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/22 (sysreg_hsm_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/21 (sysreg_get_otp_key_num)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/20 (sysreg_ahb_dma_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/19 (sysreg_get_otpkey_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/18 (sysreg_get_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_bus_err/17 (sysreg_enable_bus_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/16 (sysreg_disable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_enable_soc_dbg_ext/15 (sysreg_enable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_disable_soc_dbg/14 (sysreg_disable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/13 (sysreg_enable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/12 (sysreg_disable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/11 (sysreg_enable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/10 (sysreg_set_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: *.LC0/24 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/9 (sysreg_get_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+
+
+Initial Symbol table:
+
+cpu_exit_critical/26 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+cpu_enter_critical/25 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+*.LC0/24 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  References: 
+  Referring: sysreg_set_status/10 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sysreg_soc_reset/23 (sysreg_soc_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/22 (sysreg_hsm_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/21 (sysreg_get_otp_key_num)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/20 (sysreg_ahb_dma_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/19 (sysreg_get_otpkey_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/18 (sysreg_get_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_bus_err/17 (sysreg_enable_bus_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/16 (sysreg_disable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_enable_soc_dbg_ext/15 (sysreg_enable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_disable_soc_dbg/14 (sysreg_disable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/13 (sysreg_enable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/12 (sysreg_disable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/11 (sysreg_enable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/10 (sysreg_set_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: *.LC0/24 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/9 (sysreg_get_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpu_exit_critical/26 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+cpu_enter_critical/25 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 sysreg_enable_soc_dbg_ext/15 
+  Calls: 
+*.LC0/24 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  References: 
+  Referring: sysreg_set_status/10 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+sysreg_soc_reset/23 (sysreg_soc_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/22 (sysreg_hsm_reset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/21 (sysreg_get_otp_key_num)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/20 (sysreg_ahb_dma_cfg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/19 (sysreg_get_otpkey_dec_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/18 (sysreg_get_life_cycle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_bus_err/17 (sysreg_enable_bus_err)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/16 (sysreg_disable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_enable_soc_dbg_ext/15 (sysreg_enable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 cpu_enter_critical/25 
+sysreg_disable_soc_dbg/14 (sysreg_disable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/13 (sysreg_enable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/12 (sysreg_disable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/11 (sysreg_enable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/10 (sysreg_set_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: *.LC0/24 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/9 (sysreg_get_status)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cpu_exit_critical/26 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 (354334800 (estimated locally),0.33 per call) sysreg_enable_soc_dbg_ext/15 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+cpu_enter_critical/25 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sysreg_disable_soc_dbg_ext/16 (354334800 (estimated locally),0.33 per call) sysreg_enable_soc_dbg_ext/15 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+*.LC0/24 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: sysreg_set_status/10 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+sysreg_soc_reset/23 (sysreg_soc_reset)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/22 (sysreg_hsm_reset)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/21 (sysreg_get_otp_key_num)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/20 (sysreg_ahb_dma_cfg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/19 (sysreg_get_otpkey_dec_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/18 (sysreg_get_life_cycle)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_bus_err/17 (sysreg_enable_bus_err)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/16 (sysreg_disable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 (354334800 (estimated locally),0.33 per call) cpu_enter_critical/25 (354334800 (estimated locally),0.33 per call) 
+sysreg_enable_soc_dbg_ext/15 (sysreg_enable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: cpu_exit_critical/26 (354334800 (estimated locally),0.33 per call) cpu_enter_critical/25 (354334800 (estimated locally),0.33 per call) 
+sysreg_disable_soc_dbg/14 (sysreg_disable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/13 (sysreg_enable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/12 (sysreg_disable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/11 (sysreg_enable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/10 (sysreg_set_status)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: *.LC0/24 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/9 (sysreg_get_status)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Trivially needed variables: *.LC0/24
+Removing variables:
+
+Final Symbol table:
+
+cpu_exit_critical/26 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/25 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+*.LC0/24 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+sysreg_soc_reset/23 (sysreg_soc_reset)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_soc_reset (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sysreg_hsm_reset/22 (sysreg_hsm_reset)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_hsm_reset (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otp_key_num/21 (sysreg_get_otp_key_num)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_get_otp_key_num (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_ahb_dma_cfg/20 (sysreg_ahb_dma_cfg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_ahb_dma_cfg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_otpkey_dec_alg/19 (sysreg_get_otpkey_dec_alg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_get_otpkey_dec_alg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/18 (sysreg_get_life_cycle)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_get_life_cycle (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_bus_err/17 (sysreg_enable_bus_err)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_enable_bus_err (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg_ext/16 (sysreg_disable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_disable_soc_dbg_ext (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg_ext/15 (sysreg_enable_soc_dbg_ext)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_enable_soc_dbg_ext (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_soc_dbg/14 (sysreg_disable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_disable_soc_dbg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_soc_dbg/13 (sysreg_enable_soc_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_enable_soc_dbg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_disable_hsm_dbg/12 (sysreg_disable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_disable_hsm_dbg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_enable_hsm_dbg/11 (sysreg_enable_hsm_dbg)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_enable_hsm_dbg (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_set_status/10 (sysreg_set_status)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_set_status (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+sysreg_get_status/9 (sysreg_get_status)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sysreg_get_status (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 

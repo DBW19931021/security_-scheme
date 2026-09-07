@@ -1,0 +1,2699 @@
+Trivially needed symbols: dbgcmdpars_trans_to_packet/42 dbgcmdpars_srv_handler/41 dbgcmdpars_recv_complete/40 dbgcmdpars_append_data/39 dbgcmdpars_init_parser/38
+
+
+Initial Symbol table:
+
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+memcmp_/56 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/11 
+  Calls: 
+dbgauth_close_debug/55 (dbgauth_close_debug)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_close_debug/20 
+  Calls: 
+ERROR_VERIFY_DATA/54 (ERROR_VERIFY_DATA)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193f770
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_HASH/53 (ERROR_VERIFY_HASH)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f19b7b00
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_VERIFY/52 (ERROR_VERIFY_VERIFY)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f19b7a80
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_ehsm_debug_auth/51 (dbgauth_ehsm_debug_auth)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_debug_verify/28 
+  Calls: 
+ERROR_RANDOM/50 (ERROR_RANDOM)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1996980
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_CHA_HEAD/49 (DBG_CHA_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962000
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_get_challenge/48 (dbgauth_get_challenge)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_get_challenge/19 
+  Calls: 
+DBG_HEAD_TEST/47 (DBG_HEAD_TEST)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1bb3ee0
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_DIS/46 (DBG_HEAD_DIS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f198e780
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_RSP/45 (DBG_HEAD_RSP)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f198e700
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_REQ/44 (DBG_HEAD_REQ)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f198e680
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+dbgcmdpars_trans_to_packet/42 (dbgcmdpars_trans_to_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/41 (dbgcmdpars_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50f197f000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbg_analysis_parser/33 
+dbgcmdpars_recv_complete/40 (dbgcmdpars_recv_complete)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50f1962ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/39 (dbgcmdpars_append_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50f1962dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/38 
+dbgcmdpars_init_parser/38 (dbgcmdpars_init_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f50f1962cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_append_data/39 
+  Calls: util_memset/10 
+dbg_chartohex/37 (dbg_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193fdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+  Calls: util_memcpy/9 dbg_chartohex_interenl/35 dbg_chartohex_interenl/35 
+dbg_hextochar/36 (dbg_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1996a00
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_random_resp/29 
+  Calls: util_memcpy/9 dbg_hextochar_interenl/34 dbg_hextochar_interenl/34 
+dbg_chartohex_interenl/35 (dbg_chartohex_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193fdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_chartohex/37 dbg_chartohex/37 
+  Calls: 
+dbg_hextochar_interenl/34 (dbg_hextochar_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1996a00
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_hextochar/36 dbg_hextochar/36 
+  Calls: 
+dbg_analysis_parser/33 (dbg_analysis_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f197f000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_srv_handler/41 
+  Calls: util_memcpy/9 dbg_handle_cmd/32 util_memset/10 
+dbg_handle_cmd/32 (dbg_handle_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1bb3ee0
+  References: DBG_HEAD_REQ/44 (addr) DBG_HEAD_RSP/45 (addr) DBG_HEAD_DIS/46 (addr) DBG_HEAD_TEST/47 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_analysis_parser/33 
+  Calls: util_memcpy/9 util_memcmp/11 dbg_close_debug/20 util_memcmp/11 dbg_debug_verify/28 util_memcmp/11 dbg_get_challenge/19 util_memcmp/11 
+dbg_build_close_debug_resp/31 (dbg_build_close_debug_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193f110
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 dbg_close_debug/20 dbg_close_debug/20 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_verify_resp/30 (dbg_build_verify_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193f770
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_VERIFY/52 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_HASH/53 (addr) ERROR_VERIFY_DATA/54 (addr) ERROR_VERIFY_VERIFY/52 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_random_resp/29 (dbg_build_random_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962000
+  References: DBG_CHA_HEAD/49 (addr) ERROR_RANDOM/50 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 dbg_get_challenge/19 
+  Calls: util_memset/10 util_memcpy/9 dbg_hextochar/36 util_memcpy/9 
+dbg_debug_verify/28 (dbg_debug_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193f770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbgauth_ehsm_debug_auth/51 dbg_parse_verify_data/27 util_memset/10 dbg_check_debug_verify_param/21 util_memset/10 
+dbg_parse_verify_data/27 (dbg_parse_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+dbg_parse_sym_verify_data/26 (dbg_parse_sym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193fcc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_rsa_data/25 (dbg_parse_rsa_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_asym_verify_data/24 (dbg_parse_asym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193fdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_check_close_debug_param/23 (dbg_check_close_debug_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 
+  Calls: 
+dbg_check_challenge_param/22 (dbg_check_challenge_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 
+  Calls: 
+dbg_check_debug_verify_param/21 (dbg_check_debug_verify_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193fee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: 
+dbg_close_debug/20 (dbg_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193f110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbgauth_close_debug/55 dbg_build_close_debug_resp/31 dbg_check_close_debug_param/23 
+dbg_get_challenge/19 (dbg_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_random_resp/29 dbgauth_get_challenge/48 dbg_build_random_resp/29 dbg_check_challenge_param/22 
+DBG_END_HEAD/18 (DBG_END_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f19b7a00
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+VERIFY_SUCCESS/17 (VERIFY_SUCCESS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193ed80
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_PARAMETER/16 (ERROR_VERIFY_PARAMETER)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193ed00
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_ERROR/15 (ERROR_VERIFY_ERROR)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f193ec80
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f198e600
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 
+  Calls: memcmp_/56 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f1962cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_debug_verify/28 dbg_debug_verify/28 dbg_build_random_resp/29 dbg_analysis_parser/33 dbgcmdpars_init_parser/38 
+  Calls: memset_/43 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f50f197f000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_chartohex/37 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 dbg_hextochar/36 dbg_build_random_resp/29 dbg_build_random_resp/29 dbg_handle_cmd/32 dbg_analysis_parser/33 
+  Calls: memcpy_/57 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+memcmp_/56 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/11 
+  Calls: 
+dbgauth_close_debug/55 (dbgauth_close_debug)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_close_debug/20 
+  Calls: 
+ERROR_VERIFY_DATA/54 (ERROR_VERIFY_DATA)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_HASH/53 (ERROR_VERIFY_HASH)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_VERIFY/52 (ERROR_VERIFY_VERIFY)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_ehsm_debug_auth/51 (dbgauth_ehsm_debug_auth)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_debug_verify/28 
+  Calls: 
+ERROR_RANDOM/50 (ERROR_RANDOM)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_CHA_HEAD/49 (DBG_CHA_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_get_challenge/48 (dbgauth_get_challenge)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_get_challenge/19 
+  Calls: 
+DBG_HEAD_TEST/47 (DBG_HEAD_TEST)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_DIS/46 (DBG_HEAD_DIS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_RSP/45 (DBG_HEAD_RSP)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_REQ/44 (DBG_HEAD_REQ)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+dbgcmdpars_trans_to_packet/42 (dbgcmdpars_trans_to_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/41 (dbgcmdpars_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbg_analysis_parser/33 
+dbgcmdpars_recv_complete/40 (dbgcmdpars_recv_complete)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/39 (dbgcmdpars_append_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/38 
+dbgcmdpars_init_parser/38 (dbgcmdpars_init_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_append_data/39 
+  Calls: util_memset/10 
+dbg_chartohex/37 (dbg_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+  Calls: util_memcpy/9 dbg_chartohex_interenl/35 dbg_chartohex_interenl/35 
+dbg_hextochar/36 (dbg_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_random_resp/29 
+  Calls: util_memcpy/9 dbg_hextochar_interenl/34 dbg_hextochar_interenl/34 
+dbg_chartohex_interenl/35 (dbg_chartohex_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_chartohex/37 dbg_chartohex/37 
+  Calls: 
+dbg_hextochar_interenl/34 (dbg_hextochar_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_hextochar/36 dbg_hextochar/36 
+  Calls: 
+dbg_analysis_parser/33 (dbg_analysis_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_srv_handler/41 
+  Calls: util_memcpy/9 dbg_handle_cmd/32 util_memset/10 
+dbg_handle_cmd/32 (dbg_handle_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_HEAD_REQ/44 (addr) DBG_HEAD_RSP/45 (addr) DBG_HEAD_DIS/46 (addr) DBG_HEAD_TEST/47 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_analysis_parser/33 
+  Calls: util_memcpy/9 util_memcmp/11 dbg_close_debug/20 util_memcmp/11 dbg_debug_verify/28 util_memcmp/11 dbg_get_challenge/19 util_memcmp/11 
+dbg_build_close_debug_resp/31 (dbg_build_close_debug_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 dbg_close_debug/20 dbg_close_debug/20 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_verify_resp/30 (dbg_build_verify_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_VERIFY/52 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_HASH/53 (addr) ERROR_VERIFY_DATA/54 (addr) ERROR_VERIFY_VERIFY/52 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_random_resp/29 (dbg_build_random_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_CHA_HEAD/49 (addr) ERROR_RANDOM/50 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 dbg_get_challenge/19 
+  Calls: util_memset/10 util_memcpy/9 dbg_hextochar/36 util_memcpy/9 
+dbg_debug_verify/28 (dbg_debug_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbgauth_ehsm_debug_auth/51 dbg_parse_verify_data/27 util_memset/10 dbg_check_debug_verify_param/21 util_memset/10 
+dbg_parse_verify_data/27 (dbg_parse_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+dbg_parse_sym_verify_data/26 (dbg_parse_sym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_rsa_data/25 (dbg_parse_rsa_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_asym_verify_data/24 (dbg_parse_asym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_check_close_debug_param/23 (dbg_check_close_debug_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 
+  Calls: 
+dbg_check_challenge_param/22 (dbg_check_challenge_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 
+  Calls: 
+dbg_check_debug_verify_param/21 (dbg_check_debug_verify_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: 
+dbg_close_debug/20 (dbg_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbgauth_close_debug/55 dbg_build_close_debug_resp/31 dbg_check_close_debug_param/23 
+dbg_get_challenge/19 (dbg_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_random_resp/29 dbgauth_get_challenge/48 dbg_build_random_resp/29 dbg_check_challenge_param/22 
+DBG_END_HEAD/18 (DBG_END_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+VERIFY_SUCCESS/17 (VERIFY_SUCCESS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_PARAMETER/16 (ERROR_VERIFY_PARAMETER)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_ERROR/15 (ERROR_VERIFY_ERROR)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_memcmp/11 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 
+  Calls: memcmp_/56 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_debug_verify/28 dbg_debug_verify/28 dbg_build_random_resp/29 dbg_analysis_parser/33 dbgcmdpars_init_parser/38 
+  Calls: memset_/43 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_chartohex/37 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 dbg_hextochar/36 dbg_build_random_resp/29 dbg_build_random_resp/29 dbg_handle_cmd/32 dbg_analysis_parser/33 
+  Calls: memcpy_/57 
+
+
+Initial Symbol table:
+
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+memcmp_/56 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/11 
+  Calls: 
+dbgauth_close_debug/55 (dbgauth_close_debug)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_close_debug/20 
+  Calls: 
+ERROR_VERIFY_DATA.0/54 (ERROR_VERIFY_DATA)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_HASH.1/53 (ERROR_VERIFY_HASH)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_VERIFY.2/52 (ERROR_VERIFY_VERIFY)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_ehsm_debug_auth/51 (dbgauth_ehsm_debug_auth)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_debug_verify/28 
+  Calls: 
+ERROR_RANDOM.3/50 (ERROR_RANDOM)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_CHA_HEAD.4/49 (DBG_CHA_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_get_challenge/48 (dbgauth_get_challenge)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_get_challenge/19 
+  Calls: 
+DBG_HEAD_TEST.5/47 (DBG_HEAD_TEST)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_DIS.6/46 (DBG_HEAD_DIS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_RSP.7/45 (DBG_HEAD_RSP)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_REQ.8/44 (DBG_HEAD_REQ)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+dbgcmdpars_trans_to_packet/42 (dbgcmdpars_trans_to_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/41 (dbgcmdpars_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbg_analysis_parser/33 
+dbgcmdpars_recv_complete/40 (dbgcmdpars_recv_complete)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/39 (dbgcmdpars_append_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/38 
+dbgcmdpars_init_parser/38 (dbgcmdpars_init_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_append_data/39 
+  Calls: util_memset/10 
+dbg_chartohex/37 (dbg_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+  Calls: util_memcpy/9 dbg_chartohex_interenl/35 dbg_chartohex_interenl/35 
+dbg_hextochar/36 (dbg_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_random_resp/29 
+  Calls: util_memcpy/9 dbg_hextochar_interenl/34 dbg_hextochar_interenl/34 
+dbg_chartohex_interenl/35 (dbg_chartohex_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_chartohex/37 dbg_chartohex/37 
+  Calls: 
+dbg_hextochar_interenl/34 (dbg_hextochar_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_hextochar/36 dbg_hextochar/36 
+  Calls: 
+dbg_analysis_parser/33 (dbg_analysis_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_srv_handler/41 
+  Calls: util_memcpy/9 dbg_handle_cmd/32 util_memset/10 
+dbg_handle_cmd/32 (dbg_handle_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_HEAD_REQ.8/44 (addr) DBG_HEAD_RSP.7/45 (addr) DBG_HEAD_DIS.6/46 (addr) DBG_HEAD_TEST.5/47 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_analysis_parser/33 
+  Calls: util_memcpy/9 util_memcmp/11 dbg_close_debug/20 util_memcmp/11 dbg_debug_verify/28 util_memcmp/11 dbg_get_challenge/19 util_memcmp/11 
+dbg_build_close_debug_resp/31 (dbg_build_close_debug_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 dbg_close_debug/20 dbg_close_debug/20 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_verify_resp/30 (dbg_build_verify_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_VERIFY.2/52 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_HASH.1/53 (addr) ERROR_VERIFY_DATA.0/54 (addr) ERROR_VERIFY_VERIFY.2/52 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_random_resp/29 (dbg_build_random_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_CHA_HEAD.4/49 (addr) ERROR_RANDOM.3/50 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 dbg_get_challenge/19 
+  Calls: util_memset/10 util_memcpy/9 dbg_hextochar/36 util_memcpy/9 
+dbg_debug_verify/28 (dbg_debug_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbgauth_ehsm_debug_auth/51 dbg_parse_verify_data/27 util_memset/10 dbg_check_debug_verify_param/21 util_memset/10 
+dbg_parse_verify_data/27 (dbg_parse_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+dbg_parse_sym_verify_data/26 (dbg_parse_sym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_rsa_data/25 (dbg_parse_rsa_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_asym_verify_data/24 (dbg_parse_asym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_check_close_debug_param/23 (dbg_check_close_debug_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 
+  Calls: 
+dbg_check_challenge_param/22 (dbg_check_challenge_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 
+  Calls: 
+dbg_check_debug_verify_param/21 (dbg_check_debug_verify_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: 
+dbg_close_debug/20 (dbg_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbgauth_close_debug/55 dbg_build_close_debug_resp/31 dbg_check_close_debug_param/23 
+dbg_get_challenge/19 (dbg_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_random_resp/29 dbgauth_get_challenge/48 dbg_build_random_resp/29 dbg_check_challenge_param/22 
+DBG_END_HEAD/18 (DBG_END_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+VERIFY_SUCCESS/17 (VERIFY_SUCCESS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_PARAMETER/16 (ERROR_VERIFY_PARAMETER)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_ERROR/15 (ERROR_VERIFY_ERROR)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_memcmp/11 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 
+  Calls: memcmp_/56 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_debug_verify/28 dbg_debug_verify/28 dbg_build_random_resp/29 dbg_analysis_parser/33 dbgcmdpars_init_parser/38 
+  Calls: memset_/43 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_chartohex/37 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 dbg_hextochar/36 dbg_build_random_resp/29 dbg_build_random_resp/29 dbg_handle_cmd/32 dbg_analysis_parser/33 
+  Calls: memcpy_/57 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+memcmp_/56 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/11 
+  Calls: 
+dbgauth_close_debug/55 (dbgauth_close_debug)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_close_debug/20 
+  Calls: 
+ERROR_VERIFY_DATA.0/54 (ERROR_VERIFY_DATA)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_HASH.1/53 (ERROR_VERIFY_HASH)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_VERIFY.2/52 (ERROR_VERIFY_VERIFY)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_verify_resp/30 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_ehsm_debug_auth/51 (dbgauth_ehsm_debug_auth)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_debug_verify/28 
+  Calls: 
+ERROR_RANDOM.3/50 (ERROR_RANDOM)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_CHA_HEAD.4/49 (DBG_CHA_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_random_resp/29 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+dbgauth_get_challenge/48 (dbgauth_get_challenge)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dbg_get_challenge/19 
+  Calls: 
+DBG_HEAD_TEST.5/47 (DBG_HEAD_TEST)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_DIS.6/46 (DBG_HEAD_DIS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_RSP.7/45 (DBG_HEAD_RSP)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+DBG_HEAD_REQ.8/44 (DBG_HEAD_REQ)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_handle_cmd/32 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/10 
+  Calls: 
+dbgcmdpars_trans_to_packet/42 (dbgcmdpars_trans_to_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/41 (dbgcmdpars_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbg_analysis_parser/33 
+dbgcmdpars_recv_complete/40 (dbgcmdpars_recv_complete)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/39 (dbgcmdpars_append_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dbgcmdpars_init_parser/38 
+dbgcmdpars_init_parser/38 (dbgcmdpars_init_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_append_data/39 
+  Calls: util_memset/10 
+dbg_chartohex/37 (dbg_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+  Calls: util_memcpy/9 dbg_chartohex_interenl/35 dbg_chartohex_interenl/35 
+dbg_hextochar/36 (dbg_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_random_resp/29 
+  Calls: util_memcpy/9 dbg_hextochar_interenl/34 dbg_hextochar_interenl/34 
+dbg_chartohex_interenl/35 (dbg_chartohex_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_chartohex/37 dbg_chartohex/37 
+  Calls: 
+dbg_hextochar_interenl/34 (dbg_hextochar_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_hextochar/36 dbg_hextochar/36 
+  Calls: 
+dbg_analysis_parser/33 (dbg_analysis_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbgcmdpars_srv_handler/41 
+  Calls: util_memcpy/9 dbg_handle_cmd/32 util_memset/10 
+dbg_handle_cmd/32 (dbg_handle_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_HEAD_REQ.8/44 (addr) DBG_HEAD_RSP.7/45 (addr) DBG_HEAD_DIS.6/46 (addr) DBG_HEAD_TEST.5/47 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_analysis_parser/33 
+  Calls: util_memcpy/9 util_memcmp/11 dbg_close_debug/20 util_memcmp/11 dbg_debug_verify/28 util_memcmp/11 dbg_get_challenge/19 util_memcmp/11 
+dbg_build_close_debug_resp/31 (dbg_build_close_debug_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 dbg_close_debug/20 dbg_close_debug/20 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_verify_resp/30 (dbg_build_verify_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_VERIFY.2/52 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_HASH.1/53 (addr) ERROR_VERIFY_DATA.0/54 (addr) ERROR_VERIFY_VERIFY.2/52 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 dbg_debug_verify/28 
+  Calls: util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 util_memcpy/9 
+dbg_build_random_resp/29 (dbg_build_random_resp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: DBG_CHA_HEAD.4/49 (addr) ERROR_RANDOM.3/50 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 dbg_get_challenge/19 
+  Calls: util_memset/10 util_memcpy/9 dbg_hextochar/36 util_memcpy/9 
+dbg_debug_verify/28 (dbg_debug_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbgauth_ehsm_debug_auth/51 dbg_parse_verify_data/27 util_memset/10 dbg_check_debug_verify_param/21 util_memset/10 
+dbg_parse_verify_data/27 (dbg_parse_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 
+dbg_parse_sym_verify_data/26 (dbg_parse_sym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_rsa_data/25 (dbg_parse_rsa_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_parse_asym_verify_data/24 (dbg_parse_asym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_verify_data/27 dbg_parse_verify_data/27 
+  Calls: util_memcpy/9 dbg_chartohex/37 util_memcpy/9 dbg_chartohex/37 util_memset/10 
+dbg_check_close_debug_param/23 (dbg_check_close_debug_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_close_debug/20 
+  Calls: 
+dbg_check_challenge_param/22 (dbg_check_challenge_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_get_challenge/19 
+  Calls: 
+dbg_check_debug_verify_param/21 (dbg_check_debug_verify_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_debug_verify/28 
+  Calls: 
+dbg_close_debug/20 (dbg_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbgauth_close_debug/55 dbg_build_close_debug_resp/31 dbg_check_close_debug_param/23 
+dbg_get_challenge/19 (dbg_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 
+  Calls: dbg_build_random_resp/29 dbgauth_get_challenge/48 dbg_build_random_resp/29 dbg_check_challenge_param/22 
+DBG_END_HEAD/18 (DBG_END_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+VERIFY_SUCCESS/17 (VERIFY_SUCCESS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_PARAMETER/16 (ERROR_VERIFY_PARAMETER)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_ERROR/15 (ERROR_VERIFY_ERROR)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: dbg_build_verify_resp/30 (addr) dbg_build_close_debug_resp/31 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_memcmp/11 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 dbg_handle_cmd/32 
+  Calls: memcmp_/56 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_parse_asym_verify_data/24 dbg_debug_verify/28 dbg_debug_verify/28 dbg_build_random_resp/29 dbg_analysis_parser/33 dbgcmdpars_init_parser/38 
+  Calls: memset_/43 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_close_debug_resp/31 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_build_verify_resp/30 dbg_parse_rsa_data/25 dbg_parse_rsa_data/25 dbg_parse_sym_verify_data/26 dbg_chartohex/37 dbg_parse_asym_verify_data/24 dbg_parse_asym_verify_data/24 dbg_hextochar/36 dbg_build_random_resp/29 dbg_build_random_resp/29 dbg_handle_cmd/32 dbg_analysis_parser/33 
+  Calls: memcpy_/57 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+dbg_parse_sym_verify_data.part.0/111 (dbg_parse_sym_verify_data.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 73
+  References: 
+  Referring: 
+  Function dbg_parse_sym_verify_data.part.0/111 is inline copy in dbg_analysis_parser/33
+  Clone of dbg_parse_sym_verify_data.part.0/73
+  Availability: local
+  Function flags: count:115669 (estimated locally) body local split_part
+  Called by: dbg_parse_sym_verify_data/110 (inlined) (115669 (estimated locally),0.00 per call) 
+  Calls: memcpy_/57 (115669 (estimated locally),0.00 per call) dbg_chartohex/37 (115669 (estimated locally),0.00 per call) memset_/43 (115669 (estimated locally),0.00 per call) 
+dbg_parse_sym_verify_data/110 (dbg_parse_sym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 26
+  References: 
+  Referring: 
+  Function dbg_parse_sym_verify_data/110 is inline copy in dbg_analysis_parser/33
+  Clone of dbg_parse_sym_verify_data/26
+  Availability: local
+  Function flags: count:441480 (estimated locally) body local
+  Called by: dbg_parse_verify_data/27 (inlined) (441480 (estimated locally),0.00 per call) 
+  Calls: dbg_parse_sym_verify_data.part.0/111 (inlined) (115669 (estimated locally),0.00 per call) 
+__builtin_unreachable/109 (__builtin_unreachable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_build_random_resp.part.0/64 (0 (precise),0.00 per call) dbg_build_random_resp.part.0/64 (0 (precise),0.00 per call) 
+  Calls: 
+dbg_build_random_resp.part.0/108 (dbg_build_random_resp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 64
+  References: DBG_CHA_HEAD.4/49 (addr) ERROR_RANDOM.3/50 (addr) 
+  Referring: 
+  Function dbg_build_random_resp.part.0/108 is inline copy in dbg_analysis_parser/33
+  Clone of dbg_build_random_resp.part.0/64
+  Availability: local
+  Function flags: count:3890060 (estimated locally) body local split_part
+  Called by: dbg_get_challenge/19 (inlined) (3890060 (estimated locally),0.00 per call) 
+  Calls: memset_/43 (2080015 (estimated locally),0.00 per call) memcpy_/57 (2826756 (estimated locally),0.00 per call) dbg_hextochar/36 (inlined) (1063304 (estimated locally),0.00 per call) memcpy_/57 (3890060 (estimated locally),0.00 per call) 
+dbgcmdpars_init_parser.part.0/107 (dbgcmdpars_init_parser.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 104
+  References: 
+  Referring: 
+  Function dbgcmdpars_init_parser.part.0/107 is inline copy in dbgcmdpars_init_parser/38
+  Clone of dbgcmdpars_init_parser.part.0/104
+  Availability: local
+  Function flags: count:410384128 (estimated locally) body local split_part
+  Called by: dbgcmdpars_init_parser/38 (inlined) (410384128 (estimated locally),0.38 per call) 
+  Calls: memset_/43 (410384128 (estimated locally),0.38 per call) 
+dbg_handle_cmd.constprop.0/106 (dbg_handle_cmd.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: DBG_HEAD_REQ.8/44 (addr) DBG_HEAD_RSP.7/45 (addr) DBG_HEAD_DIS.6/46 (addr) DBG_HEAD_TEST.5/47 (addr) 
+  Referring: 
+  Function dbg_handle_cmd.constprop/106 is inline copy in dbg_analysis_parser/33
+  Clone of dbg_handle_cmd/32
+  Availability: local
+  Function flags: count:183893758 (estimated locally) local
+  Called by: dbg_analysis_parser/33 (inlined) (183893758 (estimated locally),0.17 per call) 
+  Calls: memcmp_/56 (68829595 (estimated locally),0.06 per call) dbg_get_challenge/19 (inlined) (22713766 (estimated locally),0.02 per call) memcmp_/56 (68829595 (estimated locally),0.06 per call) dbg_debug_verify/28 (inlined) (22713766 (estimated locally),0.02 per call) memcmp_/56 (68829595 (estimated locally),0.06 per call) dbg_close_debug/20 (inlined) (22713766 (estimated locally),0.02 per call) memcmp_/56 (68829595 (estimated locally),0.06 per call) memcpy_/57 (14426683 (estimated locally),0.01 per call) 
+dbgcmdpars_init_parser.part.0/104 (dbgcmdpars_init_parser.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 107
+  References: 
+  Referring: 
+  Function dbgcmdpars_init_parser.part.0/104 is inline copy in dbgcmdpars_append_data/39
+  Availability: local
+  Function flags: count:55138791 (estimated locally) body local split_part
+  Called by: dbgcmdpars_append_data/39 (inlined) (55138791 (estimated locally),0.05 per call) 
+  Calls: memset_/43 (55138791 (estimated locally),0.05 per call) 
+dbg_build_close_debug_resp.part.0/96 (dbg_build_close_debug_resp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:574129751 (estimated locally) body local split_part
+  Called by: dbg_close_debug/20 (2262701 (estimated locally),0.00 per call) dbg_close_debug/20 (627821 (estimated locally),0.00 per call) dbg_close_debug/20 (9254529 (estimated locally),0.01 per call) 
+  Calls: memcpy_/57 (574129751 (estimated locally),1.00 per call) memcpy_/57 (195204118 (estimated locally),0.34 per call) memcpy_/57 (378925634 (estimated locally),0.66 per call) memcpy_/57 (378925634 (estimated locally),0.66 per call) 
+dbg_build_verify_resp.part.0/85 (dbg_build_verify_resp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: DBG_END_HEAD/18 (addr) VERIFY_SUCCESS/17 (addr) ERROR_VERIFY_VERIFY.2/52 (addr) ERROR_VERIFY_PARAMETER/16 (addr) ERROR_VERIFY_HASH.1/53 (addr) ERROR_VERIFY_DATA.0/54 (addr) ERROR_VERIFY_VERIFY.2/52 (addr) ERROR_VERIFY_ERROR/15 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:574129748 (estimated locally) body local split_part
+  Called by: dbg_debug_verify/28 (8015733 (estimated locally),0.01 per call) dbg_debug_verify/28 (3293543 (estimated locally),0.00 per call) dbg_debug_verify/28 (512142 (estimated locally),0.00 per call) dbg_debug_verify/28 (142102 (estimated locally),0.00 per call) dbg_debug_verify/28 (181530 (estimated locally),0.00 per call) 
+  Calls: memcpy_/57 (574129748 (estimated locally),1.00 per call) memcpy_/57 (116203860 (estimated locally),0.20 per call) memcpy_/57 (91585179 (estimated locally),0.16 per call) memcpy_/57 (91585179 (estimated locally),0.16 per call) memcpy_/57 (91585179 (estimated locally),0.16 per call) memcpy_/57 (91585179 (estimated locally),0.16 per call) memcpy_/57 (91585179 (estimated locally),0.16 per call) memcpy_/57 (457925895 (estimated locally),0.80 per call) 
+dbg_parse_sym_verify_data.part.0/73 (dbg_parse_sym_verify_data.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 111
+  References: 
+  Referring: 
+  Function dbg_parse_sym_verify_data.part.0/73 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:115669 (estimated locally) body local split_part
+  Called by: dbg_parse_sym_verify_data/26 (inlined) (115669 (estimated locally),0.00 per call) 
+  Calls: memset_/43 (115669 (estimated locally),0.00 per call) dbg_chartohex/37 (115669 (estimated locally),0.00 per call) memcpy_/57 (115669 (estimated locally),0.00 per call) 
+dbg_parse_asym_verify_data.part.0/70 (dbg_parse_asym_verify_data.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function dbg_parse_asym_verify_data.part.0/70 is inline copy in dbg_parse_asym_verify_data/24
+  Availability: local
+  Function flags: count:281323581 (estimated locally) body local split_part
+  Called by: dbg_parse_asym_verify_data/24 (inlined) (281323581 (estimated locally),0.26 per call) 
+  Calls: memset_/43 (281323581 (estimated locally),0.26 per call) dbg_chartohex/37 (281323581 (estimated locally),0.26 per call) memcpy_/57 (281323581 (estimated locally),0.26 per call) dbg_chartohex/37 (281323581 (estimated locally),0.26 per call) memcpy_/57 (281323581 (estimated locally),0.26 per call) 
+dbg_build_random_resp.part.0/64 (dbg_build_random_resp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 108
+  References: DBG_CHA_HEAD.4/49 (addr) ERROR_RANDOM.3/50 (addr) 
+  Referring: 
+  Function dbg_build_random_resp.part.0/64 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:8254991 (estimated locally) body local split_part
+  Called by: dbg_get_challenge/19 (inlined) (8254991 (estimated locally),0.01 per call) 
+  Calls: memcpy_/57 (8254991 (estimated locally),0.01 per call) __builtin_unreachable/109 (0 (precise),0.00 per call) memcpy_/57 (5998583 (estimated locally),0.01 per call) __builtin_unreachable/109 (0 (precise),0.00 per call) 
+dbg_chartohex_interenl.part.0/58 (dbg_chartohex_interenl.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function dbg_chartohex_interenl.part.0/58 is inline copy in dbg_chartohex_interenl/35
+  Availability: local
+  Function flags: count:268435456 (estimated locally) body local split_part nonfreeing_fn
+  Called by: dbg_chartohex_interenl/35 (inlined) (268435456 (estimated locally),0.25 per call) 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_parse_sym_verify_data.part.0/111 (115669 (estimated locally),0.00 per call) dbg_build_random_resp.part.0/108 (2826756 (estimated locally),0.00 per call) dbg_build_random_resp.part.0/108 (3890060 (estimated locally),0.00 per call) dbg_handle_cmd.constprop.0/106 (14426683 (estimated locally),0.01 per call) dbg_analysis_parser/33 (183893758 (estimated locally),0.17 per call) dbg_build_close_debug_resp.part.0/96 (574129751 (estimated locally),1.00 per call) dbg_build_close_debug_resp.part.0/96 (195204118 (estimated locally),0.34 per call) dbg_build_close_debug_resp.part.0/96 (378925634 (estimated locally),0.66 per call) dbg_build_close_debug_resp.part.0/96 (378925634 (estimated locally),0.66 per call) dbg_build_verify_resp.part.0/85 (574129748 (estimated locally),1.00 per call) dbg_build_verify_resp.part.0/85 (116203860 (estimated locally),0.20 per call) dbg_build_verify_resp.part.0/85 (91585179 (estimated locally),0.16 per call) dbg_build_verify_resp.part.0/85 (91585179 (estimated locally),0.16 per call) dbg_build_verify_resp.part.0/85 (91585179 (estimated locally),0.16 per call) dbg_build_verify_resp.part.0/85 (91585179 (estimated locally),0.16 per call) dbg_build_verify_resp.part.0/85 (91585179 (estimated locally),0.16 per call) dbg_build_verify_resp.part.0/85 (457925895 (estimated locally),0.80 per call) dbg_parse_rsa_data/25 (75714 (estimated locally),0.00 per call) dbg_parse_rsa_data/25 (75714 (estimated locally),0.00 per call) dbg_parse_sym_verify_data.part.0/73 (115669 (estimated locally),0.00 per call) dbg_parse_asym_verify_data.part.0/70 (281323581 (estimated locally),0.26 per call) dbg_parse_asym_verify_data.part.0/70 (281323581 (estimated locally),0.26 per call) dbg_chartohex/37 (118111600 (estimated locally),1.00 per call) dbg_build_random_resp.part.0/64 (8254991 (estimated locally),0.01 per call) dbg_build_random_resp.part.0/64 (5998583 (estimated locally),0.01 per call) dbg_hextochar/36 (1063304 (estimated locally),0.00 per call) 
+  Calls: 
+memcmp_/56 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_handle_cmd.constprop.0/106 (68829595 (estimated locally),0.06 per call) dbg_handle_cmd.constprop.0/106 (68829595 (estimated locally),0.06 per call) dbg_handle_cmd.constprop.0/106 (68829595 (estimated locally),0.06 per call) dbg_handle_cmd.constprop.0/106 (68829595 (estimated locally),0.06 per call) 
+  Calls: 
+dbgauth_close_debug/55 (dbgauth_close_debug)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_close_debug/20 (5405876 (estimated locally),0.01 per call) 
+  Calls: 
+ERROR_VERIFY_DATA.0/54 (ERROR_VERIFY_DATA)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+ERROR_VERIFY_HASH.1/53 (ERROR_VERIFY_HASH)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+ERROR_VERIFY_VERIFY.2/52 (ERROR_VERIFY_VERIFY)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) dbg_build_verify_resp.part.0/85 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+dbgauth_ehsm_debug_auth/51 (dbgauth_ehsm_debug_auth)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_debug_verify/28 (1563071 (estimated locally),0.00 per call) 
+  Calls: 
+ERROR_RANDOM.3/50 (ERROR_RANDOM)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_random_resp.part.0/64 (addr) dbg_build_random_resp.part.0/108 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_CHA_HEAD.4/49 (DBG_CHA_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_random_resp.part.0/64 (addr) dbg_build_random_resp.part.0/108 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+dbgauth_get_challenge/48 (dbgauth_get_challenge)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_get_challenge/19 (7275219 (estimated locally),0.01 per call) 
+  Calls: 
+DBG_HEAD_TEST.5/47 (DBG_HEAD_TEST)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_handle_cmd.constprop.0/106 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_HEAD_DIS.6/46 (DBG_HEAD_DIS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_handle_cmd.constprop.0/106 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_HEAD_RSP.7/45 (DBG_HEAD_RSP)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_handle_cmd.constprop.0/106 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_HEAD_REQ.8/44 (DBG_HEAD_REQ)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_handle_cmd.constprop.0/106 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dbg_parse_sym_verify_data.part.0/111 (115669 (estimated locally),0.00 per call) dbg_build_random_resp.part.0/108 (2080015 (estimated locally),0.00 per call) dbgcmdpars_init_parser.part.0/107 (410384128 (estimated locally),0.38 per call) dbgcmdpars_init_parser.part.0/104 (55138791 (estimated locally),0.05 per call) dbg_analysis_parser/33 (574129751 (estimated locally),0.53 per call) dbg_debug_verify/28 (1563071 (estimated locally),0.00 per call) dbg_debug_verify/28 (22713766 (estimated locally),0.02 per call) dbg_parse_rsa_data/25 (75714 (estimated locally),0.00 per call) dbg_parse_sym_verify_data.part.0/73 (115669 (estimated locally),0.00 per call) dbg_parse_asym_verify_data.part.0/70 (281323581 (estimated locally),0.26 per call) 
+  Calls: 
+dbgcmdpars_trans_to_packet/42 (dbgcmdpars_trans_to_packet)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/41 (dbgcmdpars_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: dbg_analysis_parser/33 (401890828 (estimated locally),0.37 per call) 
+dbgcmdpars_recv_complete/40 (dbgcmdpars_recv_complete)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/39 (dbgcmdpars_append_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: dbgcmdpars_init_parser.part.0/104 (inlined) (55138791 (estimated locally),0.05 per call) 
+dbgcmdpars_init_parser/38 (dbgcmdpars_init_parser)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: dbgcmdpars_init_parser.part.0/107 (inlined) (410384128 (estimated locally),0.38 per call) 
+dbg_chartohex/37 (dbg_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) body local
+  Called by: dbg_parse_sym_verify_data.part.0/111 (115669 (estimated locally),0.00 per call) dbg_parse_rsa_data/25 (75714 (estimated locally),0.00 per call) dbg_parse_rsa_data/25 (75714 (estimated locally),0.00 per call) dbg_parse_sym_verify_data.part.0/73 (115669 (estimated locally),0.00 per call) dbg_parse_asym_verify_data.part.0/70 (281323581 (estimated locally),0.26 per call) dbg_parse_asym_verify_data.part.0/70 (281323581 (estimated locally),0.26 per call) 
+  Calls: memcpy_/57 (118111600 (estimated locally),1.00 per call) dbg_chartohex_interenl/35 (477815112 (estimated locally),4.05 per call) dbg_chartohex_interenl/35 (955630224 (estimated locally),8.09 per call) 
+dbg_hextochar/36 (dbg_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_hextochar/36 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:1063304 (estimated locally) body local
+  Called by: dbg_build_random_resp.part.0/108 (inlined) (1063304 (estimated locally),0.00 per call) 
+  Calls: memcpy_/57 (1063304 (estimated locally),0.00 per call) 
+dbg_chartohex_interenl/35 (dbg_chartohex_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: dbg_chartohex/37 (477815112 (estimated locally),4.05 per call) dbg_chartohex/37 (955630224 (estimated locally),8.09 per call) 
+  Calls: dbg_chartohex_interenl.part.0/58 (inlined) (268435456 (estimated locally),0.25 per call) 
+dbg_analysis_parser/33 (dbg_analysis_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: dbgcmdpars_srv_handler/41 (401890828 (estimated locally),0.37 per call) 
+  Calls: memcpy_/57 (183893758 (estimated locally),0.17 per call) dbg_handle_cmd.constprop.0/106 (inlined) (183893758 (estimated locally),0.17 per call) memset_/43 (574129751 (estimated locally),0.53 per call) 
+dbg_handle_cmd/32 (dbg_handle_cmd)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+dbg_debug_verify/28 (dbg_debug_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_debug_verify/28 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:22713766 (estimated locally) body local
+  Called by: dbg_handle_cmd.constprop.0/106 (inlined) (22713766 (estimated locally),0.02 per call) 
+  Calls: dbg_build_verify_resp.part.0/85 (8015733 (estimated locally),0.01 per call) dbg_build_verify_resp.part.0/85 (3293543 (estimated locally),0.00 per call) dbg_build_verify_resp.part.0/85 (512142 (estimated locally),0.00 per call) dbg_build_verify_resp.part.0/85 (142102 (estimated locally),0.00 per call) dbg_build_verify_resp.part.0/85 (181530 (estimated locally),0.00 per call) dbgauth_ehsm_debug_auth/51 (1563071 (estimated locally),0.00 per call) dbg_parse_verify_data/27 (inlined) (7722681 (estimated locally),0.01 per call) memset_/43 (1563071 (estimated locally),0.00 per call) dbg_check_debug_verify_param/21 (inlined) (22713766 (estimated locally),0.02 per call) memset_/43 (22713766 (estimated locally),0.02 per call) 
+dbg_parse_verify_data/27 (dbg_parse_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_parse_verify_data/27 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:7722681 (estimated locally) body local
+  Called by: dbg_debug_verify/28 (inlined) (7722681 (estimated locally),0.01 per call) 
+  Calls: dbg_parse_rsa_data/25 (inlined) (441480 (estimated locally),0.00 per call) dbg_parse_sym_verify_data/110 (inlined) (441480 (estimated locally),0.00 per call) dbg_parse_sym_verify_data/26 (inlined) (441480 (estimated locally),0.00 per call) dbg_parse_asym_verify_data/24 (441480 (estimated locally),0.00 per call) dbg_parse_asym_verify_data/24 (441480 (estimated locally),0.00 per call) 
+dbg_parse_sym_verify_data/26 (dbg_parse_sym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 110
+  References: 
+  Referring: 
+  Function dbg_parse_sym_verify_data/26 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:441480 (estimated locally) body local
+  Called by: dbg_parse_verify_data/27 (inlined) (441480 (estimated locally),0.00 per call) 
+  Calls: dbg_parse_sym_verify_data.part.0/73 (inlined) (115669 (estimated locally),0.00 per call) 
+dbg_parse_rsa_data/25 (dbg_parse_rsa_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_parse_rsa_data/25 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:441480 (estimated locally) body local
+  Called by: dbg_parse_verify_data/27 (inlined) (441480 (estimated locally),0.00 per call) 
+  Calls: memcpy_/57 (75714 (estimated locally),0.00 per call) dbg_chartohex/37 (75714 (estimated locally),0.00 per call) memcpy_/57 (75714 (estimated locally),0.00 per call) dbg_chartohex/37 (75714 (estimated locally),0.00 per call) memset_/43 (75714 (estimated locally),0.00 per call) 
+dbg_parse_asym_verify_data/24 (dbg_parse_asym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: dbg_parse_verify_data/27 (441480 (estimated locally),0.00 per call) dbg_parse_verify_data/27 (441480 (estimated locally),0.00 per call) 
+  Calls: dbg_parse_asym_verify_data.part.0/70 (inlined) (281323581 (estimated locally),0.26 per call) 
+dbg_check_challenge_param/22 (dbg_check_challenge_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_check_challenge_param/22 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:22713766 (estimated locally) body local nonfreeing_fn
+  Called by: dbg_get_challenge/19 (inlined) (22713766 (estimated locally),0.02 per call) 
+  Calls: 
+dbg_check_debug_verify_param/21 (dbg_check_debug_verify_param)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_check_debug_verify_param/21 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:22713766 (estimated locally) body local nonfreeing_fn
+  Called by: dbg_debug_verify/28 (inlined) (22713766 (estimated locally),0.02 per call) 
+  Calls: 
+dbg_close_debug/20 (dbg_close_debug)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_close_debug/20 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:22713766 (estimated locally) body local
+  Called by: dbg_handle_cmd.constprop.0/106 (inlined) (22713766 (estimated locally),0.02 per call) 
+  Calls: dbg_build_close_debug_resp.part.0/96 (2262701 (estimated locally),0.00 per call) dbg_build_close_debug_resp.part.0/96 (627821 (estimated locally),0.00 per call) dbg_build_close_debug_resp.part.0/96 (9254529 (estimated locally),0.01 per call) dbgauth_close_debug/55 (5405876 (estimated locally),0.01 per call) 
+dbg_get_challenge/19 (dbg_get_challenge)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function dbg_get_challenge/19 is inline copy in dbg_analysis_parser/33
+  Availability: local
+  Function flags: count:22713766 (estimated locally) body local
+  Called by: dbg_handle_cmd.constprop.0/106 (inlined) (22713766 (estimated locally),0.02 per call) 
+  Calls: dbg_build_random_resp.part.0/108 (inlined) (3890060 (estimated locally),0.00 per call) dbgauth_get_challenge/48 (7275219 (estimated locally),0.01 per call) dbg_build_random_resp.part.0/64 (inlined) (8254991 (estimated locally),0.01 per call) dbg_check_challenge_param/22 (inlined) (22713766 (estimated locally),0.02 per call) 
+DBG_END_HEAD/18 (DBG_END_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) dbg_build_close_debug_resp.part.0/96 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+VERIFY_SUCCESS/17 (VERIFY_SUCCESS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) dbg_build_close_debug_resp.part.0/96 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_PARAMETER/16 (ERROR_VERIFY_PARAMETER)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) dbg_build_close_debug_resp.part.0/96 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_ERROR/15 (ERROR_VERIFY_ERROR)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: dbg_build_verify_resp.part.0/85 (addr) dbg_build_close_debug_resp.part.0/96 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+updating call of dbg_analysis_parser/33 -> dbg_handle_cmd.constprop/106: ret_17 = dbg_handle_cmd (&cmd_param);
+  updated to:ret_17 = dbg_handle_cmd.constprop (&cmd_param);
+cloning dbg_handle_cmd/32 to dbg_handle_cmd.constprop/106
+uint32_t dbg_handle_cmd (struct dbg_cmd_param_st * cmd_param)
+{
+  static const uint8_t DBG_HEAD_TEST[4] = "TEST";
+  static const uint8_t DBG_HEAD_DIS[3] = "DIS";
+  static const uint8_t DBG_HEAD_RSP[3] = "RSP";
+  static const uint8_t DBG_HEAD_REQ[3] = "REQ";
+  bool_t handled;
+  uint32_t ret;
+  uint8_t * _1;
+  uint8_t * _2;
+  uint8_t * _3;
+  uint8_t * _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  uint8_t * _7;
+  uint8_t * _8;
+  unsigned char _29;
+  unsigned char _30;
+  unsigned char _31;
+  unsigned char _32;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (cmd_param_20(D) == 0B)
+    goto <bb 14>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619280]:
+  _1 = cmd_param_20(D)->data;
+  if (_1 == 0B)
+    goto <bb 14>; [46.53%]
+  else
+    goto <bb 4>; [53.47%]
+
+  <bb 4> [local count: 401890828]:
+  # DEBUG BEGIN_STMT
+  # DEBUG p1 => &DBG_HEAD_REQ
+  # DEBUG p2 => _1
+  # DEBUG size => 3
+  # DEBUG BEGIN_STMT
+  _29 = memcmp_ (&DBG_HEAD_REQ, _1, 3);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_29 == 0)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 6>; [67.00%]
+
+  <bb 5> [local count: 132623973]:
+  # DEBUG BEGIN_STMT
+  ret_23 = dbg_get_challenge (cmd_param_20(D));
+  # DEBUG ret => ret_23
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+
+  <bb 6> [local count: 401890828]:
+  # ret_9 = PHI <2774162085(4), ret_23(5)>
+  # handled_13 = PHI <0(4), 1(5)>
+  # DEBUG handled => handled_13
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  _2 = cmd_param_20(D)->data;
+  # DEBUG p1 => &DBG_HEAD_RSP
+  # DEBUG p2 => _2
+  # DEBUG size => 3
+  # DEBUG BEGIN_STMT
+  _30 = memcmp_ (&DBG_HEAD_RSP, _2, 3);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_30 == 0)
+    goto <bb 7>; [33.00%]
+  else
+    goto <bb 8>; [67.00%]
+
+  <bb 7> [local count: 132623973]:
+  # DEBUG BEGIN_STMT
+  ret_25 = dbg_debug_verify (cmd_param_20(D));
+  # DEBUG ret => ret_25
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+
+  <bb 8> [local count: 401890828]:
+  # ret_10 = PHI <ret_9(6), ret_25(7)>
+  # handled_14 = PHI <handled_13(6), 1(7)>
+  # DEBUG handled => handled_14
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  _3 = cmd_param_20(D)->data;
+  # DEBUG p1 => &DBG_HEAD_DIS
+  # DEBUG p2 => _3
+  # DEBUG size => 3
+  # DEBUG BEGIN_STMT
+  _31 = memcmp_ (&DBG_HEAD_DIS, _3, 3);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_31 == 0)
+    goto <bb 9>; [33.00%]
+  else
+    goto <bb 10>; [67.00%]
+
+  <bb 9> [local count: 132623973]:
+  # DEBUG BEGIN_STMT
+  ret_27 = dbg_close_debug (cmd_param_20(D));
+  # DEBUG ret => ret_27
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+
+  <bb 10> [local count: 401890828]:
+  # ret_11 = PHI <ret_10(8), ret_27(9)>
+  # handled_15 = PHI <handled_14(8), 1(9)>
+  # DEBUG handled => handled_15
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  _4 = cmd_param_20(D)->data;
+  # DEBUG p1 => &DBG_HEAD_TEST
+  # DEBUG p2 => _4
+  # DEBUG size => 4
+  # DEBUG BEGIN_STMT
+  _32 = memcmp_ (&DBG_HEAD_TEST, _4, 4);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_32 == 0)
+    goto <bb 11>; [20.96%]
+  else
+    goto <bb 12>; [79.04%]
+
+  <bb 11> [local count: 84236318]:
+  # DEBUG BEGIN_STMT
+  _5 = cmd_param_20(D)->data_size;
+  _6 = MIN_EXPR <_5, 2048>;
+  cmd_param_20(D)->reps_size = _6;
+  # DEBUG BEGIN_STMT
+  _7 = cmd_param_20(D)->reps;
+  _8 = cmd_param_20(D)->data;
+  # DEBUG dest => _7
+  # DEBUG src => _8
+  # DEBUG size => _6
+  # DEBUG BEGIN_STMT
+  memcpy_ (_7, _8, _6);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  goto <bb 14>; [100.00%]
+
+  <bb 12> [local count: 317654510]:
+  # DEBUG handled => handled_15
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  if (handled_15 != 0)
+    goto <bb 14>; [65.00%]
+  else
+    goto <bb 13>; [35.00%]
+
+  <bb 13> [local count: 111179079]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 31
+
+  <bb 14> [local count: 1073741824]:
+  # ret_12 = PHI <1(2), ret_11(12), 31(13), 2774162085(11), 1(3)>
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  return ret_12;
+
+}
+
+
+uint32_t dbg_handle_cmd.constprop (struct dbg_cmd_param_st * cmd_param)
+{
+  uint32_t ret;
+  bool_t handled;
+  static const uint8_t DBG_HEAD_TEST[4] = "TEST";
+  static const uint8_t DBG_HEAD_DIS[3] = "DIS";
+  static const uint8_t DBG_HEAD_RSP[3] = "RSP";
+  static const uint8_t DBG_HEAD_REQ[3] = "REQ";
+  uint8_t * _2;
+  unsigned char _3;
+  uint8_t * _5;
+  unsigned char _6;
+  uint8_t * _8;
+  unsigned char _9;
+  uint8_t * _11;
+  unsigned char _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  uint8_t * _15;
+  uint8_t * _16;
+
+  <bb 15> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (cmd_param_1(D) == 0B)
+    goto <bb 14>; [30.00%]
+  else
+    goto <bb 3>; [70.00%]
+
+  <bb 3> [local count: 751619280]:
+  _2 = cmd_param_1(D)->data;
+  if (_2 == 0B)
+    goto <bb 14>; [46.53%]
+  else
+    goto <bb 4>; [53.47%]
+
+  <bb 4> [local count: 401890828]:
+  # DEBUG BEGIN_STMT
+  # DEBUG p1 => &DBG_HEAD_REQ
+  # DEBUG p2 => _2
+  # DEBUG size => 3
+  # DEBUG BEGIN_STMT
+  _3 = memcmp_ (&DBG_HEAD_REQ, _2, 3);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_3 == 0)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 6>; [67.00%]
+
+  <bb 5> [local count: 132623973]:
+  # DEBUG BEGIN_STMT
+  ret_4 = dbg_get_challenge (cmd_param_1(D));
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+
+  <bb 6> [local count: 401890828]:
+  # ret_19 = PHI <2774162085(4), ret_4(5)>
+  # handled_20 = PHI <0(4), 1(5)>
+  # DEBUG handled => handled_20
+  # DEBUG ret => ret_19
+  # DEBUG BEGIN_STMT
+  _5 = cmd_param_1(D)->data;
+  # DEBUG p1 => &DBG_HEAD_RSP
+  # DEBUG p2 => _5
+  # DEBUG size => 3
+  # DEBUG BEGIN_STMT
+  _6 = memcmp_ (&DBG_HEAD_RSP, _5, 3);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_6 == 0)
+    goto <bb 7>; [33.00%]
+  else
+    goto <bb 8>; [67.00%]
+
+  <bb 7> [local count: 132623973]:
+  # DEBUG BEGIN_STMT
+  ret_7 = dbg_debug_verify (cmd_param_1(D));
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+
+  <bb 8> [local count: 401890828]:
+  # ret_21 = PHI <ret_19(6), ret_7(7)>
+  # handled_22 = PHI <handled_20(6), 1(7)>
+  # DEBUG handled => handled_22
+  # DEBUG ret => ret_21
+  # DEBUG BEGIN_STMT
+  _8 = cmd_param_1(D)->data;
+  # DEBUG p1 => &DBG_HEAD_DIS
+  # DEBUG p2 => _8
+  # DEBUG size => 3
+  # DEBUG BEGIN_STMT
+  _9 = memcmp_ (&DBG_HEAD_DIS, _8, 3);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_9 == 0)
+    goto <bb 9>; [33.00%]
+  else
+    goto <bb 10>; [67.00%]
+
+  <bb 9> [local count: 132623973]:
+  # DEBUG BEGIN_STMT
+  ret_10 = dbg_close_debug (cmd_param_1(D));
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+
+  <bb 10> [local count: 401890828]:
+  # ret_23 = PHI <ret_21(8), ret_10(9)>
+  # handled_17 = PHI <handled_22(8), 1(9)>
+  # DEBUG handled => handled_17
+  # DEBUG ret => ret_23
+  # DEBUG BEGIN_STMT
+  _11 = cmd_param_1(D)->data;
+  # DEBUG p1 => &DBG_HEAD_TEST
+  # DEBUG p2 => _11
+  # DEBUG size => 4
+  # DEBUG BEGIN_STMT
+  _12 = memcmp_ (&DBG_HEAD_TEST, _11, 4);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_12 == 0)
+    goto <bb 11>; [20.96%]
+  else
+    goto <bb 12>; [79.04%]
+
+  <bb 11> [local count: 84236318]:
+  # DEBUG BEGIN_STMT
+  _13 = cmd_param_1(D)->data_size;
+  _14 = MIN_EXPR <_13, 2048>;
+  cmd_param_1(D)->reps_size = _14;
+  # DEBUG BEGIN_STMT
+  _15 = cmd_param_1(D)->reps;
+  _16 = cmd_param_1(D)->data;
+  # DEBUG dest => _15
+  # DEBUG src => _16
+  # DEBUG size => _14
+  # DEBUG BEGIN_STMT
+  memcpy_ (_15, _16, _14);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG handled => 1
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  goto <bb 14>; [100.00%]
+
+  <bb 12> [local count: 317654510]:
+  # DEBUG handled => handled_17
+  # DEBUG ret => ret_23
+  # DEBUG BEGIN_STMT
+  if (handled_17 != 0)
+    goto <bb 14>; [65.00%]
+  else
+    goto <bb 13>; [35.00%]
+
+  <bb 13> [local count: 111179079]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 31
+
+  <bb 14> [local count: 1073741824]:
+  # ret_18 = PHI <1(2), 1(3), 2774162085(11), ret_23(12), 31(13)>
+  # DEBUG ret => ret_18
+  # DEBUG BEGIN_STMT
+  return ret_18;
+
+}
+
+
+updating call of dbg_analysis_parser/33 -> __builtin_unreachable/109: dbg_hextochar (0B, _70, _71);
+  updated to:__builtin_unreachable ();
+updating call of dbg_analysis_parser/33 -> __builtin_unreachable/109: memset_ (0B, 0, 0);
+  updated to:__builtin_unreachable ();
+Trivially needed variables: ERROR_VERIFY_HASH.1/53 ERROR_VERIFY_VERIFY.2/52 ERROR_RANDOM.3/50 DBG_CHA_HEAD.4/49 DBG_HEAD_TEST.5/47 DBG_HEAD_DIS.6/46 DBG_HEAD_RSP.7/45 DBG_HEAD_REQ.8/44 DBG_END_HEAD/18 VERIFY_SUCCESS/17 ERROR_VERIFY_PARAMETER/16 ERROR_VERIFY_ERROR/15
+Removing variables: ERROR_VERIFY_DATA.0/54
+
+Final Symbol table:
+
+__builtin_unreachable/109 (__builtin_unreachable)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbg_build_close_debug_resp.part.0/96 (dbg_build_close_debug_resp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbg_build_close_debug_resp.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:574129751 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+dbg_build_verify_resp.part.0/85 (dbg_build_verify_resp.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbg_build_verify_resp.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:574129748 (estimated locally) local split_part
+  Called by: 
+  Calls: 
+memcpy_/57 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcmp_/56 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgauth_close_debug/55 (dbgauth_close_debug)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ERROR_VERIFY_HASH.1/53 (ERROR_VERIFY_HASH)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.ERROR_VERIFY_HASH.1 (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+ERROR_VERIFY_VERIFY.2/52 (ERROR_VERIFY_VERIFY)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.ERROR_VERIFY_VERIFY.2 (implicit_section)
+  Aux: @0x7f50f19b7a80
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+dbgauth_ehsm_debug_auth/51 (dbgauth_ehsm_debug_auth)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ERROR_RANDOM.3/50 (ERROR_RANDOM)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.ERROR_RANDOM.3 (implicit_section)
+  Aux: @0x7f50f19b7a00
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_CHA_HEAD.4/49 (DBG_CHA_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.DBG_CHA_HEAD.4 (implicit_section)
+  Aux: @0x7f50f1996a00
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+dbgauth_get_challenge/48 (dbgauth_get_challenge)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+DBG_HEAD_TEST.5/47 (DBG_HEAD_TEST)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.DBG_HEAD_TEST.5 (implicit_section)
+  Aux: @0x7f50f1996980
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_HEAD_DIS.6/46 (DBG_HEAD_DIS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.DBG_HEAD_DIS.6 (implicit_section)
+  Aux: @0x7f50f198e780
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_HEAD_RSP.7/45 (DBG_HEAD_RSP)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.DBG_HEAD_RSP.7 (implicit_section)
+  Aux: @0x7f50f198e700
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+DBG_HEAD_REQ.8/44 (DBG_HEAD_REQ)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.DBG_HEAD_REQ.8 (implicit_section)
+  Aux: @0x7f50f198e680
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+memset_/43 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgcmdpars_trans_to_packet/42 (dbgcmdpars_trans_to_packet)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgcmdpars_trans_to_packet (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/41 (dbgcmdpars_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgcmdpars_srv_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+dbgcmdpars_recv_complete/40 (dbgcmdpars_recv_complete)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgcmdpars_recv_complete (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+dbgcmdpars_append_data/39 (dbgcmdpars_append_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgcmdpars_append_data (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+dbgcmdpars_init_parser/38 (dbgcmdpars_init_parser)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dbgcmdpars_init_parser (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+dbg_chartohex/37 (dbg_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbg_chartohex (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) local
+  Called by: 
+  Calls: 
+dbg_chartohex_interenl/35 (dbg_chartohex_interenl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbg_chartohex_interenl (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 
+dbg_analysis_parser/33 (dbg_analysis_parser)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbg_analysis_parser (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+dbg_handle_cmd/32 (dbg_handle_cmd)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+dbg_parse_asym_verify_data/24 (dbg_parse_asym_verify_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dbg_parse_asym_verify_data (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+DBG_END_HEAD/18 (DBG_END_HEAD)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.DBG_END_HEAD (implicit_section)
+  Aux: @0x7f50f198e600
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+VERIFY_SUCCESS/17 (VERIFY_SUCCESS)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.VERIFY_SUCCESS (implicit_section)
+  Aux: @0x7f50f193ed80
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_PARAMETER/16 (ERROR_VERIFY_PARAMETER)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.ERROR_VERIFY_PARAMETER (implicit_section)
+  Aux: @0x7f50f193ed00
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+ERROR_VERIFY_ERROR/15 (ERROR_VERIFY_ERROR)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.srodata.ERROR_VERIFY_ERROR (implicit_section)
+  Aux: @0x7f50f193ec80
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

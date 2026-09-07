@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "ehsm_bl.map"
+  "CMakeFiles/ehsm_bl.elf.dir/fid_lib/src/fid.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/bl_patch_test.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/crypto_lib_api.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/dbgauth.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/dbgcmd_parser.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/debug.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/fw_upgrade.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/fw_verify.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/mbcmd_parser.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/otp_data.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/otp_key.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/schedule.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/secure_boot.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/selftest.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/component/util.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/cpu/m130/driver/src/clic.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/cpu/m130/driver/src/pmp.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/cpu/m130/port/port_m130.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/cpu/m130/wmsis/core/src/crt0.S.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/emu.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/flash.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/kmu.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/mailbox.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/mmap.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/otp.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/randclk.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/sysreg.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/uart.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/driver/watchdog.c.obj"
+  "CMakeFiles/ehsm_bl.elf.dir/src/main.c.obj"
+  "ehsm_bl.elf"
+  "ehsm_bl.elf.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang ASM C)
+  include(CMakeFiles/ehsm_bl.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

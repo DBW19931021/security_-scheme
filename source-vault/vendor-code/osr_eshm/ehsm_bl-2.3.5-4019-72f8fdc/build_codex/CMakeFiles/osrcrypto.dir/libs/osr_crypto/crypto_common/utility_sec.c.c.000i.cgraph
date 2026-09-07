@@ -1,0 +1,774 @@
+Trivially needed symbols: counter_add_one/19 uint32_integer_check_sec/18 uint32_cmp_sec/17 uint32_BigNumCmp_sec/14 uint32_BigNum_Check_Zero_sec/12 uint8_BigNum_Check_Zero_sec/11 uint32_get_rand_big_number_msb_0/10 crc16_calc/9
+
+
+Initial Symbol table:
+
+get_valid_words/21 (get_valid_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_BigNumCmp_sec/14 uint32_BigNumCmp_sec/14 
+  Calls: 
+get_rand/20 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+counter_add_one/19 (counter_add_one)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_integer_check_sec/18 (uint32_integer_check_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_BigNumCmp_sec/14 uint32_BigNum_Check_Zero_sec/12 
+uint32_cmp_sec/17 (uint32_cmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp2_sec/16 uint32_cmp1_sec/15 
+uint32_cmp2_sec/16 (uint32_cmp2_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f19192d8880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_cmp1_sec/15 (uint32_cmp1_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f19192d8660
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_BigNumCmp_sec/14 (uint32_BigNumCmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: uint32_BigNumCmp_sec_internal/13 get_valid_words/21 get_valid_words/21 
+uint32_BigNumCmp_sec_internal/13 (uint32_BigNumCmp_sec_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f19192d8770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_BigNumCmp_sec/14 
+  Calls: 
+uint32_BigNum_Check_Zero_sec/12 (uint32_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8440
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: 
+uint8_BigNum_Check_Zero_sec/11 (uint8_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8220
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_get_rand_big_number_msb_0/10 (uint32_get_rand_big_number_msb_0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: get_rand/20 GET_WORD_LEN/6 
+crc16_calc/9 (crc16_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f19192d8000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f19192d8110
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+get_valid_words/21 (get_valid_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_BigNumCmp_sec/14 uint32_BigNumCmp_sec/14 
+  Calls: 
+get_rand/20 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+counter_add_one/19 (counter_add_one)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_integer_check_sec/18 (uint32_integer_check_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_BigNumCmp_sec/14 uint32_BigNum_Check_Zero_sec/12 
+uint32_cmp_sec/17 (uint32_cmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp2_sec/16 uint32_cmp1_sec/15 
+uint32_cmp2_sec/16 (uint32_cmp2_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_cmp1_sec/15 (uint32_cmp1_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_BigNumCmp_sec/14 (uint32_BigNumCmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: uint32_BigNumCmp_sec_internal/13 get_valid_words/21 get_valid_words/21 
+uint32_BigNumCmp_sec_internal/13 (uint32_BigNumCmp_sec_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_BigNumCmp_sec/14 
+  Calls: 
+uint32_BigNum_Check_Zero_sec/12 (uint32_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: 
+uint8_BigNum_Check_Zero_sec/11 (uint8_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_get_rand_big_number_msb_0/10 (uint32_get_rand_big_number_msb_0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: get_rand/20 GET_WORD_LEN/6 
+crc16_calc/9 (crc16_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+
+
+Initial Symbol table:
+
+get_valid_words/21 (get_valid_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_BigNumCmp_sec/14 uint32_BigNumCmp_sec/14 
+  Calls: 
+get_rand/20 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+counter_add_one/19 (counter_add_one)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_integer_check_sec/18 (uint32_integer_check_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_BigNumCmp_sec/14 uint32_BigNum_Check_Zero_sec/12 
+uint32_cmp_sec/17 (uint32_cmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp2_sec/16 uint32_cmp1_sec/15 
+uint32_cmp2_sec/16 (uint32_cmp2_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_cmp1_sec/15 (uint32_cmp1_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_BigNumCmp_sec/14 (uint32_BigNumCmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: uint32_BigNumCmp_sec_internal/13 get_valid_words/21 get_valid_words/21 
+uint32_BigNumCmp_sec_internal/13 (uint32_BigNumCmp_sec_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_BigNumCmp_sec/14 
+  Calls: 
+uint32_BigNum_Check_Zero_sec/12 (uint32_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: 
+uint8_BigNum_Check_Zero_sec/11 (uint8_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_get_rand_big_number_msb_0/10 (uint32_get_rand_big_number_msb_0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: get_rand/20 GET_WORD_LEN/6 
+crc16_calc/9 (crc16_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+get_valid_words/21 (get_valid_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_BigNumCmp_sec/14 uint32_BigNumCmp_sec/14 
+  Calls: 
+get_rand/20 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+counter_add_one/19 (counter_add_one)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_integer_check_sec/18 (uint32_integer_check_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_BigNumCmp_sec/14 uint32_BigNum_Check_Zero_sec/12 
+uint32_cmp_sec/17 (uint32_cmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp2_sec/16 uint32_cmp1_sec/15 
+uint32_cmp2_sec/16 (uint32_cmp2_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_cmp1_sec/15 (uint32_cmp1_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_cmp_sec/17 
+  Calls: 
+uint32_BigNumCmp_sec/14 (uint32_BigNumCmp_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: uint32_BigNumCmp_sec_internal/13 get_valid_words/21 get_valid_words/21 
+uint32_BigNumCmp_sec_internal/13 (uint32_BigNumCmp_sec_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_BigNumCmp_sec/14 
+  Calls: 
+uint32_BigNum_Check_Zero_sec/12 (uint32_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_integer_check_sec/18 
+  Calls: 
+uint8_BigNum_Check_Zero_sec/11 (uint8_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+uint32_get_rand_big_number_msb_0/10 (uint32_get_rand_big_number_msb_0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: get_rand/20 GET_WORD_LEN/6 
+crc16_calc/9 (crc16_calc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+uint32_BigNumCmp_sec.part.0/22 (uint32_BigNumCmp_sec.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function uint32_BigNumCmp_sec.part.0/22 is inline copy in uint32_BigNumCmp_sec/14
+  Availability: local
+  Function flags: count:401890828 (estimated locally) body local split_part optimize_size
+  Called by: uint32_BigNumCmp_sec/14 (inlined) (401890828 (estimated locally),0.37 per call) 
+  Calls: get_valid_words/21 (401890828 (estimated locally),0.37 per call) get_valid_words/21 (401890828 (estimated locally),0.37 per call) uint32_BigNumCmp_sec_internal/13 (inlined) (196926505 (estimated locally),0.18 per call) 
+get_valid_words/21 (get_valid_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: uint32_BigNumCmp_sec.part.0/22 (401890828 (estimated locally),0.37 per call) uint32_BigNumCmp_sec.part.0/22 (401890828 (estimated locally),0.37 per call) 
+  Calls: 
+get_rand/20 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: uint32_get_rand_big_number_msb_0/10 (248034361 (estimated locally),0.23 per call) 
+  Calls: 
+counter_add_one/19 (counter_add_one)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uint32_integer_check_sec/18 (uint32_integer_check_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: uint32_BigNumCmp_sec/14 (354334800 (estimated locally),0.33 per call) uint32_BigNum_Check_Zero_sec/12 (1073741824 (estimated locally),1.00 per call) 
+uint32_cmp_sec/17 (uint32_cmp_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: uint32_cmp2_sec/16 (inlined) (536870912 (estimated locally),0.50 per call) uint32_cmp1_sec/15 (inlined) (536870912 (estimated locally),0.50 per call) 
+uint32_cmp2_sec/16 (uint32_cmp2_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function uint32_cmp2_sec/16 is inline copy in uint32_cmp_sec/17
+  Availability: local
+  Function flags: count:536870912 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: uint32_cmp_sec/17 (inlined) (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_cmp1_sec/15 (uint32_cmp1_sec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function uint32_cmp1_sec/15 is inline copy in uint32_cmp_sec/17
+  Availability: local
+  Function flags: count:536870912 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: uint32_cmp_sec/17 (inlined) (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_BigNumCmp_sec/14 (uint32_BigNumCmp_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: uint32_integer_check_sec/18 (354334800 (estimated locally),0.33 per call) 
+  Calls: uint32_BigNumCmp_sec.part.0/22 (inlined) (401890828 (estimated locally),0.37 per call) 
+uint32_BigNumCmp_sec_internal/13 (uint32_BigNumCmp_sec_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function uint32_BigNumCmp_sec_internal/13 is inline copy in uint32_BigNumCmp_sec/14
+  Availability: local
+  Function flags: count:196926505 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: uint32_BigNumCmp_sec.part.0/22 (inlined) (196926505 (estimated locally),0.18 per call) 
+  Calls: 
+uint32_BigNum_Check_Zero_sec/12 (uint32_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: uint32_integer_check_sec/18 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+uint8_BigNum_Check_Zero_sec/11 (uint8_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uint32_get_rand_big_number_msb_0/10 (uint32_get_rand_big_number_msb_0)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: get_rand/20 (248034361 (estimated locally),0.23 per call) 
+crc16_calc/9 (crc16_calc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+get_valid_words/21 (get_valid_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+get_rand/20 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+counter_add_one/19 (counter_add_one)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.counter_add_one (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uint32_integer_check_sec/18 (uint32_integer_check_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_integer_check_sec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+uint32_cmp_sec/17 (uint32_cmp_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_cmp_sec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uint32_BigNumCmp_sec/14 (uint32_BigNumCmp_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_BigNumCmp_sec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero_sec/12 (uint32_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_BigNum_Check_Zero_sec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uint8_BigNum_Check_Zero_sec/11 (uint8_BigNum_Check_Zero_sec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint8_BigNum_Check_Zero_sec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:168730857 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uint32_get_rand_big_number_msb_0/10 (uint32_get_rand_big_number_msb_0)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uint32_get_rand_big_number_msb_0 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+crc16_calc/9 (crc16_calc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.crc16_calc (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 

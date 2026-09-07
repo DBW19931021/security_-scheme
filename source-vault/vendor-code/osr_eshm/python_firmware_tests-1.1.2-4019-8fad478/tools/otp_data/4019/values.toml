@@ -1,0 +1,137 @@
+lifecycle = "test"
+uid = "00000000000000000000000000000001"
+bus_cipher_en = "enable"
+ram_cipher_en = "enable"
+trng_self_test_skip = "disable"
+trng_sclk_sel = "internal"
+pke_monitor_en = "disable"
+bypass_nvm_cipher = "enable"
+key_alg_sel = "aes128"
+patch_en = "disable"
+random_clk_en = "disable"
+alg_gm_en = "0000"
+trng_rst_times = "1111"
+trng_timeout = "00000010"
+boot_sm_en = "disable"
+boot_sm_umask = "disable"
+boot_self_test = "disable"
+boot_oscca_en = "disable"
+random_clock_level = "disable"
+hsm_verify_alg = "sm2"
+hsm_upgrade_alg = "sm2"
+watchdog_level = "disable"
+uart_log_en = "enable"
+ehsm_checkversion_en = "disable"
+soc_verify_alg = "aes128"
+soc_upgrade_alg = "aes128"
+soc_checkversion_en = "disable"
+hsm_ver_ctr = "01000000000000000000000000000000"
+soc_ver_ctr = "01000000000000000000000000000000"
+Patch_en_cfg0 = "00000000"
+Patch_en_cfg1 = "00000000"
+Patch_addr = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+Patch_data = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+
+[chip_root_key]
+level = 1
+value = "0000000000000000000000000000000000000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[device_root_key]
+level = 1
+value = "1111111111111111111111111111111100000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key2]
+level = 1
+value = "2222222222222222222222222222222200000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key3]
+value = "7a9b660545e6989c945507b231babefaed23d14d3a4d1656d8a54f6aaf5c0093e87ca036d1aa94a6030a78e70e4ac8da3cfabe6a9beea8efa7ac9c0c40762df9"
+level = 1
+lifecycle = "available"
+type = "pub"
+hash = "auto"
+
+[key4]
+level = 1
+value = "4444444444444444444444444444444400000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key5]
+level = 1
+value = "5555555555555555555555555555555500000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key6]
+level = 2
+value = "6666666666666666666666666666666600000000000000000000000000000000"
+lifecycle = "available"
+type = "pub"
+
+[key7]
+level = 2
+value = "7777777777777777777777777777777700000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key8]
+level = 2
+value = "8888888888888888888888888888888800000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key9]
+level = 2
+value = "9999999999999999999999999999999900000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key10]
+level = 2
+value = "1010101010101010101010101010101000000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key11]
+level = 2
+value = "1111111111111111111111111111111100000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key12]
+level = 2
+value = "1212121212121212121212121212121200000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key13]
+level = 2
+value = "1313131313131313131313131313131300000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key14]
+level = 2
+value = "1414141414141414141414141414141400000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key15]
+level = 2
+value = "1515151515151515151515151515151500000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+
+[key16]
+level = 2
+value = "1515151515151515151515151515151500000000000000000000000000000000"
+lifecycle = "available"
+type = "symm"
+last_key = true

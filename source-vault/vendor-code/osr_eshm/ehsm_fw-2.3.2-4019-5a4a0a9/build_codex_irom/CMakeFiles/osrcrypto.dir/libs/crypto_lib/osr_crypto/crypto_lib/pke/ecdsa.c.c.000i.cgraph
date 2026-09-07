@@ -1,0 +1,1336 @@
+Trivially needed symbols: ecdsa_verify/18 ecdsa_sign/15
+
+
+Initial Symbol table:
+
+eccp_pointMul_Shamir_safe_internal/34 (eccp_pointMul_Shamir_safe_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+eccp_check_point/33 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+uint32_BigNumCmp/32 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify/18 
+  Calls: 
+pke_modinv_internal/31 (pke_modinv_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_mod_add_sub_mul_internal/30 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_modmul_internal/29 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_get_operand_bytes/28 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_set_modulus_and_pre_monts/27 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+uint32_BigNum_Check_Zero/26 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+pke_mod/25 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul/24 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul_base/23 (eccp_pointMul_base)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+get_rand/22 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_internal/14 
+  Calls: 
+uint32_integer_check/21 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_r/11 ecdsa_sign/15 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 ecdsa_sign/15 ecdsa_sign/15 
+  Calls: 
+ecdsa_get_e_bn/19 (ecdsa_get_e_bn)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign/15 
+  Calls: 
+ecdsa_verify/18 (ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/32 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_2/17 (ecdsa_verify_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_mod/25 eccp_pointMul_Shamir_safe_internal/34 eccp_check_point/33 reverse_byte_array/20 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_1/16 (ecdsa_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd16ab770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_modmul_internal/29 pke_modmul_internal/29 ecdsa_get_e_bn/19 pke_modinv_internal/31 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 uint32_integer_check/21 reverse_byte_array/20 uint32_integer_check/21 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign/15 (ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdbd16ab880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/20 reverse_byte_array/20 ecdsa_sign_internal/14 uint32_integer_check/21 reverse_byte_array/20 ecdsa_get_e_bn/19 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_internal/14 (ecdsa_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd16ab880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign/15 
+  Calls: ecdsa_sign_uint32/13 reverse_byte_array/20 ecdsa_sign_uint32/13 get_rand/22 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_uint32/13 (ecdsa_sign_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd16ab880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_internal/14 ecdsa_sign_internal/14 
+  Calls: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 GET_WORD_LEN/8 GET_WORD_LEN/8 
+ecdsa_sign_uint32_internal_get_s/12 (ecdsa_sign_uint32_internal_get_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd16ab880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_modmul_internal/29 pke_modinv_internal/31 pke_mod_add_sub_mul_internal/30 pke_modmul_internal/29 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 
+ecdsa_sign_uint32_internal_get_r/11 (ecdsa_sign_uint32_internal_get_r)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd16ab220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_mod/25 eccp_pointMul/24 eccp_pointMul_base/23 uint32_integer_check/21 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd19a0dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdbd16ab440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify/18 ecdsa_sign_uint32/13 ecdsa_sign_uint32/13 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_MAX_LEN/7 CAST2UINT32/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+eccp_pointMul_Shamir_safe_internal/34 (eccp_pointMul_Shamir_safe_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+eccp_check_point/33 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+uint32_BigNumCmp/32 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify/18 
+  Calls: 
+pke_modinv_internal/31 (pke_modinv_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_mod_add_sub_mul_internal/30 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_modmul_internal/29 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_get_operand_bytes/28 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_set_modulus_and_pre_monts/27 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+uint32_BigNum_Check_Zero/26 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+pke_mod/25 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul/24 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul_base/23 (eccp_pointMul_base)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+get_rand/22 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_internal/14 
+  Calls: 
+uint32_integer_check/21 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_r/11 ecdsa_sign/15 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 ecdsa_sign/15 ecdsa_sign/15 
+  Calls: 
+ecdsa_get_e_bn/19 (ecdsa_get_e_bn)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign/15 
+  Calls: 
+ecdsa_verify/18 (ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/32 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_2/17 (ecdsa_verify_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_mod/25 eccp_pointMul_Shamir_safe_internal/34 eccp_check_point/33 reverse_byte_array/20 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_1/16 (ecdsa_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_modmul_internal/29 pke_modmul_internal/29 ecdsa_get_e_bn/19 pke_modinv_internal/31 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 uint32_integer_check/21 reverse_byte_array/20 uint32_integer_check/21 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign/15 (ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/20 reverse_byte_array/20 ecdsa_sign_internal/14 uint32_integer_check/21 reverse_byte_array/20 ecdsa_get_e_bn/19 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_internal/14 (ecdsa_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign/15 
+  Calls: ecdsa_sign_uint32/13 reverse_byte_array/20 ecdsa_sign_uint32/13 get_rand/22 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_uint32/13 (ecdsa_sign_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_internal/14 ecdsa_sign_internal/14 
+  Calls: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 GET_WORD_LEN/8 GET_WORD_LEN/8 
+ecdsa_sign_uint32_internal_get_s/12 (ecdsa_sign_uint32_internal_get_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_modmul_internal/29 pke_modinv_internal/31 pke_mod_add_sub_mul_internal/30 pke_modmul_internal/29 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 
+ecdsa_sign_uint32_internal_get_r/11 (ecdsa_sign_uint32_internal_get_r)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_mod/25 eccp_pointMul/24 eccp_pointMul_base/23 uint32_integer_check/21 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify/18 ecdsa_sign_uint32/13 ecdsa_sign_uint32/13 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+
+
+Initial Symbol table:
+
+eccp_pointMul_Shamir_safe_internal/34 (eccp_pointMul_Shamir_safe_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+eccp_check_point/33 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+uint32_BigNumCmp/32 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify/18 
+  Calls: 
+pke_modinv_internal/31 (pke_modinv_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_mod_add_sub_mul_internal/30 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_modmul_internal/29 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_get_operand_bytes/28 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_set_modulus_and_pre_monts/27 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+uint32_BigNum_Check_Zero/26 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+pke_mod/25 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul/24 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul_base/23 (eccp_pointMul_base)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+get_rand/22 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_internal/14 
+  Calls: 
+uint32_integer_check/21 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_r/11 ecdsa_sign/15 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 ecdsa_sign/15 ecdsa_sign/15 
+  Calls: 
+ecdsa_get_e_bn/19 (ecdsa_get_e_bn)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign/15 
+  Calls: 
+ecdsa_verify/18 (ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/32 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_2/17 (ecdsa_verify_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_mod/25 eccp_pointMul_Shamir_safe_internal/34 eccp_check_point/33 reverse_byte_array/20 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_1/16 (ecdsa_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_modmul_internal/29 pke_modmul_internal/29 ecdsa_get_e_bn/19 pke_modinv_internal/31 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 uint32_integer_check/21 reverse_byte_array/20 uint32_integer_check/21 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign/15 (ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/20 reverse_byte_array/20 ecdsa_sign_internal/14 uint32_integer_check/21 reverse_byte_array/20 ecdsa_get_e_bn/19 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_internal/14 (ecdsa_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign/15 
+  Calls: ecdsa_sign_uint32/13 reverse_byte_array/20 ecdsa_sign_uint32/13 get_rand/22 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_uint32/13 (ecdsa_sign_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_internal/14 ecdsa_sign_internal/14 
+  Calls: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 GET_WORD_LEN/8 GET_WORD_LEN/8 
+ecdsa_sign_uint32_internal_get_s/12 (ecdsa_sign_uint32_internal_get_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_modmul_internal/29 pke_modinv_internal/31 pke_mod_add_sub_mul_internal/30 pke_modmul_internal/29 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 
+ecdsa_sign_uint32_internal_get_r/11 (ecdsa_sign_uint32_internal_get_r)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_mod/25 eccp_pointMul/24 eccp_pointMul_base/23 uint32_integer_check/21 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify/18 ecdsa_sign_uint32/13 ecdsa_sign_uint32/13 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+eccp_pointMul_Shamir_safe_internal/34 (eccp_pointMul_Shamir_safe_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+eccp_check_point/33 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 
+  Calls: 
+uint32_BigNumCmp/32 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify/18 
+  Calls: 
+pke_modinv_internal/31 (pke_modinv_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_mod_add_sub_mul_internal/30 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_modmul_internal/29 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_get_operand_bytes/28 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+pke_set_modulus_and_pre_monts/27 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_s/12 
+  Calls: 
+uint32_BigNum_Check_Zero/26 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+pke_mod/25 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul/24 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+eccp_pointMul_base/23 (eccp_pointMul_base)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 
+  Calls: 
+get_rand/22 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_sign_internal/14 
+  Calls: 
+uint32_integer_check/21 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_uint32_internal_get_r/11 ecdsa_sign/15 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 ecdsa_sign/15 ecdsa_sign/15 
+  Calls: 
+ecdsa_get_e_bn/19 (ecdsa_get_e_bn)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 ecdsa_sign/15 
+  Calls: 
+ecdsa_verify/18 (ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: uint32_BigNumCmp/32 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_2/17 (ecdsa_verify_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_mod/25 eccp_pointMul_Shamir_safe_internal/34 eccp_check_point/33 reverse_byte_array/20 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_WORD_LEN/8 
+ecdsa_verify_internal_step_1/16 (ecdsa_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify/18 
+  Calls: pke_modmul_internal/29 pke_modmul_internal/29 ecdsa_get_e_bn/19 pke_modinv_internal/31 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 uint32_integer_check/21 reverse_byte_array/20 uint32_integer_check/21 reverse_byte_array/20 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign/15 (ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/20 reverse_byte_array/20 ecdsa_sign_internal/14 uint32_integer_check/21 reverse_byte_array/20 ecdsa_get_e_bn/19 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_internal/14 (ecdsa_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign/15 
+  Calls: ecdsa_sign_uint32/13 reverse_byte_array/20 ecdsa_sign_uint32/13 get_rand/22 GET_WORD_LEN/8 GET_BYTE_LEN/9 
+ecdsa_sign_uint32/13 (ecdsa_sign_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_internal/14 ecdsa_sign_internal/14 
+  Calls: ecdsa_sign_uint32_internal_get_s/12 ecdsa_sign_uint32_internal_get_r/11 GET_WORD_LEN/8 GET_WORD_LEN/8 
+ecdsa_sign_uint32_internal_get_s/12 (ecdsa_sign_uint32_internal_get_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_modmul_internal/29 pke_modinv_internal/31 pke_mod_add_sub_mul_internal/30 pke_modmul_internal/29 pke_get_operand_bytes/28 pke_set_modulus_and_pre_monts/27 
+ecdsa_sign_uint32_internal_get_r/11 (ecdsa_sign_uint32_internal_get_r)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_sign_uint32/13 
+  Calls: uint32_BigNum_Check_Zero/26 pke_mod/25 eccp_pointMul/24 eccp_pointMul_base/23 uint32_integer_check/21 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_2/17 ecdsa_verify_internal_step_1/16 ecdsa_verify/18 ecdsa_sign_uint32/13 ecdsa_sign_uint32/13 ecdsa_sign_internal/14 ecdsa_sign/15 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+eccp_pointMul_Shamir_safe_internal/34 (eccp_pointMul_Shamir_safe_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 (17923675 (estimated locally),0.02 per call) 
+  Calls: 
+eccp_check_point/33 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 (54314168 (estimated locally),0.05 per call) 
+  Calls: 
+uint32_BigNumCmp/32 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify/18 (54314168 (estimated locally),0.05 per call) 
+  Calls: 
+pke_modinv_internal/31 (pke_modinv_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 (20105250 (estimated locally),0.02 per call) ecdsa_sign_uint32_internal_get_s/12 (43507557 (estimated locally),0.04 per call) 
+  Calls: 
+pke_mod_add_sub_mul_internal/30 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 (18433038 (estimated locally),0.02 per call) 
+  Calls: 
+pke_modmul_internal/29 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 (2189462 (estimated locally),0.00 per call) ecdsa_verify_internal_step_1/16 (6634733 (estimated locally),0.01 per call) ecdsa_sign_uint32_internal_get_s/12 (14357494 (estimated locally),0.01 per call) ecdsa_sign_uint32_internal_get_s/12 (55857692 (estimated locally),0.05 per call) 
+  Calls: 
+pke_get_operand_bytes/28 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 (20105250 (estimated locally),0.02 per call) ecdsa_sign_uint32_internal_get_s/12 (55857692 (estimated locally),0.05 per call) 
+  Calls: 
+pke_set_modulus_and_pre_monts/27 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_1/16 (60925000 (estimated locally),0.06 per call) ecdsa_sign_uint32_internal_get_s/12 (169265735 (estimated locally),0.16 per call) 
+  Calls: 
+uint32_BigNum_Check_Zero/26 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_s/12 (4737973 (estimated locally),0.00 per call) ecdsa_sign_uint32_internal_get_r/11 (112561713 (estimated locally),0.10 per call) 
+  Calls: 
+pke_mod/25 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_verify_internal_step_2/17 (42305306 (estimated locally),0.04 per call) ecdsa_sign_uint32_internal_get_r/11 (84632868 (estimated locally),0.08 per call) 
+  Calls: 
+eccp_pointMul/24 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 (143234259 (estimated locally),0.13 per call) 
+  Calls: 
+eccp_pointMul_base/23 (eccp_pointMul_base)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign_uint32_internal_get_r/11 (113228978 (estimated locally),0.11 per call) 
+  Calls: 
+get_rand/22 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign_internal/14 (394902536 (estimated locally),0.37 per call) 
+  Calls: 
+uint32_integer_check/21 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign/15 (275121938 (estimated locally),0.26 per call) ecdsa_verify_internal_step_1/16 (25812363 (estimated locally),0.02 per call) ecdsa_verify_internal_step_1/16 (78219283 (estimated locally),0.07 per call) ecdsa_sign_uint32_internal_get_r/11 (512926472 (estimated locally),0.48 per call) 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign/15 (29960779 (estimated locally),0.03 per call) ecdsa_sign/15 (29960779 (estimated locally),0.03 per call) ecdsa_sign/15 (275121938 (estimated locally),0.26 per call) ecdsa_verify_internal_step_2/17 (54314168 (estimated locally),0.05 per call) ecdsa_verify_internal_step_2/17 (54314168 (estimated locally),0.05 per call) ecdsa_verify_internal_step_1/16 (25812363 (estimated locally),0.02 per call) ecdsa_verify_internal_step_1/16 (78219283 (estimated locally),0.07 per call) ecdsa_sign_internal/14 (48545541 (estimated locally),0.05 per call) 
+  Calls: 
+ecdsa_get_e_bn/19 (ecdsa_get_e_bn)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ecdsa_sign/15 (275121938 (estimated locally),0.26 per call) ecdsa_verify_internal_step_1/16 (6634733 (estimated locally),0.01 per call) 
+  Calls: 
+ecdsa_verify/18 (ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: uint32_BigNumCmp/32 (54314168 (estimated locally),0.05 per call) ecdsa_verify_internal_step_2/17 (inlined) (164588390 (estimated locally),0.15 per call) ecdsa_verify_internal_step_1/16 (inlined) (237028132 (estimated locally),0.22 per call) 
+ecdsa_verify_internal_step_2/17 (ecdsa_verify_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecdsa_verify_internal_step_2/17 is inline copy in ecdsa_verify/18
+  Availability: local
+  Function flags: count:164588390 (estimated locally) body local
+  Called by: ecdsa_verify/18 (inlined) (164588390 (estimated locally),0.15 per call) 
+  Calls: pke_mod/25 (42305306 (estimated locally),0.04 per call) eccp_pointMul_Shamir_safe_internal/34 (17923675 (estimated locally),0.02 per call) eccp_check_point/33 (54314168 (estimated locally),0.05 per call) reverse_byte_array/20 (54314168 (estimated locally),0.05 per call) reverse_byte_array/20 (54314168 (estimated locally),0.05 per call) 
+ecdsa_verify_internal_step_1/16 (ecdsa_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecdsa_verify_internal_step_1/16 is inline copy in ecdsa_verify/18
+  Availability: local
+  Function flags: count:237028132 (estimated locally) body local
+  Called by: ecdsa_verify/18 (inlined) (237028132 (estimated locally),0.22 per call) 
+  Calls: pke_modmul_internal/29 (2189462 (estimated locally),0.00 per call) pke_modmul_internal/29 (6634733 (estimated locally),0.01 per call) ecdsa_get_e_bn/19 (6634733 (estimated locally),0.01 per call) pke_modinv_internal/31 (20105250 (estimated locally),0.02 per call) pke_get_operand_bytes/28 (20105250 (estimated locally),0.02 per call) pke_set_modulus_and_pre_monts/27 (60925000 (estimated locally),0.06 per call) uint32_integer_check/21 (25812363 (estimated locally),0.02 per call) reverse_byte_array/20 (25812363 (estimated locally),0.02 per call) uint32_integer_check/21 (78219283 (estimated locally),0.07 per call) reverse_byte_array/20 (78219283 (estimated locally),0.07 per call) 
+ecdsa_sign/15 (ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: reverse_byte_array/20 (29960779 (estimated locally),0.03 per call) reverse_byte_array/20 (29960779 (estimated locally),0.03 per call) ecdsa_sign_internal/14 (inlined) (90790239 (estimated locally),0.08 per call) uint32_integer_check/21 (275121938 (estimated locally),0.26 per call) reverse_byte_array/20 (275121938 (estimated locally),0.26 per call) ecdsa_get_e_bn/19 (275121938 (estimated locally),0.26 per call) 
+ecdsa_sign_internal/14 (ecdsa_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecdsa_sign_internal/14 is inline copy in ecdsa_sign/15
+  Availability: local
+  Function flags: count:90790239 (estimated locally) body local
+  Called by: ecdsa_sign/15 (inlined) (90790239 (estimated locally),0.08 per call) 
+  Calls: ecdsa_sign_uint32/13 (48545541 (estimated locally),0.05 per call) reverse_byte_array/20 (48545541 (estimated locally),0.05 per call) ecdsa_sign_uint32/13 (373182897 (estimated locally),0.35 per call) get_rand/22 (394902536 (estimated locally),0.37 per call) 
+ecdsa_sign_uint32/13 (ecdsa_sign_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ecdsa_sign_internal/14 (48545541 (estimated locally),0.05 per call) ecdsa_sign_internal/14 (373182897 (estimated locally),0.35 per call) 
+  Calls: ecdsa_sign_uint32_internal_get_s/12 (inlined) (169265735 (estimated locally),0.16 per call) ecdsa_sign_uint32_internal_get_r/11 (inlined) (512926472 (estimated locally),0.48 per call) 
+ecdsa_sign_uint32_internal_get_s/12 (ecdsa_sign_uint32_internal_get_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecdsa_sign_uint32_internal_get_s/12 is inline copy in ecdsa_sign_uint32/13
+  Availability: local
+  Function flags: count:169265735 (estimated locally) body local
+  Called by: ecdsa_sign_uint32/13 (inlined) (169265735 (estimated locally),0.16 per call) 
+  Calls: uint32_BigNum_Check_Zero/26 (4737973 (estimated locally),0.00 per call) pke_modmul_internal/29 (14357494 (estimated locally),0.01 per call) pke_modinv_internal/31 (43507557 (estimated locally),0.04 per call) pke_mod_add_sub_mul_internal/30 (18433038 (estimated locally),0.02 per call) pke_modmul_internal/29 (55857692 (estimated locally),0.05 per call) pke_get_operand_bytes/28 (55857692 (estimated locally),0.05 per call) pke_set_modulus_and_pre_monts/27 (169265735 (estimated locally),0.16 per call) 
+ecdsa_sign_uint32_internal_get_r/11 (ecdsa_sign_uint32_internal_get_r)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ecdsa_sign_uint32_internal_get_r/11 is inline copy in ecdsa_sign_uint32/13
+  Availability: local
+  Function flags: count:512926472 (estimated locally) body local
+  Called by: ecdsa_sign_uint32/13 (inlined) (512926472 (estimated locally),0.48 per call) 
+  Calls: uint32_BigNum_Check_Zero/26 (112561713 (estimated locally),0.10 per call) pke_mod/25 (84632868 (estimated locally),0.08 per call) eccp_pointMul/24 (143234259 (estimated locally),0.13 per call) eccp_pointMul_base/23 (113228978 (estimated locally),0.11 per call) uint32_integer_check/21 (512926472 (estimated locally),0.48 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+eccp_pointMul_Shamir_safe_internal/34 (eccp_pointMul_Shamir_safe_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_check_point/33 (eccp_check_point)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/32 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modinv_internal/31 (pke_modinv_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_mod_add_sub_mul_internal/30 (pke_mod_add_sub_mul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modmul_internal/29 (pke_modmul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_get_operand_bytes/28 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_set_modulus_and_pre_monts/27 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/26 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_mod/25 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_pointMul/24 (eccp_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+eccp_pointMul_base/23 (eccp_pointMul_base)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/22 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_integer_check/21 (uint32_integer_check)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+reverse_byte_array/20 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ecdsa_get_e_bn/19 (ecdsa_get_e_bn)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ecdsa_verify/18 (ecdsa_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ecdsa_verify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ecdsa_sign/15 (ecdsa_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ecdsa_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ecdsa_sign_uint32/13 (ecdsa_sign_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ecdsa_sign_uint32 (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 

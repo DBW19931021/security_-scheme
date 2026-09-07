@@ -1,0 +1,1485 @@
+Trivially needed symbols: sch_start/21
+
+
+Initial Symbol table:
+
+mailbox_set_send_notify/37 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_write/36 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_read_send_notify/35 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 sch_send_mbox_rsp/16 
+  Calls: 
+cpu_exit_critical/34 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+mmap_remap_addr_u64/33 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+cpu_enter_critical/32 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+mbcmdpars_parse_cmd/30 (mbcmdpars_parse_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+memcpy_/29 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+memset_/28 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+mmap_read_remote_data/27 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 sch_handle_mb_data/19 
+  Calls: 
+mailbox_clear_recv_notify/26 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read/25 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read_recv_notify/24 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+secboot_boot_fw/23 (secboot_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_start/21 
+  Calls: 
+watchdog_feed/22 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 sch_handle_mb_data/19 sch_start/21 
+  Calls: 
+sch_start/21 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_boot_fw/23 sch_poll_mb_chl/20 watchdog_feed/22 
+sch_poll_mb_chl/20 (sch_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_start/21 
+  Calls: mailbox_clear_recv_notify/26 sch_handle_mb_data/19 mailbox_read/25 mailbox_read_recv_notify/24 
+sch_handle_mb_data/19 (sch_handle_mb_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: watchdog_feed/22 sch_handle_packet/18 mmap_read_remote_data/27 util_memcpy/9 watchdog_feed/22 util_memset/10 
+sch_handle_packet/18 (sch_handle_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: debug_printf/31 sch_send_gen_mbox_rsp/17 mbcmdpars_parse_cmd/30 mmap_read_remote_data/27 
+sch_send_gen_mbox_rsp/17 (sch_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: sch_send_mbox_rsp/16 cpu_exit_critical/34 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/33 cpu_enter_critical/32 
+sch_send_mbox_rsp/16 (sch_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: mailbox_set_send_notify/37 mailbox_write/36 mailbox_read_send_notify/35 mailbox_read_send_notify/35 
+filename/15 (filename)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f19c6ee7ee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: memset_/28 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f19c6bdc880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 sch_send_gen_mbox_rsp/17 sch_handle_mb_data/19 
+  Calls: memcpy_/29 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: filename/15 util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+mailbox_set_send_notify/37 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_write/36 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_read_send_notify/35 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 sch_send_mbox_rsp/16 
+  Calls: 
+cpu_exit_critical/34 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+mmap_remap_addr_u64/33 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+cpu_enter_critical/32 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+mbcmdpars_parse_cmd/30 (mbcmdpars_parse_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+memcpy_/29 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+memset_/28 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+mmap_read_remote_data/27 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 sch_handle_mb_data/19 
+  Calls: 
+mailbox_clear_recv_notify/26 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read/25 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read_recv_notify/24 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+secboot_boot_fw/23 (secboot_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_start/21 
+  Calls: 
+watchdog_feed/22 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 sch_handle_mb_data/19 sch_start/21 
+  Calls: 
+sch_start/21 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_boot_fw/23 sch_poll_mb_chl/20 watchdog_feed/22 
+sch_poll_mb_chl/20 (sch_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_start/21 
+  Calls: mailbox_clear_recv_notify/26 sch_handle_mb_data/19 mailbox_read/25 mailbox_read_recv_notify/24 
+sch_handle_mb_data/19 (sch_handle_mb_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: watchdog_feed/22 sch_handle_packet/18 mmap_read_remote_data/27 util_memcpy/9 watchdog_feed/22 util_memset/10 
+sch_handle_packet/18 (sch_handle_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: debug_printf/31 sch_send_gen_mbox_rsp/17 mbcmdpars_parse_cmd/30 mmap_read_remote_data/27 
+sch_send_gen_mbox_rsp/17 (sch_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: sch_send_mbox_rsp/16 cpu_exit_critical/34 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/33 cpu_enter_critical/32 
+sch_send_mbox_rsp/16 (sch_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: mailbox_set_send_notify/37 mailbox_write/36 mailbox_read_send_notify/35 mailbox_read_send_notify/35 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: memset_/28 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 sch_send_gen_mbox_rsp/17 sch_handle_mb_data/19 
+  Calls: memcpy_/29 
+
+
+Initial Symbol table:
+
+mailbox_set_send_notify/37 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_write/36 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_read_send_notify/35 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 sch_send_mbox_rsp/16 
+  Calls: 
+cpu_exit_critical/34 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+mmap_remap_addr_u64/33 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+cpu_enter_critical/32 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+mbcmdpars_parse_cmd/30 (mbcmdpars_parse_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+memcpy_/29 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+memset_/28 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+mmap_read_remote_data/27 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 sch_handle_mb_data/19 
+  Calls: 
+mailbox_clear_recv_notify/26 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read/25 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read_recv_notify/24 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+secboot_boot_fw/23 (secboot_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_start/21 
+  Calls: 
+watchdog_feed/22 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 sch_handle_mb_data/19 sch_start/21 
+  Calls: 
+sch_start/21 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_boot_fw/23 sch_poll_mb_chl/20 watchdog_feed/22 
+sch_poll_mb_chl/20 (sch_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_start/21 
+  Calls: mailbox_clear_recv_notify/26 sch_handle_mb_data/19 mailbox_read/25 mailbox_read_recv_notify/24 
+sch_handle_mb_data/19 (sch_handle_mb_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: watchdog_feed/22 sch_handle_packet/18 mmap_read_remote_data/27 util_memcpy/9 watchdog_feed/22 util_memset/10 
+sch_handle_packet/18 (sch_handle_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: debug_printf/31 sch_send_gen_mbox_rsp/17 mbcmdpars_parse_cmd/30 mmap_read_remote_data/27 
+sch_send_gen_mbox_rsp/17 (sch_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: sch_send_mbox_rsp/16 cpu_exit_critical/34 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/33 cpu_enter_critical/32 
+sch_send_mbox_rsp/16 (sch_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: mailbox_set_send_notify/37 mailbox_write/36 mailbox_read_send_notify/35 mailbox_read_send_notify/35 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: memset_/28 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 sch_send_gen_mbox_rsp/17 sch_handle_mb_data/19 
+  Calls: memcpy_/29 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+mailbox_set_send_notify/37 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_write/36 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 
+  Calls: 
+mailbox_read_send_notify/35 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp/16 sch_send_mbox_rsp/16 
+  Calls: 
+cpu_exit_critical/34 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+mmap_remap_addr_u64/33 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+cpu_enter_critical/32 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+mbcmdpars_parse_cmd/30 (mbcmdpars_parse_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: 
+memcpy_/29 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+memset_/28 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memset/10 
+  Calls: 
+mmap_read_remote_data/27 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 sch_handle_mb_data/19 
+  Calls: 
+mailbox_clear_recv_notify/26 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read/25 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+mailbox_read_recv_notify/24 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: 
+secboot_boot_fw/23 (secboot_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_start/21 
+  Calls: 
+watchdog_feed/22 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 sch_handle_mb_data/19 sch_start/21 
+  Calls: 
+sch_start/21 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: secboot_boot_fw/23 sch_poll_mb_chl/20 watchdog_feed/22 
+sch_poll_mb_chl/20 (sch_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_start/21 
+  Calls: mailbox_clear_recv_notify/26 sch_handle_mb_data/19 mailbox_read/25 mailbox_read_recv_notify/24 
+sch_handle_mb_data/19 (sch_handle_mb_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_poll_mb_chl/20 
+  Calls: watchdog_feed/22 sch_handle_packet/18 mmap_read_remote_data/27 util_memcpy/9 watchdog_feed/22 util_memset/10 
+sch_handle_packet/18 (sch_handle_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: debug_printf/31 sch_send_gen_mbox_rsp/17 mbcmdpars_parse_cmd/30 mmap_read_remote_data/27 
+sch_send_gen_mbox_rsp/17 (sch_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_packet/18 
+  Calls: sch_send_mbox_rsp/16 cpu_exit_critical/34 util_memcpy/9 util_memcpy/9 mmap_remap_addr_u64/33 cpu_enter_critical/32 
+sch_send_mbox_rsp/16 (sch_send_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 
+  Calls: mailbox_set_send_notify/37 mailbox_write/36 mailbox_read_send_notify/35 mailbox_read_send_notify/35 
+util_memset/10 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_handle_mb_data/19 
+  Calls: memset_/28 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 sch_send_gen_mbox_rsp/17 sch_handle_mb_data/19 
+  Calls: memcpy_/29 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+sch_send_mbox_rsp.constprop.0/40 (sch_send_mbox_rsp.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function sch_send_mbox_rsp.constprop/40 is inline copy in sch_start/21
+  Clone of sch_send_mbox_rsp/16
+  Availability: local
+  Function flags: count:297763 (estimated locally) local optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 (inlined) (297763 (estimated locally),0.48 per call) 
+  Calls: mailbox_read_send_notify/35 (34392 (estimated locally),0.06 per call) mailbox_read_send_notify/35 (287101 (estimated locally),0.46 per call) mailbox_write/36 (6961 (estimated locally),0.01 per call) mailbox_set_send_notify/37 (34392 (estimated locally),0.06 per call) 
+mailbox_set_send_notify/37 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp.constprop.0/40 (34392 (estimated locally),0.06 per call) 
+  Calls: 
+mailbox_write/36 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp.constprop.0/40 (6961 (estimated locally),0.01 per call) 
+  Calls: 
+mailbox_read_send_notify/35 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_send_mbox_rsp.constprop.0/40 (34392 (estimated locally),0.06 per call) sch_send_mbox_rsp.constprop.0/40 (287101 (estimated locally),0.46 per call) 
+  Calls: 
+cpu_exit_critical/34 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 (929639 (estimated locally),1.49 per call) 
+  Calls: 
+mmap_remap_addr_u64/33 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 (929639 (estimated locally),1.49 per call) 
+  Calls: 
+cpu_enter_critical/32 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_send_gen_mbox_rsp/17 (929639 (estimated locally),1.49 per call) 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 (849836 (estimated locally),1.36 per call) 
+  Calls: 
+mbcmdpars_parse_cmd/30 (mbcmdpars_parse_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_handle_packet/18 (351896 (estimated locally),0.56 per call) 
+  Calls: 
+memcpy_/29 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 (22950131 (estimated locally),36.71 per call) sch_send_gen_mbox_rsp/17 (164036 (estimated locally),0.26 per call) sch_send_gen_mbox_rsp/17 (497078 (estimated locally),0.80 per call) 
+  Calls: 
+memset_/28 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 (22950131 (estimated locally),36.71 per call) 
+  Calls: 
+mmap_read_remote_data/27 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_handle_mb_data/19 (22950131 (estimated locally),36.71 per call) sch_handle_packet/18 (1738617 (estimated locally),2.78 per call) 
+  Calls: 
+mailbox_clear_recv_notify/26 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 (113389972 (estimated locally),181.39 per call) 
+  Calls: 
+mailbox_read/25 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 (113389972 (estimated locally),181.39 per call) 
+  Calls: 
+mailbox_read_recv_notify/24 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_poll_mb_chl/20 (1010605808 (estimated locally),1616.69 per call) 
+  Calls: 
+secboot_boot_fw/23 (secboot_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_start/21 (63136016 (estimated locally),101.00 per call) 
+  Calls: 
+watchdog_feed/22 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: sch_start/21 (63136016 (estimated locally),101.00 per call) sch_handle_mb_data/19 (22950131 (estimated locally),36.71 per call) sch_handle_mb_data/19 (22950131 (estimated locally),36.71 per call) 
+  Calls: 
+sch_start/21 (sch_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:625109 (estimated locally) body executed_once optimize_size
+  Called by: 
+  Calls: secboot_boot_fw/23 (63136016 (estimated locally),101.00 per call) sch_poll_mb_chl/20 (inlined) (1010605808 (estimated locally),1616.69 per call) watchdog_feed/22 (63136016 (estimated locally),101.00 per call) 
+sch_poll_mb_chl/20 (sch_poll_mb_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sch_poll_mb_chl/20 is inline copy in sch_start/21
+  Availability: local
+  Function flags: count:1010605808 (estimated locally) body local optimize_size
+  Called by: sch_start/21 (inlined) (1010605808 (estimated locally),1616.69 per call) 
+  Calls: mailbox_clear_recv_notify/26 (113389972 (estimated locally),181.39 per call) sch_handle_mb_data/19 (inlined) (22950131 (estimated locally),36.71 per call) mailbox_read/25 (113389972 (estimated locally),181.39 per call) mailbox_read_recv_notify/24 (1010605808 (estimated locally),1616.69 per call) 
+sch_handle_mb_data/19 (sch_handle_mb_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sch_handle_mb_data/19 is inline copy in sch_start/21
+  Availability: local
+  Function flags: count:22950131 (estimated locally) body local optimize_size
+  Called by: sch_poll_mb_chl/20 (inlined) (22950131 (estimated locally),36.71 per call) 
+  Calls: watchdog_feed/22 (22950131 (estimated locally),36.71 per call) sch_handle_packet/18 (inlined) (4645106 (estimated locally),7.43 per call) mmap_read_remote_data/27 (22950131 (estimated locally),36.71 per call) memcpy_/29 (22950131 (estimated locally),36.71 per call) watchdog_feed/22 (22950131 (estimated locally),36.71 per call) memset_/28 (22950131 (estimated locally),36.71 per call) 
+sch_handle_packet/18 (sch_handle_packet)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sch_handle_packet/18 is inline copy in sch_start/21
+  Availability: local
+  Function flags: count:4645106 (estimated locally) body local optimize_size
+  Called by: sch_handle_mb_data/19 (inlined) (4645106 (estimated locally),7.43 per call) 
+  Calls: debug_printf/31 (849836 (estimated locally),1.36 per call) sch_send_gen_mbox_rsp/17 (inlined) (1738617 (estimated locally),2.78 per call) mbcmdpars_parse_cmd/30 (351896 (estimated locally),0.56 per call) mmap_read_remote_data/27 (1738617 (estimated locally),2.78 per call) 
+sch_send_gen_mbox_rsp/17 (sch_send_gen_mbox_rsp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sch_send_gen_mbox_rsp/17 is inline copy in sch_start/21
+  Availability: local
+  Function flags: count:1738617 (estimated locally) body local optimize_size
+  Called by: sch_handle_packet/18 (inlined) (1738617 (estimated locally),2.78 per call) 
+  Calls: sch_send_mbox_rsp.constprop.0/40 (inlined) (297763 (estimated locally),0.48 per call) cpu_exit_critical/34 (929639 (estimated locally),1.49 per call) memcpy_/29 (164036 (estimated locally),0.26 per call) memcpy_/29 (497078 (estimated locally),0.80 per call) mmap_remap_addr_u64/33 (929639 (estimated locally),1.49 per call) cpu_enter_critical/32 (929639 (estimated locally),1.49 per call) 
+sch_send_mbox_rsp/16 (sch_send_mbox_rsp)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:994489438 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+cloning sch_send_mbox_rsp/16 to sch_send_mbox_rsp.constprop/40
+    replace map: 2 -> 2, 3 -> 1
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t sch_send_mbox_rsp (uint32_t mbox_chl, const uint32_t * data, uint32_t size, uint32_t s2h_notify)
+{
+  uint32_t notify;
+  uint32_t ret;
+  long unsigned int notify.3_1;
+  long unsigned int _2;
+
+  <bb 2> [local count: 994489438]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  notify = 0;
+  # DEBUG BEGIN_STMT
+  if (mbox_chl_11(D) > 15)
+    goto <bb 12>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 497244719]:
+  if (data_12(D) == 0B)
+    goto <bb 12>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 348071305]:
+  if (size_13(D) == 0)
+    goto <bb 12>; [67.00%]
+  else
+    goto <bb 5>; [33.00%]
+
+  <bb 5> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  ret_15 = mailbox_read_send_notify (mbox_chl_11(D), &notify);
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 958878292]:
+  # DEBUG BEGIN_STMT
+  ret_18 = mailbox_read_send_notify (mbox_chl_11(D), &notify);
+  # DEBUG ret => ret_18
+
+  <bb 7> [local count: 1073741824]:
+  # ret_3 = PHI <ret_15(5), ret_18(6)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 == 2774162085)
+    goto <bb 8>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 8> [local count: 1014686023]:
+  notify.3_1 = notify;
+  _2 = notify.3_1 & s2h_notify_16(D);
+  if (_2 != 0)
+    goto <bb 6>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 9> [local count: 114863531]:
+  # ret_22 = PHI <ret_3(7), 2774162085(8)>
+  # DEBUG BEGIN_STMT
+  if (ret_22 == 2774162085)
+    goto <bb 10>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 10> [local count: 23248379]:
+  # DEBUG BEGIN_STMT
+  ret_20 = mailbox_write (mbox_chl_11(D), data_12(D), size_13(D));
+  # DEBUG ret => ret_20
+
+  <bb 11> [local count: 114863531]:
+  # ret_4 = PHI <ret_22(9), ret_20(10)>
+  # DEBUG ret => ret_4
+  # DEBUG BEGIN_STMT
+  mailbox_set_send_notify (mbox_chl_11(D), s2h_notify_16(D));
+
+  <bb 12> [local count: 994489440]:
+  # ret_5 = PHI <1(2), ret_4(11), 1(3), 1(4)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  notify ={v} {CLOBBER(eos)};
+  return ret_5;
+
+}
+
+
+uint32_t sch_send_mbox_rsp.constprop (uint32_t mbox_chl, const uint32_t * data)
+{
+  uint32_t ret;
+  uint32_t notify;
+  uint32_t size;
+  uint32_t s2h_notify;
+  long unsigned int notify.3_6;
+  long unsigned int _7;
+
+  <bb 13> [local count: 994489438]:
+  # DEBUG s2h_notify => 1
+  # DEBUG size => 2
+
+  <bb 2> [local count: 994489438]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  notify = 0;
+  # DEBUG BEGIN_STMT
+  if (mbox_chl_1(D) > 15)
+    goto <bb 12>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 497244719]:
+  if (data_2(D) == 0B)
+    goto <bb 12>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 4> [local count: 348071305]:
+  if (0 != 0)
+    goto <bb 12>; [67.00%]
+  else
+    goto <bb 5>; [33.00%]
+
+  <bb 5> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  ret_3 = mailbox_read_send_notify (mbox_chl_1(D), &notify);
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 958878292]:
+  # DEBUG BEGIN_STMT
+  ret_4 = mailbox_read_send_notify (mbox_chl_1(D), &notify);
+  # DEBUG ret => ret_4
+
+  <bb 7> [local count: 1073741824]:
+  # ret_5 = PHI <ret_3(5), ret_4(6)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 2774162085)
+    goto <bb 8>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 8> [local count: 1014686023]:
+  notify.3_6 = notify;
+  _7 = notify.3_6 & 1;
+  if (_7 != 0)
+    goto <bb 6>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 9> [local count: 114863531]:
+  # ret_8 = PHI <ret_5(7), 2774162085(8)>
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 10>; [20.24%]
+  else
+    goto <bb 11>; [79.76%]
+
+  <bb 10> [local count: 23248379]:
+  # DEBUG BEGIN_STMT
+  ret_9 = mailbox_write (mbox_chl_1(D), data_2(D), 2);
+  # DEBUG ret => ret_9
+
+  <bb 11> [local count: 114863531]:
+  # ret_11 = PHI <ret_8(9), ret_9(10)>
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  mailbox_set_send_notify (mbox_chl_1(D), 1);
+
+  <bb 12> [local count: 994489440]:
+  # ret_10 = PHI <1(2), 1(3), 1(4), ret_11(11)>
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  notify ={v} {CLOBBER(eos)};
+  return ret_10;
+
+}
+
+
+updating call of sch_start/21 -> sch_send_mbox_rsp.constprop/40: ret_33 = sch_send_mbox_rsp (_31, _32, 2, 1);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_33 = sch_send_mbox_rsp.constprop (_31, _32);
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+mailbox_set_send_notify/37 (mailbox_set_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mailbox_write/36 (mailbox_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mailbox_read_send_notify/35 (mailbox_read_send_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_exit_critical/34 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_remap_addr_u64/33 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+cpu_enter_critical/32 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+debug_printf/31 (debug_printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mbcmdpars_parse_cmd/30 (mbcmdpars_parse_cmd)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memcpy_/29 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+memset_/28 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mmap_read_remote_data/27 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mailbox_clear_recv_notify/26 (mailbox_clear_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mailbox_read/25 (mailbox_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+mailbox_read_recv_notify/24 (mailbox_read_recv_notify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+secboot_boot_fw/23 (secboot_boot_fw)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+watchdog_feed/22 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+sch_start/21 (sch_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sch_start (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:625109 (estimated locally) executed_once optimize_size
+  Called by: 
+  Calls: 
+sch_send_mbox_rsp/16 (sch_send_mbox_rsp)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:994489438 (estimated locally) optimize_size
+  Called by: 
+  Calls: 

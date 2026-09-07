@@ -1,0 +1,2229 @@
+Trivially needed symbols: sch_is_cache_full/28 sch_add_cmd/27 sch_start/26 sch_init/25 g_waite_into_wfi/20
+
+
+Initial Symbol table:
+
+queue_is_full/59 (queue_is_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_is_cache_full/28 
+  Calls: 
+queue_push/58 (queue_push)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_add_cmd/27 
+  Calls: 
+watchdog_start/57 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+watchdog_stop/56 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+fwup_srv_handler/55 (fwup_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+socvrfy_srv_handler/54 (socvrfy_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgcmdpars_srv_handler/53 (dbgcmdpars_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+otpkinstl_srv_handler/52 (otpkinstl_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgauth_srv_handler/51 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+misc_srv_handler/50 (misc_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_ccm_handler/49 (aead_srv_ccm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_gcm_handler/48 (aead_srv_gcm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_cipher_handler/47 (ske_srv_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_ecdsa_handler/46 (pke_srv_ecdsa_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_sign_handler/45 (pke_srv_rsa_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_cipher_handler/44 (pke_srv_rsa_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_sign_handler/43 (pke_srv_sm2_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_cipher_handler/42 (pke_srv_sm2_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hmac_srv_handler/41 (hmac_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hash_srv_handler/40 (hash_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_mac_handler/39 (ske_srv_mac_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+rng_srv_handler/38 (rng_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+kms_srv_handler/37 (kms_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+memcpy_/36 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+comm_poll/35 (comm_poll)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_idle/34 (expt_det_check_idle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_after/33 (expt_det_check_after)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+comm_send_rsp/32 (comm_send_rsp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+expt_det_check_before/31 (expt_det_check_before)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_pop/30 (queue_pop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_init/29 (queue_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_init/25 
+  Calls: 
+sch_is_cache_full/28 (sch_is_cache_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_is_full/59 sch_trans_sch_chl/22 
+sch_add_cmd/27 (sch_add_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7efea4580110
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_push/58 sch_trans_sch_chl/22 
+sch_start/26 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7efea4580000
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_poll/35 sch_check_wfi_mode/24 expt_det_check_idle/34 expt_det_check_after/33 comm_send_rsp/32 sch_process_srv/23 sch_check_cmd_auth/21 expt_det_check_after/33 comm_send_rsp/32 expt_det_check_before/31 util_memcpy/9 queue_pop/30 
+sch_init/25 (sch_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7efea480eee0
+  References: g_sch_queue/19 (addr) g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_init/29 
+sch_check_wfi_mode/24 (sch_check_wfi_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7efea4580000
+  References: g_waite_into_wfi/20 (read) g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: watchdog_start/57 watchdog_stop/56 
+sch_process_srv/23 (sch_process_srv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7efea480ecc0
+  References: g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: fwup_srv_handler/55 socvrfy_srv_handler/54 dbgcmdpars_srv_handler/53 otpkinstl_srv_handler/52 dbgauth_srv_handler/51 misc_srv_handler/50 aead_srv_ccm_handler/49 aead_srv_gcm_handler/48 ske_srv_cipher_handler/47 pke_srv_ecdsa_handler/46 pke_srv_rsa_sign_handler/45 pke_srv_rsa_cipher_handler/44 pke_srv_sm2_sign_handler/43 pke_srv_sm2_cipher_handler/42 hmac_srv_handler/41 hash_srv_handler/40 ske_srv_mac_handler/39 rng_srv_handler/38 kms_srv_handler/37 
+sch_trans_sch_chl/22 (sch_trans_sch_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7efea4580110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_is_cache_full/28 sch_add_cmd/27 
+  Calls: 
+sch_check_cmd_auth/21 (sch_check_cmd_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7efea480ebb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: 
+g_waite_into_wfi/20 (g_waite_into_wfi)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  Aux: @0x7efea480edd0
+  References: 
+  Referring: sch_process_srv/23 (write) sch_check_wfi_mode/24 (read) sch_check_wfi_mode/24 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_sch_queue/19 (g_sch_queue)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7efea480eee0
+  References: 
+  Referring: sch_init/25 (addr) sch_init/25 (addr) sch_start/26 (addr) sch_add_cmd/27 (addr) sch_is_cache_full/28 (addr) 
+  Availability: not-ready
+  Varpool flags:
+rPKE_B/18 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/17 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/16 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/15 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7efea480e990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: memcpy_/36 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: rPKE_B/18 rPKE_A/17 lib_register_unlock/16 lib_register_lock/15 util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 util_memset/10 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+queue_is_full/59 (queue_is_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_is_cache_full/28 
+  Calls: 
+queue_push/58 (queue_push)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_add_cmd/27 
+  Calls: 
+watchdog_start/57 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+watchdog_stop/56 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+fwup_srv_handler/55 (fwup_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+socvrfy_srv_handler/54 (socvrfy_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgcmdpars_srv_handler/53 (dbgcmdpars_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+otpkinstl_srv_handler/52 (otpkinstl_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgauth_srv_handler/51 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+misc_srv_handler/50 (misc_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_ccm_handler/49 (aead_srv_ccm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_gcm_handler/48 (aead_srv_gcm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_cipher_handler/47 (ske_srv_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_ecdsa_handler/46 (pke_srv_ecdsa_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_sign_handler/45 (pke_srv_rsa_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_cipher_handler/44 (pke_srv_rsa_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_sign_handler/43 (pke_srv_sm2_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_cipher_handler/42 (pke_srv_sm2_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hmac_srv_handler/41 (hmac_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hash_srv_handler/40 (hash_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_mac_handler/39 (ske_srv_mac_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+rng_srv_handler/38 (rng_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+kms_srv_handler/37 (kms_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+memcpy_/36 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+comm_poll/35 (comm_poll)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_idle/34 (expt_det_check_idle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_after/33 (expt_det_check_after)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+comm_send_rsp/32 (comm_send_rsp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+expt_det_check_before/31 (expt_det_check_before)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_pop/30 (queue_pop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_init/29 (queue_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_init/25 
+  Calls: 
+sch_is_cache_full/28 (sch_is_cache_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_is_full/59 sch_trans_sch_chl/22 
+sch_add_cmd/27 (sch_add_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_push/58 sch_trans_sch_chl/22 
+sch_start/26 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_poll/35 sch_check_wfi_mode/24 expt_det_check_idle/34 expt_det_check_after/33 comm_send_rsp/32 sch_process_srv/23 sch_check_cmd_auth/21 expt_det_check_after/33 comm_send_rsp/32 expt_det_check_before/31 util_memcpy/9 queue_pop/30 
+sch_init/25 (sch_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_init/29 
+sch_check_wfi_mode/24 (sch_check_wfi_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_waite_into_wfi/20 (read) g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: watchdog_start/57 watchdog_stop/56 
+sch_process_srv/23 (sch_process_srv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: fwup_srv_handler/55 socvrfy_srv_handler/54 dbgcmdpars_srv_handler/53 otpkinstl_srv_handler/52 dbgauth_srv_handler/51 misc_srv_handler/50 aead_srv_ccm_handler/49 aead_srv_gcm_handler/48 ske_srv_cipher_handler/47 pke_srv_ecdsa_handler/46 pke_srv_rsa_sign_handler/45 pke_srv_rsa_cipher_handler/44 pke_srv_sm2_sign_handler/43 pke_srv_sm2_cipher_handler/42 hmac_srv_handler/41 hash_srv_handler/40 ske_srv_mac_handler/39 rng_srv_handler/38 kms_srv_handler/37 
+sch_trans_sch_chl/22 (sch_trans_sch_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_is_cache_full/28 sch_add_cmd/27 
+  Calls: 
+sch_check_cmd_auth/21 (sch_check_cmd_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: 
+g_waite_into_wfi/20 (g_waite_into_wfi)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: sch_process_srv/23 (write) sch_check_wfi_mode/24 (read) sch_check_wfi_mode/24 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_sch_queue/19 (g_sch_queue)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sch_init/25 (addr) sch_init/25 (addr) sch_start/26 (addr) sch_add_cmd/27 (addr) sch_is_cache_full/28 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: memcpy_/36 
+
+
+Initial Symbol table:
+
+queue_is_full/59 (queue_is_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_is_cache_full/28 
+  Calls: 
+queue_push/58 (queue_push)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_add_cmd/27 
+  Calls: 
+watchdog_start/57 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+watchdog_stop/56 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+fwup_srv_handler/55 (fwup_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+socvrfy_srv_handler/54 (socvrfy_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgcmdpars_srv_handler/53 (dbgcmdpars_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+otpkinstl_srv_handler/52 (otpkinstl_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgauth_srv_handler/51 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+misc_srv_handler/50 (misc_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_ccm_handler/49 (aead_srv_ccm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_gcm_handler/48 (aead_srv_gcm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_cipher_handler/47 (ske_srv_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_ecdsa_handler/46 (pke_srv_ecdsa_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_sign_handler/45 (pke_srv_rsa_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_cipher_handler/44 (pke_srv_rsa_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_sign_handler/43 (pke_srv_sm2_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_cipher_handler/42 (pke_srv_sm2_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hmac_srv_handler/41 (hmac_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hash_srv_handler/40 (hash_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_mac_handler/39 (ske_srv_mac_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+rng_srv_handler/38 (rng_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+kms_srv_handler/37 (kms_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+memcpy_/36 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+comm_poll/35 (comm_poll)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_idle/34 (expt_det_check_idle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_after/33 (expt_det_check_after)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+comm_send_rsp/32 (comm_send_rsp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+expt_det_check_before/31 (expt_det_check_before)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_pop/30 (queue_pop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_init/29 (queue_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_init/25 
+  Calls: 
+sch_is_cache_full/28 (sch_is_cache_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_is_full/59 sch_trans_sch_chl/22 
+sch_add_cmd/27 (sch_add_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_push/58 sch_trans_sch_chl/22 
+sch_start/26 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_poll/35 sch_check_wfi_mode/24 expt_det_check_idle/34 expt_det_check_after/33 comm_send_rsp/32 sch_process_srv/23 sch_check_cmd_auth/21 expt_det_check_after/33 comm_send_rsp/32 expt_det_check_before/31 util_memcpy/9 queue_pop/30 
+sch_init/25 (sch_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_init/29 
+sch_check_wfi_mode/24 (sch_check_wfi_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_waite_into_wfi/20 (read) g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: watchdog_start/57 watchdog_stop/56 
+sch_process_srv/23 (sch_process_srv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: fwup_srv_handler/55 socvrfy_srv_handler/54 dbgcmdpars_srv_handler/53 otpkinstl_srv_handler/52 dbgauth_srv_handler/51 misc_srv_handler/50 aead_srv_ccm_handler/49 aead_srv_gcm_handler/48 ske_srv_cipher_handler/47 pke_srv_ecdsa_handler/46 pke_srv_rsa_sign_handler/45 pke_srv_rsa_cipher_handler/44 pke_srv_sm2_sign_handler/43 pke_srv_sm2_cipher_handler/42 hmac_srv_handler/41 hash_srv_handler/40 ske_srv_mac_handler/39 rng_srv_handler/38 kms_srv_handler/37 
+sch_trans_sch_chl/22 (sch_trans_sch_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_is_cache_full/28 sch_add_cmd/27 
+  Calls: 
+sch_check_cmd_auth/21 (sch_check_cmd_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: 
+g_waite_into_wfi/20 (g_waite_into_wfi)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: sch_process_srv/23 (write) sch_check_wfi_mode/24 (read) sch_check_wfi_mode/24 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_sch_queue/19 (g_sch_queue)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sch_init/25 (addr) sch_init/25 (addr) sch_start/26 (addr) sch_add_cmd/27 (addr) sch_is_cache_full/28 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: memcpy_/36 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+queue_is_full/59 (queue_is_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_is_cache_full/28 
+  Calls: 
+queue_push/58 (queue_push)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_add_cmd/27 
+  Calls: 
+watchdog_start/57 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+watchdog_stop/56 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_check_wfi_mode/24 
+  Calls: 
+fwup_srv_handler/55 (fwup_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+socvrfy_srv_handler/54 (socvrfy_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgcmdpars_srv_handler/53 (dbgcmdpars_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+otpkinstl_srv_handler/52 (otpkinstl_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+dbgauth_srv_handler/51 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+misc_srv_handler/50 (misc_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_ccm_handler/49 (aead_srv_ccm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+aead_srv_gcm_handler/48 (aead_srv_gcm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_cipher_handler/47 (ske_srv_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_ecdsa_handler/46 (pke_srv_ecdsa_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_sign_handler/45 (pke_srv_rsa_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_rsa_cipher_handler/44 (pke_srv_rsa_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_sign_handler/43 (pke_srv_sm2_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+pke_srv_sm2_cipher_handler/42 (pke_srv_sm2_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hmac_srv_handler/41 (hmac_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+hash_srv_handler/40 (hash_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+ske_srv_mac_handler/39 (ske_srv_mac_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+rng_srv_handler/38 (rng_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+kms_srv_handler/37 (kms_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_process_srv/23 
+  Calls: 
+memcpy_/36 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/9 
+  Calls: 
+comm_poll/35 (comm_poll)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_idle/34 (expt_det_check_idle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+expt_det_check_after/33 (expt_det_check_after)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+comm_send_rsp/32 (comm_send_rsp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 sch_start/26 
+  Calls: 
+expt_det_check_before/31 (expt_det_check_before)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_pop/30 (queue_pop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_start/26 
+  Calls: 
+queue_init/29 (queue_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sch_init/25 
+  Calls: 
+sch_is_cache_full/28 (sch_is_cache_full)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_is_full/59 sch_trans_sch_chl/22 
+sch_add_cmd/27 (sch_add_cmd)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_push/58 sch_trans_sch_chl/22 
+sch_start/26 (sch_start)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: comm_poll/35 sch_check_wfi_mode/24 expt_det_check_idle/34 expt_det_check_after/33 comm_send_rsp/32 sch_process_srv/23 sch_check_cmd_auth/21 expt_det_check_after/33 comm_send_rsp/32 expt_det_check_before/31 util_memcpy/9 queue_pop/30 
+sch_init/25 (sch_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_sch_queue/19 (addr) g_sch_queue/19 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: queue_init/29 
+sch_check_wfi_mode/24 (sch_check_wfi_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_waite_into_wfi/20 (read) g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: watchdog_start/57 watchdog_stop/56 
+sch_process_srv/23 (sch_process_srv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: fwup_srv_handler/55 socvrfy_srv_handler/54 dbgcmdpars_srv_handler/53 otpkinstl_srv_handler/52 dbgauth_srv_handler/51 misc_srv_handler/50 aead_srv_ccm_handler/49 aead_srv_gcm_handler/48 ske_srv_cipher_handler/47 pke_srv_ecdsa_handler/46 pke_srv_rsa_sign_handler/45 pke_srv_rsa_cipher_handler/44 pke_srv_sm2_sign_handler/43 pke_srv_sm2_cipher_handler/42 hmac_srv_handler/41 hash_srv_handler/40 ske_srv_mac_handler/39 rng_srv_handler/38 kms_srv_handler/37 
+sch_trans_sch_chl/22 (sch_trans_sch_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_is_cache_full/28 sch_add_cmd/27 
+  Calls: 
+sch_check_cmd_auth/21 (sch_check_cmd_auth)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: 
+g_waite_into_wfi/20 (g_waite_into_wfi)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition
+  References: 
+  Referring: sch_process_srv/23 (write) sch_check_wfi_mode/24 (read) sch_check_wfi_mode/24 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_sch_queue/19 (g_sch_queue)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sch_init/25 (addr) sch_init/25 (addr) sch_start/26 (addr) sch_add_cmd/27 (addr) sch_is_cache_full/28 (addr) 
+  Availability: not-ready
+  Varpool flags:
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sch_start/26 
+  Calls: memcpy_/36 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+sch_trans_sch_chl.part.0/60 (sch_trans_sch_chl.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function sch_trans_sch_chl.part.0/60 is inline copy in sch_trans_sch_chl/22
+  Availability: local
+  Function flags: count:346468566 (estimated locally) body local split_part nonfreeing_fn
+  Called by: sch_trans_sch_chl/22 (inlined) (346468566 (estimated locally),0.32 per call) 
+  Calls: 
+queue_is_full/59 (queue_is_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_is_cache_full/28 (524845000 (estimated locally),0.49 per call) 
+  Calls: 
+queue_push/58 (queue_push)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_add_cmd/27 (480810855 (estimated locally),0.45 per call) 
+  Calls: 
+watchdog_start/57 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_check_wfi_mode/24 (3987486 (estimated locally),6.75 per call) 
+  Calls: 
+watchdog_stop/56 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_check_wfi_mode/24 (3987486 (estimated locally),6.75 per call) 
+  Calls: 
+fwup_srv_handler/55 (fwup_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+socvrfy_srv_handler/54 (socvrfy_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+dbgcmdpars_srv_handler/53 (dbgcmdpars_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+otpkinstl_srv_handler/52 (otpkinstl_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+dbgauth_srv_handler/51 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+misc_srv_handler/50 (misc_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+aead_srv_ccm_handler/49 (aead_srv_ccm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+aead_srv_gcm_handler/48 (aead_srv_gcm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+ske_srv_cipher_handler/47 (ske_srv_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+pke_srv_ecdsa_handler/46 (pke_srv_ecdsa_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+pke_srv_rsa_sign_handler/45 (pke_srv_rsa_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+pke_srv_rsa_cipher_handler/44 (pke_srv_rsa_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+pke_srv_sm2_sign_handler/43 (pke_srv_sm2_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+pke_srv_sm2_cipher_handler/42 (pke_srv_sm2_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+hmac_srv_handler/41 (hmac_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+hash_srv_handler/40 (hash_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+ske_srv_mac_handler/39 (ske_srv_mac_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+rng_srv_handler/38 (rng_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+kms_srv_handler/37 (kms_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_process_srv/23 (1326153 (estimated locally),2.24 per call) 
+  Calls: 
+memcpy_/36 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (205242055 (estimated locally),347.23 per call) 
+  Calls: 
+comm_poll/35 (comm_poll)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (59700048 (estimated locally),101.00 per call) 
+  Calls: 
+expt_det_check_idle/34 (expt_det_check_idle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (19701016 (estimated locally),33.33 per call) 
+  Calls: 
+expt_det_check_after/33 (expt_det_check_after)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (104919739 (estimated locally),177.50 per call) sch_start/26 (100322316 (estimated locally),169.72 per call) 
+  Calls: 
+comm_send_rsp/32 (comm_send_rsp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (104919739 (estimated locally),177.50 per call) sch_start/26 (100322316 (estimated locally),169.72 per call) 
+  Calls: 
+expt_det_check_before/31 (expt_det_check_before)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (205242055 (estimated locally),347.23 per call) 
+  Calls: 
+queue_pop/30 (queue_pop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_start/26 (1014041776 (estimated locally),1715.55 per call) 
+  Calls: 
+queue_init/29 (queue_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sch_init/25 (1014041776 (estimated locally),8.78 per call) 
+  Calls: 
+sch_is_cache_full/28 (sch_is_cache_full)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: queue_is_full/59 (524845000 (estimated locally),0.49 per call) sch_trans_sch_chl/22 (1073741824 (estimated locally),1.00 per call) 
+sch_add_cmd/27 (sch_add_cmd)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: queue_push/58 (480810855 (estimated locally),0.45 per call) sch_trans_sch_chl/22 (751619279 (estimated locally),0.70 per call) 
+sch_start/26 (sch_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_sch_queue/19 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:591090 (estimated locally) body executed_once
+  Called by: 
+  Calls: comm_poll/35 (59700048 (estimated locally),101.00 per call) sch_check_wfi_mode/24 (inlined) (19701016 (estimated locally),33.33 per call) expt_det_check_idle/34 (19701016 (estimated locally),33.33 per call) expt_det_check_after/33 (104919739 (estimated locally),177.50 per call) comm_send_rsp/32 (104919739 (estimated locally),177.50 per call) sch_process_srv/23 (inlined) (81375750 (estimated locally),137.67 per call) expt_det_check_after/33 (100322316 (estimated locally),169.72 per call) comm_send_rsp/32 (100322316 (estimated locally),169.72 per call) expt_det_check_before/31 (205242055 (estimated locally),347.23 per call) memcpy_/36 (205242055 (estimated locally),347.23 per call) queue_pop/30 (1014041776 (estimated locally),1715.55 per call) 
+sch_init/25 (sch_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_sch_queue/19 (addr) g_sch_queue/19 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:115472344 (estimated locally) body
+  Called by: 
+  Calls: queue_init/29 (1014041776 (estimated locally),8.78 per call) 
+sch_check_wfi_mode/24 (sch_check_wfi_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_waite_into_wfi/20 (read) g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function sch_check_wfi_mode/24 is inline copy in sch_start/26
+  Availability: local
+  Function flags: count:19701016 (estimated locally) body local
+  Called by: sch_start/26 (inlined) (19701016 (estimated locally),33.33 per call) 
+  Calls: watchdog_start/57 (3987486 (estimated locally),6.75 per call) watchdog_stop/56 (3987486 (estimated locally),6.75 per call) 
+sch_process_srv/23 (sch_process_srv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_waite_into_wfi/20 (write) 
+  Referring: 
+  Function sch_process_srv/23 is inline copy in sch_start/26
+  Availability: local
+  Function flags: count:81375750 (estimated locally) body local
+  Called by: sch_start/26 (inlined) (81375750 (estimated locally),137.67 per call) 
+  Calls: fwup_srv_handler/55 (1326153 (estimated locally),2.24 per call) socvrfy_srv_handler/54 (1326153 (estimated locally),2.24 per call) dbgcmdpars_srv_handler/53 (1326153 (estimated locally),2.24 per call) otpkinstl_srv_handler/52 (1326153 (estimated locally),2.24 per call) dbgauth_srv_handler/51 (1326153 (estimated locally),2.24 per call) misc_srv_handler/50 (1326153 (estimated locally),2.24 per call) aead_srv_ccm_handler/49 (1326153 (estimated locally),2.24 per call) aead_srv_gcm_handler/48 (1326153 (estimated locally),2.24 per call) ske_srv_cipher_handler/47 (1326153 (estimated locally),2.24 per call) pke_srv_ecdsa_handler/46 (1326153 (estimated locally),2.24 per call) pke_srv_rsa_sign_handler/45 (1326153 (estimated locally),2.24 per call) pke_srv_rsa_cipher_handler/44 (1326153 (estimated locally),2.24 per call) pke_srv_sm2_sign_handler/43 (1326153 (estimated locally),2.24 per call) pke_srv_sm2_cipher_handler/42 (1326153 (estimated locally),2.24 per call) hmac_srv_handler/41 (1326153 (estimated locally),2.24 per call) hash_srv_handler/40 (1326153 (estimated locally),2.24 per call) ske_srv_mac_handler/39 (1326153 (estimated locally),2.24 per call) rng_srv_handler/38 (1326153 (estimated locally),2.24 per call) kms_srv_handler/37 (1326153 (estimated locally),2.24 per call) 
+sch_trans_sch_chl/22 (sch_trans_sch_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local nonfreeing_fn
+  Called by: sch_is_cache_full/28 (1073741824 (estimated locally),1.00 per call) sch_add_cmd/27 (751619279 (estimated locally),0.70 per call) 
+  Calls: sch_trans_sch_chl.part.0/60 (inlined) (346468566 (estimated locally),0.32 per call) 
+g_waite_into_wfi/20 (g_waite_into_wfi)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: sch_process_srv/23 (write) sch_check_wfi_mode/24 (read) sch_check_wfi_mode/24 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_sch_queue/19 (g_sch_queue)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: sch_init/25 (addr) sch_start/26 (addr) sch_add_cmd/27 (addr) sch_init/25 (addr) sch_is_cache_full/28 (addr) 
+  Availability: available
+  Varpool flags:
+Trivially needed variables: g_waite_into_wfi/20 g_sch_queue/19
+Removing variables:
+
+Final Symbol table:
+
+queue_is_full/59 (queue_is_full)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+queue_push/58 (queue_push)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_start/57 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_stop/56 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fwup_srv_handler/55 (fwup_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+socvrfy_srv_handler/54 (socvrfy_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgcmdpars_srv_handler/53 (dbgcmdpars_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkinstl_srv_handler/52 (otpkinstl_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgauth_srv_handler/51 (dbgauth_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+misc_srv_handler/50 (misc_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+aead_srv_ccm_handler/49 (aead_srv_ccm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+aead_srv_gcm_handler/48 (aead_srv_gcm_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_srv_cipher_handler/47 (ske_srv_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_ecdsa_handler/46 (pke_srv_ecdsa_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_rsa_sign_handler/45 (pke_srv_rsa_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_rsa_cipher_handler/44 (pke_srv_rsa_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_sm2_sign_handler/43 (pke_srv_sm2_sign_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_sm2_cipher_handler/42 (pke_srv_sm2_cipher_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_srv_handler/41 (hmac_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_handler/40 (hash_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_srv_mac_handler/39 (ske_srv_mac_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+rng_srv_handler/38 (rng_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kms_srv_handler/37 (kms_srv_handler)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/36 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+comm_poll/35 (comm_poll)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_check_idle/34 (expt_det_check_idle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_check_after/33 (expt_det_check_after)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+comm_send_rsp/32 (comm_send_rsp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_check_before/31 (expt_det_check_before)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+queue_pop/30 (queue_pop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+queue_init/29 (queue_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sch_is_cache_full/28 (sch_is_cache_full)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sch_is_cache_full (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sch_add_cmd/27 (sch_add_cmd)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sch_add_cmd (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+sch_start/26 (sch_start)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sch_start (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:591090 (estimated locally) executed_once
+  Called by: 
+  Calls: 
+sch_init/25 (sch_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sch_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:115472344 (estimated locally)
+  Called by: 
+  Calls: 
+sch_trans_sch_chl/22 (sch_trans_sch_chl)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sch_trans_sch_chl (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 
+g_waite_into_wfi/20 (g_waite_into_wfi)
+  Type: variable definition analyzed
+  Visibility: force_output semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_waite_into_wfi (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_sch_queue/19 (g_sch_queue)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_sch_queue (implicit_section)
+  Aux: @0x7efea4568b80
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

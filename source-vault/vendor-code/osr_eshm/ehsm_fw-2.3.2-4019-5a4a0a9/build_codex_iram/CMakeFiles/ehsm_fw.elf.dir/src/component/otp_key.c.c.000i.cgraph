@@ -1,0 +1,1104 @@
+Trivially needed symbols: otpkey_get_phyid/26 otpkey_read_data/25 otpkey_aquire_key_attr/24 otpkey_check_usage/23 otpkey_register_keyid_map/22
+
+
+Initial Symbol table:
+
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_gen_key_data/21 
+  Calls: 
+memcpy_/28 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kmu_check_key_attr/27 (kmu_check_key_attr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_aquire_key_attr/24 otpkey_check_key_usage/20 
+  Calls: 
+otpkey_get_phyid/26 (otpkey_get_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_get_keyid_map_idx/19 
+otpkey_read_data/25 (otpkey_read_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f3327db6ee0
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_gen_key_data/21 otpkey_get_keyid_map_idx/19 
+otpkey_aquire_key_attr/24 (otpkey_aquire_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f3327db6dd0
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kmu_check_key_attr/27 otpkey_get_keyid_map_idx/19 
+otpkey_check_usage/23 (otpkey_check_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f3327db6cc0
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_check_key_usage/20 otpkey_get_keyid_map_idx/19 
+otpkey_register_keyid_map/22 (otpkey_register_keyid_map)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f3327db6bb0
+  References: g_keyid_map_addr/17 (write) g_keyid_map_size/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+otpkey_gen_key_data/21 (otpkey_gen_key_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f3327db6ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_read_data/25 
+  Calls: kmu_get_keyid_data/29 
+otpkey_check_key_usage/20 (otpkey_check_key_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f3327db6cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_check_usage/23 
+  Calls: kmu_check_key_attr/27 
+otpkey_get_keyid_map_idx/19 (otpkey_get_keyid_map_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f3327db6880
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_get_phyid/26 otpkey_read_data/25 otpkey_aquire_key_attr/24 otpkey_check_usage/23 
+  Calls: 
+g_keyid_map_size/18 (g_keyid_map_size)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f3327dc4880
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_keyid_map_addr/17 (g_keyid_map_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f3327db6bb0
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_write_volatile_u32/16 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/14 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/13 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/12 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f3327db6dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_aquire_key_attr/24 
+  Calls: memcpy_/28 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/16 util_read_volatile_u32/15 util_u32_copy/14 util_memcmp/13 util_memset/12 check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_gen_key_data/21 
+  Calls: 
+memcpy_/28 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kmu_check_key_attr/27 (kmu_check_key_attr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_aquire_key_attr/24 otpkey_check_key_usage/20 
+  Calls: 
+otpkey_get_phyid/26 (otpkey_get_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_get_keyid_map_idx/19 
+otpkey_read_data/25 (otpkey_read_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_gen_key_data/21 otpkey_get_keyid_map_idx/19 
+otpkey_aquire_key_attr/24 (otpkey_aquire_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kmu_check_key_attr/27 otpkey_get_keyid_map_idx/19 
+otpkey_check_usage/23 (otpkey_check_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_check_key_usage/20 otpkey_get_keyid_map_idx/19 
+otpkey_register_keyid_map/22 (otpkey_register_keyid_map)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (write) g_keyid_map_size/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+otpkey_gen_key_data/21 (otpkey_gen_key_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_read_data/25 
+  Calls: kmu_get_keyid_data/29 
+otpkey_check_key_usage/20 (otpkey_check_key_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_check_usage/23 
+  Calls: kmu_check_key_attr/27 
+otpkey_get_keyid_map_idx/19 (otpkey_get_keyid_map_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_get_phyid/26 otpkey_read_data/25 otpkey_aquire_key_attr/24 otpkey_check_usage/23 
+  Calls: 
+g_keyid_map_size/18 (g_keyid_map_size)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_keyid_map_addr/17 (g_keyid_map_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_aquire_key_attr/24 
+  Calls: memcpy_/28 
+
+
+Initial Symbol table:
+
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_gen_key_data/21 
+  Calls: 
+memcpy_/28 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kmu_check_key_attr/27 (kmu_check_key_attr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_aquire_key_attr/24 otpkey_check_key_usage/20 
+  Calls: 
+otpkey_get_phyid/26 (otpkey_get_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_get_keyid_map_idx/19 
+otpkey_read_data/25 (otpkey_read_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_gen_key_data/21 otpkey_get_keyid_map_idx/19 
+otpkey_aquire_key_attr/24 (otpkey_aquire_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kmu_check_key_attr/27 otpkey_get_keyid_map_idx/19 
+otpkey_check_usage/23 (otpkey_check_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_check_key_usage/20 otpkey_get_keyid_map_idx/19 
+otpkey_register_keyid_map/22 (otpkey_register_keyid_map)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (write) g_keyid_map_size/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+otpkey_gen_key_data/21 (otpkey_gen_key_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_read_data/25 
+  Calls: kmu_get_keyid_data/29 
+otpkey_check_key_usage/20 (otpkey_check_key_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_check_usage/23 
+  Calls: kmu_check_key_attr/27 
+otpkey_get_keyid_map_idx/19 (otpkey_get_keyid_map_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_get_phyid/26 otpkey_read_data/25 otpkey_aquire_key_attr/24 otpkey_check_usage/23 
+  Calls: 
+g_keyid_map_size/18 (g_keyid_map_size)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_keyid_map_addr/17 (g_keyid_map_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_aquire_key_attr/24 
+  Calls: memcpy_/28 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_gen_key_data/21 
+  Calls: 
+memcpy_/28 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kmu_check_key_attr/27 (kmu_check_key_attr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: otpkey_aquire_key_attr/24 otpkey_check_key_usage/20 
+  Calls: 
+otpkey_get_phyid/26 (otpkey_get_phyid)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_get_keyid_map_idx/19 
+otpkey_read_data/25 (otpkey_read_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_gen_key_data/21 otpkey_get_keyid_map_idx/19 
+otpkey_aquire_key_attr/24 (otpkey_aquire_key_attr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kmu_check_key_attr/27 otpkey_get_keyid_map_idx/19 
+otpkey_check_usage/23 (otpkey_check_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: otpkey_check_key_usage/20 otpkey_get_keyid_map_idx/19 
+otpkey_register_keyid_map/22 (otpkey_register_keyid_map)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_keyid_map_addr/17 (write) g_keyid_map_size/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+otpkey_gen_key_data/21 (otpkey_gen_key_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_read_data/25 
+  Calls: kmu_get_keyid_data/29 
+otpkey_check_key_usage/20 (otpkey_check_key_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_check_usage/23 
+  Calls: kmu_check_key_attr/27 
+otpkey_get_keyid_map_idx/19 (otpkey_get_keyid_map_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_get_phyid/26 otpkey_read_data/25 otpkey_aquire_key_attr/24 otpkey_check_usage/23 
+  Calls: 
+g_keyid_map_size/18 (g_keyid_map_size)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_keyid_map_addr/17 (g_keyid_map_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: otpkey_register_keyid_map/22 (write) otpkey_check_usage/23 (read) otpkey_check_usage/23 (read) otpkey_get_keyid_map_idx/19 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_aquire_key_attr/24 (read) otpkey_read_data/25 (read) otpkey_read_data/25 (read) otpkey_get_phyid/26 (read) otpkey_get_phyid/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: otpkey_aquire_key_attr/24 
+  Calls: memcpy_/28 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+otpkey_gen_key_data.isra.0/31 (otpkey_gen_key_data.isra)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function otpkey_gen_key_data.isra/31 is inline copy in otpkey_read_data/25
+  Clone of otpkey_gen_key_data/21
+  Availability: local
+  Function flags: count:20978552 (estimated locally) local
+  Called by: otpkey_read_data/25 (inlined) (20978552 (estimated locally),0.02 per call) 
+  Calls: kmu_get_keyid_data/29 (10021454 (estimated locally),0.01 per call) 
+otpkey_get_keyid_map_idx.constprop.0/30 (otpkey_get_keyid_map_idx.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Clone of otpkey_get_keyid_map_idx/19
+  Availability: local
+  Function flags: count:114863530 (estimated locally) local nonfreeing_fn
+  Called by: otpkey_check_usage/23 (93566533 (estimated locally),0.09 per call) otpkey_aquire_key_attr/24 (130993146 (estimated locally),0.12 per call) otpkey_read_data/25 (65496573 (estimated locally),0.06 per call) otpkey_get_phyid/26 (65496573 (estimated locally),0.06 per call) 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkey_gen_key_data.isra.0/31 (10021454 (estimated locally),0.01 per call) 
+  Calls: 
+memcpy_/28 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkey_aquire_key_attr/24 (5043244 (estimated locally),0.00 per call) 
+  Calls: 
+kmu_check_key_attr/27 (kmu_check_key_attr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: otpkey_aquire_key_attr/24 (41957105 (estimated locally),0.04 per call) otpkey_check_key_usage/20 (19706742 (estimated locally),0.02 per call) 
+  Calls: 
+otpkey_get_phyid/26 (otpkey_get_phyid)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: otpkey_get_keyid_map_idx.constprop.0/30 (65496573 (estimated locally),0.06 per call) 
+otpkey_read_data/25 (otpkey_read_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: otpkey_gen_key_data.isra.0/31 (inlined) (20978552 (estimated locally),0.02 per call) otpkey_get_keyid_map_idx.constprop.0/30 (65496573 (estimated locally),0.06 per call) 
+otpkey_aquire_key_attr/24 (otpkey_aquire_key_attr)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) g_keyid_map_addr/17 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: memcpy_/28 (5043244 (estimated locally),0.00 per call) kmu_check_key_attr/27 (41957105 (estimated locally),0.04 per call) otpkey_get_keyid_map_idx.constprop.0/30 (130993146 (estimated locally),0.12 per call) 
+otpkey_check_usage/23 (otpkey_check_usage)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_keyid_map_addr/17 (read) g_keyid_map_size/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: otpkey_check_key_usage/20 (inlined) (29969360 (estimated locally),0.03 per call) otpkey_get_keyid_map_idx.constprop.0/30 (93566533 (estimated locally),0.09 per call) 
+otpkey_register_keyid_map/22 (otpkey_register_keyid_map)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_keyid_map_addr/17 (write) g_keyid_map_size/18 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+otpkey_gen_key_data/21 (otpkey_gen_key_data)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+otpkey_check_key_usage/20 (otpkey_check_key_usage)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function otpkey_check_key_usage/20 is inline copy in otpkey_check_usage/23
+  Availability: local
+  Function flags: count:29969360 (estimated locally) body local
+  Called by: otpkey_check_usage/23 (inlined) (29969360 (estimated locally),0.03 per call) 
+  Calls: kmu_check_key_attr/27 (19706742 (estimated locally),0.02 per call) 
+otpkey_get_keyid_map_idx/19 (otpkey_get_keyid_map_idx)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:114863530 (estimated locally) body
+  Called by: 
+  Calls: 
+g_keyid_map_size/18 (g_keyid_map_size)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: otpkey_read_data/25 (read) otpkey_get_keyid_map_idx.constprop.0/30 (read) otpkey_check_usage/23 (read) otpkey_aquire_key_attr/24 (read) otpkey_register_keyid_map/22 (write) otpkey_get_phyid/26 (read) 
+  Availability: available
+  Varpool flags: initialized
+g_keyid_map_addr/17 (g_keyid_map_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: otpkey_read_data/25 (read) otpkey_aquire_key_attr/24 (read) otpkey_get_keyid_map_idx.constprop.0/30 (read) otpkey_aquire_key_attr/24 (read) otpkey_check_usage/23 (read) otpkey_register_keyid_map/22 (write) otpkey_get_phyid/26 (read) 
+  Availability: available
+  Varpool flags: initialized
+cloning otpkey_get_keyid_map_idx/19 to otpkey_get_keyid_map_idx.constprop/30
+uint32_t otpkey_get_keyid_map_idx (uint32_t logic_key_id, uint8_t * idx)
+{
+  uint32_t ret;
+  uint8_t id;
+  const struct otp_key_attributes_st * g_keyid_map_addr.4_1;
+  unsigned int _2;
+  const struct otp_key_attributes_st * _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int g_keyid_map_size.6_6;
+  long unsigned int _7;
+  long unsigned int g_keyid_map_size.6_16;
+
+  <bb 2> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG id => 0
+  goto <bb 6>; [100.00%]
+
+  <bb 3> [local count: 1014686025]:
+  # DEBUG BEGIN_STMT
+  g_keyid_map_addr.4_1 = g_keyid_map_addr;
+  _2 = _5 * 16;
+  _3 = g_keyid_map_addr.4_1 + _2;
+  _4 = _3->otp_logic_id;
+  if (_4 == logic_key_id_12(D))
+    goto <bb 4>; [5.50%]
+  else
+    goto <bb 5>; [94.50%]
+
+  <bb 4> [local count: 55807731]:
+  # DEBUG BEGIN_STMT
+  *idx_14(D) = id_8;
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 5> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  id_13 = id_8 + 1;
+  # DEBUG id => id_13
+
+  <bb 6> [local count: 1073741824]:
+  # id_8 = PHI <0(2), id_13(5)>
+  # DEBUG id => id_8
+  # DEBUG BEGIN_STMT
+  _5 = (long unsigned int) id_8;
+  g_keyid_map_size.6_6 = g_keyid_map_size;
+  if (_5 < g_keyid_map_size.6_6)
+    goto <bb 3>; [94.50%]
+  else
+    goto <bb 7>; [5.50%]
+
+  <bb 7> [local count: 114863531]:
+  # _7 = PHI <_5(4), _5(6)>
+  # g_keyid_map_size.6_16 = PHI <g_keyid_map_size.6_6(4), g_keyid_map_size.6_6(6)>
+  # DEBUG BEGIN_STMT
+  if (_7 >= g_keyid_map_size.6_16)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 8> [local count: 57431766]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 11
+
+  <bb 9> [local count: 114863531]:
+  # ret_9 = PHI <2774162085(7), 11(8)>
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  return ret_9;
+
+}
+
+
+uint32_t otpkey_get_keyid_map_idx.constprop (uint32_t logic_key_id, uint8_t * idx)
+{
+  uint8_t id;
+  uint32_t ret;
+  const struct otp_key_attributes_st * g_keyid_map_addr.4_1;
+  long unsigned int _2;
+  unsigned int _3;
+  const struct otp_key_attributes_st * _4;
+  long unsigned int _5;
+  long unsigned int g_keyid_map_size.6_10;
+  long unsigned int _11;
+  long unsigned int g_keyid_map_size.6_12;
+
+  <bb 10> [local count: 114863530]:
+
+  <bb 2> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG id => 0
+  goto <bb 6>; [100.00%]
+
+  <bb 3> [local count: 1014686025]:
+  # DEBUG BEGIN_STMT
+  g_keyid_map_addr.4_1 = g_keyid_map_addr;
+  _3 = _2 * 16;
+  _4 = g_keyid_map_addr.4_1 + _3;
+  _5 = _4->otp_logic_id;
+  if (_5 == logic_key_id_6(D))
+    goto <bb 4>; [5.50%]
+  else
+    goto <bb 5>; [94.50%]
+
+  <bb 4> [local count: 55807731]:
+  # DEBUG BEGIN_STMT
+  *idx_8(D) = id_7;
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 5> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  id_9 = id_7 + 1;
+  # DEBUG id => id_9
+
+  <bb 6> [local count: 1073741824]:
+  # id_7 = PHI <0(2), id_9(5)>
+  # DEBUG id => id_7
+  # DEBUG BEGIN_STMT
+  _2 = (long unsigned int) id_7;
+  g_keyid_map_size.6_10 = g_keyid_map_size;
+  if (_2 < g_keyid_map_size.6_10)
+    goto <bb 3>; [94.50%]
+  else
+    goto <bb 7>; [5.50%]
+
+  <bb 7> [local count: 114863531]:
+  # _11 = PHI <_2(4), _2(6)>
+  # g_keyid_map_size.6_12 = PHI <g_keyid_map_size.6_10(4), g_keyid_map_size.6_10(6)>
+  # DEBUG BEGIN_STMT
+  if (_11 >= g_keyid_map_size.6_12)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 8> [local count: 57431766]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 11
+
+  <bb 9> [local count: 114863531]:
+  # ret_13 = PHI <2774162085(7), 11(8)>
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  return ret_13;
+
+}
+
+
+updating call of otpkey_check_usage/23 -> otpkey_get_keyid_map_idx.constprop/30: ret_15 = otpkey_get_keyid_map_idx (key_id_13(D), &idx);
+  updated to:ret_15 = otpkey_get_keyid_map_idx.constprop (key_id_13(D), &idx);
+updating call of otpkey_aquire_key_attr/24 -> otpkey_get_keyid_map_idx.constprop/30: ret_18 = otpkey_get_keyid_map_idx (key_id_16(D), &idx);
+  updated to:ret_18 = otpkey_get_keyid_map_idx.constprop (key_id_16(D), &idx);
+cloning otpkey_gen_key_data/21 to otpkey_gen_key_data.isra/31
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 2, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7f3327dc3dc8 uint16_t>, alias type:  <pointer_type 0x7f3327db05e8> prefix: ISRA
+                             1. IPA_PARAM_OP_SPLIT , offset: 8, base_index: 0, prev_clone_index: 0, type:  <enumeral_type 0x7f3327dcb348 otp_key_generate_type_e>, alias type:  <pointer_type 0x7f3327e09738> prefix: ISRA
+                             2. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+uint32_t otpkey_gen_key_data (const struct otp_key_attributes_st * attr, uint8_t * out)
+{
+  uint32_t ret;
+  <unnamed type> _1;
+  short unsigned int _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  _1 = attr_6(D)->key_gen_type;
+  if (_1 == 0)
+    goto <bb 3>; [47.77%]
+  else
+    goto <bb 4>; [52.23%]
+
+  <bb 3> [local count: 512926472]:
+  # DEBUG BEGIN_STMT
+  _2 = attr_6(D)->otp_slot_id;
+  ret_9 = kmu_get_keyid_data (_2, out_7(D), 32);
+  # DEBUG ret => ret_9
+
+  <bb 4> [local count: 1073741824]:
+  # ret_3 = PHI <ret_9(3), 10(2)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t otpkey_gen_key_data.isra (const uint16_t ISRA.48, const otp_key_generate_type_e ISRA.49, uint8_t * out)
+{
+  uint32_t ret;
+  const struct otp_key_attributes_st * attr;
+  <unnamed type> _1;
+  short unsigned int _2;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG D#2 s=> attr
+  # DEBUG attr => D#2
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  _1 = ISRA.49_7(D);
+  if (_1 == 0)
+    goto <bb 3>; [47.77%]
+  else
+    goto <bb 4>; [52.23%]
+
+  <bb 3> [local count: 512926472]:
+  # DEBUG BEGIN_STMT
+  _2 = ISRA.48_9(D);
+  ret_4 = kmu_get_keyid_data (_2, out_3(D), 32);
+  # DEBUG ret => ret_4
+
+  <bb 4> [local count: 1073741824]:
+  # ret_5 = PHI <10(2), ret_4(3)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  return ret_5;
+
+}
+
+
+updating call of otpkey_read_data/25 -> otpkey_gen_key_data.isra/31: ret_16 = otpkey_gen_key_data (_6, out_11(D));
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 2, base_index: 0, prev_clone_index: 0, type:  <integer_type 0x7f3327dc3dc8 uint16_t>, alias type:  <pointer_type 0x7f3327db05e8> prefix: ISRA
+                             1. IPA_PARAM_OP_SPLIT , offset: 8, base_index: 0, prev_clone_index: 0, type:  <enumeral_type 0x7f3327dcb348 otp_key_generate_type_e>, alias type:  <pointer_type 0x7f3327e09738> prefix: ISRA
+                             2. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:ret_16 = otpkey_gen_key_data.isra (_18, _19, out_11(D));
+updating call of otpkey_read_data/25 -> otpkey_get_keyid_map_idx.constprop/30: ret_14 = otpkey_get_keyid_map_idx (key_id_12(D), &idx);
+  updated to:ret_14 = otpkey_get_keyid_map_idx.constprop (key_id_12(D), &idx);
+updating call of otpkey_get_phyid/26 -> otpkey_get_keyid_map_idx.constprop/30: ret_15 = otpkey_get_keyid_map_idx (key_id_13(D), &idx);
+  updated to:ret_15 = otpkey_get_keyid_map_idx.constprop (key_id_13(D), &idx);
+Trivially needed variables: g_keyid_map_size/18 g_keyid_map_addr/17
+Removing variables:
+
+Final Symbol table:
+
+otpkey_get_keyid_map_idx.constprop.0/30 (otpkey_get_keyid_map_idx.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.otpkey_get_keyid_map_idx.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 
+kmu_get_keyid_data/29 (kmu_get_keyid_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/28 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kmu_check_key_attr/27 (kmu_check_key_attr)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_get_phyid/26 (otpkey_get_phyid)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.otpkey_get_phyid (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+otpkey_read_data/25 (otpkey_read_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.otpkey_read_data (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+otpkey_aquire_key_attr/24 (otpkey_aquire_key_attr)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.otpkey_aquire_key_attr (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+otpkey_check_usage/23 (otpkey_check_usage)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.otpkey_check_usage (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+otpkey_register_keyid_map/22 (otpkey_register_keyid_map)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.otpkey_register_keyid_map (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+otpkey_gen_key_data/21 (otpkey_gen_key_data)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+otpkey_get_keyid_map_idx/19 (otpkey_get_keyid_map_idx)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:114863530 (estimated locally)
+  Called by: 
+  Calls: 
+g_keyid_map_size/18 (g_keyid_map_size)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_keyid_map_size (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_keyid_map_addr/17 (g_keyid_map_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_keyid_map_addr (implicit_section)
+  Aux: @0x7f3327dc4900
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

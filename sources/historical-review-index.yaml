@@ -1,0 +1,177 @@
+schema_version: 1
+review_source_id: SRC-0019
+code_source_id: SRC-0018
+inventory_date: 2026-07-21
+default_evidence_state: ASSUMPTION
+default_workflow_status: pending_revalidation
+promotion_gate:
+  - 重新定位并确认 SRC-0018 中的代码证据。
+  - 对照适用的 Vendor 文档、方案基线和版本关系。
+  - 通过可重复构建、测试、静态分析或人工复核形成独立 Evidence。
+  - 明确影响、严重度、误报可能、Owner 和处置决定。
+  - 通过后才可进入 issues、requirements、decisions 或 OpenSpec change。
+documents:
+  - path: source-vault/vendor-code/osr_eshm/docs/review/00_vendor_delivery_inventory.md
+    topic: Vendor 交付件清单和阅读入口
+    disposition: historical_context
+  - path: source-vault/vendor-code/osr_eshm/docs/review/01_review_execution_plan.md
+    topic: 代码阅读与 Review 执行计划
+    disposition: historical_plan
+  - path: source-vault/vendor-code/osr_eshm/docs/review/03_bootloader_deep_review.md
+    topic: Bootloader 深度 Review 主文档
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/04_bootloader_crt0_m130_startup_deep_dive.md
+    topic: M130 启动、异常和中断入口
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/05_bootloader_m130_interrupt_deep_dive.md
+    topic: M130 CLIC 中断机制
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/06_bootloader_m130_soc_memory_remap_deep_dive.md
+    topic: M130 到 SoC 远端地址映射
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/07_bootloader_secboot_report_error_deep_dive.md
+    topic: Secure Boot 错误上报和失败路径
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/08_ehsm_mailbox_host_fw_otp_read_flow.md
+    topic: Mailbox、Host/FW 和 OTP 读取链路
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/09_ehsm_debug_auth_challenge_response_deep_dive.md
+    topic: Debug Auth challenge-response
+    disposition: historical_analysis
+  - path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    topic: OTP 密钥生成和外部导入
+    disposition: candidate_findings_present
+  - path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    topic: TRNG 自检和结果处理
+    disposition: candidate_findings_present
+findings:
+  - id: FINDING-OTPKEY-01
+    title: 外部导入包使用固定全零 IV
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 667
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-02
+    title: 完整性只使用非密钥 CRC32
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 673
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-03
+    title: 未验证 12 字节零填充
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 679
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-04
+    title: 敏感中间数据未在函数返回前显式清零
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 685
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-05
+    title: Host demo 不是完整 OTP 安装测试
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 691
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-06
+    title: SM2/P-256 随机生成不返回公钥
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 697
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-07
+    title: 关键语义依赖槽位和属性，命令自身不绑定用途
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 703
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-OTPKEY-08
+    title: 对称随机路径的设计语义未文档化
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/10_bootloader_otp_key_generation_host_device_flow.md
+    source_line: 709
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-01
+    title: 4-bit 和 8-bit 采用 OR 关系
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 604
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-02
+    title: 三轮任意一次成功即整体成功
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 610
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-03
+    title: 测试对象不是 RO 原始熵
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 616
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-04
+    title: 阈值硬编码且无来源注释
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 622
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-05
+    title: Host 和 BL 的 TRNG 结果位定义不一致
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 628
+    evidence_state: CONFIRMED
+    workflow_status: resolved_ehsm_host_definition_error
+    priority: implementation_followup
+    conflict_report: sources/conflict-reports/CONFLICT-SRC-0012-SRC-0014-TRNG-BITMAP.md
+    resolution: 2026-07-22 Vendor回复确认Bootloader定义正确、Host定义错误；项目采用bit18/0x40000=TRNG，详见ADR-0003。
+  - id: FINDING-TRNG-06
+    title: Mailbox 注释中的两个结果 word 顺序与实现不一致
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 634
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-07
+    title: Host demo 覆盖自检命令返回码
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 640
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-08
+    title: 结果位图为累积全局状态
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 646
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+  - id: FINDING-TRNG-09
+    title: 没有直接的控制流冗余保护
+    source_path: source-vault/vendor-code/osr_eshm/docs/review/11_bootloader_trng_selftest_deep_dive.md
+    source_line: 652
+    evidence_state: ASSUMPTION
+    workflow_status: pending_revalidation
+    priority: unassigned
+summary:
+  candidate_findings: 17
+  otp_key_findings: 8
+  trng_findings: 9
+  revalidated_conflicts: 0
+  resolved_findings: 1
+  pending_revalidation: 16
+  promoted_issues: 0
+  confirmed_findings: 1

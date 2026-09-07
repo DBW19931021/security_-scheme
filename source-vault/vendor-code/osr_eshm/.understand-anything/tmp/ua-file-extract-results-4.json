@@ -1,0 +1,6235 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 26,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/aead/aead_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 1330,
+      "nonEmptyLines": 1261,
+      "functions": [
+        {
+          "name": "aead_get_kms_alg",
+          "startLine": 65,
+          "endLine": 92,
+          "params": [
+            "alg"
+          ]
+        },
+        {
+          "name": "aead_get_key",
+          "startLine": 111,
+          "endLine": 148,
+          "params": [
+            "key_handle",
+            "alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "aead_ccm_get_key",
+          "startLine": 167,
+          "endLine": 195,
+          "params": [
+            "ccm_cmd_data",
+            "alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "aead_gcm_get_key",
+          "startLine": 214,
+          "endLine": 242,
+          "params": [
+            "gcm_cmd_data",
+            "alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "aead_ccm_ctx_recovery_key",
+          "startLine": 256,
+          "endLine": 271,
+          "params": [
+            "ske_ctx",
+            "ccm_cmd_data",
+            "dir",
+            "alg"
+          ]
+        },
+        {
+          "name": "aead_gcm_ctx_recovery_key",
+          "startLine": 285,
+          "endLine": 300,
+          "params": [
+            "ske_ctx",
+            "gcm_cmd_data",
+            "dir",
+            "alg"
+          ]
+        },
+        {
+          "name": "aead_get_iv",
+          "startLine": 315,
+          "endLine": 328,
+          "params": [
+            "r_iv",
+            "iv_sz",
+            "iv_buf",
+            "iv_buf_sz",
+            "iv_ptr"
+          ]
+        },
+        {
+          "name": "aead_check_output_buf_sz",
+          "startLine": 341,
+          "endLine": 348,
+          "params": [
+            "process_mode",
+            "input_sz",
+            "output_sz"
+          ]
+        },
+        {
+          "name": "gcm_rctx_switch_ctx",
+          "startLine": 361,
+          "endLine": 373,
+          "params": [
+            "gcm_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "ccm_rctx_switch_ctx",
+          "startLine": 386,
+          "endLine": 399,
+          "params": [
+            "ccm_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "gcm_update_aad",
+          "startLine": 412,
+          "endLine": 425,
+          "params": [
+            "raad",
+            "ctx"
+          ]
+        },
+        {
+          "name": "gcm_update_payload",
+          "startLine": 439,
+          "endLine": 454,
+          "params": [
+            "rin_addr",
+            "input_sz",
+            "rout_addr",
+            "ctx"
+          ]
+        },
+        {
+          "name": "gcm_updata_last_block",
+          "startLine": 468,
+          "endLine": 481,
+          "params": [
+            "rin_addr",
+            "input_sz",
+            "rout_addr",
+            "ctx"
+          ]
+        },
+        {
+          "name": "gcm_final_internal",
+          "startLine": 496,
+          "endLine": 554,
+          "params": [
+            "rin_addr",
+            "input_sz",
+            "rout_addr",
+            "rmac",
+            "ctx"
+          ]
+        },
+        {
+          "name": "gcm_init",
+          "startLine": 566,
+          "endLine": 603,
+          "params": [
+            "gcm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gcm_update",
+          "startLine": 615,
+          "endLine": 631,
+          "params": [
+            "gcm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gcm_final",
+          "startLine": 643,
+          "endLine": 667,
+          "params": [
+            "gcm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gcm_srv_onepass",
+          "startLine": 679,
+          "endLine": 755,
+          "params": [
+            "gcm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gcm_srv_stepwise_handler",
+          "startLine": 767,
+          "endLine": 796,
+          "params": [
+            "gcm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ccm_update_aad",
+          "startLine": 808,
+          "endLine": 821,
+          "params": [
+            "raad",
+            "ctx"
+          ]
+        },
+        {
+          "name": "ccm_update_payload",
+          "startLine": 835,
+          "endLine": 850,
+          "params": [
+            "rin_addr",
+            "input_sz",
+            "rout_addr",
+            "ctx"
+          ]
+        },
+        {
+          "name": "ccm_updata_single_block",
+          "startLine": 864,
+          "endLine": 877,
+          "params": [
+            "rin_addr",
+            "input_sz",
+            "rout_addr",
+            "ctx"
+          ]
+        },
+        {
+          "name": "ccm_final_first_block_update",
+          "startLine": 891,
+          "endLine": 902,
+          "params": [
+            "rin_addr",
+            "first_block_sz",
+            "rout_addr",
+            "ctx"
+          ]
+        },
+        {
+          "name": "ccm_final_dma_update",
+          "startLine": 916,
+          "endLine": 926,
+          "params": [
+            "rin_addr",
+            "dma_data_sz",
+            "rout_addr",
+            "ctx"
+          ]
+        },
+        {
+          "name": "ccm_final_internal",
+          "startLine": 941,
+          "endLine": 1012,
+          "params": [
+            "rin_addr",
+            "input_sz",
+            "rout_addr",
+            "rmac",
+            "ctx"
+          ]
+        },
+        {
+          "name": "ccm_init",
+          "startLine": 1024,
+          "endLine": 1064,
+          "params": [
+            "ccm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ccm_update",
+          "startLine": 1076,
+          "endLine": 1118,
+          "params": [
+            "ccm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ccm_final",
+          "startLine": 1130,
+          "endLine": 1154,
+          "params": [
+            "ccm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ccm_srv_onepass",
+          "startLine": 1166,
+          "endLine": 1220,
+          "params": [
+            "ccm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ccm_srv_stepwise_handler",
+          "startLine": 1232,
+          "endLine": 1261,
+          "params": [
+            "ccm_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "aead_srv_gcm_init",
+          "startLine": 1266,
+          "endLine": 1269,
+          "params": []
+        },
+        {
+          "name": "aead_srv_gcm_handler",
+          "startLine": 1271,
+          "endLine": 1297,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "aead_srv_ccm_init",
+          "startLine": 1299,
+          "endLine": 1302,
+          "params": []
+        },
+        {
+          "name": "aead_srv_ccm_handler",
+          "startLine": 1304,
+          "endLine": 1330,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "aead_srv_gcm_init",
+          "line": 1266,
+          "isDefault": false
+        },
+        {
+          "name": "aead_srv_gcm_handler",
+          "line": 1271,
+          "isDefault": false
+        },
+        {
+          "name": "aead_srv_ccm_init",
+          "line": 1299,
+          "isDefault": false
+        },
+        {
+          "name": "aead_srv_ccm_handler",
+          "line": 1304,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "aead_get_key",
+          "callee": "aead_get_kms_alg",
+          "lineNumber": 118
+        },
+        {
+          "caller": "aead_get_key",
+          "callee": "kms_read_key",
+          "lineNumber": 124
+        },
+        {
+          "caller": "aead_ccm_get_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 179
+        },
+        {
+          "caller": "aead_ccm_get_key",
+          "callee": "aead_get_key",
+          "lineNumber": 187
+        },
+        {
+          "caller": "aead_gcm_get_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 226
+        },
+        {
+          "caller": "aead_gcm_get_key",
+          "callee": "aead_get_key",
+          "lineNumber": 234
+        },
+        {
+          "caller": "aead_ccm_ctx_recovery_key",
+          "callee": "aead_ccm_get_key",
+          "lineNumber": 266
+        },
+        {
+          "caller": "aead_ccm_ctx_recovery_key",
+          "callee": "cpt_set_ske_ctx_key",
+          "lineNumber": 268
+        },
+        {
+          "caller": "aead_gcm_ctx_recovery_key",
+          "callee": "aead_gcm_get_key",
+          "lineNumber": 295
+        },
+        {
+          "caller": "aead_gcm_ctx_recovery_key",
+          "callee": "cpt_set_ske_ctx_key",
+          "lineNumber": 297
+        },
+        {
+          "caller": "aead_get_iv",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 319
+        },
+        {
+          "caller": "gcm_rctx_switch_ctx",
+          "callee": "cpt_get_gcm_ske_ctx",
+          "lineNumber": 365
+        },
+        {
+          "caller": "gcm_rctx_switch_ctx",
+          "callee": "cpt_gcm_rctx_switch_ctx",
+          "lineNumber": 367
+        },
+        {
+          "caller": "gcm_rctx_switch_ctx",
+          "callee": "aead_gcm_ctx_recovery_key",
+          "lineNumber": 369
+        },
+        {
+          "caller": "ccm_rctx_switch_ctx",
+          "callee": "cpt_get_ccm_ske_ctx",
+          "lineNumber": 390
+        },
+        {
+          "caller": "ccm_rctx_switch_ctx",
+          "callee": "cpt_ccm_rctx_switch_ctx",
+          "lineNumber": 392
+        },
+        {
+          "caller": "ccm_rctx_switch_ctx",
+          "callee": "aead_ccm_ctx_recovery_key",
+          "lineNumber": 395
+        },
+        {
+          "caller": "gcm_update_aad",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 417
+        },
+        {
+          "caller": "gcm_update_aad",
+          "callee": "cpt_ske_gcm_update_blocks_aad",
+          "lineNumber": 419
+        },
+        {
+          "caller": "gcm_update_payload",
+          "callee": "cpt_ske_dma_gcm_update_blocks",
+          "lineNumber": 450
+        },
+        {
+          "caller": "gcm_updata_last_block",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 473
+        },
+        {
+          "caller": "gcm_updata_last_block",
+          "callee": "cpt_ske_gcm_update_blocks",
+          "lineNumber": 475
+        },
+        {
+          "caller": "gcm_updata_last_block",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 478
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "gcm_update_payload",
+          "lineNumber": 513
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "gcm_updata_last_block",
+          "lineNumber": 522
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 529
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "cpt_ske_gcm_final",
+          "lineNumber": 532
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 535
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 540
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "cpt_ske_gcm_final",
+          "lineNumber": 543
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 546
+        },
+        {
+          "caller": "gcm_final_internal",
+          "callee": "cpt_ske_dma_gcm_update_final",
+          "lineNumber": 549
+        },
+        {
+          "caller": "gcm_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 578
+        },
+        {
+          "caller": "gcm_init",
+          "callee": "aead_gcm_get_key",
+          "lineNumber": 580
+        },
+        {
+          "caller": "gcm_init",
+          "callee": "aead_get_iv",
+          "lineNumber": 585
+        },
+        {
+          "caller": "gcm_init",
+          "callee": "cpt_ske_gcm_init",
+          "lineNumber": 592
+        },
+        {
+          "caller": "gcm_init",
+          "callee": "gcm_update_aad",
+          "lineNumber": 596
+        },
+        {
+          "caller": "gcm_init",
+          "callee": "gcm_rctx_switch_ctx",
+          "lineNumber": 599
+        },
+        {
+          "caller": "gcm_update",
+          "callee": "gcm_rctx_switch_ctx",
+          "lineNumber": 619
+        },
+        {
+          "caller": "gcm_update",
+          "callee": "gcm_update_payload",
+          "lineNumber": 621
+        },
+        {
+          "caller": "gcm_update",
+          "callee": "gcm_rctx_switch_ctx",
+          "lineNumber": 624
+        },
+        {
+          "caller": "gcm_final",
+          "callee": "gcm_rctx_switch_ctx",
+          "lineNumber": 648
+        },
+        {
+          "caller": "gcm_final",
+          "callee": "gcm_final_internal",
+          "lineNumber": 650
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 691
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "aead_gcm_get_key",
+          "lineNumber": 695
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "aead_get_iv",
+          "lineNumber": 701
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "cpt_ske_gcm_init",
+          "lineNumber": 707
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 719
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "cpt_ske_gcm_final",
+          "lineNumber": 721
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "cpt_ske_gcm_final",
+          "lineNumber": 724
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 726
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "gcm_update_aad",
+          "lineNumber": 732
+        },
+        {
+          "caller": "gcm_srv_onepass",
+          "callee": "gcm_final_internal",
+          "lineNumber": 735
+        },
+        {
+          "caller": "gcm_srv_stepwise_handler",
+          "callee": "gcm_init",
+          "lineNumber": 772
+        },
+        {
+          "caller": "gcm_srv_stepwise_handler",
+          "callee": "gcm_update",
+          "lineNumber": 776
+        },
+        {
+          "caller": "gcm_srv_stepwise_handler",
+          "callee": "gcm_init",
+          "lineNumber": 780
+        },
+        {
+          "caller": "gcm_srv_stepwise_handler",
+          "callee": "gcm_update",
+          "lineNumber": 782
+        },
+        {
+          "caller": "gcm_srv_stepwise_handler",
+          "callee": "gcm_final",
+          "lineNumber": 787
+        },
+        {
+          "caller": "ccm_update_aad",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 813
+        },
+        {
+          "caller": "ccm_update_aad",
+          "callee": "cpt_ske_ccm_update_aad",
+          "lineNumber": 815
+        },
+        {
+          "caller": "ccm_update_payload",
+          "callee": "cpt_ske_dma_ccm_update_blocks",
+          "lineNumber": 846
+        },
+        {
+          "caller": "ccm_updata_single_block",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 869
+        },
+        {
+          "caller": "ccm_updata_single_block",
+          "callee": "cpt_ske_ccm_update_blocks",
+          "lineNumber": 871
+        },
+        {
+          "caller": "ccm_updata_single_block",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 874
+        },
+        {
+          "caller": "ccm_final_first_block_update",
+          "callee": "ccm_updata_single_block",
+          "lineNumber": 896
+        },
+        {
+          "caller": "ccm_final_dma_update",
+          "callee": "ccm_update_payload",
+          "lineNumber": 920
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "ccm_final_first_block_update",
+          "lineNumber": 973
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "ccm_final_dma_update",
+          "lineNumber": 978
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "ccm_updata_single_block",
+          "lineNumber": 983
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "cpt_ske_dma_ccm_update_final",
+          "lineNumber": 997
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1000
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "cpt_ske_ccm_final",
+          "lineNumber": 1004
+        },
+        {
+          "caller": "ccm_final_internal",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 1007
+        },
+        {
+          "caller": "ccm_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 1038
+        },
+        {
+          "caller": "ccm_init",
+          "callee": "aead_ccm_get_key",
+          "lineNumber": 1046
+        },
+        {
+          "caller": "ccm_init",
+          "callee": "aead_get_iv",
+          "lineNumber": 1050
+        },
+        {
+          "caller": "ccm_init",
+          "callee": "cpt_ske_ccm_init",
+          "lineNumber": 1053
+        },
+        {
+          "caller": "ccm_init",
+          "callee": "ccm_update_aad",
+          "lineNumber": 1057
+        },
+        {
+          "caller": "ccm_init",
+          "callee": "ccm_rctx_switch_ctx",
+          "lineNumber": 1060
+        },
+        {
+          "caller": "ccm_update",
+          "callee": "ccm_rctx_switch_ctx",
+          "lineNumber": 1084
+        },
+        {
+          "caller": "ccm_update",
+          "callee": "ccm_updata_single_block",
+          "lineNumber": 1099
+        },
+        {
+          "caller": "ccm_update",
+          "callee": "ccm_update_payload",
+          "lineNumber": 1107
+        },
+        {
+          "caller": "ccm_update",
+          "callee": "ccm_rctx_switch_ctx",
+          "lineNumber": 1111
+        },
+        {
+          "caller": "ccm_final",
+          "callee": "ccm_rctx_switch_ctx",
+          "lineNumber": 1135
+        },
+        {
+          "caller": "ccm_final",
+          "callee": "ccm_final_internal",
+          "lineNumber": 1137
+        },
+        {
+          "caller": "ccm_srv_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 1180
+        },
+        {
+          "caller": "ccm_srv_onepass",
+          "callee": "aead_ccm_get_key",
+          "lineNumber": 1189
+        },
+        {
+          "caller": "ccm_srv_onepass",
+          "callee": "aead_get_iv",
+          "lineNumber": 1193
+        },
+        {
+          "caller": "ccm_srv_onepass",
+          "callee": "cpt_ske_ccm_init",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "ccm_srv_onepass",
+          "callee": "ccm_update_aad",
+          "lineNumber": 1200
+        },
+        {
+          "caller": "ccm_srv_onepass",
+          "callee": "ccm_final_internal",
+          "lineNumber": 1203
+        },
+        {
+          "caller": "ccm_srv_stepwise_handler",
+          "callee": "ccm_init",
+          "lineNumber": 1237
+        },
+        {
+          "caller": "ccm_srv_stepwise_handler",
+          "callee": "ccm_update",
+          "lineNumber": 1241
+        },
+        {
+          "caller": "ccm_srv_stepwise_handler",
+          "callee": "ccm_init",
+          "lineNumber": 1245
+        },
+        {
+          "caller": "ccm_srv_stepwise_handler",
+          "callee": "ccm_update",
+          "lineNumber": 1247
+        },
+        {
+          "caller": "ccm_srv_stepwise_handler",
+          "callee": "ccm_final",
+          "lineNumber": 1252
+        },
+        {
+          "caller": "aead_srv_gcm_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 1278
+        },
+        {
+          "caller": "aead_srv_gcm_handler",
+          "callee": "cmd_check_process_mode",
+          "lineNumber": 1280
+        },
+        {
+          "caller": "aead_srv_gcm_handler",
+          "callee": "aead_check_output_buf_sz",
+          "lineNumber": 1283
+        },
+        {
+          "caller": "aead_srv_gcm_handler",
+          "callee": "gcm_srv_onepass",
+          "lineNumber": 1288
+        },
+        {
+          "caller": "aead_srv_gcm_handler",
+          "callee": "gcm_srv_stepwise_handler",
+          "lineNumber": 1290
+        },
+        {
+          "caller": "aead_srv_ccm_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 1311
+        },
+        {
+          "caller": "aead_srv_ccm_handler",
+          "callee": "cmd_check_process_mode",
+          "lineNumber": 1313
+        },
+        {
+          "caller": "aead_srv_ccm_handler",
+          "callee": "aead_check_output_buf_sz",
+          "lineNumber": 1316
+        },
+        {
+          "caller": "aead_srv_ccm_handler",
+          "callee": "ccm_srv_onepass",
+          "lineNumber": 1321
+        },
+        {
+          "caller": "aead_srv_ccm_handler",
+          "callee": "ccm_srv_stepwise_handler",
+          "lineNumber": 1323
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 34,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/aead/aead_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 66,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/chacha_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/chacha_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 27,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/crypto_util.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 106,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "crypto_srv_init",
+          "startLine": 54,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "lib_ske_secure_port_config",
+          "startLine": 74,
+          "endLine": 88,
+          "params": [
+            "alg",
+            "sp_key_idx"
+          ]
+        },
+        {
+          "name": "lib_hash_secure_port_config",
+          "startLine": 95,
+          "endLine": 106,
+          "params": [
+            "sp_key_idx"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "crypto_srv_init",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "lib_ske_secure_port_config",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "lib_hash_secure_port_config",
+          "line": 95,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "crypto_srv_init",
+          "callee": "hash_srv_init",
+          "lineNumber": 56
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "hmac_srv_init",
+          "lineNumber": 57
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "pke_srv_ecdsa_init",
+          "lineNumber": 58
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "pke_srv_rsa_init",
+          "lineNumber": 59
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "pke_srv_sm2_init",
+          "lineNumber": 60
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "ske_srv_cipher_init",
+          "lineNumber": 61
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "ske_srv_mac_init",
+          "lineNumber": 62
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "rng_srv_init",
+          "lineNumber": 63
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "aead_srv_gcm_init",
+          "lineNumber": 64
+        },
+        {
+          "caller": "crypto_srv_init",
+          "callee": "aead_srv_ccm_init",
+          "lineNumber": 65
+        },
+        {
+          "caller": "lib_ske_secure_port_config",
+          "callee": "UNUSED",
+          "lineNumber": 76
+        },
+        {
+          "caller": "lib_ske_secure_port_config",
+          "callee": "ske_set_secure_port",
+          "lineNumber": 79
+        },
+        {
+          "caller": "lib_ske_secure_port_config",
+          "callee": "kmu_config",
+          "lineNumber": 81
+        },
+        {
+          "caller": "lib_hash_secure_port_config",
+          "callee": "kmu_config",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/crypto_util.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 507,
+      "nonEmptyLines": 479,
+      "callGraph": [
+        {
+          "caller": "crypto_using_ahb_dma",
+          "callee": "crypto_get_ahb_dma_cfg_reg",
+          "lineNumber": 64
+        },
+        {
+          "caller": "crypto_using_ahb_dma",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 66
+        },
+        {
+          "caller": "crypto_using_ahb_dma",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 68
+        },
+        {
+          "caller": "crypto_using_ahb_dma",
+          "callee": "expt_det_add_error",
+          "lineNumber": 70
+        },
+        {
+          "caller": "crypto_release_ahb_dma",
+          "callee": "crypto_get_ahb_dma_cfg_reg",
+          "lineNumber": 78
+        },
+        {
+          "caller": "crypto_release_ahb_dma",
+          "callee": "sysreg_unlock_reg",
+          "lineNumber": 79
+        },
+        {
+          "caller": "crypto_release_ahb_dma",
+          "callee": "sysreg_lock_reg",
+          "lineNumber": 81
+        },
+        {
+          "caller": "crypto_release_ahb_dma",
+          "callee": "expt_det_add_error",
+          "lineNumber": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/hash/hash_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 448,
+      "nonEmptyLines": 419,
+      "functions": [
+        {
+          "name": "hash_check_dma_mode",
+          "startLine": 59,
+          "endLine": 82,
+          "params": [
+            "ctx_buf_addr",
+            "mode",
+            "input_msg_sz"
+          ]
+        },
+        {
+          "name": "hash_cpu_update",
+          "startLine": 95,
+          "endLine": 120,
+          "params": [
+            "msg_addr",
+            "msg_sz",
+            "cpu_ctx"
+          ]
+        },
+        {
+          "name": "hash_cpu_final",
+          "startLine": 134,
+          "endLine": 146,
+          "params": [
+            "msg_addr",
+            "msg_sz",
+            "cpu_ctx",
+            "digest"
+          ]
+        },
+        {
+          "name": "hash_srv_stepwise_init",
+          "startLine": 158,
+          "endLine": 164,
+          "params": [
+            "hash_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hash_srv_stepwise_update",
+          "startLine": 176,
+          "endLine": 181,
+          "params": [
+            "hash_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hash_srv_stepwise_final",
+          "startLine": 193,
+          "endLine": 217,
+          "params": [
+            "hash_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hash_srv_stepwise_handler",
+          "startLine": 229,
+          "endLine": 258,
+          "params": [
+            "hash_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hash_srv_onepass",
+          "startLine": 270,
+          "endLine": 287,
+          "params": [
+            "hash_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hash_srv_using_ahb_dma",
+          "startLine": 292,
+          "endLine": 296,
+          "params": []
+        },
+        {
+          "name": "hash_srv_release_ahb_dma",
+          "startLine": 299,
+          "endLine": 302,
+          "params": [
+            "origin_val"
+          ]
+        },
+        {
+          "name": "hash_srv_cpu_update",
+          "startLine": 304,
+          "endLine": 316,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "hash_srv_dma_update",
+          "startLine": 318,
+          "endLine": 332,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "hash_srv_general_init",
+          "startLine": 334,
+          "endLine": 344,
+          "params": [
+            "ctx_buf_addr",
+            "alg"
+          ]
+        },
+        {
+          "name": "hash_srv_general_update",
+          "startLine": 346,
+          "endLine": 363,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "hash_srv_general_final",
+          "startLine": 365,
+          "endLine": 383,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz",
+            "digest",
+            "digest_sz"
+          ]
+        },
+        {
+          "name": "hash_srv_general_onepass",
+          "startLine": 385,
+          "endLine": 418,
+          "params": [
+            "alg",
+            "msg_addr",
+            "input_sz",
+            "digest_raddr",
+            "digest_lptr",
+            "digest_sz",
+            "mode"
+          ]
+        },
+        {
+          "name": "hash_srv_init",
+          "startLine": 420,
+          "endLine": 423,
+          "params": []
+        },
+        {
+          "name": "hash_srv_handler",
+          "startLine": 425,
+          "endLine": 448,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "hash_srv_using_ahb_dma",
+          "line": 292,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_release_ahb_dma",
+          "line": 299,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_cpu_update",
+          "line": 304,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_dma_update",
+          "line": 318,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_general_init",
+          "line": 334,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_general_update",
+          "line": 346,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_general_final",
+          "line": 365,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_general_onepass",
+          "line": 385,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_init",
+          "line": 420,
+          "isDefault": false
+        },
+        {
+          "name": "hash_srv_handler",
+          "line": 425,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "hash_check_dma_mode",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 65
+        },
+        {
+          "caller": "hash_check_dma_mode",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 66
+        },
+        {
+          "caller": "hash_check_dma_mode",
+          "callee": "util_memcpy",
+          "lineNumber": 69
+        },
+        {
+          "caller": "hash_check_dma_mode",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 80
+        },
+        {
+          "caller": "hash_cpu_update",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 108
+        },
+        {
+          "caller": "hash_cpu_update",
+          "callee": "cpt_hash_update",
+          "lineNumber": 110
+        },
+        {
+          "caller": "hash_cpu_final",
+          "callee": "hash_cpu_update",
+          "lineNumber": 138
+        },
+        {
+          "caller": "hash_cpu_final",
+          "callee": "cpt_hash_final",
+          "lineNumber": 143
+        },
+        {
+          "caller": "hash_srv_stepwise_init",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 162
+        },
+        {
+          "caller": "hash_srv_stepwise_init",
+          "callee": "hash_srv_general_init",
+          "lineNumber": 163
+        },
+        {
+          "caller": "hash_srv_stepwise_update",
+          "callee": "hash_srv_general_update",
+          "lineNumber": 180
+        },
+        {
+          "caller": "hash_srv_stepwise_final",
+          "callee": "hash_srv_general_final",
+          "lineNumber": 202
+        },
+        {
+          "caller": "hash_srv_stepwise_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 207
+        },
+        {
+          "caller": "hash_srv_stepwise_handler",
+          "callee": "hash_srv_stepwise_init",
+          "lineNumber": 234
+        },
+        {
+          "caller": "hash_srv_stepwise_handler",
+          "callee": "hash_srv_stepwise_update",
+          "lineNumber": 238
+        },
+        {
+          "caller": "hash_srv_stepwise_handler",
+          "callee": "hash_srv_stepwise_init",
+          "lineNumber": 242
+        },
+        {
+          "caller": "hash_srv_stepwise_handler",
+          "callee": "hash_srv_stepwise_update",
+          "lineNumber": 244
+        },
+        {
+          "caller": "hash_srv_stepwise_handler",
+          "callee": "hash_srv_stepwise_final",
+          "lineNumber": 249
+        },
+        {
+          "caller": "hash_srv_onepass",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 273
+        },
+        {
+          "caller": "hash_srv_onepass",
+          "callee": "hash_get_digest_word_len",
+          "lineNumber": 274
+        },
+        {
+          "caller": "hash_srv_onepass",
+          "callee": "hash_srv_general_onepass",
+          "lineNumber": 277
+        },
+        {
+          "caller": "hash_srv_using_ahb_dma",
+          "callee": "crypto_using_ahb_dma",
+          "lineNumber": 295
+        },
+        {
+          "caller": "hash_srv_release_ahb_dma",
+          "callee": "crypto_release_ahb_dma",
+          "lineNumber": 301
+        },
+        {
+          "caller": "hash_srv_cpu_update",
+          "callee": "cpt_hash_rctx_switch_cpu_ctx",
+          "lineNumber": 308
+        },
+        {
+          "caller": "hash_srv_cpu_update",
+          "callee": "hash_cpu_update",
+          "lineNumber": 310
+        },
+        {
+          "caller": "hash_srv_cpu_update",
+          "callee": "cpt_hash_rctx_switch_cpu_ctx",
+          "lineNumber": 312
+        },
+        {
+          "caller": "hash_srv_dma_update",
+          "callee": "cpt_hash_rctx_switch_dma_ctx",
+          "lineNumber": 324
+        },
+        {
+          "caller": "hash_srv_dma_update",
+          "callee": "cpt_hash_dma_update_blocks",
+          "lineNumber": 326
+        },
+        {
+          "caller": "hash_srv_dma_update",
+          "callee": "cpt_hash_rctx_switch_dma_ctx",
+          "lineNumber": 328
+        },
+        {
+          "caller": "hash_srv_general_init",
+          "callee": "cpt_hash_init",
+          "lineNumber": 339
+        },
+        {
+          "caller": "hash_srv_general_init",
+          "callee": "cpt_hash_rctx_switch_cpu_ctx",
+          "lineNumber": 341
+        },
+        {
+          "caller": "hash_srv_general_update",
+          "callee": "hash_check_dma_mode",
+          "lineNumber": 350
+        },
+        {
+          "caller": "hash_srv_general_update",
+          "callee": "hash_srv_dma_update",
+          "lineNumber": 357
+        },
+        {
+          "caller": "hash_srv_general_update",
+          "callee": "hash_srv_cpu_update",
+          "lineNumber": 359
+        },
+        {
+          "caller": "hash_srv_general_final",
+          "callee": "cpt_hash_rctx_switch_cpu_ctx",
+          "lineNumber": 371
+        },
+        {
+          "caller": "hash_srv_general_final",
+          "callee": "hash_cpu_final",
+          "lineNumber": 377
+        },
+        {
+          "caller": "hash_srv_general_onepass",
+          "callee": "hash_get_digest_word_len",
+          "lineNumber": 399
+        },
+        {
+          "caller": "hash_srv_general_onepass",
+          "callee": "cpt_hash_dma",
+          "lineNumber": 404
+        },
+        {
+          "caller": "hash_srv_general_onepass",
+          "callee": "util_memcpy",
+          "lineNumber": 406
+        },
+        {
+          "caller": "hash_srv_general_onepass",
+          "callee": "cpt_hash_dma",
+          "lineNumber": 415
+        },
+        {
+          "caller": "hash_srv_handler",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 431
+        },
+        {
+          "caller": "hash_srv_handler",
+          "callee": "cmd_check_process_mode",
+          "lineNumber": 434
+        },
+        {
+          "caller": "hash_srv_handler",
+          "callee": "hash_srv_onepass",
+          "lineNumber": 438
+        },
+        {
+          "caller": "hash_srv_handler",
+          "callee": "hash_srv_stepwise_handler",
+          "lineNumber": 440
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 10,
+        "functionCount": 18,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/hash/hash_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 169,
+      "nonEmptyLines": 153,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/hash/hmac_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 724,
+      "nonEmptyLines": 687,
+      "functions": [
+        {
+          "name": "hmac_get_key_from_handle",
+          "startLine": 89,
+          "endLine": 113,
+          "params": [
+            "hmac_cmd_data",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_idx"
+          ]
+        },
+        {
+          "name": "hmac_get_key",
+          "startLine": 129,
+          "endLine": 156,
+          "params": [
+            "hmac_cmd_data",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_idx"
+          ]
+        },
+        {
+          "name": "hmac_rctx_switch_cpu_ctx",
+          "startLine": 171,
+          "endLine": 196,
+          "params": [
+            "rctx_addr",
+            "hmac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "hmac_rctx_switch_dma_ctx",
+          "startLine": 210,
+          "endLine": 235,
+          "params": [
+            "rctx_addr",
+            "hmac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "hmac_check_dma_mode",
+          "startLine": 248,
+          "endLine": 271,
+          "params": [
+            "ctx_buf_addr",
+            "mode",
+            "input_msg_sz"
+          ]
+        },
+        {
+          "name": "hmac_check_mac_sz",
+          "startLine": 285,
+          "endLine": 313,
+          "params": [
+            "dir",
+            "alg",
+            "mb_mac_sz",
+            "hmac_sz"
+          ]
+        },
+        {
+          "name": "hmac_srv_dma_update",
+          "startLine": 327,
+          "endLine": 342,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "msg_sz",
+            "hmac_cmd_data"
+          ]
+        },
+        {
+          "name": "hmac_srv_cpu_update_internal",
+          "startLine": 355,
+          "endLine": 380,
+          "params": [
+            "msg_addr",
+            "msg_sz",
+            "cpu_ctx"
+          ]
+        },
+        {
+          "name": "hmac_srv_cpu_update",
+          "startLine": 395,
+          "endLine": 408,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "msg_sz",
+            "hmac_cmd_data"
+          ]
+        },
+        {
+          "name": "hmac_cpu_final",
+          "startLine": 422,
+          "endLine": 434,
+          "params": [
+            "msg_addr",
+            "msg_sz",
+            "cpu_ctx",
+            "mac"
+          ]
+        },
+        {
+          "name": "hmac_srv_stepwise_init",
+          "startLine": 446,
+          "endLine": 467,
+          "params": [
+            "hmac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hmac_srv_stepwise_update",
+          "startLine": 479,
+          "endLine": 500,
+          "params": [
+            "hmac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hmac_srv_stepwise_final",
+          "startLine": 512,
+          "endLine": 563,
+          "params": [
+            "hmac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hmac_srv_stepwise_handler",
+          "startLine": 575,
+          "endLine": 604,
+          "params": [
+            "hmac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hmac_srv_onepass",
+          "startLine": 616,
+          "endLine": 689,
+          "params": [
+            "hmac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "hmac_srv_init",
+          "startLine": 694,
+          "endLine": 697,
+          "params": []
+        },
+        {
+          "name": "hmac_srv_handler",
+          "startLine": 699,
+          "endLine": 724,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "hmac_srv_init",
+          "line": 694,
+          "isDefault": false
+        },
+        {
+          "name": "hmac_srv_handler",
+          "line": 699,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "hmac_get_key_from_handle",
+          "callee": "kms_read_key",
+          "lineNumber": 96
+        },
+        {
+          "caller": "hmac_get_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 140
+        },
+        {
+          "caller": "hmac_get_key",
+          "callee": "hmac_get_key_from_handle",
+          "lineNumber": 148
+        },
+        {
+          "caller": "hmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_hash_rctx_switch_cpu_ctx",
+          "lineNumber": 184
+        },
+        {
+          "caller": "hmac_rctx_switch_cpu_ctx",
+          "callee": "hmac_get_key",
+          "lineNumber": 187
+        },
+        {
+          "caller": "hmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_build_hmac_cpu_ctx_without_hash",
+          "lineNumber": 190
+        },
+        {
+          "caller": "hmac_rctx_switch_cpu_ctx",
+          "callee": "util_memset",
+          "lineNumber": 192
+        },
+        {
+          "caller": "hmac_rctx_switch_dma_ctx",
+          "callee": "cpt_hash_rctx_switch_dma_ctx",
+          "lineNumber": 218
+        },
+        {
+          "caller": "hmac_rctx_switch_dma_ctx",
+          "callee": "hmac_get_key",
+          "lineNumber": 226
+        },
+        {
+          "caller": "hmac_rctx_switch_dma_ctx",
+          "callee": "cpt_build_hmac_dma_ctx_without_hash",
+          "lineNumber": 229
+        },
+        {
+          "caller": "hmac_rctx_switch_dma_ctx",
+          "callee": "util_memset",
+          "lineNumber": 231
+        },
+        {
+          "caller": "hmac_check_dma_mode",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 255
+        },
+        {
+          "caller": "hmac_check_dma_mode",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 256
+        },
+        {
+          "caller": "hmac_check_dma_mode",
+          "callee": "util_memcpy",
+          "lineNumber": 258
+        },
+        {
+          "caller": "hmac_check_dma_mode",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 269
+        },
+        {
+          "caller": "hmac_check_mac_sz",
+          "callee": "hash_get_digest_word_len",
+          "lineNumber": 288
+        },
+        {
+          "caller": "hmac_srv_dma_update",
+          "callee": "hmac_rctx_switch_dma_ctx",
+          "lineNumber": 334
+        },
+        {
+          "caller": "hmac_srv_dma_update",
+          "callee": "cpt_hmac_dma_update_blocks",
+          "lineNumber": 336
+        },
+        {
+          "caller": "hmac_srv_dma_update",
+          "callee": "hmac_rctx_switch_dma_ctx",
+          "lineNumber": 338
+        },
+        {
+          "caller": "hmac_srv_cpu_update_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 368
+        },
+        {
+          "caller": "hmac_srv_cpu_update_internal",
+          "callee": "cpt_hmac_update",
+          "lineNumber": 370
+        },
+        {
+          "caller": "hmac_srv_cpu_update",
+          "callee": "hmac_rctx_switch_cpu_ctx",
+          "lineNumber": 400
+        },
+        {
+          "caller": "hmac_srv_cpu_update",
+          "callee": "hmac_srv_cpu_update_internal",
+          "lineNumber": 402
+        },
+        {
+          "caller": "hmac_srv_cpu_update",
+          "callee": "hmac_rctx_switch_cpu_ctx",
+          "lineNumber": 405
+        },
+        {
+          "caller": "hmac_cpu_final",
+          "callee": "hmac_srv_cpu_update_internal",
+          "lineNumber": 426
+        },
+        {
+          "caller": "hmac_cpu_final",
+          "callee": "cpt_hmac_final",
+          "lineNumber": 431
+        },
+        {
+          "caller": "hmac_srv_stepwise_init",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 456
+        },
+        {
+          "caller": "hmac_srv_stepwise_init",
+          "callee": "hmac_get_key",
+          "lineNumber": 457
+        },
+        {
+          "caller": "hmac_srv_stepwise_init",
+          "callee": "cpt_hmac_init",
+          "lineNumber": 460
+        },
+        {
+          "caller": "hmac_srv_stepwise_init",
+          "callee": "hmac_rctx_switch_cpu_ctx",
+          "lineNumber": 463
+        },
+        {
+          "caller": "hmac_srv_stepwise_init",
+          "callee": "util_memset",
+          "lineNumber": 465
+        },
+        {
+          "caller": "hmac_srv_stepwise_update",
+          "callee": "hmac_check_dma_mode",
+          "lineNumber": 485
+        },
+        {
+          "caller": "hmac_srv_stepwise_update",
+          "callee": "hmac_srv_dma_update",
+          "lineNumber": 492
+        },
+        {
+          "caller": "hmac_srv_stepwise_update",
+          "callee": "hmac_srv_cpu_update",
+          "lineNumber": 495
+        },
+        {
+          "caller": "hmac_srv_stepwise_final",
+          "callee": "hmac_rctx_switch_cpu_ctx",
+          "lineNumber": 522
+        },
+        {
+          "caller": "hmac_srv_stepwise_final",
+          "callee": "hmac_check_mac_sz",
+          "lineNumber": 525
+        },
+        {
+          "caller": "hmac_srv_stepwise_final",
+          "callee": "hmac_cpu_final",
+          "lineNumber": 532
+        },
+        {
+          "caller": "hmac_srv_stepwise_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 536
+        },
+        {
+          "caller": "hmac_srv_stepwise_final",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 545
+        },
+        {
+          "caller": "hmac_srv_stepwise_final",
+          "callee": "util_memcmp",
+          "lineNumber": 547
+        },
+        {
+          "caller": "hmac_srv_stepwise_handler",
+          "callee": "hmac_srv_stepwise_init",
+          "lineNumber": 580
+        },
+        {
+          "caller": "hmac_srv_stepwise_handler",
+          "callee": "hmac_srv_stepwise_update",
+          "lineNumber": 584
+        },
+        {
+          "caller": "hmac_srv_stepwise_handler",
+          "callee": "hmac_srv_stepwise_init",
+          "lineNumber": 588
+        },
+        {
+          "caller": "hmac_srv_stepwise_handler",
+          "callee": "hmac_srv_stepwise_update",
+          "lineNumber": 590
+        },
+        {
+          "caller": "hmac_srv_stepwise_handler",
+          "callee": "hmac_srv_stepwise_final",
+          "lineNumber": 595
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 631
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "hmac_check_mac_sz",
+          "lineNumber": 633
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "hmac_get_key",
+          "lineNumber": 635
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "cpt_hmac_dma",
+          "lineNumber": 643
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "util_memcpy",
+          "lineNumber": 647
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 648
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 663
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "cpt_hmac_dma",
+          "lineNumber": 665
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "util_memcpy",
+          "lineNumber": 671
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "util_memcmp",
+          "lineNumber": 672
+        },
+        {
+          "caller": "hmac_srv_onepass",
+          "callee": "util_memset",
+          "lineNumber": 687
+        },
+        {
+          "caller": "hmac_srv_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 705
+        },
+        {
+          "caller": "hmac_srv_handler",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 707
+        },
+        {
+          "caller": "hmac_srv_handler",
+          "callee": "cmd_check_process_mode",
+          "lineNumber": 710
+        },
+        {
+          "caller": "hmac_srv_handler",
+          "callee": "hmac_srv_onepass",
+          "lineNumber": 714
+        },
+        {
+          "caller": "hmac_srv_handler",
+          "callee": "hmac_srv_stepwise_handler",
+          "lineNumber": 716
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 17,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/hash/hmac_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 45,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/ecdsa_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 706,
+      "nonEmptyLines": 668,
+      "functions": [
+        {
+          "name": "ecdsa_srv_sign_internal",
+          "startLine": 124,
+          "endLine": 132,
+          "params": [
+            "curve",
+            "E",
+            "EByteLen",
+            "rand_k",
+            "priKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_verify_internal",
+          "startLine": 147,
+          "endLine": 155,
+          "params": [
+            "curve",
+            "E",
+            "EByteLen",
+            "pubKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "ed25519_srv_sign_internal",
+          "startLine": 173,
+          "endLine": 177,
+          "params": [
+            "mode",
+            "prikey",
+            "pubkey",
+            "ctx",
+            "ctxByteLen",
+            "M",
+            "MByteLen",
+            "RS"
+          ]
+        },
+        {
+          "name": "ed25519_srv_verify_internal",
+          "startLine": 194,
+          "endLine": 198,
+          "params": [
+            "mode",
+            "pubkey",
+            "ctx",
+            "ctxByteLen",
+            "M",
+            "MByteLen",
+            "RS"
+          ]
+        },
+        {
+          "name": "ecc_get_key_from_handle",
+          "startLine": 215,
+          "endLine": 249,
+          "params": [
+            "ecdsa_cmd_data",
+            "curve",
+            "pubkey",
+            "prikey",
+            "key_buf",
+            "key_buf_sz",
+            "ed25519_sel"
+          ]
+        },
+        {
+          "name": "ecc_read_plain_key",
+          "startLine": 266,
+          "endLine": 314,
+          "params": [
+            "ecdsa_cmd_data",
+            "curve",
+            "pubkey",
+            "prikey",
+            "key_buf",
+            "key_buf_sz",
+            "ed25519_sel"
+          ]
+        },
+        {
+          "name": "ecc_get_key",
+          "startLine": 330,
+          "endLine": 348,
+          "params": [
+            "ecdsa_cmd_data",
+            "curve",
+            "pubkey",
+            "prikey",
+            "key_buf",
+            "key_buf_sz",
+            "ed25519_sel"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_sign",
+          "startLine": 365,
+          "endLine": 383,
+          "params": [
+            "curve",
+            "digest",
+            "digest_sz",
+            "prikey",
+            "rs_addr",
+            "rs_sz",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_vry",
+          "startLine": 400,
+          "endLine": 426,
+          "params": [
+            "curve",
+            "digest",
+            "digest_sz",
+            "pubkey",
+            "rs_addr",
+            "rs_sz",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_sign_vry",
+          "startLine": 443,
+          "endLine": 455,
+          "params": [
+            "curve",
+            "digest",
+            "digest_sz",
+            "pubkey",
+            "prikey",
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ed25519_srv_sign",
+          "startLine": 472,
+          "endLine": 493,
+          "params": [
+            "digest",
+            "digest_sz",
+            "prikey",
+            "pubkey",
+            "rs_addr",
+            "rs_sz",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ed25519_srv_vry",
+          "startLine": 509,
+          "endLine": 540,
+          "params": [
+            "digest",
+            "digest_sz",
+            "pubkey",
+            "rs_addr",
+            "rs_sz",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ed25519_srv_sign_vry",
+          "startLine": 556,
+          "endLine": 568,
+          "params": [
+            "digest",
+            "digest_sz",
+            "pubkey",
+            "prikey",
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_onepass",
+          "startLine": 570,
+          "endLine": 604,
+          "params": [
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_init",
+          "startLine": 606,
+          "endLine": 611,
+          "params": [
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_update",
+          "startLine": 613,
+          "endLine": 617,
+          "params": [
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_final",
+          "startLine": 619,
+          "endLine": 644,
+          "params": [
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "ecdsa_srv_stepwise_handler",
+          "startLine": 646,
+          "endLine": 675,
+          "params": [
+            "ecdsa_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "pke_srv_ecdsa_init",
+          "startLine": 680,
+          "endLine": 683,
+          "params": []
+        },
+        {
+          "name": "pke_srv_ecdsa_handler",
+          "startLine": 685,
+          "endLine": 706,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "pke_srv_ecdsa_init",
+          "line": 680,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_ecdsa_handler",
+          "line": 685,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ecdsa_srv_sign_internal",
+          "callee": "cpt_ecdsa_sign",
+          "lineNumber": 127
+        },
+        {
+          "caller": "ecdsa_srv_verify_internal",
+          "callee": "cpt_ecdsa_verify",
+          "lineNumber": 150
+        },
+        {
+          "caller": "ed25519_srv_sign_internal",
+          "callee": "cpt_ed25519_sign",
+          "lineNumber": 176
+        },
+        {
+          "caller": "ed25519_srv_verify_internal",
+          "callee": "cpt_ed25519_verify",
+          "lineNumber": 197
+        },
+        {
+          "caller": "ecc_get_key_from_handle",
+          "callee": "kms_read_key",
+          "lineNumber": 230
+        },
+        {
+          "caller": "ecc_get_key_from_handle",
+          "callee": "get_curve_param_type",
+          "lineNumber": 240
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 273
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "get_curve_param_type",
+          "lineNumber": 283
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "GET_BYTE_LEN",
+          "lineNumber": 286
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "GET_BYTE_LEN",
+          "lineNumber": 296
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 298
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "GET_BYTE_LEN",
+          "lineNumber": 306
+        },
+        {
+          "caller": "ecc_read_plain_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 308
+        },
+        {
+          "caller": "ecc_get_key",
+          "callee": "ecc_read_plain_key",
+          "lineNumber": 337
+        },
+        {
+          "caller": "ecc_get_key",
+          "callee": "ecc_get_key_from_handle",
+          "lineNumber": 340
+        },
+        {
+          "caller": "ecdsa_srv_sign",
+          "callee": "ecdsa_srv_sign_internal",
+          "lineNumber": 370
+        },
+        {
+          "caller": "ecdsa_srv_sign",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 373
+        },
+        {
+          "caller": "ecdsa_srv_vry",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 408
+        },
+        {
+          "caller": "ecdsa_srv_vry",
+          "callee": "ecdsa_srv_verify_internal",
+          "lineNumber": 412
+        },
+        {
+          "caller": "ecdsa_srv_sign_vry",
+          "callee": "ecdsa_srv_sign",
+          "lineNumber": 448
+        },
+        {
+          "caller": "ecdsa_srv_sign_vry",
+          "callee": "ecdsa_srv_vry",
+          "lineNumber": 451
+        },
+        {
+          "caller": "ed25519_srv_sign",
+          "callee": "ed25519_srv_sign_internal",
+          "lineNumber": 480
+        },
+        {
+          "caller": "ed25519_srv_sign",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 483
+        },
+        {
+          "caller": "ed25519_srv_vry",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 517
+        },
+        {
+          "caller": "ed25519_srv_vry",
+          "callee": "ed25519_srv_verify_internal",
+          "lineNumber": 522
+        },
+        {
+          "caller": "ed25519_srv_sign_vry",
+          "callee": "ed25519_srv_sign",
+          "lineNumber": 561
+        },
+        {
+          "caller": "ed25519_srv_sign_vry",
+          "callee": "ed25519_srv_vry",
+          "lineNumber": 564
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 580
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "ecc_get_key",
+          "lineNumber": 582
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "pke_srv_hash_onepass",
+          "lineNumber": 585
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 589
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "ed25519_srv_sign_vry",
+          "lineNumber": 597
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "ecdsa_srv_sign_vry",
+          "lineNumber": 599
+        },
+        {
+          "caller": "ecdsa_srv_onepass",
+          "callee": "util_memset",
+          "lineNumber": 602
+        },
+        {
+          "caller": "ecdsa_srv_init",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 609
+        },
+        {
+          "caller": "ecdsa_srv_init",
+          "callee": "pke_srv_init",
+          "lineNumber": 610
+        },
+        {
+          "caller": "ecdsa_srv_update",
+          "callee": "pke_srv_update",
+          "lineNumber": 616
+        },
+        {
+          "caller": "ecdsa_srv_final",
+          "callee": "ecc_get_key",
+          "lineNumber": 630
+        },
+        {
+          "caller": "ecdsa_srv_final",
+          "callee": "pke_srv_hash_final",
+          "lineNumber": 632
+        },
+        {
+          "caller": "ecdsa_srv_final",
+          "callee": "ed25519_srv_sign_vry",
+          "lineNumber": 636
+        },
+        {
+          "caller": "ecdsa_srv_final",
+          "callee": "ecdsa_srv_sign_vry",
+          "lineNumber": 638
+        },
+        {
+          "caller": "ecdsa_srv_final",
+          "callee": "util_memset",
+          "lineNumber": 642
+        },
+        {
+          "caller": "ecdsa_srv_stepwise_handler",
+          "callee": "ecdsa_srv_init",
+          "lineNumber": 651
+        },
+        {
+          "caller": "ecdsa_srv_stepwise_handler",
+          "callee": "ecdsa_srv_update",
+          "lineNumber": 655
+        },
+        {
+          "caller": "ecdsa_srv_stepwise_handler",
+          "callee": "ecdsa_srv_init",
+          "lineNumber": 659
+        },
+        {
+          "caller": "ecdsa_srv_stepwise_handler",
+          "callee": "ecdsa_srv_update",
+          "lineNumber": 661
+        },
+        {
+          "caller": "ecdsa_srv_stepwise_handler",
+          "callee": "ecdsa_srv_final",
+          "lineNumber": 666
+        },
+        {
+          "caller": "pke_srv_ecdsa_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 691
+        },
+        {
+          "caller": "pke_srv_ecdsa_handler",
+          "callee": "cmd_check_process_mode_and_msg_type",
+          "lineNumber": 693
+        },
+        {
+          "caller": "pke_srv_ecdsa_handler",
+          "callee": "ecdsa_srv_onepass",
+          "lineNumber": 696
+        },
+        {
+          "caller": "pke_srv_ecdsa_handler",
+          "callee": "ecdsa_srv_stepwise_handler",
+          "lineNumber": 698
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 20,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/ecdsa_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 45,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/pke_srv_util.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "pke_srv_init",
+          "startLine": 45,
+          "endLine": 48,
+          "params": [
+            "ctx_buf_addr",
+            "alg"
+          ]
+        },
+        {
+          "name": "pke_srv_cpu_update",
+          "startLine": 50,
+          "endLine": 53,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "pke_srv_dma_update",
+          "startLine": 55,
+          "endLine": 58,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "pke_srv_update",
+          "startLine": 60,
+          "endLine": 63,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "pke_srv_hash_final",
+          "startLine": 65,
+          "endLine": 68,
+          "params": [
+            "ctx_buf_addr",
+            "msg_addr",
+            "input_sz",
+            "digest",
+            "digest_sz"
+          ]
+        },
+        {
+          "name": "pke_srv_hash_onepass",
+          "startLine": 70,
+          "endLine": 73,
+          "params": [
+            "alg",
+            "msg_addr",
+            "input_sz",
+            "digest",
+            "digest_sz"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "pke_srv_init",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_cpu_update",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_dma_update",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_update",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_hash_final",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_hash_onepass",
+          "line": 70,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "pke_srv_init",
+          "callee": "hash_srv_general_init",
+          "lineNumber": 47
+        },
+        {
+          "caller": "pke_srv_cpu_update",
+          "callee": "hash_srv_cpu_update",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pke_srv_dma_update",
+          "callee": "hash_srv_dma_update",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pke_srv_update",
+          "callee": "hash_srv_general_update",
+          "lineNumber": 62
+        },
+        {
+          "caller": "pke_srv_hash_final",
+          "callee": "hash_srv_general_final",
+          "lineNumber": 67
+        },
+        {
+          "caller": "pke_srv_hash_onepass",
+          "callee": "hash_srv_general_onepass",
+          "lineNumber": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/pke_srv_util.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 101,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/rsa_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 888,
+      "nonEmptyLines": 835,
+      "functions": [
+        {
+          "name": "rsa_get_key_and_crt_mode",
+          "startLine": 146,
+          "endLine": 191,
+          "params": [
+            "key_handle",
+            "key_buf",
+            "key_buf_sz",
+            "rsa_key",
+            "check_usage_bits",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_read_pubkey_key",
+          "startLine": 204,
+          "endLine": 219,
+          "params": [
+            "key_buf",
+            "rsa_key",
+            "rsa_plain_key"
+          ]
+        },
+        {
+          "name": "rsa_read_privkey_key",
+          "startLine": 233,
+          "endLine": 273,
+          "params": [
+            "key_buf",
+            "rsa_key",
+            "rsa_plain_key",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_read_plain_key",
+          "startLine": 289,
+          "endLine": 328,
+          "params": [
+            "plain_key_addr",
+            "key_buf",
+            "key_buf_sz",
+            "rsa_key",
+            "check_usage_bits",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_cipher_get_key_and_crt_mode",
+          "startLine": 344,
+          "endLine": 364,
+          "params": [
+            "rsa_cipher_cmd_data",
+            "key_buf",
+            "key_buf_sz",
+            "rsa_key",
+            "check_usage_bits",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_sign_get_key_and_crt_mode",
+          "startLine": 380,
+          "endLine": 400,
+          "params": [
+            "rsa_sign_cmd_data",
+            "key_buf",
+            "key_buf_sz",
+            "rsa_key",
+            "check_usage_bits",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_calculate",
+          "startLine": 417,
+          "endLine": 456,
+          "params": [
+            "rsa_key",
+            "input",
+            "input_sz",
+            "output",
+            "output_sz",
+            "dir",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_calculate_with_ssa_pss",
+          "startLine": 476,
+          "endLine": 516,
+          "params": [
+            "msg_hash_alg",
+            "mgf_hash_alg",
+            "salt",
+            "salt_sz",
+            "digest",
+            "output",
+            "output_sz",
+            "rsa_key",
+            "dir",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_sign_vry_without_padding",
+          "startLine": 533,
+          "endLine": 558,
+          "params": [
+            "rsa_key",
+            "digest",
+            "digest_sz",
+            "signature",
+            "signature_sz",
+            "dir",
+            "crt_mode"
+          ]
+        },
+        {
+          "name": "rsa_sign_vry",
+          "startLine": 577,
+          "endLine": 591,
+          "params": [
+            "rsa_key",
+            "digest",
+            "digest_sz",
+            "signature",
+            "signature_sz",
+            "dir",
+            "crt_mode",
+            "alg",
+            "padding",
+            "salt_sz"
+          ]
+        },
+        {
+          "name": "rsa_srv_cipher_onepass",
+          "startLine": 593,
+          "endLine": 638,
+          "params": [
+            "rsa_cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "rsa_get_msg_digest",
+          "startLine": 640,
+          "endLine": 659,
+          "params": [
+            "rsa_sign_cmd_data",
+            "digest",
+            "digest_sz"
+          ]
+        },
+        {
+          "name": "rsa_srv_sign_onepass",
+          "startLine": 661,
+          "endLine": 727,
+          "params": [
+            "rsa_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "rsa_srv_sign_stepwise_handler",
+          "startLine": 729,
+          "endLine": 758,
+          "params": [
+            "rsa_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "rsa_srv_sign_init",
+          "startLine": 760,
+          "endLine": 766,
+          "params": [
+            "rsa_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "rsa_srv_sign_update",
+          "startLine": 768,
+          "endLine": 773,
+          "params": [
+            "rsa_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "rsa_srv_sign_final",
+          "startLine": 775,
+          "endLine": 842,
+          "params": [
+            "rsa_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "pke_srv_rsa_init",
+          "startLine": 846,
+          "endLine": 849,
+          "params": []
+        },
+        {
+          "name": "pke_srv_rsa_cipher_handler",
+          "startLine": 851,
+          "endLine": 865,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "pke_srv_rsa_sign_handler",
+          "startLine": 867,
+          "endLine": 888,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "pke_srv_rsa_init",
+          "line": 846,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_rsa_cipher_handler",
+          "line": 851,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_rsa_sign_handler",
+          "line": 867,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "rsa_get_key_and_crt_mode",
+          "callee": "util_memset",
+          "lineNumber": 152
+        },
+        {
+          "caller": "rsa_get_key_and_crt_mode",
+          "callee": "kms_read_key",
+          "lineNumber": 166
+        },
+        {
+          "caller": "rsa_read_pubkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 208
+        },
+        {
+          "caller": "rsa_read_pubkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 211
+        },
+        {
+          "caller": "rsa_read_privkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 241
+        },
+        {
+          "caller": "rsa_read_privkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 244
+        },
+        {
+          "caller": "rsa_read_privkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 249
+        },
+        {
+          "caller": "rsa_read_privkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 254
+        },
+        {
+          "caller": "rsa_read_privkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 259
+        },
+        {
+          "caller": "rsa_read_privkey_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 266
+        },
+        {
+          "caller": "rsa_read_plain_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 295
+        },
+        {
+          "caller": "rsa_read_plain_key",
+          "callee": "rsa_read_pubkey_key",
+          "lineNumber": 315
+        },
+        {
+          "caller": "rsa_read_plain_key",
+          "callee": "rsa_read_pubkey_key",
+          "lineNumber": 317
+        },
+        {
+          "caller": "rsa_read_plain_key",
+          "callee": "rsa_read_privkey_key",
+          "lineNumber": 319
+        },
+        {
+          "caller": "rsa_cipher_get_key_and_crt_mode",
+          "callee": "rsa_read_plain_key",
+          "lineNumber": 351
+        },
+        {
+          "caller": "rsa_cipher_get_key_and_crt_mode",
+          "callee": "rsa_get_key_and_crt_mode",
+          "lineNumber": 355
+        },
+        {
+          "caller": "rsa_sign_get_key_and_crt_mode",
+          "callee": "rsa_read_plain_key",
+          "lineNumber": 387
+        },
+        {
+          "caller": "rsa_sign_get_key_and_crt_mode",
+          "callee": "rsa_get_key_and_crt_mode",
+          "lineNumber": 391
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 423
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 424
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 426
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "cpt_rsa_modexp",
+          "lineNumber": 429
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 435
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 436
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 437
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 438
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 439
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "cpt_rsa_crt_modexp_with_pub",
+          "lineNumber": 440
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 443
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "cpt_rsa_modexp_with_pub",
+          "lineNumber": 444
+        },
+        {
+          "caller": "rsa_calculate",
+          "callee": "reverse_byte_array",
+          "lineNumber": 452
+        },
+        {
+          "caller": "rsa_calculate_with_ssa_pss",
+          "callee": "cpt_rsa_ssa_pss_verify_by_msg_digest",
+          "lineNumber": 492
+        },
+        {
+          "caller": "rsa_calculate_with_ssa_pss",
+          "callee": "cpt_rsa_ssa_pss_crt_sign_by_msg_digest",
+          "lineNumber": 500
+        },
+        {
+          "caller": "rsa_calculate_with_ssa_pss",
+          "callee": "cpt_rsa_ssa_pss_sign_by_msg_digest",
+          "lineNumber": 503
+        },
+        {
+          "caller": "rsa_sign_vry_without_padding",
+          "callee": "rsa_calculate",
+          "lineNumber": 541
+        },
+        {
+          "caller": "rsa_sign_vry_without_padding",
+          "callee": "util_memcmp",
+          "lineNumber": 544
+        },
+        {
+          "caller": "rsa_sign_vry_without_padding",
+          "callee": "rsa_calculate",
+          "lineNumber": 552
+        },
+        {
+          "caller": "rsa_sign_vry",
+          "callee": "rsa_sign_vry_without_padding",
+          "lineNumber": 582
+        },
+        {
+          "caller": "rsa_sign_vry",
+          "callee": "rsa_calculate_with_ssa_pss",
+          "lineNumber": 585
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "rsa_cipher_get_key_and_crt_mode",
+          "lineNumber": 608
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "util_memset",
+          "lineNumber": 614
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "util_memset",
+          "lineNumber": 615
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 616
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "rsa_calculate",
+          "lineNumber": 621
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 626
+        },
+        {
+          "caller": "rsa_srv_cipher_onepass",
+          "callee": "util_memset",
+          "lineNumber": 636
+        },
+        {
+          "caller": "rsa_get_msg_digest",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 644
+        },
+        {
+          "caller": "rsa_get_msg_digest",
+          "callee": "pke_srv_hash_onepass",
+          "lineNumber": 647
+        },
+        {
+          "caller": "rsa_get_msg_digest",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 653
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 673
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "rsa_sign_get_key_and_crt_mode",
+          "lineNumber": 679
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "util_memset",
+          "lineNumber": 683
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "util_memset",
+          "lineNumber": 684
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 689
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "rsa_get_msg_digest",
+          "lineNumber": 696
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "rsa_sign_vry",
+          "lineNumber": 699
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 705
+        },
+        {
+          "caller": "rsa_srv_sign_onepass",
+          "callee": "util_memset",
+          "lineNumber": 725
+        },
+        {
+          "caller": "rsa_srv_sign_stepwise_handler",
+          "callee": "rsa_srv_sign_init",
+          "lineNumber": 734
+        },
+        {
+          "caller": "rsa_srv_sign_stepwise_handler",
+          "callee": "rsa_srv_sign_update",
+          "lineNumber": 738
+        },
+        {
+          "caller": "rsa_srv_sign_stepwise_handler",
+          "callee": "rsa_srv_sign_init",
+          "lineNumber": 742
+        },
+        {
+          "caller": "rsa_srv_sign_stepwise_handler",
+          "callee": "rsa_srv_sign_update",
+          "lineNumber": 744
+        },
+        {
+          "caller": "rsa_srv_sign_stepwise_handler",
+          "callee": "rsa_srv_sign_final",
+          "lineNumber": 749
+        },
+        {
+          "caller": "rsa_srv_sign_init",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 764
+        },
+        {
+          "caller": "rsa_srv_sign_init",
+          "callee": "pke_srv_init",
+          "lineNumber": 765
+        },
+        {
+          "caller": "rsa_srv_sign_update",
+          "callee": "pke_srv_update",
+          "lineNumber": 772
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "get_lib_hash_alg",
+          "lineNumber": 788
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "rsa_sign_get_key_and_crt_mode",
+          "lineNumber": 793
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "util_memset",
+          "lineNumber": 797
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "util_memset",
+          "lineNumber": 798
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 803
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "pke_srv_hash_final",
+          "lineNumber": 810
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "rsa_sign_vry",
+          "lineNumber": 813
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 820
+        },
+        {
+          "caller": "rsa_srv_sign_final",
+          "callee": "util_memset",
+          "lineNumber": 840
+        },
+        {
+          "caller": "pke_srv_rsa_cipher_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 857
+        },
+        {
+          "caller": "pke_srv_rsa_cipher_handler",
+          "callee": "rsa_srv_cipher_onepass",
+          "lineNumber": 859
+        },
+        {
+          "caller": "pke_srv_rsa_sign_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 873
+        },
+        {
+          "caller": "pke_srv_rsa_sign_handler",
+          "callee": "cmd_check_process_mode_and_msg_type",
+          "lineNumber": 875
+        },
+        {
+          "caller": "pke_srv_rsa_sign_handler",
+          "callee": "rsa_srv_sign_onepass",
+          "lineNumber": 878
+        },
+        {
+          "caller": "pke_srv_rsa_sign_handler",
+          "callee": "rsa_srv_sign_stepwise_handler",
+          "lineNumber": 880
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 20,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/rsa_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 56,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/sm2_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 863,
+      "nonEmptyLines": 812,
+      "functions": [
+        {
+          "name": "sm2_srv_sign_internal",
+          "startLine": 134,
+          "endLine": 142,
+          "params": [
+            "E",
+            "rand_k",
+            "priKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "sm2_srv_verify_internal",
+          "startLine": 155,
+          "endLine": 162,
+          "params": [
+            "E",
+            "pubKey",
+            "signature"
+          ]
+        },
+        {
+          "name": "sm2_srv_encrypt_internal",
+          "startLine": 179,
+          "endLine": 187,
+          "params": [
+            "M",
+            "MByteLen",
+            "rand_k",
+            "pubKey",
+            "order",
+            "C",
+            "CByteLen"
+          ]
+        },
+        {
+          "name": "sm2_srv_decrypt_internal",
+          "startLine": 203,
+          "endLine": 211,
+          "params": [
+            "C",
+            "CByteLen",
+            "priKey",
+            "order",
+            "M",
+            "MByteLen"
+          ]
+        },
+        {
+          "name": "sm2_check_dma_mode",
+          "startLine": 225,
+          "endLine": 252,
+          "params": [
+            "ctx_buf_addr",
+            "mode",
+            "input_msg_sz",
+            "fill_sz"
+          ]
+        },
+        {
+          "name": "sm2_cipher_get_key_from_key_handle",
+          "startLine": 267,
+          "endLine": 294,
+          "params": [
+            "sm2_cipher_cmd_data",
+            "key_buf",
+            "buff_size",
+            "pubkey",
+            "prikey"
+          ]
+        },
+        {
+          "name": "sm2_read_plain_key",
+          "startLine": 309,
+          "endLine": 326,
+          "params": [
+            "plain_key_addr",
+            "key_buf",
+            "buff_size",
+            "pubkey",
+            "prikey"
+          ]
+        },
+        {
+          "name": "sm2_cipher_get_key",
+          "startLine": 341,
+          "endLine": 359,
+          "params": [
+            "sm2_cipher_cmd_data",
+            "key_buf",
+            "buff_size",
+            "pubkey",
+            "prikey"
+          ]
+        },
+        {
+          "name": "sm2_sign_get_key_from_key_handle",
+          "startLine": 374,
+          "endLine": 408,
+          "params": [
+            "sm2_sign_cmd_data",
+            "key_buf",
+            "buff_size",
+            "pubkey",
+            "prikey"
+          ]
+        },
+        {
+          "name": "sm2_sign_get_key",
+          "startLine": 423,
+          "endLine": 441,
+          "params": [
+            "sm2_sign_cmd_data",
+            "key_buf",
+            "buff_size",
+            "pubkey",
+            "prikey"
+          ]
+        },
+        {
+          "name": "sm2_srv_sign",
+          "startLine": 456,
+          "endLine": 477,
+          "params": [
+            "E",
+            "prikey",
+            "rs_addr",
+            "rbuf_sz",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_vry",
+          "startLine": 492,
+          "endLine": 518,
+          "params": [
+            "E",
+            "pubkey",
+            "rs_addr",
+            "rbuf_sz",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_cipher_onepass",
+          "startLine": 520,
+          "endLine": 571,
+          "params": [
+            "sm2_cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_local_get_E",
+          "startLine": 585,
+          "endLine": 643,
+          "params": [
+            "pubkey",
+            "E",
+            "input_addr",
+            "input_sz"
+          ]
+        },
+        {
+          "name": "sm2_srv_sign_onepass",
+          "startLine": 645,
+          "endLine": 674,
+          "params": [
+            "sm2_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_sign_init",
+          "startLine": 676,
+          "endLine": 706,
+          "params": [
+            "sm2_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_sign_update",
+          "startLine": 708,
+          "endLine": 759,
+          "params": [
+            "sm2_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_sign_final",
+          "startLine": 761,
+          "endLine": 786,
+          "params": [
+            "sm2_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "sm2_srv_sign_stepwise_handler",
+          "startLine": 788,
+          "endLine": 817,
+          "params": [
+            "sm2_sign_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "pke_srv_sm2_init",
+          "startLine": 821,
+          "endLine": 824,
+          "params": []
+        },
+        {
+          "name": "pke_srv_sm2_cipher_handler",
+          "startLine": 826,
+          "endLine": 840,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "pke_srv_sm2_sign_handler",
+          "startLine": 842,
+          "endLine": 863,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "pke_srv_sm2_init",
+          "line": 821,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_sm2_cipher_handler",
+          "line": 826,
+          "isDefault": false
+        },
+        {
+          "name": "pke_srv_sm2_sign_handler",
+          "line": 842,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sm2_srv_sign_internal",
+          "callee": "cpt_sm2_sign",
+          "lineNumber": 137
+        },
+        {
+          "caller": "sm2_srv_verify_internal",
+          "callee": "cpt_sm2_verify",
+          "lineNumber": 157
+        },
+        {
+          "caller": "sm2_srv_encrypt_internal",
+          "callee": "cpt_sm2_encrypt",
+          "lineNumber": 182
+        },
+        {
+          "caller": "sm2_srv_decrypt_internal",
+          "callee": "cpt_sm2_decrypt",
+          "lineNumber": 206
+        },
+        {
+          "caller": "sm2_check_dma_mode",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 233
+        },
+        {
+          "caller": "sm2_check_dma_mode",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 234
+        },
+        {
+          "caller": "sm2_check_dma_mode",
+          "callee": "util_memcpy",
+          "lineNumber": 236
+        },
+        {
+          "caller": "sm2_check_dma_mode",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 250
+        },
+        {
+          "caller": "sm2_cipher_get_key_from_key_handle",
+          "callee": "kms_read_key",
+          "lineNumber": 282
+        },
+        {
+          "caller": "sm2_read_plain_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 318
+        },
+        {
+          "caller": "sm2_cipher_get_key",
+          "callee": "sm2_read_plain_key",
+          "lineNumber": 348
+        },
+        {
+          "caller": "sm2_cipher_get_key",
+          "callee": "sm2_cipher_get_key_from_key_handle",
+          "lineNumber": 351
+        },
+        {
+          "caller": "sm2_sign_get_key_from_key_handle",
+          "callee": "kms_read_key",
+          "lineNumber": 398
+        },
+        {
+          "caller": "sm2_sign_get_key",
+          "callee": "sm2_read_plain_key",
+          "lineNumber": 430
+        },
+        {
+          "caller": "sm2_sign_get_key",
+          "callee": "sm2_sign_get_key_from_key_handle",
+          "lineNumber": 433
+        },
+        {
+          "caller": "sm2_srv_sign",
+          "callee": "sm2_srv_sign_internal",
+          "lineNumber": 464
+        },
+        {
+          "caller": "sm2_srv_sign",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 467
+        },
+        {
+          "caller": "sm2_srv_vry",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 499
+        },
+        {
+          "caller": "sm2_srv_vry",
+          "callee": "sm2_srv_verify_internal",
+          "lineNumber": 504
+        },
+        {
+          "caller": "sm2_srv_cipher_onepass",
+          "callee": "sm2_cipher_get_key",
+          "lineNumber": 541
+        },
+        {
+          "caller": "sm2_srv_cipher_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 544
+        },
+        {
+          "caller": "sm2_srv_cipher_onepass",
+          "callee": "sm2_srv_encrypt_internal",
+          "lineNumber": 551
+        },
+        {
+          "caller": "sm2_srv_cipher_onepass",
+          "callee": "sm2_srv_decrypt_internal",
+          "lineNumber": 554
+        },
+        {
+          "caller": "sm2_srv_cipher_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 558
+        },
+        {
+          "caller": "sm2_srv_cipher_onepass",
+          "callee": "util_memset",
+          "lineNumber": 569
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_sm2_getZ",
+          "lineNumber": 599
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_init",
+          "lineNumber": 601
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_update",
+          "lineNumber": 604
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 612
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_update",
+          "lineNumber": 614
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_ctx_switch",
+          "lineNumber": 619
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_dma_final",
+          "lineNumber": 626
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "util_memcpy",
+          "lineNumber": 629
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 633
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_update",
+          "lineNumber": 635
+        },
+        {
+          "caller": "sm2_srv_local_get_E",
+          "callee": "cpt_hash_final",
+          "lineNumber": 638
+        },
+        {
+          "caller": "sm2_srv_sign_onepass",
+          "callee": "sm2_sign_get_key",
+          "lineNumber": 653
+        },
+        {
+          "caller": "sm2_srv_sign_onepass",
+          "callee": "sm2_srv_local_get_E",
+          "lineNumber": 656
+        },
+        {
+          "caller": "sm2_srv_sign_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 659
+        },
+        {
+          "caller": "sm2_srv_sign_onepass",
+          "callee": "sm2_srv_sign",
+          "lineNumber": 667
+        },
+        {
+          "caller": "sm2_srv_sign_onepass",
+          "callee": "sm2_srv_vry",
+          "lineNumber": 669
+        },
+        {
+          "caller": "sm2_srv_sign_onepass",
+          "callee": "util_memset",
+          "lineNumber": 672
+        },
+        {
+          "caller": "sm2_srv_sign_init",
+          "callee": "sm2_sign_get_key",
+          "lineNumber": 685
+        },
+        {
+          "caller": "sm2_srv_sign_init",
+          "callee": "cpt_sm2_getZ",
+          "lineNumber": 687
+        },
+        {
+          "caller": "sm2_srv_sign_init",
+          "callee": "cpt_hash_init",
+          "lineNumber": 690
+        },
+        {
+          "caller": "sm2_srv_sign_init",
+          "callee": "cpt_hash_update",
+          "lineNumber": 693
+        },
+        {
+          "caller": "sm2_srv_sign_init",
+          "callee": "cpt_hash_rctx_switch_cpu_ctx",
+          "lineNumber": 697
+        },
+        {
+          "caller": "sm2_srv_sign_init",
+          "callee": "util_memset",
+          "lineNumber": 704
+        },
+        {
+          "caller": "sm2_srv_sign_update",
+          "callee": "sm2_check_dma_mode",
+          "lineNumber": 717
+        },
+        {
+          "caller": "sm2_srv_sign_update",
+          "callee": "pke_srv_cpu_update",
+          "lineNumber": 726
+        },
+        {
+          "caller": "sm2_srv_sign_update",
+          "callee": "pke_srv_dma_update",
+          "lineNumber": 741
+        },
+        {
+          "caller": "sm2_srv_sign_final",
+          "callee": "pke_srv_hash_final",
+          "lineNumber": 772
+        },
+        {
+          "caller": "sm2_srv_sign_final",
+          "callee": "sm2_sign_get_key",
+          "lineNumber": 775
+        },
+        {
+          "caller": "sm2_srv_sign_final",
+          "callee": "sm2_srv_sign",
+          "lineNumber": 779
+        },
+        {
+          "caller": "sm2_srv_sign_final",
+          "callee": "sm2_srv_vry",
+          "lineNumber": 781
+        },
+        {
+          "caller": "sm2_srv_sign_final",
+          "callee": "util_memset",
+          "lineNumber": 784
+        },
+        {
+          "caller": "sm2_srv_sign_stepwise_handler",
+          "callee": "sm2_srv_sign_init",
+          "lineNumber": 793
+        },
+        {
+          "caller": "sm2_srv_sign_stepwise_handler",
+          "callee": "sm2_srv_sign_update",
+          "lineNumber": 797
+        },
+        {
+          "caller": "sm2_srv_sign_stepwise_handler",
+          "callee": "sm2_srv_sign_init",
+          "lineNumber": 801
+        },
+        {
+          "caller": "sm2_srv_sign_stepwise_handler",
+          "callee": "sm2_srv_sign_update",
+          "lineNumber": 803
+        },
+        {
+          "caller": "sm2_srv_sign_stepwise_handler",
+          "callee": "sm2_srv_sign_final",
+          "lineNumber": 808
+        },
+        {
+          "caller": "pke_srv_sm2_cipher_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 832
+        },
+        {
+          "caller": "pke_srv_sm2_cipher_handler",
+          "callee": "sm2_srv_cipher_onepass",
+          "lineNumber": 834
+        },
+        {
+          "caller": "pke_srv_sm2_sign_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 848
+        },
+        {
+          "caller": "pke_srv_sm2_sign_handler",
+          "callee": "cmd_check_process_mode_and_msg_type",
+          "lineNumber": 850
+        },
+        {
+          "caller": "pke_srv_sm2_sign_handler",
+          "callee": "sm2_srv_sign_onepass",
+          "lineNumber": 853
+        },
+        {
+          "caller": "pke_srv_sm2_sign_handler",
+          "callee": "sm2_srv_sign_stepwise_handler",
+          "lineNumber": 855
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 22,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/sm2_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 58,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/sm9_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/pke/sm9_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 37,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/rng_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "rng_check_alg",
+          "startLine": 48,
+          "endLine": 66,
+          "params": [
+            "alg"
+          ]
+        },
+        {
+          "name": "rng_srv_init",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "rng_srv_handler",
+          "startLine": 76,
+          "endLine": 120,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "rng_srv_init",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "rng_srv_handler",
+          "line": 76,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "rng_check_alg",
+          "callee": "cpt_trng_get_drbg_alg",
+          "lineNumber": 52
+        },
+        {
+          "caller": "rng_check_alg",
+          "callee": "cpt_trng_set_global_init_config",
+          "lineNumber": 62
+        },
+        {
+          "caller": "rng_srv_handler",
+          "callee": "rng_check_alg",
+          "lineNumber": 87
+        },
+        {
+          "caller": "rng_srv_handler",
+          "callee": "cpt_get_rand",
+          "lineNumber": 98
+        },
+        {
+          "caller": "rng_srv_handler",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 100
+        },
+        {
+          "caller": "rng_srv_handler",
+          "callee": "util_memset",
+          "lineNumber": 105
+        },
+        {
+          "caller": "rng_srv_handler",
+          "callee": "util_memset",
+          "lineNumber": 108
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/rng_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 27,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/ske/cipher_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 1083,
+      "nonEmptyLines": 1030,
+      "functions": [
+        {
+          "name": "cipher_get_hdl",
+          "startLine": 97,
+          "endLine": 119,
+          "params": [
+            "cipher_mode",
+            "srv_hdl"
+          ]
+        },
+        {
+          "name": "cipher_check_param",
+          "startLine": 130,
+          "endLine": 167,
+          "params": [
+            "cipher_cmd_data"
+          ]
+        },
+        {
+          "name": "non_xts_cipher_check_output_buffer_sz",
+          "startLine": 182,
+          "endLine": 216,
+          "params": [
+            "alg",
+            "direction",
+            "padding",
+            "process_mode",
+            "input_sz",
+            "output_sz"
+          ]
+        },
+        {
+          "name": "xts_cipher_check_output_buffer_sz",
+          "startLine": 228,
+          "endLine": 235,
+          "params": [
+            "input_sz",
+            "output_sz"
+          ]
+        },
+        {
+          "name": "cipher_get_key_from_key_handle",
+          "startLine": 254,
+          "endLine": 293,
+          "params": [
+            "key_handle",
+            "kms_alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "cipher_get_key",
+          "startLine": 312,
+          "endLine": 341,
+          "params": [
+            "cipher_cmd_data",
+            "kms_alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "cipher_get_iv",
+          "startLine": 357,
+          "endLine": 383,
+          "params": [
+            "mode",
+            "r_iv",
+            "r_iv_sz",
+            "iv_buf",
+            "iv_ptr",
+            "iv_sz"
+          ]
+        },
+        {
+          "name": "push_non_xts_cipher_ctx",
+          "startLine": 395,
+          "endLine": 406,
+          "params": [
+            "cipher_cmd_data",
+            "cipher_ctx"
+          ]
+        },
+        {
+          "name": "get_non_xts_cipher_ctx",
+          "startLine": 418,
+          "endLine": 444,
+          "params": [
+            "cipher_cmd_data",
+            "cipher_ctx"
+          ]
+        },
+        {
+          "name": "push_xts_cipher_ctx",
+          "startLine": 456,
+          "endLine": 467,
+          "params": [
+            "cipher_cmd_data",
+            "cipher_ctx"
+          ]
+        },
+        {
+          "name": "get_xts_cipher_ctx",
+          "startLine": 479,
+          "endLine": 505,
+          "params": [
+            "cipher_cmd_data",
+            "cipher_ctx"
+          ]
+        },
+        {
+          "name": "cipher_srv_onepass",
+          "startLine": 507,
+          "endLine": 515,
+          "params": [
+            "cipher_cmd_data",
+            "srv_hdl",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_srv_stepwise_handler",
+          "startLine": 517,
+          "endLine": 553,
+          "params": [
+            "cipher_cmd_data",
+            "srv_hdl",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_non_xts_init",
+          "startLine": 565,
+          "endLine": 597,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_non_xts_update",
+          "startLine": 609,
+          "endLine": 638,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_non_xts_final",
+          "startLine": 650,
+          "endLine": 680,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_non_xts_onepass",
+          "startLine": 692,
+          "endLine": 736,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "xts_dma_final_update_blocks",
+          "startLine": 751,
+          "endLine": 780,
+          "params": [
+            "rdata",
+            "data_sz",
+            "routput",
+            "ctx",
+            "dma_data_sz"
+          ]
+        },
+        {
+          "name": "xts_cpu_final",
+          "startLine": 794,
+          "endLine": 815,
+          "params": [
+            "rdata",
+            "data_sz",
+            "routput",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cipher_xts_init",
+          "startLine": 827,
+          "endLine": 862,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_xts_update",
+          "startLine": 874,
+          "endLine": 901,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_xts_final",
+          "startLine": 914,
+          "endLine": 950,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cipher_xts_onepass",
+          "startLine": 962,
+          "endLine": 1018,
+          "params": [
+            "cipher_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "non_xts_hdl_init",
+          "startLine": 1027,
+          "endLine": 1033,
+          "params": []
+        },
+        {
+          "name": "xts_hdl_init",
+          "startLine": 1042,
+          "endLine": 1048,
+          "params": []
+        },
+        {
+          "name": "ske_srv_cipher_init",
+          "startLine": 1053,
+          "endLine": 1059,
+          "params": []
+        },
+        {
+          "name": "ske_srv_cipher_handler",
+          "startLine": 1061,
+          "endLine": 1083,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ske_srv_cipher_init",
+          "line": 1053,
+          "isDefault": false
+        },
+        {
+          "name": "ske_srv_cipher_handler",
+          "line": 1061,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "cipher_check_param",
+          "callee": "get_ske_alg",
+          "lineNumber": 138
+        },
+        {
+          "caller": "cipher_check_param",
+          "callee": "cpt_ske_get_block_byte_len",
+          "lineNumber": 139
+        },
+        {
+          "caller": "cipher_check_param",
+          "callee": "cmd_check_direction",
+          "lineNumber": 164
+        },
+        {
+          "caller": "non_xts_cipher_check_output_buffer_sz",
+          "callee": "get_ske_alg",
+          "lineNumber": 200
+        },
+        {
+          "caller": "non_xts_cipher_check_output_buffer_sz",
+          "callee": "cpt_ske_get_block_byte_len",
+          "lineNumber": 201
+        },
+        {
+          "caller": "cipher_get_key_from_key_handle",
+          "callee": "kms_read_key",
+          "lineNumber": 269
+        },
+        {
+          "caller": "cipher_get_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 324
+        },
+        {
+          "caller": "cipher_get_key",
+          "callee": "cipher_get_key_from_key_handle",
+          "lineNumber": 332
+        },
+        {
+          "caller": "cipher_get_iv",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 370
+        },
+        {
+          "caller": "push_non_xts_cipher_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 399
+        },
+        {
+          "caller": "push_non_xts_cipher_ctx",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 401
+        },
+        {
+          "caller": "get_non_xts_cipher_ctx",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 426
+        },
+        {
+          "caller": "get_non_xts_cipher_ctx",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 428
+        },
+        {
+          "caller": "get_non_xts_cipher_ctx",
+          "callee": "cipher_get_key",
+          "lineNumber": 435
+        },
+        {
+          "caller": "get_non_xts_cipher_ctx",
+          "callee": "cpt_set_ske_ctx_key",
+          "lineNumber": 440
+        },
+        {
+          "caller": "get_non_xts_cipher_ctx",
+          "callee": "util_memset",
+          "lineNumber": 442
+        },
+        {
+          "caller": "push_xts_cipher_ctx",
+          "callee": "cpt_clear_ske_ctx_key",
+          "lineNumber": 460
+        },
+        {
+          "caller": "push_xts_cipher_ctx",
+          "callee": "cpt_get_ske_xts_ske_ctx",
+          "lineNumber": 460
+        },
+        {
+          "caller": "push_xts_cipher_ctx",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 462
+        },
+        {
+          "caller": "get_xts_cipher_ctx",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 487
+        },
+        {
+          "caller": "get_xts_cipher_ctx",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 489
+        },
+        {
+          "caller": "get_xts_cipher_ctx",
+          "callee": "cipher_get_key",
+          "lineNumber": 496
+        },
+        {
+          "caller": "get_xts_cipher_ctx",
+          "callee": "cpt_set_ske_ctx_key",
+          "lineNumber": 501
+        },
+        {
+          "caller": "get_xts_cipher_ctx",
+          "callee": "cpt_get_ske_xts_ske_ctx",
+          "lineNumber": 501
+        },
+        {
+          "caller": "get_xts_cipher_ctx",
+          "callee": "util_memset",
+          "lineNumber": 503
+        },
+        {
+          "caller": "cipher_srv_onepass",
+          "callee": "cipher_check_param",
+          "lineNumber": 510
+        },
+        {
+          "caller": "cipher_srv_onepass",
+          "callee": "cipher_srv_onepass",
+          "lineNumber": 512
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_check_param",
+          "lineNumber": 523
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_srv_init",
+          "lineNumber": 525
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_srv_update",
+          "lineNumber": 530
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_check_param",
+          "lineNumber": 534
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_srv_init",
+          "lineNumber": 536
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_srv_update",
+          "lineNumber": 539
+        },
+        {
+          "caller": "cipher_srv_stepwise_handler",
+          "callee": "cipher_srv_final",
+          "lineNumber": 544
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 576
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "get_ske_mode",
+          "lineNumber": 577
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "get_ske_padding",
+          "lineNumber": 579
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 580
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "cipher_get_key",
+          "lineNumber": 581
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "cipher_get_iv",
+          "lineNumber": 584
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "cpt_ske_dma_init",
+          "lineNumber": 587
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "push_non_xts_cipher_ctx",
+          "lineNumber": 590
+        },
+        {
+          "caller": "cipher_non_xts_init",
+          "callee": "util_memset",
+          "lineNumber": 595
+        },
+        {
+          "caller": "cipher_non_xts_update",
+          "callee": "non_xts_cipher_check_output_buffer_sz",
+          "lineNumber": 620
+        },
+        {
+          "caller": "cipher_non_xts_update",
+          "callee": "get_non_xts_cipher_ctx",
+          "lineNumber": 624
+        },
+        {
+          "caller": "cipher_non_xts_update",
+          "callee": "cpt_ske_dma_update_blocks",
+          "lineNumber": 627
+        },
+        {
+          "caller": "cipher_non_xts_update",
+          "callee": "push_non_xts_cipher_ctx",
+          "lineNumber": 631
+        },
+        {
+          "caller": "cipher_non_xts_final",
+          "callee": "non_xts_cipher_check_output_buffer_sz",
+          "lineNumber": 662
+        },
+        {
+          "caller": "cipher_non_xts_final",
+          "callee": "get_non_xts_cipher_ctx",
+          "lineNumber": 666
+        },
+        {
+          "caller": "cipher_non_xts_final",
+          "callee": "cpt_ske_dma_update_including_last_block",
+          "lineNumber": 669
+        },
+        {
+          "caller": "cipher_non_xts_final",
+          "callee": "cpt_ske_dma_final",
+          "lineNumber": 673
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 708
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "get_ske_mode",
+          "lineNumber": 709
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "get_ske_padding",
+          "lineNumber": 711
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 712
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "non_xts_cipher_check_output_buffer_sz",
+          "lineNumber": 716
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "cipher_get_key",
+          "lineNumber": 720
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "cipher_get_iv",
+          "lineNumber": 724
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "cpt_ske_dma_crypto",
+          "lineNumber": 727
+        },
+        {
+          "caller": "cipher_non_xts_onepass",
+          "callee": "util_memset",
+          "lineNumber": 734
+        },
+        {
+          "caller": "xts_dma_final_update_blocks",
+          "callee": "cpt_ske_dma_xts_update_blocks",
+          "lineNumber": 774
+        },
+        {
+          "caller": "xts_cpu_final",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 800
+        },
+        {
+          "caller": "xts_cpu_final",
+          "callee": "cpt_ske_xts_update_including_last_2_blocks",
+          "lineNumber": 805
+        },
+        {
+          "caller": "xts_cpu_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 808
+        },
+        {
+          "caller": "xts_cpu_final",
+          "callee": "cpt_ske_xts_final",
+          "lineNumber": 812
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 838
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 840
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "cipher_get_key",
+          "lineNumber": 842
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "cipher_get_iv",
+          "lineNumber": 845
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "cpt_ske_dma_xts_init",
+          "lineNumber": 853
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "push_xts_cipher_ctx",
+          "lineNumber": 856
+        },
+        {
+          "caller": "cipher_xts_init",
+          "callee": "util_memset",
+          "lineNumber": 860
+        },
+        {
+          "caller": "cipher_xts_update",
+          "callee": "xts_cipher_check_output_buffer_sz",
+          "lineNumber": 885
+        },
+        {
+          "caller": "cipher_xts_update",
+          "callee": "get_xts_cipher_ctx",
+          "lineNumber": 887
+        },
+        {
+          "caller": "cipher_xts_update",
+          "callee": "cpt_ske_dma_xts_update_blocks",
+          "lineNumber": 890
+        },
+        {
+          "caller": "cipher_xts_update",
+          "callee": "push_xts_cipher_ctx",
+          "lineNumber": 894
+        },
+        {
+          "caller": "cipher_xts_final",
+          "callee": "xts_cipher_check_output_buffer_sz",
+          "lineNumber": 925
+        },
+        {
+          "caller": "cipher_xts_final",
+          "callee": "get_xts_cipher_ctx",
+          "lineNumber": 927
+        },
+        {
+          "caller": "cipher_xts_final",
+          "callee": "xts_dma_final_update_blocks",
+          "lineNumber": 931
+        },
+        {
+          "caller": "cipher_xts_final",
+          "callee": "xts_cpu_final",
+          "lineNumber": 943
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 973
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 975
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "xts_cipher_check_output_buffer_sz",
+          "lineNumber": 983
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "cipher_get_key",
+          "lineNumber": 985
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "cipher_get_iv",
+          "lineNumber": 989
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "cpt_ske_dma_xts_init",
+          "lineNumber": 992
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "xts_dma_final_update_blocks",
+          "lineNumber": 996
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "xts_cpu_final",
+          "lineNumber": 1009
+        },
+        {
+          "caller": "cipher_xts_onepass",
+          "callee": "util_memset",
+          "lineNumber": 1016
+        },
+        {
+          "caller": "ske_srv_cipher_init",
+          "callee": "non_xts_hdl_init",
+          "lineNumber": 1056
+        },
+        {
+          "caller": "ske_srv_cipher_init",
+          "callee": "xts_hdl_init",
+          "lineNumber": 1057
+        },
+        {
+          "caller": "ske_srv_cipher_handler",
+          "callee": "cmd_check_process_mode",
+          "lineNumber": 1068
+        },
+        {
+          "caller": "ske_srv_cipher_handler",
+          "callee": "cipher_get_hdl",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "ske_srv_cipher_handler",
+          "callee": "cipher_srv_onepass",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "ske_srv_cipher_handler",
+          "callee": "cipher_srv_stepwise_handler",
+          "lineNumber": 1076
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 27,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/ske/cipher_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 45,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/ske/mac_srv.c",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 1524,
+      "nonEmptyLines": 1454,
+      "functions": [
+        {
+          "name": "mac_get_hdl",
+          "startLine": 83,
+          "endLine": 105,
+          "params": [
+            "cipher_mode",
+            "srv_hdl"
+          ]
+        },
+        {
+          "name": "mac_check_mac_sz",
+          "startLine": 119,
+          "endLine": 141,
+          "params": [
+            "dir",
+            "alg",
+            "mb_mac_sz",
+            "mac_sz"
+          ]
+        },
+        {
+          "name": "mac_get_key_from_key_handle",
+          "startLine": 160,
+          "endLine": 199,
+          "params": [
+            "key_handle",
+            "kms_alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "mac_get_key",
+          "startLine": 218,
+          "endLine": 247,
+          "params": [
+            "mac_cmd_data",
+            "kms_alg",
+            "dir",
+            "key_buf",
+            "key_buf_sz",
+            "key",
+            "key_sz",
+            "sp_key_id",
+            "spk_sel"
+          ]
+        },
+        {
+          "name": "mac_ctx_recovery_key",
+          "startLine": 262,
+          "endLine": 279,
+          "params": [
+            "ske_ctx",
+            "mac_cmd_data",
+            "dir",
+            "alg",
+            "cipher_mode"
+          ]
+        },
+        {
+          "name": "cmac_rctx_switch_dma_ctx",
+          "startLine": 292,
+          "endLine": 305,
+          "params": [
+            "mac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cmac_rctx_switch_cpu_ctx",
+          "startLine": 318,
+          "endLine": 331,
+          "params": [
+            "mac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cmac_check_dma_support",
+          "startLine": 344,
+          "endLine": 363,
+          "params": [
+            "rctx_addr",
+            "input_sz",
+            "mode"
+          ]
+        },
+        {
+          "name": "cmac_cpu_update_internal",
+          "startLine": 376,
+          "endLine": 398,
+          "params": [
+            "input_addr",
+            "input_sz",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cmac_dma_update_internal",
+          "startLine": 411,
+          "endLine": 416,
+          "params": [
+            "input_addr",
+            "input_sz",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cmac_cpu_update",
+          "startLine": 427,
+          "endLine": 439,
+          "params": [
+            "mac_cmd_data"
+          ]
+        },
+        {
+          "name": "cmac_dma_update",
+          "startLine": 450,
+          "endLine": 462,
+          "params": [
+            "mac_cmd_data"
+          ]
+        },
+        {
+          "name": "cmac_init",
+          "startLine": 474,
+          "endLine": 504,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cmac_update",
+          "startLine": 516,
+          "endLine": 530,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cmac_final",
+          "startLine": 542,
+          "endLine": 578,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cmac_onepass_update_internal",
+          "startLine": 593,
+          "endLine": 620,
+          "params": [
+            "dma_ctx",
+            "cpu_ctx",
+            "input_addr",
+            "input_sz",
+            "dir"
+          ]
+        },
+        {
+          "name": "cmac_onepass",
+          "startLine": 632,
+          "endLine": 678,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cbcmac_rctx_switch_dma_ctx",
+          "startLine": 691,
+          "endLine": 704,
+          "params": [
+            "mac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cbcmac_rctx_switch_cpu_ctx",
+          "startLine": 717,
+          "endLine": 730,
+          "params": [
+            "mac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "cbcmac_check_dma_support",
+          "startLine": 743,
+          "endLine": 762,
+          "params": [
+            "rctx_addr",
+            "input_sz",
+            "mode"
+          ]
+        },
+        {
+          "name": "cbcmac_cpu_update_internal",
+          "startLine": 775,
+          "endLine": 797,
+          "params": [
+            "input_addr",
+            "input_sz",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cbcmac_dma_update_internal",
+          "startLine": 810,
+          "endLine": 816,
+          "params": [
+            "input_addr",
+            "input_sz",
+            "ctx"
+          ]
+        },
+        {
+          "name": "cbcmac_cpu_update",
+          "startLine": 827,
+          "endLine": 839,
+          "params": [
+            "mac_cmd_data"
+          ]
+        },
+        {
+          "name": "cbcmac_dma_update",
+          "startLine": 850,
+          "endLine": 862,
+          "params": [
+            "mac_cmd_data"
+          ]
+        },
+        {
+          "name": "cbcmac_init",
+          "startLine": 874,
+          "endLine": 903,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cbcmac_update",
+          "startLine": 915,
+          "endLine": 929,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cbcmac_final",
+          "startLine": 941,
+          "endLine": 977,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cbcmac_onepass_update_internal",
+          "startLine": 992,
+          "endLine": 1014,
+          "params": [
+            "dma_ctx",
+            "cpu_ctx",
+            "input_addr",
+            "input_sz",
+            "dir"
+          ]
+        },
+        {
+          "name": "cbcmac_onepass",
+          "startLine": 1026,
+          "endLine": 1077,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gmac_get_iv",
+          "startLine": 1091,
+          "endLine": 1101,
+          "params": [
+            "r_iv",
+            "iv_buf"
+          ]
+        },
+        {
+          "name": "gmac_rctx_switch_cpu_ctx",
+          "startLine": 1114,
+          "endLine": 1127,
+          "params": [
+            "mac_cmd_data",
+            "lctx",
+            "type"
+          ]
+        },
+        {
+          "name": "gmac_cpu_update_internal",
+          "startLine": 1140,
+          "endLine": 1162,
+          "params": [
+            "input_addr",
+            "input_sz",
+            "ctx"
+          ]
+        },
+        {
+          "name": "gmac_cpu_update",
+          "startLine": 1173,
+          "endLine": 1185,
+          "params": [
+            "mac_cmd_data"
+          ]
+        },
+        {
+          "name": "gmac_init",
+          "startLine": 1197,
+          "endLine": 1230,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gmac_update",
+          "startLine": 1242,
+          "endLine": 1247,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gmac_final",
+          "startLine": 1259,
+          "endLine": 1295,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "gmac_onepass",
+          "startLine": 1307,
+          "endLine": 1358,
+          "params": [
+            "mac_cmd_data",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "mac_srv_onepass",
+          "startLine": 1371,
+          "endLine": 1387,
+          "params": [
+            "mac_cmd_data",
+            "srv_hdl",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "mac_srv_stepwise_handler",
+          "startLine": 1400,
+          "endLine": 1441,
+          "params": [
+            "mac_cmd_data",
+            "srv_hdl",
+            "rsp_data"
+          ]
+        },
+        {
+          "name": "cmac_hdl_init",
+          "startLine": 1450,
+          "endLine": 1456,
+          "params": []
+        },
+        {
+          "name": "cbcmac_hdl_init",
+          "startLine": 1465,
+          "endLine": 1471,
+          "params": []
+        },
+        {
+          "name": "gmac_hdl_init",
+          "startLine": 1480,
+          "endLine": 1486,
+          "params": []
+        },
+        {
+          "name": "ske_srv_mac_init",
+          "startLine": 1490,
+          "endLine": 1497,
+          "params": []
+        },
+        {
+          "name": "ske_srv_mac_handler",
+          "startLine": 1499,
+          "endLine": 1524,
+          "params": [
+            "req_data",
+            "rsp_data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ske_srv_mac_init",
+          "line": 1490,
+          "isDefault": false
+        },
+        {
+          "name": "ske_srv_mac_handler",
+          "line": 1499,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mac_check_mac_sz",
+          "callee": "cpt_ske_get_block_byte_len",
+          "lineNumber": 122
+        },
+        {
+          "caller": "mac_get_key_from_key_handle",
+          "callee": "kms_read_key",
+          "lineNumber": 175
+        },
+        {
+          "caller": "mac_get_key",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 230
+        },
+        {
+          "caller": "mac_get_key",
+          "callee": "mac_get_key_from_key_handle",
+          "lineNumber": 238
+        },
+        {
+          "caller": "mac_ctx_recovery_key",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 271
+        },
+        {
+          "caller": "mac_ctx_recovery_key",
+          "callee": "mac_get_key",
+          "lineNumber": 273
+        },
+        {
+          "caller": "mac_ctx_recovery_key",
+          "callee": "cpt_set_ske_ctx_key",
+          "lineNumber": 275
+        },
+        {
+          "caller": "mac_ctx_recovery_key",
+          "callee": "util_memset",
+          "lineNumber": 277
+        },
+        {
+          "caller": "cmac_rctx_switch_dma_ctx",
+          "callee": "cpt_get_cmac_dma_ske_ctx",
+          "lineNumber": 296
+        },
+        {
+          "caller": "cmac_rctx_switch_dma_ctx",
+          "callee": "cpt_cmac_rctx_switch_dma_ctx",
+          "lineNumber": 298
+        },
+        {
+          "caller": "cmac_rctx_switch_dma_ctx",
+          "callee": "mac_ctx_recovery_key",
+          "lineNumber": 300
+        },
+        {
+          "caller": "cmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_get_cmac_cpu_ske_ctx",
+          "lineNumber": 322
+        },
+        {
+          "caller": "cmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_cmac_rctx_switch_cpu_ctx",
+          "lineNumber": 324
+        },
+        {
+          "caller": "cmac_rctx_switch_cpu_ctx",
+          "callee": "mac_ctx_recovery_key",
+          "lineNumber": 326
+        },
+        {
+          "caller": "cmac_check_dma_support",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 348
+        },
+        {
+          "caller": "cmac_check_dma_support",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 349
+        },
+        {
+          "caller": "cmac_check_dma_support",
+          "callee": "util_memcpy",
+          "lineNumber": 351
+        },
+        {
+          "caller": "cmac_check_dma_support",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 361
+        },
+        {
+          "caller": "cmac_cpu_update_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 386
+        },
+        {
+          "caller": "cmac_cpu_update_internal",
+          "callee": "cpt_ske_cmac_update",
+          "lineNumber": 388
+        },
+        {
+          "caller": "cmac_dma_update_internal",
+          "callee": "cpt_ske_dma_cmac_update_blocks_excluding_last_block",
+          "lineNumber": 415
+        },
+        {
+          "caller": "cmac_cpu_update",
+          "callee": "cmac_rctx_switch_cpu_ctx",
+          "lineNumber": 431
+        },
+        {
+          "caller": "cmac_cpu_update",
+          "callee": "cmac_cpu_update_internal",
+          "lineNumber": 433
+        },
+        {
+          "caller": "cmac_cpu_update",
+          "callee": "cmac_rctx_switch_cpu_ctx",
+          "lineNumber": 436
+        },
+        {
+          "caller": "cmac_dma_update",
+          "callee": "cmac_rctx_switch_dma_ctx",
+          "lineNumber": 454
+        },
+        {
+          "caller": "cmac_dma_update",
+          "callee": "cmac_dma_update_internal",
+          "lineNumber": 456
+        },
+        {
+          "caller": "cmac_dma_update",
+          "callee": "cmac_rctx_switch_dma_ctx",
+          "lineNumber": 459
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 483
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 485
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "mac_check_mac_sz",
+          "lineNumber": 487
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "mac_get_key",
+          "lineNumber": 489
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "cpt_ske_cmac_init",
+          "lineNumber": 494
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "cmac_rctx_switch_cpu_ctx",
+          "lineNumber": 498
+        },
+        {
+          "caller": "cmac_init",
+          "callee": "util_memset",
+          "lineNumber": 502
+        },
+        {
+          "caller": "cmac_update",
+          "callee": "cmac_check_dma_support",
+          "lineNumber": 520
+        },
+        {
+          "caller": "cmac_update",
+          "callee": "cmac_dma_update",
+          "lineNumber": 523
+        },
+        {
+          "caller": "cmac_update",
+          "callee": "cmac_cpu_update",
+          "lineNumber": 525
+        },
+        {
+          "caller": "cmac_final",
+          "callee": "cmac_rctx_switch_cpu_ctx",
+          "lineNumber": 553
+        },
+        {
+          "caller": "cmac_final",
+          "callee": "cmac_cpu_update_internal",
+          "lineNumber": 558
+        },
+        {
+          "caller": "cmac_final",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 565
+        },
+        {
+          "caller": "cmac_final",
+          "callee": "cpt_ske_cmac_final",
+          "lineNumber": 568
+        },
+        {
+          "caller": "cmac_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 571
+        },
+        {
+          "caller": "cmac_onepass_update_internal",
+          "callee": "cmac_dma_update_internal",
+          "lineNumber": 608
+        },
+        {
+          "caller": "cmac_onepass_update_internal",
+          "callee": "cpt_cmac_ctx_dma_2_cpu",
+          "lineNumber": 610
+        },
+        {
+          "caller": "cmac_onepass_update_internal",
+          "callee": "cmac_cpu_update_internal",
+          "lineNumber": 613
+        },
+        {
+          "caller": "cmac_onepass_update_internal",
+          "callee": "cpt_cmac_ctx_dma_2_cpu",
+          "lineNumber": 616
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 643
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 644
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "mac_check_mac_sz",
+          "lineNumber": 648
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "mac_get_key",
+          "lineNumber": 650
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "cpt_ske_dma_cmac_init",
+          "lineNumber": 654
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "cmac_onepass_update_internal",
+          "lineNumber": 657
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 664
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "cpt_ske_cmac_final",
+          "lineNumber": 667
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 670
+        },
+        {
+          "caller": "cmac_onepass",
+          "callee": "util_memset",
+          "lineNumber": 676
+        },
+        {
+          "caller": "cbcmac_rctx_switch_dma_ctx",
+          "callee": "cpt_get_cbcmac_dma_ske_ctx",
+          "lineNumber": 695
+        },
+        {
+          "caller": "cbcmac_rctx_switch_dma_ctx",
+          "callee": "cpt_cbcmac_rctx_switch_dma_ctx",
+          "lineNumber": 697
+        },
+        {
+          "caller": "cbcmac_rctx_switch_dma_ctx",
+          "callee": "mac_ctx_recovery_key",
+          "lineNumber": 699
+        },
+        {
+          "caller": "cbcmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_get_cbcmac_cpu_ske_ctx",
+          "lineNumber": 721
+        },
+        {
+          "caller": "cbcmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_cbcmac_rctx_switch_cpu_ctx",
+          "lineNumber": 723
+        },
+        {
+          "caller": "cbcmac_rctx_switch_cpu_ctx",
+          "callee": "mac_ctx_recovery_key",
+          "lineNumber": 725
+        },
+        {
+          "caller": "cbcmac_check_dma_support",
+          "callee": "cpu_enter_critical",
+          "lineNumber": 747
+        },
+        {
+          "caller": "cbcmac_check_dma_support",
+          "callee": "mmap_remap_addr_u64",
+          "lineNumber": 748
+        },
+        {
+          "caller": "cbcmac_check_dma_support",
+          "callee": "util_memcpy",
+          "lineNumber": 750
+        },
+        {
+          "caller": "cbcmac_check_dma_support",
+          "callee": "cpu_exit_critical",
+          "lineNumber": 760
+        },
+        {
+          "caller": "cbcmac_cpu_update_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 785
+        },
+        {
+          "caller": "cbcmac_cpu_update_internal",
+          "callee": "cpt_ske_cbc_mac_update",
+          "lineNumber": 787
+        },
+        {
+          "caller": "cbcmac_dma_update_internal",
+          "callee": "cpt_ske_dma_cbc_mac_update_blocks_excluding_last_block",
+          "lineNumber": 814
+        },
+        {
+          "caller": "cbcmac_cpu_update",
+          "callee": "cbcmac_rctx_switch_cpu_ctx",
+          "lineNumber": 831
+        },
+        {
+          "caller": "cbcmac_cpu_update",
+          "callee": "cbcmac_cpu_update_internal",
+          "lineNumber": 833
+        },
+        {
+          "caller": "cbcmac_cpu_update",
+          "callee": "cbcmac_rctx_switch_cpu_ctx",
+          "lineNumber": 836
+        },
+        {
+          "caller": "cbcmac_dma_update",
+          "callee": "cbcmac_rctx_switch_dma_ctx",
+          "lineNumber": 854
+        },
+        {
+          "caller": "cbcmac_dma_update",
+          "callee": "cbcmac_dma_update_internal",
+          "lineNumber": 856
+        },
+        {
+          "caller": "cbcmac_dma_update",
+          "callee": "cbcmac_rctx_switch_dma_ctx",
+          "lineNumber": 859
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 883
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 885
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "mac_check_mac_sz",
+          "lineNumber": 887
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "mac_get_key",
+          "lineNumber": 889
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "cpt_ske_cbc_mac_init",
+          "lineNumber": 894
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "cbcmac_rctx_switch_cpu_ctx",
+          "lineNumber": 897
+        },
+        {
+          "caller": "cbcmac_init",
+          "callee": "util_memset",
+          "lineNumber": 901
+        },
+        {
+          "caller": "cbcmac_update",
+          "callee": "cbcmac_check_dma_support",
+          "lineNumber": 919
+        },
+        {
+          "caller": "cbcmac_update",
+          "callee": "cbcmac_dma_update",
+          "lineNumber": 922
+        },
+        {
+          "caller": "cbcmac_update",
+          "callee": "cbcmac_cpu_update",
+          "lineNumber": 924
+        },
+        {
+          "caller": "cbcmac_final",
+          "callee": "cbcmac_rctx_switch_cpu_ctx",
+          "lineNumber": 952
+        },
+        {
+          "caller": "cbcmac_final",
+          "callee": "cbcmac_cpu_update_internal",
+          "lineNumber": 957
+        },
+        {
+          "caller": "cbcmac_final",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 964
+        },
+        {
+          "caller": "cbcmac_final",
+          "callee": "cpt_ske_cbc_mac_final",
+          "lineNumber": 967
+        },
+        {
+          "caller": "cbcmac_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 970
+        },
+        {
+          "caller": "cbcmac_onepass_update_internal",
+          "callee": "cbcmac_dma_update_internal",
+          "lineNumber": 1006
+        },
+        {
+          "caller": "cbcmac_onepass_update_internal",
+          "callee": "cpt_cbc_mac_ctx_dma2cpu",
+          "lineNumber": 1008
+        },
+        {
+          "caller": "cbcmac_onepass_update_internal",
+          "callee": "cbcmac_cpu_update_internal",
+          "lineNumber": 1011
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 1037
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 1038
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "mac_check_mac_sz",
+          "lineNumber": 1046
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "mac_get_key",
+          "lineNumber": 1049
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "cpt_ske_dma_cbc_mac_init",
+          "lineNumber": 1053
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "cbcmac_onepass_update_internal",
+          "lineNumber": 1056
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1063
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "cpt_ske_cbc_mac_final",
+          "lineNumber": 1066
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 1069
+        },
+        {
+          "caller": "cbcmac_onepass",
+          "callee": "util_memset",
+          "lineNumber": 1075
+        },
+        {
+          "caller": "gmac_get_iv",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1096
+        },
+        {
+          "caller": "gmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_get_gmac_cpu_ske_ctx",
+          "lineNumber": 1118
+        },
+        {
+          "caller": "gmac_rctx_switch_cpu_ctx",
+          "callee": "cpt_gmac_rctx_switch_cpu_ctx",
+          "lineNumber": 1120
+        },
+        {
+          "caller": "gmac_rctx_switch_cpu_ctx",
+          "callee": "mac_ctx_recovery_key",
+          "lineNumber": 1122
+        },
+        {
+          "caller": "gmac_cpu_update_internal",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1150
+        },
+        {
+          "caller": "gmac_cpu_update_internal",
+          "callee": "cpt_ske_gmac_update",
+          "lineNumber": 1152
+        },
+        {
+          "caller": "gmac_cpu_update",
+          "callee": "gmac_rctx_switch_cpu_ctx",
+          "lineNumber": 1177
+        },
+        {
+          "caller": "gmac_cpu_update",
+          "callee": "gmac_cpu_update_internal",
+          "lineNumber": 1179
+        },
+        {
+          "caller": "gmac_cpu_update",
+          "callee": "gmac_rctx_switch_cpu_ctx",
+          "lineNumber": 1182
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "get_ske_alg",
+          "lineNumber": 1207
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 1209
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "mac_check_mac_sz",
+          "lineNumber": 1211
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "mac_get_key",
+          "lineNumber": 1213
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "gmac_get_iv",
+          "lineNumber": 1217
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "cpt_ske_gmac_init",
+          "lineNumber": 1221
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "gmac_rctx_switch_cpu_ctx",
+          "lineNumber": 1224
+        },
+        {
+          "caller": "gmac_init",
+          "callee": "util_memset",
+          "lineNumber": 1228
+        },
+        {
+          "caller": "gmac_update",
+          "callee": "gmac_cpu_update",
+          "lineNumber": 1246
+        },
+        {
+          "caller": "gmac_final",
+          "callee": "gmac_rctx_switch_cpu_ctx",
+          "lineNumber": 1270
+        },
+        {
+          "caller": "gmac_final",
+          "callee": "gmac_cpu_update_internal",
+          "lineNumber": 1275
+        },
+        {
+          "caller": "gmac_final",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1282
+        },
+        {
+          "caller": "gmac_final",
+          "callee": "cpt_ske_gmac_final",
+          "lineNumber": 1285
+        },
+        {
+          "caller": "gmac_final",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 1288
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "get_ske_alg",
+          "lineNumber": 1318
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "get_kms_ske_alg",
+          "lineNumber": 1319
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "mac_check_mac_sz",
+          "lineNumber": 1324
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "mac_get_key",
+          "lineNumber": 1326
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "gmac_get_iv",
+          "lineNumber": 1330
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "cpt_ske_gmac_init",
+          "lineNumber": 1333
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "gmac_cpu_update_internal",
+          "lineNumber": 1336
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "mmap_read_remote_data",
+          "lineNumber": 1342
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "cpt_ske_gmac_final",
+          "lineNumber": 1347
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "mmap_write_remote_data",
+          "lineNumber": 1349
+        },
+        {
+          "caller": "gmac_onepass",
+          "callee": "util_memset",
+          "lineNumber": 1356
+        },
+        {
+          "caller": "mac_srv_onepass",
+          "callee": "mac_srv_onepass",
+          "lineNumber": 1374
+        },
+        {
+          "caller": "mac_srv_stepwise_handler",
+          "callee": "mac_srv_init",
+          "lineNumber": 1406
+        },
+        {
+          "caller": "mac_srv_stepwise_handler",
+          "callee": "mac_srv_update",
+          "lineNumber": 1410
+        },
+        {
+          "caller": "mac_srv_stepwise_handler",
+          "callee": "mac_srv_init",
+          "lineNumber": 1414
+        },
+        {
+          "caller": "mac_srv_stepwise_handler",
+          "callee": "mac_srv_update",
+          "lineNumber": 1416
+        },
+        {
+          "caller": "mac_srv_stepwise_handler",
+          "callee": "mac_srv_final",
+          "lineNumber": 1421
+        },
+        {
+          "caller": "ske_srv_mac_init",
+          "callee": "cmac_hdl_init",
+          "lineNumber": 1493
+        },
+        {
+          "caller": "ske_srv_mac_init",
+          "callee": "cbcmac_hdl_init",
+          "lineNumber": 1494
+        },
+        {
+          "caller": "ske_srv_mac_init",
+          "callee": "gmac_hdl_init",
+          "lineNumber": 1495
+        },
+        {
+          "caller": "ske_srv_mac_handler",
+          "callee": "cmd_check_direction",
+          "lineNumber": 1506
+        },
+        {
+          "caller": "ske_srv_mac_handler",
+          "callee": "cmd_check_process_mode",
+          "lineNumber": 1508
+        },
+        {
+          "caller": "ske_srv_mac_handler",
+          "callee": "mac_get_hdl",
+          "lineNumber": 1511
+        },
+        {
+          "caller": "ske_srv_mac_handler",
+          "callee": "mac_srv_onepass",
+          "lineNumber": 1515
+        },
+        {
+          "caller": "ske_srv_mac_handler",
+          "callee": "mac_srv_stepwise_handler",
+          "lineNumber": 1517
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 44,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "ehsm_fw-2.3.2-4019-5a4a0a9/src/service/ske/mac_srv.h",
+      "language": "c",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 27,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

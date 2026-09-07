@@ -1,0 +1,1862 @@
+Trivially needed symbols: secboot_entry/47 fid_delay_get_random/46 fid_panic_callback/45
+
+
+Initial Symbol table:
+
+memcpy_/68 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/32 
+  Calls: 
+misc_write_otp_data/67 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+uint32_BigNumCmp/66 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+fid_delay/65 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+otp_read/64 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+crypto_srv_init/63 (crypto_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_srv_init/42 
+  Calls: 
+otpkey_register_keyid_map/62 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+ram_key_mem_addr/61 (ram_key_mem_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f810669e110
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags:
+kds_init/60 (kds_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+sch_init/59 (sch_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+comm_init/58 (comm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+expt_det_init/57 (expt_det_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+watchdog_start/56 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_init/55 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+cpu_platform_init/54 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_feed/53 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_init_hsm/43 
+  Calls: 
+watchdog_stop/52 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sch_start/51 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sysreg_set_status/50 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 secboot_entry/47 
+  Calls: 
+cpt_get_rand_fast/49 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fid_delay_get_random/46 
+  Calls: 
+expt_det_add_error/48 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_wdg_cb/39 fid_panic_callback/45 
+  Calls: 
+secboot_entry/47 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_set_status/50 watchdog_stop/52 sch_start/51 sysreg_set_status/50 secboot_update_ver_cnt/44 secboot_init_hsm/43 
+fid_delay_get_random/46 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f810669e660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpt_get_rand_fast/49 
+fid_panic_callback/45 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f810669e550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+secboot_update_ver_cnt/44 (secboot_update_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 
+secboot_init_hsm/43 (secboot_init_hsm)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f810669e330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: watchdog_feed/53 secboot_srv_init/42 secboot_comp_init/41 secboot_drv_init/40 
+secboot_srv_init/42 (secboot_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f810669e330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: crypto_srv_init/63 
+secboot_comp_init/41 (secboot_comp_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f810669e110
+  References: ram_key_mem_addr/61 (addr) g_otp_default_keyid_map/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: otpkey_register_keyid_map/62 kds_init/60 sch_init/59 comm_init/58 expt_det_init/57 
+secboot_drv_init/40 (secboot_drv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f810669e000
+  References: secboot_wdg_cb/39 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: watchdog_start/56 watchdog_init/55 cpu_platform_init/54 
+secboot_wdg_cb/39 (secboot_wdg_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0x7f810669e000
+  References: 
+  Referring: secboot_drv_init/40 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+g_otp_default_keyid_map/38 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f81066b2000
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_write_volatile_u32/37 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/36 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/35 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/34 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/33 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcpy/32 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: memcpy_/68 
+get_kms_ske_alg/31 (get_kms_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_padding/30 (get_ske_padding)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_mode/29 (get_ske_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_alg/28 (get_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_curve_param_type/27 (get_curve_param_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_lib_hash_alg/26 (get_lib_hash_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_direction/25 (cmd_check_direction)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode_and_msg_type/24 (cmd_check_process_mode_and_msg_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode/23 (cmd_check_process_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_release_ahb_dma/22 (crypto_release_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_using_ahb_dma/21 (crypto_using_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_get_ahb_dma_cfg_reg/20 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/19 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/18 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/17 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/16 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/15 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_lock_reg/14 (sysreg_lock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_unlock_reg/13 (sysreg_unlock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_config_sm_en/12 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/11 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/10 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/9 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/8 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/7 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+otpmap_convert_keyid_to_addr/6 (otpmap_convert_keyid_to_addr)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/37 util_read_volatile_u32/36 util_u32_copy/35 util_memcmp/34 util_memset/33 get_kms_ske_alg/31 get_ske_padding/30 get_ske_mode/29 get_ske_alg/28 get_curve_param_type/27 get_lib_hash_alg/26 cmd_check_direction/25 cmd_check_process_mode_and_msg_type/24 cmd_check_process_mode/23 crypto_release_ahb_dma/22 crypto_using_ahb_dma/21 crypto_get_ahb_dma_cfg_reg/20 check_addr_not_word_align/19 GET_BYTE_LEN/18 GET_WORD_LEN/17 GET_MAX_LEN/16 CAST2UINT32/15 sysreg_lock_reg/14 sysreg_unlock_reg/13 sysreg_config_sm_en/12 sysreg_umask_sm_lock/11 sysreg_enable_sm_lock/10 sysreg_enable_fun_lock/9 rPKE_B/8 rPKE_A/7 otpmap_convert_keyid_to_addr/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memcpy_/68 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/32 
+  Calls: 
+misc_write_otp_data/67 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+uint32_BigNumCmp/66 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+fid_delay/65 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+otp_read/64 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+crypto_srv_init/63 (crypto_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_srv_init/42 
+  Calls: 
+otpkey_register_keyid_map/62 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+ram_key_mem_addr/61 (ram_key_mem_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags:
+kds_init/60 (kds_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+sch_init/59 (sch_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+comm_init/58 (comm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+expt_det_init/57 (expt_det_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+watchdog_start/56 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_init/55 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+cpu_platform_init/54 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_feed/53 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_init_hsm/43 
+  Calls: 
+watchdog_stop/52 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sch_start/51 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sysreg_set_status/50 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 secboot_entry/47 
+  Calls: 
+cpt_get_rand_fast/49 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fid_delay_get_random/46 
+  Calls: 
+expt_det_add_error/48 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_wdg_cb/39 fid_panic_callback/45 
+  Calls: 
+secboot_entry/47 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_set_status/50 watchdog_stop/52 sch_start/51 sysreg_set_status/50 secboot_update_ver_cnt/44 secboot_init_hsm/43 
+fid_delay_get_random/46 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpt_get_rand_fast/49 
+fid_panic_callback/45 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+secboot_update_ver_cnt/44 (secboot_update_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 
+secboot_init_hsm/43 (secboot_init_hsm)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: watchdog_feed/53 secboot_srv_init/42 secboot_comp_init/41 secboot_drv_init/40 
+secboot_srv_init/42 (secboot_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: crypto_srv_init/63 
+secboot_comp_init/41 (secboot_comp_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ram_key_mem_addr/61 (addr) g_otp_default_keyid_map/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: otpkey_register_keyid_map/62 kds_init/60 sch_init/59 comm_init/58 expt_det_init/57 
+secboot_drv_init/40 (secboot_drv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secboot_wdg_cb/39 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: watchdog_start/56 watchdog_init/55 cpu_platform_init/54 
+secboot_wdg_cb/39 (secboot_wdg_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: secboot_drv_init/40 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+g_otp_default_keyid_map/38 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_memcpy/32 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: memcpy_/68 
+
+
+Initial Symbol table:
+
+memcpy_/68 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/32 
+  Calls: 
+misc_write_otp_data/67 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+uint32_BigNumCmp/66 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+fid_delay/65 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+otp_read/64 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+crypto_srv_init/63 (crypto_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_srv_init/42 
+  Calls: 
+otpkey_register_keyid_map/62 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+ram_key_mem_addr.0/61 (ram_key_mem_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags:
+kds_init/60 (kds_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+sch_init/59 (sch_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+comm_init/58 (comm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+expt_det_init/57 (expt_det_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+watchdog_start/56 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_init/55 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+cpu_platform_init/54 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_feed/53 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_init_hsm/43 
+  Calls: 
+watchdog_stop/52 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sch_start/51 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sysreg_set_status/50 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 secboot_entry/47 
+  Calls: 
+cpt_get_rand_fast/49 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fid_delay_get_random/46 
+  Calls: 
+expt_det_add_error/48 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_wdg_cb/39 fid_panic_callback/45 
+  Calls: 
+secboot_entry/47 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_set_status/50 watchdog_stop/52 sch_start/51 sysreg_set_status/50 secboot_update_ver_cnt/44 secboot_init_hsm/43 
+fid_delay_get_random/46 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpt_get_rand_fast/49 
+fid_panic_callback/45 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+secboot_update_ver_cnt/44 (secboot_update_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 
+secboot_init_hsm/43 (secboot_init_hsm)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: watchdog_feed/53 secboot_srv_init/42 secboot_comp_init/41 secboot_drv_init/40 
+secboot_srv_init/42 (secboot_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: crypto_srv_init/63 
+secboot_comp_init/41 (secboot_comp_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ram_key_mem_addr.0/61 (addr) g_otp_default_keyid_map/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: otpkey_register_keyid_map/62 kds_init/60 sch_init/59 comm_init/58 expt_det_init/57 
+secboot_drv_init/40 (secboot_drv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secboot_wdg_cb/39 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: watchdog_start/56 watchdog_init/55 cpu_platform_init/54 
+secboot_wdg_cb/39 (secboot_wdg_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: secboot_drv_init/40 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+g_otp_default_keyid_map/38 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_memcpy/32 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: memcpy_/68 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memcpy_/68 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/32 
+  Calls: 
+misc_write_otp_data/67 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+uint32_BigNumCmp/66 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+fid_delay/65 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+otp_read/64 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: 
+crypto_srv_init/63 (crypto_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_srv_init/42 
+  Calls: 
+otpkey_register_keyid_map/62 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+ram_key_mem_addr.0/61 (ram_key_mem_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags:
+kds_init/60 (kds_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+sch_init/59 (sch_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+comm_init/58 (comm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+expt_det_init/57 (expt_det_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_comp_init/41 
+  Calls: 
+watchdog_start/56 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_init/55 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+cpu_platform_init/54 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_drv_init/40 
+  Calls: 
+watchdog_feed/53 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_init_hsm/43 
+  Calls: 
+watchdog_stop/52 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sch_start/51 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 
+  Calls: 
+sysreg_set_status/50 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_entry/47 secboot_entry/47 
+  Calls: 
+cpt_get_rand_fast/49 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fid_delay_get_random/46 
+  Calls: 
+expt_det_add_error/48 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 secboot_wdg_cb/39 fid_panic_callback/45 
+  Calls: 
+secboot_entry/47 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sysreg_set_status/50 watchdog_stop/52 sch_start/51 sysreg_set_status/50 secboot_update_ver_cnt/44 secboot_init_hsm/43 
+fid_delay_get_random/46 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: cpt_get_rand_fast/49 
+fid_panic_callback/45 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+secboot_update_ver_cnt/44 (secboot_update_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 expt_det_add_error/48 expt_det_add_error/48 misc_write_otp_data/67 uint32_BigNumCmp/66 fid_delay/65 util_memcpy/32 otp_read/64 
+secboot_init_hsm/43 (secboot_init_hsm)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_entry/47 
+  Calls: watchdog_feed/53 secboot_srv_init/42 secboot_comp_init/41 secboot_drv_init/40 
+secboot_srv_init/42 (secboot_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: crypto_srv_init/63 
+secboot_comp_init/41 (secboot_comp_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ram_key_mem_addr.0/61 (addr) g_otp_default_keyid_map/38 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: otpkey_register_keyid_map/62 kds_init/60 sch_init/59 comm_init/58 expt_det_init/57 
+secboot_drv_init/40 (secboot_drv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: secboot_wdg_cb/39 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: secboot_init_hsm/43 
+  Calls: watchdog_start/56 watchdog_init/55 cpu_platform_init/54 
+secboot_wdg_cb/39 (secboot_wdg_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: secboot_drv_init/40 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: expt_det_add_error/48 
+g_otp_default_keyid_map/38 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+util_memcpy/32 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: secboot_update_ver_cnt/44 secboot_update_ver_cnt/44 
+  Calls: memcpy_/68 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+memcpy_/68 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 (248741 (estimated locally),0.02 per call) secboot_update_ver_cnt/44 (248741 (estimated locally),0.02 per call) 
+  Calls: 
+misc_write_otp_data/67 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 (103178 (estimated locally),0.01 per call) secboot_update_ver_cnt/44 (103178 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_BigNumCmp/66 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 (248741 (estimated locally),0.02 per call) secboot_update_ver_cnt/44 (248741 (estimated locally),0.02 per call) 
+  Calls: 
+fid_delay/65 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 (248741 (estimated locally),0.02 per call) secboot_update_ver_cnt/44 (248741 (estimated locally),0.02 per call) 
+  Calls: 
+otp_read/64 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_update_ver_cnt/44 (731590 (estimated locally),0.07 per call) secboot_update_ver_cnt/44 (731590 (estimated locally),0.07 per call) 
+  Calls: 
+crypto_srv_init/63 (crypto_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_init_hsm/43 (258639 (estimated locally),0.02 per call) 
+  Calls: 
+otpkey_register_keyid_map/62 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_comp_init/41 (73917 (estimated locally),0.01 per call) 
+  Calls: 
+ram_key_mem_addr.0/61 (ram_key_mem_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: available
+  Varpool flags: used-by-single-function
+kds_init/60 (kds_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_comp_init/41 (365205 (estimated locally),0.03 per call) 
+  Calls: 
+sch_init/59 (sch_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_comp_init/41 (88147 (estimated locally),0.01 per call) 
+  Calls: 
+comm_init/58 (comm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_comp_init/41 (435511 (estimated locally),0.04 per call) 
+  Calls: 
+expt_det_init/57 (expt_det_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_comp_init/41 (2151736 (estimated locally),0.20 per call) 
+  Calls: 
+watchdog_start/56 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_drv_init/40 (2151736 (estimated locally),0.20 per call) 
+  Calls: 
+watchdog_init/55 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_drv_init/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_platform_init/54 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_drv_init/40 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+watchdog_feed/53 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_init_hsm/43 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+watchdog_stop/52 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_entry/47 (7016531 (estimated locally),0.66 per call) 
+  Calls: 
+sch_start/51 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_entry/47 (3614577 (estimated locally),0.34 per call) 
+  Calls: 
+sysreg_set_status/50 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: secboot_entry/47 (7016531 (estimated locally),0.66 per call) secboot_entry/47 (3614577 (estimated locally),0.34 per call) 
+  Calls: 
+cpt_get_rand_fast/49 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: fid_delay_get_random/46 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+expt_det_add_error/48 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: fid_panic_callback/45 (1073741824 (estimated locally),1.00 per call) secboot_update_ver_cnt/44 (482850 (estimated locally),0.05 per call) secboot_update_ver_cnt/44 (50433 (estimated locally),0.00 per call) secboot_update_ver_cnt/44 (482850 (estimated locally),0.05 per call) secboot_update_ver_cnt/44 (50433 (estimated locally),0.00 per call) secboot_wdg_cb/39 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+secboot_entry/47 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) body executed_once
+  Called by: 
+  Calls: sysreg_set_status/50 (7016531 (estimated locally),0.66 per call) watchdog_stop/52 (7016531 (estimated locally),0.66 per call) sch_start/51 (3614577 (estimated locally),0.34 per call) sysreg_set_status/50 (3614577 (estimated locally),0.34 per call) secboot_update_ver_cnt/44 (inlined) (3614577 (estimated locally),0.34 per call) secboot_init_hsm/43 (inlined) (10631108 (estimated locally),1.00 per call) 
+fid_delay_get_random/46 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: cpt_get_rand_fast/49 (1073741824 (estimated locally),1.00 per call) 
+fid_panic_callback/45 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/48 (1073741824 (estimated locally),1.00 per call) 
+secboot_update_ver_cnt/44 (secboot_update_ver_cnt)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function secboot_update_ver_cnt/44 is inline copy in secboot_entry/47
+  Availability: local
+  Function flags: count:3614577 (estimated locally) body local executed_once
+  Called by: secboot_entry/47 (inlined) (3614577 (estimated locally),0.34 per call) 
+  Calls: expt_det_add_error/48 (482850 (estimated locally),0.05 per call) expt_det_add_error/48 (50433 (estimated locally),0.00 per call) misc_write_otp_data/67 (103178 (estimated locally),0.01 per call) uint32_BigNumCmp/66 (248741 (estimated locally),0.02 per call) fid_delay/65 (248741 (estimated locally),0.02 per call) memcpy_/68 (248741 (estimated locally),0.02 per call) otp_read/64 (731590 (estimated locally),0.07 per call) expt_det_add_error/48 (482850 (estimated locally),0.05 per call) expt_det_add_error/48 (50433 (estimated locally),0.00 per call) misc_write_otp_data/67 (103178 (estimated locally),0.01 per call) uint32_BigNumCmp/66 (248741 (estimated locally),0.02 per call) fid_delay/65 (248741 (estimated locally),0.02 per call) memcpy_/68 (248741 (estimated locally),0.02 per call) otp_read/64 (731590 (estimated locally),0.07 per call) 
+secboot_init_hsm/43 (secboot_init_hsm)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function secboot_init_hsm/43 is inline copy in secboot_entry/47
+  Availability: local
+  Function flags: count:10631108 (estimated locally) body local executed_once
+  Called by: secboot_entry/47 (inlined) (10631108 (estimated locally),1.00 per call) 
+  Calls: watchdog_feed/53 (10631108 (estimated locally),1.00 per call) crypto_srv_init/63 (258639 (estimated locally),0.02 per call) secboot_comp_init/41 (inlined) (2151736 (estimated locally),0.20 per call) secboot_drv_init/40 (inlined) (10631108 (estimated locally),1.00 per call) 
+secboot_comp_init/41 (secboot_comp_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: ram_key_mem_addr.0/61 (addr) g_otp_default_keyid_map/38 (addr) 
+  Referring: 
+  Function secboot_comp_init/41 is inline copy in secboot_entry/47
+  Availability: local
+  Function flags: count:2151736 (estimated locally) body local executed_once
+  Called by: secboot_init_hsm/43 (inlined) (2151736 (estimated locally),0.20 per call) 
+  Calls: otpkey_register_keyid_map/62 (73917 (estimated locally),0.01 per call) kds_init/60 (365205 (estimated locally),0.03 per call) sch_init/59 (88147 (estimated locally),0.01 per call) comm_init/58 (435511 (estimated locally),0.04 per call) expt_det_init/57 (2151736 (estimated locally),0.20 per call) 
+secboot_drv_init/40 (secboot_drv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: secboot_wdg_cb/39 (addr) 
+  Referring: 
+  Function secboot_drv_init/40 is inline copy in secboot_entry/47
+  Availability: local
+  Function flags: count:10631108 (estimated locally) body local executed_once
+  Called by: secboot_init_hsm/43 (inlined) (10631108 (estimated locally),1.00 per call) 
+  Calls: watchdog_start/56 (2151736 (estimated locally),0.20 per call) watchdog_init/55 (10631108 (estimated locally),1.00 per call) cpu_platform_init/54 (10631108 (estimated locally),1.00 per call) 
+secboot_wdg_cb/39 (secboot_wdg_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: secboot_drv_init/40 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: expt_det_add_error/48 (1073741824 (estimated locally),1.00 per call) 
+g_otp_default_keyid_map/38 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: secboot_comp_init/41 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+Trivially needed variables: ram_key_mem_addr.0/61 g_otp_default_keyid_map/38
+Removing variables:
+
+Final Symbol table:
+
+memcpy_/68 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+misc_write_otp_data/67 (misc_write_otp_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/66 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_delay/65 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otp_read/64 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_srv_init/63 (crypto_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otpkey_register_keyid_map/62 (otpkey_register_keyid_map)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ram_key_mem_addr.0/61 (ram_key_mem_addr)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.ram_key_mem_addr.0 (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: used-by-single-function
+kds_init/60 (kds_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sch_init/59 (sch_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+comm_init/58 (comm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_init/57 (expt_det_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_start/56 (watchdog_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_init/55 (watchdog_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_platform_init/54 (cpu_platform_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_feed/53 (watchdog_feed)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+watchdog_stop/52 (watchdog_stop)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sch_start/51 (sch_start)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_set_status/50 (sysreg_set_status)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_get_rand_fast/49 (cpt_get_rand_fast)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_add_error/48 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+secboot_entry/47 (secboot_entry)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.secboot_entry (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) executed_once
+  Called by: 
+  Calls: 
+fid_delay_get_random/46 (fid_delay_get_random)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fid_delay_get_random (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+fid_panic_callback/45 (fid_panic_callback)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fid_panic_callback (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+secboot_wdg_cb/39 (secboot_wdg_cb)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.secboot_wdg_cb (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+g_otp_default_keyid_map/38 (g_otp_default_keyid_map)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.g_otp_default_keyid_map (implicit_section)
+  Aux: @0x7f81066b2000
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known

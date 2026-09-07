@@ -1,0 +1,2289 @@
+Trivially needed symbols: hash_srv_handler/54 hash_srv_init/53 hash_srv_general_onepass/52 hash_srv_general_final/51 hash_srv_general_update/50 hash_srv_general_init/49 hash_srv_dma_update/48 hash_srv_cpu_update/47 hash_srv_release_ahb_dma/46 hash_srv_using_ahb_dma/45
+
+
+Initial Symbol table:
+
+mmap_write_remote_data/69 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_stepwise_final/42 
+  Calls: 
+cpt_hash_dma/68 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_onepass/52 hash_srv_general_onepass/52 
+  Calls: 
+hash_get_digest_word_len/67 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_onepass/44 hash_srv_general_onepass/52 
+  Calls: 
+cpt_hash_final/66 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_final/39 
+  Calls: 
+memcpy_/65 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/13 
+  Calls: 
+cpu_exit_critical/64 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+mmap_remap_addr_u64/63 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpu_enter_critical/62 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpt_hash_init/61 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_init/49 
+  Calls: 
+cpt_hash_dma_update_blocks/60 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_rctx_switch_dma_ctx/59 (cpt_hash_rctx_switch_dma_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_update/58 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+mmap_read_remote_data/57 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/56 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_final/51 hash_srv_general_init/49 hash_srv_cpu_update/47 hash_srv_cpu_update/47 
+  Calls: 
+expt_det_add_error/55 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+hash_srv_handler/54 (hash_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_stepwise_handler/43 hash_srv_onepass/44 cmd_check_process_mode/28 get_lib_hash_alg/31 
+hash_srv_init/53 (hash_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+hash_srv_general_onepass/52 (hash_srv_general_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_onepass/44 
+  Calls: cpt_hash_dma/68 util_memcpy/13 cpt_hash_dma/68 hash_get_digest_word_len/67 
+hash_srv_general_final/51 (hash_srv_general_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_final/42 
+  Calls: hash_cpu_final/39 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_general_update/50 (hash_srv_general_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_update/41 
+  Calls: hash_srv_cpu_update/47 hash_srv_dma_update/48 hash_check_dma_mode/37 
+hash_srv_general_init/49 (hash_srv_general_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 cpt_hash_init/61 
+hash_srv_dma_update/48 (hash_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_dma_ctx/59 cpt_hash_dma_update_blocks/60 cpt_hash_rctx_switch_dma_ctx/59 
+hash_srv_cpu_update/47 (hash_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 hash_cpu_update/38 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_release_ahb_dma/46 (hash_srv_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_release_ahb_dma/27 
+hash_srv_using_ahb_dma/45 (hash_srv_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b428d4660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_using_ahb_dma/26 
+hash_srv_onepass/44 (hash_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_general_onepass/52 hash_get_digest_word_len/67 get_lib_hash_alg/31 
+hash_srv_stepwise_handler/43 (hash_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_stepwise_final/42 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 
+hash_srv_stepwise_final/42 (hash_srv_stepwise_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 
+  Calls: mmap_write_remote_data/69 hash_srv_general_final/51 
+hash_srv_stepwise_update/41 (hash_srv_stepwise_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_update/50 
+hash_srv_stepwise_init/40 (hash_srv_stepwise_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_init/49 get_lib_hash_alg/31 
+hash_cpu_final/39 (hash_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_final/51 
+  Calls: cpt_hash_final/66 hash_cpu_update/38 
+hash_cpu_update/38 (hash_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_cpu_final/39 hash_srv_cpu_update/47 
+  Calls: cpt_hash_update/58 mmap_read_remote_data/57 
+hash_check_dma_mode/37 (hash_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpu_exit_critical/64 util_memcpy/13 mmap_remap_addr_u64/63 cpu_enter_critical/62 
+get_kms_ske_alg/36 (get_kms_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_padding/35 (get_ske_padding)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_mode/34 (get_ske_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_alg/33 (get_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_curve_param_type/32 (get_curve_param_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_lib_hash_alg/31 (get_lib_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428ba330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 hash_srv_onepass/44 hash_srv_handler/54 
+  Calls: 
+cmd_check_direction/30 (cmd_check_direction)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode_and_msg_type/29 (cmd_check_process_mode_and_msg_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode/28 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: 
+crypto_release_ahb_dma/27 (crypto_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_release_ahb_dma/46 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_using_ahb_dma/26 (crypto_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_using_ahb_dma/45 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_get_ahb_dma_cfg_reg/25 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b42be0dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_lock_reg/24 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_unlock_reg/23 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b42be0ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_config_sm_en/22 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/21 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/20 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/19 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_write_volatile_u32/18 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/17 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/16 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/15 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/14 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b428d4bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_onepass/52 hash_check_dma_mode/37 
+  Calls: memcpy_/65 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: get_kms_ske_alg/36 get_ske_padding/35 get_ske_mode/34 get_ske_alg/33 get_curve_param_type/32 cmd_check_direction/30 cmd_check_process_mode_and_msg_type/29 sysreg_config_sm_en/22 sysreg_umask_sm_lock/21 sysreg_enable_sm_lock/20 sysreg_enable_fun_lock/19 util_write_volatile_u32/18 util_read_volatile_u32/17 util_u32_copy/16 util_memcmp/15 util_memset/14 check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+mmap_write_remote_data/69 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_stepwise_final/42 
+  Calls: 
+cpt_hash_dma/68 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_onepass/52 hash_srv_general_onepass/52 
+  Calls: 
+hash_get_digest_word_len/67 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_onepass/44 hash_srv_general_onepass/52 
+  Calls: 
+cpt_hash_final/66 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_final/39 
+  Calls: 
+memcpy_/65 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/13 
+  Calls: 
+cpu_exit_critical/64 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+mmap_remap_addr_u64/63 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpu_enter_critical/62 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpt_hash_init/61 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_init/49 
+  Calls: 
+cpt_hash_dma_update_blocks/60 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_rctx_switch_dma_ctx/59 (cpt_hash_rctx_switch_dma_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_update/58 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+mmap_read_remote_data/57 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/56 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_final/51 hash_srv_general_init/49 hash_srv_cpu_update/47 hash_srv_cpu_update/47 
+  Calls: 
+expt_det_add_error/55 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+hash_srv_handler/54 (hash_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_stepwise_handler/43 hash_srv_onepass/44 cmd_check_process_mode/28 get_lib_hash_alg/31 
+hash_srv_init/53 (hash_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+hash_srv_general_onepass/52 (hash_srv_general_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_onepass/44 
+  Calls: cpt_hash_dma/68 util_memcpy/13 cpt_hash_dma/68 hash_get_digest_word_len/67 
+hash_srv_general_final/51 (hash_srv_general_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_final/42 
+  Calls: hash_cpu_final/39 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_general_update/50 (hash_srv_general_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_update/41 
+  Calls: hash_srv_cpu_update/47 hash_srv_dma_update/48 hash_check_dma_mode/37 
+hash_srv_general_init/49 (hash_srv_general_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 cpt_hash_init/61 
+hash_srv_dma_update/48 (hash_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_dma_ctx/59 cpt_hash_dma_update_blocks/60 cpt_hash_rctx_switch_dma_ctx/59 
+hash_srv_cpu_update/47 (hash_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 hash_cpu_update/38 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_release_ahb_dma/46 (hash_srv_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_release_ahb_dma/27 
+hash_srv_using_ahb_dma/45 (hash_srv_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_using_ahb_dma/26 
+hash_srv_onepass/44 (hash_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_general_onepass/52 hash_get_digest_word_len/67 get_lib_hash_alg/31 
+hash_srv_stepwise_handler/43 (hash_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_stepwise_final/42 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 
+hash_srv_stepwise_final/42 (hash_srv_stepwise_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 
+  Calls: mmap_write_remote_data/69 hash_srv_general_final/51 
+hash_srv_stepwise_update/41 (hash_srv_stepwise_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_update/50 
+hash_srv_stepwise_init/40 (hash_srv_stepwise_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_init/49 get_lib_hash_alg/31 
+hash_cpu_final/39 (hash_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_final/51 
+  Calls: cpt_hash_final/66 hash_cpu_update/38 
+hash_cpu_update/38 (hash_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_cpu_final/39 hash_srv_cpu_update/47 
+  Calls: cpt_hash_update/58 mmap_read_remote_data/57 
+hash_check_dma_mode/37 (hash_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpu_exit_critical/64 util_memcpy/13 mmap_remap_addr_u64/63 cpu_enter_critical/62 
+get_lib_hash_alg/31 (get_lib_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 hash_srv_onepass/44 hash_srv_handler/54 
+  Calls: 
+cmd_check_process_mode/28 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: 
+crypto_release_ahb_dma/27 (crypto_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_release_ahb_dma/46 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_using_ahb_dma/26 (crypto_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_using_ahb_dma/45 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_get_ahb_dma_cfg_reg/25 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_lock_reg/24 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_unlock_reg/23 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_onepass/52 hash_check_dma_mode/37 
+  Calls: memcpy_/65 
+
+
+Initial Symbol table:
+
+mmap_write_remote_data/69 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_stepwise_final/42 
+  Calls: 
+cpt_hash_dma/68 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_onepass/52 hash_srv_general_onepass/52 
+  Calls: 
+hash_get_digest_word_len/67 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_onepass/44 hash_srv_general_onepass/52 
+  Calls: 
+cpt_hash_final/66 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_final/39 
+  Calls: 
+memcpy_/65 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/13 
+  Calls: 
+cpu_exit_critical/64 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+mmap_remap_addr_u64/63 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpu_enter_critical/62 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpt_hash_init/61 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_init/49 
+  Calls: 
+cpt_hash_dma_update_blocks/60 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_rctx_switch_dma_ctx/59 (cpt_hash_rctx_switch_dma_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_update/58 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+mmap_read_remote_data/57 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/56 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_final/51 hash_srv_general_init/49 hash_srv_cpu_update/47 hash_srv_cpu_update/47 
+  Calls: 
+expt_det_add_error/55 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+hash_srv_handler/54 (hash_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_stepwise_handler/43 hash_srv_onepass/44 cmd_check_process_mode/28 get_lib_hash_alg/31 
+hash_srv_init/53 (hash_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+hash_srv_general_onepass/52 (hash_srv_general_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_onepass/44 
+  Calls: cpt_hash_dma/68 util_memcpy/13 cpt_hash_dma/68 hash_get_digest_word_len/67 
+hash_srv_general_final/51 (hash_srv_general_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_final/42 
+  Calls: hash_cpu_final/39 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_general_update/50 (hash_srv_general_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_update/41 
+  Calls: hash_srv_cpu_update/47 hash_srv_dma_update/48 hash_check_dma_mode/37 
+hash_srv_general_init/49 (hash_srv_general_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 cpt_hash_init/61 
+hash_srv_dma_update/48 (hash_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_dma_ctx/59 cpt_hash_dma_update_blocks/60 cpt_hash_rctx_switch_dma_ctx/59 
+hash_srv_cpu_update/47 (hash_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 hash_cpu_update/38 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_release_ahb_dma/46 (hash_srv_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_release_ahb_dma/27 
+hash_srv_using_ahb_dma/45 (hash_srv_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_using_ahb_dma/26 
+hash_srv_onepass/44 (hash_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_general_onepass/52 hash_get_digest_word_len/67 get_lib_hash_alg/31 
+hash_srv_stepwise_handler/43 (hash_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_stepwise_final/42 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 
+hash_srv_stepwise_final/42 (hash_srv_stepwise_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 
+  Calls: mmap_write_remote_data/69 hash_srv_general_final/51 
+hash_srv_stepwise_update/41 (hash_srv_stepwise_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_update/50 
+hash_srv_stepwise_init/40 (hash_srv_stepwise_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_init/49 get_lib_hash_alg/31 
+hash_cpu_final/39 (hash_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_final/51 
+  Calls: cpt_hash_final/66 hash_cpu_update/38 
+hash_cpu_update/38 (hash_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_cpu_final/39 hash_srv_cpu_update/47 
+  Calls: cpt_hash_update/58 mmap_read_remote_data/57 
+hash_check_dma_mode/37 (hash_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpu_exit_critical/64 util_memcpy/13 mmap_remap_addr_u64/63 cpu_enter_critical/62 
+get_lib_hash_alg/31 (get_lib_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 hash_srv_onepass/44 hash_srv_handler/54 
+  Calls: 
+cmd_check_process_mode/28 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: 
+crypto_release_ahb_dma/27 (crypto_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_release_ahb_dma/46 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_using_ahb_dma/26 (crypto_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_using_ahb_dma/45 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_get_ahb_dma_cfg_reg/25 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_lock_reg/24 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_unlock_reg/23 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_onepass/52 hash_check_dma_mode/37 
+  Calls: memcpy_/65 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+mmap_write_remote_data/69 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_stepwise_final/42 
+  Calls: 
+cpt_hash_dma/68 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_onepass/52 hash_srv_general_onepass/52 
+  Calls: 
+hash_get_digest_word_len/67 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_onepass/44 hash_srv_general_onepass/52 
+  Calls: 
+cpt_hash_final/66 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_final/39 
+  Calls: 
+memcpy_/65 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/13 
+  Calls: 
+cpu_exit_critical/64 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+mmap_remap_addr_u64/63 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpu_enter_critical/62 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_check_dma_mode/37 
+  Calls: 
+cpt_hash_init/61 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_init/49 
+  Calls: 
+cpt_hash_dma_update_blocks/60 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_rctx_switch_dma_ctx/59 (cpt_hash_rctx_switch_dma_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_dma_update/48 hash_srv_dma_update/48 
+  Calls: 
+cpt_hash_update/58 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+mmap_read_remote_data/57 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_cpu_update/38 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/56 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: hash_srv_general_final/51 hash_srv_general_init/49 hash_srv_cpu_update/47 hash_srv_cpu_update/47 
+  Calls: 
+expt_det_add_error/55 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+hash_srv_handler/54 (hash_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_stepwise_handler/43 hash_srv_onepass/44 cmd_check_process_mode/28 get_lib_hash_alg/31 
+hash_srv_init/53 (hash_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+hash_srv_general_onepass/52 (hash_srv_general_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_onepass/44 
+  Calls: cpt_hash_dma/68 util_memcpy/13 cpt_hash_dma/68 hash_get_digest_word_len/67 
+hash_srv_general_final/51 (hash_srv_general_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_final/42 
+  Calls: hash_cpu_final/39 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_general_update/50 (hash_srv_general_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_update/41 
+  Calls: hash_srv_cpu_update/47 hash_srv_dma_update/48 hash_check_dma_mode/37 
+hash_srv_general_init/49 (hash_srv_general_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 cpt_hash_init/61 
+hash_srv_dma_update/48 (hash_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_dma_ctx/59 cpt_hash_dma_update_blocks/60 cpt_hash_rctx_switch_dma_ctx/59 
+hash_srv_cpu_update/47 (hash_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 hash_cpu_update/38 cpt_hash_rctx_switch_cpu_ctx/56 
+hash_srv_release_ahb_dma/46 (hash_srv_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_release_ahb_dma/27 
+hash_srv_using_ahb_dma/45 (hash_srv_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: crypto_using_ahb_dma/26 
+hash_srv_onepass/44 (hash_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_general_onepass/52 hash_get_digest_word_len/67 get_lib_hash_alg/31 
+hash_srv_stepwise_handler/43 (hash_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: hash_srv_stepwise_final/42 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 hash_srv_stepwise_update/41 hash_srv_stepwise_init/40 
+hash_srv_stepwise_final/42 (hash_srv_stepwise_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 
+  Calls: mmap_write_remote_data/69 hash_srv_general_final/51 
+hash_srv_stepwise_update/41 (hash_srv_stepwise_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_update/50 
+hash_srv_stepwise_init/40 (hash_srv_stepwise_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_handler/43 hash_srv_stepwise_handler/43 
+  Calls: hash_srv_general_init/49 get_lib_hash_alg/31 
+hash_cpu_final/39 (hash_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_final/51 
+  Calls: cpt_hash_final/66 hash_cpu_update/38 
+hash_cpu_update/38 (hash_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_cpu_final/39 hash_srv_cpu_update/47 
+  Calls: cpt_hash_update/58 mmap_read_remote_data/57 
+hash_check_dma_mode/37 (hash_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_update/50 
+  Calls: cpu_exit_critical/64 util_memcpy/13 mmap_remap_addr_u64/63 cpu_enter_critical/62 
+get_lib_hash_alg/31 (get_lib_hash_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_stepwise_init/40 hash_srv_onepass/44 hash_srv_handler/54 
+  Calls: 
+cmd_check_process_mode/28 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_handler/54 
+  Calls: 
+crypto_release_ahb_dma/27 (crypto_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_release_ahb_dma/46 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_using_ahb_dma/26 (crypto_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_using_ahb_dma/45 
+  Calls: expt_det_add_error/55 sysreg_lock_reg/24 sysreg_unlock_reg/23 crypto_get_ahb_dma_cfg_reg/25 
+crypto_get_ahb_dma_cfg_reg/25 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_lock_reg/24 (sysreg_lock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+sysreg_unlock_reg/23 (sysreg_unlock_reg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: crypto_release_ahb_dma/27 crypto_using_ahb_dma/26 
+  Calls: 
+util_memcpy/13 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: hash_srv_general_onepass/52 hash_check_dma_mode/37 
+  Calls: memcpy_/65 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+hash_srv_stepwise_update/78 (hash_srv_stepwise_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 41
+  References: 
+  Referring: 
+  Function hash_srv_stepwise_update/78 is inline copy in hash_srv_handler/54
+  Clone of hash_srv_stepwise_update/41
+  Availability: local
+  Function flags: count:22172973 (estimated locally) body local
+  Called by: hash_srv_stepwise_handler/43 (inlined) (22172973 (estimated locally),0.02 per call) 
+  Calls: hash_srv_general_update/50 (22172973 (estimated locally),0.02 per call) 
+hash_srv_stepwise_init/77 (hash_srv_stepwise_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 40
+  References: 
+  Referring: 
+  Function hash_srv_stepwise_init/77 is inline copy in hash_srv_handler/54
+  Clone of hash_srv_stepwise_init/40
+  Availability: local
+  Function flags: count:22172973 (estimated locally) body local
+  Called by: hash_srv_stepwise_handler/43 (inlined) (22172973 (estimated locally),0.02 per call) 
+  Calls: hash_srv_general_init/49 (22172973 (estimated locally),0.02 per call) 
+crypto_using_ahb_dma.constprop.0/76 (crypto_using_ahb_dma.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function crypto_using_ahb_dma.constprop/76 is inline copy in hash_srv_using_ahb_dma/45
+  Clone of crypto_using_ahb_dma/26
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: hash_srv_using_ahb_dma/45 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: expt_det_add_error/55 (524845000 (estimated locally),0.49 per call) 
+mmap_write_remote_data/69 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_stepwise_final/42 (3601290 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_dma/68 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_general_onepass/52 (230317619 (estimated locally),0.21 per call) hash_srv_general_onepass/52 (258698990 (estimated locally),0.24 per call) 
+  Calls: 
+hash_get_digest_word_len/67 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_onepass/44 (57112202 (estimated locally),0.05 per call) hash_srv_general_onepass/52 (258698990 (estimated locally),0.24 per call) 
+  Calls: 
+cpt_hash_final/66 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_cpu_final/39 (145607981 (estimated locally),0.14 per call) 
+  Calls: 
+memcpy_/65 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_general_onepass/52 (31095619 (estimated locally),0.03 per call) hash_check_dma_mode/37 (574129752 (estimated locally),0.53 per call) 
+  Calls: 
+cpu_exit_critical/64 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_check_dma_mode/37 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+mmap_remap_addr_u64/63 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_check_dma_mode/37 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_enter_critical/62 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_check_dma_mode/37 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_hash_init/61 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_general_init/49 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_hash_dma_update_blocks/60 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_dma_update/48 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpt_hash_rctx_switch_dma_ctx/59 (cpt_hash_rctx_switch_dma_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_dma_update/48 (43986649 (estimated locally),0.04 per call) hash_srv_dma_update/48 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_hash_update/58 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_cpu_update/38 (719407024 (estimated locally),6.09 per call) 
+  Calls: 
+mmap_read_remote_data/57 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_cpu_update/38 (1073741824 (estimated locally),9.09 per call) 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/56 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: hash_srv_general_final/51 (1073741824 (estimated locally),1.00 per call) hash_srv_general_init/49 (217325344 (estimated locally),0.20 per call) hash_srv_cpu_update/47 (43986649 (estimated locally),0.04 per call) hash_srv_cpu_update/47 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+expt_det_add_error/55 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_using_ahb_dma.constprop.0/76 (524845000 (estimated locally),0.49 per call) crypto_release_ahb_dma/27 (524845000 (estimated locally),0.49 per call) 
+  Calls: 
+hash_srv_handler/54 (hash_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_stepwise_handler/43 (inlined) (110864862 (estimated locally),0.10 per call) hash_srv_onepass/44 (inlined) (57112202 (estimated locally),0.05 per call) 
+hash_srv_init/53 (hash_srv_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_srv_general_onepass/52 (hash_srv_general_onepass)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: hash_srv_onepass/44 (27282499 (estimated locally),0.03 per call) 
+  Calls: cpt_hash_dma/68 (230317619 (estimated locally),0.21 per call) memcpy_/65 (31095619 (estimated locally),0.03 per call) cpt_hash_dma/68 (258698990 (estimated locally),0.24 per call) hash_get_digest_word_len/67 (258698990 (estimated locally),0.24 per call) 
+hash_srv_general_final/51 (hash_srv_general_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_srv_stepwise_final/42 (22172973 (estimated locally),0.02 per call) 
+  Calls: hash_cpu_final/39 (inlined) (217325344 (estimated locally),0.20 per call) cpt_hash_rctx_switch_cpu_ctx/56 (1073741824 (estimated locally),1.00 per call) 
+hash_srv_general_update/50 (hash_srv_general_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_srv_stepwise_update/78 (22172973 (estimated locally),0.02 per call) hash_srv_stepwise_update/41 (4487810 (estimated locally),0.00 per call) 
+  Calls: hash_srv_cpu_update/47 (262476188 (estimated locally),0.24 per call) hash_srv_dma_update/48 (262476188 (estimated locally),0.24 per call) hash_check_dma_mode/37 (1073741824 (estimated locally),1.00 per call) 
+hash_srv_general_init/49 (hash_srv_general_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_srv_stepwise_init/77 (22172973 (estimated locally),0.02 per call) hash_srv_stepwise_init/40 (22172973 (estimated locally),0.02 per call) 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 (217325344 (estimated locally),0.20 per call) cpt_hash_init/61 (1073741824 (estimated locally),1.00 per call) 
+hash_srv_dma_update/48 (hash_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_srv_general_update/50 (262476188 (estimated locally),0.24 per call) 
+  Calls: cpt_hash_rctx_switch_dma_ctx/59 (43986649 (estimated locally),0.04 per call) cpt_hash_dma_update_blocks/60 (217325344 (estimated locally),0.20 per call) cpt_hash_rctx_switch_dma_ctx/59 (1073741824 (estimated locally),1.00 per call) 
+hash_srv_cpu_update/47 (hash_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: hash_srv_general_update/50 (262476188 (estimated locally),0.24 per call) 
+  Calls: cpt_hash_rctx_switch_cpu_ctx/56 (43986649 (estimated locally),0.04 per call) hash_cpu_update/38 (217325344 (estimated locally),0.20 per call) cpt_hash_rctx_switch_cpu_ctx/56 (1073741824 (estimated locally),1.00 per call) 
+hash_srv_release_ahb_dma/46 (hash_srv_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: crypto_release_ahb_dma/27 (inlined) (1073741824 (estimated locally),1.00 per call) 
+hash_srv_using_ahb_dma/45 (hash_srv_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: crypto_using_ahb_dma.constprop.0/76 (inlined) (1073741824 (estimated locally),1.00 per call) 
+hash_srv_onepass/44 (hash_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hash_srv_onepass/44 is inline copy in hash_srv_handler/54
+  Availability: local
+  Function flags: count:57112202 (estimated locally) body local
+  Called by: hash_srv_handler/54 (inlined) (57112202 (estimated locally),0.05 per call) 
+  Calls: hash_srv_general_onepass/52 (27282499 (estimated locally),0.03 per call) hash_get_digest_word_len/67 (57112202 (estimated locally),0.05 per call) 
+hash_srv_stepwise_handler/43 (hash_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hash_srv_stepwise_handler/43 is inline copy in hash_srv_handler/54
+  Availability: local
+  Function flags: count:110864862 (estimated locally) body local
+  Called by: hash_srv_handler/54 (inlined) (110864862 (estimated locally),0.10 per call) 
+  Calls: hash_srv_stepwise_final/42 (inlined) (22172973 (estimated locally),0.02 per call) hash_srv_stepwise_update/41 (inlined) (4487810 (estimated locally),0.00 per call) hash_srv_stepwise_init/40 (inlined) (22172973 (estimated locally),0.02 per call) hash_srv_stepwise_update/78 (inlined) (22172973 (estimated locally),0.02 per call) hash_srv_stepwise_init/77 (inlined) (22172973 (estimated locally),0.02 per call) 
+hash_srv_stepwise_final/42 (hash_srv_stepwise_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hash_srv_stepwise_final/42 is inline copy in hash_srv_handler/54
+  Availability: local
+  Function flags: count:22172973 (estimated locally) body local
+  Called by: hash_srv_stepwise_handler/43 (inlined) (22172973 (estimated locally),0.02 per call) 
+  Calls: mmap_write_remote_data/69 (3601290 (estimated locally),0.00 per call) hash_srv_general_final/51 (22172973 (estimated locally),0.02 per call) 
+hash_srv_stepwise_update/41 (hash_srv_stepwise_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 78
+  References: 
+  Referring: 
+  Function hash_srv_stepwise_update/41 is inline copy in hash_srv_handler/54
+  Availability: local
+  Function flags: count:4487810 (estimated locally) body local
+  Called by: hash_srv_stepwise_handler/43 (inlined) (4487810 (estimated locally),0.00 per call) 
+  Calls: hash_srv_general_update/50 (4487810 (estimated locally),0.00 per call) 
+hash_srv_stepwise_init/40 (hash_srv_stepwise_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 77
+  References: 
+  Referring: 
+  Function hash_srv_stepwise_init/40 is inline copy in hash_srv_handler/54
+  Availability: local
+  Function flags: count:22172973 (estimated locally) body local
+  Called by: hash_srv_stepwise_handler/43 (inlined) (22172973 (estimated locally),0.02 per call) 
+  Calls: hash_srv_general_init/49 (22172973 (estimated locally),0.02 per call) 
+hash_cpu_final/39 (hash_cpu_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function hash_cpu_final/39 is inline copy in hash_srv_general_final/51
+  Availability: local
+  Function flags: count:217325344 (estimated locally) body local
+  Called by: hash_srv_general_final/51 (inlined) (217325344 (estimated locally),0.20 per call) 
+  Calls: cpt_hash_final/66 (145607981 (estimated locally),0.14 per call) hash_cpu_update/38 (108662672 (estimated locally),0.10 per call) 
+hash_cpu_update/38 (hash_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:118111598 (estimated locally) body local
+  Called by: hash_srv_cpu_update/47 (217325344 (estimated locally),0.20 per call) hash_cpu_final/39 (108662672 (estimated locally),0.10 per call) 
+  Calls: cpt_hash_update/58 (719407024 (estimated locally),6.09 per call) mmap_read_remote_data/57 (1073741824 (estimated locally),9.09 per call) 
+hash_check_dma_mode/37 (hash_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: hash_srv_general_update/50 (1073741824 (estimated locally),1.00 per call) 
+  Calls: cpu_exit_critical/64 (1073741824 (estimated locally),1.00 per call) memcpy_/65 (574129752 (estimated locally),0.53 per call) mmap_remap_addr_u64/63 (1073741824 (estimated locally),1.00 per call) cpu_enter_critical/62 (1073741824 (estimated locally),1.00 per call) 
+crypto_release_ahb_dma/27 (crypto_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function crypto_release_ahb_dma/27 is inline copy in hash_srv_release_ahb_dma/46
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: hash_srv_release_ahb_dma/46 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: expt_det_add_error/55 (524845000 (estimated locally),0.49 per call) 
+crypto_using_ahb_dma/26 (crypto_using_ahb_dma)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cloning crypto_using_ahb_dma/26 to crypto_using_ahb_dma.constprop/76
+    replace map: 0 -> 1
+    m_always_copy_start: 1
+uint32_t crypto_using_ahb_dma (uint32_t cfg_val)
+{
+  uint32_t origin_val;
+  long unsigned int _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG dma_cfg_reg => 805330944B
+  # DEBUG BEGIN_STMT
+  origin_val_4 ={v} MEM[(volatile uint32_t *)805330944B];
+  # DEBUG origin_val => origin_val_4
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  MEM[(volatile uint32_t *)805330944B] ={v} cfg_val_5(D);
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 ={v} MEM[(volatile uint32_t *)805330944B];
+  if (_1 != cfg_val_5(D))
+    goto <bb 3>; [48.88%]
+  else
+    goto <bb 4>; [51.12%]
+
+  <bb 3> [local count: 524845000]:
+  # DEBUG BEGIN_STMT
+  expt_det_add_error (45);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return origin_val_4;
+
+}
+
+
+uint32_t crypto_using_ahb_dma.constprop ()
+{
+  uint32_t origin_val;
+  uint32_t cfg_val;
+  long unsigned int _2;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG cfg_val => 1
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG dma_cfg_reg => 805330944B
+  # DEBUG BEGIN_STMT
+  origin_val_1 ={v} MEM[(volatile uint32_t *)805330944B];
+  # DEBUG origin_val => origin_val_1
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  MEM[(volatile uint32_t *)805330944B] ={v} 1;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 ={v} MEM[(volatile uint32_t *)805330944B];
+  if (_2 != 1)
+    goto <bb 3>; [48.88%]
+  else
+    goto <bb 4>; [51.12%]
+
+  <bb 3> [local count: 524845000]:
+  # DEBUG BEGIN_STMT
+  expt_det_add_error (45);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return origin_val_1;
+
+}
+
+
+updating call of hash_srv_using_ahb_dma/45 -> crypto_using_ahb_dma.constprop/76: _3 = crypto_using_ahb_dma (1);
+    m_always_copy_start: 1
+  updated to:_3 = crypto_using_ahb_dma.constprop ();
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+mmap_write_remote_data/69 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_dma/68 (cpt_hash_dma)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/67 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_final/66 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/65 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_exit_critical/64 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_remap_addr_u64/63 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_enter_critical/62 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_init/61 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_dma_update_blocks/60 (cpt_hash_dma_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_rctx_switch_dma_ctx/59 (cpt_hash_rctx_switch_dma_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_update/58 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/57 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/56 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+expt_det_add_error/55 (expt_det_add_error)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_handler/54 (hash_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_init/53 (hash_srv_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+hash_srv_general_onepass/52 (hash_srv_general_onepass)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_general_onepass (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_general_final/51 (hash_srv_general_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_general_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_general_update/50 (hash_srv_general_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_general_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_general_init/49 (hash_srv_general_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_general_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_dma_update/48 (hash_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_dma_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_cpu_update/47 (hash_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_cpu_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_release_ahb_dma/46 (hash_srv_release_ahb_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_release_ahb_dma (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_srv_using_ahb_dma/45 (hash_srv_using_ahb_dma)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.hash_srv_using_ahb_dma (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hash_cpu_update/38 (hash_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hash_cpu_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:118111598 (estimated locally) local
+  Called by: 
+  Calls: 
+hash_check_dma_mode/37 (hash_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.hash_check_dma_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+crypto_using_ahb_dma/26 (crypto_using_ahb_dma)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

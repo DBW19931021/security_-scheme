@@ -1,0 +1,967 @@
+Trivially needed symbols: kds_util_memmove/29 kds_remove_all_key/28 kds_init/27 kds_remove_key/26 kds_read_entire_key/25 kds_read_key/24 kds_write_key/23
+
+
+Initial Symbol table:
+
+memset_/31 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/30 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kds_util_memmove/29 (kds_util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: adjust_mem_node_size/22 
+  Calls: 
+kds_remove_all_key/28 (kds_remove_all_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffbcee3c220
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memset/12 
+kds_init/27 (kds_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffbcee3c110
+  References: g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_kds_init/17 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 
+kds_remove_key/26 (kds_remove_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffbcee3c000
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (addr) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 adjust_mem_node_size/22 check_key_handle_exist/20 
+kds_read_entire_key/25 (kds_read_entire_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffbcee0dee0
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_read_key/24 (kds_read_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffbcee0ddd0
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_write_key/23 (kds_write_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffbcee0dcc0
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 find_unused_key_handle_idx/21 adjust_mem_node_size/22 check_key_handle_exist/20 find_unused_key_handle_idx/21 
+adjust_mem_node_size/22 (adjust_mem_node_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee0d990
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_write_key/23 
+  Calls: kds_util_memmove/29 kds_get_node_addr/19 kds_get_node_addr/19 
+find_unused_key_handle_idx/21 (find_unused_key_handle_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee0d770
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_write_key/23 kds_write_key/23 
+  Calls: check_key_handle_exist/20 
+check_key_handle_exist/20 (check_key_handle_exist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee0daa0
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_read_entire_key/25 kds_read_key/24 find_unused_key_handle_idx/21 kds_write_key/23 
+  Calls: 
+kds_get_node_addr/19 (kds_get_node_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee0d110
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 adjust_mem_node_size/22 adjust_mem_node_size/22 kds_write_key/23 
+  Calls: 
+g_mem_head/18 (g_mem_head)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee1c680
+  References: 
+  Referring: kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) find_unused_key_handle_idx/21 (read) kds_get_node_addr/19 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_remove_key/26 (read) kds_remove_key/26 (write) kds_remove_key/26 (addr) kds_remove_key/26 (write) kds_init/27 (addr) kds_init/27 (write) kds_init/27 (write) kds_init/27 (write) kds_remove_all_key/28 (read) kds_remove_all_key/28 (read) kds_remove_all_key/28 (addr) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_kds_init/17 (g_kds_init)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee0d880
+  References: 
+  Referring: kds_write_key/23 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_init/27 (write) kds_remove_all_key/28 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_write_volatile_u32/16 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/14 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/13 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee3c000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_all_key/28 kds_remove_all_key/28 kds_init/27 kds_remove_key/26 
+  Calls: memset_/31 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffbcee0dcc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 kds_write_key/23 
+  Calls: memcpy_/30 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/16 util_read_volatile_u32/15 util_u32_copy/14 util_memcmp/13 check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memset_/31 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/30 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kds_util_memmove/29 (kds_util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: adjust_mem_node_size/22 
+  Calls: 
+kds_remove_all_key/28 (kds_remove_all_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memset/12 
+kds_init/27 (kds_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_kds_init/17 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 
+kds_remove_key/26 (kds_remove_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (addr) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 adjust_mem_node_size/22 check_key_handle_exist/20 
+kds_read_entire_key/25 (kds_read_entire_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_read_key/24 (kds_read_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_write_key/23 (kds_write_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 find_unused_key_handle_idx/21 adjust_mem_node_size/22 check_key_handle_exist/20 find_unused_key_handle_idx/21 
+adjust_mem_node_size/22 (adjust_mem_node_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_write_key/23 
+  Calls: kds_util_memmove/29 kds_get_node_addr/19 kds_get_node_addr/19 
+find_unused_key_handle_idx/21 (find_unused_key_handle_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_write_key/23 kds_write_key/23 
+  Calls: check_key_handle_exist/20 
+check_key_handle_exist/20 (check_key_handle_exist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_read_entire_key/25 kds_read_key/24 find_unused_key_handle_idx/21 kds_write_key/23 
+  Calls: 
+kds_get_node_addr/19 (kds_get_node_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 adjust_mem_node_size/22 adjust_mem_node_size/22 kds_write_key/23 
+  Calls: 
+g_mem_head/18 (g_mem_head)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) find_unused_key_handle_idx/21 (read) kds_get_node_addr/19 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_remove_key/26 (read) kds_remove_key/26 (write) kds_remove_key/26 (addr) kds_remove_key/26 (write) kds_init/27 (addr) kds_init/27 (write) kds_init/27 (write) kds_init/27 (write) kds_remove_all_key/28 (read) kds_remove_all_key/28 (read) kds_remove_all_key/28 (addr) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_kds_init/17 (g_kds_init)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: kds_write_key/23 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_init/27 (write) kds_remove_all_key/28 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_all_key/28 kds_remove_all_key/28 kds_init/27 kds_remove_key/26 
+  Calls: memset_/31 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 kds_write_key/23 
+  Calls: memcpy_/30 
+
+
+Initial Symbol table:
+
+memset_/31 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/30 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kds_util_memmove/29 (kds_util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: adjust_mem_node_size/22 
+  Calls: 
+kds_remove_all_key/28 (kds_remove_all_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memset/12 
+kds_init/27 (kds_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_kds_init/17 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 
+kds_remove_key/26 (kds_remove_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (addr) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 adjust_mem_node_size/22 check_key_handle_exist/20 
+kds_read_entire_key/25 (kds_read_entire_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_read_key/24 (kds_read_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_write_key/23 (kds_write_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 find_unused_key_handle_idx/21 adjust_mem_node_size/22 check_key_handle_exist/20 find_unused_key_handle_idx/21 
+adjust_mem_node_size/22 (adjust_mem_node_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_write_key/23 
+  Calls: kds_util_memmove/29 kds_get_node_addr/19 kds_get_node_addr/19 
+find_unused_key_handle_idx/21 (find_unused_key_handle_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_write_key/23 kds_write_key/23 
+  Calls: check_key_handle_exist/20 
+check_key_handle_exist/20 (check_key_handle_exist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_read_entire_key/25 kds_read_key/24 find_unused_key_handle_idx/21 kds_write_key/23 
+  Calls: 
+kds_get_node_addr/19 (kds_get_node_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 adjust_mem_node_size/22 adjust_mem_node_size/22 kds_write_key/23 
+  Calls: 
+g_mem_head/18 (g_mem_head)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) find_unused_key_handle_idx/21 (read) kds_get_node_addr/19 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_remove_key/26 (read) kds_remove_key/26 (write) kds_remove_key/26 (addr) kds_remove_key/26 (write) kds_init/27 (addr) kds_init/27 (write) kds_init/27 (write) kds_init/27 (write) kds_remove_all_key/28 (read) kds_remove_all_key/28 (read) kds_remove_all_key/28 (addr) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_kds_init/17 (g_kds_init)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: kds_write_key/23 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_init/27 (write) kds_remove_all_key/28 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_all_key/28 kds_remove_all_key/28 kds_init/27 kds_remove_key/26 
+  Calls: memset_/31 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 kds_write_key/23 
+  Calls: memcpy_/30 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memset_/31 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+memcpy_/30 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+kds_util_memmove/29 (kds_util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: adjust_mem_node_size/22 
+  Calls: 
+kds_remove_all_key/28 (kds_remove_all_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 util_memset/12 
+kds_init/27 (kds_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_kds_init/17 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 
+kds_remove_key/26 (kds_remove_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (addr) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memset/12 adjust_mem_node_size/22 check_key_handle_exist/20 
+kds_read_entire_key/25 (kds_read_entire_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_read_key/24 (kds_read_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 check_key_handle_exist/20 
+kds_write_key/23 (kds_write_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: util_memcpy/11 kds_get_node_addr/19 find_unused_key_handle_idx/21 adjust_mem_node_size/22 check_key_handle_exist/20 find_unused_key_handle_idx/21 
+adjust_mem_node_size/22 (adjust_mem_node_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_write_key/23 
+  Calls: kds_util_memmove/29 kds_get_node_addr/19 kds_get_node_addr/19 
+find_unused_key_handle_idx/21 (find_unused_key_handle_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_write_key/23 kds_write_key/23 
+  Calls: check_key_handle_exist/20 
+check_key_handle_exist/20 (check_key_handle_exist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_key/26 kds_read_entire_key/25 kds_read_key/24 find_unused_key_handle_idx/21 kds_write_key/23 
+  Calls: 
+kds_get_node_addr/19 (kds_get_node_addr)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 adjust_mem_node_size/22 adjust_mem_node_size/22 kds_write_key/23 
+  Calls: 
+g_mem_head/18 (g_mem_head)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (write) kds_write_key/23 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) check_key_handle_exist/20 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (read) adjust_mem_node_size/22 (write) adjust_mem_node_size/22 (write) find_unused_key_handle_idx/21 (read) kds_get_node_addr/19 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_remove_key/26 (read) kds_remove_key/26 (write) kds_remove_key/26 (addr) kds_remove_key/26 (write) kds_init/27 (addr) kds_init/27 (write) kds_init/27 (write) kds_init/27 (write) kds_remove_all_key/28 (read) kds_remove_all_key/28 (read) kds_remove_all_key/28 (addr) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_kds_init/17 (g_kds_init)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: kds_write_key/23 (read) kds_read_key/24 (read) kds_read_entire_key/25 (read) kds_remove_key/26 (read) kds_init/27 (write) kds_remove_all_key/28 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_remove_all_key/28 kds_remove_all_key/28 kds_init/27 kds_remove_key/26 
+  Calls: memset_/31 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: kds_read_entire_key/25 kds_read_key/24 kds_write_key/23 
+  Calls: memcpy_/30 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+adjust_mem_node_size.part.0/46 (adjust_mem_node_size.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Availability: local
+  Function flags: count:28437321 (estimated locally) body local split_part nonfreeing_fn
+  Called by: kds_remove_key/26 (57995373 (estimated locally),0.05 per call) adjust_mem_node_size/22 (5913410 (estimated locally),0.01 per call) 
+  Calls: kds_util_memmove/29 (10737416 (estimated locally),0.38 per call) 
+kds_util_memmove.part.0/43 (kds_util_memmove.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function kds_util_memmove.part.0/43 is inline copy in kds_util_memmove/29
+  Availability: local
+  Function flags: count:118111600 (estimated locally) body local split_part nonfreeing_fn
+  Called by: kds_util_memmove/29 (inlined) (118111600 (estimated locally),0.25 per call) 
+  Calls: 
+check_key_handle_exist.part.0/32 (check_key_handle_exist.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:74381500 (estimated locally) body local split_part nonfreeing_fn
+  Called by: kds_remove_key/26 (341149249 (estimated locally),0.32 per call) kds_write_key/23 (56427817 (estimated locally),0.05 per call) kds_read_entire_key/25 (106406740 (estimated locally),0.10 per call) kds_read_key/24 (106406740 (estimated locally),0.10 per call) find_unused_key_handle_idx/21 (215152091 (estimated locally),2.18 per call) 
+  Calls: 
+memset_/31 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: kds_remove_key/26 (6971044 (estimated locally),0.01 per call) kds_remove_all_key/28 (10737416 (estimated locally),0.33 per call) kds_remove_all_key/28 (10737416 (estimated locally),0.33 per call) kds_init/27 (10737416 (estimated locally),0.07 per call) 
+  Calls: 
+memcpy_/30 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: kds_write_key/23 (8153820 (estimated locally),0.01 per call) kds_read_entire_key/25 (11938836 (estimated locally),0.01 per call) kds_read_key/24 (7760244 (estimated locally),0.01 per call) 
+  Calls: 
+kds_util_memmove/29 (kds_util_memmove)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:482088160 (estimated locally) body nonfreeing_fn
+  Called by: adjust_mem_node_size.part.0/46 (10737416 (estimated locally),0.38 per call) 
+  Calls: kds_util_memmove.part.0/43 (inlined) (118111600 (estimated locally),0.25 per call) 
+kds_remove_all_key/28 (kds_remove_all_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:32537624 (estimated locally) body
+  Called by: 
+  Calls: memset_/31 (10737416 (estimated locally),0.33 per call) memset_/31 (10737416 (estimated locally),0.33 per call) 
+kds_init/27 (kds_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_mem_head/18 (addr) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_kds_init/17 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:146366084 (estimated locally) body
+  Called by: 
+  Calls: memset_/31 (10737416 (estimated locally),0.07 per call) 
+kds_remove_key/26 (kds_remove_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (addr) g_mem_head/18 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memset_/31 (6971044 (estimated locally),0.01 per call) adjust_mem_node_size.part.0/46 (57995373 (estimated locally),0.05 per call) check_key_handle_exist.part.0/32 (341149249 (estimated locally),0.32 per call) 
+kds_read_entire_key/25 (kds_read_entire_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memcpy_/30 (11938836 (estimated locally),0.01 per call) check_key_handle_exist.part.0/32 (106406740 (estimated locally),0.10 per call) 
+kds_read_key/24 (kds_read_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: memcpy_/30 (7760244 (estimated locally),0.01 per call) check_key_handle_exist.part.0/32 (106406740 (estimated locally),0.10 per call) 
+kds_write_key/23 (kds_write_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_kds_init/17 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (write) g_mem_head/18 (read) g_mem_head/18 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: memcpy_/30 (8153820 (estimated locally),0.01 per call) find_unused_key_handle_idx/21 (27581917 (estimated locally),0.03 per call) adjust_mem_node_size/22 (inlined) (28845900 (estimated locally),0.03 per call) check_key_handle_exist.part.0/32 (56427817 (estimated locally),0.05 per call) find_unused_key_handle_idx/21 (29068876 (estimated locally),0.03 per call) 
+adjust_mem_node_size/22 (adjust_mem_node_size)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function adjust_mem_node_size/22 is inline copy in kds_write_key/23
+  Availability: local
+  Function flags: count:28845900 (estimated locally) body local nonfreeing_fn
+  Called by: kds_write_key/23 (inlined) (28845900 (estimated locally),0.03 per call) 
+  Calls: adjust_mem_node_size.part.0/46 (5913410 (estimated locally),0.01 per call) 
+find_unused_key_handle_idx/21 (find_unused_key_handle_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: g_mem_head/18 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:98860940 (estimated locally) body local nonfreeing_fn
+  Called by: kds_write_key/23 (27581917 (estimated locally),0.03 per call) kds_write_key/23 (29068876 (estimated locally),0.03 per call) 
+  Calls: check_key_handle_exist.part.0/32 (215152091 (estimated locally),2.18 per call) 
+g_mem_head/18 (g_mem_head)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: adjust_mem_node_size.part.0/46 (read) adjust_mem_node_size.part.0/46 (read) adjust_mem_node_size.part.0/46 (read) adjust_mem_node_size.part.0/46 (read) adjust_mem_node_size.part.0/46 (read) adjust_mem_node_size.part.0/46 (write) kds_remove_all_key/28 (read) kds_remove_all_key/28 (read) kds_remove_all_key/28 (addr) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) kds_remove_all_key/28 (write) kds_read_entire_key/25 (read) kds_read_entire_key/25 (read) kds_write_key/23 (read) adjust_mem_node_size.part.0/46 (write) adjust_mem_node_size.part.0/46 (read) adjust_mem_node_size.part.0/46 (write) adjust_mem_node_size.part.0/46 (write) kds_write_key/23 (write) kds_read_key/24 (read) kds_read_key/24 (read) kds_read_key/24 (read) adjust_mem_node_size.part.0/46 (read) kds_write_key/23 (write) kds_init/27 (addr) kds_init/27 (write) kds_init/27 (write) kds_init/27 (write) adjust_mem_node_size.part.0/46 (read) kds_read_entire_key/25 (read) kds_write_key/23 (write) kds_write_key/23 (read) check_key_handle_exist.part.0/32 (read) check_key_handle_exist.part.0/32 (read) check_key_handle_exist.part.0/32 (read) find_unused_key_handle_idx/21 (read) adjust_mem_node_size.part.0/46 (write) adjust_mem_node_size.part.0/46 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (read) kds_write_key/23 (write) kds_write_key/23 (read) kds_write_key/23 (write) kds_remove_key/26 (read) kds_remove_key/26 (read) kds_remove_key/26 (write) kds_remove_key/26 (addr) kds_remove_key/26 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_kds_init/17 (g_kds_init)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: kds_init/27 (write) kds_read_entire_key/25 (read) kds_write_key/23 (read) kds_remove_all_key/28 (read) kds_read_key/24 (read) kds_remove_key/26 (read) 
+  Availability: available
+  Varpool flags: initialized
+Trivially needed variables: g_mem_head/18 g_kds_init/17
+Removing variables:
+
+Final Symbol table:
+
+adjust_mem_node_size.part.0/46 (adjust_mem_node_size.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.adjust_mem_node_size.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:28437321 (estimated locally) local split_part nonfreeing_fn
+  Called by: 
+  Calls: 
+check_key_handle_exist.part.0/32 (check_key_handle_exist.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.check_key_handle_exist.part.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:74381500 (estimated locally) local split_part nonfreeing_fn
+  Called by: 
+  Calls: 
+memset_/31 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/30 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kds_util_memmove/29 (kds_util_memmove)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_util_memmove (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:482088160 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+kds_remove_all_key/28 (kds_remove_all_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_remove_all_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:32537624 (estimated locally)
+  Called by: 
+  Calls: 
+kds_init/27 (kds_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:146366084 (estimated locally)
+  Called by: 
+  Calls: 
+kds_remove_key/26 (kds_remove_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_remove_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+kds_read_entire_key/25 (kds_read_entire_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_read_entire_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+kds_read_key/24 (kds_read_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_read_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+kds_write_key/23 (kds_write_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.kds_write_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+find_unused_key_handle_idx/21 (find_unused_key_handle_idx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.find_unused_key_handle_idx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:98860940 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 
+g_mem_head/18 (g_mem_head)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_mem_head (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_kds_init/17 (g_kds_init)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_kds_init (implicit_section)
+  Aux: @0x7ffbcee1c700
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

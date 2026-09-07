@@ -1,0 +1,37 @@
+schema_version: 1
+feature: SOC-SEC-CFG-001
+source_ids:
+  - SRC-0026
+  - SRC-0022
+  - SRC-0025
+  - SRC-0027
+requirements: requirements/sec-cfg-requirements.yaml
+register_map: requirements/sec-cfg-register-map.yaml
+case_source: tests/cases/sec-cfg/NGU800P-sec-cfg-detailed-cases-v0.1.csv
+status: PROPOSED_NOT_EXECUTED
+counts:
+  total: 12
+  ready_for_model: 3
+  ready_for_dv: 3
+  blocked: 6
+blocked_by:
+  OPEN-CONFLICT-015:
+    - SECCFG-REG-001
+    - SECCFG-FWERR-001
+    - SECCFG-LCS-001
+    - SECCFG-UID-001
+    - SECCFG-DBG-001
+    - SECCFG-ATOMIC-001
+  OPEN-CONFLICT-014:
+    - SECCFG-FW-001
+note: 同一case可受多个缺口影响；所有case均为NOT_EXECUTED。
+top_level_cases:
+  - SOC-SECCFG-001
+  - SOC-SECCFG-DBG-001
+mailbox_debug_oracle_cases:
+  - MB-BL-011-BASIC
+  - MB-BL-012-BASIC
+  - MB-FW-031-BASIC
+  - MB-FW-032-BASIC
+  - EHSM-NEG-AUTH-001
+  - EHSM-NEG-AUTH-002

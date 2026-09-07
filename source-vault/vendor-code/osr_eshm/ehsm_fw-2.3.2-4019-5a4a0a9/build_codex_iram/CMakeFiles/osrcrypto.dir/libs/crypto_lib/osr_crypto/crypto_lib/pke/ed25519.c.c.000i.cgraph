@@ -1,0 +1,2515 @@
+Trivially needed symbols: ed25519_verify/29 ed25519_sign/26 ed25519_getkey/17 ed25519_get_pubkey_from_prikey/16
+
+
+Initial Symbol table:
+
+ed25519_pointAdd_internal/48 (ed25519_pointAdd_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 
+  Calls: 
+ed25519_decode_point_internal/47 (ed25519_decode_point_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 
+  Calls: 
+uint32_BigNumCmp/46 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_1/27 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/45 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 
+  Calls: 
+uint32_copy_8_words/44 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 
+  Calls: 
+pke_mod/43 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 ed25519_k_mod_n/21 
+  Calls: 
+hash_final/42 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_update/41 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_init/40 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+get_rand/39 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_getkey/17 
+  Calls: 
+ed25519_pointMul_internal/38 (ed25519_pointMul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_set_operand_uint32_value_256bits/37 (pke_set_operand_uint32_value_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_clear_8_words/36 (uint32_clear_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_BigNum_Check_Zero/35 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/34 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_pointMul_s/15 
+  Calls: 
+memcpy_/33 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519/32 (ed25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (addr) ed25519_pointMul_s/15 (read) ed25519_pointMul_s/15 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (addr) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (addr) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_verify_internal_step_1/27 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/31 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+hash/30 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_1/19 ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519_verify/29 (ed25519_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4/24 ed25519_verify_internal_step_1/27 ed25519_check_input/18 
+ed25519_verify_internal_step_3/28 (ed25519_verify_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) ed25519/32 (addr) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: uint32_BigNumCmp/46 uint32_BigNumCmp/46 ed25519_pointAdd_internal/48 ed25519_decode_point_internal/47 ed25519_pointMul_s_internal/14 ed25519_decode_point_internal/47 ed25519_pointMul_s/15 uint32_copy_8_words/44 ed25519_k_mod_n/21 
+ed25519_verify_internal_step_1/27 (ed25519_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e43b220
+  References: ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: hash/30 uint32_BigNumCmp/46 memcpy_/33 
+ed25519_sign/26 (ed25519_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b6e43b330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_3/22 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_1/19 ed25519_check_input/18 
+ed25519_sign_internal_step_5/25 (ed25519_sign_internal_step_5)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e43b330
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 pke_mod_add_sub_mul_256bits_internal/45 pke_mod_add_sub_mul_256bits_internal/45 pke_load_modulus_and_pre_monts_256bits/34 pke_mod/43 pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_4/24 (ed25519_sign_internal_step_4)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3dd330
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (ed25519_sign_internal_step_4_hash_update_R_and_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3dd330
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign_internal_step_4/24 
+  Calls: hash_update/41 hash_update/41 ed25519_pointMul_s_internal/14 hash_update/41 
+ed25519_sign_internal_step_3/22 (ed25519_sign_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3ddee0
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 ed25519_k_mod_n/21 
+ed25519_k_mod_n/21 (ed25519_k_mod_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3ddee0
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 
+  Calls: pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_2/20 (ed25519_sign_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3ddcc0
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_1/19 (ed25519_sign_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3ddaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash/30 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_check_input/18 (ed25519_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3dd990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: 
+ed25519_getkey/17 (ed25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b6e43b000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_get_pubkey_from_prikey/16 get_rand/39 
+ed25519_get_pubkey_from_prikey/16 (ed25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f6b6e3dd770
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_getkey/17 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_pointMul_s/15 (ed25519_pointMul_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3dd770
+  References: ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: ed25519_pointMul_s_internal/14 pke_load_modulus_and_pre_monts_256bits/34 
+ed25519_pointMul_s_internal/14 (ed25519_pointMul_s_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3dd770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_pointMul_s/15 
+  Calls: ed25519_pointMul_internal/38 pke_set_operand_uint32_value_256bits/37 uint32_clear_8_words/36 uint32_BigNum_Check_Zero/35 
+Ed25519_sign_string/13 (Ed25519_sign_string)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f6b6e3ddcc0
+  References: 
+  Referring: ed25519_sign_internal_step_2/20 (addr) ed25519_sign_internal_step_4/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+lib_register_unlock/12 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/11 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: lib_register_unlock/12 lib_register_lock/11 check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+ed25519_pointAdd_internal/48 (ed25519_pointAdd_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 
+  Calls: 
+ed25519_decode_point_internal/47 (ed25519_decode_point_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 
+  Calls: 
+uint32_BigNumCmp/46 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_1/27 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/45 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 
+  Calls: 
+uint32_copy_8_words/44 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 
+  Calls: 
+pke_mod/43 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 ed25519_k_mod_n/21 
+  Calls: 
+hash_final/42 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_update/41 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_init/40 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+get_rand/39 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_getkey/17 
+  Calls: 
+ed25519_pointMul_internal/38 (ed25519_pointMul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_set_operand_uint32_value_256bits/37 (pke_set_operand_uint32_value_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_clear_8_words/36 (uint32_clear_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_BigNum_Check_Zero/35 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/34 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_pointMul_s/15 
+  Calls: 
+memcpy_/33 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519/32 (ed25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (addr) ed25519_pointMul_s/15 (read) ed25519_pointMul_s/15 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (addr) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (addr) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_verify_internal_step_1/27 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/31 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+hash/30 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_1/19 ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519_verify/29 (ed25519_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4/24 ed25519_verify_internal_step_1/27 ed25519_check_input/18 
+ed25519_verify_internal_step_3/28 (ed25519_verify_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) ed25519/32 (addr) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: uint32_BigNumCmp/46 uint32_BigNumCmp/46 ed25519_pointAdd_internal/48 ed25519_decode_point_internal/47 ed25519_pointMul_s_internal/14 ed25519_decode_point_internal/47 ed25519_pointMul_s/15 uint32_copy_8_words/44 ed25519_k_mod_n/21 
+ed25519_verify_internal_step_1/27 (ed25519_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: hash/30 uint32_BigNumCmp/46 memcpy_/33 
+ed25519_sign/26 (ed25519_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_3/22 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_1/19 ed25519_check_input/18 
+ed25519_sign_internal_step_5/25 (ed25519_sign_internal_step_5)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 pke_mod_add_sub_mul_256bits_internal/45 pke_mod_add_sub_mul_256bits_internal/45 pke_load_modulus_and_pre_monts_256bits/34 pke_mod/43 pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_4/24 (ed25519_sign_internal_step_4)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (ed25519_sign_internal_step_4_hash_update_R_and_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign_internal_step_4/24 
+  Calls: hash_update/41 hash_update/41 ed25519_pointMul_s_internal/14 hash_update/41 
+ed25519_sign_internal_step_3/22 (ed25519_sign_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 ed25519_k_mod_n/21 
+ed25519_k_mod_n/21 (ed25519_k_mod_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 
+  Calls: pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_2/20 (ed25519_sign_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_1/19 (ed25519_sign_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash/30 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_check_input/18 (ed25519_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: 
+ed25519_getkey/17 (ed25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_get_pubkey_from_prikey/16 get_rand/39 
+ed25519_get_pubkey_from_prikey/16 (ed25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_getkey/17 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_pointMul_s/15 (ed25519_pointMul_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: ed25519_pointMul_s_internal/14 pke_load_modulus_and_pre_monts_256bits/34 
+ed25519_pointMul_s_internal/14 (ed25519_pointMul_s_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_pointMul_s/15 
+  Calls: ed25519_pointMul_internal/38 pke_set_operand_uint32_value_256bits/37 uint32_clear_8_words/36 uint32_BigNum_Check_Zero/35 
+Ed25519_sign_string/13 (Ed25519_sign_string)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: ed25519_sign_internal_step_2/20 (addr) ed25519_sign_internal_step_4/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+
+Initial Symbol table:
+
+ed25519_pointAdd_internal/48 (ed25519_pointAdd_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 
+  Calls: 
+ed25519_decode_point_internal/47 (ed25519_decode_point_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 
+  Calls: 
+uint32_BigNumCmp/46 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_1/27 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/45 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 
+  Calls: 
+uint32_copy_8_words/44 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 
+  Calls: 
+pke_mod/43 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 ed25519_k_mod_n/21 
+  Calls: 
+hash_final/42 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_update/41 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_init/40 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+get_rand/39 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_getkey/17 
+  Calls: 
+ed25519_pointMul_internal/38 (ed25519_pointMul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_set_operand_uint32_value_256bits/37 (pke_set_operand_uint32_value_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_clear_8_words/36 (uint32_clear_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_BigNum_Check_Zero/35 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/34 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_pointMul_s/15 
+  Calls: 
+memcpy_/33 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519/32 (ed25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (addr) ed25519_pointMul_s/15 (read) ed25519_pointMul_s/15 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (addr) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (addr) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_verify_internal_step_1/27 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/31 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+hash/30 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_1/19 ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519_verify/29 (ed25519_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4/24 ed25519_verify_internal_step_1/27 ed25519_check_input/18 
+ed25519_verify_internal_step_3/28 (ed25519_verify_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) ed25519/32 (addr) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: uint32_BigNumCmp/46 uint32_BigNumCmp/46 ed25519_pointAdd_internal/48 ed25519_decode_point_internal/47 ed25519_pointMul_s_internal/14 ed25519_decode_point_internal/47 ed25519_pointMul_s/15 uint32_copy_8_words/44 ed25519_k_mod_n/21 
+ed25519_verify_internal_step_1/27 (ed25519_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: hash/30 uint32_BigNumCmp/46 memcpy_/33 
+ed25519_sign/26 (ed25519_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_3/22 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_1/19 ed25519_check_input/18 
+ed25519_sign_internal_step_5/25 (ed25519_sign_internal_step_5)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 pke_mod_add_sub_mul_256bits_internal/45 pke_mod_add_sub_mul_256bits_internal/45 pke_load_modulus_and_pre_monts_256bits/34 pke_mod/43 pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_4/24 (ed25519_sign_internal_step_4)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (ed25519_sign_internal_step_4_hash_update_R_and_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign_internal_step_4/24 
+  Calls: hash_update/41 hash_update/41 ed25519_pointMul_s_internal/14 hash_update/41 
+ed25519_sign_internal_step_3/22 (ed25519_sign_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 ed25519_k_mod_n/21 
+ed25519_k_mod_n/21 (ed25519_k_mod_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 
+  Calls: pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_2/20 (ed25519_sign_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_1/19 (ed25519_sign_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash/30 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_check_input/18 (ed25519_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: 
+ed25519_getkey/17 (ed25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_get_pubkey_from_prikey/16 get_rand/39 
+ed25519_get_pubkey_from_prikey/16 (ed25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_getkey/17 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_pointMul_s/15 (ed25519_pointMul_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: ed25519_pointMul_s_internal/14 pke_load_modulus_and_pre_monts_256bits/34 
+ed25519_pointMul_s_internal/14 (ed25519_pointMul_s_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_pointMul_s/15 
+  Calls: ed25519_pointMul_internal/38 pke_set_operand_uint32_value_256bits/37 uint32_clear_8_words/36 uint32_BigNum_Check_Zero/35 
+Ed25519_sign_string/13 (Ed25519_sign_string)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: ed25519_sign_internal_step_2/20 (addr) ed25519_sign_internal_step_4/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+ed25519_pointAdd_internal/48 (ed25519_pointAdd_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 
+  Calls: 
+ed25519_decode_point_internal/47 (ed25519_decode_point_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 
+  Calls: 
+uint32_BigNumCmp/46 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_3/28 ed25519_verify_internal_step_1/27 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/45 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 
+  Calls: 
+uint32_copy_8_words/44 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 
+  Calls: 
+pke_mod/43 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_5/25 ed25519_k_mod_n/21 ed25519_k_mod_n/21 
+  Calls: 
+hash_final/42 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_update/41 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_2/20 
+  Calls: 
+hash_init/40 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_2/20 
+  Calls: 
+get_rand/39 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_getkey/17 
+  Calls: 
+ed25519_pointMul_internal/38 (ed25519_pointMul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_set_operand_uint32_value_256bits/37 (pke_set_operand_uint32_value_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_clear_8_words/36 (uint32_clear_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+uint32_BigNum_Check_Zero/35 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_pointMul_s_internal/14 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/34 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 ed25519_pointMul_s/15 
+  Calls: 
+memcpy_/33 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519/32 (ed25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (read) ed25519_get_pubkey_from_prikey/16 (addr) ed25519_pointMul_s/15 (read) ed25519_pointMul_s/15 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_3/22 (addr) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_k_mod_n/21 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (addr) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_5/25 (read) ed25519_verify_internal_step_1/27 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/31 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+hash/30 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ed25519_verify_internal_step_1/27 ed25519_sign_internal_step_1/19 ed25519_sign_internal_step_1/19 ed25519_get_pubkey_from_prikey/16 
+  Calls: 
+ed25519_verify/29 (ed25519_verify)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4/24 ed25519_verify_internal_step_1/27 ed25519_check_input/18 
+ed25519_verify_internal_step_3/28 (ed25519_verify_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) ed25519/32 (addr) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: uint32_BigNumCmp/46 uint32_BigNumCmp/46 ed25519_pointAdd_internal/48 ed25519_decode_point_internal/47 ed25519_pointMul_s_internal/14 ed25519_decode_point_internal/47 ed25519_pointMul_s/15 uint32_copy_8_words/44 ed25519_k_mod_n/21 
+ed25519_verify_internal_step_1/27 (ed25519_verify_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 
+  Calls: hash/30 uint32_BigNumCmp/46 memcpy_/33 
+ed25519_sign/26 (ed25519_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_sign_internal_step_5/25 ed25519_sign_internal_step_4/24 ed25519_sign_internal_step_3/22 ed25519_sign_internal_step_2/20 ed25519_sign_internal_step_1/19 ed25519_check_input/18 
+ed25519_sign_internal_step_5/25 (ed25519_sign_internal_step_5)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 pke_mod_add_sub_mul_256bits_internal/45 pke_mod_add_sub_mul_256bits_internal/45 pke_load_modulus_and_pre_monts_256bits/34 pke_mod/43 pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_4/24 (ed25519_sign_internal_step_4)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (ed25519_sign_internal_step_4_hash_update_R_and_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign_internal_step_4/24 
+  Calls: hash_update/41 hash_update/41 ed25519_pointMul_s_internal/14 hash_update/41 
+ed25519_sign_internal_step_3/22 (ed25519_sign_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 ed25519_k_mod_n/21 
+ed25519_k_mod_n/21 (ed25519_k_mod_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 
+  Calls: pke_mod/43 uint32_copy_8_words/44 pke_mod/43 
+ed25519_sign_internal_step_2/20 (ed25519_sign_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash_final/42 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_update/41 hash_init/40 
+ed25519_sign_internal_step_1/19 (ed25519_sign_internal_step_1)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_sign/26 
+  Calls: hash/30 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_check_input/18 (ed25519_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify/29 ed25519_sign/26 
+  Calls: 
+ed25519_getkey/17 (ed25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ed25519_get_pubkey_from_prikey/16 get_rand/39 
+ed25519_get_pubkey_from_prikey/16 (ed25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_getkey/17 
+  Calls: memcpy_/33 ed25519_pointMul_s/15 x25519_ed25519_decode_scalar/31 hash/30 
+ed25519_pointMul_s/15 (ed25519_pointMul_s)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_3/22 ed25519_get_pubkey_from_prikey/16 
+  Calls: ed25519_pointMul_s_internal/14 pke_load_modulus_and_pre_monts_256bits/34 
+ed25519_pointMul_s_internal/14 (ed25519_pointMul_s_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ed25519_verify_internal_step_3/28 ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 ed25519_pointMul_s/15 
+  Calls: ed25519_pointMul_internal/38 pke_set_operand_uint32_value_256bits/37 uint32_clear_8_words/36 uint32_BigNum_Check_Zero/35 
+Ed25519_sign_string/13 (Ed25519_sign_string)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: ed25519_sign_internal_step_2/20 (addr) ed25519_sign_internal_step_4/24 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+ed25519_check_input/55 (ed25519_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 18
+  References: 
+  Referring: 
+  Function ed25519_check_input/55 is inline copy in ed25519_verify/29
+  Clone of ed25519_check_input/18
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn
+  Called by: ed25519_verify/29 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ed25519_pointMul_s_internal.constprop.0/54 (ed25519_pointMul_s_internal.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: ed25519/32 (addr) 
+  Referring: 
+  Clone of ed25519_pointMul_s_internal/14
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (24636110 (estimated locally),0.02 per call) ed25519_verify_internal_step_3/28 (70939995 (estimated locally),0.07 per call) ed25519_pointMul_s.constprop.0/53 (354334800 (estimated locally),0.33 per call) 
+  Calls: uint32_BigNum_Check_Zero/35 (1073741824 (estimated locally),1.00 per call) ed25519_pointMul_s_internal.part.0/49 (inlined) (536870912 (estimated locally),0.50 per call) ed25519_pointMul_internal/38 (536870912 (estimated locally),0.50 per call) 
+ed25519_pointMul_s.constprop.0/53 (ed25519_pointMul_s.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Clone of ed25519_pointMul_s/15
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: ed25519_sign_internal_step_3/22 (91077154 (estimated locally),0.08 per call) ed25519_verify_internal_step_3/28 (91077154 (estimated locally),0.08 per call) ed25519_get_pubkey_from_prikey.part.0/50 (196029084 (estimated locally),0.18 per call) 
+  Calls: pke_load_modulus_and_pre_monts_256bits/34 (1073741824 (estimated locally),1.00 per call) ed25519_pointMul_s_internal.constprop.0/54 (354334800 (estimated locally),0.33 per call) 
+ed25519_sign_internal_step_1.constprop.0/52 (ed25519_sign_internal_step_1.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function ed25519_sign_internal_step_1.constprop/52 is inline copy in ed25519_sign/26
+  Clone of ed25519_sign_internal_step_1/19
+  Availability: local
+  Function flags: count:354334800 (estimated locally) local
+  Called by: ed25519_sign/26 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: hash/30 (354334800 (estimated locally),0.33 per call) x25519_ed25519_decode_scalar/31 (116930483 (estimated locally),0.11 per call) hash/30 (6404217 (estimated locally),0.01 per call) 
+ed25519_verify_internal_step_1.constprop.0/51 (ed25519_verify_internal_step_1.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: ed25519/32 (read) 
+  Referring: 
+  Function ed25519_verify_internal_step_1.constprop/51 is inline copy in ed25519_verify/29
+  Clone of ed25519_verify_internal_step_1/27
+  Availability: local
+  Function flags: count:354334800 (estimated locally) local
+  Called by: ed25519_verify/29 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: memcpy_/33 (354334800 (estimated locally),0.33 per call) uint32_BigNumCmp/46 (354334800 (estimated locally),0.33 per call) hash/30 (10933745 (estimated locally),0.01 per call) 
+ed25519_get_pubkey_from_prikey.part.0/50 (ed25519_get_pubkey_from_prikey.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function ed25519_get_pubkey_from_prikey.part.0/50 is inline copy in ed25519_get_pubkey_from_prikey/16
+  Availability: local
+  Function flags: count:594027530 (estimated locally) body local split_part
+  Called by: ed25519_get_pubkey_from_prikey/16 (inlined) (594027530 (estimated locally),0.55 per call) 
+  Calls: hash/30 (594027532 (estimated locally),0.55 per call) x25519_ed25519_decode_scalar/31 (196029084 (estimated locally),0.18 per call) ed25519_pointMul_s.constprop.0/53 (196029084 (estimated locally),0.18 per call) memcpy_/33 (64689597 (estimated locally),0.06 per call) 
+ed25519_pointMul_s_internal.part.0/49 (ed25519_pointMul_s_internal.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function ed25519_pointMul_s_internal.part.0/49 is inline copy in ed25519_pointMul_s_internal.constprop/54
+  Availability: local
+  Function flags: count:536870912 (estimated locally) body local split_part
+  Called by: ed25519_pointMul_s_internal.constprop.0/54 (inlined) (536870912 (estimated locally),0.50 per call) 
+  Calls: uint32_clear_8_words/36 (536870912 (estimated locally),0.50 per call) pke_set_operand_uint32_value_256bits/37 (536870912 (estimated locally),0.50 per call) 
+ed25519_pointAdd_internal/48 (ed25519_pointAdd_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 (7725365 (estimated locally),0.01 per call) 
+  Calls: 
+ed25519_decode_point_internal/47 (ed25519_decode_point_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 (23410198 (estimated locally),0.02 per call) ed25519_verify_internal_step_3/28 (30055460 (estimated locally),0.03 per call) 
+  Calls: 
+uint32_BigNumCmp/46 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_verify_internal_step_1.constprop.0/51 (354334800 (estimated locally),0.33 per call) ed25519_verify_internal_step_3/28 (1217834 (estimated locally),0.00 per call) ed25519_verify_internal_step_3/28 (2549371 (estimated locally),0.00 per call) 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/45 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 (841292 (estimated locally),0.00 per call) ed25519_sign_internal_step_5/25 (2549371 (estimated locally),0.00 per call) 
+  Calls: 
+uint32_copy_8_words/44 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_verify_internal_step_3/28 (91077154 (estimated locally),0.08 per call) ed25519_sign_internal_step_5/25 (9918302 (estimated locally),0.01 per call) ed25519_k_mod_n/21 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+pke_mod/43 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_5/25 (3273040 (estimated locally),0.00 per call) ed25519_sign_internal_step_5/25 (9918302 (estimated locally),0.01 per call) ed25519_sign_internal_step_5/25 (30055460 (estimated locally),0.03 per call) ed25519_k_mod_n/21 (354334800 (estimated locally),0.33 per call) ed25519_k_mod_n/21 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_final/42 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 (27099721 (estimated locally),0.03 per call) ed25519_sign_internal_step_2/20 (2951160 (estimated locally),0.00 per call) 
+  Calls: 
+hash_update/41 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 (54199442 (estimated locally),0.05 per call) ed25519_sign_internal_step_4/24 (27920925 (estimated locally),0.03 per call) ed25519_sign_internal_step_4/24 (19293530 (estimated locally),0.02 per call) ed25519_sign_internal_step_4/24 (58465242 (estimated locally),0.05 per call) ed25519_sign_internal_step_4/24 (177167400 (estimated locally),0.16 per call) ed25519_sign_internal_step_2/20 (5902319 (estimated locally),0.01 per call) ed25519_sign_internal_step_2/20 (3040589 (estimated locally),0.00 per call) ed25519_sign_internal_step_2/20 (17885816 (estimated locally),0.02 per call) ed25519_sign_internal_step_2/20 (2101065 (estimated locally),0.00 per call) ed25519_sign_internal_step_2/20 (6366865 (estimated locally),0.01 per call) ed25519_sign_internal_step_2/20 (19293530 (estimated locally),0.02 per call) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (57484257 (estimated locally),0.05 per call) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (12318055 (estimated locally),0.01 per call) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (164240735 (estimated locally),0.15 per call) 
+  Calls: 
+hash_init/40 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_4/24 (1073741824 (estimated locally),1.00 per call) ed25519_sign_internal_step_2/20 (116930483 (estimated locally),0.11 per call) 
+  Calls: 
+get_rand/39 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_getkey/17 (594027531 (estimated locally),0.55 per call) 
+  Calls: 
+ed25519_pointMul_internal/38 (ed25519_pointMul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_pointMul_s_internal.constprop.0/54 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+pke_set_operand_uint32_value_256bits/37 (pke_set_operand_uint32_value_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_pointMul_s_internal.part.0/49 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_clear_8_words/36 (uint32_clear_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_pointMul_s_internal.part.0/49 (536870912 (estimated locally),0.50 per call) 
+  Calls: 
+uint32_BigNum_Check_Zero/35 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_pointMul_s_internal.constprop.0/54 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/34 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_pointMul_s.constprop.0/53 (1073741824 (estimated locally),1.00 per call) ed25519_sign_internal_step_5/25 (7725365 (estimated locally),0.01 per call) 
+  Calls: 
+memcpy_/33 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_verify_internal_step_1.constprop.0/51 (354334800 (estimated locally),0.33 per call) ed25519_get_pubkey_from_prikey.part.0/50 (64689597 (estimated locally),0.06 per call) ed25519_sign_internal_step_5/25 (277626 (estimated locally),0.00 per call) ed25519_sign_internal_step_3/22 (30055460 (estimated locally),0.03 per call) 
+  Calls: 
+ed25519/32 (ed25519)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: ed25519_k_mod_n/21 (read) ed25519_sign_internal_step_5/25 (read) ed25519_pointMul_s_internal.constprop.0/54 (addr) ed25519_sign_internal_step_3/22 (read) ed25519_sign_internal_step_5/25 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (read) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (addr) ed25519_sign_internal_step_3/22 (addr) ed25519_verify_internal_step_3/28 (addr) ed25519_pointMul_s.constprop.0/53 (read) ed25519_pointMul_s.constprop.0/53 (addr) ed25519_sign_internal_step_3/22 (read) ed25519_verify_internal_step_3/28 (addr) ed25519_verify_internal_step_3/28 (addr) ed25519_k_mod_n/21 (read) ed25519_verify_internal_step_3/28 (read) ed25519_verify_internal_step_3/28 (read) ed25519_get_pubkey_from_prikey.part.0/50 (read) ed25519_get_pubkey_from_prikey.part.0/50 (read) ed25519_get_pubkey_from_prikey.part.0/50 (addr) ed25519_verify_internal_step_1.constprop.0/51 (read) ed25519_pointMul_s.constprop.0/53 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/31 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_1.constprop.0/52 (116930483 (estimated locally),0.11 per call) ed25519_get_pubkey_from_prikey.part.0/50 (196029084 (estimated locally),0.18 per call) 
+  Calls: 
+hash/30 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ed25519_sign_internal_step_1.constprop.0/52 (354334800 (estimated locally),0.33 per call) ed25519_sign_internal_step_1.constprop.0/52 (6404217 (estimated locally),0.01 per call) ed25519_verify_internal_step_1.constprop.0/51 (10933745 (estimated locally),0.01 per call) ed25519_get_pubkey_from_prikey.part.0/50 (594027532 (estimated locally),0.55 per call) 
+  Calls: 
+ed25519_verify/29 (ed25519_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ed25519_verify_internal_step_3/28 (inlined) (275991376 (estimated locally),0.26 per call) ed25519_sign_internal_step_4/24 (116930483 (estimated locally),0.11 per call) ed25519_verify_internal_step_1.constprop.0/51 (inlined) (354334800 (estimated locally),0.33 per call) ed25519_check_input/55 (inlined) (1073741824 (estimated locally),1.00 per call) 
+ed25519_verify_internal_step_3/28 (ed25519_verify_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) ed25519/32 (addr) ed25519/32 (addr) 
+  Referring: 
+  Function ed25519_verify_internal_step_3/28 is inline copy in ed25519_verify/29
+  Availability: local
+  Function flags: count:275991376 (estimated locally) body local
+  Called by: ed25519_verify/29 (inlined) (275991376 (estimated locally),0.26 per call) 
+  Calls: uint32_BigNumCmp/46 (1217834 (estimated locally),0.00 per call) uint32_BigNumCmp/46 (2549371 (estimated locally),0.00 per call) ed25519_pointAdd_internal/48 (7725365 (estimated locally),0.01 per call) ed25519_decode_point_internal/47 (23410198 (estimated locally),0.02 per call) ed25519_pointMul_s_internal.constprop.0/54 (70939995 (estimated locally),0.07 per call) ed25519_decode_point_internal/47 (30055460 (estimated locally),0.03 per call) ed25519_pointMul_s.constprop.0/53 (91077154 (estimated locally),0.08 per call) uint32_copy_8_words/44 (91077154 (estimated locally),0.08 per call) ed25519_k_mod_n/21 (275991376 (estimated locally),0.26 per call) 
+ed25519_verify_internal_step_1/27 (ed25519_verify_internal_step_1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+ed25519_sign/26 (ed25519_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: ed25519_sign_internal_step_5/25 (inlined) (30055460 (estimated locally),0.03 per call) ed25519_sign_internal_step_4/24 (91077154 (estimated locally),0.08 per call) ed25519_sign_internal_step_3/22 (inlined) (275991376 (estimated locally),0.26 per call) ed25519_sign_internal_step_2/20 (inlined) (116930483 (estimated locally),0.11 per call) ed25519_sign_internal_step_1.constprop.0/52 (inlined) (354334800 (estimated locally),0.33 per call) ed25519_check_input/18 (inlined) (1073741822 (estimated locally),1.00 per call) 
+ed25519_sign_internal_step_5/25 (ed25519_sign_internal_step_5)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Function ed25519_sign_internal_step_5/25 is inline copy in ed25519_sign/26
+  Availability: local
+  Function flags: count:30055460 (estimated locally) body local
+  Called by: ed25519_sign/26 (inlined) (30055460 (estimated locally),0.03 per call) 
+  Calls: memcpy_/33 (277626 (estimated locally),0.00 per call) pke_mod_add_sub_mul_256bits_internal/45 (841292 (estimated locally),0.00 per call) pke_mod_add_sub_mul_256bits_internal/45 (2549371 (estimated locally),0.00 per call) pke_load_modulus_and_pre_monts_256bits/34 (7725365 (estimated locally),0.01 per call) pke_mod/43 (3273040 (estimated locally),0.00 per call) pke_mod/43 (9918302 (estimated locally),0.01 per call) uint32_copy_8_words/44 (9918302 (estimated locally),0.01 per call) pke_mod/43 (30055460 (estimated locally),0.03 per call) 
+ed25519_sign_internal_step_4/24 (ed25519_sign_internal_step_4)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ed25519_verify/29 (116930483 (estimated locally),0.11 per call) ed25519_sign/26 (91077154 (estimated locally),0.08 per call) 
+  Calls: hash_final/42 (27099721 (estimated locally),0.03 per call) hash_update/41 (54199442 (estimated locally),0.05 per call) hash_update/41 (27920925 (estimated locally),0.03 per call) ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (inlined) (164240735 (estimated locally),0.15 per call) hash_update/41 (19293530 (estimated locally),0.02 per call) hash_update/41 (58465242 (estimated locally),0.05 per call) hash_update/41 (177167400 (estimated locally),0.16 per call) hash_init/40 (1073741824 (estimated locally),1.00 per call) 
+ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 (ed25519_sign_internal_step_4_hash_update_R_and_pubkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function ed25519_sign_internal_step_4_hash_update_R_and_pubkey/23 is inline copy in ed25519_sign_internal_step_4/24
+  Availability: local
+  Function flags: count:164240735 (estimated locally) body local
+  Called by: ed25519_sign_internal_step_4/24 (inlined) (164240735 (estimated locally),0.15 per call) 
+  Calls: hash_update/41 (57484257 (estimated locally),0.05 per call) hash_update/41 (12318055 (estimated locally),0.01 per call) ed25519_pointMul_s_internal.constprop.0/54 (24636110 (estimated locally),0.02 per call) hash_update/41 (164240735 (estimated locally),0.15 per call) 
+ed25519_sign_internal_step_3/22 (ed25519_sign_internal_step_3)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: ed25519/32 (read) ed25519/32 (read) ed25519/32 (addr) 
+  Referring: 
+  Function ed25519_sign_internal_step_3/22 is inline copy in ed25519_sign/26
+  Availability: local
+  Function flags: count:275991376 (estimated locally) body local
+  Called by: ed25519_sign/26 (inlined) (275991376 (estimated locally),0.26 per call) 
+  Calls: memcpy_/33 (30055460 (estimated locally),0.03 per call) ed25519_pointMul_s.constprop.0/53 (91077154 (estimated locally),0.08 per call) ed25519_k_mod_n/21 (275991376 (estimated locally),0.26 per call) 
+ed25519_k_mod_n/21 (ed25519_k_mod_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: ed25519/32 (read) ed25519/32 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ed25519_verify_internal_step_3/28 (275991376 (estimated locally),0.26 per call) ed25519_sign_internal_step_3/22 (275991376 (estimated locally),0.26 per call) 
+  Calls: pke_mod/43 (354334800 (estimated locally),0.33 per call) uint32_copy_8_words/44 (354334800 (estimated locally),0.33 per call) pke_mod/43 (1073741824 (estimated locally),1.00 per call) 
+ed25519_sign_internal_step_2/20 (ed25519_sign_internal_step_2)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: Ed25519_sign_string/13 (addr) 
+  Referring: 
+  Function ed25519_sign_internal_step_2/20 is inline copy in ed25519_sign/26
+  Availability: local
+  Function flags: count:116930483 (estimated locally) body local
+  Called by: ed25519_sign/26 (inlined) (116930483 (estimated locally),0.11 per call) 
+  Calls: hash_final/42 (2951160 (estimated locally),0.00 per call) hash_update/41 (5902319 (estimated locally),0.01 per call) hash_update/41 (3040589 (estimated locally),0.00 per call) hash_update/41 (17885816 (estimated locally),0.02 per call) hash_update/41 (2101065 (estimated locally),0.00 per call) hash_update/41 (6366865 (estimated locally),0.01 per call) hash_update/41 (19293530 (estimated locally),0.02 per call) hash_init/40 (116930483 (estimated locally),0.11 per call) 
+ed25519_sign_internal_step_1/19 (ed25519_sign_internal_step_1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+ed25519_check_input/18 (ed25519_check_input)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 55
+  References: 
+  Referring: 
+  Function ed25519_check_input/18 is inline copy in ed25519_sign/26
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local nonfreeing_fn
+  Called by: ed25519_sign/26 (inlined) (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+ed25519_getkey/17 (ed25519_getkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: ed25519_get_pubkey_from_prikey/16 (196029084 (estimated locally),0.18 per call) get_rand/39 (594027531 (estimated locally),0.55 per call) 
+ed25519_get_pubkey_from_prikey/16 (ed25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: ed25519_getkey/17 (196029084 (estimated locally),0.18 per call) 
+  Calls: ed25519_get_pubkey_from_prikey.part.0/50 (inlined) (594027530 (estimated locally),0.55 per call) 
+ed25519_pointMul_s/15 (ed25519_pointMul_s)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+ed25519_pointMul_s_internal/14 (ed25519_pointMul_s_internal)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+Ed25519_sign_string/13 (Ed25519_sign_string)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: ed25519_sign_internal_step_2/20 (addr) ed25519_sign_internal_step_4/24 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+cloning ed25519_pointMul_s_internal/14 to ed25519_pointMul_s_internal.constprop/54
+    replace map: 0 -> &ed25519
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+uint32_t ed25519_pointMul_s_internal (const struct edward_curve_st * curve, const uint32_t * k, const uint32_t * Px, const uint32_t * Py, uint32_t * Qx, uint32_t * Qy)
+{
+  uint32_t ret;
+  long unsigned int _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = uint32_BigNum_Check_Zero (k_4(D), 8);
+  if (_1 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG D#5 => curve_6(D)
+  # DEBUG D#6 => k_4(D)
+  # DEBUG D#7 => Px_7(D)
+  # DEBUG D#8 => Py_8(D)
+  ret_14 = ed25519_pointMul_s_internal.part.0 (Qx_9(D), Qy_10(D));
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  ret_12 = ed25519_pointMul_internal (curve_6(D), k_4(D), Px_7(D), Py_8(D), Qx_9(D), Qy_10(D));
+  # DEBUG ret => ret_12
+
+  <bb 5> [local count: 1073741824]:
+  # ret_2 = PHI <ret_14(3), ret_12(4)>
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  return ret_2;
+
+}
+
+
+uint32_t ed25519_pointMul_s_internal.constprop (const uint32_t * k, const uint32_t * Px, const uint32_t * Py, uint32_t * Qx, uint32_t * Qy)
+{
+  uint32_t ret;
+  const struct edward_curve_st * curve;
+  long unsigned int _2;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG curve => &ed25519
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = uint32_BigNum_Check_Zero (k_1(D), 8);
+  if (_2 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG D#5 => &ed25519
+  # DEBUG D#6 => k_1(D)
+  # DEBUG D#7 => Px_6(D)
+  # DEBUG D#8 => Py_7(D)
+  ret_5 = ed25519_pointMul_s_internal.part.0 (Qx_3(D), Qy_4(D));
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  ret_8 = ed25519_pointMul_internal (&ed25519, k_1(D), Px_6(D), Py_7(D), Qx_3(D), Qy_4(D));
+  # DEBUG ret => ret_8
+
+  <bb 5> [local count: 1073741824]:
+  # ret_9 = PHI <ret_5(3), ret_8(4)>
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  return ret_9;
+
+}
+
+
+cloning ed25519_pointMul_s/15 to ed25519_pointMul_s.constprop/53
+    replace map: 0 -> &ed25519
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+uint32_t ed25519_pointMul_s (const struct edward_curve_st * curve, const uint32_t * k, const uint32_t * Px, const uint32_t * Py, uint32_t * Qx, uint32_t * Qy)
+{
+  uint32_t ret;
+  const uint32_t * _1;
+  const uint32_t * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = ed25519[0].p;
+  _2 = ed25519[0].p_h;
+  ret_7 = pke_load_modulus_and_pre_monts_256bits (_1, _2);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 4>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  ret_15 = ed25519_pointMul_s_internal (curve_8(D), k_9(D), Px_10(D), Py_11(D), Qx_12(D), Qy_13(D));
+  # DEBUG ret => ret_15
+
+  <bb 4> [local count: 1073741824]:
+  # ret_3 = PHI <ret_7(2), ret_15(3)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t ed25519_pointMul_s.constprop (const uint32_t * k, const uint32_t * Px, const uint32_t * Py, uint32_t * Qx, uint32_t * Qy)
+{
+  uint32_t ret;
+  const struct edward_curve_st * curve;
+  const uint32_t * _1;
+  const uint32_t * _2;
+
+  <bb 5> [local count: 1073741824]:
+  # DEBUG curve => &ed25519
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = ed25519[0].p;
+  _2 = ed25519[0].p_h;
+  ret_3 = pke_load_modulus_and_pre_monts_256bits (_1, _2);
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 4>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  ret_9 = ed25519_pointMul_s_internal (&ed25519, k_4(D), Px_5(D), Py_6(D), Qx_7(D), Qy_8(D));
+  # DEBUG ret => ret_9
+
+  <bb 4> [local count: 1073741824]:
+  # ret_10 = PHI <ret_3(2), ret_9(3)>
+  # DEBUG ret => ret_10
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_10;
+
+}
+
+
+updating call of ed25519_pointMul_s.constprop/53 -> ed25519_pointMul_s_internal.constprop/54: ret_9 = ed25519_pointMul_s_internal (&ed25519, k_4(D), Px_5(D), Py_6(D), Qx_7(D), Qy_8(D));
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_9 = ed25519_pointMul_s_internal.constprop (k_4(D), Px_5(D), Py_6(D), Qx_7(D), Qy_8(D));
+updating call of ed25519_sign_internal_step_4/24 -> ed25519_pointMul_s_internal.constprop/54: ret_44 = ed25519_pointMul_s_internal (&ed25519, s_24(D), _41, _42, k_25(D), _43);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_44 = ed25519_pointMul_s_internal.constprop (s_24(D), _41, _42, k_25(D), _43);
+updating call of ed25519_get_pubkey_from_prikey/16 -> ed25519_pointMul_s.constprop/53: ret_11 = ed25519_pointMul_s (&ed25519, &h, _9, _10, &h, &h[8]);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_11 = ed25519_pointMul_s.constprop (&h, _9, _10, &h, &h[8]);
+updating call of ed25519_sign/26 -> ed25519_sign_internal_step_1.constprop/52: ret_25 = ed25519_sign_internal_step_1 (mode_17(D), &phflag, prikey_18(D), M_20(D), msg_bytes.0_1, &h, &PH_M);
+  updated to:ret_25 = ed25519_sign_internal_step_1.constprop (mode_17(D), &phflag, prikey_18(D), M_20(D), msg_bytes.0_1, &h, &PH_M);
+cloning ed25519_sign_internal_step_1/19 to ed25519_sign_internal_step_1.constprop/52
+uint32_t ed25519_sign_internal_step_1 (ed25519_mode_e mode, uint8_t * phflag, const uint8_t * prikey, const uint8_t * M, uint32_t msg_bytes, uint8_t * digest, uint8_t * PH_M)
+{
+  uint32_t ret;
+  unsigned int _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  ret_9 = hash (4, prikey_6(D), 32, digest_7(D));
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  if (ret_9 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 10>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  x25519_ed25519_decode_scalar (digest_7(D), digest_7(D));
+  # DEBUG BEGIN_STMT
+  if (mode_11(D) == 1)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 6>; [66.00%]
+
+  <bb 4> [local count: 120473833]:
+  # DEBUG BEGIN_STMT
+  *phflag_12(D) = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+
+  <bb 5> [local count: 334928082]:
+  goto <bb 9>; [100.00%]
+
+  <bb 6> [local count: 233860967]:
+  # DEBUG BEGIN_STMT
+  _1 = mode_11(D) + 4294967294;
+  if (_1 <= 1)
+    goto <bb 7>; [41.00%]
+  else
+    goto <bb 5>; [59.00%]
+
+  <bb 7> [local count: 95882996]:
+  # DEBUG BEGIN_STMT
+  *phflag_12(D) = 1;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_11(D) == 2)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 5>; [79.76%]
+
+  <bb 8> [local count: 19406718]:
+  # DEBUG BEGIN_STMT
+  ret_18 = hash (4, M_14(D), msg_bytes_15(D), PH_M_16(D));
+  # DEBUG ret => ret_18
+
+  <bb 9> [local count: 354334800]:
+  # ret_2 = PHI <0(5), ret_18(8)>
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+
+  <bb 10> [local count: 1073741824]:
+  # ret_3 = PHI <ret_2(9), ret_9(2)>
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t ed25519_sign_internal_step_1.constprop (ed25519_mode_e mode, uint8_t * phflag, const uint8_t * prikey, const uint8_t * M, uint32_t msg_bytes, uint8_t * digest, uint8_t * PH_M)
+{
+  uint32_t ret;
+  unsigned int _6;
+
+  <bb 11> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  ret_3 = hash (4, prikey_1(D), 32, digest_2(D));
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  if (ret_3 == 0)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 10>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  x25519_ed25519_decode_scalar (digest_2(D), digest_2(D));
+  # DEBUG BEGIN_STMT
+  if (mode_4(D) == 1)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 6>; [66.00%]
+
+  <bb 4> [local count: 120473833]:
+  # DEBUG BEGIN_STMT
+  *phflag_5(D) = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+
+  <bb 5> [local count: 334928082]:
+  goto <bb 9>; [100.00%]
+
+  <bb 6> [local count: 233860967]:
+  # DEBUG BEGIN_STMT
+  _6 = mode_4(D) + 4294967294;
+  if (_6 <= 1)
+    goto <bb 7>; [41.00%]
+  else
+    goto <bb 5>; [59.00%]
+
+  <bb 7> [local count: 95882996]:
+  # DEBUG BEGIN_STMT
+  *phflag_5(D) = 1;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_4(D) == 2)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 5>; [79.76%]
+
+  <bb 8> [local count: 19406718]:
+  # DEBUG BEGIN_STMT
+  ret_10 = hash (4, M_7(D), msg_bytes_8(D), PH_M_9(D));
+  # DEBUG ret => ret_10
+
+  <bb 9> [local count: 354334800]:
+  # ret_12 = PHI <0(5), ret_10(8)>
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+
+  <bb 10> [local count: 1073741824]:
+  # ret_11 = PHI <ret_3(2), ret_12(9)>
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_11;
+
+}
+
+
+updating call of ed25519_sign/26 -> ed25519_pointMul_s.constprop/53: ret_66 = ed25519_pointMul_s (&ed25519, &h[8], _63, _64, &k, _65);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_66 = ed25519_pointMul_s.constprop (&h[8], _63, _64, &k, _65);
+updating call of ed25519_verify/29 -> ed25519_verify_internal_step_1.constprop/51: ret_21 = ed25519_verify_internal_step_1 (mode_13(D), &phflag, M_16(D), msg_bytes.7_1, RS_17(D), &S, &PH_M);
+  updated to:ret_21 = ed25519_verify_internal_step_1.constprop (mode_13(D), &phflag, M_16(D), msg_bytes.7_1, RS_17(D), &S, &PH_M);
+cloning ed25519_verify_internal_step_1/27 to ed25519_verify_internal_step_1.constprop/51
+uint32_t ed25519_verify_internal_step_1 (ed25519_mode_e mode, uint8_t * phflag, const uint8_t * M, uint32_t msg_bytes, const uint8_t * RS, uint32_t * S, uint8_t * PH_M)
+{
+  uint32_t ret;
+  const uint8_t * _1;
+  const uint32_t * _2;
+  long int _3;
+  unsigned int _4;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = RS_7(D) + 32;
+  memcpy_ (S_9(D), _1, 32);
+  # DEBUG BEGIN_STMT
+  _2 = ed25519[0].n;
+  _3 = uint32_BigNumCmp (S_9(D), 8, _2, 8);
+  if (_3 >= 0)
+    goto <bb 9>; [43.66%]
+  else
+    goto <bb 3>; [56.34%]
+
+  <bb 3> [local count: 604946143]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_13(D) == 1)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 5>; [66.00%]
+
+  <bb 4> [local count: 205681691]:
+  # DEBUG BEGIN_STMT
+  *phflag_14(D) = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 5> [local count: 399264453]:
+  # DEBUG BEGIN_STMT
+  _4 = mode_13(D) + 4294967294;
+  if (_4 <= 1)
+    goto <bb 6>; [41.00%]
+  else
+    goto <bb 7>; [59.00%]
+
+  <bb 6> [local count: 163698424]:
+  # DEBUG BEGIN_STMT
+  *phflag_14(D) = 1;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_13(D) == 2)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 7>; [79.76%]
+
+  <bb 7> [local count: 571813583]:
+  goto <bb 9>; [100.00%]
+
+  <bb 8> [local count: 33132561]:
+  # DEBUG BEGIN_STMT
+  ret_20 = hash (4, M_16(D), msg_bytes_17(D), PH_M_18(D));
+  # DEBUG ret => ret_20
+
+  <bb 9> [local count: 1073741824]:
+  # ret_5 = PHI <1921(2), ret_20(8), 0(7)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_5;
+
+}
+
+
+uint32_t ed25519_verify_internal_step_1.constprop (ed25519_mode_e mode, uint8_t * phflag, const uint8_t * M, uint32_t msg_bytes, const uint8_t * RS, uint32_t * S, uint8_t * PH_M)
+{
+  uint32_t ret;
+  const uint8_t * _2;
+  const uint32_t * _4;
+  long int _5;
+  unsigned int _8;
+
+  <bb 10> [local count: 1073741822]:
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = RS_1(D) + 32;
+  memcpy_ (S_3(D), _2, 32);
+  # DEBUG BEGIN_STMT
+  _4 = ed25519[0].n;
+  _5 = uint32_BigNumCmp (S_3(D), 8, _4, 8);
+  if (_5 >= 0)
+    goto <bb 9>; [43.66%]
+  else
+    goto <bb 3>; [56.34%]
+
+  <bb 3> [local count: 604946143]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_6(D) == 1)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 5>; [66.00%]
+
+  <bb 4> [local count: 205681691]:
+  # DEBUG BEGIN_STMT
+  *phflag_7(D) = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [100.00%]
+
+  <bb 5> [local count: 399264453]:
+  # DEBUG BEGIN_STMT
+  _8 = mode_6(D) + 4294967294;
+  if (_8 <= 1)
+    goto <bb 6>; [41.00%]
+  else
+    goto <bb 7>; [59.00%]
+
+  <bb 6> [local count: 163698424]:
+  # DEBUG BEGIN_STMT
+  *phflag_7(D) = 1;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (mode_6(D) == 2)
+    goto <bb 8>; [20.24%]
+  else
+    goto <bb 7>; [79.76%]
+
+  <bb 7> [local count: 571813583]:
+  goto <bb 9>; [100.00%]
+
+  <bb 8> [local count: 33132561]:
+  # DEBUG BEGIN_STMT
+  ret_12 = hash (4, M_9(D), msg_bytes_10(D), PH_M_11(D));
+  # DEBUG ret => ret_12
+
+  <bb 9> [local count: 1073741824]:
+  # ret_13 = PHI <1921(2), 0(7), ret_12(8)>
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return ret_13;
+
+}
+
+
+updating call of ed25519_verify/29 -> ed25519_pointMul_s.constprop/53: ret_46 = ed25519_pointMul_s (&ed25519, &S, _43, _44, &PH_M, _45);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_46 = ed25519_pointMul_s.constprop (&S, _43, _44, &PH_M, _45);
+updating call of ed25519_verify/29 -> ed25519_pointMul_s_internal.constprop/54: ret_49 = ed25519_pointMul_s_internal (&ed25519, &k, &pub_x, &S, &pub_x, &S);
+    m_always_copy_start: 6
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             1. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+  updated to:ret_49 = ed25519_pointMul_s_internal.constprop (&k, &pub_x, &S, &pub_x, &S);
+Trivially needed variables: Ed25519_sign_string/13
+Removing variables:
+
+Final Symbol table:
+
+ed25519_pointMul_s_internal.constprop.0/54 (ed25519_pointMul_s_internal.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.ed25519_pointMul_s_internal.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ed25519_pointMul_s.constprop.0/53 (ed25519_pointMul_s.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.ed25519_pointMul_s.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ed25519_pointAdd_internal/48 (ed25519_pointAdd_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ed25519_decode_point_internal/47 (ed25519_decode_point_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/46 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_mod_add_sub_mul_256bits_internal/45 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_copy_8_words/44 (uint32_copy_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_mod/43 (pke_mod)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_final/42 (hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_update/41 (hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_init/40 (hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/39 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ed25519_pointMul_internal/38 (ed25519_pointMul_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_set_operand_uint32_value_256bits/37 (pke_set_operand_uint32_value_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_clear_8_words/36 (uint32_clear_8_words)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/35 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_load_modulus_and_pre_monts_256bits/34 (pke_load_modulus_and_pre_monts_256bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/33 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ed25519/32 (ed25519)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/31 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash/30 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ed25519_verify/29 (ed25519_verify)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ed25519_verify (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_verify_internal_step_1/27 (ed25519_verify_internal_step_1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_sign/26 (ed25519_sign)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ed25519_sign (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_sign_internal_step_4/24 (ed25519_sign_internal_step_4)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ed25519_sign_internal_step_4 (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ed25519_k_mod_n/21 (ed25519_k_mod_n)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ed25519_k_mod_n (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ed25519_sign_internal_step_1/19 (ed25519_sign_internal_step_1)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_getkey/17 (ed25519_getkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ed25519_getkey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_get_pubkey_from_prikey/16 (ed25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.ed25519_get_pubkey_from_prikey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_pointMul_s/15 (ed25519_pointMul_s)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+ed25519_pointMul_s_internal/14 (ed25519_pointMul_s_internal)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+Ed25519_sign_string/13 (Ed25519_sign_string)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.Ed25519_sign_string (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

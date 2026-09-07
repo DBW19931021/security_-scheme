@@ -1,0 +1,423 @@
+{
+  "flash_configurations": {
+    "b000": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for b000 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin"
+        ],
+        "description": "Load firmware for b000 customer"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "cm3",
+          "-m",
+          "swd"
+        ],
+        "description": "Flash host for b000 customer using CM3 SWD"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/cm3",
+          "-c"
+        ],
+        "description": "Build server for b000 customer using CM3 platform"
+      }
+    },
+    "0000": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for 0000 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 0000 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 0000 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 0000 customer using M130 platform"
+      }
+    },
+    "4030": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for 4030 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4030 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4030 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4030 customer using M130 platform"
+      }
+    },
+    "4021": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for 4021 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4021 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4021 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4021 customer using M130 platform"
+      }
+    },
+    "4014": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl.bin"
+        ],
+        "description": "Load bootloader for 4014 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4014 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4014 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4014 customer using M130 platform"
+      }
+    },
+    "4022": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for 4022 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4022 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4022 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4022 customer using M130 platform"
+      }
+    },
+    "4013": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl.bin"
+        ],
+        "description": "Load bootloader for 4014 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4014 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4014 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4014 customer using M130 platform"
+      }
+    },
+    "4016": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl.bin"
+        ],
+        "description": "Load bootloader for 4016 customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4016 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4016 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4016 customer using M130 platform"
+      }
+    },
+    "4031": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for 4031  customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4031 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4031 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4031 customer using M130 platform"
+      }
+    },
+    "4017": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl.bin"
+        ],
+        "description": "Load bootloader for 4017  customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4017 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4017 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4017 customer using M130 platform"
+      }
+    },
+    "4023": {
+      "bootloader": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_bl_with_sig.bin"
+        ],
+        "description": "Load bootloader for 4023  customer"
+      },
+      "firmware": {
+        "command": "python3 ehsm_fw_loader.py",
+        "args": [
+          "${WORKSPACE}/${DIR_APP}/build/ehsm_fw.bin",
+          "--fastbl",
+          "${WORKSPACE}/${DIR_TEST}/server/scripts/fast_bl.bin"
+        ],
+        "description": "Load firmware for 4023 customer with FastBL"
+      },
+      "host": {
+        "command": "python3 flash_loader.py",
+        "args": [
+          "-t",
+          "m130",
+          "-m",
+          "jtag"
+        ],
+        "description": "Flash host for 4023 customer using M130 JTAG"
+      },
+      "server": {
+        "command": "./build.sh",
+        "args": [
+          "port/m130",
+          "-c"
+        ],
+        "description": "Build server for 4023 customer using M130 platform"
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.1",
+    "description": "Flash and build configuration for different customer IDs",
+    "last_updated": "2026-01-29",
+    "supported_customers": [
+      "0000",
+      "4013",
+      "4014",
+      "4016",
+      "4017",
+      "4021",
+      "4022",
+      "4023",
+      "4030",
+      "4031",
+      "b000"
+    ],
+    "flash_types": [
+      "bootloader",
+      "firmware",
+      "host",
+      "server"
+    ],
+    "generated_from": "flash_config_table.xlsx"
+  }
+}

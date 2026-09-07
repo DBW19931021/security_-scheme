@@ -1,0 +1,103 @@
+schema_version: 1
+feature_id: SOC-SEC-CFG-001
+source_ids:
+  - SRC-0026
+  - SRC-0022
+  - SRC-0018
+  - SRC-0025
+  - SRC-0027
+status: PROPOSED_WITH_OPEN_BINDINGS
+requirements:
+  - id: SECCFG-REQ-001
+    evidence_state: DOCUMENTED
+    statement: SEC_CFG提供17个32-bit寄存器，除dbg_en_cfg[1:0]外均为只读观察字段。
+    tests:
+      - SECCFG-REG-001
+      - SECCFG-RO-001
+  - id: SECCFG-REQ-002
+    evidence_state: CONFLICTING
+    statement: 产品base和窗口必须来自与目标D0 RTL同步的生成源，不得使用截图候选base或地址0占位。
+    tests:
+      - SECCFG-REG-001
+  - id: SECCFG-REQ-003
+    evidence_state: DOCUMENTED
+    statement: 软件按低32位寄存器加高32位寄存器拼接status、hardware error和firmware error。
+    tests:
+      - SECCFG-STATUS-001
+      - SECCFG-HWERR-001
+      - SECCFG-FWERR-001
+  - id: SECCFG-REQ-004
+    evidence_state: PROPOSED
+    statement: 启动轮询必须先检查目标阶段error，再检查done，并设置有界timeout；不得用非零或hw_boot_done表示全阶段ready。
+    tests:
+      - SECCFG-STATUS-001
+  - id: SECCFG-REQ-005
+    evidence_state: PROPOSED
+    statement: error或timeout时必须原样采集status、hardware error、firmware error及软件/硬件build标识。
+    tests:
+      - SECCFG-HWERR-001
+      - SECCFG-FWERR-001
+  - id: SECCFG-REQ-006
+    evidence_state: DOCUMENTED
+    statement: SEC_CFG错误寄存器是只读镜像，不得通过SEC_CFG写操作清错或重试。
+    tests:
+      - SECCFG-HWERR-001
+      - SECCFG-FWERR-001
+      - SECCFG-RO-001
+  - id: SECCFG-REQ-007
+    evidence_state: CONFLICTING
+    statement: hsm_err_fw在匹配BL/FW定义到位前只按raw 64-bit记录，不得发布逐bit公共API。
+    tests:
+      - SECCFG-FWERR-001
+  - id: SECCFG-REQ-008
+    evidence_state: CONFLICTING
+    statement: lcs必须使用Security/eFuse Owner冻结的唯一编码；不得假定与hsm_status生命周期bit同编码。
+    tests:
+      - SECCFG-LCS-001
+  - id: SECCFG-REQ-009
+    evidence_state: DOCUMENTED
+    statement: UID按uid0低位至uid4高位拼成160 bit；API必须明确word和byte序列化顺序。
+    tests:
+      - SECCFG-UID-001
+  - id: SECCFG-REQ-010
+    evidence_state: CONFLICTING
+    statement: UID稳定时刻或valid条件冻结前，不得以reset后任意时刻读数作为最终设备身份PASS。
+    tests:
+      - SECCFG-UID-001
+  - id: SECCFG-REQ-011
+    evidence_state: DOCUMENTED_WITH_OPEN_BINDINGS
+    statement: dbg_en_cfg默认关闭且可由主Die读写，用于控制从Die Debug通道；测试必须同时验证寄存器回读和实际从Die Debug关闭/联通状态，不得只凭回读判PASS。
+    tests:
+      - SECCFG-DBG-001
+      - SOC-SECCFG-DBG-001
+  - id: SECCFG-REQ-012
+    evidence_state: DOCUMENTED_WITH_OPEN_BINDINGS
+    statement: soc_dbg_en_out0至3用于观察eHSM Mailbox Debug鉴权后的128-bit输出；鉴权成功、鉴权失败和CLOSE_DEBUG必须同时比较该状态与实际Debug访问，且不得与dbg_en_cfg语义混用。
+    tests:
+      - MB-BL-011-BASIC
+      - MB-BL-012-BASIC
+      - MB-FW-031-BASIC
+      - MB-FW-032-BASIC
+      - EHSM-NEG-AUTH-001
+      - EHSM-NEG-AUTH-002
+  - id: SECCFG-REQ-013
+    evidence_state: PROPOSED
+    statement: 跨两个32-bit寄存器读取64-bit值可采用high-low-high重读降低撕裂风险，但不能宣称为硬件原子快照。
+    tests:
+      - SECCFG-ATOMIC-001
+  - id: SECCFG-REQ-014
+    evidence_state: DOCUMENTED
+    statement: Firewall负责决定谁能进入SEC_CFG，SEC_CFG自身只决定进入后可观察或配置的内容。
+    tests:
+      - SECCFG-FW-001
+  - id: SECCFG-REQ-015
+    evidence_state: DOCUMENTED
+    statement: reset值0仅为复位状态，释放复位后外部镜像可立即变化，软件不得将运行期Expected固定为0。
+    tests:
+      - SECCFG-RESET-001
+open_questions:
+  - OPEN-CONFLICT-015
+  - OPEN-CONFLICT-014
+top_level_tests:
+  - SOC-SECCFG-001
+  - SOC-SECCFG-DBG-001

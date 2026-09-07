@@ -1,0 +1,1023 @@
+Trivially needed symbols: dh_generate_key/15 dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 dh_param_value_init/12 dh_param_pointer_init/11
+
+
+Initial Symbol table:
+
+get_rand/26 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_key/15 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 
+  Calls: 
+Bigint_Check_1/23 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_check_public_key/13 
+  Calls: 
+pke_modexp_internal/22 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_get_operand_bytes/21 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_set_modulus_and_pre_monts/20 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+uint32_BigNumCmp/19 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+get_valid_bits/18 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+memset_/17 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+reverse_byte_array/16 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+dh_generate_key/15 (dh_generate_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dh_generate_pubkey_from_prikey/14 get_rand/26 GET_BYTE_LEN/9 
+dh_generate_pubkey_from_prikey/14 (dh_generate_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f2c1980d550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 
+  Calls: reverse_byte_array/16 pke_modexp_internal/22 uint32_clear/25 uint32_copy/24 rPKE_B/5 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 reverse_byte_array/16 uint32_copy/24 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_check_public_key/13 (dh_check_public_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f2c1980d440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Bigint_Check_1/23 pke_modexp_internal/22 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_param_value_init/12 (dh_param_value_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f2c1980d330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/17 memset_/17 memset_/17 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+dh_param_pointer_init/11 (dh_param_pointer_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f2c1980d220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f2c1980d330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f2c19af1990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 dh_check_public_key/13 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f2c1980d550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f2c1980d440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_MAX_LEN/7 CAST2UINT32/6 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+get_rand/26 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_key/15 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 
+  Calls: 
+Bigint_Check_1/23 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_check_public_key/13 
+  Calls: 
+pke_modexp_internal/22 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_get_operand_bytes/21 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_set_modulus_and_pre_monts/20 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+uint32_BigNumCmp/19 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+get_valid_bits/18 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+memset_/17 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+reverse_byte_array/16 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+dh_generate_key/15 (dh_generate_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dh_generate_pubkey_from_prikey/14 get_rand/26 GET_BYTE_LEN/9 
+dh_generate_pubkey_from_prikey/14 (dh_generate_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 
+  Calls: reverse_byte_array/16 pke_modexp_internal/22 uint32_clear/25 uint32_copy/24 rPKE_B/5 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 reverse_byte_array/16 uint32_copy/24 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_check_public_key/13 (dh_check_public_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Bigint_Check_1/23 pke_modexp_internal/22 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_param_value_init/12 (dh_param_value_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/17 memset_/17 memset_/17 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+dh_param_pointer_init/11 (dh_param_pointer_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 dh_check_public_key/13 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+
+
+Initial Symbol table:
+
+get_rand/26 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_key/15 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 
+  Calls: 
+Bigint_Check_1/23 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_check_public_key/13 
+  Calls: 
+pke_modexp_internal/22 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_get_operand_bytes/21 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_set_modulus_and_pre_monts/20 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+uint32_BigNumCmp/19 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+get_valid_bits/18 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+memset_/17 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+reverse_byte_array/16 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+dh_generate_key/15 (dh_generate_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dh_generate_pubkey_from_prikey/14 get_rand/26 GET_BYTE_LEN/9 
+dh_generate_pubkey_from_prikey/14 (dh_generate_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 
+  Calls: reverse_byte_array/16 pke_modexp_internal/22 uint32_clear/25 uint32_copy/24 rPKE_B/5 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 reverse_byte_array/16 uint32_copy/24 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_check_public_key/13 (dh_check_public_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Bigint_Check_1/23 pke_modexp_internal/22 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_param_value_init/12 (dh_param_value_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/17 memset_/17 memset_/17 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+dh_param_pointer_init/11 (dh_param_pointer_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 dh_check_public_key/13 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+get_rand/26 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_key/15 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 
+  Calls: 
+Bigint_Check_1/23 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_check_public_key/13 
+  Calls: 
+pke_modexp_internal/22 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_get_operand_bytes/21 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+pke_set_modulus_and_pre_monts/20 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+uint32_BigNumCmp/19 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+get_valid_bits/18 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+memset_/17 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+reverse_byte_array/16 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+dh_generate_key/15 (dh_generate_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: dh_generate_pubkey_from_prikey/14 get_rand/26 GET_BYTE_LEN/9 
+dh_generate_pubkey_from_prikey/14 (dh_generate_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 
+  Calls: reverse_byte_array/16 pke_modexp_internal/22 uint32_clear/25 uint32_copy/24 rPKE_B/5 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 reverse_byte_array/16 uint32_copy/24 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_check_public_key/13 (dh_check_public_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Bigint_Check_1/23 pke_modexp_internal/22 rPKE_A/4 pke_get_operand_bytes/21 pke_set_modulus_and_pre_monts/20 uint32_BigNumCmp/19 get_valid_bits/18 GET_WORD_LEN/8 GET_WORD_LEN/8 
+dh_param_value_init/12 (dh_param_value_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memset_/17 memset_/17 memset_/17 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 reverse_byte_array/16 GET_BYTE_LEN/9 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+dh_param_pointer_init/11 (dh_param_pointer_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_key/15 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_param_value_init/12 dh_param_value_init/12 dh_param_value_init/12 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 dh_check_public_key/13 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_generate_pubkey_from_prikey/14 dh_check_public_key/13 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+get_rand/26 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_key/15 (1073741824 (estimated locally),5.01 per call) 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (7316864 (estimated locally),0.01 per call) 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (7316864 (estimated locally),0.01 per call) dh_generate_pubkey_from_prikey/14 (415819273 (estimated locally),0.39 per call) 
+  Calls: 
+Bigint_Check_1/23 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_check_public_key/13 (11607489 (estimated locally),0.01 per call) 
+  Calls: 
+pke_modexp_internal/22 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (22172316 (estimated locally),0.02 per call) dh_check_public_key/13 (35174208 (estimated locally),0.03 per call) 
+  Calls: 
+pke_get_operand_bytes/21 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (22172316 (estimated locally),0.02 per call) dh_check_public_key/13 (35174208 (estimated locally),0.03 per call) 
+  Calls: 
+pke_set_modulus_and_pre_monts/20 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (67188836 (estimated locally),0.06 per call) dh_check_public_key/13 (106588511 (estimated locally),0.10 per call) 
+  Calls: 
+uint32_BigNumCmp/19 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (172899734 (estimated locally),0.16 per call) dh_check_public_key/13 (274288500 (estimated locally),0.26 per call) 
+  Calls: 
+get_valid_bits/18 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (415819274 (estimated locally),0.39 per call) dh_check_public_key/13 (482647369 (estimated locally),0.45 per call) 
+  Calls: 
+memset_/17 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_param_value_init/12 (83049446 (estimated locally),0.08 per call) dh_param_value_init/12 (83049446 (estimated locally),0.08 per call) dh_param_value_init/12 (83049446 (estimated locally),0.08 per call) 
+  Calls: 
+reverse_byte_array/16 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_generate_pubkey_from_prikey/14 (93685971 (estimated locally),0.09 per call) dh_generate_pubkey_from_prikey/14 (137220360 (estimated locally),0.13 per call) dh_param_value_init/12 (296928615 (estimated locally),0.28 per call) dh_param_value_init/12 (296928615 (estimated locally),0.28 per call) dh_param_value_init/12 (296928615 (estimated locally),0.28 per call) dh_param_value_init/12 (226659350 (estimated locally),0.21 per call) 
+  Calls: 
+dh_generate_key/15 (dh_generate_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:214147027 (estimated locally) body
+  Called by: 
+  Calls: dh_generate_pubkey_from_prikey/14 (1014686025 (estimated locally),4.74 per call) get_rand/26 (1073741824 (estimated locally),5.01 per call) 
+dh_generate_pubkey_from_prikey/14 (dh_generate_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: dh_generate_key/15 (1014686025 (estimated locally),4.74 per call) 
+  Calls: reverse_byte_array/16 (93685971 (estimated locally),0.09 per call) pke_modexp_internal/22 (22172316 (estimated locally),0.02 per call) uint32_clear/25 (7316864 (estimated locally),0.01 per call) uint32_copy/24 (7316864 (estimated locally),0.01 per call) pke_get_operand_bytes/21 (22172316 (estimated locally),0.02 per call) pke_set_modulus_and_pre_monts/20 (67188836 (estimated locally),0.06 per call) uint32_BigNumCmp/19 (172899734 (estimated locally),0.16 per call) get_valid_bits/18 (415819274 (estimated locally),0.39 per call) reverse_byte_array/16 (137220360 (estimated locally),0.13 per call) uint32_copy/24 (415819273 (estimated locally),0.39 per call) 
+dh_check_public_key/13 (dh_check_public_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: Bigint_Check_1/23 (11607489 (estimated locally),0.01 per call) pke_modexp_internal/22 (35174208 (estimated locally),0.03 per call) pke_get_operand_bytes/21 (35174208 (estimated locally),0.03 per call) pke_set_modulus_and_pre_monts/20 (106588511 (estimated locally),0.10 per call) uint32_BigNumCmp/19 (274288500 (estimated locally),0.26 per call) get_valid_bits/18 (482647369 (estimated locally),0.45 per call) 
+dh_param_value_init/12 (dh_param_value_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: memset_/17 (83049446 (estimated locally),0.08 per call) memset_/17 (83049446 (estimated locally),0.08 per call) memset_/17 (83049446 (estimated locally),0.08 per call) reverse_byte_array/16 (296928615 (estimated locally),0.28 per call) reverse_byte_array/16 (296928615 (estimated locally),0.28 per call) reverse_byte_array/16 (296928615 (estimated locally),0.28 per call) reverse_byte_array/16 (226659350 (estimated locally),0.21 per call) 
+dh_param_pointer_init/11 (dh_param_pointer_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+get_rand/26 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_clear/25 (uint32_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_copy/24 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Bigint_Check_1/23 (Bigint_Check_1)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modexp_internal/22 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_get_operand_bytes/21 (pke_get_operand_bytes)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_set_modulus_and_pre_monts/20 (pke_set_modulus_and_pre_monts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/19 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_valid_bits/18 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/17 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+reverse_byte_array/16 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dh_generate_key/15 (dh_generate_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dh_generate_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:214147027 (estimated locally)
+  Called by: 
+  Calls: 
+dh_generate_pubkey_from_prikey/14 (dh_generate_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dh_generate_pubkey_from_prikey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+dh_check_public_key/13 (dh_check_public_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dh_check_public_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+dh_param_value_init/12 (dh_param_value_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dh_param_value_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+dh_param_pointer_init/11 (dh_param_pointer_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dh_param_pointer_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 

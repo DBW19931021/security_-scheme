@@ -1,0 +1,2502 @@
+Trivially needed symbols: misc_srv_handler/37 misc_write_otp_data/23
+
+
+Initial Symbol table:
+
+uart_set_baudrate/58 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_set_baudrate_handler/36 
+  Calls: 
+kds_remove_all_key/57 (kds_remove_all_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_delete_all_keys/30 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/56 (dbgauth_srv_acquire_user_auth_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+memset_/55 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+cpt_trng_get_driver_version/54 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_trng_get_version/53 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_driver_version/52 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_version/51 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_driver_version/50 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_version/49 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_driver_version/48 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_version/47 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+mmap_write_remote_data/46 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_get_emu_status_handler/35 misc_read_version_handler/34 misc_read_reg_handle/27 misc_read_otp_handler/26 
+  Calls: 
+fid_panic/45 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 
+  Calls: 
+fid_delay/44 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+sysreg_get_life_cycle/43 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+mmap_read_remote_data/42 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_write_reg_handle/28 misc_write_otp_handler/25 
+  Calls: 
+memcpy_/41 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+memcmp_/40 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/13 
+  Calls: 
+otp_write/39 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_loop_write_otp_unit/21 
+  Calls: 
+otp_read/38 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 misc_read_otp_handler/26 misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: 
+misc_srv_handler/37 (misc_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: misc_set_baudrate_handler/36 misc_get_emu_status_handler/35 misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_read_version_handler/34 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_write_otp_handler/25 
+misc_set_baudrate_handler/36 (misc_set_baudrate_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: uart_set_baudrate/58 
+misc_get_emu_status_handler/35 (misc_get_emu_status_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 
+misc_read_version_handler/34 (misc_read_version_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 cpt_trng_get_driver_version/54 cpt_trng_get_version/53 cpt_hash_get_driver_version/52 cpt_hash_get_version/51 cpt_ske_get_driver_version/50 cpt_ske_get_version/49 cpt_pke_get_driver_version/48 cpt_pke_get_version/47 util_memset/12 
+misc_change_controlfield_handler/33 (misc_change_controlfield_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 util_memcpy/11 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 mmap_read_remote_data/42 util_memset/12 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_change_lifecycle_handler/32 (misc_change_lifecycle_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_chg_lfcycle_limit/31 
+misc_chk_chg_lfcycle_limit/31 (misc_chk_chg_lfcycle_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_lifecycle_handler/32 
+  Calls: misc_delete_all_keys/30 dbgauth_srv_acquire_user_auth_result/56 fid_delay/44 fid_delay/44 misc_life_cycle_convert/29 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_delete_all_keys/30 (misc_delete_all_keys)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: kds_remove_all_key/57 
+misc_life_cycle_convert/29 (misc_life_cycle_convert)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+misc_write_reg_handle/28 (misc_write_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_read_remote_data/42 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_reg_handle/27 (misc_read_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_otp_handler/26 (misc_read_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_handler/25 (misc_write_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_otp_write_limit/24 mmap_read_remote_data/42 
+misc_chk_otp_write_limit/24 (misc_chk_otp_write_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_handler/25 
+  Calls: fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_data/23 (misc_write_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f84aab99cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_write_otp_handler/25 
+  Calls: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+misc_check_otp_data/22 (misc_check_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: misc_data_cmp/20 otp_read/38 
+misc_loop_write_otp_unit/21 (misc_loop_write_otp_unit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aae66cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: otp_write/39 misc_data_cmp/20 otp_read/38 
+misc_data_cmp/20 (misc_data_cmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aae66cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: util_memcpy/11 util_memcmp/13 
+rPKE_B/19 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/18 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+otpmap_convert_keyid_to_addr/17 (otpmap_convert_keyid_to_addr)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_write_volatile_u32/16 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/15 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/14 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/13 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aae66110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_data_cmp/20 
+  Calls: memcmp_/40 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aab99770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_read_version_handler/34 
+  Calls: memset_/55 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f84aae66cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_data_cmp/20 
+  Calls: memcpy_/41 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: rPKE_B/19 rPKE_A/18 otpmap_convert_keyid_to_addr/17 util_write_volatile_u32/16 util_read_volatile_u32/15 util_u32_copy/14 check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+uart_set_baudrate/58 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_set_baudrate_handler/36 
+  Calls: 
+kds_remove_all_key/57 (kds_remove_all_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_delete_all_keys/30 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/56 (dbgauth_srv_acquire_user_auth_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+memset_/55 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+cpt_trng_get_driver_version/54 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_trng_get_version/53 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_driver_version/52 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_version/51 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_driver_version/50 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_version/49 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_driver_version/48 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_version/47 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+mmap_write_remote_data/46 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_get_emu_status_handler/35 misc_read_version_handler/34 misc_read_reg_handle/27 misc_read_otp_handler/26 
+  Calls: 
+fid_panic/45 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 
+  Calls: 
+fid_delay/44 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+sysreg_get_life_cycle/43 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+mmap_read_remote_data/42 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_write_reg_handle/28 misc_write_otp_handler/25 
+  Calls: 
+memcpy_/41 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+memcmp_/40 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/13 
+  Calls: 
+otp_write/39 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_loop_write_otp_unit/21 
+  Calls: 
+otp_read/38 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 misc_read_otp_handler/26 misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: 
+misc_srv_handler/37 (misc_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: misc_set_baudrate_handler/36 misc_get_emu_status_handler/35 misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_read_version_handler/34 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_write_otp_handler/25 
+misc_set_baudrate_handler/36 (misc_set_baudrate_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: uart_set_baudrate/58 
+misc_get_emu_status_handler/35 (misc_get_emu_status_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 
+misc_read_version_handler/34 (misc_read_version_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 cpt_trng_get_driver_version/54 cpt_trng_get_version/53 cpt_hash_get_driver_version/52 cpt_hash_get_version/51 cpt_ske_get_driver_version/50 cpt_ske_get_version/49 cpt_pke_get_driver_version/48 cpt_pke_get_version/47 util_memset/12 
+misc_change_controlfield_handler/33 (misc_change_controlfield_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 util_memcpy/11 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 mmap_read_remote_data/42 util_memset/12 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_change_lifecycle_handler/32 (misc_change_lifecycle_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_chg_lfcycle_limit/31 
+misc_chk_chg_lfcycle_limit/31 (misc_chk_chg_lfcycle_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_lifecycle_handler/32 
+  Calls: misc_delete_all_keys/30 dbgauth_srv_acquire_user_auth_result/56 fid_delay/44 fid_delay/44 misc_life_cycle_convert/29 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_delete_all_keys/30 (misc_delete_all_keys)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: kds_remove_all_key/57 
+misc_life_cycle_convert/29 (misc_life_cycle_convert)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+misc_write_reg_handle/28 (misc_write_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_read_remote_data/42 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_reg_handle/27 (misc_read_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_otp_handler/26 (misc_read_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_handler/25 (misc_write_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_otp_write_limit/24 mmap_read_remote_data/42 
+misc_chk_otp_write_limit/24 (misc_chk_otp_write_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_handler/25 
+  Calls: fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_data/23 (misc_write_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_write_otp_handler/25 
+  Calls: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+misc_check_otp_data/22 (misc_check_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: misc_data_cmp/20 otp_read/38 
+misc_loop_write_otp_unit/21 (misc_loop_write_otp_unit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: otp_write/39 misc_data_cmp/20 otp_read/38 
+misc_data_cmp/20 (misc_data_cmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: util_memcpy/11 util_memcmp/13 
+util_memcmp/13 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_data_cmp/20 
+  Calls: memcmp_/40 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_read_version_handler/34 
+  Calls: memset_/55 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_data_cmp/20 
+  Calls: memcpy_/41 
+
+
+Initial Symbol table:
+
+uart_set_baudrate/58 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_set_baudrate_handler/36 
+  Calls: 
+kds_remove_all_key/57 (kds_remove_all_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_delete_all_keys/30 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/56 (dbgauth_srv_acquire_user_auth_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+memset_/55 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+cpt_trng_get_driver_version/54 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_trng_get_version/53 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_driver_version/52 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_version/51 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_driver_version/50 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_version/49 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_driver_version/48 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_version/47 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+mmap_write_remote_data/46 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_get_emu_status_handler/35 misc_read_version_handler/34 misc_read_reg_handle/27 misc_read_otp_handler/26 
+  Calls: 
+fid_panic/45 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 
+  Calls: 
+fid_delay/44 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+sysreg_get_life_cycle/43 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+mmap_read_remote_data/42 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_write_reg_handle/28 misc_write_otp_handler/25 
+  Calls: 
+memcpy_/41 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+memcmp_/40 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/13 
+  Calls: 
+otp_write/39 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_loop_write_otp_unit/21 
+  Calls: 
+otp_read/38 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 misc_read_otp_handler/26 misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: 
+misc_srv_handler/37 (misc_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: misc_set_baudrate_handler/36 misc_get_emu_status_handler/35 misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_read_version_handler/34 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_write_otp_handler/25 
+misc_set_baudrate_handler/36 (misc_set_baudrate_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: uart_set_baudrate/58 
+misc_get_emu_status_handler/35 (misc_get_emu_status_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 
+misc_read_version_handler/34 (misc_read_version_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 cpt_trng_get_driver_version/54 cpt_trng_get_version/53 cpt_hash_get_driver_version/52 cpt_hash_get_version/51 cpt_ske_get_driver_version/50 cpt_ske_get_version/49 cpt_pke_get_driver_version/48 cpt_pke_get_version/47 util_memset/12 
+misc_change_controlfield_handler/33 (misc_change_controlfield_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 util_memcpy/11 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 mmap_read_remote_data/42 util_memset/12 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_change_lifecycle_handler/32 (misc_change_lifecycle_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_chg_lfcycle_limit/31 
+misc_chk_chg_lfcycle_limit/31 (misc_chk_chg_lfcycle_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_lifecycle_handler/32 
+  Calls: misc_delete_all_keys/30 dbgauth_srv_acquire_user_auth_result/56 fid_delay/44 fid_delay/44 misc_life_cycle_convert/29 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_delete_all_keys/30 (misc_delete_all_keys)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: kds_remove_all_key/57 
+misc_life_cycle_convert/29 (misc_life_cycle_convert)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+misc_write_reg_handle/28 (misc_write_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_read_remote_data/42 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_reg_handle/27 (misc_read_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_otp_handler/26 (misc_read_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_handler/25 (misc_write_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_otp_write_limit/24 mmap_read_remote_data/42 
+misc_chk_otp_write_limit/24 (misc_chk_otp_write_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_handler/25 
+  Calls: fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_data/23 (misc_write_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_write_otp_handler/25 
+  Calls: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+misc_check_otp_data/22 (misc_check_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: misc_data_cmp/20 otp_read/38 
+misc_loop_write_otp_unit/21 (misc_loop_write_otp_unit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: otp_write/39 misc_data_cmp/20 otp_read/38 
+misc_data_cmp/20 (misc_data_cmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: util_memcpy/11 util_memcmp/13 
+util_memcmp/13 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_data_cmp/20 
+  Calls: memcmp_/40 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_read_version_handler/34 
+  Calls: memset_/55 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_data_cmp/20 
+  Calls: memcpy_/41 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uart_set_baudrate/58 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_set_baudrate_handler/36 
+  Calls: 
+kds_remove_all_key/57 (kds_remove_all_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_delete_all_keys/30 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/56 (dbgauth_srv_acquire_user_auth_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+memset_/55 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/12 
+  Calls: 
+cpt_trng_get_driver_version/54 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_trng_get_version/53 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_driver_version/52 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_hash_get_version/51 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_driver_version/50 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_ske_get_version/49 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_driver_version/48 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+cpt_pke_get_version/47 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 
+  Calls: 
+mmap_write_remote_data/46 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_get_emu_status_handler/35 misc_read_version_handler/34 misc_read_reg_handle/27 misc_read_otp_handler/26 
+  Calls: 
+fid_panic/45 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 
+  Calls: 
+fid_delay/44 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+sysreg_get_life_cycle/43 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_change_controlfield_handler/33 misc_chk_chg_lfcycle_limit/31 misc_chk_chg_lfcycle_limit/31 misc_read_reg_handle/27 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_read_otp_handler/26 misc_chk_otp_write_limit/24 misc_chk_otp_write_limit/24 
+  Calls: 
+mmap_read_remote_data/42 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 misc_write_reg_handle/28 misc_write_otp_handler/25 
+  Calls: 
+memcpy_/41 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/11 
+  Calls: 
+memcmp_/40 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcmp/13 
+  Calls: 
+otp_write/39 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_loop_write_otp_unit/21 
+  Calls: 
+otp_read/38 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: misc_read_version_handler/34 misc_read_otp_handler/26 misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: 
+misc_srv_handler/37 (misc_srv_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: misc_set_baudrate_handler/36 misc_get_emu_status_handler/35 misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_read_version_handler/34 misc_read_reg_handle/27 misc_write_reg_handle/28 misc_read_otp_handler/26 misc_write_otp_handler/25 
+misc_set_baudrate_handler/36 (misc_set_baudrate_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: uart_set_baudrate/58 
+misc_get_emu_status_handler/35 (misc_get_emu_status_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 
+misc_read_version_handler/34 (misc_read_version_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 cpt_trng_get_driver_version/54 cpt_trng_get_version/53 cpt_hash_get_driver_version/52 cpt_hash_get_version/51 cpt_ske_get_driver_version/50 cpt_ske_get_version/49 cpt_pke_get_driver_version/48 cpt_pke_get_version/47 util_memset/12 
+misc_change_controlfield_handler/33 (misc_change_controlfield_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 util_memcpy/11 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 mmap_read_remote_data/42 util_memset/12 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_change_lifecycle_handler/32 (misc_change_lifecycle_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_chg_lfcycle_limit/31 
+misc_chk_chg_lfcycle_limit/31 (misc_chk_chg_lfcycle_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_lifecycle_handler/32 
+  Calls: misc_delete_all_keys/30 dbgauth_srv_acquire_user_auth_result/56 fid_delay/44 fid_delay/44 misc_life_cycle_convert/29 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_delete_all_keys/30 (misc_delete_all_keys)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: kds_remove_all_key/57 
+misc_life_cycle_convert/29 (misc_life_cycle_convert)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_chk_chg_lfcycle_limit/31 
+  Calls: 
+misc_write_reg_handle/28 (misc_write_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_read_remote_data/42 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_reg_handle/27 (misc_read_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_read_otp_handler/26 (misc_read_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: mmap_write_remote_data/46 otp_read/38 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_handler/25 (misc_write_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_srv_handler/37 
+  Calls: misc_write_otp_data/23 misc_chk_otp_write_limit/24 mmap_read_remote_data/42 
+misc_chk_otp_write_limit/24 (misc_chk_otp_write_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_handler/25 
+  Calls: fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_delay/44 fid_panic/45 fid_delay/44 fid_delay/44 sysreg_get_life_cycle/43 fid_delay/44 sysreg_get_life_cycle/43 
+misc_write_otp_data/23 (misc_write_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_change_lifecycle_handler/32 misc_write_otp_handler/25 
+  Calls: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+misc_check_otp_data/22 (misc_check_otp_data)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: misc_data_cmp/20 otp_read/38 
+misc_loop_write_otp_unit/21 (misc_loop_write_otp_unit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_write_otp_data/23 
+  Calls: otp_write/39 misc_data_cmp/20 otp_read/38 
+misc_data_cmp/20 (misc_data_cmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_check_otp_data/22 misc_loop_write_otp_unit/21 
+  Calls: util_memcpy/11 util_memcmp/13 
+util_memcmp/13 (util_memcmp)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_data_cmp/20 
+  Calls: memcmp_/40 
+util_memset/12 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_read_version_handler/34 
+  Calls: memset_/55 
+util_memcpy/11 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: misc_change_controlfield_handler/33 misc_data_cmp/20 
+  Calls: memcpy_/41 
+updating call of misc_check_otp_data/22 -> __builtin_unreachable/61: memcpy_ (0B, _2, 4);
+  updated to:__builtin_unreachable ();
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+misc_data_cmp.constprop.0/64 (misc_data_cmp.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function misc_data_cmp.constprop/64 is inline copy in misc_write_otp_data/23
+  Clone of misc_data_cmp/20
+  Availability: local
+  Function flags: count:346408278 (estimated locally) local
+  Called by: misc_loop_write_otp_unit/21 (inlined) (346408278 (estimated locally),0.32 per call) 
+  Calls: memcmp_/40 (346408278 (estimated locally),0.32 per call) memcpy_/41 (185224506 (estimated locally),0.17 per call) 
+misc_check_otp_data.constprop.0/63 (misc_check_otp_data.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function misc_check_otp_data.constprop/63 is inline copy in misc_write_otp_data/23
+  Clone of misc_check_otp_data/22
+  Availability: local
+  Function flags: count:6275269 (estimated locally) local
+  Called by: misc_write_otp_data/23 (inlined) (6275269 (estimated locally),0.01 per call) 
+  Calls: otp_read/38 (11280562 (estimated locally),0.01 per call) memcmp_/40 (10867694 (estimated locally),0.01 per call) 
+uart_set_baudrate/58 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_set_baudrate_handler/36 (5403602 (estimated locally),0.01 per call) 
+  Calls: 
+kds_remove_all_key/57 (kds_remove_all_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_chk_chg_lfcycle_limit/31 (1578528 (estimated locally),0.00 per call) 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/56 (dbgauth_srv_acquire_user_auth_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_chk_chg_lfcycle_limit/31 (157081 (estimated locally),0.00 per call) 
+  Calls: 
+memset_/55 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 (52613350 (estimated locally),0.05 per call) misc_read_version_handler/34 (52613350 (estimated locally),0.05 per call) 
+  Calls: 
+cpt_trng_get_driver_version/54 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_trng_get_version/53 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_hash_get_driver_version/52 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_hash_get_version/51 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_ske_get_driver_version/50 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_ske_get_version/49 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_pke_get_driver_version/48 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_pke_get_version/47 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) 
+  Calls: 
+mmap_write_remote_data/46 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_read_version_handler/34 (1620209 (estimated locally),0.00 per call) misc_get_emu_status_handler/35 (12315365 (estimated locally),0.01 per call) misc_read_reg_handle/27 (1185970 (estimated locally),0.00 per call) misc_read_otp_handler/26 (2839351 (estimated locally),0.00 per call) 
+  Calls: 
+fid_panic/45 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 (49045954 (estimated locally),0.05 per call) misc_chk_chg_lfcycle_limit/31 (18357410 (estimated locally),0.02 per call) misc_read_reg_handle/27 (49045954 (estimated locally),0.05 per call) misc_read_otp_handler/26 (1000937833 (estimated locally),0.93 per call) misc_write_reg_handle/28 (49045954 (estimated locally),0.05 per call) misc_chk_otp_write_limit/24 (47420807 (estimated locally),0.04 per call) 
+  Calls: 
+fid_delay/44 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 (113996 (estimated locally),0.00 per call) misc_change_controlfield_handler/33 (840632 (estimated locally),0.00 per call) misc_change_controlfield_handler/33 (119677 (estimated locally),0.00 per call) misc_change_controlfield_handler/33 (882518 (estimated locally),0.00 per call) misc_change_controlfield_handler/33 (125640 (estimated locally),0.00 per call) misc_change_controlfield_handler/33 (926492 (estimated locally),0.00 per call) misc_change_controlfield_handler/33 (7134791 (estimated locally),0.01 per call) misc_change_controlfield_handler/33 (52613350 (estimated locally),0.05 per call) misc_change_controlfield_handler/33 (52613350 (estimated locally),0.05 per call) misc_chk_chg_lfcycle_limit/31 (476003 (estimated locally),0.00 per call) misc_chk_chg_lfcycle_limit/31 (4703590 (estimated locally),0.00 per call) misc_chk_chg_lfcycle_limit/31 (2670481 (estimated locally),0.00 per call) misc_chk_chg_lfcycle_limit/31 (19692651 (estimated locally),0.02 per call) misc_chk_chg_lfcycle_limit/31 (19692651 (estimated locally),0.02 per call) misc_read_reg_handle/27 (3821921 (estimated locally),0.00 per call) misc_read_reg_handle/27 (18357410 (estimated locally),0.02 per call) misc_read_reg_handle/27 (2670481 (estimated locally),0.00 per call) misc_read_reg_handle/27 (19692651 (estimated locally),0.02 per call) misc_read_reg_handle/27 (7134791 (estimated locally),0.01 per call) misc_read_reg_handle/27 (52613350 (estimated locally),0.05 per call) misc_read_reg_handle/27 (52613350 (estimated locally),0.05 per call) misc_read_otp_handler/26 (10208878 (estimated locally),0.01 per call) misc_read_otp_handler/26 (49035174 (estimated locally),0.05 per call) misc_read_otp_handler/26 (7133223 (estimated locally),0.01 per call) misc_read_otp_handler/26 (52601786 (estimated locally),0.05 per call) misc_read_otp_handler/26 (7652063 (estimated locally),0.01 per call) misc_read_otp_handler/26 (56427817 (estimated locally),0.05 per call) misc_read_otp_handler/26 (145607981 (estimated locally),0.14 per call) misc_read_otp_handler/26 (1073741824 (estimated locally),1.00 per call) misc_read_otp_handler/26 (1073741824 (estimated locally),1.00 per call) misc_write_reg_handle/28 (3821921 (estimated locally),0.00 per call) misc_write_reg_handle/28 (18357410 (estimated locally),0.02 per call) misc_write_reg_handle/28 (2670481 (estimated locally),0.00 per call) misc_write_reg_handle/28 (19692651 (estimated locally),0.02 per call) misc_write_reg_handle/28 (7134791 (estimated locally),0.01 per call) misc_write_reg_handle/28 (52613350 (estimated locally),0.05 per call) misc_write_reg_handle/28 (52613350 (estimated locally),0.05 per call) misc_chk_otp_write_limit/24 (6607446 (estimated locally),0.01 per call) misc_chk_otp_write_limit/24 (31736816 (estimated locally),0.03 per call) misc_chk_otp_write_limit/24 (4518213 (estimated locally),0.00 per call) misc_chk_otp_write_limit/24 (33318191 (estimated locally),0.03 per call) misc_chk_otp_write_limit/24 (4743346 (estimated locally),0.00 per call) misc_chk_otp_write_limit/24 (34978362 (estimated locally),0.03 per call) misc_chk_otp_write_limit/24 (1801815 (estimated locally),0.00 per call) misc_chk_otp_write_limit/24 (17804499 (estimated locally),0.02 per call) misc_chk_otp_write_limit/24 (6898378 (estimated locally),0.01 per call) misc_chk_otp_write_limit/24 (50869996 (estimated locally),0.05 per call) misc_chk_otp_write_limit/24 (50869996 (estimated locally),0.05 per call) 
+  Calls: 
+sysreg_get_life_cycle/43 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 (52613350 (estimated locally),0.05 per call) misc_change_controlfield_handler/33 (52613350 (estimated locally),0.05 per call) misc_chk_chg_lfcycle_limit/31 (19692651 (estimated locally),0.02 per call) misc_chk_chg_lfcycle_limit/31 (19692651 (estimated locally),0.02 per call) misc_read_reg_handle/27 (52613350 (estimated locally),0.05 per call) misc_read_reg_handle/27 (52613350 (estimated locally),0.05 per call) misc_read_otp_handler/26 (1073741824 (estimated locally),1.00 per call) misc_read_otp_handler/26 (1073741824 (estimated locally),1.00 per call) misc_write_reg_handle/28 (52613350 (estimated locally),0.05 per call) misc_write_reg_handle/28 (52613350 (estimated locally),0.05 per call) misc_chk_otp_write_limit/24 (50869996 (estimated locally),0.05 per call) misc_chk_otp_write_limit/24 (50869996 (estimated locally),0.05 per call) 
+  Calls: 
+mmap_read_remote_data/42 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_change_controlfield_handler/33 (8257507 (estimated locally),0.01 per call) misc_write_otp_handler/25 (251333973 (estimated locally),0.23 per call) misc_write_reg_handle/28 (1185970 (estimated locally),0.00 per call) 
+  Calls: 
+memcpy_/41 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_data_cmp.constprop.0/64 (185224506 (estimated locally),0.17 per call) misc_change_controlfield_handler/33 (811500 (estimated locally),0.00 per call) 
+  Calls: 
+memcmp_/40 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_data_cmp.constprop.0/64 (346408278 (estimated locally),0.32 per call) misc_check_otp_data.constprop.0/63 (10867694 (estimated locally),0.01 per call) 
+  Calls: 
+otp_write/39 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_loop_write_otp_unit/21 (114314731 (estimated locally),0.11 per call) 
+  Calls: 
+otp_read/38 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: misc_check_otp_data.constprop.0/63 (11280562 (estimated locally),0.01 per call) misc_read_version_handler/34 (8004987 (estimated locally),0.01 per call) misc_read_otp_handler/26 (14028414 (estimated locally),0.01 per call) misc_loop_write_otp_unit/21 (359568485 (estimated locally),0.33 per call) 
+  Calls: 
+misc_srv_handler/37 (misc_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741814 (estimated locally) body
+  Called by: 
+  Calls: misc_set_baudrate_handler/36 (inlined) (52613350 (estimated locally),0.05 per call) misc_get_emu_status_handler/35 (inlined) (52613350 (estimated locally),0.05 per call) misc_change_controlfield_handler/33 (inlined) (52613350 (estimated locally),0.05 per call) misc_change_lifecycle_handler/32 (inlined) (52613350 (estimated locally),0.05 per call) misc_read_version_handler/34 (inlined) (52613350 (estimated locally),0.05 per call) misc_read_reg_handle/27 (inlined) (52613350 (estimated locally),0.05 per call) misc_write_reg_handle/28 (inlined) (52613350 (estimated locally),0.05 per call) misc_read_otp_handler/26 (52613350 (estimated locally),0.05 per call) misc_write_otp_handler/25 (52613350 (estimated locally),0.05 per call) 
+misc_set_baudrate_handler/36 (misc_set_baudrate_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_set_baudrate_handler/36 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: uart_set_baudrate/58 (5403602 (estimated locally),0.01 per call) 
+misc_get_emu_status_handler/35 (misc_get_emu_status_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_get_emu_status_handler/35 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: mmap_write_remote_data/46 (12315365 (estimated locally),0.01 per call) 
+misc_read_version_handler/34 (misc_read_version_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_read_version_handler/34 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: mmap_write_remote_data/46 (1620209 (estimated locally),0.00 per call) otp_read/38 (8004987 (estimated locally),0.01 per call) cpt_trng_get_driver_version/54 (8004987 (estimated locally),0.01 per call) cpt_trng_get_version/53 (8004987 (estimated locally),0.01 per call) cpt_hash_get_driver_version/52 (8004987 (estimated locally),0.01 per call) cpt_hash_get_version/51 (8004987 (estimated locally),0.01 per call) cpt_ske_get_driver_version/50 (8004987 (estimated locally),0.01 per call) cpt_ske_get_version/49 (8004987 (estimated locally),0.01 per call) cpt_pke_get_driver_version/48 (8004987 (estimated locally),0.01 per call) cpt_pke_get_version/47 (8004987 (estimated locally),0.01 per call) memset_/55 (52613350 (estimated locally),0.05 per call) 
+misc_change_controlfield_handler/33 (misc_change_controlfield_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_change_controlfield_handler/33 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: misc_write_otp_data/23 (811500 (estimated locally),0.00 per call) memcpy_/41 (811500 (estimated locally),0.00 per call) fid_delay/44 (113996 (estimated locally),0.00 per call) fid_delay/44 (840632 (estimated locally),0.00 per call) fid_delay/44 (119677 (estimated locally),0.00 per call) fid_delay/44 (882518 (estimated locally),0.00 per call) fid_delay/44 (125640 (estimated locally),0.00 per call) fid_delay/44 (926492 (estimated locally),0.00 per call) mmap_read_remote_data/42 (8257507 (estimated locally),0.01 per call) memset_/55 (52613350 (estimated locally),0.05 per call) fid_panic/45 (49045954 (estimated locally),0.05 per call) fid_delay/44 (7134791 (estimated locally),0.01 per call) fid_delay/44 (52613350 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (52613350 (estimated locally),0.05 per call) fid_delay/44 (52613350 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (52613350 (estimated locally),0.05 per call) 
+misc_change_lifecycle_handler/32 (misc_change_lifecycle_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_change_lifecycle_handler/32 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: misc_write_otp_data/23 (3985792 (estimated locally),0.00 per call) misc_chk_chg_lfcycle_limit/31 (inlined) (19692651 (estimated locally),0.02 per call) 
+misc_chk_chg_lfcycle_limit/31 (misc_chk_chg_lfcycle_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_chk_chg_lfcycle_limit/31 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:19692651 (estimated locally) body local
+  Called by: misc_change_lifecycle_handler/32 (inlined) (19692651 (estimated locally),0.02 per call) 
+  Calls: kds_remove_all_key/57 (1578528 (estimated locally),0.00 per call) dbgauth_srv_acquire_user_auth_result/56 (157081 (estimated locally),0.00 per call) fid_delay/44 (476003 (estimated locally),0.00 per call) fid_delay/44 (4703590 (estimated locally),0.00 per call) misc_life_cycle_convert/29 (inlined) (9846325 (estimated locally),0.01 per call) fid_panic/45 (18357410 (estimated locally),0.02 per call) fid_delay/44 (2670481 (estimated locally),0.00 per call) fid_delay/44 (19692651 (estimated locally),0.02 per call) sysreg_get_life_cycle/43 (19692651 (estimated locally),0.02 per call) fid_delay/44 (19692651 (estimated locally),0.02 per call) sysreg_get_life_cycle/43 (19692651 (estimated locally),0.02 per call) 
+misc_life_cycle_convert/29 (misc_life_cycle_convert)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_life_cycle_convert/29 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:9846325 (estimated locally) body local nonfreeing_fn
+  Called by: misc_chk_chg_lfcycle_limit/31 (inlined) (9846325 (estimated locally),0.01 per call) 
+  Calls: 
+misc_write_reg_handle/28 (misc_write_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_write_reg_handle/28 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: mmap_read_remote_data/42 (1185970 (estimated locally),0.00 per call) fid_delay/44 (3821921 (estimated locally),0.00 per call) fid_delay/44 (18357410 (estimated locally),0.02 per call) fid_delay/44 (2670481 (estimated locally),0.00 per call) fid_delay/44 (19692651 (estimated locally),0.02 per call) fid_panic/45 (49045954 (estimated locally),0.05 per call) fid_delay/44 (7134791 (estimated locally),0.01 per call) fid_delay/44 (52613350 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (52613350 (estimated locally),0.05 per call) fid_delay/44 (52613350 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (52613350 (estimated locally),0.05 per call) 
+misc_read_reg_handle/27 (misc_read_reg_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_read_reg_handle/27 is inline copy in misc_srv_handler/37
+  Availability: local
+  Function flags: count:52613350 (estimated locally) body local
+  Called by: misc_srv_handler/37 (inlined) (52613350 (estimated locally),0.05 per call) 
+  Calls: mmap_write_remote_data/46 (1185970 (estimated locally),0.00 per call) fid_delay/44 (3821921 (estimated locally),0.00 per call) fid_delay/44 (18357410 (estimated locally),0.02 per call) fid_delay/44 (2670481 (estimated locally),0.00 per call) fid_delay/44 (19692651 (estimated locally),0.02 per call) fid_panic/45 (49045954 (estimated locally),0.05 per call) fid_delay/44 (7134791 (estimated locally),0.01 per call) fid_delay/44 (52613350 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (52613350 (estimated locally),0.05 per call) fid_delay/44 (52613350 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (52613350 (estimated locally),0.05 per call) 
+misc_read_otp_handler/26 (misc_read_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: misc_srv_handler/37 (52613350 (estimated locally),0.05 per call) 
+  Calls: mmap_write_remote_data/46 (2839351 (estimated locally),0.00 per call) otp_read/38 (14028414 (estimated locally),0.01 per call) fid_delay/44 (10208878 (estimated locally),0.01 per call) fid_delay/44 (49035174 (estimated locally),0.05 per call) fid_delay/44 (7133223 (estimated locally),0.01 per call) fid_delay/44 (52601786 (estimated locally),0.05 per call) fid_delay/44 (7652063 (estimated locally),0.01 per call) fid_delay/44 (56427817 (estimated locally),0.05 per call) fid_panic/45 (1000937833 (estimated locally),0.93 per call) fid_delay/44 (145607981 (estimated locally),0.14 per call) fid_delay/44 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/43 (1073741824 (estimated locally),1.00 per call) fid_delay/44 (1073741824 (estimated locally),1.00 per call) sysreg_get_life_cycle/43 (1073741824 (estimated locally),1.00 per call) 
+misc_write_otp_handler/25 (misc_write_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: misc_srv_handler/37 (52613350 (estimated locally),0.05 per call) 
+  Calls: misc_write_otp_data/23 (55934409 (estimated locally),0.05 per call) misc_chk_otp_write_limit/24 (inlined) (50869996 (estimated locally),0.05 per call) mmap_read_remote_data/42 (251333973 (estimated locally),0.23 per call) 
+misc_chk_otp_write_limit/24 (misc_chk_otp_write_limit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_chk_otp_write_limit/24 is inline copy in misc_write_otp_handler/25
+  Availability: local
+  Function flags: count:50869996 (estimated locally) body local
+  Called by: misc_write_otp_handler/25 (inlined) (50869996 (estimated locally),0.05 per call) 
+  Calls: fid_delay/44 (6607446 (estimated locally),0.01 per call) fid_delay/44 (31736816 (estimated locally),0.03 per call) fid_delay/44 (4518213 (estimated locally),0.00 per call) fid_delay/44 (33318191 (estimated locally),0.03 per call) fid_delay/44 (4743346 (estimated locally),0.00 per call) fid_delay/44 (34978362 (estimated locally),0.03 per call) fid_delay/44 (1801815 (estimated locally),0.00 per call) fid_delay/44 (17804499 (estimated locally),0.02 per call) fid_panic/45 (47420807 (estimated locally),0.04 per call) fid_delay/44 (6898378 (estimated locally),0.01 per call) fid_delay/44 (50869996 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (50869996 (estimated locally),0.05 per call) fid_delay/44 (50869996 (estimated locally),0.05 per call) sysreg_get_life_cycle/43 (50869996 (estimated locally),0.05 per call) 
+misc_write_otp_data/23 (misc_write_otp_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: misc_change_controlfield_handler/33 (811500 (estimated locally),0.00 per call) misc_change_lifecycle_handler/32 (3985792 (estimated locally),0.00 per call) misc_write_otp_handler/25 (55934409 (estimated locally),0.05 per call) 
+  Calls: misc_check_otp_data.constprop.0/63 (inlined) (6275269 (estimated locally),0.01 per call) misc_loop_write_otp_unit/21 (inlined) (31004295 (estimated locally),0.03 per call) 
+misc_check_otp_data/22 (misc_check_otp_data)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:575450692 (estimated locally) body
+  Called by: 
+  Calls: 
+misc_loop_write_otp_unit/21 (misc_loop_write_otp_unit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function misc_loop_write_otp_unit/21 is inline copy in misc_write_otp_data/23
+  Availability: local
+  Function flags: count:31004295 (estimated locally) body local
+  Called by: misc_write_otp_data/23 (inlined) (31004295 (estimated locally),0.03 per call) 
+  Calls: otp_write/39 (114314731 (estimated locally),0.11 per call) misc_data_cmp.constprop.0/64 (inlined) (346408278 (estimated locally),0.32 per call) otp_read/38 (359568485 (estimated locally),0.33 per call) 
+misc_data_cmp/20 (misc_data_cmp)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cloning misc_data_cmp/20 to misc_data_cmp.constprop/64
+    replace map: 2 -> 4
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+uint8_t misc_data_cmp (const uint8_t * r, const uint8_t * i, uint32_t s, uint8_t * o)
+{
+  uint8_t ret;
+  unsigned char _8;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG p1 => r_4(D)
+  # DEBUG p2 => i_5(D)
+  # DEBUG size => s_6(D)
+  # DEBUG BEGIN_STMT
+  _8 = memcmp_ (r_4(D), i_5(D), s_6(D));
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_8 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+
+  <bb 4> [local count: 1073741824]:
+  # ret_1 = PHI <1(2), 0(3)>
+  # DEBUG ret => ret_1
+  # DEBUG BEGIN_STMT
+  if (o_7(D) != 0B)
+    goto <bb 5>; [53.47%]
+  else
+    goto <bb 6>; [46.53%]
+
+  <bb 5> [local count: 574129752]:
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => o_7(D)
+  # DEBUG src => i_5(D)
+  # DEBUG size => s_6(D)
+  # DEBUG BEGIN_STMT
+  memcpy_ (o_7(D), i_5(D), s_6(D));
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return ret_1;
+
+}
+
+
+uint8_t misc_data_cmp.constprop (const uint8_t * r, const uint8_t * i, uint8_t * o)
+{
+  uint8_t ret;
+  uint32_t s;
+  unsigned char _3;
+
+  <bb 7> [local count: 1073741824]:
+  # DEBUG s => 4
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG p1 => r_1(D)
+  # DEBUG p2 => i_2(D)
+  # DEBUG size => 4
+  # DEBUG BEGIN_STMT
+  _3 = memcmp_ (r_1(D), i_2(D), 4);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_3 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+
+  <bb 4> [local count: 1073741824]:
+  # ret_5 = PHI <1(2), 0(3)>
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (o_4(D) != 0B)
+    goto <bb 5>; [53.47%]
+  else
+    goto <bb 6>; [46.53%]
+
+  <bb 5> [local count: 574129752]:
+  # DEBUG BEGIN_STMT
+  # DEBUG dest => o_4(D)
+  # DEBUG src => i_2(D)
+  # DEBUG size => 4
+  # DEBUG BEGIN_STMT
+  memcpy_ (o_4(D), i_2(D), 4);
+  # DEBUG dest => NULL
+  # DEBUG src => NULL
+  # DEBUG size => NULL
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return ret_5;
+
+}
+
+
+updating call of misc_write_otp_data/23 -> misc_check_otp_data.constprop/63: ret_15 = misc_check_otp_data (otp_addr_10(D), data_9(D), size_11(D), &data_is_same);
+  updated to:ret_15 = misc_check_otp_data.constprop (otp_addr_10(D), data_9(D), size_11(D), &data_is_same);
+updating call of misc_write_otp_data/23 -> misc_data_cmp.constprop/64: _21 = misc_data_cmp (&tmp_buf, _20, 4, &w_buf);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+  updated to:_21 = misc_data_cmp.constprop (&tmp_buf, _20, &w_buf);
+cloning misc_check_otp_data/22 to misc_check_otp_data.constprop/63
+uint32_t misc_check_otp_data (uint32_t addr, const uint8_t * data, uint32_t size, bool_t * flag)
+{
+  uint32_t ret;
+  uint8_t tmp_buf[4];
+  bool_t same_flag;
+  uint32_t idx;
+  long unsigned int _1;
+  const uint8_t * _2;
+  unsigned char _19;
+
+  <bb 2> [local count: 575450692]:
+  # DEBUG BEGIN_STMT
+  # DEBUG idx => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG same_flag => 1
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG cmp_ret => 0
+  # DEBUG BEGIN_STMT
+  *flag_9(D) = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG idx => 0
+  goto <bb 6>; [100.00%]
+
+  <bb 3> [local count: 1034442873]:
+  # DEBUG BEGIN_STMT
+  _1 = idx_3 + addr_12(D);
+  ret_14 = otp_read (_1, &tmp_buf, 4);
+  # DEBUG ret => ret_14
+  # DEBUG BEGIN_STMT
+  if (ret_14 == 2774162085)
+    goto <bb 4>; [96.34%]
+  else
+    goto <bb 7>; [3.66%]
+
+  <bb 4> [local count: 996582262]:
+  # DEBUG BEGIN_STMT
+  _2 = data_15(D) + idx_3;
+  # DEBUG r => &tmp_buf
+  # DEBUG i => _2
+  # DEBUG s => 4
+  # DEBUG o => 0B
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG p1 => &tmp_buf
+  # DEBUG p2 => _2
+  # DEBUG size => 4
+  # DEBUG BEGIN_STMT
+  _19 = memcmp_ (&tmp_buf, _2, 4);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_19 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 498291131]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG r => NULL
+  # DEBUG i => NULL
+  # DEBUG s => NULL
+  # DEBUG o => NULL
+  # DEBUG ret => NULL
+  # DEBUG cmp_ret => (uint32_t) 0
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG same_flag => 1
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  idx_16 = idx_3 + 4;
+  # DEBUG idx => idx_16
+
+  <bb 6> [local count: 1073741824]:
+  # idx_3 = PHI <0(2), idx_16(5)>
+  # DEBUG ret => 2774162085
+  # DEBUG same_flag => 1
+  # DEBUG idx => idx_3
+  # DEBUG BEGIN_STMT
+  if (idx_3 < size_11(D))
+    goto <bb 3>; [96.34%]
+  else
+    goto <bb 7>; [3.66%]
+
+  <bb 7> [local count: 575450694]:
+  # same_flag_4 = PHI <0(4), 1(6), 0(3)>
+  # ret_5 = PHI <92(4), 2774162085(6), ret_14(3)>
+  # DEBUG r => NULL
+  # DEBUG i => NULL
+  # DEBUG s => NULL
+  # DEBUG o => NULL
+  # DEBUG ret => NULL
+  # DEBUG cmp_ret => NULL
+  # DEBUG ret => ret_5
+  # DEBUG same_flag => same_flag_4
+  # DEBUG BEGIN_STMT
+  *flag_9(D) = same_flag_4;
+  # DEBUG BEGIN_STMT
+  tmp_buf ={v} {CLOBBER(eos)};
+  return ret_5;
+
+}
+
+
+uint32_t misc_check_otp_data.constprop (uint32_t addr, const uint8_t * data, uint32_t size, bool_t * flag)
+{
+  uint32_t idx;
+  bool_t same_flag;
+  uint8_t tmp_buf[4];
+  uint32_t ret;
+  long unsigned int _4;
+  const uint8_t * _7;
+  unsigned char _8;
+
+  <bb 8> [local count: 575450692]:
+
+  <bb 2> [local count: 575450692]:
+  # DEBUG BEGIN_STMT
+  # DEBUG idx => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG same_flag => 1
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  # DEBUG cmp_ret => 0
+  # DEBUG BEGIN_STMT
+  *flag_1(D) = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG idx => 0
+  goto <bb 6>; [100.00%]
+
+  <bb 3> [local count: 1034442873]:
+  # DEBUG BEGIN_STMT
+  _4 = idx_2 + addr_3(D);
+  ret_5 = otp_read (_4, &tmp_buf, 4);
+  # DEBUG ret => ret_5
+  # DEBUG BEGIN_STMT
+  if (ret_5 == 2774162085)
+    goto <bb 4>; [96.34%]
+  else
+    goto <bb 7>; [3.66%]
+
+  <bb 4> [local count: 996582262]:
+  # DEBUG BEGIN_STMT
+  _7 = data_6(D) + idx_2;
+  # DEBUG r => &tmp_buf
+  # DEBUG i => _7
+  # DEBUG s => 4
+  # DEBUG o => 0B
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG p1 => &tmp_buf
+  # DEBUG p2 => _7
+  # DEBUG size => 4
+  # DEBUG BEGIN_STMT
+  _8 = memcmp_ (&tmp_buf, _7, 4);
+  # DEBUG p1 => NULL
+  # DEBUG p2 => NULL
+  # DEBUG size => NULL
+  if (_8 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 498291131]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG r => NULL
+  # DEBUG i => NULL
+  # DEBUG s => NULL
+  # DEBUG o => NULL
+  # DEBUG ret => NULL
+  # DEBUG cmp_ret => (uint32_t) 0
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG same_flag => 1
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  idx_9 = idx_2 + 4;
+  # DEBUG idx => idx_9
+
+  <bb 6> [local count: 1073741824]:
+  # idx_2 = PHI <0(2), idx_9(5)>
+  # DEBUG ret => 2774162085
+  # DEBUG same_flag => 1
+  # DEBUG idx => idx_2
+  # DEBUG BEGIN_STMT
+  if (idx_2 < size_10(D))
+    goto <bb 3>; [96.34%]
+  else
+    goto <bb 7>; [3.66%]
+
+  <bb 7> [local count: 575450694]:
+  # same_flag_11 = PHI <0(3), 0(4), 1(6)>
+  # ret_12 = PHI <ret_5(3), 92(4), 2774162085(6)>
+  # DEBUG r => NULL
+  # DEBUG i => NULL
+  # DEBUG s => NULL
+  # DEBUG o => NULL
+  # DEBUG ret => NULL
+  # DEBUG cmp_ret => NULL
+  # DEBUG ret => ret_12
+  # DEBUG same_flag => same_flag_11
+  # DEBUG BEGIN_STMT
+  *flag_1(D) = same_flag_11;
+  # DEBUG BEGIN_STMT
+  tmp_buf ={v} {CLOBBER(eos)};
+  return ret_12;
+
+}
+
+
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+uart_set_baudrate/58 (uart_set_baudrate)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kds_remove_all_key/57 (kds_remove_all_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dbgauth_srv_acquire_user_auth_result/56 (dbgauth_srv_acquire_user_auth_result)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/55 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_trng_get_driver_version/54 (cpt_trng_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_trng_get_version/53 (cpt_trng_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_get_driver_version/52 (cpt_hash_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_get_version/51 (cpt_hash_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_get_driver_version/50 (cpt_ske_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_get_version/49 (cpt_ske_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_pke_get_driver_version/48 (cpt_pke_get_driver_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_pke_get_version/47 (cpt_pke_get_version)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_write_remote_data/46 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_panic/45 (fid_panic)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+fid_delay/44 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_get_life_cycle/43 (sysreg_get_life_cycle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/42 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/41 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcmp_/40 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otp_write/39 (otp_write)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+otp_read/38 (otp_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+misc_srv_handler/37 (misc_srv_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.misc_srv_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741814 (estimated locally)
+  Called by: 
+  Calls: 
+misc_read_otp_handler/26 (misc_read_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.misc_read_otp_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+misc_write_otp_handler/25 (misc_write_otp_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.misc_write_otp_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+misc_write_otp_data/23 (misc_write_otp_data)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.misc_write_otp_data (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+misc_check_otp_data/22 (misc_check_otp_data)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:575450692 (estimated locally)
+  Called by: 
+  Calls: 
+misc_data_cmp/20 (misc_data_cmp)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

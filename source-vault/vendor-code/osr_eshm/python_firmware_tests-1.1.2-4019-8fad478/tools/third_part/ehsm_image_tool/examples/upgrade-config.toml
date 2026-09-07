@@ -1,0 +1,37 @@
+# eHSM Upgrade Image Configuration Example
+
+[general]
+mode = "upgrade"
+output = "ehsm_upgrade_image.bin"
+
+# Input firmware binary file
+input_bin = "firmware.bin"
+
+# Image type (applies to both boot layer and upgrade layer)
+image_type = 0
+
+# Version counter (applies to both boot layer and upgrade layer)
+version_counter = "01000000000000000000000000000000"
+
+export_c_array = false
+
+# Boot layer configuration (inner layer, signing only)
+[upgrade.boot_layer]
+sign_key = "keys/aes128-key.toml"
+plain = true
+
+# Boot layer extra data (optional)
+# [[upgrade.boot_layer.extra_data]]
+# offset = 600
+# value = "AABBCCDD"
+
+# Upgrade layer configuration (outer layer, signing + encryption)
+[upgrade.upgrade_layer]
+sign_key = "keys/rsa2048-key.toml"
+enc_key = "keys/aes256-key.toml"
+# iv = "5ED24925293ACB755C50D8B263A2A3CC"  # optional, auto-generated if not specified
+
+# Upgrade layer extra data (optional)
+# [[upgrade.upgrade_layer.extra_data]]
+# offset = 700
+# value = "11223344"

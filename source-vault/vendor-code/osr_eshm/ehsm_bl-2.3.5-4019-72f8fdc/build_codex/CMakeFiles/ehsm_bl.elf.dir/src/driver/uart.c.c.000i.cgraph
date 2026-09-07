@@ -1,0 +1,405 @@
+Trivially needed symbols: uart_deinit/7 uart_set_baudrate/6 uart_getc/5 uart_flush/4 uart_putc/3 uart_init/2
+
+
+Initial Symbol table:
+
+uart_deinit/7 (uart_deinit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_set_baudrate/6 (uart_set_baudrate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc35fcb0bb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_init/2 
+  Calls: uart_get_reg_base/1 
+uart_getc/5 (uart_getc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc35fcb0aa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_flush/4 (uart_flush)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc35fcb0990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_putc/3 (uart_putc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc35fcb0880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_init/2 (uart_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fc35fcb0770
+  References: g_uart_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_set_baudrate/6 uart_get_reg_base/1 uart_get_reg_base/1 uart_get_reg_base/1 
+uart_get_reg_base/1 (uart_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc35fcb0770
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_deinit/7 uart_deinit/7 uart_set_baudrate/6 uart_getc/5 uart_flush/4 uart_putc/3 uart_putc/3 uart_init/2 uart_init/2 uart_init/2 
+  Calls: 
+g_uart_cb/0 (g_uart_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc35fcb0550
+  References: 
+  Referring: uart_init/2 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uart_deinit/7 (uart_deinit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_set_baudrate/6 (uart_set_baudrate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_init/2 
+  Calls: uart_get_reg_base/1 
+uart_getc/5 (uart_getc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_flush/4 (uart_flush)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_putc/3 (uart_putc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_init/2 (uart_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_uart_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_set_baudrate/6 uart_get_reg_base/1 uart_get_reg_base/1 uart_get_reg_base/1 
+uart_get_reg_base/1 (uart_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_deinit/7 uart_deinit/7 uart_set_baudrate/6 uart_getc/5 uart_flush/4 uart_putc/3 uart_putc/3 uart_init/2 uart_init/2 uart_init/2 
+  Calls: 
+g_uart_cb/0 (g_uart_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: uart_init/2 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+
+Initial Symbol table:
+
+uart_deinit/7 (uart_deinit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_set_baudrate/6 (uart_set_baudrate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_init/2 
+  Calls: uart_get_reg_base/1 
+uart_getc/5 (uart_getc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_flush/4 (uart_flush)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_putc/3 (uart_putc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_init/2 (uart_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_uart_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_set_baudrate/6 uart_get_reg_base/1 uart_get_reg_base/1 uart_get_reg_base/1 
+uart_get_reg_base/1 (uart_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_deinit/7 uart_deinit/7 uart_set_baudrate/6 uart_getc/5 uart_flush/4 uart_putc/3 uart_putc/3 uart_init/2 uart_init/2 uart_init/2 
+  Calls: 
+g_uart_cb/0 (g_uart_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: uart_init/2 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+uart_deinit/7 (uart_deinit)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_set_baudrate/6 (uart_set_baudrate)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_init/2 
+  Calls: uart_get_reg_base/1 
+uart_getc/5 (uart_getc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_flush/4 (uart_flush)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 
+uart_putc/3 (uart_putc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_get_reg_base/1 uart_get_reg_base/1 
+uart_init/2 (uart_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_uart_cb/0 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uart_set_baudrate/6 uart_get_reg_base/1 uart_get_reg_base/1 uart_get_reg_base/1 
+uart_get_reg_base/1 (uart_get_reg_base)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: uart_deinit/7 uart_deinit/7 uart_set_baudrate/6 uart_getc/5 uart_flush/4 uart_putc/3 uart_putc/3 uart_init/2 uart_init/2 uart_init/2 
+  Calls: 
+g_uart_cb/0 (g_uart_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: uart_init/2 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+uart_deinit/7 (uart_deinit)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_set_baudrate/6 (uart_set_baudrate)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_getc/5 (uart_getc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_flush/4 (uart_flush)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_putc/3 (uart_putc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_init/2 (uart_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_uart_cb/0 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+g_uart_cb/0 (g_uart_cb)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: uart_init/2 (write) 
+  Availability: available
+  Varpool flags: used-by-single-function write-only
+Trivially needed variables:
+Removing variables: g_uart_cb/0
+
+Final Symbol table:
+
+uart_deinit/7 (uart_deinit)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uart_deinit (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_set_baudrate/6 (uart_set_baudrate)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uart_set_baudrate (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_getc/5 (uart_getc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uart_getc (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_flush/4 (uart_flush)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uart_flush (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_putc/3 (uart_putc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uart_putc (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+uart_init/2 (uart_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.uart_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 

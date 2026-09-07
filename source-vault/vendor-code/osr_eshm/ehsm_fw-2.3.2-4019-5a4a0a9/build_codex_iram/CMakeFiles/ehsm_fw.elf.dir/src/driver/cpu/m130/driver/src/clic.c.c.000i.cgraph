@@ -1,0 +1,599 @@
+Trivially needed symbols: clic_get_irq_handler/11 clic_clear_int_pending/10 clic_set_vector_mode/9 clic_set_trig_type/8 clic_set_priority/7 clic_int_disable/6 clic_int_enable/5 clic_int_handler_regist/4 clic_init/3
+
+
+Initial Symbol table:
+
+clic_get_irq_handler/11 (clic_get_irq_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: hardler_array/2 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_clear_int_pending/10 (clic_clear_int_pending)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd7c6000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_set_vector_mode/9 (clic_set_vector_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_trig_type/8 (clic_set_trig_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_priority/7 (clic_set_priority)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_int_disable/6 (clic_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_enable/5 (clic_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_handler_regist/4 (clic_int_handler_regist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682990
+  References: hardler_array/2 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_init/3 (clic_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fdacd682880
+  References: hardler_array/2 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_REG_PTR/0 CLIC_REG_PTR/0 
+hardler_array/2 (hardler_array)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdacd682550
+  References: 
+  Referring: clic_init/3 (addr) clic_int_handler_regist/4 (write) clic_get_irq_handler/11 (read) 
+  Availability: not-ready
+  Varpool flags:
+CLIC_INT_X_REG/1 (CLIC_INT_X_REG)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdacd682aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: clic_clear_int_pending/10 clic_set_vector_mode/9 clic_set_vector_mode/9 clic_set_trig_type/8 clic_set_trig_type/8 clic_set_priority/7 clic_set_priority/7 clic_int_disable/6 clic_int_enable/5 
+  Calls: CLIC_REG_PTR/0 
+CLIC_REG_PTR/0 (CLIC_REG_PTR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fdacd682880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: CLIC_INT_X_REG/1 clic_init/3 clic_init/3 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+clic_get_irq_handler/11 (clic_get_irq_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_clear_int_pending/10 (clic_clear_int_pending)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_set_vector_mode/9 (clic_set_vector_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_trig_type/8 (clic_set_trig_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_priority/7 (clic_set_priority)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_int_disable/6 (clic_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_enable/5 (clic_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_handler_regist/4 (clic_int_handler_regist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_init/3 (clic_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_REG_PTR/0 CLIC_REG_PTR/0 
+hardler_array/2 (hardler_array)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: clic_init/3 (addr) clic_int_handler_regist/4 (write) clic_get_irq_handler/11 (read) 
+  Availability: not-ready
+  Varpool flags:
+CLIC_INT_X_REG/1 (CLIC_INT_X_REG)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: clic_clear_int_pending/10 clic_set_vector_mode/9 clic_set_vector_mode/9 clic_set_trig_type/8 clic_set_trig_type/8 clic_set_priority/7 clic_set_priority/7 clic_int_disable/6 clic_int_enable/5 
+  Calls: CLIC_REG_PTR/0 
+CLIC_REG_PTR/0 (CLIC_REG_PTR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: CLIC_INT_X_REG/1 clic_init/3 clic_init/3 
+  Calls: 
+
+
+Initial Symbol table:
+
+clic_get_irq_handler/11 (clic_get_irq_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_clear_int_pending/10 (clic_clear_int_pending)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_set_vector_mode/9 (clic_set_vector_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_trig_type/8 (clic_set_trig_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_priority/7 (clic_set_priority)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_int_disable/6 (clic_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_enable/5 (clic_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_handler_regist/4 (clic_int_handler_regist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_init/3 (clic_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_REG_PTR/0 CLIC_REG_PTR/0 
+hardler_array/2 (hardler_array)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: clic_init/3 (addr) clic_int_handler_regist/4 (write) clic_get_irq_handler/11 (read) 
+  Availability: not-ready
+  Varpool flags:
+CLIC_INT_X_REG/1 (CLIC_INT_X_REG)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: clic_clear_int_pending/10 clic_set_vector_mode/9 clic_set_vector_mode/9 clic_set_trig_type/8 clic_set_trig_type/8 clic_set_priority/7 clic_set_priority/7 clic_int_disable/6 clic_int_enable/5 
+  Calls: CLIC_REG_PTR/0 
+CLIC_REG_PTR/0 (CLIC_REG_PTR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: CLIC_INT_X_REG/1 clic_init/3 clic_init/3 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+clic_get_irq_handler/11 (clic_get_irq_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_clear_int_pending/10 (clic_clear_int_pending)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_set_vector_mode/9 (clic_set_vector_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_trig_type/8 (clic_set_trig_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_set_priority/7 (clic_set_priority)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 CLIC_INT_X_REG/1 
+clic_int_disable/6 (clic_int_disable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_enable/5 (clic_int_enable)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_INT_X_REG/1 
+clic_int_handler_regist/4 (clic_int_handler_regist)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+clic_init/3 (clic_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: hardler_array/2 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: CLIC_REG_PTR/0 CLIC_REG_PTR/0 
+hardler_array/2 (hardler_array)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: clic_init/3 (addr) clic_int_handler_regist/4 (write) clic_get_irq_handler/11 (read) 
+  Availability: not-ready
+  Varpool flags:
+CLIC_INT_X_REG/1 (CLIC_INT_X_REG)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: clic_clear_int_pending/10 clic_set_vector_mode/9 clic_set_vector_mode/9 clic_set_trig_type/8 clic_set_trig_type/8 clic_set_priority/7 clic_set_priority/7 clic_int_disable/6 clic_int_enable/5 
+  Calls: CLIC_REG_PTR/0 
+CLIC_REG_PTR/0 (CLIC_REG_PTR)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: CLIC_INT_X_REG/1 clic_init/3 clic_init/3 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+clic_get_irq_handler/11 (clic_get_irq_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: hardler_array/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_clear_int_pending/10 (clic_clear_int_pending)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_set_vector_mode/9 (clic_set_vector_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_set_trig_type/8 (clic_set_trig_type)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_set_priority/7 (clic_set_priority)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_int_disable/6 (clic_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_int_enable/5 (clic_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_int_handler_regist/4 (clic_int_handler_regist)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: hardler_array/2 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_init/3 (clic_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: hardler_array/2 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+hardler_array/2 (hardler_array)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: clic_init/3 (addr) clic_int_handler_regist/4 (write) clic_get_irq_handler/11 (read) 
+  Availability: available
+  Varpool flags:
+Trivially needed variables: hardler_array/2
+Removing variables:
+
+Final Symbol table:
+
+clic_get_irq_handler/11 (clic_get_irq_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_get_irq_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_clear_int_pending/10 (clic_clear_int_pending)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_clear_int_pending (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_set_vector_mode/9 (clic_set_vector_mode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_set_vector_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_set_trig_type/8 (clic_set_trig_type)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_set_trig_type (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_set_priority/7 (clic_set_priority)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_set_priority (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_int_disable/6 (clic_int_disable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_int_disable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_int_enable/5 (clic_int_enable)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_int_enable (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_int_handler_regist/4 (clic_int_handler_regist)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_int_handler_regist (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+clic_init/3 (clic_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.clic_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+hardler_array/2 (hardler_array)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.hardler_array (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

@@ -1,0 +1,49 @@
+workspace:
+  name: ngu800-soc-security-workspace
+  root: .
+  security_repository: .
+  source_vault: ./source-vault
+  outputs: ./outputs
+  repositories_manifest: ./manifests/repositories.yaml
+
+repositories:
+  - id: REPO-GSP-FIRMWARE
+    path: ../gsp-pmp-rmp-omp
+    role: security_software_implementation
+    owner: GSP
+  - id: REPO-BAREMETAL-SECURITY-TEST
+    path: ../baremetal
+    role: security_executable_test_and_emu_implementation
+    owner: GSP
+  - id: REPO-FSP-EHSM-VENDOR-REFERENCE
+    path: ../fsp
+    role: living_ehsm_vendor_code_and_demo_reference
+    owner: Vendor/FSP
+
+controlled_inputs:
+  - id: SRC-0035
+    path: ./source-vault/vendor_rtl
+    role: primary_ehsm_internal_rtl_implementation_and_query_reference
+    evidence_state: VENDOR_IMPLEMENTATION
+    write_policy: immutable_read_only_snapshot
+    confidentiality: RESTRICTED_PENDING_CONFIRMATION
+    tree_sha256: ab0b2030a50e4ea0cf832dcb01c9eaa00df56816c8bc081b90549cca5027e95b
+    notes: 不属于独立Git仓库；不覆盖NGU800P SoC集成或产品策略，使用时必须证明实际elaboration，Key字面量禁止复制和外发。
+
+workflow:
+  specification_system: openspec
+  implementation_agent: remote-codex
+  architecture_agent: chatgpt-work
+  source_of_truth: .
+  planning_repository: .
+  detailed_design_repository: .
+  test_planning_repository: .
+  nested_git_repositories: false
+
+git_policy:
+  allow_default_branch_worktree_edits: true
+  require_feature_branch: false
+  require_commit: false
+  agent_may_stage: false
+  agent_may_commit: false
+  agent_may_push: false

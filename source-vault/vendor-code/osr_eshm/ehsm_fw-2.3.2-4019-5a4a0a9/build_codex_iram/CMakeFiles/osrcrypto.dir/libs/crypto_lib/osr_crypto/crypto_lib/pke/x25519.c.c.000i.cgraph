@@ -1,0 +1,723 @@
+Trivially needed symbols: x25519_compute_key/14 x25519_getkey/13 x25519_get_pubkey_from_prikey/12
+
+
+Initial Symbol table:
+
+pke_mod_add_sub_mul_256bits_internal/22 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNumCmp/21 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNum_Check_Zero/20 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_compute_key/14 
+  Calls: 
+get_rand/19 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_getkey/13 
+  Calls: 
+memcpy_/18 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_pointMul/17 (x25519_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+c25519/16 (c25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: x25519_get_pubkey_from_prikey/12 (read) x25519_get_pubkey_from_prikey/12 (addr) x25519_compute_key/14 (read) x25519_compute_key/14 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/15 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_compute_key/14 (x25519_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/18 uint32_BigNum_Check_Zero/20 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 uint32_BigNum_Check_Zero/20 x25519_decode_u/11 
+   Indirect callnum speculative call targets: 0
+x25519_getkey/13 (x25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f62564ff440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: x25519_get_pubkey_from_prikey/12 get_rand/19 
+x25519_get_pubkey_from_prikey/12 (x25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f62564ff330
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: x25519_getkey/13 
+  Calls: memcpy_/18 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 
+x25519_decode_u/11 (x25519_decode_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: x25519_compute_key/14 
+  Calls: pke_mod_add_sub_mul_256bits_internal/22 uint32_BigNumCmp/21 memcpy_/18 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_BYTE_LEN/9 GET_WORD_LEN/8 GET_MAX_LEN/7 CAST2UINT32/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+pke_mod_add_sub_mul_256bits_internal/22 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNumCmp/21 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNum_Check_Zero/20 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_compute_key/14 
+  Calls: 
+get_rand/19 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_getkey/13 
+  Calls: 
+memcpy_/18 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_pointMul/17 (x25519_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+c25519/16 (c25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: x25519_get_pubkey_from_prikey/12 (read) x25519_get_pubkey_from_prikey/12 (addr) x25519_compute_key/14 (read) x25519_compute_key/14 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/15 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_compute_key/14 (x25519_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/18 uint32_BigNum_Check_Zero/20 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 uint32_BigNum_Check_Zero/20 x25519_decode_u/11 
+   Indirect callnum speculative call targets: 0
+x25519_getkey/13 (x25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: x25519_get_pubkey_from_prikey/12 get_rand/19 
+x25519_get_pubkey_from_prikey/12 (x25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: x25519_getkey/13 
+  Calls: memcpy_/18 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 
+x25519_decode_u/11 (x25519_decode_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: x25519_compute_key/14 
+  Calls: pke_mod_add_sub_mul_256bits_internal/22 uint32_BigNumCmp/21 memcpy_/18 
+
+
+Initial Symbol table:
+
+pke_mod_add_sub_mul_256bits_internal/22 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNumCmp/21 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNum_Check_Zero/20 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_compute_key/14 
+  Calls: 
+get_rand/19 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_getkey/13 
+  Calls: 
+memcpy_/18 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_pointMul/17 (x25519_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+c25519/16 (c25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: x25519_get_pubkey_from_prikey/12 (read) x25519_get_pubkey_from_prikey/12 (addr) x25519_compute_key/14 (read) x25519_compute_key/14 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/15 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_compute_key/14 (x25519_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/18 uint32_BigNum_Check_Zero/20 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 uint32_BigNum_Check_Zero/20 x25519_decode_u/11 
+   Indirect callnum speculative call targets: 0
+x25519_getkey/13 (x25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: x25519_get_pubkey_from_prikey/12 get_rand/19 
+x25519_get_pubkey_from_prikey/12 (x25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: x25519_getkey/13 
+  Calls: memcpy_/18 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 
+x25519_decode_u/11 (x25519_decode_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: x25519_compute_key/14 
+  Calls: pke_mod_add_sub_mul_256bits_internal/22 uint32_BigNumCmp/21 memcpy_/18 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+pke_mod_add_sub_mul_256bits_internal/22 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNumCmp/21 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 
+  Calls: 
+uint32_BigNum_Check_Zero/20 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_compute_key/14 
+  Calls: 
+get_rand/19 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_getkey/13 
+  Calls: 
+memcpy_/18 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_decode_u/11 x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_pointMul/17 (x25519_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+c25519/16 (c25519)
+  Type: variable
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: x25519_get_pubkey_from_prikey/12 (read) x25519_get_pubkey_from_prikey/12 (addr) x25519_compute_key/14 (read) x25519_compute_key/14 (addr) 
+  Availability: not-ready
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/15 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: x25519_compute_key/14 x25519_get_pubkey_from_prikey/12 
+  Calls: 
+x25519_compute_key/14 (x25519_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: memcpy_/18 uint32_BigNum_Check_Zero/20 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 uint32_BigNum_Check_Zero/20 x25519_decode_u/11 
+   Indirect callnum speculative call targets: 0
+x25519_getkey/13 (x25519_getkey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: x25519_get_pubkey_from_prikey/12 get_rand/19 
+x25519_get_pubkey_from_prikey/12 (x25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: x25519_getkey/13 
+  Calls: memcpy_/18 x25519_pointMul/17 x25519_ed25519_decode_scalar/15 
+x25519_decode_u/11 (x25519_decode_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: x25519_compute_key/14 
+  Calls: pke_mod_add_sub_mul_256bits_internal/22 uint32_BigNumCmp/21 memcpy_/18 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+x25519_get_pubkey_from_prikey.part.0/23 (x25519_get_pubkey_from_prikey.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Function x25519_get_pubkey_from_prikey.part.0/23 is inline copy in x25519_get_pubkey_from_prikey/12
+  Availability: local
+  Function flags: count:594027530 (estimated locally) body local split_part
+  Called by: x25519_get_pubkey_from_prikey/12 (inlined) (594027530 (estimated locally),0.55 per call) 
+  Calls: x25519_ed25519_decode_scalar/15 (594027532 (estimated locally),0.55 per call) x25519_pointMul/17 (594027532 (estimated locally),0.55 per call) memcpy_/18 (196029084 (estimated locally),0.18 per call) 
+pke_mod_add_sub_mul_256bits_internal/22 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_decode_u/11 (129993840 (estimated locally),0.12 per call) 
+  Calls: 
+uint32_BigNumCmp/21 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_decode_u/11 (313389197 (estimated locally),0.29 per call) 
+  Calls: 
+uint32_BigNum_Check_Zero/20 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_compute_key/14 (91122086 (estimated locally),0.08 per call) x25519_compute_key/14 (103418434 (estimated locally),0.10 per call) 
+  Calls: 
+get_rand/19 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_getkey/13 (594027531 (estimated locally),0.55 per call) 
+  Calls: 
+memcpy_/18 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_compute_key/14 (10323677 (estimated locally),0.01 per call) x25519_get_pubkey_from_prikey.part.0/23 (196029084 (estimated locally),0.18 per call) x25519_decode_u/11 (167569203 (estimated locally),0.16 per call) 
+  Calls: 
+x25519_pointMul/17 (x25519_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_compute_key/14 (66156773 (estimated locally),0.06 per call) x25519_get_pubkey_from_prikey.part.0/23 (594027532 (estimated locally),0.55 per call) 
+  Calls: 
+c25519/16 (c25519)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: x25519_get_pubkey_from_prikey.part.0/23 (read) x25519_get_pubkey_from_prikey.part.0/23 (addr) x25519_compute_key/14 (read) x25519_compute_key/14 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/15 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: x25519_compute_key/14 (66156773 (estimated locally),0.06 per call) x25519_get_pubkey_from_prikey.part.0/23 (594027532 (estimated locally),0.55 per call) 
+  Calls: 
+x25519_compute_key/14 (x25519_compute_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: c25519/16 (read) c25519/16 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: memcpy_/18 (10323677 (estimated locally),0.01 per call) uint32_BigNum_Check_Zero/20 (91122086 (estimated locally),0.08 per call) x25519_pointMul/17 (66156773 (estimated locally),0.06 per call) x25519_ed25519_decode_scalar/15 (66156773 (estimated locally),0.06 per call) uint32_BigNum_Check_Zero/20 (103418434 (estimated locally),0.10 per call) x25519_decode_u/11 (inlined) (313389197 (estimated locally),0.29 per call) 
+   Indirect call(48905679 (estimated locally),0.05 per call) of param:4 (vptr maybe changed) num speculative call targets: 0
+x25519_getkey/13 (x25519_getkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: x25519_get_pubkey_from_prikey/12 (196029084 (estimated locally),0.18 per call) get_rand/19 (594027531 (estimated locally),0.55 per call) 
+x25519_get_pubkey_from_prikey/12 (x25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: x25519_getkey/13 (196029084 (estimated locally),0.18 per call) 
+  Calls: x25519_get_pubkey_from_prikey.part.0/23 (inlined) (594027530 (estimated locally),0.55 per call) 
+x25519_decode_u/11 (x25519_decode_u)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function x25519_decode_u/11 is inline copy in x25519_compute_key/14
+  Availability: local
+  Function flags: count:313389197 (estimated locally) body local
+  Called by: x25519_compute_key/14 (inlined) (313389197 (estimated locally),0.29 per call) 
+  Calls: pke_mod_add_sub_mul_256bits_internal/22 (129993840 (estimated locally),0.12 per call) uint32_BigNumCmp/21 (313389197 (estimated locally),0.29 per call) memcpy_/18 (167569203 (estimated locally),0.16 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+pke_mod_add_sub_mul_256bits_internal/22 (pke_mod_add_sub_mul_256bits_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/21 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNum_Check_Zero/20 (uint32_BigNum_Check_Zero)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/19 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/18 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+x25519_pointMul/17 (x25519_pointMul)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+c25519/16 (c25519)
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+x25519_ed25519_decode_scalar/15 (x25519_ed25519_decode_scalar)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+x25519_compute_key/14 (x25519_compute_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.x25519_compute_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+x25519_getkey/13 (x25519_getkey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.x25519_getkey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+x25519_get_pubkey_from_prikey/12 (x25519_get_pubkey_from_prikey)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.x25519_get_pubkey_from_prikey (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 

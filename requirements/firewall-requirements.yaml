@@ -1,0 +1,87 @@
+schema_version: 1
+feature_id: SEC-FW-001
+source_ids: [SRC-0016, SRC-0017, SRC-0022, SRC-0025, SRC-0027, SRC-0029, SRC-0030]
+status: PROPOSED_WITH_OPEN_BINDINGS
+requirements:
+  - id: FW-REQ-001
+    evidence_state: DOCUMENTED
+    statement: "check_en=0 时透明旁路；check_en=1 时执行检查。"
+    tests: [FW-TC-001, FW-TC-002, FW-TC-003]
+  - id: FW-REQ-002
+    evidence_state: DOCUMENTED
+    statement: "SRAM 最多支持 5 个独立 Region，每个 Region 独立配置和使能。"
+    tests: [FW-TC-010, FW-TC-011, FW-TC-012]
+  - id: FW-REQ-003
+    evidence_state: DOCUMENTED
+    statement: "地址恰好命中一个 enabled Region 才通过；零命中或多命中失败。"
+    tests: [FW-TC-013, FW-TC-014, FW-TC-015, FW-TC-016]
+  - id: FW-REQ-004
+    evidence_state: DOCUMENTED
+    statement: "Region 地址宽度为 48 bit，粒度/端点语义在 OPEN-CONFLICT-014 关闭后冻结。"
+    tests: [FW-TC-017, FW-TC-018]
+  - id: FW-REQ-005
+    evidence_state: DOCUMENTED
+    statement: "地址检查与权限检查任一失败即为非安全访问。"
+    tests: [FW-TC-020, FW-TC-021, FW-TC-022]
+  - id: FW-REQ-006
+    evidence_state: DOCUMENTED
+    statement: "失败请求不得到达 Slave；TNUI 负责返回响应。"
+    tests: [FW-TC-004, FW-TC-005, FW-TC-020]
+  - id: FW-REQ-007
+    evidence_state: DOCUMENTED
+    statement: "hide_en=0 时失败返回 Error；hide_en=1 时返回 OK，但两种模式都不得访问 Slave。"
+    tests: [FW-TC-004, FW-TC-005]
+  - id: FW-REQ-008
+    evidence_state: DOCUMENTED
+    statement: "authority 对 14 个有效 UserId 分别提供读写位，0x0/0x8 reserved，bits31:28 保持 0。"
+    tests: [FW-TC-023, FW-TC-024, FW-TC-025, FW-TC-026, FW-TC-027, FW-TC-028, FW-TC-029, FW-TC-030]
+  - id: FW-REQ-009
+    evidence_state: DOCUMENTED
+    statement: "读请求只检查读位，写请求只检查写位。"
+    tests: [FW-TC-021, FW-TC-022, FW-TC-031, FW-TC-032]
+  - id: FW-REQ-010
+    evidence_state: DOCUMENTED
+    statement: "错误诊断记录 48-bit 地址、方向、UserId、Region 状态，并支持写 1 清除。"
+    tests: [FW-TC-040, FW-TC-041, FW-TC-042, FW-TC-043, FW-TC-044]
+  - id: FW-REQ-011
+    evidence_state: DOCUMENTED
+    statement: "sec_cfg 和 spifc 有独立 check/hide、authority 与错误诊断路径。"
+    tests: [FW-TC-050, FW-TC-051, FW-TC-052, FW-TC-053]
+  - id: FW-REQ-012
+    evidence_state: DOCUMENTED
+    statement: "读/写安全属性分别控制 secure 标记；配置为非安全时 secure/non-secure 均可通过。"
+    tests: [FW-TC-060, FW-TC-061, FW-TC-062, FW-TC-063]
+  - id: FW-REQ-013
+    evidence_state: PROPOSED
+    statement: "软件必须在 enable 前验证地址、重叠、reserved 位和 policy，并完成寄存器读回。"
+    tests: [FW-TC-070, FW-TC-071, FW-TC-072, FW-TC-073]
+  - id: FW-REQ-014
+    evidence_state: PROPOSED
+    statement: "初始化或 readback 失败必须 fail-close，不得关闭检查或扩大 authority 继续启动。"
+    tests: [FW-TC-074, FW-TC-075]
+  - id: FW-REQ-015
+    evidence_state: DOCUMENTED_WITH_OPEN_BINDINGS
+    statement: "SEC_CFG和SPIFC Firewall默认仅允许启动核读写，eHSM及其他核均无权限；两个实例只验证默认权限，不修改Firewall配置。"
+    tests: [SOC-FW-SECCFG-001, SOC-FW-SPIFC-001]
+  - id: FW-REQ-016
+    evidence_state: DOCUMENTED_WITH_OPEN_BINDINGS
+    statement: "SRAM Firewall的Region0至Region4默认仅允许启动核和eHSM读写，其他核无权限；五个Region在同一默认权限Case内遍历。"
+    tests: [SOC-FW-SRAM-001]
+  - id: FW-REQ-017
+    evidence_state: DOCUMENTED_WITH_OPEN_BINDINGS
+    statement: "SRAM Firewall重新配置必须由启动核执行，覆盖地址范围和允许Master ID，并在同一Case内遍历Region0至Region4、验证后恢复默认配置。"
+    tests: [SOC-FW-SRAM-RECFG-001]
+  - id: FW-REQ-018
+    evidence_state: DOCUMENTED_OPEN_COVERAGE_GAP
+    statement: "SEC_CFG、SPIFC和SRAM三个Firewall均只有启动核有配置权限；eHSM及其他核的配置写必须被阻断且不得改变配置。SEC_CFG/SPIFC不执行成功重新配置。"
+    tests: []
+    related_positive_test: SOC-FW-SRAM-RECFG-001
+    coverage_note: "在线最终Case 060只覆盖启动核成功重配SRAM五Region；非启动核/eHSM配置写拒绝需新增批准Case或RTL-DV/集成Evidence。历史EDA-FW-EHSM-MASTER-001已从最终表删除。"
+open_questions:
+  - OPEN-CONFLICT-014
+  - OPEN-CONFLICT-006
+top_level_tests:
+  - SOC-FW-SECCFG-001
+  - SOC-FW-SPIFC-001
+  - SOC-FW-SRAM-001
+  - SOC-FW-SRAM-RECFG-001

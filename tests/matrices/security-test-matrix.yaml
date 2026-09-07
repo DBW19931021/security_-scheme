@@ -1,0 +1,288 @@
+schema_version: 1
+current_workbook:
+  version: feishu-online-final-20260820
+  url: https://mx4lbik1jc.feishu.cn/wiki/HsC6wEjSqivStckreWqc6gIVnXG?sheet=o4uhR0
+  local_index: tests/cases/security/CASE_TABLE.md
+  historical_local_snapshot: tests/cases/outputs/20260813-security-final/NGU800P_Security_Case_Table_Final_v5.xlsx
+  export_state: BLOCKED_BY_ENTERPRISE_POLICY
+  source_ids: [SRC-0020, SRC-0027, SRC-0028, SRC-0029, SRC-0030, SRC-0036]
+  design_source_version: v0.3.8-soc-converged
+  case_count: 63
+  software_porting_case_count: 61
+  mailbox_basic_case_count: 47
+  mailbox_ehsm_negative_case_count: 7
+  soc_software_case_count: 7
+  eda_hardware_case_count: 2
+  state: PROPOSED_DESIGN_COMPLETE_TARGET_NOT_EXECUTED
+  executed: false
+  sheet: Security
+  column_count: 13
+  id_range: NGU800P-D0-SECURITY-001_TO_063
+  format_reference: SRC-0028
+  blocked_cases:
+    - id: DEBUG_AUTH_CHALLENGE_TYPE_BINDING
+      affected_cases: [NGU800P-D0-SECURITY-008, NGU800P-D0-SECURITY-009, NGU800P-D0-SECURITY-031, NGU800P-D0-SECURITY-032, NGU800P-D0-SECURITY-050, NGU800P-D0-SECURITY-051]
+      reason: "必须先区分SOC_DEBUG与EHSM_DEBUG，才能选择soc_dbg_en_out或hsm_dbg_en/o_hsm_status[16]及对应真实Debug通路。"
+    - id: FIREWALL_CONFIGURATION_OWNER_NEGATIVE_COVERAGE
+      affected_requirement: FW-REQ-018
+      reason: "在线Case 060只覆盖启动核成功重配SRAM五Region，非启动核/eHSM配置写拒绝需最终Case或RTL-DV/集成Evidence补齐。"
+  planned_conflicting_corpus: []
+  resolved_constraints:
+    - id: GSP_LIFETIME_EHSM_SERVICE_OWNER
+      closed_question: OPEN-DESIGN-009
+      decision: ADR-0015
+      current_workbook_note: "v0.2保持不变；v0.3绿色新增并发、Owner和quarantine case"
+      next_expected: "同一security_service_task从bootstrap到runtime持续作为唯一Owner；其他task只走typed queue；timeout后不移交Owner，同boot不热重建"
+    - id: PACKAGE_NATIVE_IMAGE_TYPE_AND_CODE_SIZE
+      closed_question: OPEN-CONFLICT-008
+      decision: ADR-0030/ADR-0033
+      current_workbook_note: "v0.2保持不变；v0.3绿色新增正常/负向case"
+      next_expected: "Vendor wire编码保持0/1/2/3；eHSM FW只用type 0，全部SoC stage包只接受type 1并拒绝type 2/3；NGU身份来自typed-stage registry；preflight及PASS后均强制Code_Size等于package_size减1024，并校验Header CRC和末尾reserved"
+    - id: NATIVE_HEADER_CRC_TYPED_VERIFY_LOADER
+      closed_question: OPEN-DESIGN-008
+      decision: ADR-0030/ADR-0033
+      current_workbook_note: "v0.2保持不变；v0.3绿色新增并绑定exact offset/registry"
+      next_expected: "无Manifest；Header offset1008为LE64 load、offset1016为覆盖256到1015的LE32 CRC-32/ISO-HDLC、offset1020为4B零reserved，entry等于load，rollback_counter只用Version_Counter[16]；CRC在preflight和PASS后双检但不替代验签；loader执行源Code/目标回读双摘要比较后才允许Measurement/release"
+    - id: NGU800P-D0-SECURITY-093
+      closed_question: OPEN-CONFLICT-001
+      decision: ADR-0003
+      current_workbook_note: "v0.2保持不变；在v0.3高亮修改"
+      next_expected: "采用Bootloader位图：bit18/0x40000=TRNG；bit19/0x80000=unknown_or_reserved；保留raw bitmap"
+    - id: NGU800P-D0-SECURITY-107
+      closed_question: OPEN-CONFLICT-002
+      decision: ADR-0004
+      current_workbook_note: "v0.2保持不变；在v0.3高亮修改"
+      next_expected: "内部Measurement Table独立记录Die1实例：fw_type=NGU_FW_TYPE_DIE1_FW、die_id=1；相同映像可有相同digest但不得丢失实例/release语义"
+    - id: GSP_ADDRESS_DOMAIN_CASES
+      closed_question: OPEN-CONFLICT-003
+      decision: ADR-0004
+      current_workbook_note: "v0.2保持不变；在v0.3及可执行测试中高亮修改/补充"
+      next_expected: "C908、Header Overlay、loader、linker和eHSM共享descriptor统一使用baremetal MANAGEMENT_NOC_S9_SRAM_BASE/SIZE System Address；不建立Local/System映射；旧080x和local/remap输入直接拒绝"
+    - id: BOOTROM_RESET_BASELINE_AND_MEASUREMENT_INVALIDATION
+      closed_question: OWNER_DETERMINISTIC_REVIEW_2026_07_28
+      decision: MAIN_DD_CHAPTER_6
+      current_workbook_note: "v0.2保持不变；v0.3绿色新增reset默认态/readback/旧Measurement残留/抢跑release负向case"
+      next_expected: "BootROM首先证明FMC reset asserted、clock gated、NX/deny和Measurement write owner；先失效Header并readback，再清零、执行write/release fence并回读整个固定Region；NON_CACHEABLE/HARDWARE_COHERENT两个候选均不做data clean/invalidate；任一步失败都不得release"
+    - id: ALL_THREE_PACKAGE_PROFILES_REQUIRED
+      closed_question: OPEN-DESIGN-004
+      decision: ADR-0017
+      current_workbook_note: "v0.2保持不变；v0.3为Profile 1/2/3分别建立完整启动、更新和负向组合case"
+      next_expected: "所有产品构建保留Profile 1/2/3三条路径，三套全部通过；SKU配置不得裁剪实现"
+    - id: ATTESTATION_P256_SM2_CERT_SESSION
+      closed_question: OWNER_DETERMINISTIC_REVIEW_2026_07_28
+      decision: ADR-0020
+      current_workbook_note: "v0.2保持不变；v0.3新增双key/cert、公钥匹配、KEY_EXCHANGE→FINISH、PSK拒绝和summary不泄露地址case"
+      next_expected: "同时灌装并支持ATTEST_ECDSA_P256与ATTEST_SM2；两条路径都完成eHSM签名、公钥匹配和证书session；PSK与无会话fallback拒绝"
+    - id: UPDATE_AB_METADATA_COMMIT_LAST
+      closed_question: OPEN-DESIGN-016
+      decision: ADR-0020
+      current_workbook_note: "v0.2保持不变；v0.3新增每个写点掉电、sequence冲突、commit-last和低counter回退拒绝case"
+      next_expected: "A/B双metadata、单调sequence、integrity、commit-last；只选择最大有效sequence，相同sequence内容冲突进入RECOVERY_REQUIRED"
+    - id: RAS_UNAVAILABLE_INFINITE_WFI
+      closed_question: OPEN-DESIGN-003
+      decision: ADR-0010
+      current_workbook_note: "v0.2保持不变；v0.3新增RAS deadline、普通中断关闭、无继续启动/无自行reset case"
+      next_expected: "有限RAS上报失败后记录RAS_REPORT_UNAVAILABLE，关闭普通中断并进入无限WFI fail-stop循环，仅Reset/NMI可退出"
+  proposed_constraints:
+    - id: MEASUREMENT_TABLE_ABI_V1
+      open_question: OPEN-DESIGN-007
+      proposal: ADR-0022
+      current_workbook_note: "v0.2保持不变；本轮不生成新工作簿。负责人批准后在下一版本以绿色新增/黄色修改高亮"
+      next_expected: "128B Header、实际fw_entry_count/total_len、128B紧凑Firmware Entry、唯一128B SoC State、CRC-32C、32位commit、reset全Region清零、重复实例/容量/溢出、eHSM FW authenticated-package digest、前后Header snapshot；OPEN-DESIGN-021待max_fw_entries"
+      required_cases:
+        - "Header/Entry golden vector与跨语言round-trip"
+        - "CRC标准向量、逐阶段torn write和非法commit marker"
+        - "slot/type/instance/die/producer错误及覆盖COMMITTED slot"
+        - "cold/warm/unknown reset与旧generation残留"
+        - "SPDM并发commit、一次重试和SNAPSHOT_BUSY"
+        - "eHSM FW package digest + Vendor PASS + ready/error组合"
+  readiness_snapshot:
+    all_priority_p0: 100
+    missing_carrier: 74
+    missing_rtl_version: 99
+    missing_software_version: 100
+    missing_automation_state: 75
+    observed_on: 2026-07-21
+previous_design_workbooks:
+  - version: v0.3
+    path: tests/cases/NGU800P-security-test-cases-v0.3.xlsx
+    case_count: 223
+    mailbox_case_count: 156
+    soc_integration_case_count: 67
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "固定为每条命令派生BASIC/BOUNDARY/POLICY"
+  - version: v0.3.1
+    path: tests/cases/NGU800P-security-test-cases-v0.3.1.xlsx
+    case_count: 149
+    mailbox_case_count: 82
+    mailbox_basic_case_count: 52
+    mailbox_boundary_policy_case_count: 30
+    soc_integration_case_count: 67
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "混入Host本地软件负向测试且SoC用例过细，已被后续版本替代"
+  - version: v0.3.2
+    path: tests/cases/NGU800P-security-test-cases-v0.3.2.xlsx
+    case_count: 55
+    mailbox_case_count: 52
+    mailbox_basic_case_count: 52
+    ehsm_negative_case_count: 0
+    soc_software_case_count: 3
+    hardware_verification_requirement_count: 8
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "误将eHSM负向与Host本地负向一并删除，已由v0.3.3纠正"
+  - version: v0.3.3
+    path: tests/cases/NGU800P-security-test-cases-v0.3.3.xlsx
+    case_count: 69
+    mailbox_case_count: 66
+    mailbox_basic_case_count: 52
+    mailbox_ehsm_negative_case_count: 14
+    soc_software_case_count: 3
+    hardware_verification_requirement_count: 8
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "把可通过软件配置形成闭环的Mailbox/HSM错误/reset/IRQ功能整体留在硬件表，已由v0.3.4拆分"
+  - version: v0.3.4
+    path: tests/cases/NGU800P-security-test-cases-v0.3.4.xlsx
+    case_count: 74
+    mailbox_case_count: 66
+    mailbox_basic_case_count: 52
+    mailbox_ehsm_negative_case_count: 14
+    soc_software_case_count: 8
+    hardware_verification_requirement_count: 8
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "用例范围和模型保持有效；已由v0.3.5补充说明性术语中文化和术语说明工作表"
+  - version: v0.3.5
+    path: tests/cases/NGU800P-security-test-cases-v0.3.5.xlsx
+    case_count: 74
+    mailbox_case_count: 66
+    mailbox_basic_case_count: 52
+    mailbox_ehsm_negative_case_count: 14
+    soc_software_case_count: 8
+    hardware_verification_requirement_count: 8
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "术语中文化设计基线保持有效；已由v0.3.6回填Mailbox BASIC实现、构建和目标执行状态"
+  - version: v0.3.6
+    path: tests/cases/NGU800P-security-test-cases-v0.3.6.xlsx
+    case_count: 74
+    mailbox_case_count: 66
+    soc_software_case_count: 8
+    hardware_verification_requirement_count: 8
+    state: SUPERSEDED_DESIGN_PRESERVED
+    executed: false
+    reason: "实现状态回填版；SoC范围已由v0.3.8按安全方案功能重新收敛"
+  - version: v0.3.6-firewall-review
+    path: tests/cases/NGU800P-security-test-cases-v0.3.6-firewall-review.xlsx
+    state: SUPERSEDED_REVIEW_INPUT_PRESERVED
+    executed: false
+    reason: "49条Firewall细化项保留为专项模型/DV参考，不再作为顶层SoC Case来源"
+historical_design_workbook:
+  version: v0.3.8
+  path: tests/cases/NGU800P-security-test-cases-v0.3.8-soc-converged.xlsx
+  case_count: 73
+  mailbox_case_count: 66
+  mailbox_basic_case_count: 52
+  mailbox_ehsm_negative_case_count: 14
+  mailbox_host_local_negative_case_count: 0
+  mailbox_boundary_case_count: 0
+  mailbox_policy_case_count: 0
+  soc_software_case_count: 7
+  hardware_verification_requirement_count: 3
+  hardware_requirements_counted_as_software_cases: false
+  hardware_requirement_role: EDA_REQUIRED_OR_CONDITIONAL_EDA
+  every_hardware_requirement_has_related_software_observer_or_case: true
+  state: PROPOSED_DESIGN_COMPLETE_TARGET_NOT_EXECUTED
+  executed: false
+  basic_implementation_progress:
+    registered_cases: 52
+    real_typed_api_cases: 51
+    gated_inconclusive_cases: 1
+    build_evidence_available: true
+    target_hardware_pass_cases: 0
+  construction_model: BASIC_PLUS_EHSM_NEGATIVE_PLUS_SEVEN_SOC_SECURITY_FUNCTION_CASES_AND_THREE_EDA_REQUIREMENTS
+  scope:
+    - ehsm_mailbox_commands
+    - ehsm_firmware_and_hardware_negative_security_behavior
+    - sec_cfg_all_17_register_read_and_compare
+    - dbg_en_cfg_sub_die_debug_path
+    - sec_cfg_default_firewall_startup_core_allow_ehsm_and_others_deny_no_reconfiguration
+    - spifc_default_firewall_startup_core_allow_ehsm_and_others_deny_no_reconfiguration
+    - all_firewall_configuration_registers_startup_core_only
+    - sram_default_permission_all_five_regions_one_case
+    - sram_reconfiguration_all_five_regions_one_case
+    - ehsm_mailbox_irq_route_mask_clear_retrigger
+    - critical_error_combined_irq_eda_required
+    - ecc1b_independent_irq_counter_eda_required
+    - ehsm_master_permission_conditional_eda
+  target_execution_repository: ../baremetal
+  repository_structure_prescribed: false
+  ehsm_firmware_customization_allowed: false
+  host_local_rejection_counted_as_ehsm_pass: false
+  ehsm_negative_submission_evidence_required: true
+  history_reconciliation_required: true
+  vendor_demo_l2_complete: false
+  narrative_language: zh-CN
+  terminology_sheet: 术语说明
+  technical_identifiers_preserved: true
+  porting_guide: docs/06-verification/NGU800P安全测试用例设计与Codex移植指导.md
+  hardware_verification_guide: docs/06-verification/NGU800P软件不便覆盖的硬件安全验证项.md
+  workflow_record: docs/06-verification/NGU800P-security-test-case-workflow-record.md
+next_versions:
+  - version: v0.4.1-execution-binding
+    target_repository: REPO-SECURITY-SCHEME
+    target_path: tests/cases/outputs/TO_BE_CREATED_AFTER_FIRST_TARGET_EXECUTION
+    owner: GSP
+    purpose: "绑定首轮EMU的RTL/eHSM/软件baseline、脚本版本、输入哈希和Evidence路径"
+    state: planned
+    overwrite_previous: false
+readiness:
+  plan: docs/06-verification/EMU-TEST-READINESS-PLAN.md
+  work_plan: docs/09-plans/EMU前安全方案落实工作计划.md
+  feature_matrix: docs/09-plans/SECURITY-FEATURE-REALIZATION-MATRIX.md
+  active_task: tasks/active/TASK-SEC-EMU-PREP-001.md
+  detailed_design_repository: REPO-SECURITY-SCHEME
+  detailed_design_root: docs/05-software-design
+  detailed_design_supporting_roots:
+    - docs/03-architecture
+    - docs/04-interfaces
+  implementation_repository: REPO-GSP-FIRMWARE
+  implementation_root: components/security
+  execution_repository: REPO-BAREMETAL-SECURITY-TEST
+  execution_root: components/ngu_security
+  execution_owner: GSP
+  validation_levels:
+    - L0_SPEC_STATIC
+    - L1_HOST_CONTRACT
+    - L2_QEMU_VENDOR_SIM
+    - L3_EMU_INTEGRATION
+    - L4_FAULT_RELEASE
+  execution_waves:
+    - WAVE0_DAY0_SMOKE
+    - WAVE1_ROOT_OF_TRUST
+    - WAVE2_IDENTITY_KEY_PERMISSION
+    - WAVE3_MULTIDIE_FIREWALL_FAULT
+    - WAVE4_CRYPTO_COMPAT_VENDOR
+test_cases:
+  current_governance_snapshot: https://mx4lbik1jc.feishu.cn/wiki/HsC6wEjSqivStckreWqc6gIVnXG?sheet=o4uhR0
+  current_local_index: tests/cases/security/CASE_TABLE.md
+  historical_snapshot: tests/cases/outputs/20260813-security-final/NGU800P_Security_Case_Table_Final_v5.xlsx
+  future_working_source_of_truth: tests/cases
+  executable_test_repository: REPO-BAREMETAL-SECURITY-TEST
+  executable_test_root: components/ngu_security/tests
+  id_column: 用例编号
+  evidence_root: evidence
+  normative_basis:
+    - SRC-0017
+    - latest_effective_SRC-0016
+    - accepted_ADR_amendment_requirement_openspec
+    - latest_effective_versioned_workbook
+    - target_environment_evidence
+  non_normative_existing_assets:
+    - existing_repository_test_flow
+    - stub_or_demo_flow
+    - synthetic_expected
+  rule: "现有test/stub/demo/历史Expected只表示当前事实与差距，不作为最终oracle；可执行测试由最新有效工作簿和批准方案派生。"

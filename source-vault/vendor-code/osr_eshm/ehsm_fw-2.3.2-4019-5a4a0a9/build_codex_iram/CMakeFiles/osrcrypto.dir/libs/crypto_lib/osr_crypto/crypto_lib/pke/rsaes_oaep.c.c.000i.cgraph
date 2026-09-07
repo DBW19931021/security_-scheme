@@ -1,0 +1,1220 @@
+Trivially needed symbols: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 eme_oaep_decode/17 eme_oaep_decode_by_label_digest/16 eme_oaep_encode/15 eme_oaep_encode_by_label_digest/14
+
+
+Initial Symbol table:
+
+RSA_CRTModExp_U8/33 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 
+  Calls: 
+pke_modexp_U8/32 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+memcmp_/31 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+uint8_XOR/30 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+hash/29 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode/17 eme_oaep_encode/15 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/28 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memset_/27 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+get_rand/25 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+rsa_es_oaep_crt_dec/23 (rsa_es_oaep_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_crt_dec_by_label_digest/22 (rsa_es_oaep_crt_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744add0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec_by_label_digest/21 (rsa_es_oaep_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744acc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec/20 (rsa_es_oaep_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744abb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc/19 (rsa_es_oaep_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744aaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode/15 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc_by_label_digest/18 (rsa_es_oaep_enc_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744a990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode_by_label_digest/14 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+eme_oaep_decode/17 (eme_oaep_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744a880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_dec/20 
+  Calls: eme_oaep_decode_by_label_digest/16 hash/29 
+eme_oaep_decode_by_label_digest/16 (eme_oaep_decode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744a770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 eme_oaep_decode/17 
+  Calls: memcpy_/26 memcmp_/31 rsa_pkcs1_mgf1_with_xor_in/28 uint8_XOR/30 rsa_pkcs1_mgf1_with_xor_in/28 hash_get_digest_word_len/24 
+eme_oaep_encode/15 (eme_oaep_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744a660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc/19 
+  Calls: eme_oaep_encode_by_label_digest/14 hash/29 
+eme_oaep_encode_by_label_digest/14 (eme_oaep_encode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fed1744a550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc_by_label_digest/18 eme_oaep_encode/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/28 rsa_pkcs1_mgf1_with_xor_in/28 memcpy_/26 memset_/27 memcpy_/26 memcpy_/26 get_rand/25 hash_get_digest_word_len/24 
+rsa_es_oaep_param_check/13 (rsa_es_oaep_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fed1744a110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: GET_BYTE_LEN/11 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fed1744a990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_param_check/13 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/7 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/6 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 lib_register_unlock/7 lib_register_lock/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+RSA_CRTModExp_U8/33 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 
+  Calls: 
+pke_modexp_U8/32 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+memcmp_/31 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+uint8_XOR/30 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+hash/29 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode/17 eme_oaep_encode/15 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/28 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memset_/27 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+get_rand/25 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+rsa_es_oaep_crt_dec/23 (rsa_es_oaep_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_crt_dec_by_label_digest/22 (rsa_es_oaep_crt_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec_by_label_digest/21 (rsa_es_oaep_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec/20 (rsa_es_oaep_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc/19 (rsa_es_oaep_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode/15 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc_by_label_digest/18 (rsa_es_oaep_enc_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode_by_label_digest/14 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+eme_oaep_decode/17 (eme_oaep_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_dec/20 
+  Calls: eme_oaep_decode_by_label_digest/16 hash/29 
+eme_oaep_decode_by_label_digest/16 (eme_oaep_decode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 eme_oaep_decode/17 
+  Calls: memcpy_/26 memcmp_/31 rsa_pkcs1_mgf1_with_xor_in/28 uint8_XOR/30 rsa_pkcs1_mgf1_with_xor_in/28 hash_get_digest_word_len/24 
+eme_oaep_encode/15 (eme_oaep_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc/19 
+  Calls: eme_oaep_encode_by_label_digest/14 hash/29 
+eme_oaep_encode_by_label_digest/14 (eme_oaep_encode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc_by_label_digest/18 eme_oaep_encode/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/28 rsa_pkcs1_mgf1_with_xor_in/28 memcpy_/26 memset_/27 memcpy_/26 memcpy_/26 get_rand/25 hash_get_digest_word_len/24 
+rsa_es_oaep_param_check/13 (rsa_es_oaep_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: GET_BYTE_LEN/11 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_param_check/13 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+
+
+Initial Symbol table:
+
+RSA_CRTModExp_U8/33 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 
+  Calls: 
+pke_modexp_U8/32 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+memcmp_/31 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+uint8_XOR/30 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+hash/29 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode/17 eme_oaep_encode/15 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/28 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memset_/27 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+get_rand/25 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+rsa_es_oaep_crt_dec/23 (rsa_es_oaep_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_crt_dec_by_label_digest/22 (rsa_es_oaep_crt_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec_by_label_digest/21 (rsa_es_oaep_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec/20 (rsa_es_oaep_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc/19 (rsa_es_oaep_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode/15 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc_by_label_digest/18 (rsa_es_oaep_enc_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode_by_label_digest/14 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+eme_oaep_decode/17 (eme_oaep_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_dec/20 
+  Calls: eme_oaep_decode_by_label_digest/16 hash/29 
+eme_oaep_decode_by_label_digest/16 (eme_oaep_decode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 eme_oaep_decode/17 
+  Calls: memcpy_/26 memcmp_/31 rsa_pkcs1_mgf1_with_xor_in/28 uint8_XOR/30 rsa_pkcs1_mgf1_with_xor_in/28 hash_get_digest_word_len/24 
+eme_oaep_encode/15 (eme_oaep_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc/19 
+  Calls: eme_oaep_encode_by_label_digest/14 hash/29 
+eme_oaep_encode_by_label_digest/14 (eme_oaep_encode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc_by_label_digest/18 eme_oaep_encode/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/28 rsa_pkcs1_mgf1_with_xor_in/28 memcpy_/26 memset_/27 memcpy_/26 memcpy_/26 get_rand/25 hash_get_digest_word_len/24 
+rsa_es_oaep_param_check/13 (rsa_es_oaep_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: GET_BYTE_LEN/11 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_param_check/13 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+RSA_CRTModExp_U8/33 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 
+  Calls: 
+pke_modexp_U8/32 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+memcmp_/31 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+uint8_XOR/30 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 
+  Calls: 
+hash/29 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode/17 eme_oaep_encode/15 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/28 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memset_/27 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+get_rand/25 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 eme_oaep_encode_by_label_digest/14 
+  Calls: 
+rsa_es_oaep_crt_dec/23 (rsa_es_oaep_crt_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_crt_dec_by_label_digest/22 (rsa_es_oaep_crt_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 RSA_CRTModExp_U8/33 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec_by_label_digest/21 (rsa_es_oaep_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_dec/20 (rsa_es_oaep_dec)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: eme_oaep_decode/17 GET_BYTE_LEN/11 pke_modexp_U8/32 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc/19 (rsa_es_oaep_enc)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode/15 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+rsa_es_oaep_enc_by_label_digest/18 (rsa_es_oaep_enc_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: pke_modexp_U8/32 eme_oaep_encode_by_label_digest/14 GET_BYTE_LEN/11 rsa_es_oaep_param_check/13 
+eme_oaep_decode/17 (eme_oaep_decode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_dec/20 
+  Calls: eme_oaep_decode_by_label_digest/16 hash/29 
+eme_oaep_decode_by_label_digest/16 (eme_oaep_decode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 eme_oaep_decode/17 
+  Calls: memcpy_/26 memcmp_/31 rsa_pkcs1_mgf1_with_xor_in/28 uint8_XOR/30 rsa_pkcs1_mgf1_with_xor_in/28 hash_get_digest_word_len/24 
+eme_oaep_encode/15 (eme_oaep_encode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc/19 
+  Calls: eme_oaep_encode_by_label_digest/14 hash/29 
+eme_oaep_encode_by_label_digest/14 (eme_oaep_encode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_enc_by_label_digest/18 eme_oaep_encode/15 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/28 rsa_pkcs1_mgf1_with_xor_in/28 memcpy_/26 memset_/27 memcpy_/26 memcpy_/26 get_rand/25 hash_get_digest_word_len/24 
+rsa_es_oaep_param_check/13 (rsa_es_oaep_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: GET_BYTE_LEN/11 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: rsa_es_oaep_crt_dec/23 rsa_es_oaep_crt_dec_by_label_digest/22 rsa_es_oaep_dec_by_label_digest/21 rsa_es_oaep_dec/20 rsa_es_oaep_enc/19 rsa_es_oaep_param_check/13 rsa_es_oaep_enc_by_label_digest/18 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+RSA_CRTModExp_U8/33 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: rsa_es_oaep_crt_dec/23 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_crt_dec_by_label_digest/22 (512926472 (estimated locally),0.48 per call) 
+  Calls: 
+pke_modexp_U8/32 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: rsa_es_oaep_dec_by_label_digest/21 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_dec/20 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_enc/19 (169265735 (estimated locally),0.16 per call) rsa_es_oaep_enc_by_label_digest/18 (169265735 (estimated locally),0.16 per call) 
+  Calls: 
+memcmp_/31 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 (29960779 (estimated locally),0.03 per call) 
+  Calls: 
+uint8_XOR/30 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 (90790239 (estimated locally),0.08 per call) 
+  Calls: 
+hash/29 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_decode/17 (1073741824 (estimated locally),1.00 per call) eme_oaep_encode/15 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/28 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 (90790239 (estimated locally),0.08 per call) eme_oaep_decode_by_label_digest/16 (275121938 (estimated locally),0.26 per call) eme_oaep_encode_by_label_digest/14 (107652974 (estimated locally),0.10 per call) eme_oaep_encode_by_label_digest/14 (326221135 (estimated locally),0.30 per call) 
+  Calls: 
+memset_/27 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 (326221135 (estimated locally),0.30 per call) 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 (4882859 (estimated locally),0.00 per call) eme_oaep_encode_by_label_digest/14 (326221135 (estimated locally),0.30 per call) eme_oaep_encode_by_label_digest/14 (326221135 (estimated locally),0.30 per call) eme_oaep_encode_by_label_digest/14 (180611764 (estimated locally),0.17 per call) 
+  Calls: 
+get_rand/25 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_encode_by_label_digest/14 (77405041 (estimated locally),0.07 per call) 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: eme_oaep_decode_by_label_digest/16 (1073741824 (estimated locally),1.00 per call) eme_oaep_encode_by_label_digest/14 (1073741822 (estimated locally),1.00 per call) 
+  Calls: 
+rsa_es_oaep_crt_dec/23 (rsa_es_oaep_crt_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: eme_oaep_decode/17 (169265735 (estimated locally),0.16 per call) RSA_CRTModExp_U8/33 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_oaep_crt_dec_by_label_digest/22 (rsa_es_oaep_crt_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 (169265735 (estimated locally),0.16 per call) RSA_CRTModExp_U8/33 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_oaep_dec_by_label_digest/21 (rsa_es_oaep_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: eme_oaep_decode_by_label_digest/16 (169265735 (estimated locally),0.16 per call) pke_modexp_U8/32 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_oaep_dec/20 (rsa_es_oaep_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: eme_oaep_decode/17 (169265735 (estimated locally),0.16 per call) pke_modexp_U8/32 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_oaep_enc/19 (rsa_es_oaep_enc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: pke_modexp_U8/32 (169265735 (estimated locally),0.16 per call) eme_oaep_encode/15 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+rsa_es_oaep_enc_by_label_digest/18 (rsa_es_oaep_enc_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: pke_modexp_U8/32 (169265735 (estimated locally),0.16 per call) eme_oaep_encode_by_label_digest/14 (512926472 (estimated locally),0.48 per call) rsa_es_oaep_param_check/13 (1073741824 (estimated locally),1.00 per call) 
+eme_oaep_decode/17 (eme_oaep_decode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: rsa_es_oaep_crt_dec/23 (169265735 (estimated locally),0.16 per call) rsa_es_oaep_dec/20 (169265735 (estimated locally),0.16 per call) 
+  Calls: eme_oaep_decode_by_label_digest/16 (354334800 (estimated locally),0.33 per call) hash/29 (1073741824 (estimated locally),1.00 per call) 
+eme_oaep_decode_by_label_digest/16 (eme_oaep_decode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: rsa_es_oaep_crt_dec_by_label_digest/22 (169265735 (estimated locally),0.16 per call) rsa_es_oaep_dec_by_label_digest/21 (169265735 (estimated locally),0.16 per call) eme_oaep_decode/17 (354334800 (estimated locally),0.33 per call) 
+  Calls: memcpy_/26 (4882859 (estimated locally),0.00 per call) memcmp_/31 (29960779 (estimated locally),0.03 per call) rsa_pkcs1_mgf1_with_xor_in/28 (90790239 (estimated locally),0.08 per call) uint8_XOR/30 (90790239 (estimated locally),0.08 per call) rsa_pkcs1_mgf1_with_xor_in/28 (275121938 (estimated locally),0.26 per call) hash_get_digest_word_len/24 (1073741824 (estimated locally),1.00 per call) 
+eme_oaep_encode/15 (eme_oaep_encode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: rsa_es_oaep_enc/19 (512926472 (estimated locally),0.48 per call) 
+  Calls: eme_oaep_encode_by_label_digest/14 (354334800 (estimated locally),0.33 per call) hash/29 (1073741824 (estimated locally),1.00 per call) 
+eme_oaep_encode_by_label_digest/14 (eme_oaep_encode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: rsa_es_oaep_enc_by_label_digest/18 (512926472 (estimated locally),0.48 per call) eme_oaep_encode/15 (354334800 (estimated locally),0.33 per call) 
+  Calls: rsa_pkcs1_mgf1_with_xor_in/28 (107652974 (estimated locally),0.10 per call) rsa_pkcs1_mgf1_with_xor_in/28 (326221135 (estimated locally),0.30 per call) memcpy_/26 (326221135 (estimated locally),0.30 per call) memset_/27 (326221135 (estimated locally),0.30 per call) memcpy_/26 (326221135 (estimated locally),0.30 per call) memcpy_/26 (180611764 (estimated locally),0.17 per call) get_rand/25 (77405041 (estimated locally),0.07 per call) hash_get_digest_word_len/24 (1073741822 (estimated locally),1.00 per call) 
+rsa_es_oaep_param_check/13 (rsa_es_oaep_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local nonfreeing_fn
+  Called by: rsa_es_oaep_crt_dec/23 (1073741824 (estimated locally),1.00 per call) rsa_es_oaep_crt_dec_by_label_digest/22 (1073741824 (estimated locally),1.00 per call) rsa_es_oaep_dec_by_label_digest/21 (1073741824 (estimated locally),1.00 per call) rsa_es_oaep_dec/20 (1073741824 (estimated locally),1.00 per call) rsa_es_oaep_enc/19 (1073741824 (estimated locally),1.00 per call) rsa_es_oaep_enc_by_label_digest/18 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+RSA_CRTModExp_U8/33 (RSA_CRTModExp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_modexp_U8/32 (pke_modexp_U8)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcmp_/31 (memcmp_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint8_XOR/30 (uint8_XOR)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash/29 (hash)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+rsa_pkcs1_mgf1_with_xor_in/28 (rsa_pkcs1_mgf1_with_xor_in)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/27 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/25 (get_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_get_digest_word_len/24 (hash_get_digest_word_len)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+rsa_es_oaep_crt_dec/23 (rsa_es_oaep_crt_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_oaep_crt_dec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_oaep_crt_dec_by_label_digest/22 (rsa_es_oaep_crt_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_oaep_crt_dec_by_label_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_oaep_dec_by_label_digest/21 (rsa_es_oaep_dec_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_oaep_dec_by_label_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_oaep_dec/20 (rsa_es_oaep_dec)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_oaep_dec (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_oaep_enc/19 (rsa_es_oaep_enc)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_oaep_enc (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_oaep_enc_by_label_digest/18 (rsa_es_oaep_enc_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.rsa_es_oaep_enc_by_label_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+eme_oaep_decode/17 (eme_oaep_decode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.eme_oaep_decode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+eme_oaep_decode_by_label_digest/16 (eme_oaep_decode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.eme_oaep_decode_by_label_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+eme_oaep_encode/15 (eme_oaep_encode)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.eme_oaep_encode (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+eme_oaep_encode_by_label_digest/14 (eme_oaep_encode_by_label_digest)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.eme_oaep_encode_by_label_digest (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+rsa_es_oaep_param_check/13 (rsa_es_oaep_param_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.rsa_es_oaep_param_check (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local nonfreeing_fn
+  Called by: 
+  Calls: 

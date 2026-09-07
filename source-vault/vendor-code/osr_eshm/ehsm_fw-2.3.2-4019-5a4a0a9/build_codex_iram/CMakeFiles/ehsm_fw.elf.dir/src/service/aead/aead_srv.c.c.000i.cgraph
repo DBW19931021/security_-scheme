@@ -1,0 +1,3808 @@
+Trivially needed symbols: aead_srv_ccm_handler/70 aead_srv_ccm_init/69 aead_srv_gcm_handler/68 aead_srv_gcm_init/67
+
+
+Initial Symbol table:
+
+cpt_ccm_rctx_switch_ctx/90 (cpt_ccm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_get_ccm_ske_ctx/89 (cpt_get_ccm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_ske_ccm_update_blocks/88 (cpt_ske_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 
+  Calls: 
+cpt_ske_dma_ccm_update_blocks/87 (cpt_ske_dma_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_payload/57 
+  Calls: 
+cpt_ske_ccm_final/86 (cpt_ske_ccm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_dma_ccm_update_final/85 (cpt_ske_dma_ccm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_ccm_update_aad/84 (cpt_ske_ccm_update_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_aad/56 
+  Calls: 
+cpt_ske_ccm_init/83 (cpt_ske_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: 
+cpt_set_ske_ctx_key/82 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_ccm_ctx_recovery_key/41 aead_gcm_ctx_recovery_key/42 
+  Calls: 
+cpt_gcm_rctx_switch_ctx/81 (cpt_gcm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_get_gcm_ske_ctx/80 (cpt_get_gcm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_ske_gcm_update_blocks/79 (cpt_ske_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_updata_last_block/49 
+  Calls: 
+cpt_ske_dma_gcm_update_blocks/78 (cpt_ske_dma_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_payload/48 
+  Calls: 
+cpt_ske_dma_gcm_update_final/77 (cpt_ske_dma_gcm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 
+  Calls: 
+cpt_ske_gcm_update_blocks_aad/76 (cpt_ske_gcm_update_blocks_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_aad/47 
+  Calls: 
+kms_read_key/75 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_get_key/38 
+  Calls: 
+mmap_write_remote_data/74 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_final/73 (cpt_ske_gcm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 gcm_srv_onepass/54 
+  Calls: 
+mmap_read_remote_data/72 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 ccm_update_aad/56 aead_ccm_get_key/39 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_update_aad/47 aead_get_iv/43 aead_gcm_get_key/40 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_init/71 (cpt_ske_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+aead_srv_ccm_handler/70 (aead_srv_ccm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ccm_srv_stepwise_handler/66 ccm_srv_onepass/65 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_ccm_init/69 (aead_srv_ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffab9c76000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+aead_srv_gcm_handler/68 (aead_srv_gcm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffab9c55ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gcm_srv_stepwise_handler/55 gcm_srv_onepass/54 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_gcm_init/67 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7ffab9c55dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ccm_srv_stepwise_handler/66 (ccm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final/64 ccm_update/63 ccm_init/62 ccm_update/63 ccm_init/62 
+ccm_srv_onepass/65 (ccm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final_internal/61 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final/64 (ccm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 
+  Calls: ccm_final_internal/61 ccm_rctx_switch_ctx/46 
+ccm_update/63 (ccm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_payload/57 ccm_updata_single_block/58 ccm_rctx_switch_ctx/46 
+ccm_init/62 (ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final_internal/61 (ccm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_srv_onepass/65 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_final/86 mmap_read_remote_data/72 cpt_ske_dma_ccm_update_final/85 ccm_updata_single_block/58 ccm_final_dma_update/60 ccm_final_first_block_update/59 
+ccm_final_dma_update/60 (ccm_final_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_update_payload/57 
+ccm_final_first_block_update/59 (ccm_final_first_block_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_updata_single_block/58 
+ccm_updata_single_block/58 (ccm_updata_single_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55bb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_first_block_update/59 ccm_final_internal/61 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_update_blocks/88 mmap_read_remote_data/72 
+ccm_update_payload/57 (ccm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_dma_update/60 
+  Calls: cpt_ske_dma_ccm_update_blocks/87 
+ccm_update_aad/56 (ccm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: cpt_ske_ccm_update_aad/84 mmap_read_remote_data/72 
+gcm_srv_stepwise_handler/55 (gcm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final/53 gcm_update/52 gcm_init/51 gcm_update/52 gcm_init/51 
+gcm_srv_onepass/54 (gcm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final_internal/50 gcm_update_aad/47 mmap_write_remote_data/74 cpt_ske_gcm_final/73 cpt_ske_gcm_final/73 mmap_read_remote_data/72 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final/53 (gcm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 
+  Calls: gcm_final_internal/50 gcm_rctx_switch_ctx/45 
+gcm_update/52 (gcm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_payload/48 gcm_rctx_switch_ctx/45 
+gcm_init/51 (gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_aad/47 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final_internal/50 (gcm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_srv_onepass/54 
+  Calls: cpt_ske_dma_gcm_update_final/77 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 gcm_updata_last_block/49 gcm_update_payload/48 
+gcm_updata_last_block/49 (gcm_updata_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final_internal/50 
+  Calls: mmap_write_remote_data/74 cpt_ske_gcm_update_blocks/79 mmap_read_remote_data/72 
+gcm_update_payload/48 (gcm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_update/52 gcm_final_internal/50 
+  Calls: cpt_ske_dma_gcm_update_blocks/78 
+gcm_update_aad/47 (gcm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34aa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: cpt_ske_gcm_update_blocks_aad/76 mmap_read_remote_data/72 
+ccm_rctx_switch_ctx/46 (ccm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_update/63 ccm_update/63 ccm_init/62 
+  Calls: aead_ccm_ctx_recovery_key/41 cpt_ccm_rctx_switch_ctx/90 cpt_get_ccm_ske_ctx/89 
+gcm_rctx_switch_ctx/45 (gcm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_update/52 gcm_update/52 gcm_init/51 
+  Calls: aead_gcm_ctx_recovery_key/42 cpt_gcm_rctx_switch_ctx/81 cpt_get_gcm_ske_ctx/80 
+aead_check_output_buf_sz/44 (aead_check_output_buf_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+aead_get_iv/43 (aead_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: mmap_read_remote_data/72 
+aead_gcm_ctx_recovery_key/42 (aead_gcm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: cpt_set_ske_ctx_key/82 aead_gcm_get_key/40 
+aead_ccm_ctx_recovery_key/41 (aead_ccm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: cpt_set_ske_ctx_key/82 aead_ccm_get_key/39 
+aead_gcm_get_key/40 (aead_gcm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_gcm_ctx_recovery_key/42 gcm_init/51 gcm_srv_onepass/54 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_ccm_get_key/39 (aead_ccm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c55110
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_ctx_recovery_key/41 ccm_init/62 ccm_srv_onepass/65 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_get_key/38 (aead_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_get_key/39 aead_gcm_get_key/40 
+  Calls: kms_read_key/75 aead_get_kms_alg/37 
+aead_get_kms_alg/37 (aead_get_kms_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_get_key/38 
+  Calls: 
+util_write_volatile_u32/36 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/35 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/34 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/33 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/32 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcpy/31 (util_memcpy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+get_curve_param_type/26 (get_curve_param_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_lib_hash_alg/25 (get_lib_hash_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9f81cc0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7ffab9c34440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+crypto_release_ahb_dma/21 (crypto_release_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_using_ahb_dma/20 (crypto_using_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_get_ahb_dma_cfg_reg/19 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/18 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/17 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/16 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/15 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/14 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_lock_reg/13 (sysreg_lock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_unlock_reg/12 (sysreg_unlock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_config_sm_en/11 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/10 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/9 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/8 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/36 util_read_volatile_u32/35 util_u32_copy/34 util_memcmp/33 util_memset/32 util_memcpy/31 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_curve_param_type/26 get_lib_hash_alg/25 cmd_check_process_mode_and_msg_type/23 crypto_release_ahb_dma/21 crypto_using_ahb_dma/20 crypto_get_ahb_dma_cfg_reg/19 check_addr_not_word_align/18 GET_BYTE_LEN/17 GET_WORD_LEN/16 GET_MAX_LEN/15 CAST2UINT32/14 sysreg_lock_reg/13 sysreg_unlock_reg/12 sysreg_config_sm_en/11 sysreg_umask_sm_lock/10 sysreg_enable_sm_lock/9 sysreg_enable_fun_lock/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+cpt_ccm_rctx_switch_ctx/90 (cpt_ccm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_get_ccm_ske_ctx/89 (cpt_get_ccm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_ske_ccm_update_blocks/88 (cpt_ske_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 
+  Calls: 
+cpt_ske_dma_ccm_update_blocks/87 (cpt_ske_dma_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_payload/57 
+  Calls: 
+cpt_ske_ccm_final/86 (cpt_ske_ccm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_dma_ccm_update_final/85 (cpt_ske_dma_ccm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_ccm_update_aad/84 (cpt_ske_ccm_update_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_aad/56 
+  Calls: 
+cpt_ske_ccm_init/83 (cpt_ske_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: 
+cpt_set_ske_ctx_key/82 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_ccm_ctx_recovery_key/41 aead_gcm_ctx_recovery_key/42 
+  Calls: 
+cpt_gcm_rctx_switch_ctx/81 (cpt_gcm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_get_gcm_ske_ctx/80 (cpt_get_gcm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_ske_gcm_update_blocks/79 (cpt_ske_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_updata_last_block/49 
+  Calls: 
+cpt_ske_dma_gcm_update_blocks/78 (cpt_ske_dma_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_payload/48 
+  Calls: 
+cpt_ske_dma_gcm_update_final/77 (cpt_ske_dma_gcm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 
+  Calls: 
+cpt_ske_gcm_update_blocks_aad/76 (cpt_ske_gcm_update_blocks_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_aad/47 
+  Calls: 
+kms_read_key/75 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_get_key/38 
+  Calls: 
+mmap_write_remote_data/74 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_final/73 (cpt_ske_gcm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 gcm_srv_onepass/54 
+  Calls: 
+mmap_read_remote_data/72 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 ccm_update_aad/56 aead_ccm_get_key/39 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_update_aad/47 aead_get_iv/43 aead_gcm_get_key/40 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_init/71 (cpt_ske_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+aead_srv_ccm_handler/70 (aead_srv_ccm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ccm_srv_stepwise_handler/66 ccm_srv_onepass/65 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_ccm_init/69 (aead_srv_ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+aead_srv_gcm_handler/68 (aead_srv_gcm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gcm_srv_stepwise_handler/55 gcm_srv_onepass/54 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_gcm_init/67 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ccm_srv_stepwise_handler/66 (ccm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final/64 ccm_update/63 ccm_init/62 ccm_update/63 ccm_init/62 
+ccm_srv_onepass/65 (ccm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final_internal/61 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final/64 (ccm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 
+  Calls: ccm_final_internal/61 ccm_rctx_switch_ctx/46 
+ccm_update/63 (ccm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_payload/57 ccm_updata_single_block/58 ccm_rctx_switch_ctx/46 
+ccm_init/62 (ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final_internal/61 (ccm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_srv_onepass/65 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_final/86 mmap_read_remote_data/72 cpt_ske_dma_ccm_update_final/85 ccm_updata_single_block/58 ccm_final_dma_update/60 ccm_final_first_block_update/59 
+ccm_final_dma_update/60 (ccm_final_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_update_payload/57 
+ccm_final_first_block_update/59 (ccm_final_first_block_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_updata_single_block/58 
+ccm_updata_single_block/58 (ccm_updata_single_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_first_block_update/59 ccm_final_internal/61 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_update_blocks/88 mmap_read_remote_data/72 
+ccm_update_payload/57 (ccm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_dma_update/60 
+  Calls: cpt_ske_dma_ccm_update_blocks/87 
+ccm_update_aad/56 (ccm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: cpt_ske_ccm_update_aad/84 mmap_read_remote_data/72 
+gcm_srv_stepwise_handler/55 (gcm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final/53 gcm_update/52 gcm_init/51 gcm_update/52 gcm_init/51 
+gcm_srv_onepass/54 (gcm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final_internal/50 gcm_update_aad/47 mmap_write_remote_data/74 cpt_ske_gcm_final/73 cpt_ske_gcm_final/73 mmap_read_remote_data/72 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final/53 (gcm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 
+  Calls: gcm_final_internal/50 gcm_rctx_switch_ctx/45 
+gcm_update/52 (gcm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_payload/48 gcm_rctx_switch_ctx/45 
+gcm_init/51 (gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_aad/47 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final_internal/50 (gcm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_srv_onepass/54 
+  Calls: cpt_ske_dma_gcm_update_final/77 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 gcm_updata_last_block/49 gcm_update_payload/48 
+gcm_updata_last_block/49 (gcm_updata_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final_internal/50 
+  Calls: mmap_write_remote_data/74 cpt_ske_gcm_update_blocks/79 mmap_read_remote_data/72 
+gcm_update_payload/48 (gcm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_update/52 gcm_final_internal/50 
+  Calls: cpt_ske_dma_gcm_update_blocks/78 
+gcm_update_aad/47 (gcm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: cpt_ske_gcm_update_blocks_aad/76 mmap_read_remote_data/72 
+ccm_rctx_switch_ctx/46 (ccm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_update/63 ccm_update/63 ccm_init/62 
+  Calls: aead_ccm_ctx_recovery_key/41 cpt_ccm_rctx_switch_ctx/90 cpt_get_ccm_ske_ctx/89 
+gcm_rctx_switch_ctx/45 (gcm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_update/52 gcm_update/52 gcm_init/51 
+  Calls: aead_gcm_ctx_recovery_key/42 cpt_gcm_rctx_switch_ctx/81 cpt_get_gcm_ske_ctx/80 
+aead_check_output_buf_sz/44 (aead_check_output_buf_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+aead_get_iv/43 (aead_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: mmap_read_remote_data/72 
+aead_gcm_ctx_recovery_key/42 (aead_gcm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: cpt_set_ske_ctx_key/82 aead_gcm_get_key/40 
+aead_ccm_ctx_recovery_key/41 (aead_ccm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: cpt_set_ske_ctx_key/82 aead_ccm_get_key/39 
+aead_gcm_get_key/40 (aead_gcm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_gcm_ctx_recovery_key/42 gcm_init/51 gcm_srv_onepass/54 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_ccm_get_key/39 (aead_ccm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_ctx_recovery_key/41 ccm_init/62 ccm_srv_onepass/65 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_get_key/38 (aead_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_get_key/39 aead_gcm_get_key/40 
+  Calls: kms_read_key/75 aead_get_kms_alg/37 
+aead_get_kms_alg/37 (aead_get_kms_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_get_key/38 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+
+
+Initial Symbol table:
+
+cpt_ccm_rctx_switch_ctx/90 (cpt_ccm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_get_ccm_ske_ctx/89 (cpt_get_ccm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_ske_ccm_update_blocks/88 (cpt_ske_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 
+  Calls: 
+cpt_ske_dma_ccm_update_blocks/87 (cpt_ske_dma_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_payload/57 
+  Calls: 
+cpt_ske_ccm_final/86 (cpt_ske_ccm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_dma_ccm_update_final/85 (cpt_ske_dma_ccm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_ccm_update_aad/84 (cpt_ske_ccm_update_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_aad/56 
+  Calls: 
+cpt_ske_ccm_init/83 (cpt_ske_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: 
+cpt_set_ske_ctx_key/82 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_ccm_ctx_recovery_key/41 aead_gcm_ctx_recovery_key/42 
+  Calls: 
+cpt_gcm_rctx_switch_ctx/81 (cpt_gcm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_get_gcm_ske_ctx/80 (cpt_get_gcm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_ske_gcm_update_blocks/79 (cpt_ske_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_updata_last_block/49 
+  Calls: 
+cpt_ske_dma_gcm_update_blocks/78 (cpt_ske_dma_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_payload/48 
+  Calls: 
+cpt_ske_dma_gcm_update_final/77 (cpt_ske_dma_gcm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 
+  Calls: 
+cpt_ske_gcm_update_blocks_aad/76 (cpt_ske_gcm_update_blocks_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_aad/47 
+  Calls: 
+kms_read_key/75 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_get_key/38 
+  Calls: 
+mmap_write_remote_data/74 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_final/73 (cpt_ske_gcm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 gcm_srv_onepass/54 
+  Calls: 
+mmap_read_remote_data/72 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 ccm_update_aad/56 aead_ccm_get_key/39 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_update_aad/47 aead_get_iv/43 aead_gcm_get_key/40 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_init/71 (cpt_ske_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+aead_srv_ccm_handler/70 (aead_srv_ccm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ccm_srv_stepwise_handler/66 ccm_srv_onepass/65 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_ccm_init/69 (aead_srv_ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+aead_srv_gcm_handler/68 (aead_srv_gcm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gcm_srv_stepwise_handler/55 gcm_srv_onepass/54 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_gcm_init/67 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ccm_srv_stepwise_handler/66 (ccm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final/64 ccm_update/63 ccm_init/62 ccm_update/63 ccm_init/62 
+ccm_srv_onepass/65 (ccm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final_internal/61 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final/64 (ccm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 
+  Calls: ccm_final_internal/61 ccm_rctx_switch_ctx/46 
+ccm_update/63 (ccm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_payload/57 ccm_updata_single_block/58 ccm_rctx_switch_ctx/46 
+ccm_init/62 (ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final_internal/61 (ccm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_srv_onepass/65 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_final/86 mmap_read_remote_data/72 cpt_ske_dma_ccm_update_final/85 ccm_updata_single_block/58 ccm_final_dma_update/60 ccm_final_first_block_update/59 
+ccm_final_dma_update/60 (ccm_final_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_update_payload/57 
+ccm_final_first_block_update/59 (ccm_final_first_block_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_updata_single_block/58 
+ccm_updata_single_block/58 (ccm_updata_single_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_first_block_update/59 ccm_final_internal/61 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_update_blocks/88 mmap_read_remote_data/72 
+ccm_update_payload/57 (ccm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_dma_update/60 
+  Calls: cpt_ske_dma_ccm_update_blocks/87 
+ccm_update_aad/56 (ccm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: cpt_ske_ccm_update_aad/84 mmap_read_remote_data/72 
+gcm_srv_stepwise_handler/55 (gcm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final/53 gcm_update/52 gcm_init/51 gcm_update/52 gcm_init/51 
+gcm_srv_onepass/54 (gcm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final_internal/50 gcm_update_aad/47 mmap_write_remote_data/74 cpt_ske_gcm_final/73 cpt_ske_gcm_final/73 mmap_read_remote_data/72 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final/53 (gcm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 
+  Calls: gcm_final_internal/50 gcm_rctx_switch_ctx/45 
+gcm_update/52 (gcm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_payload/48 gcm_rctx_switch_ctx/45 
+gcm_init/51 (gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_aad/47 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final_internal/50 (gcm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_srv_onepass/54 
+  Calls: cpt_ske_dma_gcm_update_final/77 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 gcm_updata_last_block/49 gcm_update_payload/48 
+gcm_updata_last_block/49 (gcm_updata_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final_internal/50 
+  Calls: mmap_write_remote_data/74 cpt_ske_gcm_update_blocks/79 mmap_read_remote_data/72 
+gcm_update_payload/48 (gcm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_update/52 gcm_final_internal/50 
+  Calls: cpt_ske_dma_gcm_update_blocks/78 
+gcm_update_aad/47 (gcm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: cpt_ske_gcm_update_blocks_aad/76 mmap_read_remote_data/72 
+ccm_rctx_switch_ctx/46 (ccm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_update/63 ccm_update/63 ccm_init/62 
+  Calls: aead_ccm_ctx_recovery_key/41 cpt_ccm_rctx_switch_ctx/90 cpt_get_ccm_ske_ctx/89 
+gcm_rctx_switch_ctx/45 (gcm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_update/52 gcm_update/52 gcm_init/51 
+  Calls: aead_gcm_ctx_recovery_key/42 cpt_gcm_rctx_switch_ctx/81 cpt_get_gcm_ske_ctx/80 
+aead_check_output_buf_sz/44 (aead_check_output_buf_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+aead_get_iv/43 (aead_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: mmap_read_remote_data/72 
+aead_gcm_ctx_recovery_key/42 (aead_gcm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: cpt_set_ske_ctx_key/82 aead_gcm_get_key/40 
+aead_ccm_ctx_recovery_key/41 (aead_ccm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: cpt_set_ske_ctx_key/82 aead_ccm_get_key/39 
+aead_gcm_get_key/40 (aead_gcm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_gcm_ctx_recovery_key/42 gcm_init/51 gcm_srv_onepass/54 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_ccm_get_key/39 (aead_ccm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_ctx_recovery_key/41 ccm_init/62 ccm_srv_onepass/65 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_get_key/38 (aead_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_get_key/39 aead_gcm_get_key/40 
+  Calls: kms_read_key/75 aead_get_kms_alg/37 
+aead_get_kms_alg/37 (aead_get_kms_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_get_key/38 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+cpt_ccm_rctx_switch_ctx/90 (cpt_ccm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_get_ccm_ske_ctx/89 (cpt_get_ccm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: 
+cpt_ske_ccm_update_blocks/88 (cpt_ske_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 
+  Calls: 
+cpt_ske_dma_ccm_update_blocks/87 (cpt_ske_dma_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_payload/57 
+  Calls: 
+cpt_ske_ccm_final/86 (cpt_ske_ccm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_dma_ccm_update_final/85 (cpt_ske_dma_ccm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_final_internal/61 
+  Calls: 
+cpt_ske_ccm_update_aad/84 (cpt_ske_ccm_update_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_update_aad/56 
+  Calls: 
+cpt_ske_ccm_init/83 (cpt_ske_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: 
+cpt_set_ske_ctx_key/82 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_ccm_ctx_recovery_key/41 aead_gcm_ctx_recovery_key/42 
+  Calls: 
+cpt_gcm_rctx_switch_ctx/81 (cpt_gcm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_get_gcm_ske_ctx/80 (cpt_get_gcm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: 
+cpt_ske_gcm_update_blocks/79 (cpt_ske_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_updata_last_block/49 
+  Calls: 
+cpt_ske_dma_gcm_update_blocks/78 (cpt_ske_dma_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_payload/48 
+  Calls: 
+cpt_ske_dma_gcm_update_final/77 (cpt_ske_dma_gcm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 
+  Calls: 
+cpt_ske_gcm_update_blocks_aad/76 (cpt_ske_gcm_update_blocks_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_update_aad/47 
+  Calls: 
+kms_read_key/75 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: aead_get_key/38 
+  Calls: 
+mmap_write_remote_data/74 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_final/73 (cpt_ske_gcm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_final_internal/50 gcm_final_internal/50 gcm_srv_onepass/54 gcm_srv_onepass/54 
+  Calls: 
+mmap_read_remote_data/72 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: ccm_updata_single_block/58 ccm_final_internal/61 ccm_update_aad/56 aead_ccm_get_key/39 gcm_updata_last_block/49 gcm_final_internal/50 gcm_final_internal/50 gcm_update_aad/47 aead_get_iv/43 aead_gcm_get_key/40 gcm_srv_onepass/54 
+  Calls: 
+cpt_ske_gcm_init/71 (cpt_ske_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+aead_srv_ccm_handler/70 (aead_srv_ccm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: ccm_srv_stepwise_handler/66 ccm_srv_onepass/65 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_ccm_init/69 (aead_srv_ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+aead_srv_gcm_handler/68 (aead_srv_gcm_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gcm_srv_stepwise_handler/55 gcm_srv_onepass/54 aead_check_output_buf_sz/44 cmd_check_process_mode/22 cmd_check_direction/24 
+aead_srv_gcm_init/67 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+ccm_srv_stepwise_handler/66 (ccm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final/64 ccm_update/63 ccm_init/62 ccm_update/63 ccm_init/62 
+ccm_srv_onepass/65 (ccm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 
+  Calls: ccm_final_internal/61 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final/64 (ccm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 
+  Calls: ccm_final_internal/61 ccm_rctx_switch_ctx/46 
+ccm_update/63 (ccm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_payload/57 ccm_updata_single_block/58 ccm_rctx_switch_ctx/46 
+ccm_init/62 (ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_srv_stepwise_handler/66 ccm_srv_stepwise_handler/66 
+  Calls: ccm_rctx_switch_ctx/46 ccm_update_aad/56 cpt_ske_ccm_init/83 aead_get_iv/43 aead_ccm_get_key/39 get_ske_alg/27 
+ccm_final_internal/61 (ccm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_srv_onepass/65 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_final/86 mmap_read_remote_data/72 cpt_ske_dma_ccm_update_final/85 ccm_updata_single_block/58 ccm_final_dma_update/60 ccm_final_first_block_update/59 
+ccm_final_dma_update/60 (ccm_final_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_update_payload/57 
+ccm_final_first_block_update/59 (ccm_final_first_block_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final_internal/61 
+  Calls: ccm_updata_single_block/58 
+ccm_updata_single_block/58 (ccm_updata_single_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_first_block_update/59 ccm_final_internal/61 
+  Calls: mmap_write_remote_data/74 cpt_ske_ccm_update_blocks/88 mmap_read_remote_data/72 
+ccm_update_payload/57 (ccm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_update/63 ccm_final_dma_update/60 
+  Calls: cpt_ske_dma_ccm_update_blocks/87 
+ccm_update_aad/56 (ccm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 
+  Calls: cpt_ske_ccm_update_aad/84 mmap_read_remote_data/72 
+gcm_srv_stepwise_handler/55 (gcm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final/53 gcm_update/52 gcm_init/51 gcm_update/52 gcm_init/51 
+gcm_srv_onepass/54 (gcm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_gcm_handler/68 
+  Calls: gcm_final_internal/50 gcm_update_aad/47 mmap_write_remote_data/74 cpt_ske_gcm_final/73 cpt_ske_gcm_final/73 mmap_read_remote_data/72 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final/53 (gcm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 
+  Calls: gcm_final_internal/50 gcm_rctx_switch_ctx/45 
+gcm_update/52 (gcm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_payload/48 gcm_rctx_switch_ctx/45 
+gcm_init/51 (gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_srv_stepwise_handler/55 gcm_srv_stepwise_handler/55 
+  Calls: gcm_rctx_switch_ctx/45 gcm_update_aad/47 cpt_ske_gcm_init/71 aead_get_iv/43 aead_gcm_get_key/40 get_ske_alg/27 
+gcm_final_internal/50 (gcm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_srv_onepass/54 
+  Calls: cpt_ske_dma_gcm_update_final/77 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 mmap_write_remote_data/74 cpt_ske_gcm_final/73 mmap_read_remote_data/72 gcm_updata_last_block/49 gcm_update_payload/48 
+gcm_updata_last_block/49 (gcm_updata_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final_internal/50 
+  Calls: mmap_write_remote_data/74 cpt_ske_gcm_update_blocks/79 mmap_read_remote_data/72 
+gcm_update_payload/48 (gcm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_update/52 gcm_final_internal/50 
+  Calls: cpt_ske_dma_gcm_update_blocks/78 
+gcm_update_aad/47 (gcm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_init/51 gcm_srv_onepass/54 
+  Calls: cpt_ske_gcm_update_blocks_aad/76 mmap_read_remote_data/72 
+ccm_rctx_switch_ctx/46 (ccm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_final/64 ccm_update/63 ccm_update/63 ccm_init/62 
+  Calls: aead_ccm_ctx_recovery_key/41 cpt_ccm_rctx_switch_ctx/90 cpt_get_ccm_ske_ctx/89 
+gcm_rctx_switch_ctx/45 (gcm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_final/53 gcm_update/52 gcm_update/52 gcm_init/51 
+  Calls: aead_gcm_ctx_recovery_key/42 cpt_gcm_rctx_switch_ctx/81 cpt_get_gcm_ske_ctx/80 
+aead_check_output_buf_sz/44 (aead_check_output_buf_sz)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+aead_get_iv/43 (aead_get_iv)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: mmap_read_remote_data/72 
+aead_gcm_ctx_recovery_key/42 (aead_gcm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: gcm_rctx_switch_ctx/45 
+  Calls: cpt_set_ske_ctx_key/82 aead_gcm_get_key/40 
+aead_ccm_ctx_recovery_key/41 (aead_ccm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_rctx_switch_ctx/46 
+  Calls: cpt_set_ske_ctx_key/82 aead_ccm_get_key/39 
+aead_gcm_get_key/40 (aead_gcm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_gcm_ctx_recovery_key/42 gcm_init/51 gcm_srv_onepass/54 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_ccm_get_key/39 (aead_ccm_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_ctx_recovery_key/41 ccm_init/62 ccm_srv_onepass/65 
+  Calls: aead_get_key/38 mmap_read_remote_data/72 
+aead_get_key/38 (aead_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_ccm_get_key/39 aead_gcm_get_key/40 
+  Calls: kms_read_key/75 aead_get_kms_alg/37 
+aead_get_kms_alg/37 (aead_get_kms_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_get_key/38 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: ccm_init/62 ccm_srv_onepass/65 gcm_init/51 gcm_srv_onepass/54 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: aead_srv_ccm_handler/70 aead_srv_gcm_handler/68 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+gcm_update_aad/112 (gcm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 47
+  References: 
+  Referring: 
+  Function gcm_update_aad/112 is inline copy in gcm_init/51
+  Clone of gcm_update_aad/47
+  Availability: local
+  Function flags: count:108662672 (estimated locally) body local
+  Called by: gcm_init/51 (inlined) (108662672 (estimated locally),0.10 per call) 
+  Calls: mmap_read_remote_data/72 (51908159 (estimated locally),0.05 per call) cpt_ske_gcm_update_blocks_aad/76 (10506211 (estimated locally),0.01 per call) 
+gcm_update_payload/111 (gcm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 48
+  References: 
+  Referring: 
+  Function gcm_update_payload/111 is inline copy in gcm_update/52
+  Clone of gcm_update_payload/48
+  Availability: local
+  Function flags: count:217325344 (estimated locally) body local
+  Called by: gcm_update/52 (inlined) (217325344 (estimated locally),0.20 per call) 
+  Calls: cpt_ske_dma_gcm_update_blocks/78 (103816317 (estimated locally),0.10 per call) 
+ccm_update_aad/110 (ccm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 56
+  References: 
+  Referring: 
+  Function ccm_update_aad/110 is inline copy in ccm_init/62
+  Clone of ccm_update_aad/56
+  Availability: local
+  Function flags: count:108662672 (estimated locally) body local
+  Called by: ccm_init/62 (inlined) (108662672 (estimated locally),0.10 per call) 
+  Calls: mmap_read_remote_data/72 (51908159 (estimated locally),0.05 per call) cpt_ske_ccm_update_aad/84 (10506211 (estimated locally),0.01 per call) 
+ccm_update_payload/109 (ccm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 57
+  References: 
+  Referring: 
+  Function ccm_update_payload/109 is inline copy in ccm_update/63
+  Clone of ccm_update_payload/57
+  Availability: local
+  Function flags: count:244598390 (estimated locally) body local
+  Called by: ccm_update/63 (inlined) (244598390 (estimated locally),0.23 per call) 
+  Calls: cpt_ske_dma_ccm_update_blocks/87 (116844652 (estimated locally),0.11 per call) 
+aead_get_iv.part.0/108 (aead_get_iv.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 107
+  References: 
+  Referring: 
+  Function aead_get_iv.part.0/108 is inline copy in gcm_init/51
+  Clone of aead_get_iv.part.0/92
+  Availability: local
+  Function flags: count:73890618 (estimated locally) body local split_part
+  Called by: gcm_init/51 (inlined) (73890618 (estimated locally),0.07 per call) 
+  Calls: mmap_read_remote_data/72 (73890618 (estimated locally),0.07 per call) 
+aead_get_iv.part.0/107 (aead_get_iv.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 106
+  previous sharing asm name: 108
+  References: 
+  Referring: 
+  Function aead_get_iv.part.0/107 is inline copy in aead_srv_ccm_handler/70
+  Clone of aead_get_iv.part.0/92
+  Availability: local
+  Function flags: count:1612125 (estimated locally) body local split_part
+  Called by: ccm_srv_onepass/65 (inlined) (1612125 (estimated locally),0.00 per call) 
+  Calls: mmap_read_remote_data/72 (1612125 (estimated locally),0.00 per call) 
+aead_get_iv.part.0/106 (aead_get_iv.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 92
+  previous sharing asm name: 107
+  References: 
+  Referring: 
+  Function aead_get_iv.part.0/106 is inline copy in ccm_init/62
+  Clone of aead_get_iv.part.0/92
+  Availability: local
+  Function flags: count:71717363 (estimated locally) body local split_part
+  Called by: ccm_init/62 (inlined) (71717363 (estimated locally),0.07 per call) 
+  Calls: mmap_read_remote_data/72 (71717363 (estimated locally),0.07 per call) 
+aead_srv_gcm_init/105 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 67
+  References: 
+  Referring: 
+  Function aead_srv_gcm_init/105 is inline copy in aead_srv_ccm_init/69
+  Clone of aead_srv_gcm_init/67
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local icf_merged nonfreeing_fn
+  Called by: aead_srv_ccm_init/69 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+aead_get_key.constprop.0/104 (aead_get_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of aead_get_key/38
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: aead_gcm_get_key.constprop.0/102 (357913941 (estimated locally),0.33 per call) aead_ccm_get_key.constprop.0/103 (357913941 (estimated locally),0.33 per call) 
+  Calls: kms_read_key/75 (1073741824 (estimated locally),1.00 per call) 
+aead_ccm_get_key.constprop.0/103 (aead_ccm_get_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of aead_ccm_get_key/39
+  Availability: local
+  Function flags: count:1073741814 (estimated locally) local
+  Called by: aead_ccm_ctx_recovery_key/41 (174395002 (estimated locally),0.16 per call) ccm_srv_onepass/65 (7965043 (estimated locally),0.01 per call) ccm_init/62 (354334800 (estimated locally),0.33 per call) 
+  Calls: mmap_read_remote_data/72 (170975491 (estimated locally),0.16 per call) aead_get_key.constprop.0/104 (357913941 (estimated locally),0.33 per call) 
+aead_gcm_get_key.constprop.0/102 (aead_gcm_get_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of aead_gcm_get_key/40
+  Availability: local
+  Function flags: count:1073741814 (estimated locally) local
+  Called by: gcm_srv_onepass/54 (1073741820 (estimated locally),1.00 per call) aead_gcm_ctx_recovery_key/42 (174395002 (estimated locally),0.16 per call) gcm_init/51 (1073741822 (estimated locally),1.00 per call) 
+  Calls: mmap_read_remote_data/72 (170975491 (estimated locally),0.16 per call) aead_get_key.constprop.0/104 (357913941 (estimated locally),0.33 per call) 
+aead_get_iv.part.0/92 (aead_get_iv.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 106
+  References: 
+  Referring: 
+  Function aead_get_iv.part.0/92 is inline copy in gcm_srv_onepass/54
+  Availability: local
+  Function flags: count:73890618 (estimated locally) body local split_part
+  Called by: gcm_srv_onepass/54 (inlined) (73890618 (estimated locally),0.07 per call) 
+  Calls: mmap_read_remote_data/72 (73890618 (estimated locally),0.07 per call) 
+CSWTCH.28/91 (CSWTCH.28)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: ccm_srv_onepass/65 (read) gcm_srv_onepass/54 (read) gcm_init/51 (read) ccm_init/62 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+cpt_ccm_rctx_switch_ctx/90 (cpt_ccm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_get_ccm_ske_ctx/89 (cpt_get_ccm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_rctx_switch_ctx/46 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_ske_ccm_update_blocks/88 (cpt_ske_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_updata_single_block/58 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpt_ske_dma_ccm_update_blocks/87 (cpt_ske_dma_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_update_payload/109 (116844652 (estimated locally),0.11 per call) ccm_update_payload/57 (51908159 (estimated locally),0.05 per call) 
+  Calls: 
+cpt_ske_ccm_final/86 (cpt_ske_ccm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_final_internal/61 (37093238 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_ske_dma_ccm_update_final/85 (cpt_ske_dma_ccm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_final_internal/61 (36214434 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_ske_ccm_update_aad/84 (cpt_ske_ccm_update_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_update_aad/110 (10506211 (estimated locally),0.01 per call) ccm_update_aad/56 (236168 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_ske_ccm_init/83 (cpt_ske_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_init/62 (160123575 (estimated locally),0.15 per call) ccm_srv_onepass/65 (3599396 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_set_ske_ctx_key/82 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: aead_ccm_ctx_recovery_key/41 (35297548 (estimated locally),0.03 per call) aead_gcm_ctx_recovery_key/42 (35297548 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_gcm_rctx_switch_ctx/81 (cpt_gcm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_get_gcm_ske_ctx/80 (cpt_get_gcm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_rctx_switch_ctx/45 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_ske_gcm_update_blocks/79 (cpt_ske_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_updata_last_block/49 (56097322 (estimated locally),0.05 per call) 
+  Calls: 
+cpt_ske_dma_gcm_update_blocks/78 (cpt_ske_dma_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_update_payload/111 (103816317 (estimated locally),0.10 per call) gcm_update_payload/48 (169265735 (estimated locally),0.16 per call) 
+  Calls: 
+cpt_ske_dma_gcm_update_final/77 (cpt_ske_dma_gcm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_final_internal/50 (47117316 (estimated locally),0.04 per call) 
+  Calls: 
+cpt_ske_gcm_update_blocks_aad/76 (cpt_ske_gcm_update_blocks_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_update_aad/112 (10506211 (estimated locally),0.01 per call) gcm_update_aad/47 (7879658 (estimated locally),0.01 per call) 
+  Calls: 
+kms_read_key/75 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: aead_get_key.constprop.0/104 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+mmap_write_remote_data/74 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: ccm_final_internal/61 (18546619 (estimated locally),0.02 per call) ccm_updata_single_block/58 (43986649 (estimated locally),0.04 per call) gcm_srv_onepass/54 (9236327 (estimated locally),0.01 per call) gcm_final_internal/50 (9681038 (estimated locally),0.01 per call) gcm_final_internal/50 (14449310 (estimated locally),0.01 per call) gcm_updata_last_block/49 (11354098 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_ske_gcm_final/73 (cpt_ske_gcm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_srv_onepass/54 (45634028 (estimated locally),0.04 per call) gcm_srv_onepass/54 (9236327 (estimated locally),0.01 per call) gcm_final_internal/50 (19362076 (estimated locally),0.02 per call) gcm_final_internal/50 (28898621 (estimated locally),0.03 per call) 
+  Calls: 
+mmap_read_remote_data/72 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_update_aad/112 (51908159 (estimated locally),0.05 per call) ccm_update_aad/110 (51908159 (estimated locally),0.05 per call) aead_get_iv.part.0/108 (73890618 (estimated locally),0.07 per call) aead_get_iv.part.0/107 (1612125 (estimated locally),0.00 per call) aead_get_iv.part.0/106 (71717363 (estimated locally),0.07 per call) aead_ccm_get_key.constprop.0/103 (170975491 (estimated locally),0.16 per call) aead_gcm_get_key.constprop.0/102 (170975491 (estimated locally),0.16 per call) ccm_final_internal/61 (37093238 (estimated locally),0.03 per call) ccm_updata_single_block/58 (1073741824 (estimated locally),1.00 per call) ccm_update_aad/56 (1166836 (estimated locally),0.00 per call) gcm_srv_onepass/54 (45634028 (estimated locally),0.04 per call) gcm_final_internal/50 (19362076 (estimated locally),0.02 per call) gcm_final_internal/50 (28898621 (estimated locally),0.03 per call) gcm_updata_last_block/49 (277160682 (estimated locally),0.26 per call) gcm_update_aad/47 (38931119 (estimated locally),0.04 per call) aead_get_iv.part.0/92 (73890618 (estimated locally),0.07 per call) 
+  Calls: 
+cpt_ske_gcm_init/71 (cpt_ske_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: gcm_init/51 (14955461 (estimated locally),0.01 per call) gcm_srv_onepass/54 (14955461 (estimated locally),0.01 per call) 
+  Calls: 
+aead_srv_ccm_handler/70 (aead_srv_ccm_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: ccm_srv_stepwise_handler/66 (inlined) (46853196 (estimated locally),0.04 per call) ccm_srv_onepass/65 (inlined) (24136495 (estimated locally),0.02 per call) 
+aead_srv_ccm_init/69 (aead_srv_ccm_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public section:.text.aead_srv_ccm_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged nonfreeing_fn
+  Called by: 
+  Calls: aead_srv_gcm_init/105 (inlined) (1073741824 (estimated locally),1.00 per call) 
+aead_srv_gcm_handler/68 (aead_srv_gcm_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: gcm_srv_stepwise_handler/55 (inlined) (46853196 (estimated locally),0.04 per call) gcm_srv_onepass/54 (24136495 (estimated locally),0.02 per call) 
+aead_srv_gcm_init/67 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  previous sharing asm name: 105
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body icf_merged nonfreeing_fn
+  Called by: 
+  Calls: 
+ccm_srv_stepwise_handler/66 (ccm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ccm_srv_stepwise_handler/66 is inline copy in aead_srv_ccm_handler/70
+  Availability: local
+  Function flags: count:46853196 (estimated locally) body local
+  Called by: aead_srv_ccm_handler/70 (inlined) (46853196 (estimated locally),0.04 per call) 
+  Calls: ccm_final/64 (inlined) (9370639 (estimated locally),0.01 per call) ccm_update/63 (1896617 (estimated locally),0.00 per call) ccm_init/62 (9370639 (estimated locally),0.01 per call) ccm_update/63 (9370639 (estimated locally),0.01 per call) ccm_init/62 (9370639 (estimated locally),0.01 per call) 
+ccm_srv_onepass/65 (ccm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: CSWTCH.28/91 (read) 
+  Referring: 
+  Function ccm_srv_onepass/65 is inline copy in aead_srv_ccm_handler/70
+  Availability: local
+  Function flags: count:24136495 (estimated locally) body local
+  Called by: aead_srv_ccm_handler/70 (inlined) (24136495 (estimated locally),0.02 per call) 
+  Calls: ccm_final_internal/61 (2936998 (estimated locally),0.00 per call) ccm_update_aad/56 (inlined) (2442613 (estimated locally),0.00 per call) cpt_ske_ccm_init/83 (3599396 (estimated locally),0.00 per call) aead_get_iv.part.0/107 (inlined) (1612125 (estimated locally),0.00 per call) aead_ccm_get_key.constprop.0/103 (7965043 (estimated locally),0.01 per call) 
+ccm_final/64 (ccm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ccm_final/64 is inline copy in aead_srv_ccm_handler/70
+  Availability: local
+  Function flags: count:9370639 (estimated locally) body local
+  Called by: ccm_srv_stepwise_handler/66 (inlined) (9370639 (estimated locally),0.01 per call) 
+  Calls: ccm_final_internal/61 (1896617 (estimated locally),0.00 per call) ccm_rctx_switch_ctx/46 (9370639 (estimated locally),0.01 per call) 
+ccm_update/63 (ccm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: ccm_srv_stepwise_handler/66 (1896617 (estimated locally),0.00 per call) ccm_srv_stepwise_handler/66 (9370639 (estimated locally),0.01 per call) 
+  Calls: ccm_rctx_switch_ctx/46 (192941440 (estimated locally),0.18 per call) ccm_update_payload/109 (inlined) (244598390 (estimated locally),0.23 per call) ccm_updata_single_block/58 (182536112 (estimated locally),0.17 per call) ccm_rctx_switch_ctx/46 (1073741822 (estimated locally),1.00 per call) 
+ccm_init/62 (ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: CSWTCH.28/91 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: ccm_srv_stepwise_handler/66 (9370639 (estimated locally),0.01 per call) ccm_srv_stepwise_handler/66 (9370639 (estimated locally),0.01 per call) 
+  Calls: ccm_rctx_switch_ctx/46 (130655997 (estimated locally),0.12 per call) ccm_update_aad/110 (inlined) (108662672 (estimated locally),0.10 per call) cpt_ske_ccm_init/83 (160123575 (estimated locally),0.15 per call) aead_get_iv.part.0/106 (inlined) (71717363 (estimated locally),0.07 per call) aead_ccm_get_key.constprop.0/103 (354334800 (estimated locally),0.33 per call) 
+ccm_final_internal/61 (ccm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ccm_final/64 (1896617 (estimated locally),0.00 per call) ccm_srv_onepass/65 (2936998 (estimated locally),0.00 per call) 
+  Calls: mmap_write_remote_data/74 (18546619 (estimated locally),0.02 per call) cpt_ske_ccm_final/86 (37093238 (estimated locally),0.03 per call) mmap_read_remote_data/72 (37093238 (estimated locally),0.03 per call) cpt_ske_dma_ccm_update_final/85 (36214434 (estimated locally),0.03 per call) ccm_updata_single_block/58 (108662672 (estimated locally),0.10 per call) ccm_final_dma_update/60 (inlined) (108662672 (estimated locally),0.10 per call) ccm_final_first_block_update/59 (inlined) (354334800 (estimated locally),0.33 per call) 
+ccm_final_dma_update/60 (ccm_final_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ccm_final_dma_update/60 is inline copy in ccm_final_internal/61
+  Availability: local
+  Function flags: count:108662672 (estimated locally) body local
+  Called by: ccm_final_internal/61 (inlined) (108662672 (estimated locally),0.10 per call) 
+  Calls: ccm_update_payload/57 (inlined) (108662672 (estimated locally),0.10 per call) 
+ccm_final_first_block_update/59 (ccm_final_first_block_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function ccm_final_first_block_update/59 is inline copy in ccm_final_internal/61
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local
+  Called by: ccm_final_internal/61 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: ccm_updata_single_block/58 (354334800 (estimated locally),0.33 per call) 
+ccm_updata_single_block/58 (ccm_updata_single_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ccm_update/63 (182536112 (estimated locally),0.17 per call) ccm_final_internal/61 (108662672 (estimated locally),0.10 per call) ccm_final_first_block_update/59 (354334800 (estimated locally),0.33 per call) 
+  Calls: mmap_write_remote_data/74 (43986649 (estimated locally),0.04 per call) cpt_ske_ccm_update_blocks/88 (217325344 (estimated locally),0.20 per call) mmap_read_remote_data/72 (1073741824 (estimated locally),1.00 per call) 
+ccm_update_payload/57 (ccm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 109
+  References: 
+  Referring: 
+  Function ccm_update_payload/57 is inline copy in ccm_final_internal/61
+  Availability: local
+  Function flags: count:108662672 (estimated locally) body local
+  Called by: ccm_final_dma_update/60 (inlined) (108662672 (estimated locally),0.10 per call) 
+  Calls: cpt_ske_dma_ccm_update_blocks/87 (51908159 (estimated locally),0.05 per call) 
+ccm_update_aad/56 (ccm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 110
+  References: 
+  Referring: 
+  Function ccm_update_aad/56 is inline copy in aead_srv_ccm_handler/70
+  Availability: local
+  Function flags: count:2442613 (estimated locally) body local
+  Called by: ccm_srv_onepass/65 (inlined) (2442613 (estimated locally),0.00 per call) 
+  Calls: cpt_ske_ccm_update_aad/84 (236168 (estimated locally),0.00 per call) mmap_read_remote_data/72 (1166836 (estimated locally),0.00 per call) 
+gcm_srv_stepwise_handler/55 (gcm_srv_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function gcm_srv_stepwise_handler/55 is inline copy in aead_srv_gcm_handler/68
+  Availability: local
+  Function flags: count:46853196 (estimated locally) body local
+  Called by: aead_srv_gcm_handler/68 (inlined) (46853196 (estimated locally),0.04 per call) 
+  Calls: gcm_final/53 (inlined) (9370639 (estimated locally),0.01 per call) gcm_update/52 (1896617 (estimated locally),0.00 per call) gcm_init/51 (9370639 (estimated locally),0.01 per call) gcm_update/52 (9370639 (estimated locally),0.01 per call) gcm_init/51 (9370639 (estimated locally),0.01 per call) 
+gcm_srv_onepass/54 (gcm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: CSWTCH.28/91 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741820 (estimated locally) body local
+  Called by: aead_srv_gcm_handler/68 (24136495 (estimated locally),0.02 per call) 
+  Calls: gcm_final_internal/50 (97991998 (estimated locally),0.09 per call) gcm_update_aad/47 (inlined) (81497004 (estimated locally),0.08 per call) mmap_write_remote_data/74 (9236327 (estimated locally),0.01 per call) cpt_ske_gcm_final/73 (45634028 (estimated locally),0.04 per call) cpt_ske_gcm_final/73 (9236327 (estimated locally),0.01 per call) mmap_read_remote_data/72 (45634028 (estimated locally),0.04 per call) cpt_ske_gcm_init/71 (14955461 (estimated locally),0.01 per call) aead_get_iv.part.0/92 (inlined) (73890618 (estimated locally),0.07 per call) aead_gcm_get_key.constprop.0/102 (1073741820 (estimated locally),1.00 per call) 
+gcm_final/53 (gcm_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function gcm_final/53 is inline copy in aead_srv_gcm_handler/68
+  Availability: local
+  Function flags: count:9370639 (estimated locally) body local
+  Called by: gcm_srv_stepwise_handler/55 (inlined) (9370639 (estimated locally),0.01 per call) 
+  Calls: gcm_final_internal/50 (1896617 (estimated locally),0.00 per call) gcm_rctx_switch_ctx/45 (9370639 (estimated locally),0.01 per call) 
+gcm_update/52 (gcm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: gcm_srv_stepwise_handler/55 (1896617 (estimated locally),0.00 per call) gcm_srv_stepwise_handler/55 (9370639 (estimated locally),0.01 per call) 
+  Calls: gcm_rctx_switch_ctx/45 (43986649 (estimated locally),0.04 per call) gcm_update_payload/111 (inlined) (217325344 (estimated locally),0.20 per call) gcm_rctx_switch_ctx/45 (1073741824 (estimated locally),1.00 per call) 
+gcm_init/51 (gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: CSWTCH.28/91 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: gcm_srv_stepwise_handler/55 (9370639 (estimated locally),0.01 per call) gcm_srv_stepwise_handler/55 (9370639 (estimated locally),0.01 per call) 
+  Calls: gcm_rctx_switch_ctx/45 (130655997 (estimated locally),0.12 per call) gcm_update_aad/112 (inlined) (108662672 (estimated locally),0.10 per call) cpt_ske_gcm_init/71 (14955461 (estimated locally),0.01 per call) aead_get_iv.part.0/108 (inlined) (73890618 (estimated locally),0.07 per call) aead_gcm_get_key.constprop.0/102 (1073741822 (estimated locally),1.00 per call) 
+gcm_final_internal/50 (gcm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: gcm_final/53 (1896617 (estimated locally),0.00 per call) gcm_srv_onepass/54 (97991998 (estimated locally),0.09 per call) 
+  Calls: cpt_ske_dma_gcm_update_final/77 (47117316 (estimated locally),0.04 per call) mmap_write_remote_data/74 (9681038 (estimated locally),0.01 per call) cpt_ske_gcm_final/73 (19362076 (estimated locally),0.02 per call) mmap_read_remote_data/72 (19362076 (estimated locally),0.02 per call) mmap_write_remote_data/74 (14449310 (estimated locally),0.01 per call) cpt_ske_gcm_final/73 (28898621 (estimated locally),0.03 per call) mmap_read_remote_data/72 (28898621 (estimated locally),0.03 per call) gcm_updata_last_block/49 (inlined) (277160682 (estimated locally),0.26 per call) gcm_update_payload/48 (inlined) (354334800 (estimated locally),0.33 per call) 
+gcm_updata_last_block/49 (gcm_updata_last_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function gcm_updata_last_block/49 is inline copy in gcm_final_internal/50
+  Availability: local
+  Function flags: count:277160682 (estimated locally) body local
+  Called by: gcm_final_internal/50 (inlined) (277160682 (estimated locally),0.26 per call) 
+  Calls: mmap_write_remote_data/74 (11354098 (estimated locally),0.01 per call) cpt_ske_gcm_update_blocks/79 (56097322 (estimated locally),0.05 per call) mmap_read_remote_data/72 (277160682 (estimated locally),0.26 per call) 
+gcm_update_payload/48 (gcm_update_payload)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 111
+  References: 
+  Referring: 
+  Function gcm_update_payload/48 is inline copy in gcm_final_internal/50
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local
+  Called by: gcm_final_internal/50 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: cpt_ske_dma_gcm_update_blocks/78 (169265735 (estimated locally),0.16 per call) 
+gcm_update_aad/47 (gcm_update_aad)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 112
+  References: 
+  Referring: 
+  Function gcm_update_aad/47 is inline copy in gcm_srv_onepass/54
+  Availability: local
+  Function flags: count:81497004 (estimated locally) body local
+  Called by: gcm_srv_onepass/54 (inlined) (81497004 (estimated locally),0.08 per call) 
+  Calls: cpt_ske_gcm_update_blocks_aad/76 (7879658 (estimated locally),0.01 per call) mmap_read_remote_data/72 (38931119 (estimated locally),0.04 per call) 
+ccm_rctx_switch_ctx/46 (ccm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: ccm_final/64 (9370639 (estimated locally),0.01 per call) ccm_update/63 (192941440 (estimated locally),0.18 per call) ccm_update/63 (1073741822 (estimated locally),1.00 per call) ccm_init/62 (130655997 (estimated locally),0.12 per call) 
+  Calls: aead_ccm_ctx_recovery_key/41 (inlined) (174395002 (estimated locally),0.16 per call) cpt_ccm_rctx_switch_ctx/90 (1073741824 (estimated locally),1.00 per call) cpt_get_ccm_ske_ctx/89 (1073741824 (estimated locally),1.00 per call) 
+gcm_rctx_switch_ctx/45 (gcm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: gcm_final/53 (9370639 (estimated locally),0.01 per call) gcm_update/52 (43986649 (estimated locally),0.04 per call) gcm_update/52 (1073741824 (estimated locally),1.00 per call) gcm_init/51 (130655997 (estimated locally),0.12 per call) 
+  Calls: aead_gcm_ctx_recovery_key/42 (inlined) (174395002 (estimated locally),0.16 per call) cpt_gcm_rctx_switch_ctx/81 (1073741824 (estimated locally),1.00 per call) cpt_get_gcm_ske_ctx/80 (1073741824 (estimated locally),1.00 per call) 
+aead_gcm_ctx_recovery_key/42 (aead_gcm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function aead_gcm_ctx_recovery_key/42 is inline copy in gcm_rctx_switch_ctx/45
+  Availability: local
+  Function flags: count:174395002 (estimated locally) body local
+  Called by: gcm_rctx_switch_ctx/45 (inlined) (174395002 (estimated locally),0.16 per call) 
+  Calls: cpt_set_ske_ctx_key/82 (35297548 (estimated locally),0.03 per call) aead_gcm_get_key.constprop.0/102 (174395002 (estimated locally),0.16 per call) 
+aead_ccm_ctx_recovery_key/41 (aead_ccm_ctx_recovery_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function aead_ccm_ctx_recovery_key/41 is inline copy in ccm_rctx_switch_ctx/46
+  Availability: local
+  Function flags: count:174395002 (estimated locally) body local
+  Called by: ccm_rctx_switch_ctx/46 (inlined) (174395002 (estimated locally),0.16 per call) 
+  Calls: cpt_set_ske_ctx_key/82 (35297548 (estimated locally),0.03 per call) aead_ccm_get_key.constprop.0/103 (174395002 (estimated locally),0.16 per call) 
+aead_gcm_get_key/40 (aead_gcm_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741814 (estimated locally) body
+  Called by: 
+  Calls: 
+aead_ccm_get_key/39 (aead_ccm_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741814 (estimated locally) body
+  Called by: 
+  Calls: 
+aead_get_key/38 (aead_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: 
+cloning aead_get_key/38 to aead_get_key.constprop/104
+    replace map: 4 -> 32
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+uint32_t aead_get_key (uint32_t key_handle, uint8_t alg, uint8_t dir, uint8_t * key_buf, uint32_t key_buf_sz, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint8_t kms_alg;
+  struct kms_keydata_st keydata;
+  uint32_t check_usage_bits;
+  uint32_t ret;
+  unsigned char _1;
+  <unnamed type> _2;
+  uint8_t * _3;
+  short unsigned int _4;
+  long unsigned int _5;
+  short unsigned int _6;
+  short unsigned int _7;
+  unsigned char _13;
+  unsigned char _31;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG req_kpart => 2
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG alg => alg_12(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _13 = alg_12(D) + 251;
+  if (_13 <= 3)
+    goto <bb 3>; [65.00%]
+  else
+    goto <bb 4>; [35.00%]
+
+  <bb 3> [local count: 697932184]:
+<L16>:
+  _31 = alg_12(D) + 255;
+
+  <bb 4> [local count: 1073741824]:
+  # kms_alg_32 = PHI <48(2), _31(3)>
+<L17>:
+<L18>:
+  # DEBUG kms_alg => kms_alg_32
+  # DEBUG BEGIN_STMT
+  # DEBUG alg => NULL
+  # DEBUG kms_alg => NULL
+  # DEBUG kms_alg => kms_alg_32
+  # DEBUG BEGIN_STMT
+  if (dir_14(D) == 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 8
+
+  <bb 6> [local count: 1073741824]:
+  # check_usage_bits_9 = PHI <4(4), 8(5)>
+  # DEBUG check_usage_bits => check_usage_bits_9
+  # DEBUG BEGIN_STMT
+  ret_19 = kms_read_key (key_handle_15(D), key_buf_16(D), key_buf_sz_17(D), &keydata, 2, check_usage_bits_9);
+  # DEBUG ret => ret_19
+  # DEBUG BEGIN_STMT
+  if (ret_19 == 2774162085)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 13>; [66.00%]
+
+  <bb 7> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 = keydata.algo_id;
+  if (_1 == kms_alg_32)
+    goto <bb 8>; [48.89%]
+  else
+    goto <bb 13>; [51.11%]
+
+  <bb 8> [local count: 178483810]:
+  # DEBUG BEGIN_STMT
+  _2 = keydata.src_type;
+  if (_2 == 1)
+    goto <bb 9>; [21.72%]
+  else
+    goto <bb 10>; [78.28%]
+
+  <bb 9> [local count: 38766684]:
+  # DEBUG BEGIN_STMT
+  _3 = keydata.keypair.symm.key;
+  *key_20(D) = _3;
+  # DEBUG BEGIN_STMT
+  _4 = keydata.keypair.symm.size;
+  _5 = (long unsigned int) _4;
+  *key_sz_27(D) = _5;
+  # DEBUG BEGIN_STMT
+  *spk_sel_24(D) = 0;
+  goto <bb 12>; [100.00%]
+
+  <bb 10> [local count: 139717126]:
+  # DEBUG BEGIN_STMT
+  _6 = keydata.keypair.symm.size;
+  if (_6 <= 32)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 13>; [50.00%]
+
+  <bb 11> [local count: 69858563]:
+  # DEBUG BEGIN_STMT
+  *key_20(D) = 0B;
+  # DEBUG BEGIN_STMT
+  _7 = keydata.sp_key_id;
+  *sp_key_id_22(D) = _7;
+  # DEBUG BEGIN_STMT
+  *spk_sel_24(D) = 1;
+
+  <bb 12> [local count: 108625247]:
+
+  <bb 13> [local count: 1073741824]:
+  # ret_8 = PHI <ret_19(6), 2774162085(12), 11(7), 10(10)>
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_8;
+
+}
+
+
+uint32_t aead_get_key.constprop (uint32_t key_handle, uint8_t alg, uint8_t dir, uint8_t * key_buf, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  uint32_t check_usage_bits;
+  struct kms_keydata_st keydata;
+  uint8_t kms_alg;
+  uint32_t key_buf_sz;
+  unsigned char _2;
+  unsigned char _3;
+  unsigned char _9;
+  <unnamed type> _11;
+  uint8_t * _12;
+  short unsigned int _14;
+  long unsigned int _15;
+  short unsigned int _18;
+  short unsigned int _19;
+
+  <bb 14> [local count: 1073741824]:
+  # DEBUG key_buf_sz => 32
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG req_kpart => 2
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG alg => alg_1(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = alg_1(D) + 251;
+  if (_2 <= 3)
+    goto <bb 3>; [65.00%]
+  else
+    goto <bb 4>; [35.00%]
+
+  <bb 3> [local count: 697932184]:
+<L0>:
+  _3 = alg_1(D) + 255;
+
+  <bb 4> [local count: 1073741824]:
+  # kms_alg_10 = PHI <48(2), _3(3)>
+<L1>:
+<L2>:
+  # DEBUG kms_alg => kms_alg_10
+  # DEBUG BEGIN_STMT
+  # DEBUG alg => NULL
+  # DEBUG kms_alg => NULL
+  # DEBUG kms_alg => kms_alg_10
+  # DEBUG BEGIN_STMT
+  if (dir_4(D) == 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 536870912]:
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 8
+
+  <bb 6> [local count: 1073741824]:
+  # check_usage_bits_7 = PHI <4(4), 8(5)>
+  # DEBUG check_usage_bits => check_usage_bits_7
+  # DEBUG BEGIN_STMT
+  ret_8 = kms_read_key (key_handle_5(D), key_buf_6(D), 32, &keydata, 2, check_usage_bits_7);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 13>; [66.00%]
+
+  <bb 7> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _9 = keydata.algo_id;
+  if (_9 == kms_alg_10)
+    goto <bb 8>; [48.89%]
+  else
+    goto <bb 13>; [51.11%]
+
+  <bb 8> [local count: 178483810]:
+  # DEBUG BEGIN_STMT
+  _11 = keydata.src_type;
+  if (_11 == 1)
+    goto <bb 9>; [21.72%]
+  else
+    goto <bb 10>; [78.28%]
+
+  <bb 9> [local count: 38766684]:
+  # DEBUG BEGIN_STMT
+  _12 = keydata.keypair.symm.key;
+  *key_13(D) = _12;
+  # DEBUG BEGIN_STMT
+  _14 = keydata.keypair.symm.size;
+  _15 = (long unsigned int) _14;
+  *key_sz_16(D) = _15;
+  # DEBUG BEGIN_STMT
+  *spk_sel_17(D) = 0;
+  goto <bb 12>; [100.00%]
+
+  <bb 10> [local count: 139717126]:
+  # DEBUG BEGIN_STMT
+  _18 = keydata.keypair.symm.size;
+  if (_18 <= 32)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 13>; [50.00%]
+
+  <bb 11> [local count: 69858563]:
+  # DEBUG BEGIN_STMT
+  *key_13(D) = 0B;
+  # DEBUG BEGIN_STMT
+  _19 = keydata.sp_key_id;
+  *sp_key_id_20(D) = _19;
+  # DEBUG BEGIN_STMT
+  *spk_sel_17(D) = 1;
+
+  <bb 12> [local count: 108625247]:
+
+  <bb 13> [local count: 1073741824]:
+  # ret_21 = PHI <ret_8(6), 11(7), 10(10), 2774162085(12)>
+  # DEBUG ret => ret_21
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_21;
+
+}
+
+
+cloning aead_ccm_get_key/39 to aead_ccm_get_key.constprop/103
+    replace map: 4 -> 32
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+uint32_t aead_ccm_get_key (const struct mb_cmd_aead_ccm_st * ccm_cmd_data, uint8_t alg, uint8_t dir, uint8_t * key_buf, uint32_t key_buf_sz, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  long long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+
+  <bb 2> [local count: 1073741814]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  _1 = ccm_cmd_data_9(D)->key_type;
+  switch (_1) <default: <L10>, case 0: <L6>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *sp_key_id_10(D) = 0;
+  # DEBUG BEGIN_STMT
+  *spk_sel_12(D) = 0;
+  # DEBUG BEGIN_STMT
+  _2 = ccm_cmd_data_9(D)->plain_key_size;
+  if (_2 > key_buf_sz_14(D))
+    goto <bb 7>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG BEGIN_STMT
+  _3 = ccm_cmd_data_9(D)->plain_key_addr;
+  ret_17 = mmap_read_remote_data (key_buf_15(D), _3, _2);
+  # DEBUG ret => ret_17
+  # DEBUG BEGIN_STMT
+  if (ret_17 == 2774162085)
+    goto <bb 5>; [21.72%]
+  else
+    goto <bb 7>; [78.28%]
+
+  <bb 5> [local count: 37135877]:
+  # DEBUG BEGIN_STMT
+  *key_18(D) = key_buf_15(D);
+  # DEBUG BEGIN_STMT
+  _4 = ccm_cmd_data_9(D)->plain_key_size;
+  *key_sz_20(D) = _4;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 357913941]:
+<L6>:
+  # DEBUG BEGIN_STMT
+  _5 = ccm_cmd_data_9(D)->key_handle;
+  ret_25 = aead_get_key (_5, alg_22(D), dir_23(D), key_buf_15(D), key_buf_sz_14(D), key_18(D), key_sz_20(D), sp_key_id_10(D), spk_sel_12(D));
+  # DEBUG ret => ret_25
+  # DEBUG BEGIN_STMT
+
+  <bb 7> [local count: 1073741824]:
+  # ret_6 = PHI <ret_17(4), ret_25(6), 85(2), 10(3), 2774162085(5)>
+<L10>:
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return ret_6;
+
+}
+
+
+uint32_t aead_ccm_get_key.constprop (const struct mb_cmd_aead_ccm_st * ccm_cmd_data, uint8_t alg, uint8_t dir, uint8_t * key_buf, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  uint32_t key_buf_sz;
+  unsigned char _2;
+  long unsigned int _5;
+  long long unsigned int _6;
+  long unsigned int _10;
+  long unsigned int _12;
+
+  <bb 8> [local count: 1073741814]:
+  # DEBUG key_buf_sz => 32
+
+  <bb 2> [local count: 1073741814]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  _2 = ccm_cmd_data_1(D)->key_type;
+  switch (_2) <default: <L2>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *sp_key_id_3(D) = 0;
+  # DEBUG BEGIN_STMT
+  *spk_sel_4(D) = 0;
+  # DEBUG BEGIN_STMT
+  _5 = ccm_cmd_data_1(D)->plain_key_size;
+  if (_5 > 32)
+    goto <bb 7>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG BEGIN_STMT
+  _6 = ccm_cmd_data_1(D)->plain_key_addr;
+  ret_8 = mmap_read_remote_data (key_buf_7(D), _6, _5);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 5>; [21.72%]
+  else
+    goto <bb 7>; [78.28%]
+
+  <bb 5> [local count: 37135877]:
+  # DEBUG BEGIN_STMT
+  *key_9(D) = key_buf_7(D);
+  # DEBUG BEGIN_STMT
+  _10 = ccm_cmd_data_1(D)->plain_key_size;
+  *key_sz_11(D) = _10;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 357913941]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  _12 = ccm_cmd_data_1(D)->key_handle;
+  ret_15 = aead_get_key (_12, alg_13(D), dir_14(D), key_buf_7(D), 32, key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+
+  <bb 7> [local count: 1073741824]:
+  # ret_16 = PHI <85(2), 10(3), ret_8(4), 2774162085(5), ret_15(6)>
+<L2>:
+  # DEBUG ret => ret_16
+  # DEBUG BEGIN_STMT
+  return ret_16;
+
+}
+
+
+updating call of aead_ccm_get_key.constprop/103 -> aead_get_key.constprop/104: ret_15 = aead_get_key (_12, alg_13(D), dir_14(D), key_buf_7(D), 32, key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_15 = aead_get_key.constprop (_12, alg_13(D), dir_14(D), key_buf_7(D), key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+updating call of ccm_rctx_switch_ctx/46 -> aead_ccm_get_key.constprop/103: ret_16 = aead_ccm_get_key (ccm_cmd_data_10(D), _3, _2, &key_buf, 32, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_16 = aead_ccm_get_key.constprop (ccm_cmd_data_10(D), _3, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+cloning aead_gcm_get_key/40 to aead_gcm_get_key.constprop/102
+    replace map: 4 -> 32
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+uint32_t aead_gcm_get_key (const struct mb_cmd_aead_gcm_st * gcm_cmd_data, uint8_t alg, uint8_t dir, uint8_t * key_buf, uint32_t key_buf_sz, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  long long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+
+  <bb 2> [local count: 1073741814]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  _1 = gcm_cmd_data_9(D)->key_type;
+  switch (_1) <default: <L10>, case 0: <L6>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *sp_key_id_10(D) = 0;
+  # DEBUG BEGIN_STMT
+  *spk_sel_12(D) = 0;
+  # DEBUG BEGIN_STMT
+  _2 = gcm_cmd_data_9(D)->plain_key_size;
+  if (_2 > key_buf_sz_14(D))
+    goto <bb 7>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG BEGIN_STMT
+  _3 = gcm_cmd_data_9(D)->plain_key_addr;
+  ret_17 = mmap_read_remote_data (key_buf_15(D), _3, _2);
+  # DEBUG ret => ret_17
+  # DEBUG BEGIN_STMT
+  if (ret_17 == 2774162085)
+    goto <bb 5>; [21.72%]
+  else
+    goto <bb 7>; [78.28%]
+
+  <bb 5> [local count: 37135877]:
+  # DEBUG BEGIN_STMT
+  *key_18(D) = key_buf_15(D);
+  # DEBUG BEGIN_STMT
+  _4 = gcm_cmd_data_9(D)->plain_key_size;
+  *key_sz_20(D) = _4;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 357913941]:
+<L6>:
+  # DEBUG BEGIN_STMT
+  _5 = gcm_cmd_data_9(D)->key_handle;
+  ret_25 = aead_get_key (_5, alg_22(D), dir_23(D), key_buf_15(D), key_buf_sz_14(D), key_18(D), key_sz_20(D), sp_key_id_10(D), spk_sel_12(D));
+  # DEBUG ret => ret_25
+  # DEBUG BEGIN_STMT
+
+  <bb 7> [local count: 1073741824]:
+  # ret_6 = PHI <ret_17(4), ret_25(6), 85(2), 10(3), 2774162085(5)>
+<L10>:
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  return ret_6;
+
+}
+
+
+uint32_t aead_gcm_get_key.constprop (const struct mb_cmd_aead_gcm_st * gcm_cmd_data, uint8_t alg, uint8_t dir, uint8_t * key_buf, uint8_t * * key, uint32_t * key_sz, uint16_t * sp_key_id, bool_t * spk_sel)
+{
+  uint32_t ret;
+  uint32_t key_buf_sz;
+  unsigned char _2;
+  long unsigned int _5;
+  long long unsigned int _6;
+  long unsigned int _10;
+  long unsigned int _12;
+
+  <bb 8> [local count: 1073741814]:
+  # DEBUG key_buf_sz => 32
+
+  <bb 2> [local count: 1073741814]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+  # DEBUG BEGIN_STMT
+  _2 = gcm_cmd_data_1(D)->key_type;
+  switch (_2) <default: <L2>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  *sp_key_id_3(D) = 0;
+  # DEBUG BEGIN_STMT
+  *spk_sel_4(D) = 0;
+  # DEBUG BEGIN_STMT
+  _5 = gcm_cmd_data_1(D)->plain_key_size;
+  if (_5 > 32)
+    goto <bb 7>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG BEGIN_STMT
+  _6 = gcm_cmd_data_1(D)->plain_key_addr;
+  ret_8 = mmap_read_remote_data (key_buf_7(D), _6, _5);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 5>; [21.72%]
+  else
+    goto <bb 7>; [78.28%]
+
+  <bb 5> [local count: 37135877]:
+  # DEBUG BEGIN_STMT
+  *key_9(D) = key_buf_7(D);
+  # DEBUG BEGIN_STMT
+  _10 = gcm_cmd_data_1(D)->plain_key_size;
+  *key_sz_11(D) = _10;
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 357913941]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  _12 = gcm_cmd_data_1(D)->key_handle;
+  ret_15 = aead_get_key (_12, alg_13(D), dir_14(D), key_buf_7(D), 32, key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+
+  <bb 7> [local count: 1073741824]:
+  # ret_16 = PHI <85(2), 10(3), ret_8(4), 2774162085(5), ret_15(6)>
+<L2>:
+  # DEBUG ret => ret_16
+  # DEBUG BEGIN_STMT
+  return ret_16;
+
+}
+
+
+updating call of aead_gcm_get_key.constprop/102 -> aead_get_key.constprop/104: ret_15 = aead_get_key (_12, alg_13(D), dir_14(D), key_buf_7(D), 32, key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_15 = aead_get_key.constprop (_12, alg_13(D), dir_14(D), key_buf_7(D), key_9(D), key_sz_11(D), sp_key_id_3(D), spk_sel_4(D));
+updating call of gcm_rctx_switch_ctx/45 -> aead_gcm_get_key.constprop/102: ret_16 = aead_gcm_get_key (gcm_cmd_data_10(D), _3, _2, &key_buf, 32, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_16 = aead_gcm_get_key.constprop (gcm_cmd_data_10(D), _3, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of gcm_srv_onepass/54 -> aead_gcm_get_key.constprop/102: ret_48 = aead_gcm_get_key (gcm_cmd_data_40(D), _1, _2, &key_buf, 32, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_48 = aead_gcm_get_key.constprop (gcm_cmd_data_40(D), _1, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of ccm_init/62 -> aead_ccm_get_key.constprop/103: ret_30 = aead_ccm_get_key (ccm_cmd_data_23(D), _1, _2, &key_buf, 32, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_30 = aead_ccm_get_key.constprop (ccm_cmd_data_23(D), _1, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of gcm_init/51 -> aead_gcm_get_key.constprop/102: ret_26 = aead_gcm_get_key (gcm_cmd_data_21(D), _1, _2, &key_buf, 32, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_26 = aead_gcm_get_key.constprop (gcm_cmd_data_21(D), _1, _2, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+updating call of aead_srv_ccm_handler/70 -> aead_ccm_get_key.constprop/103: ret_27 = aead_ccm_get_key (req_data_8(D), _17, _19, &key_buf, 32, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+    m_always_copy_start: 9
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+                             3. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             4. IPA_PARAM_OP_COPY , base_index: 5, prev_clone_index: 5
+                             5. IPA_PARAM_OP_COPY , base_index: 6, prev_clone_index: 6
+                             6. IPA_PARAM_OP_COPY , base_index: 7, prev_clone_index: 7
+                             7. IPA_PARAM_OP_COPY , base_index: 8, prev_clone_index: 8
+  updated to:ret_27 = aead_ccm_get_key.constprop (req_data_8(D), _17, _19, &key_buf, &key_ptr, &key_sz, &sp_key_id, &spk_sel);
+Trivially needed variables: CSWTCH.28/91
+Removing variables:
+
+Final Symbol table:
+
+aead_get_key.constprop.0/104 (aead_get_key.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.aead_get_key.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+aead_ccm_get_key.constprop.0/103 (aead_ccm_get_key.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.aead_ccm_get_key.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741814 (estimated locally) local
+  Called by: 
+  Calls: 
+aead_gcm_get_key.constprop.0/102 (aead_gcm_get_key.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.aead_gcm_get_key.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741814 (estimated locally) local
+  Called by: 
+  Calls: 
+CSWTCH.28/91 (CSWTCH.28)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.CSWTCH.28 (implicit_section) artificial
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+cpt_ccm_rctx_switch_ctx/90 (cpt_ccm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_get_ccm_ske_ctx/89 (cpt_get_ccm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_ccm_update_blocks/88 (cpt_ske_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_ccm_update_blocks/87 (cpt_ske_dma_ccm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_ccm_final/86 (cpt_ske_ccm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_ccm_update_final/85 (cpt_ske_dma_ccm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_ccm_update_aad/84 (cpt_ske_ccm_update_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_ccm_init/83 (cpt_ske_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_set_ske_ctx_key/82 (cpt_set_ske_ctx_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_gcm_rctx_switch_ctx/81 (cpt_gcm_rctx_switch_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_get_gcm_ske_ctx/80 (cpt_get_gcm_ske_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_gcm_update_blocks/79 (cpt_ske_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_gcm_update_blocks/78 (cpt_ske_dma_gcm_update_blocks)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_dma_gcm_update_final/77 (cpt_ske_dma_gcm_update_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_gcm_update_blocks_aad/76 (cpt_ske_gcm_update_blocks_aad)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kms_read_key/75 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_write_remote_data/74 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_gcm_final/73 (cpt_ske_gcm_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/72 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_ske_gcm_init/71 (cpt_ske_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+aead_srv_ccm_handler/70 (aead_srv_ccm_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.aead_srv_ccm_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+aead_srv_ccm_init/69 (aead_srv_ccm_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.aead_srv_ccm_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged nonfreeing_fn
+  Called by: 
+  Calls: 
+aead_srv_gcm_handler/68 (aead_srv_gcm_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.aead_srv_gcm_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+aead_srv_gcm_init/67 (aead_srv_gcm_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.aead_srv_gcm_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) icf_merged nonfreeing_fn
+  Called by: 
+  Calls: 
+ccm_update/63 (ccm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ccm_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+ccm_init/62 (ccm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ccm_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+ccm_final_internal/61 (ccm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ccm_final_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ccm_updata_single_block/58 (ccm_updata_single_block)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ccm_updata_single_block (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+gcm_srv_onepass/54 (gcm_srv_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.gcm_srv_onepass (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741820 (estimated locally) local
+  Called by: 
+  Calls: 
+gcm_update/52 (gcm_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.gcm_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+gcm_init/51 (gcm_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.gcm_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+gcm_final_internal/50 (gcm_final_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.gcm_final_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+ccm_rctx_switch_ctx/46 (ccm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.ccm_rctx_switch_ctx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+gcm_rctx_switch_ctx/45 (gcm_rctx_switch_ctx)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.gcm_rctx_switch_ctx (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+aead_gcm_get_key/40 (aead_gcm_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741814 (estimated locally)
+  Called by: 
+  Calls: 
+aead_ccm_get_key/39 (aead_ccm_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741814 (estimated locally)
+  Called by: 
+  Calls: 
+aead_get_key/38 (aead_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

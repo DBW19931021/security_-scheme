@@ -1,0 +1,3564 @@
+Trivially needed symbols: pke_srv_sm2_sign_handler/58 pke_srv_sm2_cipher_handler/57 pke_srv_sm2_init/56
+
+
+Initial Symbol table:
+
+pke_srv_hash_final/80 (pke_srv_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_final/54 
+  Calls: 
+cpu_exit_critical/79 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+mmap_remap_addr_u64/78 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+cpu_enter_critical/77 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+pke_srv_dma_update/76 (pke_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+pke_srv_cpu_update/75 (pke_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/74 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 
+  Calls: 
+cpt_sm2_verify/73 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_verify_internal/38 
+  Calls: 
+cpt_sm2_sign/72 (cpt_sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_internal/37 
+  Calls: 
+memcpy_/71 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/31 
+  Calls: 
+cpt_hash_final/70 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_dma_final/69 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_ctx_switch/68 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_update/67 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_init/66 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_sm2_getZ/65 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+memset_/64 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+cpt_sm2_decrypt/63 (cpt_sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_decrypt_internal/40 
+  Calls: 
+cpt_sm2_encrypt/62 (cpt_sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_encrypt_internal/39 
+  Calls: 
+kms_read_key/61 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_sign_get_key_from_key_handle/45 sm2_cipher_get_key_from_key_handle/42 
+  Calls: 
+mmap_write_remote_data/60 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign/47 sm2_srv_cipher_onepass/49 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_vry/48 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_sign_onepass/51 sm2_read_plain_key/43 sm2_srv_cipher_onepass/49 
+  Calls: 
+pke_srv_sm2_sign_handler/58 (pke_srv_sm2_sign_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_onepass/51 cmd_check_process_mode_and_msg_type/23 cmd_check_direction/24 
+pke_srv_sm2_cipher_handler/57 (pke_srv_sm2_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f21e36d5330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_cipher_onepass/49 cmd_check_direction/24 
+pke_srv_sm2_init/56 (pke_srv_sm2_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f21e36d5220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+sm2_srv_sign_stepwise_handler/55 (sm2_srv_sign_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: sm2_srv_sign_final/54 sm2_srv_sign_update/53 sm2_srv_sign_init/52 sm2_srv_sign_update/53 sm2_srv_sign_init/52 
+sm2_srv_sign_final/54 (sm2_srv_sign_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 sm2_sign_get_key/46 pke_srv_hash_final/80 
+sm2_srv_sign_update/53 (sm2_srv_sign_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36afee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: pke_srv_dma_update/76 pke_srv_cpu_update/75 sm2_check_dma_mode/41 
+sm2_srv_sign_init/52 (sm2_srv_sign_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36afdd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 cpt_hash_rctx_switch_cpu_ctx/74 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 sm2_sign_get_key/46 
+sm2_srv_sign_onepass/51 (sm2_srv_sign_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36d5000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 mmap_read_remote_data/59 sm2_srv_local_get_E/50 sm2_sign_get_key/46 
+sm2_srv_local_get_E/50 (sm2_srv_local_get_E)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_onepass/51 
+  Calls: cpt_hash_final/70 cpt_hash_update/67 mmap_read_remote_data/59 util_memcpy/31 cpt_hash_dma_final/69 cpt_hash_ctx_switch/68 cpt_hash_update/67 mmap_read_remote_data/59 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 
+sm2_srv_cipher_onepass/49 (sm2_srv_cipher_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36d5330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_cipher_handler/57 
+  Calls: util_memset/32 mmap_write_remote_data/60 sm2_srv_decrypt_internal/40 sm2_srv_encrypt_internal/39 mmap_read_remote_data/59 sm2_cipher_get_key/44 
+sm2_srv_vry/48 (sm2_srv_vry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36d5000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: sm2_srv_verify_internal/38 mmap_read_remote_data/59 
+sm2_srv_sign/47 (sm2_srv_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: mmap_write_remote_data/60 sm2_srv_sign_internal/37 
+sm2_sign_get_key/46 (sm2_sign_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36afaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 
+  Calls: sm2_sign_get_key_from_key_handle/45 sm2_read_plain_key/43 
+sm2_sign_get_key_from_key_handle/45 (sm2_sign_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36afaa0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 
+  Calls: kms_read_key/61 
+sm2_cipher_get_key/44 (sm2_cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e3692ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: sm2_cipher_get_key_from_key_handle/42 sm2_read_plain_key/43 
+sm2_read_plain_key/43 (sm2_read_plain_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af220
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 sm2_cipher_get_key/44 
+  Calls: mmap_read_remote_data/59 
+sm2_cipher_get_key_from_key_handle/42 (sm2_cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e3692ee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_cipher_get_key/44 
+  Calls: kms_read_key/61 
+sm2_check_dma_mode/41 (sm2_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36afee0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_update/53 
+  Calls: cpu_exit_critical/79 util_memcpy/31 mmap_remap_addr_u64/78 cpu_enter_critical/77 
+sm2_srv_decrypt_internal/40 (sm2_srv_decrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e3692770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_decrypt/63 
+sm2_srv_encrypt_internal/39 (sm2_srv_encrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_encrypt/62 
+sm2_srv_verify_internal/38 (sm2_srv_verify_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36d5000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_vry/48 
+  Calls: cpt_sm2_verify/73 
+sm2_srv_sign_internal/37 (sm2_srv_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign/47 
+  Calls: cpt_sm2_sign/72 
+util_write_volatile_u32/36 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_read_volatile_u32/35 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_u32_copy/34 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memcmp/33 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36d5330
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 sm2_srv_cipher_onepass/49 
+  Calls: memset_/64 
+util_memcpy/31 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_check_dma_mode/41 sm2_srv_local_get_E/50 
+  Calls: memcpy_/71 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_curve_param_type/26 (get_curve_param_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_lib_hash_alg/25 (get_lib_hash_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36af990
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 pke_srv_sm2_cipher_handler/57 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f21e36afbb0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_release_ahb_dma/21 (crypto_release_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_using_ahb_dma/20 (crypto_using_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_get_ahb_dma_cfg_reg/19 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_lock_reg/18 (sysreg_lock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_unlock_reg/17 (sysreg_unlock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_config_sm_en/16 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/15 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/14 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/13 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/36 util_read_volatile_u32/35 util_u32_copy/34 util_memcmp/33 get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 get_curve_param_type/26 get_lib_hash_alg/25 cmd_check_process_mode/22 crypto_release_ahb_dma/21 crypto_using_ahb_dma/20 crypto_get_ahb_dma_cfg_reg/19 sysreg_lock_reg/18 sysreg_unlock_reg/17 sysreg_config_sm_en/16 sysreg_umask_sm_lock/15 sysreg_enable_sm_lock/14 sysreg_enable_fun_lock/13 check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+pke_srv_hash_final/80 (pke_srv_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_final/54 
+  Calls: 
+cpu_exit_critical/79 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+mmap_remap_addr_u64/78 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+cpu_enter_critical/77 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+pke_srv_dma_update/76 (pke_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+pke_srv_cpu_update/75 (pke_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/74 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 
+  Calls: 
+cpt_sm2_verify/73 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_verify_internal/38 
+  Calls: 
+cpt_sm2_sign/72 (cpt_sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_internal/37 
+  Calls: 
+memcpy_/71 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/31 
+  Calls: 
+cpt_hash_final/70 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_dma_final/69 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_ctx_switch/68 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_update/67 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_init/66 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_sm2_getZ/65 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+memset_/64 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+cpt_sm2_decrypt/63 (cpt_sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_decrypt_internal/40 
+  Calls: 
+cpt_sm2_encrypt/62 (cpt_sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_encrypt_internal/39 
+  Calls: 
+kms_read_key/61 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_sign_get_key_from_key_handle/45 sm2_cipher_get_key_from_key_handle/42 
+  Calls: 
+mmap_write_remote_data/60 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign/47 sm2_srv_cipher_onepass/49 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_vry/48 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_sign_onepass/51 sm2_read_plain_key/43 sm2_srv_cipher_onepass/49 
+  Calls: 
+pke_srv_sm2_sign_handler/58 (pke_srv_sm2_sign_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_onepass/51 cmd_check_process_mode_and_msg_type/23 cmd_check_direction/24 
+pke_srv_sm2_cipher_handler/57 (pke_srv_sm2_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_cipher_onepass/49 cmd_check_direction/24 
+pke_srv_sm2_init/56 (pke_srv_sm2_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+sm2_srv_sign_stepwise_handler/55 (sm2_srv_sign_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: sm2_srv_sign_final/54 sm2_srv_sign_update/53 sm2_srv_sign_init/52 sm2_srv_sign_update/53 sm2_srv_sign_init/52 
+sm2_srv_sign_final/54 (sm2_srv_sign_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 sm2_sign_get_key/46 pke_srv_hash_final/80 
+sm2_srv_sign_update/53 (sm2_srv_sign_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: pke_srv_dma_update/76 pke_srv_cpu_update/75 sm2_check_dma_mode/41 
+sm2_srv_sign_init/52 (sm2_srv_sign_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 cpt_hash_rctx_switch_cpu_ctx/74 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 sm2_sign_get_key/46 
+sm2_srv_sign_onepass/51 (sm2_srv_sign_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 mmap_read_remote_data/59 sm2_srv_local_get_E/50 sm2_sign_get_key/46 
+sm2_srv_local_get_E/50 (sm2_srv_local_get_E)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_onepass/51 
+  Calls: cpt_hash_final/70 cpt_hash_update/67 mmap_read_remote_data/59 util_memcpy/31 cpt_hash_dma_final/69 cpt_hash_ctx_switch/68 cpt_hash_update/67 mmap_read_remote_data/59 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 
+sm2_srv_cipher_onepass/49 (sm2_srv_cipher_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_cipher_handler/57 
+  Calls: util_memset/32 mmap_write_remote_data/60 sm2_srv_decrypt_internal/40 sm2_srv_encrypt_internal/39 mmap_read_remote_data/59 sm2_cipher_get_key/44 
+sm2_srv_vry/48 (sm2_srv_vry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: sm2_srv_verify_internal/38 mmap_read_remote_data/59 
+sm2_srv_sign/47 (sm2_srv_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: mmap_write_remote_data/60 sm2_srv_sign_internal/37 
+sm2_sign_get_key/46 (sm2_sign_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 
+  Calls: sm2_sign_get_key_from_key_handle/45 sm2_read_plain_key/43 
+sm2_sign_get_key_from_key_handle/45 (sm2_sign_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 
+  Calls: kms_read_key/61 
+sm2_cipher_get_key/44 (sm2_cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: sm2_cipher_get_key_from_key_handle/42 sm2_read_plain_key/43 
+sm2_read_plain_key/43 (sm2_read_plain_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 sm2_cipher_get_key/44 
+  Calls: mmap_read_remote_data/59 
+sm2_cipher_get_key_from_key_handle/42 (sm2_cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_cipher_get_key/44 
+  Calls: kms_read_key/61 
+sm2_check_dma_mode/41 (sm2_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_update/53 
+  Calls: cpu_exit_critical/79 util_memcpy/31 mmap_remap_addr_u64/78 cpu_enter_critical/77 
+sm2_srv_decrypt_internal/40 (sm2_srv_decrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_decrypt/63 
+sm2_srv_encrypt_internal/39 (sm2_srv_encrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_encrypt/62 
+sm2_srv_verify_internal/38 (sm2_srv_verify_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_vry/48 
+  Calls: cpt_sm2_verify/73 
+sm2_srv_sign_internal/37 (sm2_srv_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign/47 
+  Calls: cpt_sm2_sign/72 
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 sm2_srv_cipher_onepass/49 
+  Calls: memset_/64 
+util_memcpy/31 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_check_dma_mode/41 sm2_srv_local_get_E/50 
+  Calls: memcpy_/71 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 pke_srv_sm2_cipher_handler/57 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: 
+
+
+Initial Symbol table:
+
+pke_srv_hash_final/80 (pke_srv_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_final/54 
+  Calls: 
+cpu_exit_critical/79 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+mmap_remap_addr_u64/78 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+cpu_enter_critical/77 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+pke_srv_dma_update/76 (pke_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+pke_srv_cpu_update/75 (pke_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/74 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 
+  Calls: 
+cpt_sm2_verify/73 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_verify_internal/38 
+  Calls: 
+cpt_sm2_sign/72 (cpt_sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_internal/37 
+  Calls: 
+memcpy_/71 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/31 
+  Calls: 
+cpt_hash_final/70 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_dma_final/69 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_ctx_switch/68 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_update/67 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_init/66 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_sm2_getZ/65 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+memset_/64 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+cpt_sm2_decrypt/63 (cpt_sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_decrypt_internal/40 
+  Calls: 
+cpt_sm2_encrypt/62 (cpt_sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_encrypt_internal/39 
+  Calls: 
+kms_read_key/61 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_sign_get_key_from_key_handle/45 sm2_cipher_get_key_from_key_handle/42 
+  Calls: 
+mmap_write_remote_data/60 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign/47 sm2_srv_cipher_onepass/49 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_vry/48 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_sign_onepass/51 sm2_read_plain_key/43 sm2_srv_cipher_onepass/49 
+  Calls: 
+pke_srv_sm2_sign_handler/58 (pke_srv_sm2_sign_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_onepass/51 cmd_check_process_mode_and_msg_type/23 cmd_check_direction/24 
+pke_srv_sm2_cipher_handler/57 (pke_srv_sm2_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_cipher_onepass/49 cmd_check_direction/24 
+pke_srv_sm2_init/56 (pke_srv_sm2_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+sm2_srv_sign_stepwise_handler/55 (sm2_srv_sign_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: sm2_srv_sign_final/54 sm2_srv_sign_update/53 sm2_srv_sign_init/52 sm2_srv_sign_update/53 sm2_srv_sign_init/52 
+sm2_srv_sign_final/54 (sm2_srv_sign_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 sm2_sign_get_key/46 pke_srv_hash_final/80 
+sm2_srv_sign_update/53 (sm2_srv_sign_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: pke_srv_dma_update/76 pke_srv_cpu_update/75 sm2_check_dma_mode/41 
+sm2_srv_sign_init/52 (sm2_srv_sign_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 cpt_hash_rctx_switch_cpu_ctx/74 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 sm2_sign_get_key/46 
+sm2_srv_sign_onepass/51 (sm2_srv_sign_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 mmap_read_remote_data/59 sm2_srv_local_get_E/50 sm2_sign_get_key/46 
+sm2_srv_local_get_E/50 (sm2_srv_local_get_E)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_onepass/51 
+  Calls: cpt_hash_final/70 cpt_hash_update/67 mmap_read_remote_data/59 util_memcpy/31 cpt_hash_dma_final/69 cpt_hash_ctx_switch/68 cpt_hash_update/67 mmap_read_remote_data/59 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 
+sm2_srv_cipher_onepass/49 (sm2_srv_cipher_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_cipher_handler/57 
+  Calls: util_memset/32 mmap_write_remote_data/60 sm2_srv_decrypt_internal/40 sm2_srv_encrypt_internal/39 mmap_read_remote_data/59 sm2_cipher_get_key/44 
+sm2_srv_vry/48 (sm2_srv_vry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: sm2_srv_verify_internal/38 mmap_read_remote_data/59 
+sm2_srv_sign/47 (sm2_srv_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: mmap_write_remote_data/60 sm2_srv_sign_internal/37 
+sm2_sign_get_key/46 (sm2_sign_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 
+  Calls: sm2_sign_get_key_from_key_handle/45 sm2_read_plain_key/43 
+sm2_sign_get_key_from_key_handle/45 (sm2_sign_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 
+  Calls: kms_read_key/61 
+sm2_cipher_get_key/44 (sm2_cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: sm2_cipher_get_key_from_key_handle/42 sm2_read_plain_key/43 
+sm2_read_plain_key/43 (sm2_read_plain_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 sm2_cipher_get_key/44 
+  Calls: mmap_read_remote_data/59 
+sm2_cipher_get_key_from_key_handle/42 (sm2_cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_cipher_get_key/44 
+  Calls: kms_read_key/61 
+sm2_check_dma_mode/41 (sm2_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_update/53 
+  Calls: cpu_exit_critical/79 util_memcpy/31 mmap_remap_addr_u64/78 cpu_enter_critical/77 
+sm2_srv_decrypt_internal/40 (sm2_srv_decrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_decrypt/63 
+sm2_srv_encrypt_internal/39 (sm2_srv_encrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_encrypt/62 
+sm2_srv_verify_internal/38 (sm2_srv_verify_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_vry/48 
+  Calls: cpt_sm2_verify/73 
+sm2_srv_sign_internal/37 (sm2_srv_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign/47 
+  Calls: cpt_sm2_sign/72 
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 sm2_srv_cipher_onepass/49 
+  Calls: memset_/64 
+util_memcpy/31 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_check_dma_mode/41 sm2_srv_local_get_E/50 
+  Calls: memcpy_/71 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 pke_srv_sm2_cipher_handler/57 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+pke_srv_hash_final/80 (pke_srv_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_final/54 
+  Calls: 
+cpu_exit_critical/79 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+mmap_remap_addr_u64/78 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+cpu_enter_critical/77 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_check_dma_mode/41 
+  Calls: 
+pke_srv_dma_update/76 (pke_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+pke_srv_cpu_update/75 (pke_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_update/53 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/74 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 
+  Calls: 
+cpt_sm2_verify/73 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_verify_internal/38 
+  Calls: 
+cpt_sm2_sign/72 (cpt_sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_internal/37 
+  Calls: 
+memcpy_/71 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memcpy/31 
+  Calls: 
+cpt_hash_final/70 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_dma_final/69 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_ctx_switch/68 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_update/67 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_hash_init/66 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+cpt_sm2_getZ/65 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign_init/52 sm2_srv_local_get_E/50 
+  Calls: 
+memset_/64 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: util_memset/32 
+  Calls: 
+cpt_sm2_decrypt/63 (cpt_sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_decrypt_internal/40 
+  Calls: 
+cpt_sm2_encrypt/62 (cpt_sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_encrypt_internal/39 
+  Calls: 
+kms_read_key/61 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_sign_get_key_from_key_handle/45 sm2_cipher_get_key_from_key_handle/42 
+  Calls: 
+mmap_write_remote_data/60 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_sign/47 sm2_srv_cipher_onepass/49 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sm2_srv_vry/48 sm2_srv_local_get_E/50 sm2_srv_local_get_E/50 sm2_srv_sign_onepass/51 sm2_read_plain_key/43 sm2_srv_cipher_onepass/49 
+  Calls: 
+pke_srv_sm2_sign_handler/58 (pke_srv_sm2_sign_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_onepass/51 cmd_check_process_mode_and_msg_type/23 cmd_check_direction/24 
+pke_srv_sm2_cipher_handler/57 (pke_srv_sm2_cipher_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: sm2_srv_cipher_onepass/49 cmd_check_direction/24 
+pke_srv_sm2_init/56 (pke_srv_sm2_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+sm2_srv_sign_stepwise_handler/55 (sm2_srv_sign_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: sm2_srv_sign_final/54 sm2_srv_sign_update/53 sm2_srv_sign_init/52 sm2_srv_sign_update/53 sm2_srv_sign_init/52 
+sm2_srv_sign_final/54 (sm2_srv_sign_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 sm2_sign_get_key/46 pke_srv_hash_final/80 
+sm2_srv_sign_update/53 (sm2_srv_sign_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: pke_srv_dma_update/76 pke_srv_cpu_update/75 sm2_check_dma_mode/41 
+sm2_srv_sign_init/52 (sm2_srv_sign_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_stepwise_handler/55 sm2_srv_sign_stepwise_handler/55 
+  Calls: util_memset/32 cpt_hash_rctx_switch_cpu_ctx/74 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 sm2_sign_get_key/46 
+sm2_srv_sign_onepass/51 (sm2_srv_sign_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: util_memset/32 sm2_srv_vry/48 sm2_srv_sign/47 mmap_read_remote_data/59 sm2_srv_local_get_E/50 sm2_sign_get_key/46 
+sm2_srv_local_get_E/50 (sm2_srv_local_get_E)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_onepass/51 
+  Calls: cpt_hash_final/70 cpt_hash_update/67 mmap_read_remote_data/59 util_memcpy/31 cpt_hash_dma_final/69 cpt_hash_ctx_switch/68 cpt_hash_update/67 mmap_read_remote_data/59 cpt_hash_update/67 cpt_hash_init/66 cpt_sm2_getZ/65 
+sm2_srv_cipher_onepass/49 (sm2_srv_cipher_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_cipher_handler/57 
+  Calls: util_memset/32 mmap_write_remote_data/60 sm2_srv_decrypt_internal/40 sm2_srv_encrypt_internal/39 mmap_read_remote_data/59 sm2_cipher_get_key/44 
+sm2_srv_vry/48 (sm2_srv_vry)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: sm2_srv_verify_internal/38 mmap_read_remote_data/59 
+sm2_srv_sign/47 (sm2_srv_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_onepass/51 
+  Calls: mmap_write_remote_data/60 sm2_srv_sign_internal/37 
+sm2_sign_get_key/46 (sm2_sign_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 
+  Calls: sm2_sign_get_key_from_key_handle/45 sm2_read_plain_key/43 
+sm2_sign_get_key_from_key_handle/45 (sm2_sign_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 
+  Calls: kms_read_key/61 
+sm2_cipher_get_key/44 (sm2_cipher_get_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: sm2_cipher_get_key_from_key_handle/42 sm2_read_plain_key/43 
+sm2_read_plain_key/43 (sm2_read_plain_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_sign_get_key/46 sm2_cipher_get_key/44 
+  Calls: mmap_read_remote_data/59 
+sm2_cipher_get_key_from_key_handle/42 (sm2_cipher_get_key_from_key_handle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_cipher_get_key/44 
+  Calls: kms_read_key/61 
+sm2_check_dma_mode/41 (sm2_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_update/53 
+  Calls: cpu_exit_critical/79 util_memcpy/31 mmap_remap_addr_u64/78 cpu_enter_critical/77 
+sm2_srv_decrypt_internal/40 (sm2_srv_decrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_decrypt/63 
+sm2_srv_encrypt_internal/39 (sm2_srv_encrypt_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_cipher_onepass/49 
+  Calls: cpt_sm2_encrypt/62 
+sm2_srv_verify_internal/38 (sm2_srv_verify_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_vry/48 
+  Calls: cpt_sm2_verify/73 
+sm2_srv_sign_internal/37 (sm2_srv_sign_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign/47 
+  Calls: cpt_sm2_sign/72 
+util_memset/32 (util_memset)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_srv_sign_final/54 sm2_srv_sign_init/52 sm2_srv_sign_onepass/51 sm2_srv_cipher_onepass/49 
+  Calls: memset_/64 
+util_memcpy/31 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sm2_check_dma_mode/41 sm2_srv_local_get_E/50 
+  Calls: memcpy_/71 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 pke_srv_sm2_cipher_handler/57 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: pke_srv_sm2_sign_handler/58 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+sm2_srv_sign/99 (sm2_srv_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 47
+  References: 
+  Referring: 
+  Function sm2_srv_sign/99 is inline copy in pke_srv_sm2_sign_handler/58
+  Clone of sm2_srv_sign/47
+  Availability: local
+  Function flags: count:164028 (estimated locally) body local
+  Called by: sm2_srv_sign_final/54 (inlined) (164028 (estimated locally),0.00 per call) 
+  Calls: cpt_sm2_sign/72 (164028 (estimated locally),0.00 per call) mmap_write_remote_data/60 (26641 (estimated locally),0.00 per call) 
+sm2_srv_vry.part.0.constprop.0/98 (sm2_srv_vry.part.0.constprop)
+  Type: function definition analyzed
+  Visibility: artificial
+  next sharing asm name: 91
+  References: 
+  Referring: 
+  Function sm2_srv_vry.part.0.constprop/98 is inline copy in pke_srv_sm2_sign_handler/58
+  Clone of sm2_srv_vry.part.0.constprop.0/91
+  Availability: local
+  Function flags: count:417102 (estimated locally) local split_part
+  Called by: sm2_srv_sign_onepass/51 (inlined) (417102 (estimated locally),0.00 per call) 
+  Calls: mmap_read_remote_data/59 (417102 (estimated locally),0.00 per call) cpt_sm2_verify/73 (50136 (estimated locally),0.00 per call) 
+sm2_read_plain_key.part.0/97 (sm2_read_plain_key.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 81
+  References: 
+  Referring: 
+  Function sm2_read_plain_key.part.0/97 is inline copy in sm2_sign_get_key.constprop/92
+  Clone of sm2_read_plain_key.part.0/81
+  Availability: local
+  Function flags: count:170975491 (estimated locally) body local split_part
+  Called by: sm2_sign_get_key.part.0.constprop.0/93 (inlined) (170975491 (estimated locally),0.16 per call) 
+  Calls: mmap_read_remote_data/59 (170975491 (estimated locally),0.16 per call) 
+sm2_cipher_get_key_from_key_handle.constprop.0/96 (sm2_cipher_get_key_from_key_handle.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function sm2_cipher_get_key_from_key_handle.constprop/96 is inline copy in sm2_srv_cipher_onepass/49
+  Clone of sm2_cipher_get_key_from_key_handle/42
+  Availability: local
+  Function flags: count:357913944 (estimated locally) local
+  Called by: sm2_cipher_get_key.constprop.0/95 (inlined) (357913944 (estimated locally),0.33 per call) 
+  Calls: kms_read_key/61 (357913944 (estimated locally),0.33 per call) 
+sm2_cipher_get_key.constprop.0/95 (sm2_cipher_get_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function sm2_cipher_get_key.constprop/95 is inline copy in sm2_srv_cipher_onepass/49
+  Clone of sm2_cipher_get_key/44
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: sm2_srv_cipher_onepass/49 (inlined) (1073741822 (estimated locally),1.00 per call) 
+  Calls: sm2_read_plain_key.part.0/81 (inlined) (170975492 (estimated locally),0.16 per call) sm2_cipher_get_key_from_key_handle.constprop.0/96 (inlined) (357913944 (estimated locally),0.33 per call) 
+sm2_sign_get_key_from_key_handle.constprop.0/94 (sm2_sign_get_key_from_key_handle.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function sm2_sign_get_key_from_key_handle.constprop/94 is inline copy in sm2_sign_get_key.constprop/92
+  Clone of sm2_sign_get_key_from_key_handle/45
+  Availability: local
+  Function flags: count:357913942 (estimated locally) local
+  Called by: sm2_sign_get_key.constprop.0/92 (inlined) (357913942 (estimated locally),0.33 per call) 
+  Calls: kms_read_key/61 (357913943 (estimated locally),0.33 per call) 
+sm2_sign_get_key.part.0.constprop.0/93 (sm2_sign_get_key.part.0.constprop)
+  Type: function definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: 
+  Function sm2_sign_get_key.part.0.constprop/93 is inline copy in sm2_sign_get_key.constprop/92
+  Clone of sm2_sign_get_key.part.0/83
+  Availability: local
+  Function flags: count:357913941 (estimated locally) local split_part
+  Called by: sm2_sign_get_key.constprop.0/92 (inlined) (357913941 (estimated locally),0.33 per call) 
+  Calls: sm2_read_plain_key.part.0/97 (inlined) (170975491 (estimated locally),0.16 per call) 
+sm2_sign_get_key.constprop.0/92 (sm2_sign_get_key.constprop)
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of sm2_sign_get_key/46
+  Availability: local
+  Function flags: count:1073741816 (estimated locally) local
+  Called by: sm2_srv_sign_onepass/51 (30333472 (estimated locally),0.03 per call) sm2_srv_sign_init/52 (1073741824 (estimated locally),1.00 per call) sm2_srv_sign_final/54 (2383569 (estimated locally),0.00 per call) 
+  Calls: sm2_sign_get_key.part.0.constprop.0/93 (inlined) (357913941 (estimated locally),0.33 per call) sm2_sign_get_key_from_key_handle.constprop.0/94 (inlined) (357913942 (estimated locally),0.33 per call) 
+sm2_srv_vry.part.0.constprop.0/91 (sm2_srv_vry.part.0.constprop)
+  Type: function definition analyzed
+  Visibility: artificial
+  previous sharing asm name: 98
+  References: 
+  Referring: 
+  Function sm2_srv_vry.part.0.constprop/91 is inline copy in pke_srv_sm2_sign_handler/58
+  Clone of sm2_srv_vry.part.0/86
+  Availability: local
+  Function flags: count:207037 (estimated locally) local split_part
+  Called by: sm2_srv_sign_final/54 (inlined) (207037 (estimated locally),0.00 per call) 
+  Calls: cpt_sm2_verify/73 (24886 (estimated locally),0.00 per call) mmap_read_remote_data/59 (207037 (estimated locally),0.00 per call) 
+sm2_srv_vry.part.0/86 (sm2_srv_vry.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:343919503 (estimated locally) body split_part
+  Called by: 
+  Calls: 
+sm2_sign_get_key.part.0/83 (sm2_sign_get_key.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:357913941 (estimated locally) body split_part
+  Called by: 
+  Calls: 
+sm2_read_plain_key.part.0/81 (sm2_read_plain_key.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 97
+  References: 
+  Referring: 
+  Function sm2_read_plain_key.part.0/81 is inline copy in sm2_srv_cipher_onepass/49
+  Availability: local
+  Function flags: count:170975492 (estimated locally) body local split_part
+  Called by: sm2_cipher_get_key.constprop.0/95 (inlined) (170975492 (estimated locally),0.16 per call) 
+  Calls: mmap_read_remote_data/59 (170975492 (estimated locally),0.16 per call) 
+pke_srv_hash_final/80 (pke_srv_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_final/54 (11776525 (estimated locally),0.01 per call) 
+  Calls: 
+cpu_exit_critical/79 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_check_dma_mode/41 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+mmap_remap_addr_u64/78 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_check_dma_mode/41 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpu_enter_critical/77 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_check_dma_mode/41 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_srv_dma_update/76 (pke_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_update/53 (282617437 (estimated locally),1.17 per call) 
+  Calls: 
+pke_srv_cpu_update/75 (pke_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_update/53 (217325344 (estimated locally),0.90 per call) 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/74 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_init/52 (29599315 (estimated locally),0.03 per call) 
+  Calls: 
+cpt_sm2_verify/73 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_vry.part.0.constprop.0/98 (50136 (estimated locally),0.00 per call) sm2_srv_vry.part.0.constprop.0/91 (24886 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_sm2_sign/72 (cpt_sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign/99 (164028 (estimated locally),0.00 per call) sm2_srv_sign/47 (330454 (estimated locally),0.00 per call) 
+  Calls: 
+memcpy_/71 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_check_dma_mode/41 (574129752 (estimated locally),0.53 per call) sm2_srv_local_get_E/50 (753722 (estimated locally),0.00 per call) 
+  Calls: 
+cpt_hash_final/70 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 (6270569 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_hash_dma_final/69 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 (6270569 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_hash_ctx_switch/68 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_local_get_E/50 (6270569 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_hash_update/67 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_init/52 (182241592 (estimated locally),0.17 per call) sm2_srv_local_get_E/50 (30981071 (estimated locally),0.03 per call) sm2_srv_local_get_E/50 (30981071 (estimated locally),0.03 per call) sm2_srv_local_get_E/50 (43986649 (estimated locally),0.04 per call) 
+  Calls: 
+cpt_hash_init/66 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_init/52 (43986649 (estimated locally),0.04 per call) sm2_srv_local_get_E/50 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+cpt_sm2_getZ/65 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_init/52 (217325344 (estimated locally),0.20 per call) sm2_srv_local_get_E/50 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+memset_/64 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign_final/54 (11776525 (estimated locally),0.01 per call) sm2_srv_sign_init/52 (1073741824 (estimated locally),1.00 per call) sm2_srv_sign_onepass/51 (30333472 (estimated locally),0.03 per call) sm2_srv_cipher_onepass/49 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+cpt_sm2_decrypt/63 (cpt_sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_cipher_onepass/49 (13312359 (estimated locally),0.01 per call) 
+  Calls: 
+cpt_sm2_encrypt/62 (cpt_sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_cipher_onepass/49 (13312359 (estimated locally),0.01 per call) 
+  Calls: 
+kms_read_key/61 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_cipher_get_key_from_key_handle.constprop.0/96 (357913944 (estimated locally),0.33 per call) sm2_sign_get_key_from_key_handle.constprop.0/94 (357913943 (estimated locally),0.33 per call) 
+  Calls: 
+mmap_write_remote_data/60 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_sign/99 (26641 (estimated locally),0.00 per call) sm2_srv_sign/47 (53672 (estimated locally),0.00 per call) sm2_srv_cipher_onepass/49 (4324333 (estimated locally),0.00 per call) 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sm2_srv_vry.part.0.constprop.0/98 (417102 (estimated locally),0.00 per call) sm2_read_plain_key.part.0/97 (170975491 (estimated locally),0.16 per call) sm2_srv_vry.part.0.constprop.0/91 (207037 (estimated locally),0.00 per call) sm2_srv_sign_onepass/51 (1398577 (estimated locally),0.00 per call) sm2_srv_local_get_E/50 (153068534 (estimated locally),0.14 per call) sm2_srv_local_get_E/50 (153068534 (estimated locally),0.14 per call) sm2_srv_cipher_onepass/49 (78307991 (estimated locally),0.07 per call) sm2_read_plain_key.part.0/81 (170975492 (estimated locally),0.16 per call) 
+  Calls: 
+pke_srv_sm2_sign_handler/58 (pke_srv_sm2_sign_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: sm2_srv_sign_stepwise_handler/55 (inlined) (58882622 (estimated locally),0.05 per call) sm2_srv_sign_onepass/51 (inlined) (30333472 (estimated locally),0.03 per call) 
+pke_srv_sm2_cipher_handler/57 (pke_srv_sm2_cipher_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: sm2_srv_cipher_onepass/49 (215714732 (estimated locally),0.20 per call) 
+pke_srv_sm2_init/56 (pke_srv_sm2_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+sm2_srv_sign_stepwise_handler/55 (sm2_srv_sign_stepwise_handler)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sm2_srv_sign_stepwise_handler/55 is inline copy in pke_srv_sm2_sign_handler/58
+  Availability: local
+  Function flags: count:58882622 (estimated locally) body local
+  Called by: pke_srv_sm2_sign_handler/58 (inlined) (58882622 (estimated locally),0.05 per call) 
+  Calls: sm2_srv_sign_final/54 (inlined) (11776525 (estimated locally),0.01 per call) sm2_srv_sign_update/53 (2383569 (estimated locally),0.00 per call) sm2_srv_sign_init/52 (11776525 (estimated locally),0.01 per call) sm2_srv_sign_update/53 (11776525 (estimated locally),0.01 per call) sm2_srv_sign_init/52 (11776525 (estimated locally),0.01 per call) 
+sm2_srv_sign_final/54 (sm2_srv_sign_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sm2_srv_sign_final/54 is inline copy in pke_srv_sm2_sign_handler/58
+  Availability: local
+  Function flags: count:11776525 (estimated locally) body local
+  Called by: sm2_srv_sign_stepwise_handler/55 (inlined) (11776525 (estimated locally),0.01 per call) 
+  Calls: memset_/64 (11776525 (estimated locally),0.01 per call) sm2_srv_vry.part.0.constprop.0/91 (inlined) (207037 (estimated locally),0.00 per call) sm2_srv_sign/99 (inlined) (164028 (estimated locally),0.00 per call) sm2_sign_get_key.constprop.0/92 (2383569 (estimated locally),0.00 per call) pke_srv_hash_final/80 (11776525 (estimated locally),0.01 per call) 
+sm2_srv_sign_update/53 (sm2_srv_sign_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:241586419 (estimated locally) body local
+  Called by: sm2_srv_sign_stepwise_handler/55 (2383569 (estimated locally),0.00 per call) sm2_srv_sign_stepwise_handler/55 (11776525 (estimated locally),0.01 per call) 
+  Calls: pke_srv_dma_update/76 (282617437 (estimated locally),1.17 per call) pke_srv_cpu_update/75 (217325344 (estimated locally),0.90 per call) sm2_check_dma_mode/41 (241586419 (estimated locally),1.00 per call) 
+sm2_srv_sign_init/52 (sm2_srv_sign_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sm2_srv_sign_stepwise_handler/55 (11776525 (estimated locally),0.01 per call) sm2_srv_sign_stepwise_handler/55 (11776525 (estimated locally),0.01 per call) 
+  Calls: memset_/64 (1073741824 (estimated locally),1.00 per call) cpt_hash_rctx_switch_cpu_ctx/74 (29599315 (estimated locally),0.03 per call) cpt_hash_update/67 (182241592 (estimated locally),0.17 per call) cpt_hash_init/66 (43986649 (estimated locally),0.04 per call) cpt_sm2_getZ/65 (217325344 (estimated locally),0.20 per call) sm2_sign_get_key.constprop.0/92 (1073741824 (estimated locally),1.00 per call) 
+sm2_srv_sign_onepass/51 (sm2_srv_sign_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Function sm2_srv_sign_onepass/51 is inline copy in pke_srv_sm2_sign_handler/58
+  Availability: local
+  Function flags: count:30333472 (estimated locally) body local
+  Called by: pke_srv_sm2_sign_handler/58 (inlined) (30333472 (estimated locally),0.03 per call) 
+  Calls: memset_/64 (30333472 (estimated locally),0.03 per call) sm2_srv_vry.part.0.constprop.0/98 (inlined) (417102 (estimated locally),0.00 per call) sm2_srv_sign/47 (inlined) (330454 (estimated locally),0.00 per call) mmap_read_remote_data/59 (1398577 (estimated locally),0.00 per call) sm2_srv_local_get_E/50 (3403416 (estimated locally),0.00 per call) sm2_sign_get_key.constprop.0/92 (30333472 (estimated locally),0.03 per call) 
+sm2_srv_local_get_E/50 (sm2_srv_local_get_E)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sm2_srv_sign_onepass/51 (3403416 (estimated locally),0.00 per call) 
+  Calls: cpt_hash_final/70 (6270569 (estimated locally),0.01 per call) cpt_hash_update/67 (30981071 (estimated locally),0.03 per call) mmap_read_remote_data/59 (153068534 (estimated locally),0.14 per call) memcpy_/71 (753722 (estimated locally),0.00 per call) cpt_hash_dma_final/69 (6270569 (estimated locally),0.01 per call) cpt_hash_ctx_switch/68 (6270569 (estimated locally),0.01 per call) cpt_hash_update/67 (30981071 (estimated locally),0.03 per call) mmap_read_remote_data/59 (153068534 (estimated locally),0.14 per call) cpt_hash_update/67 (43986649 (estimated locally),0.04 per call) cpt_hash_init/66 (217325344 (estimated locally),0.20 per call) cpt_sm2_getZ/65 (1073741824 (estimated locally),1.00 per call) 
+sm2_srv_cipher_onepass/49 (sm2_srv_cipher_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) body local
+  Called by: pke_srv_sm2_cipher_handler/57 (215714732 (estimated locally),0.20 per call) 
+  Calls: memset_/64 (1073741824 (estimated locally),1.00 per call) mmap_write_remote_data/60 (4324333 (estimated locally),0.00 per call) cpt_sm2_decrypt/63 (13312359 (estimated locally),0.01 per call) cpt_sm2_encrypt/62 (13312359 (estimated locally),0.01 per call) mmap_read_remote_data/59 (78307991 (estimated locally),0.07 per call) sm2_cipher_get_key.constprop.0/95 (inlined) (1073741822 (estimated locally),1.00 per call) 
+sm2_srv_sign/47 (sm2_srv_sign)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 99
+  References: 
+  Referring: 
+  Function sm2_srv_sign/47 is inline copy in pke_srv_sm2_sign_handler/58
+  Availability: local
+  Function flags: count:330454 (estimated locally) body local
+  Called by: sm2_srv_sign_onepass/51 (inlined) (330454 (estimated locally),0.00 per call) 
+  Calls: mmap_write_remote_data/60 (53672 (estimated locally),0.00 per call) cpt_sm2_sign/72 (330454 (estimated locally),0.00 per call) 
+sm2_sign_get_key/46 (sm2_sign_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741816 (estimated locally) body
+  Called by: 
+  Calls: 
+sm2_sign_get_key_from_key_handle/45 (sm2_sign_get_key_from_key_handle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+sm2_cipher_get_key/44 (sm2_cipher_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741816 (estimated locally) body
+  Called by: 
+  Calls: 
+sm2_cipher_get_key_from_key_handle/42 (sm2_cipher_get_key_from_key_handle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: 
+sm2_check_dma_mode/41 (sm2_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sm2_srv_sign_update/53 (241586419 (estimated locally),1.00 per call) 
+  Calls: cpu_exit_critical/79 (1073741824 (estimated locally),1.00 per call) memcpy_/71 (574129752 (estimated locally),0.53 per call) mmap_remap_addr_u64/78 (1073741824 (estimated locally),1.00 per call) cpu_enter_critical/77 (1073741824 (estimated locally),1.00 per call) 
+cloning sm2_cipher_get_key_from_key_handle/42 to sm2_cipher_get_key_from_key_handle.constprop/96
+    replace map: 2 -> 100
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t sm2_cipher_get_key_from_key_handle (const struct mb_cmd_sm2_cipher_st * sm2_cipher_cmd_data, uint8_t * key_buf, uint32_t buff_size, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t check_usage_bits;
+  uint8_t req_kpart;
+  struct kms_keydata_st keydata;
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  unsigned char _3;
+  uint8_t * _4;
+  uint8_t * _5;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  _1 = sm2_cipher_cmd_data_11(D)->direction;
+  if (_1 == 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870911]:
+  # DEBUG BEGIN_STMT
+  # DEBUG req_kpart => 2
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 8
+
+  <bb 4> [local count: 1073741822]:
+  # req_kpart_7 = PHI <1(2), 2(3)>
+  # check_usage_bits_8 = PHI <4(2), 8(3)>
+  # DEBUG check_usage_bits => check_usage_bits_8
+  # DEBUG req_kpart => req_kpart_7
+  # DEBUG BEGIN_STMT
+  _2 = sm2_cipher_cmd_data_11(D)->key_handle;
+  ret_15 = kms_read_key (_2, key_buf_12(D), buff_size_13(D), &keydata, req_kpart_7, check_usage_bits_8);
+  # DEBUG ret => ret_15
+  # DEBUG BEGIN_STMT
+  if (ret_15 == 2774162085)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 7>; [66.00%]
+
+  <bb 5> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _3 = keydata.algo_id;
+  if (_3 == 8)
+    goto <bb 6>; [34.00%]
+  else
+    goto <bb 7>; [66.00%]
+
+  <bb 6> [local count: 124124557]:
+  # DEBUG BEGIN_STMT
+  _4 = keydata.keypair.ecc.pub_key;
+  *pubkey_16(D) = _4;
+  # DEBUG BEGIN_STMT
+  _5 = keydata.keypair.ecc.priv_key;
+  *prikey_18(D) = _5;
+
+  <bb 7> [local count: 1073741824]:
+  # ret_6 = PHI <ret_15(4), 2774162085(6), 11(5)>
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_6;
+
+}
+
+
+uint32_t sm2_cipher_get_key_from_key_handle.constprop (const struct mb_cmd_sm2_cipher_st * sm2_cipher_cmd_data, uint8_t * key_buf, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  struct kms_keydata_st keydata;
+  uint8_t req_kpart;
+  uint32_t check_usage_bits;
+  uint32_t buff_size;
+  unsigned char _2;
+  long unsigned int _3;
+  unsigned char _8;
+  uint8_t * _9;
+  uint8_t * _11;
+
+  <bb 8> [local count: 1073741822]:
+  # DEBUG buff_size => 100
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  _2 = sm2_cipher_cmd_data_1(D)->direction;
+  if (_2 == 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870911]:
+  # DEBUG BEGIN_STMT
+  # DEBUG req_kpart => 2
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 8
+
+  <bb 4> [local count: 1073741822]:
+  # req_kpart_5 = PHI <1(2), 2(3)>
+  # check_usage_bits_6 = PHI <4(2), 8(3)>
+  # DEBUG check_usage_bits => check_usage_bits_6
+  # DEBUG req_kpart => req_kpart_5
+  # DEBUG BEGIN_STMT
+  _3 = sm2_cipher_cmd_data_1(D)->key_handle;
+  ret_7 = kms_read_key (_3, key_buf_4(D), 100, &keydata, req_kpart_5, check_usage_bits_6);
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  if (ret_7 == 2774162085)
+    goto <bb 5>; [34.00%]
+  else
+    goto <bb 7>; [66.00%]
+
+  <bb 5> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _8 = keydata.algo_id;
+  if (_8 == 8)
+    goto <bb 6>; [34.00%]
+  else
+    goto <bb 7>; [66.00%]
+
+  <bb 6> [local count: 124124557]:
+  # DEBUG BEGIN_STMT
+  _9 = keydata.keypair.ecc.pub_key;
+  *pubkey_10(D) = _9;
+  # DEBUG BEGIN_STMT
+  _11 = keydata.keypair.ecc.priv_key;
+  *prikey_12(D) = _11;
+
+  <bb 7> [local count: 1073741824]:
+  # ret_13 = PHI <ret_7(4), 11(5), 2774162085(6)>
+  # DEBUG ret => ret_13
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_13;
+
+}
+
+
+cloning sm2_cipher_get_key/44 to sm2_cipher_get_key.constprop/95
+    replace map: 2 -> 100
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t sm2_cipher_get_key (const struct mb_cmd_sm2_cipher_st * sm2_cipher_cmd_data, uint8_t * key_buf, uint32_t buff_size, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  uint32_t ret;
+  unsigned char _1;
+  long long unsigned int _2;
+
+  <bb 2> [local count: 1073741816]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = sm2_cipher_cmd_data_6(D)->key_type;
+  switch (_1) <default: <L5>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913942]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = sm2_cipher_cmd_data_6(D)->plain_key_addr;
+  # DEBUG plain_key_addr => _2
+  # DEBUG key_buf => key_buf_7(D)
+  # DEBUG buff_size => buff_size_8(D)
+  # DEBUG pubkey => pubkey_9(D)
+  # DEBUG prikey => prikey_10(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG sm2_key_size => 97
+  # DEBUG BEGIN_STMT
+  if (buff_size_8(D) <= 96)
+    goto <bb 6>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG D#2 => buff_size_8(D)
+  ret_13 = sm2_read_plain_key.part.0 (_2, key_buf_7(D), pubkey_9(D), prikey_10(D));
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 357913942]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  ret_12 = sm2_cipher_get_key_from_key_handle (sm2_cipher_cmd_data_6(D), key_buf_7(D), buff_size_8(D), pubkey_9(D), prikey_10(D));
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+
+  <bb 6> [local count: 1073741824]:
+  # ret_3 = PHI <ret_13(4), ret_12(5), 85(2), 20(3)>
+<L5>:
+  # DEBUG plain_key_addr => NULL
+  # DEBUG key_buf => NULL
+  # DEBUG buff_size => NULL
+  # DEBUG pubkey => NULL
+  # DEBUG prikey => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t sm2_cipher_get_key.constprop (const struct mb_cmd_sm2_cipher_st * sm2_cipher_cmd_data, uint8_t * key_buf, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  uint32_t ret;
+  uint32_t buff_size;
+  unsigned char _2;
+  long long unsigned int _3;
+
+  <bb 7> [local count: 1073741816]:
+  # DEBUG buff_size => 100
+
+  <bb 2> [local count: 1073741816]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = sm2_cipher_cmd_data_1(D)->key_type;
+  switch (_2) <default: <L2>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913942]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _3 = sm2_cipher_cmd_data_1(D)->plain_key_addr;
+  # DEBUG plain_key_addr => _3
+  # DEBUG key_buf => key_buf_4(D)
+  # DEBUG buff_size => 100
+  # DEBUG pubkey => pubkey_5(D)
+  # DEBUG prikey => prikey_6(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG sm2_key_size => 97
+  # DEBUG BEGIN_STMT
+  if (0 != 0)
+    goto <bb 6>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG D#2 => 100
+  ret_7 = sm2_read_plain_key.part.0 (_3, key_buf_4(D), pubkey_5(D), prikey_6(D));
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 357913942]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  ret_8 = sm2_cipher_get_key_from_key_handle (sm2_cipher_cmd_data_1(D), key_buf_4(D), 100, pubkey_5(D), prikey_6(D));
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+
+  <bb 6> [local count: 1073741824]:
+  # ret_9 = PHI <85(2), 20(3), ret_7(4), ret_8(5)>
+<L2>:
+  # DEBUG plain_key_addr => NULL
+  # DEBUG key_buf => NULL
+  # DEBUG buff_size => NULL
+  # DEBUG pubkey => NULL
+  # DEBUG prikey => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_9
+  # DEBUG BEGIN_STMT
+  return ret_9;
+
+}
+
+
+updating call of sm2_srv_cipher_onepass/49 -> sm2_cipher_get_key.constprop/95: ret_21 = sm2_cipher_get_key (sm2_cipher_cmd_data_16(D), &key_buf, 100, &pubkey, &prikey);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_21 = sm2_cipher_get_key.constprop (sm2_cipher_cmd_data_16(D), &key_buf, &pubkey, &prikey);
+updating call of sm2_srv_cipher_onepass/49 -> sm2_cipher_get_key_from_key_handle.constprop/96: ret_44 = sm2_cipher_get_key_from_key_handle (sm2_cipher_cmd_data_16(D), &key_buf, 100, &pubkey, &prikey);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_44 = sm2_cipher_get_key_from_key_handle.constprop (sm2_cipher_cmd_data_16(D), &key_buf, &pubkey, &prikey);
+cloning sm2_sign_get_key/46 to sm2_sign_get_key.constprop/92
+    replace map: 2 -> 100
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t sm2_sign_get_key (const struct mb_cmd_sm2_sign_st * sm2_sign_cmd_data, uint8_t * key_buf, uint32_t buff_size, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  unsigned char _1;
+
+  <bb 2> [local count: 1073741816]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = sm2_sign_cmd_data_5(D)->key_type;
+  switch (_1) <default: <L5>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  ret_2 = sm2_sign_get_key.part.0 (sm2_sign_cmd_data_5(D), key_buf_6(D), buff_size_7(D), pubkey_8(D), prikey_9(D));
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 357913942]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  ret_11 = sm2_sign_get_key_from_key_handle (sm2_sign_cmd_data_5(D), key_buf_6(D), buff_size_7(D), pubkey_8(D), prikey_9(D));
+  # DEBUG ret => ret_11
+  # DEBUG BEGIN_STMT
+
+  <bb 5> [local count: 1073741824]:
+  # ret_3 = PHI <ret_2(3), ret_11(4), 85(2)>
+<L5>:
+  # DEBUG ret => ret_3
+  # DEBUG BEGIN_STMT
+  return ret_3;
+
+}
+
+
+uint32_t sm2_sign_get_key.constprop (const struct mb_cmd_sm2_sign_st * sm2_sign_cmd_data, uint8_t * key_buf, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  uint32_t buff_size;
+  unsigned char _2;
+
+  <bb 6> [local count: 1073741816]:
+  # DEBUG buff_size => 100
+
+  <bb 2> [local count: 1073741816]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _2 = sm2_sign_cmd_data_1(D)->key_type;
+  switch (_2) <default: <L2>, case 0: <L1>, case 1: <L0>>
+
+  <bb 3> [local count: 357913941]:
+<L0>:
+  ret_6 = sm2_sign_get_key.part.0 (sm2_sign_cmd_data_1(D), key_buf_3(D), 100, pubkey_4(D), prikey_5(D));
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 357913942]:
+<L1>:
+  # DEBUG BEGIN_STMT
+  ret_7 = sm2_sign_get_key_from_key_handle (sm2_sign_cmd_data_1(D), key_buf_3(D), 100, pubkey_4(D), prikey_5(D));
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+
+  <bb 5> [local count: 1073741824]:
+  # ret_8 = PHI <85(2), ret_6(3), ret_7(4)>
+<L2>:
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+cloning sm2_sign_get_key.part.0/83 to sm2_sign_get_key.part.0.constprop/93
+    replace map: 2 -> 100
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t sm2_sign_get_key.part.0 (const struct mb_cmd_sm2_sign_st * sm2_sign_cmd_data, uint8_t * key_buf, uint32_t buff_size, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  uint32_t D.7531;
+  uint32_t ret;
+  long long unsigned int _2;
+
+  <bb 5> [local count: 357913941]:
+
+  <bb 2> [local count: 357913943]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = sm2_sign_cmd_data_1(D)->plain_key_addr;
+  # DEBUG plain_key_addr => _2
+  # DEBUG key_buf => key_buf_4(D)
+  # DEBUG buff_size => buff_size_3(D)
+  # DEBUG pubkey => pubkey_5(D)
+  # DEBUG prikey => prikey_6(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG sm2_key_size => 97
+  # DEBUG BEGIN_STMT
+  if (buff_size_3(D) <= 96)
+    goto <bb 4>; [52.23%]
+  else
+    goto <bb 3>; [47.77%]
+
+  <bb 3> [local count: 170975491]:
+  # DEBUG D#2 => buff_size_3(D)
+  ret_7 = sm2_read_plain_key.part.0 (_2, key_buf_4(D), pubkey_5(D), prikey_6(D));
+
+  <bb 4> [local count: 357913942]:
+  # ret_8 = PHI <20(2), ret_7(3)>
+<L1>:
+  # DEBUG plain_key_addr => NULL
+  # DEBUG key_buf => NULL
+  # DEBUG buff_size => NULL
+  # DEBUG pubkey => NULL
+  # DEBUG prikey => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  return ret_8;
+
+}
+
+
+uint32_t sm2_sign_get_key.part.0.constprop (const struct mb_cmd_sm2_sign_st * sm2_sign_cmd_data, uint8_t * key_buf, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  uint32_t D.7777;
+  uint32_t ret;
+  uint32_t buff_size;
+  long long unsigned int _2;
+
+  <bb 6> [local count: 357913941]:
+  # DEBUG buff_size => 100
+
+  <bb 2> [local count: 357913941]:
+
+  <bb 3> [local count: 357913943]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = sm2_sign_cmd_data_1(D)->plain_key_addr;
+  # DEBUG plain_key_addr => _2
+  # DEBUG key_buf => key_buf_3(D)
+  # DEBUG buff_size => 100
+  # DEBUG pubkey => pubkey_4(D)
+  # DEBUG prikey => prikey_5(D)
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG sm2_key_size => 97
+  # DEBUG BEGIN_STMT
+  if (0 != 0)
+    goto <bb 5>; [52.23%]
+  else
+    goto <bb 4>; [47.77%]
+
+  <bb 4> [local count: 170975491]:
+  # DEBUG D#2 => 100
+  ret_6 = sm2_read_plain_key.part.0 (_2, key_buf_3(D), pubkey_4(D), prikey_5(D));
+
+  <bb 5> [local count: 357913942]:
+  # ret_7 = PHI <20(3), ret_6(4)>
+<L1>:
+  # DEBUG plain_key_addr => NULL
+  # DEBUG key_buf => NULL
+  # DEBUG buff_size => NULL
+  # DEBUG pubkey => NULL
+  # DEBUG prikey => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => ret_7
+  # DEBUG BEGIN_STMT
+  return ret_7;
+
+}
+
+
+cloning sm2_sign_get_key_from_key_handle/45 to sm2_sign_get_key_from_key_handle.constprop/94
+    replace map: 2 -> 100
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+uint32_t sm2_sign_get_key_from_key_handle (const struct mb_cmd_sm2_sign_st * sm2_sign_cmd_data, uint8_t * key_buf, uint32_t buff_size, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint8_t process_mode;
+  uint32_t check_usage_bits;
+  uint8_t req_kpart;
+  struct kms_keydata_st keydata;
+  uint32_t ret;
+  unsigned char _1;
+  long unsigned int _2;
+  unsigned char _3;
+  uint8_t * _4;
+  uint8_t * _5;
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  process_mode_12 = sm2_sign_cmd_data_11(D)->process_mode;
+  # DEBUG process_mode => process_mode_12
+  # DEBUG BEGIN_STMT
+  if (process_mode_12 == 1)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 3>; [66.00%]
+
+  <bb 3> [local count: 708669599]:
+  if (process_mode_12 == 3)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 4> [local count: 467721933]:
+  # DEBUG BEGIN_STMT
+  _1 = sm2_sign_cmd_data_11(D)->direction;
+  if (_1 == 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 233860966]:
+  # DEBUG BEGIN_STMT
+  if (process_mode_12 == 7)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 6>; [66.00%]
+
+  <bb 6> [local count: 154348237]:
+
+  <bb 7> [local count: 1073741824]:
+  # req_kpart_7 = PHI <1(3), 1(4), 2(6), 1(2), 3(5)>
+  # check_usage_bits_8 = PHI <0(3), 2(4), 1(6), 0(2), 1(5)>
+  # DEBUG check_usage_bits => check_usage_bits_8
+  # DEBUG req_kpart => req_kpart_7
+  # DEBUG BEGIN_STMT
+  _2 = sm2_sign_cmd_data_11(D)->key_handle;
+  ret_16 = kms_read_key (_2, key_buf_13(D), buff_size_14(D), &keydata, req_kpart_7, check_usage_bits_8);
+  # DEBUG ret => ret_16
+  # DEBUG BEGIN_STMT
+  if (ret_16 == 2774162085)
+    goto <bb 8>; [34.00%]
+  else
+    goto <bb 10>; [66.00%]
+
+  <bb 8> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _3 = keydata.algo_id;
+  if (_3 == 8)
+    goto <bb 9>; [34.00%]
+  else
+    goto <bb 10>; [66.00%]
+
+  <bb 9> [local count: 124124557]:
+  # DEBUG BEGIN_STMT
+  _4 = keydata.keypair.ecc.pub_key;
+  *pubkey_17(D) = _4;
+  # DEBUG BEGIN_STMT
+  _5 = keydata.keypair.ecc.priv_key;
+  *prikey_19(D) = _5;
+
+  <bb 10> [local count: 1073741824]:
+  # ret_6 = PHI <ret_16(7), 2774162085(9), 11(8)>
+  # DEBUG ret => ret_6
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_6;
+
+}
+
+
+uint32_t sm2_sign_get_key_from_key_handle.constprop (const struct mb_cmd_sm2_sign_st * sm2_sign_cmd_data, uint8_t * key_buf, uint8_t * * pubkey, uint8_t * * prikey)
+{
+  uint32_t ret;
+  struct kms_keydata_st keydata;
+  uint8_t req_kpart;
+  uint32_t check_usage_bits;
+  uint8_t process_mode;
+  uint32_t buff_size;
+  unsigned char _3;
+  long unsigned int _4;
+  unsigned char _9;
+  uint8_t * _10;
+  uint8_t * _12;
+
+  <bb 11> [local count: 1073741822]:
+  # DEBUG buff_size => 100
+
+  <bb 2> [local count: 1073741822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG check_usage_bits => 0
+  # DEBUG BEGIN_STMT
+  process_mode_2 = sm2_sign_cmd_data_1(D)->process_mode;
+  # DEBUG process_mode => process_mode_2
+  # DEBUG BEGIN_STMT
+  if (process_mode_2 == 1)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 3>; [66.00%]
+
+  <bb 3> [local count: 708669599]:
+  if (process_mode_2 == 3)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 4> [local count: 467721933]:
+  # DEBUG BEGIN_STMT
+  _3 = sm2_sign_cmd_data_1(D)->direction;
+  if (_3 == 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 233860966]:
+  # DEBUG BEGIN_STMT
+  if (process_mode_2 == 7)
+    goto <bb 7>; [34.00%]
+  else
+    goto <bb 6>; [66.00%]
+
+  <bb 6> [local count: 154348237]:
+
+  <bb 7> [local count: 1073741824]:
+  # req_kpart_6 = PHI <1(2), 1(3), 1(4), 3(5), 2(6)>
+  # check_usage_bits_7 = PHI <0(2), 0(3), 2(4), 1(5), 1(6)>
+  # DEBUG check_usage_bits => check_usage_bits_7
+  # DEBUG req_kpart => req_kpart_6
+  # DEBUG BEGIN_STMT
+  _4 = sm2_sign_cmd_data_1(D)->key_handle;
+  ret_8 = kms_read_key (_4, key_buf_5(D), 100, &keydata, req_kpart_6, check_usage_bits_7);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 == 2774162085)
+    goto <bb 8>; [34.00%]
+  else
+    goto <bb 10>; [66.00%]
+
+  <bb 8> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _9 = keydata.algo_id;
+  if (_9 == 8)
+    goto <bb 9>; [34.00%]
+  else
+    goto <bb 10>; [66.00%]
+
+  <bb 9> [local count: 124124557]:
+  # DEBUG BEGIN_STMT
+  _10 = keydata.keypair.ecc.pub_key;
+  *pubkey_11(D) = _10;
+  # DEBUG BEGIN_STMT
+  _12 = keydata.keypair.ecc.priv_key;
+  *prikey_13(D) = _12;
+
+  <bb 10> [local count: 1073741824]:
+  # ret_14 = PHI <ret_8(7), 11(8), 2774162085(9)>
+  # DEBUG ret => ret_14
+  # DEBUG BEGIN_STMT
+  keydata ={v} {CLOBBER(eos)};
+  return ret_14;
+
+}
+
+
+updating call of sm2_sign_get_key.constprop/92 -> sm2_sign_get_key.part.0.constprop/93: ret_6 = sm2_sign_get_key.part.0 (sm2_sign_cmd_data_1(D), key_buf_3(D), 100, pubkey_4(D), prikey_5(D));
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_6 = sm2_sign_get_key.part.0.constprop (sm2_sign_cmd_data_1(D), key_buf_3(D), pubkey_4(D), prikey_5(D));
+updating call of sm2_sign_get_key.constprop/92 -> sm2_sign_get_key_from_key_handle.constprop/94: ret_7 = sm2_sign_get_key_from_key_handle (sm2_sign_cmd_data_1(D), key_buf_3(D), 100, pubkey_4(D), prikey_5(D));
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_7 = sm2_sign_get_key_from_key_handle.constprop (sm2_sign_cmd_data_1(D), key_buf_3(D), pubkey_4(D), prikey_5(D));
+updating call of sm2_srv_sign_init/52 -> sm2_sign_get_key.constprop/92: ret_11 = sm2_sign_get_key (sm2_sign_cmd_data_9(D), &key_buf, 100, &pubkey, &prikey);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_11 = sm2_sign_get_key.constprop (sm2_sign_cmd_data_9(D), &key_buf, &pubkey, &prikey);
+updating call of pke_srv_sm2_sign_handler/58 -> sm2_sign_get_key.constprop/92: ret_14 = sm2_sign_get_key (req_data_6(D), &key_buf, 100, &pubkey, &prikey);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_14 = sm2_sign_get_key.constprop (req_data_6(D), &key_buf, &pubkey, &prikey);
+updating call of pke_srv_sm2_sign_handler/58 -> sm2_srv_vry.part.0.constprop/98: ret_32 = sm2_srv_vry.part.0 (&E, pubkey.9_29, _30, rsp_data_7(D));
+  updated to:ret_32 = sm2_srv_vry.part.0.constprop (&E, pubkey.9_29, _30, rsp_data_7(D));
+cloning sm2_srv_vry.part.0/86 to sm2_srv_vry.part.0.constprop/91
+uint32_t sm2_srv_vry.part.0 (const uint8_t * E, const uint8_t * pubkey, raddr_t rs_addr, struct cmd_rsp_data_st * rsp_data)
+{
+  uint32_t ret;
+  uint8_t signature[64];
+  uint32_t D.7592;
+  uint32_t ret;
+  uint32_t rbuf_sz;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int iftmp.12_9;
+  long unsigned int _10;
+  long unsigned int _11;
+
+  <bb 7> [local count: 343919503]:
+  # DEBUG D#3 s=> rbuf_sz
+  # DEBUG rbuf_sz => D#3
+
+  <bb 2> [local count: 343919505]:
+  # DEBUG BEGIN_STMT
+  ret_2 = mmap_read_remote_data (&signature, rs_addr_1(D), 64);
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  if (ret_2 == 2774162085)
+    goto <bb 3>; [12.02%]
+  else
+    goto <bb 6>; [87.98%]
+
+  <bb 3> [local count: 41339125]:
+  # DEBUG BEGIN_STMT
+  rsp_data_3(D)->data[0] = 0;
+  # DEBUG BEGIN_STMT
+  _4 = rsp_data_3(D)->rsp_data_len;
+  _5 = _4 + 4;
+  rsp_data_3(D)->rsp_data_len = _5;
+  # DEBUG BEGIN_STMT
+  # DEBUG E => E_6(D)
+  # DEBUG pubKey => pubkey_7(D)
+  # DEBUG signature => &signature
+  # DEBUG BEGIN_STMT
+  ret_8 = cpt_sm2_verify (E_6(D), pubkey_7(D), &signature);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 != 2774162085)
+    goto <bb 4>; [66.00%]
+  else
+    goto <bb 5>; [34.00%]
+
+  <bb 4> [local count: 27283822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 37
+  # DEBUG BEGIN_STMT
+  # DEBUG E => NULL
+  # DEBUG pubKey => NULL
+  # DEBUG signature => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => 37
+  # DEBUG BEGIN_STMT
+
+  <bb 5> [local count: 41339125]:
+  # iftmp.12_9 = PHI <0(3), 37(4)>
+  # DEBUG E => NULL
+  # DEBUG pubKey => NULL
+  # DEBUG signature => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => NULL
+  rsp_data_3(D)->data[1] = iftmp.12_9;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _10 = rsp_data_3(D)->rsp_data_len;
+  _11 = _10 + 4;
+  rsp_data_3(D)->rsp_data_len = _11;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+
+  <bb 6> [local count: 343919506]:
+  # ret_12 = PHI <ret_2(2), 2774162085(5)>
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  signature ={v} {CLOBBER(eos)};
+  return ret_12;
+
+}
+
+
+uint32_t sm2_srv_vry.part.0.constprop (const uint8_t * E, const uint8_t * pubkey, raddr_t rs_addr, struct cmd_rsp_data_st * rsp_data)
+{
+  uint32_t rbuf_sz;
+  uint32_t ret;
+  uint32_t D.7889;
+  uint8_t signature[64];
+  uint32_t ret;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int iftmp.12_9;
+  long unsigned int _10;
+  long unsigned int _11;
+
+  <bb 8> [local count: 343919503]:
+
+  <bb 2> [local count: 343919503]:
+  # DEBUG D#3 s=> rbuf_sz
+  # DEBUG rbuf_sz => D#3
+
+  <bb 3> [local count: 343919505]:
+  # DEBUG BEGIN_STMT
+  ret_2 = mmap_read_remote_data (&signature, rs_addr_1(D), 64);
+  # DEBUG ret => ret_2
+  # DEBUG BEGIN_STMT
+  if (ret_2 == 2774162085)
+    goto <bb 4>; [12.02%]
+  else
+    goto <bb 7>; [87.98%]
+
+  <bb 4> [local count: 41339125]:
+  # DEBUG BEGIN_STMT
+  rsp_data_3(D)->data[0] = 0;
+  # DEBUG BEGIN_STMT
+  _4 = rsp_data_3(D)->rsp_data_len;
+  _5 = _4 + 4;
+  rsp_data_3(D)->rsp_data_len = _5;
+  # DEBUG BEGIN_STMT
+  # DEBUG E => E_6(D)
+  # DEBUG pubKey => pubkey_7(D)
+  # DEBUG signature => &signature
+  # DEBUG BEGIN_STMT
+  ret_8 = cpt_sm2_verify (E_6(D), pubkey_7(D), &signature);
+  # DEBUG ret => ret_8
+  # DEBUG BEGIN_STMT
+  if (ret_8 != 2774162085)
+    goto <bb 5>; [66.00%]
+  else
+    goto <bb 6>; [34.00%]
+
+  <bb 5> [local count: 27283822]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 37
+  # DEBUG BEGIN_STMT
+  # DEBUG E => NULL
+  # DEBUG pubKey => NULL
+  # DEBUG signature => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => 37
+  # DEBUG BEGIN_STMT
+
+  <bb 6> [local count: 41339125]:
+  # iftmp.12_9 = PHI <0(4), 37(5)>
+  # DEBUG E => NULL
+  # DEBUG pubKey => NULL
+  # DEBUG signature => NULL
+  # DEBUG ret => NULL
+  # DEBUG ret => NULL
+  rsp_data_3(D)->data[1] = iftmp.12_9;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _10 = rsp_data_3(D)->rsp_data_len;
+  _11 = _10 + 4;
+  rsp_data_3(D)->rsp_data_len = _11;
+  # DEBUG BEGIN_STMT
+  # DEBUG ret => 2774162085
+
+  <bb 7> [local count: 343919506]:
+  # ret_12 = PHI <ret_2(3), 2774162085(6)>
+  # DEBUG ret => ret_12
+  # DEBUG BEGIN_STMT
+  signature ={v} {CLOBBER(eos)};
+  return ret_12;
+
+}
+
+
+updating call of pke_srv_sm2_sign_handler/58 -> sm2_sign_get_key.constprop/92: ret_56 = sm2_sign_get_key (req_data_6(D), &key_buf, 100, &pubkey, &prikey);
+    m_always_copy_start: 5
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 3, prev_clone_index: 3
+                             3. IPA_PARAM_OP_COPY , base_index: 4, prev_clone_index: 4
+  updated to:ret_56 = sm2_sign_get_key.constprop (req_data_6(D), &key_buf, &pubkey, &prikey);
+updating call of pke_srv_sm2_sign_handler/58 -> sm2_srv_vry.part.0.constprop/91: ret_65 = sm2_srv_vry.part.0 (&digest, pubkey.17_62, _63, rsp_data_7(D));
+  updated to:ret_65 = sm2_srv_vry.part.0.constprop (&digest, pubkey.17_62, _63, rsp_data_7(D));
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+sm2_sign_get_key.constprop.0/92 (sm2_sign_get_key.constprop)
+  Type: function definition analyzed
+  Visibility: asm_written section:.text.sm2_sign_get_key.constprop.0 (implicit_section) artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741816 (estimated locally) local
+  Called by: 
+  Calls: 
+sm2_srv_vry.part.0/86 (sm2_srv_vry.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:343919503 (estimated locally) split_part
+  Called by: 
+  Calls: 
+sm2_sign_get_key.part.0/83 (sm2_sign_get_key.part.0)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:357913941 (estimated locally) split_part
+  Called by: 
+  Calls: 
+pke_srv_hash_final/80 (pke_srv_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_exit_critical/79 (cpu_exit_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_remap_addr_u64/78 (mmap_remap_addr_u64)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpu_enter_critical/77 (cpu_enter_critical)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_dma_update/76 (pke_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_cpu_update/75 (pke_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_rctx_switch_cpu_ctx/74 (cpt_hash_rctx_switch_cpu_ctx)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_verify/73 (cpt_sm2_verify)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_sign/72 (cpt_sm2_sign)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memcpy_/71 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_final/70 (cpt_hash_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_dma_final/69 (cpt_hash_dma_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_ctx_switch/68 (cpt_hash_ctx_switch)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_update/67 (cpt_hash_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_hash_init/66 (cpt_hash_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_getZ/65 (cpt_sm2_getZ)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+memset_/64 (memset_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_decrypt/63 (cpt_sm2_decrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+cpt_sm2_encrypt/62 (cpt_sm2_encrypt)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+kms_read_key/61 (kms_read_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_write_remote_data/60 (mmap_write_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+mmap_read_remote_data/59 (mmap_read_remote_data)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_sm2_sign_handler/58 (pke_srv_sm2_sign_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_sm2_sign_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_sm2_cipher_handler/57 (pke_srv_sm2_cipher_handler)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_sm2_cipher_handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_sm2_init/56 (pke_srv_sm2_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_sm2_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+sm2_srv_sign_update/53 (sm2_srv_sign_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm2_srv_sign_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:241586419 (estimated locally) local
+  Called by: 
+  Calls: 
+sm2_srv_sign_init/52 (sm2_srv_sign_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm2_srv_sign_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+sm2_srv_local_get_E/50 (sm2_srv_local_get_E)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm2_srv_local_get_E (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 
+sm2_srv_cipher_onepass/49 (sm2_srv_cipher_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm2_srv_cipher_onepass (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741822 (estimated locally) local
+  Called by: 
+  Calls: 
+sm2_sign_get_key/46 (sm2_sign_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741816 (estimated locally)
+  Called by: 
+  Calls: 
+sm2_sign_get_key_from_key_handle/45 (sm2_sign_get_key_from_key_handle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+sm2_cipher_get_key/44 (sm2_cipher_get_key)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741816 (estimated locally)
+  Called by: 
+  Calls: 
+sm2_cipher_get_key_from_key_handle/42 (sm2_cipher_get_key_from_key_handle)
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
+sm2_check_dma_mode/41 (sm2_check_dma_mode)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sm2_check_dma_mode (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local
+  Called by: 
+  Calls: 

@@ -1,0 +1,799 @@
+Trivially needed symbols: util_chartohex/23 util_hextochar/22 util_data_sec_double_check/21 set_uint32/20 get_uint32/19 util_crc32/18 util_memmove/17
+
+
+Initial Symbol table:
+
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+uint32_cmp_sec/25 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+fid_delay/24 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+util_chartohex/23 (util_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_chartohex_internal/16 util_chartohex_internal/16 
+util_hextochar/22 (util_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1591f2cdd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_hextochar_internal/15 util_hextochar_internal/15 
+util_data_sec_double_check/21 (util_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1591f2ccc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp_sec/25 fid_delay/24 uint32_cmp_sec/25 fid_delay/24 util_memcpy/9 util_memcpy/9 
+set_uint32/20 (set_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1591f2cbb0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+get_uint32/19 (get_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1591f2caa0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_crc32/18 (util_crc32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1591f2c990
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_memmove/17 (util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f1591f2c880
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_chartohex_internal/16 (util_chartohex_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_chartohex/23 
+  Calls: 
+util_hextochar_internal/15 (util_hextochar_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f1591f2cdd0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_hextochar/22 util_hextochar/22 
+  Calls: 
+util_write_volatile_u32/14 (util_write_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_read_volatile_u32/13 (util_read_volatile_u32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_u32_copy/12 (util_u32_copy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcmp/11 (util_memcmp)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memset/10 (util_memset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7f1591f2ccc0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_hextochar/22 util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: memcpy_/26 
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+Removing unused symbols: util_write_volatile_u32/14 util_read_volatile_u32/13 util_u32_copy/12 util_memcmp/11 util_memset/10 check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+uint32_cmp_sec/25 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+fid_delay/24 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+util_chartohex/23 (util_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_chartohex_internal/16 util_chartohex_internal/16 
+util_hextochar/22 (util_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_hextochar_internal/15 util_hextochar_internal/15 
+util_data_sec_double_check/21 (util_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp_sec/25 fid_delay/24 uint32_cmp_sec/25 fid_delay/24 util_memcpy/9 util_memcpy/9 
+set_uint32/20 (set_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+get_uint32/19 (get_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_crc32/18 (util_crc32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_memmove/17 (util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_chartohex_internal/16 (util_chartohex_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_chartohex/23 
+  Calls: 
+util_hextochar_internal/15 (util_hextochar_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_hextochar/22 util_hextochar/22 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_hextochar/22 util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: memcpy_/26 
+
+
+Initial Symbol table:
+
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+uint32_cmp_sec/25 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+fid_delay/24 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+util_chartohex/23 (util_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_chartohex_internal/16 util_chartohex_internal/16 
+util_hextochar/22 (util_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_hextochar_internal/15 util_hextochar_internal/15 
+util_data_sec_double_check/21 (util_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp_sec/25 fid_delay/24 uint32_cmp_sec/25 fid_delay/24 util_memcpy/9 util_memcpy/9 
+set_uint32/20 (set_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+get_uint32/19 (get_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_crc32/18 (util_crc32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_memmove/17 (util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_chartohex_internal/16 (util_chartohex_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_chartohex/23 
+  Calls: 
+util_hextochar_internal/15 (util_hextochar_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_hextochar/22 util_hextochar/22 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_hextochar/22 util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: memcpy_/26 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_memcpy/9 
+  Calls: 
+uint32_cmp_sec/25 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+fid_delay/24 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: 
+util_chartohex/23 (util_chartohex)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_chartohex_internal/16 util_chartohex_internal/16 
+util_hextochar/22 (util_hextochar)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: util_memcpy/9 util_hextochar_internal/15 util_hextochar_internal/15 
+util_data_sec_double_check/21 (util_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: uint32_cmp_sec/25 fid_delay/24 uint32_cmp_sec/25 fid_delay/24 util_memcpy/9 util_memcpy/9 
+set_uint32/20 (set_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+get_uint32/19 (get_uint32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_crc32/18 (util_crc32)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_memmove/17 (util_memmove)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+util_chartohex_internal/16 (util_chartohex_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_chartohex/23 
+  Calls: 
+util_hextochar_internal/15 (util_hextochar_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_hextochar/22 util_hextochar/22 
+  Calls: 
+util_memcpy/9 (util_memcpy)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: util_chartohex/23 util_hextochar/22 util_data_sec_double_check/21 util_data_sec_double_check/21 
+  Calls: memcpy_/26 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+util_hextochar_internal/31 (util_hextochar_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 15
+  References: 
+  Referring: 
+  Function util_hextochar_internal/31 is inline copy in util_hextochar/22
+  Clone of util_hextochar_internal/15
+  Availability: local
+  Function flags: count:955630224 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: util_hextochar/22 (inlined) (955630224 (estimated locally),5.34 per call) 
+  Calls: 
+util_chartohex_internal.part.0/27 (util_chartohex_internal.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function util_chartohex_internal.part.0/27 is inline copy in util_chartohex_internal/16
+  Availability: local
+  Function flags: count:268435456 (estimated locally) body local split_part nonfreeing_fn optimize_size
+  Called by: util_chartohex_internal/16 (inlined) (268435456 (estimated locally),0.25 per call) 
+  Calls: 
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: util_chartohex/23 (118111600 (estimated locally),0.66 per call) util_hextochar/22 (118111600 (estimated locally),0.66 per call) util_data_sec_double_check/21 (524844999 (estimated locally),0.49 per call) util_data_sec_double_check/21 (524844999 (estimated locally),0.49 per call) 
+  Calls: 
+uint32_cmp_sec/25 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 (173198849 (estimated locally),0.16 per call) util_data_sec_double_check/21 (524844999 (estimated locally),0.49 per call) 
+  Calls: 
+fid_delay/24 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: util_data_sec_double_check/21 (173198849 (estimated locally),0.16 per call) util_data_sec_double_check/21 (524844999 (estimated locally),0.49 per call) 
+  Calls: 
+util_chartohex/23 (util_chartohex)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:178956971 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memcpy_/26 (118111600 (estimated locally),0.66 per call) util_chartohex_internal/16 (477815112 (estimated locally),2.67 per call) util_chartohex_internal/16 (955630224 (estimated locally),5.34 per call) 
+util_hextochar/22 (util_hextochar)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:178956971 (estimated locally) body optimize_size
+  Called by: 
+  Calls: memcpy_/26 (118111600 (estimated locally),0.66 per call) util_hextochar_internal/15 (inlined) (955630224 (estimated locally),5.34 per call) util_hextochar_internal/31 (inlined) (955630224 (estimated locally),5.34 per call) 
+util_data_sec_double_check/21 (util_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body optimize_size
+  Called by: 
+  Calls: uint32_cmp_sec/25 (173198849 (estimated locally),0.16 per call) fid_delay/24 (173198849 (estimated locally),0.16 per call) uint32_cmp_sec/25 (524844999 (estimated locally),0.49 per call) fid_delay/24 (524844999 (estimated locally),0.49 per call) memcpy_/26 (524844999 (estimated locally),0.49 per call) memcpy_/26 (524844999 (estimated locally),0.49 per call) 
+set_uint32/20 (set_uint32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+get_uint32/19 (get_uint32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+util_crc32/18 (util_crc32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:14744044 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+util_memmove/17 (util_memmove)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:482088160 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+util_chartohex_internal/16 (util_chartohex_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: util_chartohex/23 (477815112 (estimated locally),2.67 per call) util_chartohex/23 (955630224 (estimated locally),5.34 per call) 
+  Calls: util_chartohex_internal.part.0/27 (inlined) (268435456 (estimated locally),0.25 per call) 
+util_hextochar_internal/15 (util_hextochar_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 31
+  References: 
+  Referring: 
+  Function util_hextochar_internal/15 is inline copy in util_hextochar/22
+  Availability: local
+  Function flags: count:955630224 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: util_hextochar/22 (inlined) (955630224 (estimated locally),5.34 per call) 
+  Calls: 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+memcpy_/26 (memcpy_)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+uint32_cmp_sec/25 (uint32_cmp_sec)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+fid_delay/24 (fid_delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+util_chartohex/23 (util_chartohex)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.util_chartohex (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:178956971 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+util_hextochar/22 (util_hextochar)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.util_hextochar (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:178956971 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+util_data_sec_double_check/21 (util_data_sec_double_check)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.util_data_sec_double_check (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+set_uint32/20 (set_uint32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.set_uint32 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+get_uint32/19 (get_uint32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_uint32 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+util_crc32/18 (util_crc32)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.util_crc32 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:14744044 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+util_memmove/17 (util_memmove)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.util_memmove (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:482088160 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+util_chartohex_internal/16 (util_chartohex_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.util_chartohex_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 

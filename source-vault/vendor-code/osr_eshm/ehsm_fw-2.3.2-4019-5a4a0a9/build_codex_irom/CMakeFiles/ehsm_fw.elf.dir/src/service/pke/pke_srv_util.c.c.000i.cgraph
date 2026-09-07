@@ -1,0 +1,740 @@
+Trivially needed symbols: pke_srv_hash_onepass/18 pke_srv_hash_final/17 pke_srv_update/16 pke_srv_dma_update/15 pke_srv_cpu_update/14 pke_srv_init/13
+
+
+Initial Symbol table:
+
+hash_srv_general_onepass/24 (hash_srv_general_onepass)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_onepass/18 
+  Calls: 
+hash_srv_general_final/23 (hash_srv_general_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_final/17 
+  Calls: 
+hash_srv_general_update/22 (hash_srv_general_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_update/16 
+  Calls: 
+hash_srv_dma_update/21 (hash_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_dma_update/15 
+  Calls: 
+hash_srv_cpu_update/20 (hash_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_cpu_update/14 
+  Calls: 
+hash_srv_general_init/19 (hash_srv_general_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_init/13 
+  Calls: 
+pke_srv_hash_onepass/18 (pke_srv_hash_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_onepass/24 
+pke_srv_hash_final/17 (pke_srv_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb57d1ce880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_final/23 
+pke_srv_update/16 (pke_srv_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb57d1ce770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_update/22 
+pke_srv_dma_update/15 (pke_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb57d1ce660
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_dma_update/21 
+pke_srv_cpu_update/14 (pke_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb57d1ce550
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_cpu_update/20 
+pke_srv_init/13 (pke_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7fb57d1ce440
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_init/19 
+check_addr_not_word_align/12 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/11 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/10 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/9 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/8 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/12 GET_BYTE_LEN/11 GET_WORD_LEN/10 GET_MAX_LEN/9 CAST2UINT32/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+hash_srv_general_onepass/24 (hash_srv_general_onepass)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_onepass/18 
+  Calls: 
+hash_srv_general_final/23 (hash_srv_general_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_final/17 
+  Calls: 
+hash_srv_general_update/22 (hash_srv_general_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_update/16 
+  Calls: 
+hash_srv_dma_update/21 (hash_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_dma_update/15 
+  Calls: 
+hash_srv_cpu_update/20 (hash_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_cpu_update/14 
+  Calls: 
+hash_srv_general_init/19 (hash_srv_general_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_init/13 
+  Calls: 
+pke_srv_hash_onepass/18 (pke_srv_hash_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_onepass/24 
+pke_srv_hash_final/17 (pke_srv_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_final/23 
+pke_srv_update/16 (pke_srv_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_update/22 
+pke_srv_dma_update/15 (pke_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_dma_update/21 
+pke_srv_cpu_update/14 (pke_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_cpu_update/20 
+pke_srv_init/13 (pke_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_init/19 
+
+
+Initial Symbol table:
+
+hash_srv_general_onepass/24 (hash_srv_general_onepass)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_onepass/18 
+  Calls: 
+hash_srv_general_final/23 (hash_srv_general_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_final/17 
+  Calls: 
+hash_srv_general_update/22 (hash_srv_general_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_update/16 
+  Calls: 
+hash_srv_dma_update/21 (hash_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_dma_update/15 
+  Calls: 
+hash_srv_cpu_update/20 (hash_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_cpu_update/14 
+  Calls: 
+hash_srv_general_init/19 (hash_srv_general_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_init/13 
+  Calls: 
+pke_srv_hash_onepass/18 (pke_srv_hash_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_onepass/24 
+pke_srv_hash_final/17 (pke_srv_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_final/23 
+pke_srv_update/16 (pke_srv_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_update/22 
+pke_srv_dma_update/15 (pke_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_dma_update/21 
+pke_srv_cpu_update/14 (pke_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_cpu_update/20 
+pke_srv_init/13 (pke_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_init/19 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+hash_srv_general_onepass/24 (hash_srv_general_onepass)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_onepass/18 
+  Calls: 
+hash_srv_general_final/23 (hash_srv_general_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_hash_final/17 
+  Calls: 
+hash_srv_general_update/22 (hash_srv_general_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_update/16 
+  Calls: 
+hash_srv_dma_update/21 (hash_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_dma_update/15 
+  Calls: 
+hash_srv_cpu_update/20 (hash_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_cpu_update/14 
+  Calls: 
+hash_srv_general_init/19 (hash_srv_general_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: pke_srv_init/13 
+  Calls: 
+pke_srv_hash_onepass/18 (pke_srv_hash_onepass)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_onepass/24 
+pke_srv_hash_final/17 (pke_srv_hash_final)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_final/23 
+pke_srv_update/16 (pke_srv_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_update/22 
+pke_srv_dma_update/15 (pke_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_dma_update/21 
+pke_srv_cpu_update/14 (pke_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_cpu_update/20 
+pke_srv_init/13 (pke_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: hash_srv_general_init/19 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+hash_srv_general_onepass/24 (hash_srv_general_onepass)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pke_srv_hash_onepass/18 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_srv_general_final/23 (hash_srv_general_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pke_srv_hash_final/17 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_srv_general_update/22 (hash_srv_general_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pke_srv_update/16 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_srv_dma_update/21 (hash_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pke_srv_dma_update/15 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_srv_cpu_update/20 (hash_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pke_srv_cpu_update/14 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_srv_general_init/19 (hash_srv_general_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: pke_srv_init/13 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_srv_hash_onepass/18 (pke_srv_hash_onepass)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_general_onepass/24 (1073741824 (estimated locally),1.00 per call) 
+pke_srv_hash_final/17 (pke_srv_hash_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_general_final/23 (1073741824 (estimated locally),1.00 per call) 
+pke_srv_update/16 (pke_srv_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_general_update/22 (1073741824 (estimated locally),1.00 per call) 
+pke_srv_dma_update/15 (pke_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_dma_update/21 (1073741824 (estimated locally),1.00 per call) 
+pke_srv_cpu_update/14 (pke_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_cpu_update/20 (1073741824 (estimated locally),1.00 per call) 
+pke_srv_init/13 (pke_srv_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: hash_srv_general_init/19 (1073741824 (estimated locally),1.00 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+hash_srv_general_onepass/24 (hash_srv_general_onepass)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_general_final/23 (hash_srv_general_final)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_general_update/22 (hash_srv_general_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_dma_update/21 (hash_srv_dma_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_cpu_update/20 (hash_srv_cpu_update)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_general_init/19 (hash_srv_general_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_hash_onepass/18 (pke_srv_hash_onepass)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_hash_onepass (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_hash_final/17 (pke_srv_hash_final)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_hash_final (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_update/16 (pke_srv_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_dma_update/15 (pke_srv_dma_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_dma_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_cpu_update/14 (pke_srv_cpu_update)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_cpu_update (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+pke_srv_init/13 (pke_srv_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.pke_srv_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

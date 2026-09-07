@@ -1,0 +1,50 @@
+﻿case_id,requirement_id,priority,status,instance,category,title,precondition,stimulus,expected_result,evidence,blocker
+FW-TC-001,FW-REQ-001,P0,READY,SRAM,control,check_en关闭时透明旁路,"使用非授权UserId；check_en=0","对有效Slave地址发起读写","请求到达Slave并由Slave正常响应；Firewall不以权限拒绝","TNUI响应；Slave入口trace；配置读回",""
+FW-TC-002,FW-REQ-001,P0,READY,SRAM,control,check_en开启时执行检查,"配置单一Region且不给目标UserId授权；check_en=1","对Region内地址发起访问","请求被阻断且错误状态置位","TNUI响应；Slave入口trace；错误寄存器",""
+FW-TC-003,FW-REQ-001,P1,READY,SRAM,control,check_en运行时切换,"受控隔离Master；同一地址/权限配置","分别在check_en=0和1下发送同一未授权事务","0时旁路；1时阻断；切换期间无意外Slave写","寄存器读回；Slave副作用；trace",""
+FW-TC-004,FW-REQ-006;FW-REQ-007,P0,READY,SRAM,response,Hide关闭的失败响应,"check_en=1; hide_en=0; 未授权事务","发起Region内未授权访问","TNUI返回Error；Slave未收到请求；错误信息锁存","TNUI响应；Slave trace；error info",""
+FW-TC-005,FW-REQ-006;FW-REQ-007,P0,READY,SRAM,response,Hide开启的失败响应,"check_en=1; hide_en=1; 未授权事务","发起Region内未授权访问","TNUI返回OK；Slave仍未收到请求；错误信息锁存","TNUI响应；Slave trace；error info",""
+FW-TC-010,FW-REQ-002,P1,READY,SRAM,region,Region使能参与地址检查,"配置合法单一Region；region_en=1","访问Region中间地址","地址命中并进入权限检查","Region配置读回；trace",""
+FW-TC-011,FW-REQ-002,P1,READY,SRAM,region,Region关闭不参与地址检查,"配置合法Region但region_en=0","访问该Region地址","该Region不命中；若无其他Region则地址检查失败","Region配置；错误状态；trace",""
+FW-TC-012,FW-REQ-002,P1,READY,SRAM,region,五个Region独立配置,"配置5个互不重叠窗口和不同authority","分别访问5个窗口","每个地址只选择对应Region及其authority","5组配置读回；Region状态；trace",""
+FW-TC-013,FW-REQ-003,P0,READY,SRAM,address,零Region命中,"所有enabled Region均不覆盖目标地址","发起读写","地址检查失败；Slave未收到请求","Slave trace；error info",""
+FW-TC-014,FW-REQ-003,P0,READY,SRAM,address,唯一Region命中,"一个enabled Region覆盖地址且权限允许","发起读写","地址检查通过并按选中Region权限放行","Slave trace；Region配置",""
+FW-TC-015,FW-REQ-003,P0,READY,SRAM,address,两个Region重叠命中,"两个enabled Region重叠且都授权","访问重叠区","地址检查失败；不得因任一Region授权而放行","Slave trace；error info；Region配置",""
+FW-TC-016,FW-REQ-003,P1,READY,SRAM,address,三个以上Region重叠命中,"三个enabled Region重叠","访问公共重叠区","地址检查失败；Slave未收到请求","Slave trace；error info",""
+FW-TC-017,FW-REQ-004,P1,BLOCKED,SRAM,address,48位高地址区分,"可配置Region start/end high16","使用低32位相同而高16位不同的两个地址","仅完整48位位于窗口内的地址命中","配置读回；trace",FW-OQ-003
+FW-TC-018,FW-REQ-004;FW-REQ-013,P1,READY,software,validation,4KiB对齐校验,"调用policy校验接口","分别输入未对齐start和非页末end","软件拒绝配置且不写硬件；端地址对齐语义需随FW-OQ-003确认","API返回码；寄存器前后快照",FW-OQ-003
+FW-TC-020,FW-REQ-005;FW-REQ-006,P0,READY,SRAM,decision,地址通过但权限失败,"唯一Region命中；目标方向无授权","发起访问","最终失败；Slave未收到请求；错误锁存","Slave trace；error info",""
+FW-TC-021,FW-REQ-005;FW-REQ-009,P0,READY,SRAM,permission,只读授权,"目标UserId仅read bit=1","分别读和写","读通过；写失败且Slave无写副作用","authority读回；Slave trace；error info",""
+FW-TC-022,FW-REQ-005;FW-REQ-009,P0,READY,SRAM,permission,只写授权,"目标UserId仅write bit=1","分别读和写","写通过；读失败且Slave无读事务","authority读回；Slave trace；error info",""
+FW-TC-023,FW-REQ-008,P0,READY,SRAM,userid,RAS双die权限位,"authority=0x0000000F","以UserId 0x1/0x9读写并以0x2反测","0x1/0x9读写通过；0x2失败","数据驱动日志；Slave trace",""
+FW-TC-024,FW-REQ-008,P0,READY,SRAM,userid,管理MCU双die权限位,"authority=0x000000F0","以UserId 0x2/0xA读写并以0x1反测","0x2/0xA读写通过；0x1失败","数据驱动日志；Slave trace",""
+FW-TC-025,FW-REQ-008,P0,READY,SRAM,userid,Codec MCU双die权限位,"authority=0x00000F00","以UserId 0x3/0xB读写并以0x4反测","按位图0x3/0xB通过；名称映射另行裁决","数据驱动日志；原始位图；Slave trace",FW-OQ-005
+FW-TC-026,FW-REQ-008,P0,READY,SRAM,userid,功耗管理MCU双die权限位,"authority=0x0000F000","以UserId 0x4/0xC读写并以0x3反测","0x4/0xC读写通过；0x3失败","数据驱动日志；Slave trace",""
+FW-TC-027,FW-REQ-008,P1,READY,SRAM,userid,Host双die权限位,"authority=0x000F0000","以UserId 0x5/0xD读写并以0x6反测","0x5/0xD读写通过；0x6失败","数据驱动日志；Slave trace",""
+FW-TC-028,FW-REQ-008,P1,READY,SRAM,userid,DMA双die权限位,"authority=0x00F00000","以UserId 0x6/0xE读写并以0x5反测","0x6/0xE读写通过；0x5失败","数据驱动日志；Slave trace",""
+FW-TC-029,FW-REQ-008,P0,BLOCKED,SRAM,userid,eHSM双die权限位,"authority=0x0F000000","以UserId 0x7/0xF分别读写","0x7和0xF读写均通过；重点核对bit27","原始位图；Slave trace；error info",FW-OQ-006
+FW-TC-030,FW-REQ-008,P0,READY,SRAM,userid,reserved UserId拒绝,"软件policy包含UserId 0x0或0x8","调用权限生成和配置接口","返回零mask/参数错误；不得设置bits[31:28]或写硬件","单元测试；寄存器前后快照",""
+FW-TC-031,FW-REQ-009,P0,READY,SRAM,permission,所有UserId读写位无串扰,"遍历14个有效UserId","每次仅设置一个write bit并对所有UserId读写","仅目标UserId写通过；全部读失败；其他UserId写失败","224组合数据驱动结果",""
+FW-TC-032,FW-REQ-009,P0,READY,SRAM,permission,所有UserId读位无串扰,"遍历14个有效UserId","每次仅设置一个read bit并对所有UserId读写","仅目标UserId读通过；全部写失败；其他UserId读失败","224组合数据驱动结果",""
+FW-TC-040,FW-REQ-010,P0,READY,SRAM,diagnostic,错误地址48位记录,"可注入高低地址的未授权访问","触发一次失败并读取LOW32/HIGH16","组合地址与激励起始地址一致；高16执行依赖FW-OQ-003","激励记录；寄存器dump",FW-OQ-003
+FW-TC-041,FW-REQ-010,P0,READY,SRAM,diagnostic,错误读写方向记录,"分别触发未授权读和写","读取err_info_wr","两次记录分别准确反映读/写","寄存器dump；总线trace",""
+FW-TC-042,FW-REQ-010,P0,READY,SRAM,diagnostic,错误UserId记录,"遍历14个有效UserId触发失败","读取err_info_userid","每次均与请求UserId一致","数据驱动日志；寄存器dump",""
+FW-TC-043,FW-REQ-010,P1,READY,SRAM,diagnostic,Region错误状态,"分别在各Region制造权限失败","读取五个Region状态位","只有与规格定义一致的Region状态置位","寄存器dump；Region配置",""
+FW-TC-044,FW-REQ-010,P0,READY,SRAM,diagnostic,写1清除并重新捕获,"先触发错误","写ERROR_CLEAR.bit0=1后读回；再触发新错误","状态清零且能够捕获第二个错误","清除前后dump；第二次激励日志",""
+FW-TC-050,FW-REQ-011,P0,READY,sec_cfg,instance,sec_cfg安全访问,"配置目标UserId读写授权并开启check","发起合法读写","请求到达sec_cfg Slave并正常响应","Slave trace；配置读回",""
+FW-TC-051,FW-REQ-011,P0,READY,sec_cfg,instance,sec_cfg越权和Hide,"目标UserId无授权","分别在hide=0/1下访问","分别返回Error/OK；两者均不达Slave；sec_cfg错误信息正确","TNUI/Slave trace；sec_cfg error dump",""
+FW-TC-052,FW-REQ-011,P0,READY,spifc,instance,spifc安全访问,"配置目标UserId读写授权并开启check","发起合法读写","请求到达spifc Slave并正常响应","Slave trace；配置读回",""
+FW-TC-053,FW-REQ-011,P0,READY,spifc,instance,spifc越权和Hide,"目标UserId无授权","分别在hide=0/1下访问","分别返回Error/OK；两者均不达Slave；spifc错误信息正确","TNUI/Slave trace；spifc error dump",""
+FW-TC-060,FW-REQ-012,P0,BLOCKED,SRAM,security_attribute,读安全属性允许安全读,"Region读属性配置为安全且read authority允许","发送secure read","检查通过并到达Slave","属性配置读回；trace",FW-OQ-004
+FW-TC-061,FW-REQ-012,P0,BLOCKED,SRAM,security_attribute,读安全属性拒绝非安全读,"Region读属性配置为安全且read authority允许","发送non-secure read","失败且Slave未收到请求","属性配置读回；trace；error info",FW-OQ-004
+FW-TC-062,FW-REQ-012,P0,BLOCKED,SRAM,security_attribute,写安全属性允许安全写,"Region写属性配置为安全且write authority允许","发送secure write","检查通过并产生预期Slave写副作用","属性配置读回；trace",FW-OQ-004
+FW-TC-063,FW-REQ-012,P0,BLOCKED,SRAM,security_attribute,非安全属性兼容两种标记,"读/写属性配置为非安全且authority允许","分别发送secure和non-secure读写","两种安全标记的对应事务均可通过","属性配置读回；trace",FW-OQ-004
+FW-TC-070,FW-REQ-013,P0,READY,software,validation,start大于end,"构造非法policy","调用fw_validate_policy","返回地址范围错误且不写任何Firewall寄存器","API返回码；寄存器前后快照",""
+FW-TC-071,FW-REQ-013,P0,READY,software,validation,Region重叠被软件拒绝,"构造两个enabled重叠Region","调用fw_validate_policy","返回重叠错误且不写硬件","API返回码；寄存器前后快照",""
+FW-TC-072,FW-REQ-013,P0,READY,software,validation,reserved权限位被拒绝,"authority设置bits[31:28]任一位","调用fw_validate_policy","返回权限位错误且不写硬件","API返回码；寄存器前后快照",""
+FW-TC-073,FW-REQ-013,P0,READY,software,readback,寄存器读回不一致,"模拟一次写后读回错误","执行初始化","初始化失败；不解除Master隔离；输出明确错误","故障注入日志；状态机trace",""
+FW-TC-074,FW-REQ-014,P0,READY,software,fail_close,初始化失败不得关闭检查继续,"使关键Region配置写失败","执行初始化","进入fail-close；不扩大authority；不继续业务启动","启动日志；寄存器快照；隔离状态",""
+FW-TC-075,FW-REQ-014,P0,READY,software,fail_close,非法policy不得回退为全权限,"传入重叠或非法UserId policy","执行初始化","拒绝policy；不得写0x0FFFFFFF作为fallback","函数trace；寄存器快照",""
+FW-TC-080,FW-REQ-003,P1,BLOCKED,SRAM,burst,burst从Region内跨到Region外,"配置单一Region；burst首beat在内后续在外","发起跨边界burst","按冻结后的逐beat/整burst规则处理且无越界Slave访问","逐beat trace；error info",FW-OQ-007
+FW-TC-081,FW-REQ-003,P1,BLOCKED,SRAM,burst,burst跨入第二Region,"配置相邻Region且权限不同","发起跨Region burst","按冻结规则拒绝或拆分；不得绕过任一Region权限","逐beat trace；Slave副作用",FW-OQ-007
+FW-TC-082,FW-REQ-003,P1,BLOCKED,SRAM,burst,burst起始地址未命中后续命中,"首beat在Region外后续beat进入Region","发起burst","按冻结规则处理；不得仅因后续命中而非法访问","逐beat trace；error info",FW-OQ-007

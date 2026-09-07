@@ -1,0 +1,813 @@
+Trivially needed symbols: get_rand/14 get_rand_fast/13 get_trng_rand/12 get_rand_internal/11 trng_set_global_init_config/10
+
+
+Initial Symbol table:
+
+get_rand_uint32_with_reseed/22 (get_rand_uint32_with_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand/14 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/21 (get_rand_with_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_latest_gm_rand/20 (get_latest_gm_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_rand_without_post_processing/19 (get_rand_without_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_trng_rand/12 
+  Calls: 
+get_rand_uint32_without_reseed/18 (get_rand_uint32_without_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand_internal/11 (addr) get_trng_rand/12 (addr) get_rand_fast/13 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_buffer/17 (get_rand_buffer)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_internal/11 
+  Calls: 
+trng_set_latest_gm_global_init_config/16 (trng_set_latest_gm_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 
+  Calls: 
+trng_set_nist_global_init_config/15 (trng_set_nist_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 trng_set_global_init_config/10 
+  Calls: 
+get_rand/14 (get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: g_global_conifg/9 (read) get_rand_uint32_with_reseed/22 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_rand_fast/13 (get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faffc13f330
+  References: g_global_conifg/9 (read) get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_trng_rand/12 (get_trng_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faffc13f220
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_without_post_processing/19 
+get_rand_internal/11 (get_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faffc13f110
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/17 
+trng_set_global_init_config/10 (trng_set_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7faffc13f000
+  References: g_global_conifg/9 (write) g_global_conifg/9 (write) g_global_conifg/9 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_set_latest_gm_global_init_config/16 trng_set_nist_global_init_config/15 trng_set_nist_global_init_config/15 
+g_global_conifg/9 (g_global_conifg)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7faffc13f000
+  References: 
+  Referring: trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) get_rand_fast/13 (read) get_rand/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+check_addr_not_word_align/8 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/7 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/6 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/5 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/4 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/8 GET_BYTE_LEN/7 GET_WORD_LEN/6 GET_MAX_LEN/5 CAST2UINT32/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+get_rand_uint32_with_reseed/22 (get_rand_uint32_with_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand/14 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/21 (get_rand_with_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_latest_gm_rand/20 (get_latest_gm_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_rand_without_post_processing/19 (get_rand_without_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_trng_rand/12 
+  Calls: 
+get_rand_uint32_without_reseed/18 (get_rand_uint32_without_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand_internal/11 (addr) get_trng_rand/12 (addr) get_rand_fast/13 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_buffer/17 (get_rand_buffer)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_internal/11 
+  Calls: 
+trng_set_latest_gm_global_init_config/16 (trng_set_latest_gm_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 
+  Calls: 
+trng_set_nist_global_init_config/15 (trng_set_nist_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 trng_set_global_init_config/10 
+  Calls: 
+get_rand/14 (get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_with_reseed/22 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_rand_fast/13 (get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_trng_rand/12 (get_trng_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_without_post_processing/19 
+get_rand_internal/11 (get_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/17 
+trng_set_global_init_config/10 (trng_set_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (write) g_global_conifg/9 (write) g_global_conifg/9 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_set_latest_gm_global_init_config/16 trng_set_nist_global_init_config/15 trng_set_nist_global_init_config/15 
+g_global_conifg/9 (g_global_conifg)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) get_rand_fast/13 (read) get_rand/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+
+Initial Symbol table:
+
+get_rand_uint32_with_reseed/22 (get_rand_uint32_with_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand/14 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/21 (get_rand_with_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_latest_gm_rand/20 (get_latest_gm_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_rand_without_post_processing/19 (get_rand_without_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_trng_rand/12 
+  Calls: 
+get_rand_uint32_without_reseed/18 (get_rand_uint32_without_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand_internal/11 (addr) get_trng_rand/12 (addr) get_rand_fast/13 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_buffer/17 (get_rand_buffer)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_internal/11 
+  Calls: 
+trng_set_latest_gm_global_init_config/16 (trng_set_latest_gm_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 
+  Calls: 
+trng_set_nist_global_init_config/15 (trng_set_nist_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 trng_set_global_init_config/10 
+  Calls: 
+get_rand/14 (get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_with_reseed/22 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_rand_fast/13 (get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_trng_rand/12 (get_trng_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_without_post_processing/19 
+get_rand_internal/11 (get_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/17 
+trng_set_global_init_config/10 (trng_set_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (write) g_global_conifg/9 (write) g_global_conifg/9 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_set_latest_gm_global_init_config/16 trng_set_nist_global_init_config/15 trng_set_nist_global_init_config/15 
+g_global_conifg/9 (g_global_conifg)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) get_rand_fast/13 (read) get_rand/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+get_rand_uint32_with_reseed/22 (get_rand_uint32_with_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand/14 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/21 (get_rand_with_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_latest_gm_rand/20 (get_latest_gm_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand/14 get_rand_fast/13 
+  Calls: 
+get_rand_without_post_processing/19 (get_rand_without_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_trng_rand/12 
+  Calls: 
+get_rand_uint32_without_reseed/18 (get_rand_uint32_without_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand_internal/11 (addr) get_trng_rand/12 (addr) get_rand_fast/13 (addr) 
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_buffer/17 (get_rand_buffer)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_rand_internal/11 
+  Calls: 
+trng_set_latest_gm_global_init_config/16 (trng_set_latest_gm_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 
+  Calls: 
+trng_set_nist_global_init_config/15 (trng_set_nist_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: trng_set_global_init_config/10 trng_set_global_init_config/10 
+  Calls: 
+get_rand/14 (get_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_with_reseed/22 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_rand_fast/13 (get_rand_fast)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 get_latest_gm_rand/20 
+get_trng_rand/12 (get_trng_rand)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_without_post_processing/19 
+get_rand_internal/11 (get_rand_internal)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: get_rand_buffer/17 
+trng_set_global_init_config/10 (trng_set_global_init_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: g_global_conifg/9 (write) g_global_conifg/9 (write) g_global_conifg/9 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: trng_set_latest_gm_global_init_config/16 trng_set_nist_global_init_config/15 trng_set_nist_global_init_config/15 
+g_global_conifg/9 (g_global_conifg)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) get_rand_fast/13 (read) get_rand/14 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+get_rand_uint32_with_reseed/22 (get_rand_uint32_with_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand/14 (addr) 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/21 (get_rand_with_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_rand/14 (708669600 (estimated locally),0.66 per call) get_rand_fast/13 (708669600 (estimated locally),0.66 per call) 
+  Calls: 
+get_latest_gm_rand/20 (get_latest_gm_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_rand/14 (365072224 (estimated locally),0.34 per call) get_rand_fast/13 (365072224 (estimated locally),0.34 per call) 
+  Calls: 
+get_rand_without_post_processing/19 (get_rand_without_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_trng_rand/12 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+get_rand_uint32_without_reseed/18 (get_rand_uint32_without_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: get_rand_internal/11 (addr) get_trng_rand/12 (addr) get_rand_fast/13 (addr) 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_buffer/17 (get_rand_buffer)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: get_rand_internal/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+trng_set_latest_gm_global_init_config/16 (trng_set_latest_gm_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: trng_set_global_init_config/10 (218789813 (estimated locally),0.20 per call) 
+  Calls: 
+trng_set_nist_global_init_config/15 (trng_set_nist_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: trng_set_global_init_config/10 (173338695 (estimated locally),0.16 per call) trng_set_global_init_config/10 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+get_rand/14 (get_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_with_reseed/22 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 (708669600 (estimated locally),0.66 per call) get_latest_gm_rand/20 (365072224 (estimated locally),0.34 per call) 
+get_rand_fast/13 (get_rand_fast)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_global_conifg/9 (read) get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: get_rand_with_post_processing/21 (708669600 (estimated locally),0.66 per call) get_latest_gm_rand/20 (365072224 (estimated locally),0.34 per call) 
+get_trng_rand/12 (get_trng_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: get_rand_without_post_processing/19 (1073741824 (estimated locally),1.00 per call) 
+get_rand_internal/11 (get_rand_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: get_rand_uint32_without_reseed/18 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: get_rand_buffer/17 (1073741824 (estimated locally),1.00 per call) 
+trng_set_global_init_config/10 (trng_set_global_init_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: g_global_conifg/9 (write) g_global_conifg/9 (write) g_global_conifg/9 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: trng_set_latest_gm_global_init_config/16 (218789813 (estimated locally),0.20 per call) trng_set_nist_global_init_config/15 (173338695 (estimated locally),0.16 per call) trng_set_nist_global_init_config/15 (217325344 (estimated locally),0.20 per call) 
+g_global_conifg/9 (g_global_conifg)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: trng_set_global_init_config/10 (write) get_rand_fast/13 (read) trng_set_global_init_config/10 (write) trng_set_global_init_config/10 (write) get_rand/14 (read) 
+  Availability: available
+  Varpool flags: initialized
+Trivially needed variables: g_global_conifg/9
+Removing variables:
+
+Final Symbol table:
+
+get_rand_uint32_with_reseed/22 (get_rand_uint32_with_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_with_post_processing/21 (get_rand_with_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_latest_gm_rand/20 (get_latest_gm_rand)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_without_post_processing/19 (get_rand_without_post_processing)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_uint32_without_reseed/18 (get_rand_uint32_without_reseed)
+  Type: function
+  Visibility: semantic_interposition external public
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand_buffer/17 (get_rand_buffer)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+trng_set_latest_gm_global_init_config/16 (trng_set_latest_gm_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+trng_set_nist_global_init_config/15 (trng_set_nist_global_init_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_rand/14 (get_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_rand_fast/13 (get_rand_fast)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_fast (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_trng_rand/12 (get_trng_rand)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_trng_rand (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_rand_internal/11 (get_rand_internal)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.get_rand_internal (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+trng_set_global_init_config/10 (trng_set_global_init_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.trng_set_global_init_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+g_global_conifg/9 (g_global_conifg)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.sbss.g_global_conifg (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized

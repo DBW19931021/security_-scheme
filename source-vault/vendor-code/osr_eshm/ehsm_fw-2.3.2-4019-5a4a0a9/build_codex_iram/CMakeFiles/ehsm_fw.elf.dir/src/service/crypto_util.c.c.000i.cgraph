@@ -1,0 +1,1031 @@
+Trivially needed symbols: lib_hash_secure_port_config/33 lib_ske_secure_port_config/32 crypto_srv_init/31
+
+
+Initial Symbol table:
+
+kmu_config/45 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_hash_secure_port_config/33 lib_ske_secure_port_config/32 
+  Calls: 
+ske_set_secure_port/44 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_ske_secure_port_config/32 
+  Calls: 
+aead_srv_ccm_init/43 (aead_srv_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+aead_srv_gcm_init/42 (aead_srv_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+rng_srv_init/41 (rng_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_mac_init/40 (ske_srv_mac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_cipher_init/39 (ske_srv_cipher_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_sm2_init/38 (pke_srv_sm2_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_rsa_init/37 (pke_srv_rsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_ecdsa_init/36 (pke_srv_ecdsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hmac_srv_init/35 (hmac_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hash_srv_init/34 (hash_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+lib_hash_secure_port_config/33 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 
+lib_ske_secure_port_config/32 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f60960b0880
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 ske_set_secure_port/44 
+crypto_srv_init/31 (crypto_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x7f60960b0770
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: aead_srv_ccm_init/43 aead_srv_gcm_init/42 rng_srv_init/41 ske_srv_mac_init/40 ske_srv_cipher_init/39 pke_srv_sm2_init/38 pke_srv_rsa_init/37 pke_srv_ecdsa_init/36 hmac_srv_init/35 hash_srv_init/34 
+get_kms_ske_alg/30 (get_kms_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_padding/29 (get_ske_padding)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_mode/28 (get_ske_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_ske_alg/27 (get_ske_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_curve_param_type/26 (get_curve_param_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+get_lib_hash_alg/25 (get_lib_hash_alg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_direction/24 (cmd_check_direction)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode_and_msg_type/23 (cmd_check_process_mode_and_msg_type)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+cmd_check_process_mode/22 (cmd_check_process_mode)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_release_ahb_dma/21 (crypto_release_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_using_ahb_dma/20 (crypto_using_ahb_dma)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+crypto_get_ahb_dma_cfg_reg/19 (crypto_get_ahb_dma_cfg_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+check_addr_not_word_align/18 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/17 (GET_BYTE_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_WORD_LEN/16 (GET_WORD_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_MAX_LEN/15 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/14 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_lock_reg/13 (sysreg_lock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_unlock_reg/12 (sysreg_unlock_reg)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_config_sm_en/11 (sysreg_config_sm_en)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_umask_sm_lock/10 (sysreg_umask_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_sm_lock/9 (sysreg_enable_sm_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+sysreg_enable_fun_lock/8 (sysreg_enable_fun_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/7 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/6 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_unlock/5 (lib_register_unlock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+lib_register_lock/4 (lib_register_lock)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: get_kms_ske_alg/30 get_ske_padding/29 get_ske_mode/28 get_ske_alg/27 get_curve_param_type/26 get_lib_hash_alg/25 cmd_check_direction/24 cmd_check_process_mode_and_msg_type/23 cmd_check_process_mode/22 crypto_release_ahb_dma/21 crypto_using_ahb_dma/20 crypto_get_ahb_dma_cfg_reg/19 check_addr_not_word_align/18 GET_BYTE_LEN/17 GET_WORD_LEN/16 GET_MAX_LEN/15 CAST2UINT32/14 sysreg_lock_reg/13 sysreg_unlock_reg/12 sysreg_config_sm_en/11 sysreg_umask_sm_lock/10 sysreg_enable_sm_lock/9 sysreg_enable_fun_lock/8 rPKE_B/7 rPKE_A/6 lib_register_unlock/5 lib_register_lock/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+kmu_config/45 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_hash_secure_port_config/33 lib_ske_secure_port_config/32 
+  Calls: 
+ske_set_secure_port/44 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_ske_secure_port_config/32 
+  Calls: 
+aead_srv_ccm_init/43 (aead_srv_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+aead_srv_gcm_init/42 (aead_srv_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+rng_srv_init/41 (rng_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_mac_init/40 (ske_srv_mac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_cipher_init/39 (ske_srv_cipher_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_sm2_init/38 (pke_srv_sm2_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_rsa_init/37 (pke_srv_rsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_ecdsa_init/36 (pke_srv_ecdsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hmac_srv_init/35 (hmac_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hash_srv_init/34 (hash_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+lib_hash_secure_port_config/33 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 
+lib_ske_secure_port_config/32 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 ske_set_secure_port/44 
+crypto_srv_init/31 (crypto_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: aead_srv_ccm_init/43 aead_srv_gcm_init/42 rng_srv_init/41 ske_srv_mac_init/40 ske_srv_cipher_init/39 pke_srv_sm2_init/38 pke_srv_rsa_init/37 pke_srv_ecdsa_init/36 hmac_srv_init/35 hash_srv_init/34 
+
+
+Initial Symbol table:
+
+kmu_config/45 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_hash_secure_port_config/33 lib_ske_secure_port_config/32 
+  Calls: 
+ske_set_secure_port/44 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_ske_secure_port_config/32 
+  Calls: 
+aead_srv_ccm_init/43 (aead_srv_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+aead_srv_gcm_init/42 (aead_srv_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+rng_srv_init/41 (rng_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_mac_init/40 (ske_srv_mac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_cipher_init/39 (ske_srv_cipher_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_sm2_init/38 (pke_srv_sm2_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_rsa_init/37 (pke_srv_rsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_ecdsa_init/36 (pke_srv_ecdsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hmac_srv_init/35 (hmac_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hash_srv_init/34 (hash_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+lib_hash_secure_port_config/33 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 
+lib_ske_secure_port_config/32 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 ske_set_secure_port/44 
+crypto_srv_init/31 (crypto_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: aead_srv_ccm_init/43 aead_srv_gcm_init/42 rng_srv_init/41 ske_srv_mac_init/40 ske_srv_cipher_init/39 pke_srv_sm2_init/38 pke_srv_rsa_init/37 pke_srv_ecdsa_init/36 hmac_srv_init/35 hash_srv_init/34 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+kmu_config/45 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_hash_secure_port_config/33 lib_ske_secure_port_config/32 
+  Calls: 
+ske_set_secure_port/44 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: lib_ske_secure_port_config/32 
+  Calls: 
+aead_srv_ccm_init/43 (aead_srv_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+aead_srv_gcm_init/42 (aead_srv_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+rng_srv_init/41 (rng_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_mac_init/40 (ske_srv_mac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+ske_srv_cipher_init/39 (ske_srv_cipher_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_sm2_init/38 (pke_srv_sm2_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_rsa_init/37 (pke_srv_rsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+pke_srv_ecdsa_init/36 (pke_srv_ecdsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hmac_srv_init/35 (hmac_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+hash_srv_init/34 (hash_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: crypto_srv_init/31 
+  Calls: 
+lib_hash_secure_port_config/33 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 
+lib_ske_secure_port_config/32 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: kmu_config/45 ske_set_secure_port/44 
+crypto_srv_init/31 (crypto_srv_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: aead_srv_ccm_init/43 aead_srv_gcm_init/42 rng_srv_init/41 ske_srv_mac_init/40 ske_srv_cipher_init/39 pke_srv_sm2_init/38 pke_srv_rsa_init/37 pke_srv_ecdsa_init/36 hmac_srv_init/35 hash_srv_init/34 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+kmu_config/45 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: lib_hash_secure_port_config/33 (1073741824 (estimated locally),1.00 per call) lib_ske_secure_port_config/32 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_set_secure_port/44 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: lib_ske_secure_port_config/32 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+aead_srv_ccm_init/43 (aead_srv_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+aead_srv_gcm_init/42 (aead_srv_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+rng_srv_init/41 (rng_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_srv_mac_init/40 (ske_srv_mac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+ske_srv_cipher_init/39 (ske_srv_cipher_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_srv_sm2_init/38 (pke_srv_sm2_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_srv_rsa_init/37 (pke_srv_rsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+pke_srv_ecdsa_init/36 (pke_srv_ecdsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hmac_srv_init/35 (hmac_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+hash_srv_init/34 (hash_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: crypto_srv_init/31 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+lib_hash_secure_port_config/33 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: kmu_config/45 (1073741824 (estimated locally),1.00 per call) 
+lib_ske_secure_port_config/32 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: kmu_config/45 (1073741824 (estimated locally),1.00 per call) ske_set_secure_port/44 (1073741824 (estimated locally),1.00 per call) 
+crypto_srv_init/31 (crypto_srv_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: aead_srv_ccm_init/43 (1073741824 (estimated locally),1.00 per call) aead_srv_gcm_init/42 (1073741824 (estimated locally),1.00 per call) rng_srv_init/41 (1073741824 (estimated locally),1.00 per call) ske_srv_mac_init/40 (1073741824 (estimated locally),1.00 per call) ske_srv_cipher_init/39 (1073741824 (estimated locally),1.00 per call) pke_srv_sm2_init/38 (1073741824 (estimated locally),1.00 per call) pke_srv_rsa_init/37 (1073741824 (estimated locally),1.00 per call) pke_srv_ecdsa_init/36 (1073741824 (estimated locally),1.00 per call) hmac_srv_init/35 (1073741824 (estimated locally),1.00 per call) hash_srv_init/34 (1073741824 (estimated locally),1.00 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+kmu_config/45 (kmu_config)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_set_secure_port/44 (ske_set_secure_port)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+aead_srv_ccm_init/43 (aead_srv_ccm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+aead_srv_gcm_init/42 (aead_srv_gcm_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+rng_srv_init/41 (rng_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_srv_mac_init/40 (ske_srv_mac_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ske_srv_cipher_init/39 (ske_srv_cipher_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_sm2_init/38 (pke_srv_sm2_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_rsa_init/37 (pke_srv_rsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+pke_srv_ecdsa_init/36 (pke_srv_ecdsa_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hmac_srv_init/35 (hmac_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+hash_srv_init/34 (hash_srv_init)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+lib_hash_secure_port_config/33 (lib_hash_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.lib_hash_secure_port_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+lib_ske_secure_port_config/32 (lib_ske_secure_port_config)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.lib_ske_secure_port_config (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+crypto_srv_init/31 (crypto_srv_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.crypto_srv_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 

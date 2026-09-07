@@ -1,0 +1,71 @@
+schema_version: 1
+source_id: SRC-0025
+status: DOCUMENTED_WITH_CONFLICTS
+valid_authority_mask: 0x0FFFFFFF
+reserved_userids: [0x0, 0x8]
+bit_order: "每类 master: die0 write, die0 read, die1 write, die1 read"
+masters:
+  - master: RAS_CORE
+    die0_userid: 0x1
+    die1_userid: 0x9
+    die0_write_bit: 0
+    die0_read_bit: 1
+    die1_write_bit: 2
+    die1_read_bit: 3
+    both_die_rw_mask: 0x0000000F
+  - master: MANAGEMENT_MCU
+    die0_userid: 0x2
+    die1_userid: 0xA
+    die0_write_bit: 4
+    die0_read_bit: 5
+    die1_write_bit: 6
+    die1_read_bit: 7
+    both_die_rw_mask: 0x000000F0
+  - master: CODEC_MCU
+    die0_userid: 0x3
+    die1_userid: 0xB
+    die0_write_bit: 8
+    die0_read_bit: 9
+    die1_write_bit: 10
+    die1_read_bit: 11
+    both_die_rw_mask: 0x00000F00
+  - master: POWER_MCU
+    die0_userid: 0x4
+    die1_userid: 0xC
+    die0_write_bit: 12
+    die0_read_bit: 13
+    die1_write_bit: 14
+    die1_read_bit: 15
+    both_die_rw_mask: 0x0000F000
+  - master: HOST_PCIE_RAM
+    die0_userid: 0x5
+    die1_userid: 0xD
+    die0_write_bit: 16
+    die0_read_bit: 17
+    die1_write_bit: 18
+    die1_read_bit: 19
+    both_die_rw_mask: 0x000F0000
+  - master: MANAGEMENT_OR_TOP_NOC_DMA
+    die0_userid: 0x6
+    die1_userid: 0xE
+    die0_write_bit: 20
+    die0_read_bit: 21
+    die1_write_bit: 22
+    die1_read_bit: 23
+    both_die_rw_mask: 0x00F00000
+  - master: EHSM
+    die0_userid: 0x7
+    die1_userid: 0xF
+    die0_write_bit: 24
+    die0_read_bit: 25
+    die1_write_bit: 26
+    die1_read_bit: 27
+    both_die_rw_mask: 0x0F000000
+formula:
+  precondition: "local_id=(userid & 0x7) must be nonzero"
+  write_bit: "4 * (local_id - 1) + 2 * ((userid >> 3) & 1)"
+  read_bit: "write_bit + 1"
+coding_gates:
+  - "userid 0x0/0x8 must be rejected before subtraction"
+  - "authority & 0xF0000000 must equal zero"
+  - "do not copy screenshot base/reset/region defaults into product code until OPEN-CONFLICT-014 closes"

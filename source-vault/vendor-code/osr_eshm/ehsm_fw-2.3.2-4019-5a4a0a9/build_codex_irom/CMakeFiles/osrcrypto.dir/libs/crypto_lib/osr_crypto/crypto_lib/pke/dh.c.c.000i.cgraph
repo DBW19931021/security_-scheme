@@ -1,0 +1,519 @@
+Trivially needed symbols: dh_compute_key/11
+
+
+Initial Symbol table:
+
+pke_modexp_internal/17 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+dh_check_public_key/16 (dh_check_public_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_BigNumCmp/15 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+get_valid_bits/14 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+reverse_byte_array/12 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+dh_compute_key/11 (dh_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/12 pke_modexp_internal/17 dh_check_public_key/16 reverse_byte_array/12 uint32_copy/13 uint32_BigNumCmp/15 get_valid_bits/14 uint32_copy/13 reverse_byte_array/12 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+check_addr_not_word_align/10 (check_addr_not_word_align)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x7fc1b2245dd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0x3a05d40
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+GET_MAX_LEN/7 (GET_MAX_LEN)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+CAST2UINT32/6 (CAST2UINT32)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_B/5 (rPKE_B)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+rPKE_A/4 (rPKE_A)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/3 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/2 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/1 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__libc_detect_null/0 (__libc_detect_null)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: check_addr_not_word_align/10 GET_MAX_LEN/7 CAST2UINT32/6 rPKE_B/5 rPKE_A/4 _putchar_unlocked/3 _getchar_unlocked/2 __sputc_r/1 __libc_detect_null/0
+
+Reclaimed Symbol table:
+
+pke_modexp_internal/17 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+dh_check_public_key/16 (dh_check_public_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_BigNumCmp/15 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+get_valid_bits/14 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+reverse_byte_array/12 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+dh_compute_key/11 (dh_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/12 pke_modexp_internal/17 dh_check_public_key/16 reverse_byte_array/12 uint32_copy/13 uint32_BigNumCmp/15 get_valid_bits/14 uint32_copy/13 reverse_byte_array/12 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+
+
+Initial Symbol table:
+
+pke_modexp_internal/17 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+dh_check_public_key/16 (dh_check_public_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_BigNumCmp/15 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+get_valid_bits/14 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+reverse_byte_array/12 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+dh_compute_key/11 (dh_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/12 pke_modexp_internal/17 dh_check_public_key/16 reverse_byte_array/12 uint32_copy/13 uint32_BigNumCmp/15 get_valid_bits/14 uint32_copy/13 reverse_byte_array/12 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+pke_modexp_internal/17 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+dh_check_public_key/16 (dh_check_public_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_BigNumCmp/15 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+get_valid_bits/14 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+reverse_byte_array/12 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dh_compute_key/11 dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+dh_compute_key/11 (dh_compute_key)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: reverse_byte_array/12 pke_modexp_internal/17 dh_check_public_key/16 reverse_byte_array/12 uint32_copy/13 uint32_BigNumCmp/15 get_valid_bits/14 uint32_copy/13 reverse_byte_array/12 GET_WORD_LEN/8 GET_WORD_LEN/8 GET_BYTE_LEN/9 GET_BYTE_LEN/9 
+GET_BYTE_LEN/9 (GET_BYTE_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+GET_WORD_LEN/8 (GET_WORD_LEN)
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: dh_compute_key/11 dh_compute_key/11 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+pke_modexp_internal/17 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_compute_key/11 (115749825 (estimated locally),0.11 per call) 
+  Calls: 
+dh_check_public_key/16 (dh_check_public_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_compute_key/11 (89032481 (estimated locally),0.08 per call) 
+  Calls: 
+uint32_BigNumCmp/15 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_compute_key/11 (229110861 (estimated locally),0.21 per call) 
+  Calls: 
+get_valid_bits/14 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_compute_key/11 (403151259 (estimated locally),0.38 per call) 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_compute_key/11 (89032480 (estimated locally),0.08 per call) dh_compute_key/11 (403151259 (estimated locally),0.38 per call) 
+  Calls: 
+reverse_byte_array/12 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dh_compute_key/11 (38197442 (estimated locally),0.04 per call) dh_compute_key/11 (29380718 (estimated locally),0.03 per call) dh_compute_key/11 (133039915 (estimated locally),0.12 per call) 
+  Calls: 
+dh_compute_key/11 (dh_compute_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally) body
+  Called by: 
+  Calls: reverse_byte_array/12 (38197442 (estimated locally),0.04 per call) pke_modexp_internal/17 (115749825 (estimated locally),0.11 per call) dh_check_public_key/16 (89032481 (estimated locally),0.08 per call) reverse_byte_array/12 (29380718 (estimated locally),0.03 per call) uint32_copy/13 (89032480 (estimated locally),0.08 per call) uint32_BigNumCmp/15 (229110861 (estimated locally),0.21 per call) get_valid_bits/14 (403151259 (estimated locally),0.38 per call) uint32_copy/13 (403151259 (estimated locally),0.38 per call) reverse_byte_array/12 (133039915 (estimated locally),0.12 per call) 
+Trivially needed variables:
+Removing variables:
+
+Final Symbol table:
+
+pke_modexp_internal/17 (pke_modexp_internal)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dh_check_public_key/16 (dh_check_public_key)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_BigNumCmp/15 (uint32_BigNumCmp)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+get_valid_bits/14 (get_valid_bits)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+uint32_copy/13 (uint32_copy)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+reverse_byte_array/12 (reverse_byte_array)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+dh_compute_key/11 (dh_compute_key)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.dh_compute_key (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741822 (estimated locally)
+  Called by: 
+  Calls: 
